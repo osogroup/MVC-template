@@ -23,11 +23,6 @@
    "placeholder":"Select a Status",
    "opts":["Not Started","In-Progress","Complete"]
  },
- "tags":{
-   "type":"array",
-   "inpType":"array",
-   "opts":"{tags}"
- },
  "sprtTasks":{
    "type":"object",
    "inpType":"object",
