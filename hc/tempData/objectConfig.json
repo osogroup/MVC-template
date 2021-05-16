@@ -2,12 +2,12 @@
 {
   "deliverable":{
     "required":["id","name"],
-    "list":["id","name","link"],
+    "list":["id","name","status","link"],
     "editable":["name","description","link"] 
   },
   "task":{
     "required":["id","name"],
-    "list":["id","name","tag"],
+    "list":["id","name","tag", "status"],
     "editable":["name","description","tag"] 
   },
   "tag":{
