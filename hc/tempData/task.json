@@ -17,6 +17,11 @@
    "inpType":"textarea",
    "placeholder":"Description of the task goes here."
  },
+ "tags":{
+   "type":"array",
+   "inpType":"array",
+   "opts":"{tags}"
+ },
  "status":{
    "type":"string",
    "inpType":"text",
