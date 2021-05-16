@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    var vw = urlParams.get('view');
+    if(vw== undefined){
+      vw = 'home';
+    }
+    var hdr = urlParams.get('hdr');
+    if(hdr == undefined){
+      hdr = 'aos';
+      //console.log('hdr set to aos');
+    }
+    if(vw.includes("admin")){
+      hdr = 'admin';
+    }
+    var typ = urlParams.get('type');
+    if(typ == undefined){
+      typ = 'infrm';
+    }
+    var tmp = urlParams.get('temp');
+    if(tmp == undefined){
+      tmp = '1_infrm';
+    }
+    var docId = urlParams.get('docId');
+    var viewConfig = {
+      urlRoot:"/oso_aos/_aos",
+      dpath:"",
+      header:hdr,
+      view:vw,
+      type:typ,
+      scope:docId,
+      temp:tmp
+    }
+    console.log('View Configurations', viewConfig);
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+  <script>
+    $.getScript("/components/head.js", function() {
+        console.log('head Ran');
+    });
+  </script>
+  <div id="errors"></div>
+  <div id="auth"></div>
+  <script src="/component/auth.js"></script>
+  <header class="row"></header>
+  <script>
+    $.getScript("/components/header.js", function() {
+        console.log('header Ran');
+    });
+  </script>
+  <div id="view"></div>
+  <script>
+    $.getScript("/components/controller.js", function() {
+        var vcVars = {
+          debug:false,
+          vConfig: viewConfig
+        }
+        viewController(vcVars); 
+    });
+  </script>
+  <input type="hidden" id="pgData">
+  <footer></footer>
+  <script src="/components/footer.js"></script>
+  <script src="/components/view.js"></script>
+  <script src="/vendor/modernizr-3.11.2.min.js"></script>
+</body>
+</html>
+
+
