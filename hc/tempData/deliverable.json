@@ -31,6 +31,6 @@
  "sprtTasks":{
    "type":"object",
    "inpType":"object",
-   "opts":"{task},
+   "opts":"{task}",
    "placeholder":"What is the Due Date"
 }
