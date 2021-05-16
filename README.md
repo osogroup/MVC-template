@@ -1,1 +1,1 @@
-# View || Controller Site Template
+# Model View Controller Site Template
