@@ -1,1 +1,13 @@
 
+{
+  "deliverable":{
+    "required":["id","name"],
+    "list":["id","name","link"],
+    "editable":["name","description","link"] 
+  },
+  "task":{
+    "required":["id","name","owner],
+    "list":["id","name","owner"],
+    "editable":["name","description","owner"] 
+  }
+}
