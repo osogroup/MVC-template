@@ -1,1 +1,36 @@
 
+{
+ "id":{
+   "required":true,
+   "value":"uuid",
+   "type":"int",
+   "placeholder":"#"
+ },
+ "name":{
+   "required":true,
+   "type":"string",
+   "inpType":"text",
+   "placeholder":"Name of the task goes here."
+ },
+ "description":{
+   "type":"string",
+   "inpType":"textarea",
+   "placeholder":"Description of the task goes here."
+ },
+ "status":{
+   "type":"string",
+   "inpType":"select",
+   "placeholder":"Select a Status",
+   "opts":["Not Started","In-Progress","Complete"]
+ },
+ "due_date":{
+   "type":"timestamp",
+   "inpType":"date",
+   "placeholder":"What is the Due Date"
+ },
+ "sprtTasks":{
+   "type":"object",
+   "inpType":"object",
+   "opts":"{task},
+   "placeholder":"What is the Due Date"
+}
