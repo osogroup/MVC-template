@@ -23,10 +23,10 @@
    "placeholder":"Select a Status",
    "opts":["Not Started","In-Progress","Complete"]
  },
- "due_date":{
-   "type":"timestamp",
-   "inpType":"date",
-   "placeholder":"What is the Due Date"
+ "tags":{
+   "type":"array",
+   "inpType":"array",
+   "opts":"{tags}"
  },
  "sprtTasks":{
    "type":"object",
