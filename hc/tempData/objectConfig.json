@@ -6,7 +6,7 @@
     "editable":["name","description","link"] 
   },
   "task":{
-    "required":["id","name","owner],
+    "required":["id","name","owner"],
     "list":["id","name","owner"],
     "editable":["name","description","owner"] 
   }
