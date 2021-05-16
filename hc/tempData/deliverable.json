@@ -23,7 +23,7 @@
    "placeholder":"Select a Status",
    "opts":["Not Started","In-Progress","Complete"]
  },
- "sprtTasks":{
+ "tasks":{
    "type":"object",
    "inpType":"object",
    "opts":"{task}",
