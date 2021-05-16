@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <!-- Head.js Will get inputed here -->
+  <meta charset="utf-8">
+  <title>UI Template</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- Slim Menu  -->
+  <link rel="stylesheet" type="text/css" href="'+viewConfig.dpath+'/js/vendor/slimmenu/dist/css/slimmenu.min.css"/>';
+
+  <!-- Simple Grid CSS -->
+  <link rel="stylesheet" href="/vendor/simple_grid/simple-grid.css">
+
+  <
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,100&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="create.css">
+
+  <!-- jQuery  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- List JS -->
+  <script src="/vendor/list.min.js"></script>
+  <!-- helper functions JS -->
+  <script src="/components/helper.js"></script>
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+
+<body>
+  <!-- Start Cotainer for Grid -->
+  <div class="container">
+    <!-- Create Row for Grid -->
+    <div class="row">
+      <!-- Create Columns in the row col-# of 12 -->
+      <div class="col-12">
+        <p>this is a col-12 it is the full width</p>
+      </div>
+      <div class="col-3">
+        <p>this is a col-3 it is 1/4 of the width</p>
+      </div>
+      <div class="col-6">
+        <p>this is a col-6 it is 1/2 of the Width</p>
+      </div>
+      <div class="col=3">
+        <p>this is a col-3 it is 1/4 of the width</p>
+      </div>
+    </div>
+
+    <!-- List.js Example -->
+    <div class="row">
+      <div id="hacker-list">
+        <input class="search" />
+        <span class="sort" data-sort="name">Sort by name</span>
+        <span class="sort" data-sort="city">Sort by city</span>
+        <ul class="list"></ul>
+      </div>
+      <script>
+        var options = {
+          valueNames: [ 'name', 'city' ],
+          item: '<li><h3 class="name"></h3><p class="city"></p></li>'
+        };
+
+        var values = [
+          { name: 'Jonny', city:'Stockholm' }
+          , { name: 'Jonas', city:'Berlin' }
+        ];
+
+        var hackerList = new List('hacker-list', options, values);
+      </script>
+    </div>
+  </div>
+  <!-- Add your site or application content here -->
+  
+  <script src="/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="create.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
