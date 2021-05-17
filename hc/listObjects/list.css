@@ -7,8 +7,6 @@
   font-family: "Lucida Console", "Courier New", monospace;
   text-decoration: none;
   font-size: 200%;
-  padding: 20px 20px 20px 20px;
+  padding: 0px 0px 0px 15px;
 }
-.headerLinks:hover {
-  background-color: gray;
-}
+
