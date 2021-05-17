@@ -8,4 +8,8 @@
   text-decoration: none;
   padding-left: 10px;
   padding-right: 10px;
+  font-size: 200%;
+}
+.headerLinks:hover {
+  background-color: gray;
 }
