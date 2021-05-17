@@ -212,21 +212,21 @@
       "id":0,
       "name":"Create Object Item UI",
       "description":"These tasks will result in a user interface to create an object item.",
-      "status":"in-progress"
+      "status":"in-progress",
       "tasks":[0,1,2,3,4,5,6]
     },
     {
       "id":1,
       "name":"Edit Object Item UI",
       "description":"These tasks will result in a user interface to edit an object item.",
-      "status":"in-progress"
+      "status":"in-progress",
       "tasks":[7,8,9,10,11,12,13]
     },
     {
       "id":2,
       "name":"List Object Items UI",
       "description":"These tasks will result in a user interface to list the items of an object.",
-      "status":"in-progress"
+      "status":"in-progress",
       "tasks":[14,15,16,17,18,19,20]
     }
   ]
