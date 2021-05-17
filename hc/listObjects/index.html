@@ -64,15 +64,6 @@
       <div class='col-4'>
         
       </div>
-<!--       <div class="col-3">
-        <p>this is a col-3 it is 1/4 of the width</p>
-      </div>
-      <div class="col-6">
-        <p>this is a col-6 it is 1/2 of the Width</p>
-      </div>
-      <div class="col-3">
-        <p>this is a col-3 it is 1/4 of the width</p>
-      </div> -->
     </div>
 
     <!-- List.js Example -->
@@ -94,13 +85,13 @@
         </div>
         <script>
           var options = {
-            valueNames: [ 'name', 'city' ],
-            item: '<div class="row"><div class="col-6"><span class="name"></span></div><div class="col-6"><span class="city"></span></div></div>'
+            valueNames: [ 'name', 'city', 'problem' ],
+            item: '<div class="row"><div class="col-4"><span class="name"></span></div><div class="col-4"><span class="city"></span></div><div class="col-4"><span class="problem"></span></div></div>'
           };
 
           var values = [
-            { name: 'Jonny', city:'Stockholm' }
-            , { name: 'Jonas', city:'Berlin' }
+            { name: 'Jonny', city:'Stockholm', problem:'death' }
+            , { name: 'Jonas', city:'Berlin', problem:'toe' }
           ];
 
           var hackerList = new List('hacker-list', options, values);
