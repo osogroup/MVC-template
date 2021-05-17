@@ -1,5 +1,5 @@
 var options = {
-  valueNames: [ 'id', 'name', 'city', 'problem' ]
+  valueNames: [ 'id', 'name', 'city', 'problem', 'solution' ]
 };
 
 var contactList = new List('contacts', options);
@@ -8,6 +8,7 @@ var idField = $('#id-field'),
     nameField = $('#name-field'),
     cityField = $('#city-field'),
     problemField = $('#problem-field'),
+    solutionField = $('#solution-field'),
     addBtn = $('#add-btn'),
     editBtn = $('#edit-btn').hide(),
     removeBtns = $('.remove-item-btn'),
@@ -20,7 +21,8 @@ addBtn.click(function() {
     id: Math.floor(Math.random()*110000),
     name: nameField.val(),
     city: cityField.val(),
-    problem: problemField.val()
+    problem: problemField.val(),
+    solution: solutionField.val()
   });
   clearFields();
   refreshCallbacks();
@@ -32,7 +34,8 @@ editBtn.click(function() {
     id:idField.val(),
     name: nameField.val(),
     city: cityField.val(),
-    problem: problemField.val()
+    problem: problemField.val(),
+    solution: solutionField.val()
   });
   clearFields();
   editBtn.hide();
@@ -56,7 +59,7 @@ function refreshCallbacks() {
     nameField.val(itemValues.name);
     cityField.val(itemValues.city);
     problemField.val(itemValues.problem);
-    
+    solutionField.val(itemValues.solution);
     editBtn.show();
     addBtn.hide();
   });
@@ -66,4 +69,5 @@ function clearFields() {
   nameField.val('');
   cityField.val('');
   problemField.val('');
+  solutionField.val('');
 }
