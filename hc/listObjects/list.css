@@ -11,5 +11,6 @@
 }
 #TitleOfList {
   font-family: "Lucida Console", "Courier New", monospace;
-    font-size: 200%;
+  font-size: 200%;
+  padding-left: 30px;
 }
