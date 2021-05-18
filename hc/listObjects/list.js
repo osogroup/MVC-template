@@ -48,7 +48,7 @@ function refreshCallbacks() {
   editBtns = $(editBtns.selector);
   
  function removeButton(ctl) {
-   $(ctl).parents("div").remove();
+   values.splice(values(findIndex(ctl)),1);
  }
   
 //   removeBtns.click(function() {
