@@ -68,9 +68,9 @@ function refreshCallbacks(contactList) {
   
   removeBtns.click(function() {
     console.log("Entering remove function", this);
-    var itemId = $(this).closest('div').find('.name').text();
+    var itemId = $(this).parent().parent().find('.name').text();
     console.log($(this).parent().parent().find('.name'));
-    console.log("this is the item id" + itemId);
+    console.log("this is the item name " + itemId);
     contactList.remove('name', itemId);
   });
   
