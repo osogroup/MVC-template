@@ -109,7 +109,7 @@ let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData
 
 let request = new XMLHttpRequest();
 
-request.open('GET', requestURL);
+request.open('GET', requestURL, true);
 
 request.responseType = 'json';
 request.send();
