@@ -104,30 +104,36 @@ $(document).ready(function(){
 });
 
 
-let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData/listOfObjects.json';
+const data = require('./listOfObjects.json');
+console.log(data);
 
-let request = new XMLHttpRequest();
 
-request.open('GET', requestURL, true);
 
-request.responseType = 'json';
 
-request.send();
+// let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData/listOfObjects.json';
 
-request.onload = function() {
-  const tasks = request.response;
-  showTasks(tasks);
-}
+// let request = new XMLHttpRequest();
 
-function showTasks(obj) {
-  const tasks = obj['task'];
-  for (var i = 0; i < tasks.length; i++) {
+// request.open('GET', requestURL, true);
+
+// request.responseType = 'json';
+
+// request.send();
+
+// request.onload = function() {
+//   const tasks = request.response;
+//   showTasks(tasks);
+// }
+
+// function showTasks(obj) {
+//   const tasks = obj['task'];
+//   for (var i = 0; i < tasks.length; i++) {
     
-    const myDiv = document.createElement('div');
+//     const myDiv = document.createElement('div');
   
-    myDiv.textContent = tasks[i].id;
-  }
-}
+//     myDiv.textContent = tasks[i].id;
+//   }
+// }
 
 
 
