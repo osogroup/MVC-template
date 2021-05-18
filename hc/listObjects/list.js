@@ -105,19 +105,14 @@ $(document).ready(function(){
 
 
 let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData/listOfObjects.json';
-console.log("requestURL finished");
 
 let request = new XMLHttpRequest();
-console.log("request finished");
 
 request.open('GET', requestURL, true);
-console.log("request.open finished");
 
 request.responseType = 'json';
-console.log("responseType finished");
 
 request.send();
-console.log("request.send finished");
 
 request.onload = function() {
   const tasks = request.response;
