@@ -117,6 +117,7 @@ request.send();
 request.onload = function() {
   const tasks = request.response;
   showTasks(tasks);
+}
 
 function showTasks(obj) {
   const tasks = obj['task'];
