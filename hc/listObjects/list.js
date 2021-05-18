@@ -106,7 +106,8 @@ $(document).ready(function(){
 
 fetch("../tempData/listOfObjects.json")
   .then(response=>{return response.json();})
-  .then(data=>console.log(data.task[0]));
+  .then(data=>console.log(data.task[0]))
+forEach(data=>{return "name";})
 
 
 // let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData/listOfObjects.json';
