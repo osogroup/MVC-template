@@ -104,7 +104,7 @@ $(document).ready(function(){
 });
 
 
-fetch("./listOfObjects.json")
+fetch("../tempData/listOfObjects.json")
   .then(response=>{return response.json();})
   .then(data=>console.log(data));
 
