@@ -104,8 +104,7 @@ $(document).ready(function(){
 });
 
 
-const data = require('./listOfObjects.json');
-console.log(data);
+fetch("./listOfObjects.json").then(response=>{return response.json();}).then(data=>console.log(data));
 
 
 
