@@ -22,17 +22,17 @@ $(document).ready(function(){
 
 
 
-// addBtn.click(function() {
-//   contactList.add({
-//     id: Math.floor(Math.random()*110000),
-//     name: nameField.val(),
-//     city: cityField.val(),
-//     problem: problemField.val(),
-//     solution: solutionField.val()
-//   });
-//   clearFields();
-//   refreshCallbacks();
-// });
+addBtn.click(function() {
+  contactList.add({
+    id: Math.floor(Math.random()*110000),
+    name: nameField.val(),
+    city: cityField.val(),
+    problem: problemField.val(),
+    solution: solutionField.val()
+  });
+  clearFields();
+  refreshCallbacks();
+});
 
 // editBtn.click(function() {
 //   var item = contactList.get('id', idField.val())[0];
@@ -61,10 +61,6 @@ function refreshCallbacks(contactList) {
   // Needed to add new buttons to jQuery-extended object
   removeBtns = $('.remove-item-btn');
   editBtns = $(editBtns.selector);
-  
-//  function removeButton(ctl) {
-//    values.splice(values(findIndex(ctl)),1);
-//  }
   
   removeBtns.click(function() {
     console.log("Entering remove function", this);
