@@ -104,7 +104,9 @@ $(document).ready(function(){
 });
 
 
-fetch("./listOfObjects.json").then(response=>{return response.json();}).then(data=>console.log(data));
+fetch("./listOfObjects.json")
+  .then(response=>{return response.json();})
+  .then(data=>console.log(data));
 
 
 
