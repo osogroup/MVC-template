@@ -51,7 +51,7 @@ function refreshCallbacks() {
 //     var itemId = $(this).closest('id').find('.id').text();
 //     contactList.remove('id', itemId);
     
-        delete values[this];
+    values.splice(this, 1);
 
   });
   
