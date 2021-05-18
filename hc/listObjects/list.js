@@ -103,10 +103,14 @@ $(document).ready(function(){
   }
 });
 
+
 fetch("../tempData/listOfObjects.json")
   .then(response=>{return response.json();})
   .then(data=>console.log(data.task[0]));
 
+for (int i = 0; i < response.json().length; i++) {
+  console.log(i);
+}
 
 // let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData/listOfObjects.json';
 
