@@ -50,7 +50,7 @@ editBtn.click(function() {
 
 function refreshCallbacks() {
   // Needed to add new buttons to jQuery-extended object
-  removeBtns = $(removeBtns.selector);
+  removeBtns = $('.remove-item-btn');
   editBtns = $(editBtns.selector);
   
 //  function removeButton(ctl) {
