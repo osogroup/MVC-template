@@ -108,7 +108,7 @@ fetch("../tempData/listOfObjects.json")
   .then(response=>{return response.json();})
   .then(data=>console.log(data.task[0]));
 
-for (int i = 0; i < response.json().length; i++) {
+for (int i = 0; i < data.length; i++) {
   console.log(i);
 }
 
