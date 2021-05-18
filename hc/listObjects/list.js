@@ -15,11 +15,12 @@ $(document).ready(function(){
     editBtn = $('#edit-btn').hide(),
     removeBtns = $('.remove-item-btn'),
     editBtns = $('.edit-item-btn');
+  
+    refreshCallbacks();
 });
 
 
 
-refreshCallbacks();
 
 addBtn.click(function() {
   contactList.add({
