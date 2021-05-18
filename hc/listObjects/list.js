@@ -92,9 +92,13 @@ $(document).ready(function(){
   }
 
   function clearFields() {
+    idField.val('');
     nameField.val('');
-    cityField.val('');
-    problemField.val('');
-    solutionField.val('');
+    descField.val('');
+    statusField.val('');
+    tagsField.val('');
+    dueField.val('');
+    estField.val('');
+
   }
 });
