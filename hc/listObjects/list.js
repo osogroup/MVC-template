@@ -48,8 +48,8 @@ function refreshCallbacks() {
   editBtns = $(editBtns.selector);
   
   removeBtns.click(function() {
-    var itemId = $(this).closest('div').find('.id').text();
-    contactList.remove('div', itemId);
+    var itemId = $(this).closest('id').find('.id').text();
+    contactList.remove('id', itemId);
   });
   
   editBtns.click(function() {
