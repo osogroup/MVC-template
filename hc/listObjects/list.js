@@ -1,10 +1,12 @@
-var options = {
-  valueNames: [ 'id', 'name', 'city', 'problem', 'solution' ]
-};
+$(document).ready(function(){
+  
+  var options = {
+    valueNames: [ 'id', 'name', 'city', 'problem', 'solution' ]
+  };
 
-var contactList = new List('contacts', options);
+  var contactList = new List('contacts', options);
 
-var idField = $('#id-field'),
+  var idField = $('#id-field'),
     nameField = $('#name-field'),
     cityField = $('#city-field'),
     problemField = $('#problem-field'),
@@ -13,6 +15,9 @@ var idField = $('#id-field'),
     editBtn = $('#edit-btn').hide(),
     removeBtns = $('.remove-item-btn'),
     editBtns = $('.edit-item-btn');
+});
+
+
 
 refreshCallbacks();
 
