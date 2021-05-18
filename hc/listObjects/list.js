@@ -48,7 +48,7 @@ function refreshCallbacks() {
   editBtns = $(editBtns.selector);
   
   removeBtns.click(function() {
-    values.splice(index, 1);
+    values.splice(this.index, 1);
   });
   
   editBtns.click(function() {
