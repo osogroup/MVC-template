@@ -1,7 +1,7 @@
 $(document).ready(function(){
   
   var options = {
-    valueNames: [ 'name', 'city', 'problem', 'solution' ]
+    valueNames: [ 'id', 'name', 'desc', 'status', 'tags', 'due', 'est' ]
   };
 
   var contactList = new List('contacts', options);
