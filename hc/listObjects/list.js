@@ -110,7 +110,7 @@ fetch("../tempData/listOfObjects.json")
 $.getJSON("../tempData/listOfObjects.json", { get_param: 'value' }, function(data) {
   $.each(data, function(index, element) {
         $('body').append($('<div>', {
-            text: element.id
+            text: element.name
         }));
     });
 });
