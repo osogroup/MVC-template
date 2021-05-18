@@ -47,10 +47,14 @@ function refreshCallbacks() {
   removeBtns = $(removeBtns.selector);
   editBtns = $(editBtns.selector);
   
-  removeBtns.click(function() {
-    var itemId = $(this).closest('div').find('.row').text();
-    contactList.remove('row', itemId);
-  });
+ function removeButton(ctl) {
+   $(ctl).parents("div").remove();
+ }
+  
+//   removeBtns.click(function() {
+//     var itemId = $(this).closest('div').find('.row').text();
+//     contactList.remove('row', itemId);
+//   });
   
   editBtns.click(function() {
     var itemId = $(this).closest('tr').find('.id').text();
