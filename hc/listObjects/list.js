@@ -114,7 +114,10 @@ request.open('GET', requestURL, true);
 console.log("request.open finished");
 
 request.responseType = 'json';
+console.log("responseType finished");
+
 request.send();
+console.log("request.send finished");
 
 request.onload = function() {
   const tasks = request.response;
