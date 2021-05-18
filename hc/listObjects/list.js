@@ -80,9 +80,12 @@ $(document).ready(function(){
       var itemValues = contactList.get('id', itemId)[0].values();
       idField.val(itemValues.id);
       nameField.val(itemValues.name);
-      cityField.val(itemValues.city);
-      problemField.val(itemValues.problem);
-      solutionField.val(itemValues.solution);
+      descField.val(itemValues.desc);
+      statusField.val(itemValues.status);
+      tagsField.val(itemValues.tags);
+      dueField.val(itemValues.due);
+      estField.val(itemValues.est);
+
       editBtn.show();
       addBtn.hide();
     });
