@@ -16,7 +16,7 @@ $(document).ready(function(){
     removeBtns = $('.remove-item-btn'),
     editBtns = $('.edit-item-btn');
   
-    refreshCallbacks();
+    refreshCallbacks(contactList);
 });
 
 
@@ -48,7 +48,7 @@ $(document).ready(function(){
 //   addBtn.show();
 // });
 
-function refreshCallbacks() {
+function refreshCallbacks(contactList) {
   var idField = $('#id-field'),
     nameField = $('#name-field'),
     cityField = $('#city-field'),
