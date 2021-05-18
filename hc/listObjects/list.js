@@ -49,6 +49,15 @@ $(document).ready(function(){
 // });
 
 function refreshCallbacks() {
+  var idField = $('#id-field'),
+    nameField = $('#name-field'),
+    cityField = $('#city-field'),
+    problemField = $('#problem-field'),
+    solutionField = $('#solution-field'),
+    addBtn = $('#add-btn'),
+    editBtn = $('#edit-btn').hide(),
+    removeBtns = $('.remove-item-btn'),
+    editBtns = $('.edit-item-btn');
   // Needed to add new buttons to jQuery-extended object
   removeBtns = $('.remove-item-btn');
   editBtns = $(editBtns.selector);
