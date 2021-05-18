@@ -107,13 +107,7 @@ fetch("../tempData/listOfObjects.json")
   .then(response=>{return response.json();})
   .then(data=>console.log(data));
 
-$.getJSON("../tempData/listOfObjects.json", { get_param: 'value' }, function(data) {
-  $.each(data, function(index, element) {
-        $('body').append($('<div>', {
-            text: element.name
-        }));
-    });
-});
+console.log(task[0].id);
 
 
 // let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData/listOfObjects.json';
