@@ -17,21 +17,18 @@ $(document).ready(function(){
     editBtns = $('.edit-item-btn');
   
     refreshCallbacks(contactList);
-});
 
-
-
-
-addBtn.click(function() {
-  contactList.add({
-    id: Math.floor(Math.random()*110000),
-    name: nameField.val(),
-    city: cityField.val(),
-    problem: problemField.val(),
-    solution: solutionField.val()
+  addBtn.click(function() {
+    contactList.add({
+      id: Math.floor(Math.random()*110000),
+      name: nameField.val(),
+      city: cityField.val(),
+      problem: problemField.val(),
+      solution: solutionField.val()
+    });
+    clearFields();
+    refreshCallbacks();
   });
-  clearFields();
-  refreshCallbacks();
 });
 
 // editBtn.click(function() {
