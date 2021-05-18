@@ -8,9 +8,13 @@ $(document).ready(function(){
 
   var idField = $('#id-field'),
     nameField = $('#name-field'),
-    cityField = $('#city-field'),
-    problemField = $('#problem-field'),
-    solutionField = $('#solution-field'),
+    descField = $('#desc-field'),
+    statusField = $('#status-field'),
+    tagsField = $('#tags-field'),
+    dueField = $('#due-field'),
+    estField = $('#est-field'),
+      
+
     addBtn = $('#add-btn'),
     editBtn = $('#edit-btn').hide(),
     removeBtns = $('.remove-item-btn'),
@@ -22,9 +26,11 @@ $(document).ready(function(){
     contactList.add({
       id: Math.floor(Math.random()*110000),
       name: nameField.val(),
-      city: cityField.val(),
-      problem: problemField.val(),
-      solution: solutionField.val()
+      desc: descField.val(),
+      status: statusField.val(),
+      tags: tagsField.val(),
+      due: dueField.val(),
+      est: estField.val()
     });
     clearFields();
     refreshCallbacks();
@@ -48,9 +54,11 @@ $(document).ready(function(){
   function refreshCallbacks(contactList) {
     var idField = $('#id-field'),
       nameField = $('#name-field'),
-      cityField = $('#city-field'),
-      problemField = $('#problem-field'),
-      solutionField = $('#solution-field'),
+      descField = $('#desc-field'),
+      statusField = $('#status-field'),
+      tagsField = $('#tags-field'),
+      dueField = $('#due-field'),
+      estField = $('#est-field'),
       addBtn = $('#add-btn'),
       editBtn = $('#edit-btn').hide(),
       removeBtns = $('.remove-item-btn'),
@@ -61,10 +69,10 @@ $(document).ready(function(){
 
     removeBtns.click(function() {
       console.log("Entering remove function", this);
-      var itemId = $(this).parent().parent().find('.name').text();
-      console.log($(this).parent().parent().find('.name'));
-      console.log("this is the item name " + itemId);
-      contactList.remove('name', itemId);
+      var itemId = $(this).parent().parent().find('.id').text();
+      console.log($(this).parent().parent().find('.id'));
+      console.log("this is the item id " + itemId);
+      contactList.remove('id', itemId);
     });
 
     editBtns.click(function() {
