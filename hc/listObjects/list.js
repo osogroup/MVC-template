@@ -102,3 +102,36 @@ $(document).ready(function(){
 
   }
 });
+
+
+
+let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData/listOfObjects.json';
+
+let request = new XMLHttpRequest();
+
+request.open('GET', requestURL);
+
+request.responseType = 'json';
+request.send();
+
+request.onload = function() {
+  const tasks = request.response;
+  showTasks(tasks);
+
+function showTasks(obj) {
+  const tasks = obj['task'];
+  for (var i = 0; i < tasks.length; i++) {
+    
+    const myDiv = document.createElement('div');
+  
+    myDiv.textContent = tasks[i].id;
+  }
+}
+
+
+
+
+
+
+
+
