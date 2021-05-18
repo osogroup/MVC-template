@@ -103,10 +103,6 @@ $(document).ready(function(){
   }
 });
 
-
-const data = require("../tempData/listOfObjects.json");
-console.log(data);
-
 fetch("../tempData/listOfObjects.json")
   .then(response=>{return response.json();})
   .then(data=>console.log(data));
