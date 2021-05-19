@@ -106,10 +106,15 @@ $(document).ready(function(){
 
 fetch("../tempData/listOfObjects.json")
   .then(response=>{return response.json();})
-  .then(data=>console.log(data.task[0]))
+  .then(data=>console.log(data.task[0]));
 
 
+var type; // This one is the Tag/Task/Deliverable
+var col;  // This one is the amount of columns for the table header thing
 
+
+// This variable is stacking up all the stuff that will go into the HTML and show all the tempData
+// from the JSON file in GitHub
 var listHTML = '<div id="contacts" class="container>';
     listHTML +=  '<div class="row">';
     listHTML +=  '<div class="col-12">';
@@ -130,7 +135,10 @@ var listHTML = '<div id="contacts" class="container>';
                  + '</div>'
                + '</div>';
     listHTML += '<div class="col-12"><div class="col-4"><input class="search" placeholder="Search"/></div></div>';
-    listHTML += ''
+    listHTML += '<div class="col-12">';
+    for (const [key, value] of Object.entries(objVars.fields)) {
+      listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+value+'"'
+    }
 
 
 
