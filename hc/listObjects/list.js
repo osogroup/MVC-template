@@ -171,9 +171,7 @@ const createHTML = async () => {
         listHTML += '<div class="col-3">'
                     + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
                     + '</div>';
-
-      }
-      break;
+      } break;
     }
     // for (const [major, minor] of Object.entries(data)) {
     //   for (const [maj, min] of Object.entries(minor)) {
