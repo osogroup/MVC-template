@@ -154,11 +154,10 @@ const createHTML = async () => {
             + '<div class="col-1">'+value.id+'</div>'
             + '<div class="col-2">'+value.name+'</div>'
             + '<div class="col-2">'+value.description+'</div>'
-            + '<div class="col-1">'+value.status+'</div>'
+            + '<div class="col-2">'+value.status+'</div>'
             + '<div class="col-1">'+value.tags+'</div>'
             + '<div class="col-2">'+value.dueDate+'</div>'
             + '<div class="col-1">'+value.estEff+'</div>'
-            + '<div class="col-1">'+value.tasks+'</div>'
             + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
             + '</div>';
         $('#forLoop').append(nameDesc);
@@ -185,7 +184,7 @@ const createHTML = async () => {
 
     for (const [key, value] of Object.entries(data.task)) {
       for (const [first, last] of Object.entries(value)) {
-        if (first == 'id' || first == 'tags' || first == 'status' || first == 'tasks') {
+        if (first == 'id' || first == 'tags') {
           listHTML += '<div class="col-1"><span class="sort" data-sort="'+first+'">'+first+'</span></div>';
         } else
         listHTML += '<div class="col-2"><span class="sort" data-sort="'+first+'">'+first+'</span></div>';
