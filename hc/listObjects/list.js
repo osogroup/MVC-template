@@ -141,7 +141,7 @@ const createHTML = async () => {
       // console.log("key is: ", key);
       // console.log("variable val is: ", val);
       var top = '<h1>'+key+'</h1>';
-      var columnWidth = key.length;
+      var columnWidth = val.length;
       console.log(columnWidth);
       $('#forLoop').append(top);
       for (const [kee, value] of Object.entries(val)) {
