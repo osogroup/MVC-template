@@ -111,7 +111,7 @@ fetch("../tempData/listOfObjects.json")
 
 var type = 'x'; // This one is the Tag/Task/Deliverable, it will temporarily be X
 var col = 1;  // This one is the amount of columns for the table header thing, it will temporarily be 1
-
+var objVars; // This has something to do with creating some nonsense, not sure what to instantiate it with
 
 // This variable is stacking up all the stuff that will go into the HTML and show all the tempData
 // from the JSON file in GitHub
