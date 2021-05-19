@@ -194,14 +194,12 @@ const createHTML = async () => {
         listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+first+'">'+first+'</span></div>';
 
       }
+      break;
     }
     listHTML += '</div>';
     $('#contacts').append(listHTML);
 }
 
-
-// This variable is stacking up all the stuff that will go into the HTML and show all the tempData
-// from the JSON file in GitHub
 
 
 
