@@ -149,7 +149,13 @@ const createHTML = async () => {
       var top = '<h1>'+key+'</h1>';
       $('#forLoop').append(top);
       for (const [kee, value] of Object.entries(val)) {
-        var nameDesc = '<div class="col-1"><span class="id"></span>'+value.id+'</h2><p>'+value.description+'</p>';
+        var nameDesc = '<div class="col-1"><span class="id"></span></div>'
+        + '<div class="col-2"><span class="name"></span></div>'
+        + '<div class="col-2"><span class="desc"></span></div>'
+        + '<div class="col-2"><span class="status"></span></div>'
+        + '<div class="col-1"><span class="tags"></span></div>'
+        + '<div class="col-2"><span class="due"></span></div>'
+        + '<div class="col-1"><span class="est"></span></div>';
 
         // console.log("variable kee is: ", kee);
         // console.log("variable value is: ", value);
