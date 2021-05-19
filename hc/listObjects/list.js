@@ -132,6 +132,11 @@ const createHTML = async () => {
 
     //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
 
+    for (const [key, val] of Object.entries(data)) {
+      console.log(key);
+      console.log(val);
+    }
+
     for (const [kee, va] of Object.entries(data.task)) {
       listHTML += '<div class="col-3">'
       + '<input type="text" id="'+va+'-field" placeholder="'+va+'" />'
@@ -150,7 +155,7 @@ const createHTML = async () => {
 
     //---------------------------------------------------- The Table's Headers -------------------------------------------------------------
 
-    for (const [key, value] of Object.entries(objVars.fields)) {
+    for (const [key, value] of Object.entries(data.task)) {
       listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+value+'">'+key+'</span></div>'
     }
     listHTML += '</div>';
