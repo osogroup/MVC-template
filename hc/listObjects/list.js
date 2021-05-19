@@ -139,6 +139,7 @@ const createHTML = async () => {
       for (const [kee, value] of Object.entries(val)) {
         var nameDesc = '<h2>'+value.name+'</h2><p>'+value.description+'</p>';
         console.log(nameDesc);
+        $('#forLoop').append(nameDesc);
       }
     }
 
