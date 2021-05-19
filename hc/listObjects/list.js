@@ -135,7 +135,7 @@ const createHTML = async () => {
     for (const [key, val] of Object.entries(data)) {
       console.log(key);
       for (const [kee, value] of Object.entries(val)) {
-        console.log(value);
+        console.log(value.name);
       }
     }
 
