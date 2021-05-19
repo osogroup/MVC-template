@@ -113,7 +113,7 @@ var col = 1;  // This one is the amount of columns for the table header thing, i
 
 const getData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
-  console.log(objVars);
+  // console.log(objVars);
   return objVars;
 }
 
