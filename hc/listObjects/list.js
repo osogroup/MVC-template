@@ -127,7 +127,7 @@ const createHTML = async () => {
   //   + '<a class="headerLinks" href="#">Task</a>'
   //   + '<a class="headerLinks" href="#">Deliverable</a>'
   //   + '</p></div>';
-    $('#TitleOfList').append('<div class="col-12" id="TitleOfList">OAS Object List</div>');
+    $('#TitleOfList').append('OAS Object List');
     var listHTML =  '</div><div class="row" id="hacker-list"><div class="col-12">';
 
 //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
