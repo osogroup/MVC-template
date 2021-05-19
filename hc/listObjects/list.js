@@ -132,17 +132,16 @@ const createHTML = async () => {
 
 //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
 
-    // '<div class="row">'
-    // + '<div class="col-1"><span class="id"></span></div>'
-    // + '<div class="col-2"><span class="name"></span></div>'
-    // + '<div class="col-2"><span class="desc"></span></div>'
-    // + '<div class="col-2"><span class="status"></span></div>'
-    // + '<div class="col-1"><span class="tags"></span></div>'
-    // + '<div class="col-2"><span class="due"></span></div>'
-    // + '<div class="col-1"><span class="est"></span></div>'
-    // + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
-    // + '</div>'
+    for (const [key, value] of Object.entries(data.task)) {
+      console.log(value);
+      for (const [first, last] of Object.entries(value)) {
+        listHTML += '<div class="col-3">'
+        + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
+        + '</div>';
+      } break;
+    }
 
+//------------------------------------------------------ Data Filling ------------------------------------------------------------------
 
 // this nested for loop goes through the JSON file and puts all the values into the columns on the webpage
 // Ex. all the id's and names of projects that you can scroll through, and eventually, remove.
@@ -166,16 +165,6 @@ const createHTML = async () => {
     }
 
 
-// this nested forloop makes all the text boxes at the top
-
-    for (const [key, value] of Object.entries(data.task)) {
-      console.log(value);
-      for (const [first, last] of Object.entries(value)) {
-        listHTML += '<div class="col-3">'
-                    + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
-                    + '</div>';
-      } break;
-    }
 
 
 
