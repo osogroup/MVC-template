@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  
+
   var options = {
     valueNames: [ 'id', 'name', 'desc', 'status', 'tags', 'due', 'est' ]
   };
@@ -13,13 +13,13 @@ $(document).ready(function(){
     tagsField = $('#tags-field'),
     dueField = $('#due-field'),
     estField = $('#est-field'),
-      
+
 
     addBtn = $('#add-btn'),
     editBtn = $('#edit-btn').hide(),
     removeBtns = $('.remove-item-btn'),
     editBtns = $('.edit-item-btn');
-  
+
     refreshCallbacks(contactList);
 
   addBtn.click(function() {
@@ -138,17 +138,9 @@ var listHTML = '<div id="contacts" class="container>';
 // function showTasks(obj) {
 //   const tasks = obj['task'];
 //   for (var i = 0; i < tasks.length; i++) {
-    
+
 //     const myDiv = document.createElement('div');
-  
+
 //     myDiv.textContent = tasks[i].id;
 //   }
 // }
-
-
-
-
-
-
-
-
