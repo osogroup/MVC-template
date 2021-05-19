@@ -132,20 +132,34 @@ const createHTML = async () => {
 
     //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
 
-// '<div class="row">'
-// + '<div class="col-1"><span class="id"></span></div>'
-// + '<div class="col-2"><span class="name"></span></div>'
-// + '<div class="col-2"><span class="desc"></span></div>'
+    // '<div class="row">'
+    // + '<div class="col-1"><span class="id"></span></div>'
+    // + '<div class="col-2"><span class="name"></span></div>'
+    // + '<div class="col-2"><span class="desc"></span></div>'
+    // + '<div class="col-2"><span class="status"></span></div>'
+    // + '<div class="col-1"><span class="tags"></span></div>'
+    // + '<div class="col-2"><span class="due"></span></div>'
+    // + '<div class="col-1"><span class="est"></span></div>'
+    // + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
+    // + '</div>'
 
     for (const [key, val] of Object.entries(data)) {
       // console.log("key is: ", key);
       // console.log("variable val is: ", val);
       var top = '<h1>'+key+'</h1>';
-      var columnWidth = key.length; // columnWidth is the number of values like 'id' and 'name' in key
-      console.log(columnWidth);
       $('#forLoop').append(top);
       for (const [kee, value] of Object.entries(val)) {
-        var nameDesc = '<div class="col-1"><span class="id"></span>'+value.id+'</h2><p>'+value.description+'</p>';
+        var nameDesc = '<div class="row">'
+        + '<div class="col-1"><span class="id"></span></div>'
+        + '<div class="col-2"><span class="name"></span></div>'
+        + '<div class="col-2"><span class="desc"></span></div>'
+        + '<div class="col-2"><span class="status"></span></div>'
+        + '<div class="col-1"><span class="tags"></span></div>'
+        + '<div class="col-2"><span class="due"></span></div>'
+        + '<div class="col-1"><span class="est"></span></div>'
+
+        + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
+      + '</div>';
         // console.log("variable kee is: ", kee);
         // console.log("variable value is: ", value);
         // console.log(nameDesc);
