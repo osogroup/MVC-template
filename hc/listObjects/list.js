@@ -162,16 +162,18 @@ const createHTML = async () => {
       }
     }
 
-    for (const [major, minor] of Object.entries(data)) {
-      for (const [maj, min] of Object.entries(minor)) {
-        for (const [first, last] of Object.entries(min)) {
-          listHTML += '<div class="col-3">'
-          + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
-          + '</div>';
 
-        }
-      }
-    }
+
+    // for (const [major, minor] of Object.entries(data)) {
+    //   for (const [maj, min] of Object.entries(minor)) {
+    //     for (const [first, last] of Object.entries(min)) {
+    //       listHTML += '<div class="col-3">'
+    //       + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
+    //       + '</div>';
+    //
+    //     }
+    //   }
+    // }
 
     listHTML +=  '<div class=col-1">'
     + '<button id="add-btn">Add</button>'
@@ -187,7 +189,7 @@ const createHTML = async () => {
     //---------------------------------------------------- The Table's Headers -------------------------------------------------------------
 
     for (const [key, value] of Object.entries(data.task)) {
-      listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+value+'">'+key+'</span></div>'
+      listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+value+'">'+value+'</span></div>'
     }
     listHTML += '</div>';
     $('#contacts').append(listHTML);
