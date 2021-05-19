@@ -132,10 +132,13 @@ const createHTML = async () => {
 
     //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
 
+
+
     for (const [key, val] of Object.entries(data)) {
       console.log(key);
       for (const [kee, value] of Object.entries(val)) {
-        console.log(value.name);
+        var nameDesc = '<h2>'+value.name+'</h2><p>'+value.description+'</p>';
+        console.log(nameDesc);
       }
     }
 
