@@ -112,7 +112,8 @@ var objVars = ''; // This has something to do with creating some nonsense, not s
 
 fetch("../tempData/listOfObjects.json")
 .then(response=>{return response.json();})
-.then(data=>objVars = (data.task[0]));
+.then(data=>objVars = data);
+console.log(objVars);
 // This variable is stacking up all the stuff that will go into the HTML and show all the tempData
 // from the JSON file in GitHub
 var listHTML = '<div id="contacts" class="container>';
