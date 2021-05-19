@@ -135,10 +135,11 @@ const createHTML = async () => {
     for (const [key, value] of Object.entries(data.task)) {
       console.log(value);
       for (const [first, last] of Object.entries(value)) {
-        listHTML += '<div class="col-3">'
+        var inputThings= '<div class="col-3">'
         + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
         + '</div>';
       } break;
+      $('#inputBoxes').append(inputThings);
     }
 
 //------------------------------------------------------ Data Filling ------------------------------------------------------------------
