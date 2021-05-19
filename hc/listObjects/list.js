@@ -166,7 +166,7 @@ const createHTML = async () => {
       for (const [maj, min] of Object.entries(minor)) {
         for (const [first, last] of Object.entries(min)) {
           li  stHTML += '<div class="col-3">'
-          + '<input type="text" id="'+last+'-field" placeholder="'+last+'" />'
+          + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
           + '</div>';
 
         }
