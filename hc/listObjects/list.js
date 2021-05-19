@@ -173,8 +173,8 @@ const createHTML = async () => {
 
 // ----------------------------------------------------- The Search Box ----------------------------------------------------------------
 
-    listHTML += '<div class="col-12"><div class="col-4"><input class="search" placeholder="Search"/></div></div><div class="col-12">';
-
+    var searchVariable = '<div class="col-12"><div class="col-4"><input class="search" placeholder="Search"/></div></div><div class="col-12">';
+    $('#searchBar').append(searchVariable);
 //---------------------------------------------------- The Table's Headers -------------------------------------------------------------
 
 
