@@ -159,7 +159,7 @@ const createHTML = async () => {
         // console.log("variable value is: ", value);
         // console.log(nameDesc);
 
-        $('#forLoop').append(nameDesc);
+        // $('#forLoop').append(nameDesc);
       }
     }
 
