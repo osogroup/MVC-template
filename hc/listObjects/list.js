@@ -166,9 +166,6 @@ const createHTML = async () => {
     }
 
 
-
-
-
     listHTML +=  '<div class=col-1">'
     + '<button id="add-btn">Add</button>'
     + '<button id="edit-btn">Edit</button>'
@@ -177,8 +174,7 @@ const createHTML = async () => {
 
 // ----------------------------------------------------- The Search Box ----------------------------------------------------------------
 
-    listHTML += '<div class="col-12"><div class="col-4"><input class="search" placeholder="Search"/></div></div>';
-    listHTML += '<div class="col-12">';
+    listHTML += '<div class="col-12"><div class="col-4"><input class="search" placeholder="Search"/></div></div><div class="col-12">';
 
 //---------------------------------------------------- The Table's Headers -------------------------------------------------------------
 
