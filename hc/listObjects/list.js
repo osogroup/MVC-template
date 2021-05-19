@@ -193,7 +193,7 @@ const createHTML = async () => {
       break;
     }
     listHTML += '</div>';
-    $('#contacts').append(listHTML);
+    $('#tableHeaders').append(listHTML);
 }
 
 
