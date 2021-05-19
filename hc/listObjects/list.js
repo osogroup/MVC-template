@@ -133,7 +133,6 @@ const createHTML = async () => {
 //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
 
     for (const [key, value] of Object.entries(data.task)) {
-      console.log(value);
       for (const [first, last] of Object.entries(value)) {
         var inputThings= '<div class="col-3">'
         + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
@@ -184,7 +183,6 @@ const createHTML = async () => {
 // once
 
     for (const [key, value] of Object.entries(data.task)) {
-      console.log(value);
       for (const [first, last] of Object.entries(value)) {
         if (first == 'id' || first == 'tags') {
           listHTML += '<div class="col-1"><span class="sort" data-sort="'+first+'">'+first+'</span></div>';
