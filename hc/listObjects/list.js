@@ -129,6 +129,9 @@ var listHTML = '<div id="contacts" class="container>';
                  + '<button id="edit-btn">Edit</button>'
                  + '</div>'
                + '</div>';
+    listHTML += '<div class="col-12"><div class="col-4"><input class="search" placeholder="Search"/></div></div>';
+    listHTML += ''
+
 
 
 // let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData/listOfObjects.json';
