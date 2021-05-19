@@ -117,7 +117,18 @@ var listHTML = '<div id="contacts" class="container>';
                  + '<a class="headerLinks" href="#">Tag</a>'
                  + '<a class="headerLinks" href="#">Task</a>'
                  + '<a class="headerLinks" href="#">Deliverable</a>'
-               + '</p>';
+               + '</p></div>';
+    listHTML +=  '<div class="col-12" id="TitleOfList">OAS'+type+'Object List</div>'
+    for (const [kee, va] of Object.entries(objVars.create)) {
+      listHTML += '<div class="col-3">'
+                  + '<input type="text" id="'+va+'-field" placeholder="'+va+'" />'
+                + '</div>'
+    }
+      listHTML +=  '<div class=col-1">'
+                     '<button id="add-btn">Add</button>'
+                     '<button id="edit-btn">Edit</button>'
+                   '</div>'
+                 '</div>'
 
 
 // let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData/listOfObjects.json';
