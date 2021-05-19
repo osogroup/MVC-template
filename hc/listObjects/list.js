@@ -108,7 +108,10 @@ $(document).ready(function(){
 
 var type = 'x'; // This one is the Tag/Task/Deliverable, it will temporarily be X
 var col = 1;  // This one is the amount of columns for the table header thing, it will temporarily be 1
-var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();}); // This has something to do with creating some nonsense, not sure what to instantiate it with, maybe a link
+
+const getData = async => {
+  var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
+}
 
 console.log(objVars);
 
