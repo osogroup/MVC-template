@@ -102,6 +102,8 @@ $(document).ready(function(){
 
   }
 
+createHTML();
+
 });
 
 
@@ -110,13 +112,13 @@ var type = 'x'; // This one is the Tag/Task/Deliverable, it will temporarily be 
 var col = 1;  // This one is the amount of columns for the table header thing, it will temporarily be 1
 
 const getData = async () => {
-  var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
+  var objVars = fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
   console.log(objVars);
   return objVars;
 }
 
 const createHTML = async () => {
-  var data = getData();
+  var data = await getData();
   // var listHTML = '<div id="contacts" class="container>';
   //   listHTML +=  '<div class="row">';
   //   listHTML +=  '<div class="col-12">';
