@@ -143,6 +143,9 @@ const createHTML = async () => {
     // + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
     // + '</div>'
 
+
+// this nested for loop goes through the JSON file and puts all the values into the columns on the webpage
+
     for (const [key, val] of Object.entries(data)) {
       var top = '<h1>'+key+'</h1>';
       $('#forLoop').append(top);
@@ -157,13 +160,21 @@ const createHTML = async () => {
             + '<div class="col-1">'+value.estEff+'</div>'
             + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
             + '</div>';
-            console.log(kee);
         $('#forLoop').append(nameDesc);
       }
     }
 
 
+    for (const [key, value] of Object.entries(data.task)) {
+      console.log(value);
+      for (const [first, last] of Object.entries(value)) {
+        listHTML += '<div class="col-3">'
+                    + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
+                    + '</div>';
 
+      }
+      break;
+    }
     // for (const [major, minor] of Object.entries(data)) {
     //   for (const [maj, min] of Object.entries(minor)) {
     //     for (const [first, last] of Object.entries(min)) {
@@ -187,6 +198,11 @@ const createHTML = async () => {
     listHTML += '<div class="col-12">';
 
     //---------------------------------------------------- The Table's Headers -------------------------------------------------------------
+
+
+// this nested forloop goes into task in the JSON file and gets all the array identifiers and uses those
+// to make the headers for the categories, I added a break so that the outermost forloop will only loop
+// once
 
     for (const [key, value] of Object.entries(data.task)) {
       console.log(value);
