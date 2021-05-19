@@ -157,18 +157,18 @@ const createHTML = async () => {
             + '<div class="col-1">'+value.estEff+'</div>'
             + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
             + '</div>';
-
+            console.log(kee);
         $('#forLoop').append(nameDesc);
       }
     }
 
-    for (const [major, minor] of Object.entries(data)) {
-      for(const [maj, min] of Object.entries(minor)) {
-        listHTML += '<div class="col-3">'
-        + '<input type="text" id="'+min+'-field" placeholder="'+min+'" />'
-        + '</div>';
-      }
-    }
+    // for (const [major, minor] of Object.entries(data)) {
+    //   for(const [maj, min] of Object.entries(minor)) {
+    //     listHTML += '<div class="col-3">'
+    //     + '<input type="text" id="'+min+'-field" placeholder="'+min+'" />'
+    //     + '</div>';
+    //   }
+    // }
 
     listHTML +=  '<div class=col-1">'
     + '<button id="add-btn">Add</button>'
