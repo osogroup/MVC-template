@@ -130,7 +130,7 @@ const createHTML = async () => {
     var listHTML =  '<div class="col-12" id="TitleOfList">OAS Object List</div>';
     listHTML +=  '</div><div class="row" id="hacker-list"><div class="col-12">';
 
-    //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
+//------------------------------------------------------- Input Boxes ------------------------------------------------------------------
 
     // '<div class="row">'
     // + '<div class="col-1"><span class="id"></span></div>'
@@ -145,6 +145,7 @@ const createHTML = async () => {
 
 
 // this nested for loop goes through the JSON file and puts all the values into the columns on the webpage
+// Ex. all the id's and names of projects that you can scroll through, and eventually, remove.
 
     for (const [key, val] of Object.entries(data)) {
       var top = '<h1>'+key+'</h1>';
@@ -175,16 +176,8 @@ const createHTML = async () => {
                     + '</div>';
       } break;
     }
-    // for (const [major, minor] of Object.entries(data)) {
-    //   for (const [maj, min] of Object.entries(minor)) {
-    //     for (const [first, last] of Object.entries(min)) {
-    //       listHTML += '<div class="col-3">'
-    //       + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
-    //       + '</div>';
-    //
-    //     }
-    //   }
-    // }
+
+
 
     listHTML +=  '<div class=col-1">'
     + '<button id="add-btn">Add</button>'
@@ -192,12 +185,12 @@ const createHTML = async () => {
     + '</div>'
     + '</div>';
 
-    // ----------------------------------------------------- The Search Box ----------------------------------------------------------------
+// ----------------------------------------------------- The Search Box ----------------------------------------------------------------
 
     listHTML += '<div class="col-12"><div class="col-4"><input class="search" placeholder="Search"/></div></div>';
     listHTML += '<div class="col-12">';
 
-    //---------------------------------------------------- The Table's Headers -------------------------------------------------------------
+//---------------------------------------------------- The Table's Headers -------------------------------------------------------------
 
 
 // this nested forloop goes into task in the JSON file and gets all the array identifiers and uses those
