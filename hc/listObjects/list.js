@@ -149,17 +149,13 @@ const createHTML = async () => {
       var top = '<h1>'+key+'</h1>';
       $('#forLoop').append(top);
       for (const [kee, value] of Object.entries(val)) {
-        // '<div class="col-1"><span class="id"></span>'+value.id+'</h2><p>'+value.description+'</p>';
-        var values = [
-          { id: '12345', name: 'Jonny', desc: 'what', status: 'in-progress', tags: '0', due: '5/15/2021', est: '10' },
-          { id: '11111', name: 'Jonas', city:'Berlin', problem:'Broken Arm', solution:'Cast' },
-          { name: 'Wayne', city:'New York', problem:'Caved in Roof', solution:'Contact Insurance'}
-        ];
+        var nameDesc = '<div class="col-1"><span class="id"></span>'+value.id+'</h2><p>'+value.description+'</p>';
+
         // console.log("variable kee is: ", kee);
         // console.log("variable value is: ", value);
         // console.log(nameDesc);
 
-        // $('#forLoop').append(nameDesc);
+        $('#forLoop').append(nameDesc);
       }
     }
 
