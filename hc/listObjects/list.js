@@ -162,13 +162,16 @@ const createHTML = async () => {
       }
     }
 
-    // for (const [major, minor] of Object.entries(data)) {
-    //   for(const [maj, min] of Object.entries(minor)) {
-    //     listHTML += '<div class="col-3">'
-    //     + '<input type="text" id="'+min+'-field" placeholder="'+min+'" />'
-    //     + '</div>';
-    //   }
-    // }
+    for (const [major, minor] of Object.entries(data)) {
+      for (const [maj, min] of Object.entries(minor)) {
+        for (const [first, last] of Object.entries(min)) {
+          li  stHTML += '<div class="col-3">'
+          + '<input type="text" id="'+last+'-field" placeholder="'+last+'" />'
+          + '</div>';
+
+        }
+      }
+    }
 
     listHTML +=  '<div class=col-1">'
     + '<button id="add-btn">Add</button>'
