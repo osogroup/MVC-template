@@ -144,8 +144,6 @@ const createHTML = async () => {
     // + '</div>'
 
     for (const [key, val] of Object.entries(data)) {
-      // console.log("key is: ", key);
-      // console.log("variable val is: ", val);
       var top = '<h1>'+key+'</h1>';
       $('#forLoop').append(top);
       for (const [kee, value] of Object.entries(val)) {
@@ -159,9 +157,6 @@ const createHTML = async () => {
             + '<div class="col-1">'+value.estEff+'</div>'
             + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
             + '</div>';
-        // console.log("variable kee is: ", kee);
-        // console.log("variable value is: ", value);
-        // console.log(nameDesc);
 
         $('#forLoop').append(nameDesc);
       }
@@ -189,7 +184,7 @@ const createHTML = async () => {
       listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+value+'">'+key+'</span></div>'
     }
     listHTML += '</div>';
-
+    $('#forLoop').append(listHTML);
 }
 
 
