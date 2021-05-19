@@ -191,7 +191,10 @@ const createHTML = async () => {
     for (const [key, value] of Object.entries(data.task)) {
       console.log(value);
       for (const [first, last] of Object.entries(value)) {
-        listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+first+'">'+first+'</span></div>';
+        if (first == 'id' || first == 'tags') {
+          listHTML += '<div class="col-1"><span class="sort" data-sort="'+first+'">'+first+'</span></div>';
+        } else
+        listHTML += '<div class="col-2"><span class="sort" data-sort="'+first+'">'+first+'</span></div>';
 
       }
       break;
