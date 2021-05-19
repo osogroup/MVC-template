@@ -137,7 +137,7 @@ var listHTML = '<div id="contacts" class="container>';
     listHTML += '<div class="col-12"><div class="col-4"><input class="search" placeholder="Search"/></div></div>';
     listHTML += '<div class="col-12">';
     for (const [key, value] of Object.entries(objVars.fields)) {
-      listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+value+'"'
+      listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+value+'">'+key+'</span></div>'
     }
 
 
