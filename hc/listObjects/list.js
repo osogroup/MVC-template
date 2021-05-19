@@ -184,7 +184,7 @@ const createHTML = async () => {
       listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+value+'">'+key+'</span></div>'
     }
     listHTML += '</div>';
-    $('#forLoop').append(listHTML);
+    $('#contacts').append(listHTML);
 }
 
 
