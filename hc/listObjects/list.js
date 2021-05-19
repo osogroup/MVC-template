@@ -143,12 +143,33 @@ const createHTML = async () => {
     // + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
     // + '</div>'
 
+    for (const [key, val] of Object.entries(data)) {
+      var top = '<h1>'+key+'</h1>';
+      $('#forLoop').append(top);
+      for (const [kee, value] of Object.entries(val)) {
+        var nameDesc = '<div class="row">'
+            + '<div class="col-1">'+value.id+'</div>'
+            + '<div class="col-2">'+value.name+'</div>'
+            + '<div class="col-2">'+value.description+'</div>'
+            + '<div class="col-2">'+value.status+'</div>'
+            + '<div class="col-1">'+value.tags+'</div>'
+            + '<div class="col-2">'+value.dueDate+'</div>'
+            + '<div class="col-1">'+value.estEff+'</div>'
+            + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
+            + '</div>';
 
-    for (const [kee, va] of Object.entries(data.task)) {
-      listHTML += '<div class="col-3">'
-      + '<input type="text" id="'+va+'-field" placeholder="'+va+'" />'
-      + '</div>';
+        $('#forLoop').append(nameDesc);
+      }
     }
+
+    for (const [major, minor] of Object.entries(data)) {
+      for(const [maj, min] of Object.entries(minor)) {
+        listHTML += '<div class="col-3">'
+        + '<input type="text" id="'+minor+'-field" placeholder="'+minor+'" />'
+        + '</div>';
+      }
+    }
+    
     listHTML +=  '<div class=col-1">'
     + '<button id="add-btn">Add</button>'
     + '<button id="edit-btn">Edit</button>'
@@ -167,26 +188,6 @@ const createHTML = async () => {
     }
     listHTML += '</div>';
     $('#contacts').append(listHTML);
-
-
-    for (const [key, val] of Object.entries(data)) {
-      var top = '<h1>'+key+'</h1>';
-      $('#forLoop').append(top);
-      for (const [kee, value] of Object.entries(val)) {
-        var nameDesc = '<div class="row">'
-        + '<div class="col-1">'+value.id+'</div>'
-        + '<div class="col-2">'+value.name+'</div>'
-        + '<div class="col-2">'+value.description+'</div>'
-        + '<div class="col-2">'+value.status+'</div>'
-        + '<div class="col-1">'+value.tags+'</div>'
-        + '<div class="col-2">'+value.dueDate+'</div>'
-        + '<div class="col-1">'+value.estEff+'</div>'
-        + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
-        + '</div>';
-
-        $('#forLoop').append(nameDesc);
-      }
-    }
 }
 
 
