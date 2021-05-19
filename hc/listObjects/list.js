@@ -151,7 +151,7 @@ const createHTML = async () => {
       for (const [kee, value] of Object.entries(val)) {
         var nameDesc = '<div class="row">'
             + '<div class="col-1">'+value.id+'</div>'
-            + '<div class="col-2"><span class="name"></span></div>'
+            + '<div class="col-2">'+value.name+'</div>'
             + '<div class="col-2"><span class="desc"></span></div>'
             + '<div class="col-2"><span class="status"></span></div>'
             + '<div class="col-1"><span class="tags"></span></div>'
