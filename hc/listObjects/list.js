@@ -159,7 +159,6 @@ const createHTML = async () => {
             + '<div class="col-1">'+value.estEff+'</div>'
             + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
             + '</div>';
-;
         // console.log("variable kee is: ", kee);
         // console.log("variable value is: ", value);
         // console.log(nameDesc);
