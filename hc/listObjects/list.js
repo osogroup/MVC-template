@@ -173,7 +173,7 @@ const createHTML = async () => {
 
 // ----------------------------------------------------- The Search Box ----------------------------------------------------------------
 
-    var searchVariable = '<div class="col-12"><div class="col-4"><input class="search" placeholder="Search"/></div></div><div class="col-12">';
+    var searchVariable = '<div class="col-12"><div class="col-4"><input class="search" placeholder="Search"/></div></div>';
     $('#searchBar').append(searchVariable);
 //---------------------------------------------------- The Table's Headers -------------------------------------------------------------
 
@@ -181,11 +181,11 @@ const createHTML = async () => {
 // this nested forloop goes into task in the JSON file and gets all the array identifiers and uses those
 // to make the headers for the categories, I added a break so that the outermost forloop will only loop
 // once
-
+    var headerStuff = '<div class="col-12">';
     for (const [key, value] of Object.entries(data.task)) {
       for (const [first, last] of Object.entries(value)) {
         if (first == 'id' || first == 'tags') {
-          var headerStuff = '<div class="col-1"><span class="sort" data-sort="'+first+'">'+first+'</span></div>';
+          headerStuff += '<div class="col-1"><span class="sort" data-sort="'+first+'">'+first+'</span></div>';
         } else
         headerStuff += '<div class="col-2"><span class="sort" data-sort="'+first+'">'+first+'</span></div>';
 
