@@ -129,7 +129,7 @@ var listHTML = '<div id="contacts" class="container>';
 
 //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
 
-    for (const [kee, va] of Object.entries(objVars.create)) {
+    for (const [kee, va] of Object.entries(objVars.task)) {
       listHTML += '<div class="col-3">'
                   + '<input type="text" id="'+va+'-field" placeholder="'+va+'" />'
                 + '</div>';
