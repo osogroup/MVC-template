@@ -112,7 +112,7 @@ var type = 'x'; // This one is the Tag/Task/Deliverable, it will temporarily be 
 var col = 1;  // This one is the amount of columns for the table header thing, it will temporarily be 1
 
 const getData = async () => {
-  var objVars = fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
+  var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
   console.log(objVars);
   return objVars;
 }
@@ -132,7 +132,7 @@ const createHTML = async () => {
 
     //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
 
-    for (const [kee, va] of Object.entries(objVars.task)) {
+    for (const [kee, va] of Object.entries(data.task)) {
       listHTML += '<div class="col-3">'
       + '<input type="text" id="'+va+'-field" placeholder="'+va+'" />'
       + '</div>';
