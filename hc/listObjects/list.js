@@ -111,7 +111,7 @@ fetch("../tempData/listOfObjects.json")
 
 var type = 'x'; // This one is the Tag/Task/Deliverable, it will temporarily be X
 var col = 1;  // This one is the amount of columns for the table header thing, it will temporarily be 1
-var objVars; // This has something to do with creating some nonsense, not sure what to instantiate it with
+var objVars = ''; // This has something to do with creating some nonsense, not sure what to instantiate it with, maybe a link
 
 // This variable is stacking up all the stuff that will go into the HTML and show all the tempData
 // from the JSON file in GitHub
@@ -150,30 +150,24 @@ var listHTML = '<div id="contacts" class="container>';
       listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+value+'">'+key+'</span></div>'
     }
     listHTML += '</div>';
-    
 
 
-// let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData/listOfObjects.json';
 
-// let request = new XMLHttpRequest();
 
-// request.open('GET', requestURL, true);
 
-// request.responseType = 'json';
 
-// request.send();
 
-// request.onload = function() {
-//   const tasks = request.response;
-//   showTasks(tasks);
-// }
 
-// function showTasks(obj) {
-//   const tasks = obj['task'];
-//   for (var i = 0; i < tasks.length; i++) {
 
-//     const myDiv = document.createElement('div');
 
-//     myDiv.textContent = tasks[i].id;
-//   }
-// }
+
+
+
+
+
+
+
+
+
+
+//
