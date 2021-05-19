@@ -126,7 +126,7 @@ var listHTML = '<div id="contacts" class="container>';
     listHTML +=  '<div class="col-12" id="TitleOfList">OAS'+type+'Object List</div>';
     listHTML +=  '</div><div class="row" id="hacker-list"><div class="col-12">';
 
-// Input Boxes
+//------------------------------------------------------- Input Boxes ------------------------------------------------------------------
 
     for (const [kee, va] of Object.entries(objVars.create)) {
       listHTML += '<div class="col-3">'
@@ -139,14 +139,18 @@ var listHTML = '<div id="contacts" class="container>';
                  + '</div>'
                + '</div>';
 
-// The Search Box
+// ----------------------------------------------------- The Search Box ----------------------------------------------------------------
 
     listHTML += '<div class="col-12"><div class="col-4"><input class="search" placeholder="Search"/></div></div>';
     listHTML += '<div class="col-12">';
+
+//---------------------------------------------------- The Table's Headers -------------------------------------------------------------
+
     for (const [key, value] of Object.entries(objVars.fields)) {
       listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+value+'">'+key+'</span></div>'
     }
     listHTML += '</div>';
+    
 
 
 // let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData/listOfObjects.json';
