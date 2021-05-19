@@ -113,7 +113,7 @@ var col = 1;  // This one is the amount of columns for the table header thing, i
 
 const getData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
-  // console.log(objVars);
+  console.log(objVars);
   return objVars;
 }
 
@@ -141,8 +141,7 @@ const createHTML = async () => {
       // console.log("key is: ", key);
       // console.log("variable val is: ", val);
       var top = '<h1>'+key+'</h1>';
-      var columnWidth = val.length;
-      console.log(columnWidth);
+      var columnWidth = val.length; // columnWidth is the number of objects in key
       $('#forLoop').append(top);
       for (const [kee, value] of Object.entries(val)) {
         var nameDesc = '<div class="col-1"><span class="id"></span>'+value.id+'</h2><p>'+value.description+'</p>';
