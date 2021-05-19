@@ -165,6 +165,8 @@ const createHTML = async () => {
     }
 
 
+// this nested forloop makes all the text boxes at the top
+
     for (const [key, value] of Object.entries(data.task)) {
       console.log(value);
       for (const [first, last] of Object.entries(value)) {
