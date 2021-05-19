@@ -189,9 +189,9 @@ const createHTML = async () => {
     //---------------------------------------------------- The Table's Headers -------------------------------------------------------------
 
     for (const [key, value] of Object.entries(data.task)) {
+      console.log(value);
       for (const [begin, end] of Object.entries(value)) {
         listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+begin+'">'+begin+'</span></div>';
-        console.log(value);
 
       }
     }
