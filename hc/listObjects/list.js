@@ -109,7 +109,7 @@ createHTML();
 
 
 var type = 'x'; // This one is the Tag/Task/Deliverable, it will temporarily be X
-var col = 1;  // This one is the amount of columns for the table header thing, it will temporarily be 1
+var col = 2;  // This one is the amount of columns for the table header thing, it will temporarily be 1
 
 const getData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
