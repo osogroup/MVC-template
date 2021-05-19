@@ -189,8 +189,11 @@ const createHTML = async () => {
     //---------------------------------------------------- The Table's Headers -------------------------------------------------------------
 
     for (const [key, value] of Object.entries(data.task)) {
-      listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+value+'">'+key+'</span></div>';
-      console.log(key);
+      for (const [begin, end] of Object.entries(value)) {
+        listHTML += '<div class="col-'+col+'"><span class="sort" data-sort="'+value+'">'+key+'</span></div>';
+        console.log(value);
+        
+      }
     }
     listHTML += '</div>';
     $('#contacts').append(listHTML);
