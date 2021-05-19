@@ -127,14 +127,14 @@ const createHTML = async () => {
   //   + '<a class="headerLinks" href="#">Task</a>'
   //   + '<a class="headerLinks" href="#">Deliverable</a>'
   //   + '</p></div>';
-    var inputThings = '<div class="col-12" id="TitleOfList">OAS Object List</div>';
-    var listHTML = '</div><div class="row" id="hacker-list"><div class="col-12">';
+    var listHTML =  '<div class="col-12" id="TitleOfList">OAS Object List</div>';
+    listHTML +=  '</div><div class="row" id="hacker-list"><div class="col-12">';
 
 //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
 
     for (const [key, value] of Object.entries(data.task)) {
       for (const [first, last] of Object.entries(value)) {
-        inputThings += '<div class="col-3">'
+        var inputThings= '<div class="col-3">'
         + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
         + '</div>';
         $('#inputBoxes').append(inputThings);
