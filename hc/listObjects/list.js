@@ -108,9 +108,16 @@ fetch("../tempData/listOfObjects.json")
   .then(response=>{return response.json();})
   .then(data=>console.log(data.task[0]))
 
-// var listHTML = '<div id="contacts" class="container>';
-//     listHTML += '<div class="row">';
-//     listHTML += '
+
+
+var listHTML = '<div id="contacts" class="container>';
+    listHTML +=  '<div class="row">';
+    listHTML +=  '<div class="col-12">';
+    listHTML +=  '<p id="header"><img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80px">'
+                 + '<a class="headerLinks" href="#">Tag</a>'
+                 + '<a class="headerLinks" href="#">Task</a>'
+                 + '<a class="headerLinks" href="#">Deliverable</a>'
+               + '</p>';
 
 
 // let requestURL = 'https://github.com/osogroup/MVC-template/blob/main/hc/tempData/listOfObjects.json';
