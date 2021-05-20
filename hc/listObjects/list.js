@@ -192,7 +192,6 @@ const createHTML = async () => {
                        + '<span class="sort" data-sort="'+first+'">'+first+'</span>'
                      + '</div>';
       }
-
     }
     break;
   }
