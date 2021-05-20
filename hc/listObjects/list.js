@@ -150,7 +150,7 @@ const createHTML = async () => {
       }
       inputThings += '<div class="col-1">'
                      + '<button id="add-btn">Add</button>'
-                     + '<button id="edit-btn">Edit</button>'
+                     // + '<button id="edit-btn">Edit</button>'
                    + '</div>';
       $('#inputBoxes').append(inputThings);
       break;
