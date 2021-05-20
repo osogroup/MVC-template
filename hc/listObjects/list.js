@@ -225,7 +225,7 @@ const createHTML = async () => {
     for (const[prop, access] of Object.entries(val)) {
       for (const [property, accessible] of Object.entries(access)) {
         console.log("accessible is: ", accessible);
-        top += '<div class=col-'+col+'>'+accessible+'</div>'
+        top += '<div class=col-'+col+'>'+property.last+'</div>'
       }
     }
 
