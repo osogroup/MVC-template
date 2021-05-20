@@ -229,7 +229,7 @@ const createHTML = async () => {
          else {
            nameDesc += '<div class="col-1">'+value.estEff+'</div>';
          }
-           nameDesc += '<div class=col-1><button class="remove-item-btn" onClick="alert("Button Works");"> - </button></div>'
+           nameDesc += '<div class=col-1><button class="remove-item-btn"> - </button></div>'
                    + '</div>';
       $('#forLoop').append(nameDesc);
     }
