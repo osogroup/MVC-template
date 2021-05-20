@@ -124,7 +124,7 @@ const createHTML = async () => {
 // ----------------------------------------------------- Begin listHTML -----------------------------------------------
 
 
-  var listHTML = '<div id="contacts" class="container>'
+  var headerHTML = '<div id="contacts" class="container>'
                  + '<div class="row">'
                    + '<div class="col-12">'
                      + '<p id="header">'
@@ -133,8 +133,11 @@ const createHTML = async () => {
                      + '<a class="headerLinks" href="#">Task</a>'
                      + '<a class="headerLinks" href="#">Deliverable</a>'
                    + '</p>'
+                 + '</div>'
+                 + '<div>'
+                   + '<h1>OAS Object List'
                  + '</div>';
-    $('#TitleOfList').append('OAS Object List');
+    $('#TitleOfList').append(headerHTML);
     var listHTML =  '</div><div class="row" id="hacker-list"><div class="col-12">';
 
 //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
