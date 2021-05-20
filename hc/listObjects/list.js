@@ -119,14 +119,14 @@ const getData = async () => {
 
 const createHTML = async () => {
   var data = await getData();
-  // var listHTML = '<div id="contacts" class="container>';
-  //   listHTML +=  '<div class="row">';
-  //   listHTML +=  '<div class="col-12">';
-  //   listHTML +=  '<p id="header"><img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80px">'
-  //   + '<a class="headerLinks" href="#">Tag</a>'
-  //   + '<a class="headerLinks" href="#">Task</a>'
-  //   + '<a class="headerLinks" href="#">Deliverable</a>'
-  //   + '</p></div>';
+  var listHTML = '<div id="contacts" class="container>';
+                 + '<div class="row">';
+                   + '<div class="col-12">';
+                     + '<p id="header"><img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80px">'
+                     + '<a class="headerLinks" href="#">Tag</a>'
+                 + '<a class="headerLinks" href="#">Task</a>'
+                 + '<a class="headerLinks" href="#">Deliverable</a>'
+               + '</p></div>';
     $('#TitleOfList').append('OAS Object List');
     var listHTML =  '</div><div class="row" id="hacker-list"><div class="col-12">';
 
@@ -151,15 +151,15 @@ const createHTML = async () => {
       $('#forLoop').append(top);
       for (const [kee, value] of Object.entries(val)) {
         var nameDesc = '<div class="row">'
-            + '<div class="col-1">'+value.id+'</div>'
-            + '<div class="col-2">'+value.name+'</div>'
-            + '<div class="col-2">'+value.description+'</div>'
-            + '<div class="col-2">'+value.status+'</div>'
-            + '<div class="col-1">'+value.tags+'</div>'
-            + '<div class="col-2">'+value.dueDate+'</div>'
-            + '<div class="col-1">'+value.estEff+'</div>'
-            + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
-            + '</div>';
+                       + '<div class="col-1">'+value.id+'</div>'
+                       + '<div class="col-2">'+value.name+'</div>'
+                       + '<div class="col-2">'+value.description+'</div>'
+                       + '<div class="col-2">'+value.status+'</div>'
+                       + '<div class="col-1">'+value.tags+'</div>'
+                       + '<div class="col-2">'+value.dueDate+'</div>'
+                       + '<div class="col-1">'+value.estEff+'</div>'
+                       + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
+                     + '</div>';
         $('#forLoop').append(nameDesc);
       }
     }
