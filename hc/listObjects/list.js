@@ -159,6 +159,16 @@ const createHTML = async () => {
       break;
     }
 
+
+// ----------------------------------------------------- The Search Box ----------------------------------------------------------------
+
+    var searchVariable = '<div class="col-12">'
+                         + '<div class="col-4">'
+                           + '<input class="search" placeholder="Search"/>'
+                         + '</div>'
+                       + '</div>';
+    $('#searchBar').append(searchVariable);
+
 //------------------------------------------------------ Data Filling ------------------------------------------------------------------
 
 // this nested for loop goes through the JSON file and puts all the values into the columns on the webpage
@@ -183,10 +193,6 @@ const createHTML = async () => {
     }
 
 
-// ----------------------------------------------------- The Search Box ----------------------------------------------------------------
-
-    var searchVariable = '<div class="col-12"><div class="col-4"><input class="search" placeholder="Search"/></div></div>';
-    $('#searchBar').append(searchVariable);
 //---------------------------------------------------- The Table's Headers -------------------------------------------------------------
 
 
