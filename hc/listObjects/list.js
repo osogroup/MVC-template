@@ -64,8 +64,7 @@ $(document).ready(function(){
       removeBtns = $('.remove-item-btn'),
       editBtns = $('.edit-item-btn');
     // Needed to add new buttons to jQuery-extended object
-    removeBtns = $('.remove-item-btn');
-    editBtns = $(editBtns.selector);
+
 
     removeBtns.click(function() {
       console.log("Entering remove function", this);
