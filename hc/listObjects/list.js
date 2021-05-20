@@ -223,13 +223,8 @@ const createHTML = async () => {
     }
 
     for (const[prop, access] of Object.entries(val)) {
-      console.log("prop is: ", prop);
-      console.log("access is: ", access);
-      // console.log("prop.access is: ", prop.access);
-      top += '<div class="col-'+col+'">'+key.access+'</div>';
       for (const [property, accessible] of Object.entries(access)) {
-        console.log("property is: ", property);
-        console.log("accessible is: ", accessible); // this is what i want hoe
+        console.log("accessible is: ", accessible);
         top += '<div class=col-'+col+'>'+accessible+'</div>'
       }
     }
