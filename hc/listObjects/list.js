@@ -223,18 +223,10 @@ const createHTML = async () => {
 
 
 
+
+
+
 createHTML();
 
 });
-
-
-
-
-
-
-
-
-
-
-
 //
