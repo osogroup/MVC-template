@@ -124,9 +124,9 @@ const createHTML = async () => {
 // ----------------------------------------------------- Begin listHTML -----------------------------------------------
 
 
-  var listHTML = '<div id="contacts" class="container>';
-                 + '<div class="row">';
-                   + '<div class="col-12">';
+  var listHTML = '<div id="contacts" class="container>'
+                 + '<div class="row">'
+                   + '<div class="col-12">'
                      + '<p id="header">'
                      + '<img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80px">'
                      + '<a class="headerLinks" href="#">Tag</a>'
