@@ -173,7 +173,6 @@ const createHTML = async () => {
   $('#searchBar').append(searchVariable);
 
 
-  // -------------------------------------------------- The Table's Headers -------------------------------------------------------------
 
 
   // this nested forloop goes into task in the JSON file and gets all the array identifiers and uses those
@@ -201,7 +200,7 @@ const createHTML = async () => {
   // $('#tableHeaders').append(headerStuff);
 
 
-  //------------------------------------------------------ Data Filling ------------------------------------------------------------------
+  // -------------------------------------------------- The Table's Headers -------------------------------------------------------------
 
 
   // this nested for loop goes through the JSON file and puts all the values into the columns on the webpage
@@ -222,6 +221,7 @@ const createHTML = async () => {
     }
 
 
+    //------------------------------------------------------ Data Filling ------------------------------------------------------------------
 
 
     top += '</div>';
