@@ -200,7 +200,7 @@ const createHTML = async () => {
                      + listValue
                    + '</div>';
     }
-
+    $('#tableHeaders').append(tHeader);
       for (const [SLKey, SLValue] of Object.entries(val)) {
         console.log("This is SLKey ", SLKey);
         console.log("This is SLValue ", SLValue);
