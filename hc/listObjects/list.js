@@ -220,12 +220,14 @@ const createHTML = async () => {
                      + last
                    + '</div>';
     }
+    for (const[prop, access] of Object.entries(listData.list)) {
+      console.log("prop.access is: ", prop.access);
+      top += '<div class="col-1">'+prop.access+'</div>';
 
+    }
 
     //------------------------------------------------------ Data Filling ------------------------------------------------------------------
 
-    console.log("first.last is: ", first.last);
-    top += '<div class="col-1">'+first.last+'</div>';
 
 
 
