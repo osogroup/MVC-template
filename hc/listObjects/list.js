@@ -222,7 +222,7 @@ const createHTML = async () => {
     }
     for (const[prop, access] of Object.entries(listData.list)) {
       console.log("prop.access is: ", prop.access);
-      top += '<div class="col-1">'+prop.access+'</div>';
+      top += '<div class="col-'+col+'">'+prop.access+'</div>';
 
     }
 
