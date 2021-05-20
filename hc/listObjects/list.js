@@ -59,7 +59,7 @@ $(document).ready(function(){
       estField = $('#est-field'),
       addBtn = $('#add-btn'),
       editBtn = $('#edit-btn').hide(),
-      removeBtns = $(removeBtns.selector),
+      removeBtns = $('.remove-item-btn'),
       editBtns = $('.edit-item-btn');
     // Needed to add new buttons to jQuery-extended object
 
