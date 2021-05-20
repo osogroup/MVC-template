@@ -99,9 +99,6 @@ $(document).ready(function(){
 
   }
 
-  createHTML();
-
-});
 
 const getData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
@@ -226,6 +223,9 @@ const createHTML = async () => {
 
 
 
+createHTML();
+
+});
 
 
 
