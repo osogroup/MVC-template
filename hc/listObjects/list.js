@@ -223,7 +223,7 @@ const createHTML = async () => {
 
     //------------------------------------------------------ Data Filling ------------------------------------------------------------------
 
-    console.log("val.last is: ", listData.list);
+    console.log("listData.list is: ", listData.list);
     top += '<div class="col-1">'+listData.list+'</div>';
 
 
