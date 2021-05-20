@@ -99,15 +99,9 @@ $(document).ready(function(){
 
   }
 
-createHTML();
+  createHTML();
 
 });
-
-
-
-var type = 'x'; // This one is the Tag/Task/Deliverable, it will temporarily be X
-var listHTML = '';
-
 
 const getData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
