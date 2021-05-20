@@ -250,7 +250,7 @@ const createHTML = async () => {
       //    }
       //      nameDesc += '<div class=col-1><button id="remove-item-btn"> - </button></div>'
       //              + '</div>';
-      $('#forLoop').append(nameDesc);
+      // $('#forLoop').append(nameDesc);
     }
   }
   $('#forLoop').append('</div>');
