@@ -195,7 +195,7 @@ const createHTML = async () => {
     }
     break;
   }
-  headerStuff += '</div>
+  headerStuff += '</div>'
              + '</div>';
   $('#tableHeaders').append(headerStuff);
 
