@@ -211,10 +211,25 @@ const createHTML = async () => {
          else {
            nameDesc += '<div class="col-2">'+value.status+'</div>';
          }
-           nameDesc += '<div class="col-1">'+value.tags+'</div>'
-                     + '<div class="col-2">'+value.dueDate+'</div>'
-                     + '<div class="col-1">'+value.estEff+'</div>'
-                     + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
+         if (value.tags == null) {
+           nameDesc += '<div class="col-2"></div>';
+         }
+         else {
+           nameDesc += '<div class="col-2">'+value.tags+'</div>';
+         }
+         if (value.dueDate == null) {
+           nameDesc += '<div class="col-2"></div>';
+         }
+         else {
+           nameDesc += '<div class="col-2">'+value.dueDate+'</div>';
+         }
+         if (value.estEff == null) {
+           nameDesc += '<div class="col-2"></div>';
+         }
+         else {
+           nameDesc += '<div class="col-2">'+value.estEff+'</div>';
+         }
+           nameDesc += '<div class=col-1><button class="remove-item-btn"> - </button></div>'
                    + '</div>';
       $('#forLoop').append(nameDesc);
     }
