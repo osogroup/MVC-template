@@ -162,8 +162,8 @@ const createHTML = async () => {
 
 // ----------------------------------------------------- The Search Box ----------------------------------------------------------------
 
-    var searchVariable = '<div class="col-12">'
-                         + '<div class="row">'
+    var searchVariable = '<div class="row">'
+                         + '<div class="col-12">'
                            + '<div class="col-4">'
                              + '<input class="search" placeholder="Search"/>'
                            + '</div>'
