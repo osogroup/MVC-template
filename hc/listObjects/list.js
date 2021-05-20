@@ -200,7 +200,7 @@ const createHTML = async () => {
         for (const [property, accessible] of Object.entries(access)) {
           console.log("property is: ", property);
           console.log("accessible is: ", accessible);
-
+          top += '<div class=col-'+col+'>'+property.first+'</div>';
         }
       }
     }
@@ -209,7 +209,7 @@ const createHTML = async () => {
     //     console.log("property is: ", property);
     //     console.log("accessible is: ", accessible);
     //
-    //     top += '<div class=col-'+col+'>'+property.first+'</div>'
+    //     top += '<div class=col-'+col+'>'+property.first+'</div>';
     //   }
     // }
 
