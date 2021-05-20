@@ -210,11 +210,11 @@ const createHTML = async () => {
     var top = '<h1>'+key+'</h1>';
     var list = config[key];
     console.log(key+" configs ", list);
-    // for (const [first, last] of Object.entries(value)) {
-    //   inputThings += '<div class="col-3">'
-    //                  + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
-    //                + '</div>';
-    // }
+    for (const [first, last] of Object.entries(value)) {
+      inputThings += '<div class="col-3">'
+                     + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
+                   + '</div>';
+    }
     $('#forLoop').append(top);
     for (const [kee, value] of Object.entries(val)) {
 
