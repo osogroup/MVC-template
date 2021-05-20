@@ -197,7 +197,7 @@ const createHTML = async () => {
       console.log("This is list item value: ", listValue);
       // creating table header HTML
       tHeader += '<div class="col-'+col+'">'
-                     + last
+                     + listValue
                    + '</div>';
     }
 
