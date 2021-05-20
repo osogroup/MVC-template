@@ -147,8 +147,8 @@ const createHTML = async () => {
         inputThings += '<div class="col-3">'
         + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
         + '</div>';
-        $('#inputBoxes').append(inputThings);
       }
+      $('#inputBoxes').append(inputThings);
 
       break;
     }
