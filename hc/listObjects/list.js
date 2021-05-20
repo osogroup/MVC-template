@@ -13,8 +13,6 @@ $(document).ready(function(){
     tagsField = $('#tags-field'),
     dueField = $('#due-field'),
     estField = $('#est-field'),
-
-
     addBtn = $('#add-btn'),
     editBtn = $('#edit-btn').hide(),
     removeBtns = $('.remove-item-btn'),
