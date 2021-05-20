@@ -144,80 +144,86 @@ const createHTML = async () => {
                     + '<div class="col-12">';
   //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
 
-    for (const [key, value] of Object.entries(data.task)) {
-      for (const [first, last] of Object.entries(value)) {
-        inputThings += '<div class="col-3">'
-        + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
-        + '</div>';
-      }
-      inputThings += '<div class="col-1">'
-                     + '<button id="add-btn">Add</button>'
-                     // + '<button id="edit-btn">Edit</button>'
-                   + '</div>'
-                 + '</div>';
-      $('#inputBoxes').append(inputThings);
-      break;
+  for (const [key, value] of Object.entries(data.task)) {
+    for (const [first, last] of Object.entries(value)) {
+      inputThings += '<div class="col-3">'
+      + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
+      + '</div>';
     }
+    inputThings += '<div class="col-1">'
+                   + '<button id="add-btn">Add</button>'
+                   // + '<button id="edit-btn">Edit</button>'
+                 + '</div>'
+               + '</div>';
+    $('#inputBoxes').append(inputThings);
+    break;
+  }
 
 
   // ----------------------------------------------------- The Search Box ----------------------------------------------------------------
 
 
-    var searchVariable = '<div class="row">'
-                         + '<div class="col-12">'
-                           + '<div class="col-4">'
-                             + '<input class="search" placeholder="Search"/>'
-                           + '</div>'
+  var searchVariable = '<div class="row">'
+                       + '<div class="col-12">'
+                         + '<div class="col-4">'
+                           + '<input class="search" placeholder="Search"/>'
                          + '</div>'
-                       + '</div>';
-    $('#searchBar').append(searchVariable);
+                       + '</div>'
+                     + '</div>';
+  $('#searchBar').append(searchVariable);
 
 
   // -------------------------------------------------- The Table's Headers -------------------------------------------------------------
 
-    
-    // this nested forloop goes into task in the JSON file and gets all the array identifiers and uses those
-    // to make the headers for the categories, I added a break so that the outermost forloop will only loop
-    // once
-    var headerStuff = '<div class="col-12">';
-    for (const [key, value] of Object.entries(data.task)) {
-      for (const [first, last] of Object.entries(value)) {
-        if (first == 'id' || first == 'tags') {
-          headerStuff += '<div class="col-1"><span class="sort" data-sort="'+first+'">'+first+'</span></div>';
-        } else
-        headerStuff += '<div class="col-2"><span class="sort" data-sort="'+first+'">'+first+'</span></div>';
 
-      }
-      break;
-    }
-    headerStuff += '</div>';
-    $('#tableHeaders').append(headerStuff);
-
-
-//------------------------------------------------------ Data Filling ------------------------------------------------------------------
-
-
-// this nested for loop goes through the JSON file and puts all the values into the columns on the webpage
-// Ex. all the id's and names of projects that you can scroll through, and eventually, remove.
-
-    for (const [key, val] of Object.entries(data)) {
-      var top = '<h1>'+key+'</h1>';
-      $('#forLoop').append(top);
-      for (const [kee, value] of Object.entries(val)) {
-        var nameDesc = '<div class="row">'
-                       + '<div class="col-1">'+value.id+'</div>'
-                       + '<div class="col-2">'+value.name+'</div>'
-                       + '<div class="col-2">'+value.description+'</div>'
-                       + '<div class="col-2">'+value.status+'</div>'
-                       + '<div class="col-1">'+value.tags+'</div>'
-                       + '<div class="col-2">'+value.dueDate+'</div>'
-                       + '<div class="col-1">'+value.estEff+'</div>'
-                       + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
+  // this nested forloop goes into task in the JSON file and gets all the array identifiers and uses those
+  // to make the headers for the categories, I added a break so that the outermost forloop will only loop
+  // once
+  var headerStuff = '<div class="col-12">';
+  for (const [key, value] of Object.entries(data.task)) {
+    for (const [first, last] of Object.entries(value)) {
+      if (first == 'id' || first == 'tags') {
+        headerStuff += '<div class="col-1">'
+                       + '<span class="sort" data-sort="'+first+'">'+first+'</span>'
                      + '</div>';
-        $('#forLoop').append(nameDesc);
       }
+      else {
+        headerStuff += '<div class="col-2">'
+                       + '<span class="sort" data-sort="'+first+'">'+first+'</span>'
+                     + '</div>';
+      }
+
     }
-    $('#insertHTML').append(listHTML);
+    break;
+  }
+  headerStuff += '</div>';
+  $('#tableHeaders').append(headerStuff);
+
+
+  //------------------------------------------------------ Data Filling ------------------------------------------------------------------
+
+
+  // this nested for loop goes through the JSON file and puts all the values into the columns on the webpage
+  // Ex. all the id's and names of projects that you can scroll through, and eventually, remove.
+
+  for (const [key, val] of Object.entries(data)) {
+    var top = '<h1>'+key+'</h1>';
+    $('#forLoop').append(top);
+    for (const [kee, value] of Object.entries(val)) {
+      var nameDesc = '<div class="row">'
+                     + '<div class="col-1">'+value.id+'</div>'
+                     + '<div class="col-2">'+value.name+'</div>'
+                     + '<div class="col-2">'+value.description+'</div>'
+                     + '<div class="col-2">'+value.status+'</div>'
+                     + '<div class="col-1">'+value.tags+'</div>'
+                     + '<div class="col-2">'+value.dueDate+'</div>'
+                     + '<div class="col-1">'+value.estEff+'</div>'
+                     + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
+                   + '</div>';
+      $('#forLoop').append(nameDesc);
+    }
+  }
+  $('#insertHTML').append(listHTML);
 }
 
 
