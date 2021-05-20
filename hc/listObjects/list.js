@@ -210,12 +210,13 @@ const createHTML = async () => {
     var top = '<h1>'+key+'</h1>';
     top += '<div class="row">';
     var listData = config[key];
+    var col = 12/(listData.list.length);
     console.log(key+" configs ", listData);
     for (const [first, last] of Object.entries(listData.list)) {
       console.log("This is first ", first);
       console.log("This is last ", last);
 
-      top += '<div class="col-3">'
+      top += '<div class="'+col+'">'
                      + last
                    + '</div>';
     }
