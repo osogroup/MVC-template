@@ -110,6 +110,8 @@ createHTML();
 
 var type = 'x'; // This one is the Tag/Task/Deliverable, it will temporarily be X
 var col = 2;  // This one is the amount of columns for the table header thing, it will temporarily be 1
+var listHTML = '';
+
 
 const getData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
@@ -180,12 +182,6 @@ const createHTML = async () => {
       }
     }
 
-
-    listHTML +=  '<div class=col-1">'
-    + '<button id="add-btn">Add</button>'
-    + '<button id="edit-btn">Edit</button>'
-    + '</div>'
-    + '</div>';
 
 // ----------------------------------------------------- The Search Box ----------------------------------------------------------------
 
