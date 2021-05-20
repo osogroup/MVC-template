@@ -183,10 +183,11 @@ const createHTML = async () => {
     console.log("val is: ", val);
     var top = '<h1>'+key+'</h1>';
     top += '<div class="row">';
-    var listData = config[key];
-    var col = 12/(listData.list.length);
-    console.log(key+" configs ", listData);
-    for (const [first, last] of Object.entries(listData.list)) {
+    var listConfig = config[key];
+    var listData = data[key];
+    var col = 12/(listConfig.list.length);
+    console.log(key+" configs ", listConfig);
+    for (const [first, last] of Object.entries(listConfig.list)) {
       console.log("This is first ", first);
       console.log("This is last ", last);
 
@@ -195,7 +196,7 @@ const createHTML = async () => {
                    + '</div>';
     }
 
-    for (const [second, secondToLast] of Object.entries(config)) {
+    for (const [second, secondToLast] of Object.entries(listConfig.list)) {
       console.log("This is second ", second);
       console.log("This is secondToLast ", secondToLast);
       top += '<div class="col-'+col+'">'+secondToLast+'</div>';
