@@ -215,7 +215,7 @@ const createHTML = async () => {
       console.log("This is last ", last);
 
       top += '<div class="col-3">'
-                     + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
+                     + last
                    + '</div>';
     }
     $('#forLoop').append(top);
