@@ -211,7 +211,10 @@ const createHTML = async () => {
     var listData = config[key];
     console.log(key+" configs ", listData);
     for (const [first, last] of Object.entries(listData.list)) {
-      inputThings += '<div class="col-3">'
+      console.log("This is first ", first);
+      console.log("This is last ", last);
+
+      top += '<div class="col-3">'
                      + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
                    + '</div>';
     }
