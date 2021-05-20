@@ -224,7 +224,7 @@ const createHTML = async () => {
       console.log("prop is: ", prop);
       console.log("access is: ", access);
       // console.log("prop.access is: ", prop.access);
-      top += '<div class="col-'+col+'">'+prop.access+'</div>';
+      top += '<div class="col-'+col+'">'+prop[access]+'</div>';
 
     }
 
