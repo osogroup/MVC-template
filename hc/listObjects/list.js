@@ -119,6 +119,11 @@ const getData = async () => {
 
 const createHTML = async () => {
   var data = await getData();
+
+
+// ----------------------------------------------------- Begin listHTML -----------------------------------------------
+
+
   var listHTML = '<div id="contacts" class="container>';
                  + '<div class="row">';
                    + '<div class="col-12">';
@@ -194,7 +199,7 @@ const createHTML = async () => {
     }
     listHTML += '</div>';
     $('#tableHeaders').append(headerStuff);
-    $('#tableHeaders').append(listHTML);
+    $('#insertHTML').append(listHTML);
 }
 
 
