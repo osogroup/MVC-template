@@ -205,7 +205,7 @@ const createHTML = async () => {
                      + '<div class="col-1">'+value.id+'</div>'
                      + '<div class="col-2">'+value.name+'</div>'
                      + '<div class="col-2">'+value.description+'</div>';
-         if (value.status == null || value.status == undefined) {
+         if (value.status == null) {
            nameDesc += '<div class="col-2"></div>';
          }
          else {
