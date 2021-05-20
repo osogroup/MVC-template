@@ -222,7 +222,6 @@ const createHTML = async () => {
       $('#forLoop').append(nameDesc);
     }
   }
-  $('#insertHTML').append(listHTML);
 }
 
 
