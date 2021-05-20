@@ -109,7 +109,6 @@ createHTML();
 
 
 var type = 'x'; // This one is the Tag/Task/Deliverable, it will temporarily be X
-var col = 2;  // This one is the amount of columns for the table header thing, it will temporarily be 1
 var listHTML = '';
 
 
@@ -222,6 +221,7 @@ const createHTML = async () => {
                      + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
                    + '</div>';
       $('#forLoop').append(nameDesc);
+      console.log(size(value.name));
     }
   }
   $('#forLoop').append('</div>');
