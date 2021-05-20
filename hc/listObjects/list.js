@@ -204,16 +204,16 @@ const createHTML = async () => {
     $('#tableHeaders').append(tHeader);
 
 
-// putting object item rows
+  // putting object item rows
     var objItems = '<div class="row">'
 
-// getting item attributes
+  // getting item attributes
 
-// getting list configuration
+    // getting list configuration
 
-// create item column HTML
+      // create item column HTML
 
-// append row to index.html
+  // append row to index.html
 
 
 
