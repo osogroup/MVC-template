@@ -198,11 +198,11 @@ const createHTML = async () => {
   // Ex. all the id's and names of projects that you can scroll through, and eventually, remove.
 
   for (const [key, val] of Object.entries(data)) {
-    var top = '<div class="row">'
-              + '<h1>'+key+'</h1>';
+    var top = '<h1>'+key+'</h1>';
     $('#forLoop').append(top);
     for (const [kee, value] of Object.entries(val)) {
-      var nameDesc = '<div class="col-1">'+value.id+'</div>'
+      var nameDesc = '<div class="row">'
+                     + '<div class="col-1">'+value.id+'</div>'
                      + '<div class="col-2">'+value.name+'</div>'
                      + '<div class="col-2">'+value.description+'</div>';
          if (value.status == null) {
