@@ -31,7 +31,7 @@ $(document).ready(function(){
       est: estField.val()
     });
     clearFields();
-    refreshCallbacks();
+    refreshCallbacks(contactList);
   });
 
 
