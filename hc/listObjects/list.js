@@ -127,12 +127,12 @@ const createHTML = async () => {
   var listHTML = '<div id="contacts" class="container>';
                  + '<div class="row">';
                    + '<div class="col-12">';
-                     + '<p id="header">
+                     + '<p id="header">'
                      + '<img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80px">'
                      + '<a class="headerLinks" href="#">Tag</a>'
                      + '<a class="headerLinks" href="#">Task</a>'
                      + '<a class="headerLinks" href="#">Deliverable</a>'
-                   + '</p>
+                   + '</p>'
                  + '</div>';
     $('#TitleOfList').append('OAS Object List');
     var listHTML =  '</div><div class="row" id="hacker-list"><div class="col-12">';
