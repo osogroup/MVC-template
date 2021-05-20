@@ -181,26 +181,32 @@ const createHTML = async () => {
   // Ex. all the id's and names of projects that you can scroll through, and eventually, remove.
   for (const [key, val] of Object.entries(data)) {
     console.log("val is: ", val);
-    var top = '<h1>'+key+'</h1>';
-    top += '<div class="row">';
-    var listData = config[key];
-    var col = 12/(listData.list.length);
-    console.log(key+" configs ", listData);
-    for (const [first, last] of Object.entries(listData.list)) {
-      console.log("This is first ", first);
-      console.log("This is last ", last);
 
-      top += '<div class="col-'+col+'">'
+    // displaying Object Name
+    var tHeader = '<h1>'+key+'</h1>';
+    // creating table header Row
+    tHeader += '<div class="row">';
+    // setting object type configuration
+    var objTypeConfig = config[key];
+    // setting table column width for each object type
+    var col = 12/(objTypeConfig.list.length);
+    console.log(key+" configs ", objTypeConfig);
+    // creating table header
+    for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
+      console.log("This is list item key: ", listKey);
+      console.log("This is list item value: ", listValue);
+      // creating table header HTML
+      tHeader += '<div class="col-'+col+'">'
                      + last
                    + '</div>';
+    }
+
       for (const [SLKey, SLValue] of Object.entries(val)) {
         console.log("This is SLKey ", SLKey);
         console.log("This is SLValue ", SLValue);
-        top += '<div class="col-"'+col+'>'+SLValue.last+'</div>'
+        tHeader += '<div class="col-"'+col+'>'+SLValue.last+'</div>'
       }
 
-      // top += '<div class="col-'+col+'">'+ /*something goes here with a dot to connect to secondToLast*/ secondToLast+'</div>';
-    }
     // for (const[prop, access] of Object.entries(val)) {
     //   for (const [property, accessible] of Object.entries(access)) {
     //     console.log("property is: ", property);
@@ -217,7 +223,7 @@ const createHTML = async () => {
 
 
 
-    top += '</div>';
+    tHeader += '</div>';
     $('#forLoop').append(top);
     for (const [kee, value] of Object.entries(val)) {
 
