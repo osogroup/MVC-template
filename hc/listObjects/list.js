@@ -103,14 +103,21 @@ $(document).ready(function(){
 
 });
 
-const getData = async () => {
+
+const configData = async () => {
+  var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
+  console.log(listConfig);
+  return objVars;
+}
+
+const tempData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
   console.log(objVars);
   return objVars;
 }
 
 const createHTML = async () => {
-  var data = await getData();
+  var data = await tempData();
 
 
   // ----------------------------------------------------- Begin listHTML -----------------------------------------------
@@ -200,6 +207,9 @@ const createHTML = async () => {
     var top = '<h1>'+key+'</h1>';
     $('#forLoop').append(top);
     for (const [kee, value] of Object.entries(val)) {
+
+
+
       // var nameDesc = '<div class="row">'
       //                + '<div class="col-1">'+value.id+'</div>'
       //                + '<div class="col-2">'+value.name+'</div>'
