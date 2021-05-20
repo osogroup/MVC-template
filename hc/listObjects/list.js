@@ -211,9 +211,9 @@ const createHTML = async () => {
 
 // getting list configuration
 
-// create HTML
+// create item column HTML
 
-
+// append row to index.html
 
 
 
