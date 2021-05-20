@@ -216,7 +216,7 @@ const createHTML = async () => {
       console.log("This is first ", first);
       console.log("This is last ", last);
 
-      top += '<div class="'+col+'">'
+      top += '<div class="col-'+col+'">'
                      + last
                    + '</div>';
     }
