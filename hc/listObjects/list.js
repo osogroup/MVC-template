@@ -223,7 +223,7 @@ const createHTML = async () => {
       $('#forLoop').append(nameDesc);
     }
   }
-  var closeColumn = '</div>';
+  $('#forLoop').append('</div>');
 }
 
 
