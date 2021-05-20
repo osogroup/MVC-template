@@ -136,8 +136,8 @@ const createHTML = async () => {
                        + '<a class="headerLinks" href="#">Deliverable</a>'
                      + '</p>'
                    + '</div>'
-                     + '<h1>OAS Object List'
-                   + '</div>'
+                   + '<h1>OAS Object List'
+                 + '</div>'
   $('#TitleOfList').append(headerHTML);
 
   var inputThings = '<div class="row" id="hacker-list">'
@@ -147,8 +147,8 @@ const createHTML = async () => {
   for (const [key, value] of Object.entries(data.task)) {
     for (const [first, last] of Object.entries(value)) {
       inputThings += '<div class="col-3">'
-      + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
-      + '</div>';
+                     + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
+                   + '</div>';
     }
     inputThings += '<div class="col-1">'
                    + '<button id="add-btn">Add</button>'
@@ -163,13 +163,12 @@ const createHTML = async () => {
   // ----------------------------------------------------- The Search Box ----------------------------------------------------------------
 
 
-  var searchVariable = '<div class="row">'
-                       + '<div class="col-12">'
-                         + '<div class="col-4">'
-                           + '<input class="search" placeholder="Search"/>'
-                         + '</div>'
+  var searchVariable = '<div class="col-12">'
+                       + '<div class="col-4">'
+                         + '<input class="search" placeholder="Search"/>'
                        + '</div>'
-                     + '</div>';
+                     + '</div>'
+                   + '</div>';
   $('#searchBar').append(searchVariable);
 
 
