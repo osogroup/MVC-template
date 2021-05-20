@@ -15,7 +15,7 @@ $(document).ready(function(){
     estField = $('#est-field'),
     addBtn = $('#add-btn'),
     editBtn = $('#edit-btn').hide(),
-    removeBtns = $('.remove-item-btn'),
+    removeBtns = $('#remove-item-btn'),
     editBtns = $('.edit-item-btn');
 
     refreshCallbacks(contactList);
@@ -59,7 +59,7 @@ $(document).ready(function(){
       estField = $('#est-field'),
       addBtn = $('#add-btn'),
       editBtn = $('#edit-btn').hide(),
-      removeBtns = $('.remove-item-btn'),
+      removeBtns = $('#remove-item-btn'),
       editBtns = $('.edit-item-btn');
     // Needed to add new buttons to jQuery-extended object
 
@@ -229,7 +229,7 @@ const createHTML = async () => {
          else {
            nameDesc += '<div class="col-1">'+value.estEff+'</div>';
          }
-           nameDesc += '<div class=col-1><button class="remove-item-btn"> - </button></div>'
+           nameDesc += '<div class=col-1><button id="remove-item-btn"> - </button></div>'
                    + '</div>';
       $('#forLoop').append(nameDesc);
     }
