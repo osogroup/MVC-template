@@ -146,6 +146,7 @@ const createHTML = async () => {
 
   for (const [key, value] of Object.entries(data.task)) {
     for (const [first, last] of Object.entries(value)) {
+      console.log("THIS IS WHAT I WANT TO SEE ", last);
       inputThings += '<div class="col-3">'
                      + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
                    + '</div>';
