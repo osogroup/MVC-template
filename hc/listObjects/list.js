@@ -212,10 +212,10 @@ const createHTML = async () => {
            nameDesc += '<div class="col-2">'+value.status+'</div>';
          }
          if (value.tags == null) {
-           nameDesc += '<div class="col-2"></div>';
+           nameDesc += '<div class="col-1"></div>';
          }
          else {
-           nameDesc += '<div class="col-2">'+value.tags+'</div>';
+           nameDesc += '<div class="col-1">'+value.tags+'</div>';
          }
          if (value.dueDate == null) {
            nameDesc += '<div class="col-2"></div>';
@@ -224,10 +224,10 @@ const createHTML = async () => {
            nameDesc += '<div class="col-2">'+value.dueDate+'</div>';
          }
          if (value.estEff == null) {
-           nameDesc += '<div class="col-2"></div>';
+           nameDesc += '<div class="col-1"></div>';
          }
          else {
-           nameDesc += '<div class="col-2">'+value.estEff+'</div>';
+           nameDesc += '<div class="col-1">'+value.estEff+'</div>';
          }
            nameDesc += '<div class=col-1><button class="remove-item-btn"> - </button></div>'
                    + '</div>';
