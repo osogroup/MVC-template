@@ -206,12 +206,12 @@ const createHTML = async () => {
   // this nested for loop goes through the JSON file and puts all the values into the columns on the webpage
   // Ex. all the id's and names of projects that you can scroll through, and eventually, remove.
 
+  var nameDesc = '<div class="col-12">'
+  + '<div class="list"></div>'
+  + '</div>';
   for (const [key, val] of Object.entries(data)) {
     var top = '<h1>'+key+'</h1>';
     $('#forLoop').append(top);
-    var nameDesc = '<div class="col-12">'
-                   + '<div class="list"></div>'
-                 + '</div>';
     for (const [kee, value] of Object.entries(val)) {
       nameDesc += '<div class="row">'
                      + '<div class="col-1">'+value.id+'</div>'
