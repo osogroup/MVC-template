@@ -198,7 +198,7 @@ const createHTML = async () => {
     for (const [second, secondToLast] of Object.entries(listData.list)) {
       console.log("This is second ", second);
       console.log("This is secondToLast ", secondToLast);
-      top += '<div class="col-'+col+'">'+secondToLast+'</div>';
+      // top += '<div class="col-'+col+'">'+ /*something goes here with a dot to connect to secondToLast*/ secondToLast+'</div>';
     }
     // for (const[prop, access] of Object.entries(val)) {
     //   for (const [property, accessible] of Object.entries(access)) {
