@@ -193,9 +193,9 @@ const createHTML = async () => {
       top += '<div class="col-'+col+'">'
                      + last
                    + '</div>';
-      for (const [secondKey, secondValue] of Object.entries(val)) {
-        console.log("This is secondKey ", secondKey);
-        console.log("This is secondValue ", secondValue);
+      for (const [SLKey, SLValue] of Object.entries(val)) {
+        console.log("This is SLKey ", SLKey);
+        console.log("This is SLValue ", SLValue);
       }
 
       // top += '<div class="col-'+col+'">'+ /*something goes here with a dot to connect to secondToLast*/ secondToLast+'</div>';
