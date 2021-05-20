@@ -191,7 +191,7 @@ const createHTML = async () => {
     // setting table column width for each object type
     var col = 12/(objTypeConfig.list.length);
     console.log(key+" configs ", objTypeConfig);
-    // creating table header
+    // creating table header from list configuration
     for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
       console.log("This is list item key: ", listKey);
       console.log("This is list item value: ", listValue);
@@ -202,12 +202,30 @@ const createHTML = async () => {
     }
     // appending tHeader to index.html
     $('#tableHeaders').append(tHeader);
+
+
+// putting object item rows
+    var objItems = '<div class="row">'
+
+// getting item attributes
+
+// getting list configuration
+
+// create HTML
+
+
+
+
+
+
+
       for (const [SLKey, SLValue] of Object.entries(val)) {
         console.log("This is SLKey ", SLKey);
         console.log("This is SLValue ", SLValue);
         tHeader += '<div class="col-"'+col+'>'+SLValue.last+'</div>'
       }
 
+      objItems += '</div>';
     // for (const[prop, access] of Object.entries(val)) {
     //   for (const [property, accessible] of Object.entries(access)) {
     //     console.log("property is: ", property);
@@ -224,8 +242,6 @@ const createHTML = async () => {
 
 
 
-    tHeader += '</div>';
-    $('#forLoop').append(top);
     for (const [kee, value] of Object.entries(val)) {
 
 
