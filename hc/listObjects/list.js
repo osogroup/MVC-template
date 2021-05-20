@@ -208,7 +208,7 @@ const createHTML = async () => {
   // Ex. all the id's and names of projects that you can scroll through, and eventually, remove.
   for (const [key, val] of Object.entries(data)) {
     var top = '<h1>'+key+'</h1>';
-    top += '<div class="row"><div class="col-12">';
+    top += '<div class="row">';
     var listData = config[key];
     var col = 12/(listData.list.length);
     console.log(key+" configs ", listData);
