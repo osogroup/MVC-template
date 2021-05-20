@@ -221,7 +221,7 @@ const createHTML = async () => {
                      + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
                    + '</div>';
       $('#forLoop').append(nameDesc);
-      console.log(size(value.name));
+      console.log(value.name.length);
     }
   }
   $('#forLoop').append('</div>');
