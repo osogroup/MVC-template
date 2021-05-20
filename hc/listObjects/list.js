@@ -206,21 +206,20 @@ const createHTML = async () => {
   // this nested for loop goes through the JSON file and puts all the values into the columns on the webpage
   // Ex. all the id's and names of projects that you can scroll through, and eventually, remove.
 
-
   for (const [key, val] of Object.entries(data)) {
     var top = '<h1>'+key+'</h1>';
     $('#forLoop').append(top);
     for (const [kee, value] of Object.entries(val)) {
-      nameDesc += '<div class="row">'
-                  + '<div class="col-1">'+value.id+'</div>'
-                  + '<div class="col-2">'+value.name+'</div>'
-                  + '<div class="col-2">'+value.description+'</div>'
-                  + '<div class="col-2">'+value.status+'</div>'
-                  + '<div class="col-1">'+value.tags+'</div>'
-                  + '<div class="col-2">'+value.dueDate+'</div>'
-                  + '<div class="col-1">'+value.estEff+'</div>'
-                  + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
-                + '</div>';
+      var nameDesc = '<div class="row">'
+                     + '<div class="col-1">'+value.id+'</div>'
+                     + '<div class="col-2">'+value.name+'</div>'
+                     + '<div class="col-2">'+value.description+'</div>'
+                     + '<div class="col-2">'+value.status+'</div>'
+                     + '<div class="col-1">'+value.tags+'</div>'
+                     + '<div class="col-2">'+value.dueDate+'</div>'
+                     + '<div class="col-1">'+value.estEff+'</div>'
+                     + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
+                   + '</div>';
       $('#forLoop').append(nameDesc);
     }
   }
