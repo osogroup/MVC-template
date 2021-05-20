@@ -6,17 +6,17 @@ $(document).ready(function(){
 
   var contactList = new List('contacts', options);
 
-  var idField = $('#id-field'),
-    nameField = $('#name-field'),
-    descField = $('#desc-field'),
-    statusField = $('#status-field'),
-    tagsField = $('#tags-field'),
-    dueField = $('#due-field'),
-    estField = $('#est-field'),
-    addBtn = $('#add-btn'),
-    editBtn = $('#edit-btn').hide(),
-    removeBtns = $('.remove-item-btn'),
-    editBtns = $('.edit-item-btn');
+  // var idField = $('#id-field'),
+  //   nameField = $('#name-field'),
+  //   descField = $('#desc-field'),
+  //   statusField = $('#status-field'),
+  //   tagsField = $('#tags-field'),
+  //   dueField = $('#due-field'),
+  //   estField = $('#est-field'),
+  //   addBtn = $('#add-btn'),
+  //   editBtn = $('#edit-btn').hide(),
+  //   removeBtns = $('.remove-item-btn'),
+  //   editBtns = $('.edit-item-btn');
 
     refreshCallbacks(contactList);
 
