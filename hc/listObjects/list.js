@@ -106,7 +106,7 @@ $(document).ready(function(){
 
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
-  console.log(listConfig);
+  console.log("configData output ", listConfig);
   return listConfig;
 }
 
