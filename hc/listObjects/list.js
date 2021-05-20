@@ -114,7 +114,7 @@ const configData = async () => {
 
 const tempData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
-  console.log(objVars);
+  console.log("tempData output ", objVars);
   return objVars;
 }
 
