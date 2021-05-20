@@ -182,7 +182,7 @@ const createHTML = async () => {
                     + '<div class="col-12">';
   for (const [key, value] of Object.entries(data.task)) {
     for (const [first, last] of Object.entries(value)) {
-      if (first == 'id' || first == 'tags' || first == 'name') {
+      if (first == 'id' || first == 'tags') {
         headerStuff += '<div class="col-1">'
                        + '<span class="sort" data-sort="'+first+'">'+first+'</span>'
                      + '</div>';
@@ -212,7 +212,7 @@ const createHTML = async () => {
     for (const [kee, value] of Object.entries(val)) {
       var nameDesc = '<div class="row">'
                      + '<div class="col-1">'+value.id+'</div>'
-                     + '<div class="col-1">'+value.name+'</div>'
+                     + '<div class="col-2">'+value.name+'</div>'
                      + '<div class="col-2">'+value.description+'</div>'
                      + '<div class="col-2">'+value.status+'</div>'
                      + '<div class="col-1">'+value.tags+'</div>'
