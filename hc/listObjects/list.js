@@ -154,7 +154,8 @@ const createHTML = async () => {
                    + '<button id="add-btn">Add</button>'
                    // + '<button id="edit-btn">Edit</button>'
                  + '</div>'
-               + '</div>';
+               + '</div>'
+             + '</div>';
     $('#inputBoxes').append(inputThings);
     break;
   }
@@ -163,12 +164,13 @@ const createHTML = async () => {
   // ----------------------------------------------------- The Search Box ----------------------------------------------------------------
 
 
-  var searchVariable = '<div class="col-12">'
-                       + '<div class="col-4">'
-                         + '<input class="search" placeholder="Search"/>'
+  var searchVariable = '<div class="row">
+                       + '<div class="col-12">'
+                         + '<div class="col-4">'
+                           + '<input class="search" placeholder="Search"/>'
+                         + '</div>'
                        + '</div>'
-                     + '</div>'
-                   + '</div>';
+                     + '</div>';
   $('#searchBar').append(searchVariable);
 
 
