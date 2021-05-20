@@ -204,15 +204,19 @@ const createHTML = async () => {
       var nameDesc = '<div class="row">'
                      + '<div class="col-1">'+value.id+'</div>'
                      + '<div class="col-2">'+value.name+'</div>'
-                     + '<div class="col-2">'+value.description+'</div>'
-                     + '<div class="col-2">'+value.status+'</div>'
-                     + '<div class="col-1">'+value.tags+'</div>'
+                     + '<div class="col-2">'+value.description+'</div>';
+         if (value.status == null) {
+           nameDesc += '<div class="col-2"></div>';
+         }
+         else {
+           nameDesc += '<div class="col-2">'+value.status+'</div>';
+         }
+           nameDesc += '<div class="col-1">'+value.tags+'</div>'
                      + '<div class="col-2">'+value.dueDate+'</div>'
                      + '<div class="col-1">'+value.estEff+'</div>'
                      + '<div class=col-1><button class="remove-item-btn"> - </button></div>'
                    + '</div>';
       $('#forLoop').append(nameDesc);
-      console.log(kee[0].name);
     }
   }
   $('#forLoop').append('</div>');
