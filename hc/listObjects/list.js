@@ -195,15 +195,18 @@ const createHTML = async () => {
                    + '</div>';
     }
 
+    for (const [second, secondToLast] of Object.entries(listData.list)) {
+      console.log("This is second ", second);
+      console.log("This is secondToLast ", secondToLast);
 
-    for (const[prop, access] of Object.entries(val)) {
-      for (const [property, accessible] of Object.entries(access)) {
-        console.log("property is: ", property);
-        console.log("accessible is: ", accessible);
-
-        top += '<div class=col-'+col+'>'+property.first+'</div>';
-      }
-    }
+    // for (const[prop, access] of Object.entries(val)) {
+    //   for (const [property, accessible] of Object.entries(access)) {
+    //     console.log("property is: ", property);
+    //     console.log("accessible is: ", accessible);
+    //
+    //     top += '<div class=col-'+col+'>'+property.first+'</div>';
+    //   }
+    // }
 
     //------------------------------------------------------ Data Filling ------------------------------------------------------------------
 
