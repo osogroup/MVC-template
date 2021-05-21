@@ -214,6 +214,7 @@ const createHTML = async () => {
     for (const [SLKey, SLValue] of Object.entries(val)) {
       console.log("This is SLKey ", SLKey);
       console.log("This is SLValue ", SLValue);
+      console.log("This is SLValue.firstValue: ", SLValue.firstValue);
       objItems += '<div class="col-"'+col+'>'+SLValue.firstValue+'</div>'
     }
     $('#forLoop').append(objItems);
