@@ -6,8 +6,8 @@ $(document).ready(function(){
   
   var contactList = new List('contacts', options);
   
-  createHTML();
-  
+  await createHTML();
+
   var idField = $('#id-field'),
   nameField = $('#name-field'),
   descField = $('#desc-field'),
