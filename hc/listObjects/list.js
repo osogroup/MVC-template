@@ -208,7 +208,7 @@ const createHTML = async () => {
       $('#tableHeadersandItems').append(tHeader);
 
       // putting object item rows
-      var objItems = '<div class="row">'
+      var objItems = '';
 
       //------------------------------------------------------ Data Filling ------------------------------------------------------------------
 
@@ -217,12 +217,14 @@ const createHTML = async () => {
       for (const [SLKey, SLValue] of Object.entries(val)) {
         console.log("This is SLKey ", SLKey);
         console.log("This is SLValue ", SLValue);
+        objItems += '<div class="row">';
         // getting list configuration
         for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
           console.log("firstKey is: ", firstKey);
           console.log("firstValue is: ", firstValue);
           console.log("This is SLValue[firstValue]: ", SLValue[firstValue]);
           // create item column HTML
+
           objItems += '<div class="col-"'+col+'>'+SLValue[firstValue]+'</div>'
         }
       }
