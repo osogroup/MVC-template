@@ -137,9 +137,8 @@ const createHTML = async () => {
                    + '</div>'
                    + '<h1>OAS Object List'
                  + '</div>'
-  $('#TitleOfList').append(headerHTML);
 
-  var inputThings = '<div class="row" id="hacker-list">'
+  var inputThings = headerHTML + '<div class="row" id="hacker-list">'
                     + '<div class="col-12">';
 
     // getting Object names and data
