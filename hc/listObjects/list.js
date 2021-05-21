@@ -64,7 +64,6 @@ $(document).ready(function(){
       editBtns = $('.edit-item-btn');
     // Needed to add new buttons to jQuery-extended object
 
-
     removeBtns.click(function() {
       console.log("Entering remove function", this);
       var itemId = $(this).parent().parent().find('.id').text();
@@ -97,9 +96,7 @@ $(document).ready(function(){
     tagsField.val('');
     dueField.val('');
     estField.val('');
-
   }
-
 
 });
 
