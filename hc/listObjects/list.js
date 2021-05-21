@@ -213,7 +213,7 @@ const createHTML = async () => {
           }
 
           // creating table inputs
-          tHeader +=  '<div class="col-'+tempColumn+'">'
+          tInputs +=  '<div class="col-'+tempColumn+'">'
                           + '<input type="text" id="'+listValue+'-field" placeholder="'+listValue+'" />'
                         + '</div>';
           
@@ -227,7 +227,7 @@ const createHTML = async () => {
     //--------------------------------------- Item Rows --------------------------------------------
 
 
-      var objItems = tHeader;
+      var objItems = tInputs + tHeader;
 
       // containing list items
       objItems += '<div class="list">';
