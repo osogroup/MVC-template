@@ -217,6 +217,9 @@ const createHTML = async () => {
                     + '</div>';
         }
 
+        // appending the table inputs
+        $('#inputBoxes').append(tInputs);
+      
         // creating table header from list configuration
         for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
           if(listValue == 'id') {
