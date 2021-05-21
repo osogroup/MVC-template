@@ -180,7 +180,6 @@ const createHTML = async () => {
   // this nested for loop goes through the JSON file and puts all the values into the columns on the webpage
   // Ex. all the id's and names of projects that you can scroll through, and eventually, remove.
   for (const [key, val] of Object.entries(data)) {
-                                                                                // console.log("val is: ", val);
 
     // displaying Object Name
     var tHeader = '<h1>'+key+'</h1>';
@@ -193,11 +192,10 @@ const createHTML = async () => {
 
     // setting table column width for each object type
     var col = 12/(objTypeConfig.list.length);
-                                                                                // console.log(key+" configs ", objTypeConfig);
+
     // creating table header from list configuration
     for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
-                                                                                // console.log("This is list item key: ", listKey);
-                                                                                // console.log("This is list item value: ", listValue);
+
       // creating table header HTML
       tHeader += '<div class="col-'+col+'">'
                      + listValue
@@ -214,17 +212,12 @@ const createHTML = async () => {
       var objItems = '';
       // getting item attributes
       for (const [SLKey, SLValue] of Object.entries(val)) {
-                                                                                // console.log("This is SLKey ", SLKey);
-                                                                                // console.log("This is SLValue ", SLValue);
 
         // creating the object item rows
         objItems += '<div class="row">';
 
         // getting list configuration
         for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
-                                                                                // console.log("firstKey is: ", firstKey);
-                                                                                // console.log("firstValue is: ", firstValue);
-                                                                                // console.log("This is SLValue[firstValue]: ", SLValue[firstValue]);
 
           // create item columns in HTML
           objItems += '<div class="col-'+col+'">'+SLValue[firstValue]+'</div>'
