@@ -236,7 +236,7 @@ const createHTML = async () => {
           // creating table header HTML
           tHeader += '<div class="col-'+tempColumn+' sort" data-sort="'+listValue+'">'+listValue+'</div>';
         }
-        
+
       // closing the header row
       tHeader += '</div>';
 
@@ -287,7 +287,7 @@ const createHTML = async () => {
     $('#tableHeadersandItems').append(objItems);
 
     var options = {
-      valueNames: [ 'id', 'name', 'description' ]
+      valueNames: []
     };
     
     var containerList = new List( key+'Container', options);
