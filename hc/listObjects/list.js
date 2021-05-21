@@ -247,7 +247,7 @@ const createHTML = async () => {
         // closing object item rows
         objItems += '<div class=col-1>'
                     // + '<button onClick="removeRow();"> - </button>'
-                    + '<button class="remove-item-btn"> - </button>'
+                    + '<button class="remove-item-btn"> Remove </button>'
                   + '</div>';
 
         // closing object item row
