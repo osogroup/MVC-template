@@ -193,10 +193,8 @@ const createHTML = async () => {
 
 
 
-      // creating table header Row
+      // creating table input Row
       tHeader += '<div class="row">';
-
-
 
         // setting object type configuration
         var objTypeConfig = config[key];
@@ -221,6 +219,8 @@ const createHTML = async () => {
                     + '</div>';
         }
 
+        // closing table input row and opening table header row
+        tHeader += '</div><div class="row">';
 
   // ------------------------------------- The Table Headers ----------------------------------------
 
@@ -236,6 +236,7 @@ const createHTML = async () => {
           // creating table header HTML
           tHeader += '<div class="col-'+tempColumn+' sort" data-sort="'+listValue+'">'+listValue+'</div>';
         }
+        
       // closing the header row
       tHeader += '</div>';
 
