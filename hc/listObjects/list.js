@@ -190,11 +190,11 @@ const createHTML = async () => {
     var objTypeConfig = config[key];
     // setting table column width for each object type
     var col = 12/(objTypeConfig.list.length);
-    // console.log(key+" configs ", objTypeConfig);
+                                                                          // console.log(key+" configs ", objTypeConfig);
     // creating table header from list configuration
     for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
-      // console.log("This is list item key: ", listKey);
-      // console.log("This is list item value: ", listValue);
+                                                                          // console.log("This is list item key: ", listKey);
+                                                                          // console.log("This is list item value: ", listValue);
       // creating table header HTML
       tHeader += '<div class="col-'+col+'">'
                      + listValue
