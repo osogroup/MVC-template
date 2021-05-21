@@ -142,7 +142,10 @@ const createHTML = async () => {
 
   var inputThings = '<div class="row" id="hacker-list">'
                     + '<div class="col-12">';
+
+
   //------------------------------------------------------- Input Boxes ------------------------------------------------------------------
+
 
   for (const [key, value] of Object.entries(data.task)) {
     for (const [first, last] of Object.entries(value)) {
@@ -206,7 +209,7 @@ const createHTML = async () => {
       $('#tableHeadersandItems').append(tHeader);
 
 
-      //------------------------------------------------------ Data Filling ------------------------------------------------------------------
+      //------------------------------------------------------ Item Rows ------------------------------------------------------------------
 
 
       var objItems = '';
@@ -232,25 +235,3 @@ const createHTML = async () => {
   }
   $('#tableHeadersandItems').append('</div>');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
