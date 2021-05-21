@@ -245,6 +245,13 @@ const createHTML = async () => {
 
     // append each entire item row to index.html as it loops
     $('#tableHeadersandItems').append(objItems);
+
+    var options = {
+      valueNames: [ 'id','name', 'description' ]
+    };
+    
+    var contactList = new List( key+'Container', options);
+
   }
   $('#tableHeadersandItems').append('</div>');
 }
