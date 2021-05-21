@@ -5,10 +5,9 @@ $(document).ready(function(){
   };
 
   createHTML();
-  
+
   var contactList = new List('contacts', options);
   
-
   var idField = $('#id-field'),
   nameField = $('#name-field'),
   descField = $('#desc-field'),
