@@ -198,11 +198,9 @@ const createHTML = async () => {
     for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
 
       // creating table header HTML
-      tHeader += '<div class="col-'+col+'">'
-                     + listValue
-                   + '</div>';
-
+      tHeader += '<div class="col-'+col+'">'+listValue+'</div>';
       }
+      
       // appending tHeader to index.html
       $('#tableHeadersandItems').append(tHeader);
 
