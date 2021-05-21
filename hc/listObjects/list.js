@@ -184,6 +184,9 @@ const createHTML = async () => {
     // displaying Object Name
     var tHeader = '<h1>'+key+'</h1>';
 
+    // creating sortable list library container 
+    tHeader += '<div id="'+key+'Container">';
+
     // creating table header Row
     tHeader += '<div class="row">';
 
@@ -237,6 +240,9 @@ const createHTML = async () => {
                 + '</div>'
               + '</div>';
     }
+
+    // closing sortable list library container
+    objItems += '</div>';
 
     // append each entire item row to index.html as it loops
     $('#tableHeadersandItems').append(objItems);
