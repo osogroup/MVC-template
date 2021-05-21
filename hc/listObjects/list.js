@@ -217,6 +217,9 @@ const createHTML = async () => {
       // getting list configuration
       for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
 
+        if(firstValue == "id") {
+          col = 3;
+        }
         // create item columns in HTML
         objItems += '<div class="col-'+col+'">'+SLValue[firstValue]+'</div>'
       }
