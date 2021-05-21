@@ -202,7 +202,7 @@ const createHTML = async () => {
         tempColumn = col;
       }
       // creating table header HTML
-      tHeader += '<div class="col-'+tempColumn+'">'+listValue+'</div>';
+      tHeader += '<div class="col-'+tempColumn+'" id="'+listValue+'">'+listValue+'</div>';
     }
     // appending tHeader to index.html
     $('#tableHeadersandItems').append(tHeader);
