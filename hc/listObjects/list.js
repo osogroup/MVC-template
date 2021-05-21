@@ -211,6 +211,12 @@ const createHTML = async () => {
   for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
     console.log("firstKey is: ", firstKey);
     console.log("firstValue is: ", firstValue);
+    for (const [SLKey, SLValue] of Object.entries(val)) {
+      console.log("This is SLKey ", SLKey);
+      console.log("This is SLValue ", SLValue);
+      tHeader += '<div class="col-"'+col+'>'+SLValue.firstValue+'</div>'
+    }
+
   }
     // getting list configuration
 
@@ -222,11 +228,6 @@ const createHTML = async () => {
 
 
 
-      for (const [SLKey, SLValue] of Object.entries(val)) {
-        console.log("This is SLKey ", SLKey);
-        console.log("This is SLValue ", SLValue);
-        tHeader += '<div class="col-"'+col+'>'+SLValue.last+'</div>'
-      }
 
       objItems += '</div>';
     // for (const[prop, access] of Object.entries(val)) {
