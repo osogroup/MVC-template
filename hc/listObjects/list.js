@@ -199,17 +199,16 @@ const createHTML = async () => {
 
       // creating table header HTML
       tHeader += '<div class="col-'+col+'">'+listValue+'</div>';
-      }
-      
-      // appending tHeader to index.html
-      $('#tableHeadersandItems').append(tHeader);
+    }
+    // appending tHeader to index.html
+    $('#tableHeadersandItems').append(tHeader);
 
 
-      //------------------------------------------------------ Item Rows ------------------------------------------------------------------
+    //------------------------------------------------------ Item Rows ------------------------------------------------------------------
 
 
-      var objItems = '';
-      // getting item attributes
+    var objItems = '';
+    // getting item attributes
       for (const [SLKey, SLValue] of Object.entries(val)) {
 
         // creating the object item rows
