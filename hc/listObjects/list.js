@@ -200,8 +200,11 @@ const createHTML = async () => {
                     + '</div>';
         }
 
+        // create the add button
+        addButtonHTML = '<button id="add-btn">Add</button>';
+
         // closing table input row
-        tHeader += '</div>';
+        tHeader += addButtonHTML + '</div>';
         
         
   // -------------------------------------- The Search Box -----------------------------------------
