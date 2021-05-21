@@ -203,7 +203,7 @@ const createHTML = async () => {
 
         // setting table column width for each object type
         var col = 12/(objTypeConfig.list.length);
-
+        var tInputs = '';
         // creating table header from list configuration
         for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
           if(listValue == 'id') {
