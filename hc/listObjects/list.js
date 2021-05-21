@@ -257,10 +257,11 @@ const createHTML = async () => {
     $('#tableHeadersandItems').append(objItems);
 
     var options = {
-      valueNames: [ 'id','name', 'description' ]
+      valueNames: [ 'id', 'name', 'description' ]
     };
     
     var containerList = new List( key+'Container', options);
+    break;
 
   }
   $('#tableHeadersandItems').append('</div>');
