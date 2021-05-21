@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  createHTML();
 
   var options = {
     valueNames: [ 'id', 'name', 'desc', 'status', 'tags', 'due', 'est' ]
@@ -99,7 +100,6 @@ $(document).ready(function(){
 
   }
 
-  createHTML();
 
 });
 
