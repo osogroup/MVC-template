@@ -110,8 +110,6 @@ const configData = async () => {
   return listConfig;
 }
 
-
-
 const tempData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
   console.log("tempData output ", objVars);
