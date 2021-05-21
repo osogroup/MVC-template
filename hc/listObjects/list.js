@@ -227,8 +227,8 @@ const createHTML = async () => {
 
           objItems += '<div class="col-"'+col+'>'+SLValue[firstValue]+'</div>'
         }
+        objItems += '</div>';
       }
-    objItems += '</div>';
     // append row to index.html
     $('#tableHeadersandItems').append(objItems);
 
