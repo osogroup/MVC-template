@@ -146,21 +146,21 @@ const createHTML = async () => {
   //----------------------------------------- Input Boxes ------------------------------------------
 
 
-  for (const [key, value] of Object.entries(data.task)) {
-    for (const [first, last] of Object.entries(value)) {
-      // console.log("this is last ", last);
-      inputThings += '<div class="col-3">'
-                     + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
-                   + '</div>';
-    }
-    inputThings += '<div class="col-1">'
-                   + '<button id="add-btn">Add</button>'
-                   // + '<button id="edit-btn">Edit</button>'
-                 + '</div>'
-               + '</div>';
-    $('#inputBoxes').append(inputThings);
-    break;
-  }
+  // for (const [key, value] of Object.entries(data.task)) {
+  //   for (const [first, last] of Object.entries(value)) {
+  //     // console.log("this is last ", last);
+  //     inputThings += '<div class="col-3">'
+  //                    + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
+  //                  + '</div>';
+  //   }
+  //   inputThings += '<div class="col-1">'
+  //                  + '<button id="add-btn">Add</button>'
+  //                  // + '<button id="edit-btn">Edit</button>'
+  //                + '</div>'
+  //              + '</div>';
+  //   $('#inputBoxes').append(inputThings);
+  //   break;
+  // }
 
 
   // -------------------------------------- The Search Box -----------------------------------------
@@ -176,6 +176,12 @@ const createHTML = async () => {
   $('#searchBar').append(searchVariable);
 
 
+  // ------------------------------------ The Table's Inputs --------------------------------------
+
+
+  
+
+
   // ------------------------------------ The Table's Headers --------------------------------------
 
     // getting Object names and data
@@ -186,6 +192,8 @@ const createHTML = async () => {
 
     // creating sortable list library container 
     tHeader += '<div id="'+key+'Container">';
+
+
 
       // creating table header Row
       tHeader += '<div class="row">';
@@ -198,13 +206,18 @@ const createHTML = async () => {
 
         // creating table header from list configuration
         for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
-
           if(listValue == 'id') {
             tempColumn = col-1;
           }else{
             tempColumn = col;
           }
-          // creating table header HTML
+
+          // creating table inputs
+          inputThings +=  '<div class="col-'+tempColumn+'">'
+                          + '<input type="text" id="'+listValue+'-field" placeholder="'+listValue+'" />'
+                        + '</div>';
+          
+                        // creating table header HTML
           tHeader += '<div class="col-'+tempColumn+' sort" data-sort="'+listValue+'">'+listValue+'</div>';
         }
       // closing the header row
