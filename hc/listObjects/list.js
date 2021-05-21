@@ -225,7 +225,7 @@ const createHTML = async () => {
           console.log("This is SLValue[firstValue]: ", SLValue[firstValue]);
           // create item column HTML
 
-          objItems += '<div class="col-"'+col+'>'+SLValue[firstValue]+'</div>'
+          objItems += '<div class="col-'+col+'">'+SLValue[firstValue]+'</div>'
         }
         objItems += '</div>';
       }
