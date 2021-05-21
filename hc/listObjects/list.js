@@ -168,7 +168,7 @@ const createHTML = async () => {
 
         for (const [inputKey, inputValue] of Object.entries(objTypeConfig.required)) {
           if(inputValue == 'id') {
-            tempColumn = col-1;
+            tempColumn = col-2;
           }else{
             tempColumn = col;
           } 
@@ -245,7 +245,7 @@ const createHTML = async () => {
         }
 
         // closing object item rows
-        objItems += '<div class=col-1>'
+        objItems += '<div class=col-2>'
                     // + '<button onClick="removeRow();"> - </button>'
                     + '<button class="edit-item-btn"> Edit </button>'
                     + '<button class="remove-item-btn"> Remove </button>'
