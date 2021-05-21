@@ -4,10 +4,11 @@ $(document).ready(function(){
     valueNames: [ 'id', 'name', 'desc', 'status', 'tags', 'due', 'est' ]
   };
 
-  var contactList = new List('contacts', options);
-  
   createHTML();
   
+  var contactList = new List('contacts', options);
+  
+
   var idField = $('#id-field'),
   nameField = $('#name-field'),
   descField = $('#desc-field'),
