@@ -3,25 +3,25 @@ $(document).ready(function(){
   var options = {
     valueNames: [ 'id', 'name', 'desc', 'status', 'tags', 'due', 'est' ]
   };
+
+  var contactList = new List('contacts', options);
+  
+  var idField = $('#id-field'),
+  nameField = $('#name-field'),
+  descField = $('#desc-field'),
+  statusField = $('#status-field'),
+  tagsField = $('#tags-field'),
+  dueField = $('#due-field'),
+  estField = $('#est-field'),
+  addBtn = $('#add-btn'),
+  editBtn = $('#edit-btn').hide(),
+  removeBtns = $('#remove-item-btn'),
+  editBtns = $('.edit-item-btn');
   
   createHTML();
 
-  var contactList = new List('contacts', options);
-
-  var idField = $('#id-field'),
-    nameField = $('#name-field'),
-    descField = $('#desc-field'),
-    statusField = $('#status-field'),
-    tagsField = $('#tags-field'),
-    dueField = $('#due-field'),
-    estField = $('#est-field'),
-    addBtn = $('#add-btn'),
-    editBtn = $('#edit-btn').hide(),
-    removeBtns = $('#remove-item-btn'),
-    editBtns = $('.edit-item-btn');
-
-    refreshCallbacks(contactList);
-
+  refreshCallbacks(contactList);
+  
   addBtn.click(function() {
     contactList.add({
       id: Math.floor(Math.random()*110000),
