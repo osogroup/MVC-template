@@ -202,7 +202,7 @@ const createHTML = async () => {
         tempColumn = col;
       }
       // creating table header HTML
-      tHeader += '<div class="col-'+tempColumn+'" id="'+listValue+'">'+listValue+'</div>';
+      tHeader += '<div class="col-'+tempColumn+'">'+listValue+'</div>';
     }
     // appending tHeader to index.html
     $('#tableHeadersandItems').append(tHeader);
@@ -227,7 +227,7 @@ const createHTML = async () => {
           var tempCol = col;
         }
         // create item columns in HTML
-        objItems += '<div class="col-'+tempCol+'">'+SLValue[firstValue]+'</div>'
+        objItems += '<div class="col-'+tempCol+'"><span class="'+firstValue+'"></span>'+SLValue[firstValue]+'</div>'
       }
 
       // closing object item rows
