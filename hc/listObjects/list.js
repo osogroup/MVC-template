@@ -230,8 +230,8 @@ const createHTML = async () => {
 
       // closing object item rows
       objItems += '<div class=col-1>'
-      
-                  + '<button class="remove-item-btn"> - </button>'
+                  + '<button onClick="removeRow> - </button>'
+                  // + '<button class="remove-item-btn"> - </button>'
                 + '</div>'
               + '</div>';
     }
