@@ -176,7 +176,6 @@ const createHTML = async () => {
   $('#searchBar').append(searchVariable);
 
 
-  // ------------------------------------ The Table's Inputs --------------------------------------
 
 
   
@@ -203,6 +202,11 @@ const createHTML = async () => {
 
         // setting table column width for each object type
         var col = 12/(objTypeConfig.list.length);
+
+
+  // ------------------------------------ The Table's Inputs --------------------------------------
+
+
         var tInputs = '';
         for (const [inputKey, inputValue] of Object.entries(objTypeConfig.list)) {
           if(inputValue == 'id') {
