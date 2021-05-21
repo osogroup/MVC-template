@@ -140,7 +140,7 @@ const createHTML = async () => {
   $('#TitleOfList').append(headerHTML);
 
   var inputThings = '<div class="row" id="hacker-list">'
-                    + '<div class="col-12">';
+                   + '<div class="col-12">';
 
     // getting Object names and data
     for (const [key, val] of Object.entries(data)) {
@@ -150,8 +150,6 @@ const createHTML = async () => {
 
     // creating sortable list library container 
     tHeader += '<div id="'+key+'Container">';
-
-
 
       // creating table input Row
       tHeader += '<div class="row">';
@@ -165,8 +163,10 @@ const createHTML = async () => {
 
   // ------------------------------------- The Input Boxes -----------------------------------------
 
-
+        // getting config Objects and data
         for (const [inputKey, inputValue] of Object.entries(objTypeConfig.required)) {
+
+          // making id columns narrower to fit more things on the page
           if(inputValue == 'id') {
             tempColumn = col-2;
           }else{
@@ -179,16 +179,16 @@ const createHTML = async () => {
                     + '</div>';
         }
 
-        // create the add button HTML
+        // creating the add button HTML
         addButtonHTML = '<div class="col-1"><button id="add-btn">Add</button></div>';
 
-        // closing table input row and adding the add button
+        // closing table input row and adding addButtonHTML to tHeader
         tHeader += addButtonHTML + '</div>';
         
         
   // -------------------------------------- The Search Box -----------------------------------------
 
-
+        // creating the search box and designating its own row
         var searchVariable =  '<div class="row">'
                               + '<div class="col-4">'
                                 + '<input class="search" placeholder="Search"/>'
@@ -199,7 +199,7 @@ const createHTML = async () => {
   
   // ------------------------------------- The Table Headers ----------------------------------------
   
-        // opening table header row
+        // opening table header row and adding The Search Box to tHeader
         tHeader += searchVariable + '<div class="row">';
       
         // creating table header from list configuration
