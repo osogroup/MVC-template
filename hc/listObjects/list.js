@@ -209,21 +209,21 @@ const createHTML = async () => {
 
     var objItems = '';
     // getting item attributes
-      for (const [SLKey, SLValue] of Object.entries(val)) {
+    for (const [SLKey, SLValue] of Object.entries(val)) {
 
-        // creating the object item rows
-        objItems += '<div class="row">';
+      // creating the object item rows
+      objItems += '<div class="row">';
 
-        // getting list configuration
-        for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
+      // getting list configuration
+      for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
 
-          // create item columns in HTML
-          objItems += '<div class="col-'+col+'">'+SLValue[firstValue]+'</div>'
-        }
-
-        // closing object item rows
-        objItems += '</div>';
+        // create item columns in HTML
+        objItems += '<div class="col-'+col+'">'+SLValue[firstValue]+'</div>'
       }
+
+      // closing object item rows
+      objItems += '</div>';
+    }
 
     // append each entire item row to index.html as it loops
     $('#tableHeadersandItems').append(objItems);
