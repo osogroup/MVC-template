@@ -208,7 +208,7 @@ const createHTML = async () => {
   // ------------------------------------- The Input Boxes -----------------------------------------
 
 
-        for (const [inputKey, inputValue] of Object.entries(objTypeConfig.list)) {
+        for (const [inputKey, inputValue] of Object.entries(objTypeConfig.required)) {
           if(inputValue == 'id') {
             tempColumn = col-1;
           }else{
