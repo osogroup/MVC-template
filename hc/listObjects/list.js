@@ -163,25 +163,6 @@ const createHTML = async () => {
   // }
 
 
-  // -------------------------------------- The Search Box -----------------------------------------
-
-
-  var searchVariable = '<div class="row">'
-                       + '<div class="col-12">'
-                         + '<div class="col-4">'
-                           + '<input class="search" placeholder="Search"/>'
-                         + '</div>'
-                       + '</div>'
-                     + '</div>';
-  $('#searchBar').append(searchVariable);
-
-
-
-
-  
-
-
-
     // getting Object names and data
     for (const [key, val] of Object.entries(data)) {
 
@@ -219,11 +200,27 @@ const createHTML = async () => {
                     + '</div>';
         }
 
-        // closing table input row and opening table header row
-        tHeader += '</div><div class="row">';
+        // closing table input row
+        tHeader += '</div>';
+        
+        
+  // -------------------------------------- The Search Box -----------------------------------------
 
+
+        var searchVariable =  '<div class="row">'
+                              + '<div class="col-12">'
+                                + '<div class="col-4">'
+                                  + '<input class="search" placeholder="Search"/>'
+                                + '</div>'
+                              + '</div>'
+                            + '</div>';
+        
+
+  
   // ------------------------------------- The Table Headers ----------------------------------------
-
+  
+        // opening table header row
+        tHeader += searchVariable + '<div class="row">';
       
         // creating table header from list configuration
         for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
