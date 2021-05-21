@@ -208,13 +208,12 @@ const createHTML = async () => {
       tHeader += '<div class="col-'+tempColumn+'">'+listValue+'</div>';
     }
     // appending tHeader to index.html
-    $('#tableHeadersandItems').append(tHeader);
 
 
     //--------------------------------------- Item Rows --------------------------------------------
 
 
-    var objItems = '';
+    var objItems = tHeader;
     // getting item attributes
     for (const [SLKey, SLValue] of Object.entries(val)) {
 
