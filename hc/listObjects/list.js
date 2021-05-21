@@ -184,10 +184,13 @@ const createHTML = async () => {
 
     // displaying Object Name
     var tHeader = '<h1>'+key+'</h1>';
+
     // creating table header Row
     tHeader += '<div class="row">';
+
     // setting object type configuration
     var objTypeConfig = config[key];
+
     // setting table column width for each object type
     var col = 12/(objTypeConfig.list.length);
                                                                           // console.log(key+" configs ", objTypeConfig);
@@ -199,7 +202,10 @@ const createHTML = async () => {
       tHeader += '<div class="col-'+col+'">'
                      + listValue
                    + '</div>';
+
+      }
       // appending tHeader to index.html
+      $('#tableHeaders').append(tHeader);
 
 
       // putting object item rows
@@ -221,8 +227,6 @@ const createHTML = async () => {
           objItems += '<div class="col-"'+col+'>'+SLValue[firstValue]+'</div>'
         }
       }
-    }
-    $('#tableHeaders').append(tHeader);
     objItems += '</div>';
     // append row to index.html
     $('#forLoop').append(objItems);
