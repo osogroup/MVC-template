@@ -203,10 +203,10 @@ const createHTML = async () => {
                      + listValue
                    + '</div>';
 
+      }
       // appending tHeader to index.html
-      $('#tableHeaders').append(tHeader);
-    }
 
+      $('#tableHeaders').append(tHeader);
 
       // putting object item rows
       var objItems = '<div class="row">'
