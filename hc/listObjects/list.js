@@ -197,6 +197,8 @@ const createHTML = async () => {
       // creating table header Row
       tHeader += '<div class="row">';
 
+
+
         // setting object type configuration
         var objTypeConfig = config[key];
 
@@ -216,7 +218,7 @@ const createHTML = async () => {
           } 
 
           // creating table inputs
-          tInputs +=  '<div class="col-'+tempColumn+'">'
+          tHeader +=  '<div class="col-'+tempColumn+'">'
                       + '<input type="text" id="'+inputValue+'-field" placeholder="'+inputValue+'" />'
                     + '</div>';
         }
@@ -239,7 +241,7 @@ const createHTML = async () => {
     //--------------------------------------- Item Rows --------------------------------------------
 
 
-      var objItems = tInputs + tHeader;
+      var objItems = tHeader;
 
       // containing list items
       objItems += '<div class="list">';
