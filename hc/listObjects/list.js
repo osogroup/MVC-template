@@ -287,11 +287,12 @@ const createHTML = async () => {
     $('#tableHeadersandItems').append(objItems);
 
     var options = {
-      valueNames: [ 'id', 'name' ]
+      valueNames: [  ]
     };
     // adding object list to valueNames for sortability
     for(const[sortKey, sortValue] of Object.entries(objTypeConfig.list)) {
       console.log("sortValue is: ", sortValue);
+      valueNames.push(sortValue);
     }
 
     var containerList = new List( key+'Container', options);
