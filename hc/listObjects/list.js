@@ -205,7 +205,7 @@ const createHTML = async () => {
             tempColumn = col;
           }
           // creating table header HTML
-          tHeader += '<div class="col-'+tempColumn+' sort" data-sort="id">'+listValue+'</div>';
+          tHeader += '<div class="col-'+tempColumn+' sort" data-sort="'+listValue+'">'+listValue+'</div>';
         }
       // closing the header row
       tHeader += '</div>';
