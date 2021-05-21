@@ -204,7 +204,7 @@ const createHTML = async () => {
 
 
       // putting object item rows
-        var objItems = '<div class="row">'
+      var objItems = '<div class="row">'
 
       // getting item attributes
       for (const [SLKey, SLValue] of Object.entries(val)) {
