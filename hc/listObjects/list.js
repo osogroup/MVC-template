@@ -72,6 +72,10 @@ $(document).ready(function(){
       contactList.remove('id', itemId);
     });
 
+    function removeRow() {
+      console.log("Entered removeRow() function...");
+    }
+
     editBtns.click(function() {
       var itemId = $(this).closest('tr').find('.id').text();
       var itemValues = contactList.get('id', itemId)[0].values();
