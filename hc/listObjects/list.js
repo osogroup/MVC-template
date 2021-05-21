@@ -217,8 +217,8 @@ const createHTML = async () => {
       console.log("This is SLValue[firstValue]: ", SLValue[firstValue]);
       objItems += '<div class="col-"'+col+'>'+SLValue[firstValue]+'</div>'
     }
-    $('#forLoop').append(objItems);
   }
+  $('#forLoop').append(objItems);
     // getting list configuration
 
       // create item column HTML
