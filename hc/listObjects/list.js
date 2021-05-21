@@ -1,9 +1,10 @@
 $(document).ready(function(){
-  createHTML();
-
+  
   var options = {
     valueNames: [ 'id', 'name', 'desc', 'status', 'tags', 'due', 'est' ]
   };
+  
+  createHTML();
 
   var contactList = new List('contacts', options);
 
