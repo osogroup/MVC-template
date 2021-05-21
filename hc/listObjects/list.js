@@ -71,7 +71,10 @@ $(document).ready(function(){
       console.log("this is the item id " + itemId);
       contactList.remove('id', itemId);
     });
-
+    
+    function removeRow() {
+      console.log("Entered removeRow() function...");
+    }
     
     editBtns.click(function() {
       var itemId = $(this).closest('tr').find('.id').text();
@@ -101,10 +104,7 @@ $(document).ready(function(){
   
   createHTML();
   
-  function removeRow() {
-    console.log("Entered removeRow() function...");
-  }
-  
+
 });
 
 
