@@ -260,7 +260,7 @@ const createHTML = async () => {
       valueNames: [ 'id','name', 'description' ]
     };
     
-    var contactList = new List( key+'Container', options);
+    var containerList = new List( key+'Container', options);
 
   }
   $('#tableHeadersandItems').append('</div>');
