@@ -226,7 +226,7 @@ const createHTML = async () => {
                                                                                 // console.log("firstValue is: ", firstValue);
                                                                                 // console.log("This is SLValue[firstValue]: ", SLValue[firstValue]);
 
-          // create item column HTML
+          // create item columns in HTML
           objItems += '<div class="col-'+col+'">'+SLValue[firstValue]+'</div>'
         }
 
@@ -234,10 +234,9 @@ const createHTML = async () => {
         objItems += '</div>';
       }
 
-    // append row to index.html
+    // append each entire item row to index.html as it loops
     $('#tableHeadersandItems').append(objItems);
   }
-
   $('#tableHeadersandItems').append('</div>');
 }
 
