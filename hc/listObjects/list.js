@@ -181,7 +181,6 @@ const createHTML = async () => {
   
 
 
-  // ------------------------------------ The Table's Headers --------------------------------------
 
     // getting Object names and data
     for (const [key, val] of Object.entries(data)) {
@@ -206,7 +205,7 @@ const createHTML = async () => {
         var col = 12/(objTypeConfig.list.length);
 
 
-  // ------------------------------------ The Table's Inputs --------------------------------------
+  // ------------------------------------- The Input Boxes -----------------------------------------
 
 
         for (const [inputKey, inputValue] of Object.entries(objTypeConfig.list)) {
@@ -221,6 +220,10 @@ const createHTML = async () => {
                       + '<input type="text" id="'+inputValue+'-field" placeholder="'+inputValue+'" />'
                     + '</div>';
         }
+
+
+  // ------------------------------------- The Table Headers ----------------------------------------
+
       
         // creating table header from list configuration
         for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
@@ -237,7 +240,7 @@ const createHTML = async () => {
       tHeader += '</div>';
 
 
-    //--------------------------------------- Item Rows --------------------------------------------
+    //----------------------------------------- Item Rows --------------------------------------------
 
 
       var objItems = tHeader;
