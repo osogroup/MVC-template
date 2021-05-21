@@ -209,7 +209,8 @@ const createHTML = async () => {
 
   // getting item attributes
   for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
-    config
+    console.log("firstKey is: ", firstKey);
+    console.log("firstValue is: ", firstValue);
   }
     // getting list configuration
 
