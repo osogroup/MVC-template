@@ -1,138 +1,3 @@
-const configData = async () => {
-  var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
-  console.log("configData output ", listConfig);
-  return listConfig;
-}
-
-const tempData = async () => {
-  var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
-  console.log("tempData output ", objVars);
-  return objVars;
-}
-
-const createHTML = async () => {
-  var data = await tempData();
-  var config = await configData();
-  
-  
-  // -------------------------------------- Begin listHTML -----------------------------------------
-  
-  
-  var headerHTML = '<div id="contacts" class="container>'
-  + '<div class="row">'
-  + '<div class="col-12">'
-  + '<p id="header">'
-  + '<img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80px">'
-  + '<a class="headerLinks" href="#">Tag</a>'
-  + '<a class="headerLinks" href="#">Task</a>'
-  + '<a class="headerLinks" href="#">Deliverable</a>'
-  + '</p>'
-  + '</div>'
-  + '<h1>OAS Object List'
-  + '</div>'
-  $('#TitleOfList').append(headerHTML);
-  
-  var inputThings = '<div class="row" id="hacker-list">'
-  + '<div class="col-12">';
-  
-  
-  //----------------------------------------- Input Boxes ------------------------------------------
-  
-  
-  for (const [key, value] of Object.entries(data.task)) {
-    for (const [first, last] of Object.entries(value)) {
-      // console.log("this is last ", last);
-      inputThings += '<div class="col-3">'
-      + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
-      + '</div>';
-    }
-    inputThings += '<div class="col-1">'
-    + '<button id="add-btn">Add</button>'
-    // + '<button id="edit-btn">Edit</button>'
-    + '</div>'
-    + '</div>';
-    $('#inputBoxes').append(inputThings);
-    break;
-  }
-  
-  
-  // -------------------------------------- The Search Box -----------------------------------------
-  
-  
-  var searchVariable = '<div class="row">'
-  + '<div class="col-12">'
-  + '<div class="col-4">'
-  + '<input class="search" placeholder="Search"/>'
-  + '</div>'
-  + '</div>'
-  + '</div>';
-  $('#searchBar').append(searchVariable);
-  
-  
-  // ------------------------------------ The Table's Headers --------------------------------------
-  
-  // getting Object names and data
-  for (const [key, val] of Object.entries(data)) {
-    
-    // displaying Object Name
-    var tHeader = '<h1>'+key+'</h1>';
-    
-    // creating table header Row
-    tHeader += '<div class="row">';
-    
-    // setting object type configuration
-    var objTypeConfig = config[key];
-    
-    // setting table column width for each object type
-    var col = 12/(objTypeConfig.list.length);
-    
-    // creating table header from list configuration
-    for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
-      
-      if(listValue == 'id') {
-        tempColumn = col-1;
-      }else{
-        tempColumn = col;
-      }
-      // creating table header HTML
-      tHeader += '<div class="col-'+tempColumn+'">'+listValue+'</div>';
-    }
-    // appending tHeader to index.html
-    $('#tableHeadersandItems').append(tHeader);
-    
-    
-    //--------------------------------------- Item Rows --------------------------------------------
-    
-    
-    var objItems = '';
-    // getting item attributes
-    for (const [SLKey, SLValue] of Object.entries(val)) {
-      
-      // creating the object item rows
-      objItems += '<div class="row">';
-      
-      // getting list configuration
-      for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
-        
-        if(firstValue == "id") {
-          var tempCol = col-1;
-        }else{
-          var tempCol = col;
-        }
-        // create item columns in HTML
-        objItems += '<div class="col-'+tempCol+'">'+SLValue[firstValue]+'</div>'
-      }
-      
-      // closing object item rows
-      objItems += '<div class=col-1><button class="remove-item-btn"> - </button></div></div>';
-    }
-    
-    // append each entire item row to index.html as it loops
-    $('#tableHeadersandItems').append(objItems);
-  }
-  $('#tableHeadersandItems').append('</div>');
-}
-
 $(document).ready(function(){
 
   var options = {
@@ -237,3 +102,139 @@ $(document).ready(function(){
   createHTML();
 
 });
+
+
+const configData = async () => {
+  var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
+  console.log("configData output ", listConfig);
+  return listConfig;
+}
+
+const tempData = async () => {
+  var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
+  console.log("tempData output ", objVars);
+  return objVars;
+}
+
+const createHTML = async () => {
+  var data = await tempData();
+  var config = await configData();
+
+
+  // -------------------------------------- Begin listHTML -----------------------------------------
+
+
+  var headerHTML = '<div id="contacts" class="container>'
+                   + '<div class="row">'
+                     + '<div class="col-12">'
+                       + '<p id="header">'
+                       + '<img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80px">'
+                       + '<a class="headerLinks" href="#">Tag</a>'
+                       + '<a class="headerLinks" href="#">Task</a>'
+                       + '<a class="headerLinks" href="#">Deliverable</a>'
+                     + '</p>'
+                   + '</div>'
+                   + '<h1>OAS Object List'
+                 + '</div>'
+  $('#TitleOfList').append(headerHTML);
+
+  var inputThings = '<div class="row" id="hacker-list">'
+                    + '<div class="col-12">';
+
+
+  //----------------------------------------- Input Boxes ------------------------------------------
+
+
+  for (const [key, value] of Object.entries(data.task)) {
+    for (const [first, last] of Object.entries(value)) {
+      // console.log("this is last ", last);
+      inputThings += '<div class="col-3">'
+                     + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
+                   + '</div>';
+    }
+    inputThings += '<div class="col-1">'
+                   + '<button id="add-btn">Add</button>'
+                   // + '<button id="edit-btn">Edit</button>'
+                 + '</div>'
+               + '</div>';
+    $('#inputBoxes').append(inputThings);
+    break;
+  }
+
+
+  // -------------------------------------- The Search Box -----------------------------------------
+
+
+  var searchVariable = '<div class="row">'
+                       + '<div class="col-12">'
+                         + '<div class="col-4">'
+                           + '<input class="search" placeholder="Search"/>'
+                         + '</div>'
+                       + '</div>'
+                     + '</div>';
+  $('#searchBar').append(searchVariable);
+
+
+  // ------------------------------------ The Table's Headers --------------------------------------
+
+    // getting Object names and data
+    for (const [key, val] of Object.entries(data)) {
+
+    // displaying Object Name
+    var tHeader = '<h1>'+key+'</h1>';
+
+    // creating table header Row
+    tHeader += '<div class="row">';
+
+    // setting object type configuration
+    var objTypeConfig = config[key];
+
+    // setting table column width for each object type
+    var col = 12/(objTypeConfig.list.length);
+
+    // creating table header from list configuration
+    for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
+
+      if(listValue == 'id') {
+        tempColumn = col-1;
+      }else{
+        tempColumn = col;
+      }
+      // creating table header HTML
+      tHeader += '<div class="col-'+tempColumn+'">'+listValue+'</div>';
+    }
+    // appending tHeader to index.html
+    $('#tableHeadersandItems').append(tHeader);
+
+
+    //--------------------------------------- Item Rows --------------------------------------------
+
+
+    var objItems = '';
+    // getting item attributes
+    for (const [SLKey, SLValue] of Object.entries(val)) {
+
+      // creating the object item rows
+      objItems += '<div class="row">';
+
+      // getting list configuration
+      for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
+
+        if(firstValue == "id") {
+          var tempCol = col-1;
+        }else{
+          var tempCol = col;
+        }
+        // create item columns in HTML
+        objItems += '<div class="col-'+tempCol+'">'+SLValue[firstValue]+'</div>'
+      }
+
+      // closing object item rows
+      objItems += '<div class=col-1><button class="remove-item-btn"> - </button></div></div>';
+    }
+
+    // append each entire item row to index.html as it loops
+    $('#tableHeadersandItems').append(objItems);
+  }
+  $('#tableHeadersandItems').append('</div>');
+}
