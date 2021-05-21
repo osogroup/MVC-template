@@ -137,15 +137,16 @@ const createHTML = async () => {
                    + '</div>'
                    + '<h1>OAS Object List'
                  + '</div>'
+  $('#tableHeadersandItems').append(headerHTML);
 
-  var inputThings = headerHTML + '<div class="row" id="hacker-list">'
+  var inputThings = '<div class="row" id="hacker-list">'
                     + '<div class="col-12">';
 
     // getting Object names and data
     for (const [key, val] of Object.entries(data)) {
 
     // displaying Object Name
-    var tHeader = inputThings + '<h1>'+key+'</h1>';
+    var tHeader = '<h1>'+key+'</h1>';
 
     // creating sortable list library container 
     tHeader += '<div id="'+key+'Container">';
