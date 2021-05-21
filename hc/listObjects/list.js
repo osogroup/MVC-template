@@ -6,6 +6,8 @@ $(document).ready(function(){
 
   var contactList = new List('contacts', options);
   
+  createHTML();
+  
   var idField = $('#id-field'),
   nameField = $('#name-field'),
   descField = $('#desc-field'),
@@ -18,7 +20,6 @@ $(document).ready(function(){
   removeBtns = $('#remove-item-btn'),
   editBtns = $('.edit-item-btn');
   
-  createHTML();
 
   refreshCallbacks(contactList);
   
