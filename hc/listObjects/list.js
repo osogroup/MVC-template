@@ -219,6 +219,8 @@ const createHTML = async () => {
 
         if(firstValue == "id") {
           col = 3;
+        }else{
+          col = 4;
         }
         // create item columns in HTML
         objItems += '<div class="col-'+col+'">'+SLValue[firstValue]+'</div>'
