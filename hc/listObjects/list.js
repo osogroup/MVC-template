@@ -142,27 +142,6 @@ const createHTML = async () => {
   var inputThings = '<div class="row" id="hacker-list">'
                     + '<div class="col-12">';
 
-
-  //----------------------------------------- Input Boxes ------------------------------------------
-
-
-  // for (const [key, value] of Object.entries(data.task)) {
-  //   for (const [first, last] of Object.entries(value)) {
-  //     // console.log("this is last ", last);
-  //     inputThings += '<div class="col-3">'
-  //                    + '<input type="text" id="'+first+'-field" placeholder="'+first+'" />'
-  //                  + '</div>';
-  //   }
-  //   inputThings += '<div class="col-1">'
-  //                  + '<button id="add-btn">Add</button>'
-  //                  // + '<button id="edit-btn">Edit</button>'
-  //                + '</div>'
-  //              + '</div>';
-  //   $('#inputBoxes').append(inputThings);
-  //   break;
-  // }
-
-
     // getting Object names and data
     for (const [key, val] of Object.entries(data)) {
 
