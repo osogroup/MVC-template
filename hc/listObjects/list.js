@@ -205,7 +205,7 @@ const createHTML = async () => {
         // creating table header from list configuration
         for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
           if(listValue == 'id') {
-            tempColumn = col-1;
+            tempColumn = col-2;
           }else{
             tempColumn = col;
           }
@@ -236,7 +236,7 @@ const createHTML = async () => {
         for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
 
           if(firstValue == "id") {
-            var tempCol = col-1;
+            var tempCol = col-2;
           }else{
             var tempCol = col;
           }
