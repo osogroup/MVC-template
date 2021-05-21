@@ -208,14 +208,14 @@ const createHTML = async () => {
     var objItems = '<div class="row">'
 
   // getting item attributes
-  for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
-    console.log("firstKey is: ", firstKey);
-    console.log("firstValue is: ", firstValue);
-    for (const [SLKey, SLValue] of Object.entries(val)) {
-      console.log("This is SLKey ", SLKey);
-      console.log("This is SLValue ", SLValue);
-      console.log("This is SLValue[firstValue]: ", firstValue[SLValue]);
-      objItems += '<div class="col-"'+col+'>'+firstValue[SLValue]+'</div>'
+  for (const [SLKey, SLValue] of Object.entries(val)) {
+    console.log("This is SLKey ", SLKey);
+    console.log("This is SLValue ", SLValue);
+    for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
+      console.log("firstKey is: ", firstKey);
+      console.log("firstValue is: ", firstValue);
+      console.log("This is SLValue[firstValue]: ", SLValue[firstValue]);
+      objItems += '<div class="col-"'+col+'>'+SLValue[firstValue]+'</div>'
     }
   }
 
