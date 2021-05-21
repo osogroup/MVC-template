@@ -205,7 +205,7 @@ const createHTML = async () => {
         var col = 12/(objTypeConfig.list.length);
         var tInputs = '';
         for (const [inputKey, inputValue] of Object.entries(objTypeConfig.list)) {
-          if(listValue == 'id') {
+          if(inputValue == 'id') {
             tempColumn = col-1;
           }else{
             tempColumn = col;
@@ -224,10 +224,8 @@ const createHTML = async () => {
           }else{
             tempColumn = col;
           }
-
           
-          
-                        // creating table header HTML
+          // creating table header HTML
           tHeader += '<div class="col-'+tempColumn+' sort" data-sort="'+listValue+'">'+listValue+'</div>';
         }
       // closing the header row
