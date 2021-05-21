@@ -187,33 +187,38 @@ const createHTML = async () => {
     // creating sortable list library container 
     tHeader += '<div id="'+key+'Container">';
 
-    // creating table header Row
-    tHeader += '<div class="row">';
+      // creating table header Row
+      tHeader += '<div class="row">';
 
-    // setting object type configuration
-    var objTypeConfig = config[key];
+        // setting object type configuration
+        var objTypeConfig = config[key];
 
-    // setting table column width for each object type
-    var col = 12/(objTypeConfig.list.length);
+        // setting table column width for each object type
+        var col = 12/(objTypeConfig.list.length);
 
-    // creating table header from list configuration
-    for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
+        // creating table header from list configuration
+        for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
 
-      if(listValue == 'id') {
-        tempColumn = col-1;
-      }else{
-        tempColumn = col;
-      }
-      // creating table header HTML
-      tHeader += '<div class="col-'+tempColumn+'">'+listValue+'</div>';
-    }
-    // appending tHeader to index.html
+          if(listValue == 'id') {
+            tempColumn = col-1;
+          }else{
+            tempColumn = col;
+          }
+          // creating table header HTML
+          tHeader += '<div class="col-'+tempColumn+'">'+listValue+'</div>';
+        }
+      // closing the header row
+      tHeader += '</div>';
 
 
     //--------------------------------------- Item Rows --------------------------------------------
 
 
     var objItems = tHeader;
+
+    // containing list items
+    objItems += '<div class="list">';
+
     // getting item attributes
     for (const [SLKey, SLValue] of Object.entries(val)) {
 
@@ -236,9 +241,14 @@ const createHTML = async () => {
       objItems += '<div class=col-1>'
                   // + '<button onClick="removeRow();"> - </button>'
                   + '<button class="remove-item-btn"> - </button>'
-                + '</div>'
-              + '</div>';
+                + '</div>';
+
+      // closing object item row
+        objItems  += '</div>';
     }
+
+    // closing list items
+    objItems += '</div>';
 
     // closing sortable list library container
     objItems += '</div>';
