@@ -214,9 +214,9 @@ const createHTML = async () => {
     for (const [SLKey, SLValue] of Object.entries(val)) {
       console.log("This is SLKey ", SLKey);
       console.log("This is SLValue ", SLValue);
-      tHeader += '<div class="col-"'+col+'>'+SLValue.firstValue+'</div>'
+      objItems += '<div class="col-"'+col+'>'+SLValue.firstValue+'</div>'
     }
-
+    $('#forLoop').append(objItems);
   }
     // getting list configuration
 
