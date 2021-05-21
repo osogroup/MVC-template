@@ -213,7 +213,7 @@ const createHTML = async () => {
 
           // creating table inputs
           tInputs +=  '<div class="col-'+tempColumn+'">'
-                      + '<input type="text" id="'+listValue+'-field" placeholder="'+listValue+'" />'
+                      + '<input type="text" id="'+inputValue+'-field" placeholder="'+inputValue+'" />'
                     + '</div>';
         }
 
