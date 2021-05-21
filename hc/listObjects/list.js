@@ -204,6 +204,7 @@ const createHTML = async () => {
                    + '</div>';
 
       // appending tHeader to index.html
+    }
 
 
       // putting object item rows
@@ -225,11 +226,10 @@ const createHTML = async () => {
           objItems += '<div class="col-"'+col+'>'+SLValue[firstValue]+'</div>'
         }
         $('#tableHeaders').append(tHeader);
-        $('#forLoop').append(objItems);
       }
-    }
     objItems += '</div>';
     // append row to index.html
+    $('#forLoop').append(objItems);
 
 
   }
