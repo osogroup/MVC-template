@@ -261,7 +261,6 @@ const createHTML = async () => {
     };
     
     var containerList = new List( key+'Container', options);
-    break;
 
   }
   $('#tableHeadersandItems').append('</div>');
