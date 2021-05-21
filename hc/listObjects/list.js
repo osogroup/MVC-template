@@ -72,10 +72,7 @@ $(document).ready(function(){
       contactList.remove('id', itemId);
     });
 
-    function removeRow() {
-      console.log("Entered removeRow() function...");
-    }
-
+    
     editBtns.click(function() {
       var itemId = $(this).closest('tr').find('.id').text();
       var itemValues = contactList.get('id', itemId)[0].values();
@@ -86,12 +83,12 @@ $(document).ready(function(){
       tagsField.val(itemValues.tags);
       dueField.val(itemValues.due);
       estField.val(itemValues.est);
-
+      
       editBtn.show();
       addBtn.hide();
     });
   }
-
+  
   function clearFields() {
     idField.val('');
     nameField.val('');
@@ -101,9 +98,13 @@ $(document).ready(function(){
     dueField.val('');
     estField.val('');
   }
-
+  
   createHTML();
-
+  
+  function removeRow() {
+    console.log("Entered removeRow() function...");
+  }
+  
 });
 
 
