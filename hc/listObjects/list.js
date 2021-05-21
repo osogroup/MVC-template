@@ -204,6 +204,19 @@ const createHTML = async () => {
         // setting table column width for each object type
         var col = 12/(objTypeConfig.list.length);
         var tInputs = '';
+        for (const [inputKey, inputValue] of Object.entries(objTypeConfig.list)) {
+          if(listValue == 'id') {
+            tempColumn = col-1;
+          }else{
+            tempColumn = col;
+          } 
+
+          // creating table inputs
+          tInputs +=  '<div class="col-'+tempColumn+'">'
+                      + '<input type="text" id="'+listValue+'-field" placeholder="'+listValue+'" />'
+                    + '</div>';
+        }
+
         // creating table header from list configuration
         for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
           if(listValue == 'id') {
@@ -212,10 +225,7 @@ const createHTML = async () => {
             tempColumn = col;
           }
 
-          // creating table inputs
-          tInputs +=  '<div class="col-'+tempColumn+'">'
-                          + '<input type="text" id="'+listValue+'-field" placeholder="'+listValue+'" />'
-                        + '</div>';
+          
           
                         // creating table header HTML
           tHeader += '<div class="col-'+tempColumn+' sort" data-sort="'+listValue+'">'+listValue+'</div>';
