@@ -289,7 +289,12 @@ const createHTML = async () => {
     var options = {
       valueNames: []
     };
-    
+    // adding object list to valueNames for sortability
+    for(const[sortKey, sortValue] of Object.entries(objTypeConfig.list)) {
+      console.log("sortValue is: ", sortValue);
+      valueNames.push(sortValue);
+    }
+
     var containerList = new List( key+'Container', options);
 
   }
