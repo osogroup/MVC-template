@@ -199,25 +199,25 @@ const createHTML = async () => {
       tHeader += '<div class="col-'+col+'">'
                      + listValue
                    + '</div>';
-      // appending tHeader to index.html
-      $('#tableHeaders').append(tHeader);
-
-
-      // putting object item rows
-      var objItems = '<div class="row">'
-
-      // getting item attributes
-      for (const [SLKey, SLValue] of Object.entries(val)) {
-        console.log("This is SLKey ", SLKey);
-        console.log("This is SLValue ", SLValue);
-        for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
-          console.log("firstKey is: ", firstKey);
-          console.log("firstValue is: ", firstValue);
-          console.log("This is SLValue[firstValue]: ", SLValue[firstValue]);
-          objItems += '<div class="col-"'+col+'>'+SLValue[firstValue]+'</div>'
-        }
-      }
     }
+    // appending tHeader to index.html
+    $('#tableHeaders').append(tHeader);
+
+
+  // putting object item rows
+    var objItems = '<div class="row">'
+
+  // getting item attributes
+  for (const [SLKey, SLValue] of Object.entries(val)) {
+    console.log("This is SLKey ", SLKey);
+    console.log("This is SLValue ", SLValue);
+    for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
+      console.log("firstKey is: ", firstKey);
+      console.log("firstValue is: ", firstValue);
+      console.log("This is SLValue[firstValue]: ", SLValue[firstValue]);
+      objItems += '<div class="col-"'+col+'>'+SLValue[firstValue]+'</div>'
+    }
+  }
 
 
 
