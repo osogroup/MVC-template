@@ -122,7 +122,7 @@ const createHTML = async () => {
   var config = await configData();
 
 
-  // -------------------------------------- Begin listHTML -----------------------------------------
+  // ---------------------------------------- Page Header ------------------------------------------
 
 
   var headerHTML = '<div id="contacts" class="container>'
