@@ -218,12 +218,12 @@ const createHTML = async () => {
       for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
 
         if(firstValue == "id") {
-          col = 3;
+          var tempCol = col-1;
         }else{
-          col = 4;
+          var tempCol = col;
         }
         // create item columns in HTML
-        objItems += '<div class="col-'+col+'">'+SLValue[firstValue]+'</div>'
+        objItems += '<div class="col-'+tempCol+'">'+SLValue[firstValue]+'</div>'
       }
 
       // closing object item rows
