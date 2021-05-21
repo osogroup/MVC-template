@@ -3,8 +3,10 @@ $(document).ready(function(){
   var options = {
     valueNames: [ 'id', 'name', 'desc', 'status', 'tags', 'due', 'est' ]
   };
-
+  
   var contactList = new List('contacts', options);
+  
+  createHTML();
   
   var idField = $('#id-field'),
   nameField = $('#name-field'),
@@ -34,7 +36,7 @@ $(document).ready(function(){
     clearFields();
     refreshCallbacks(contactList);
   });
-
+  
 
 // editBtn.click(function() {
 //   var item = contactList.get('id', idField.val())[0];
@@ -99,7 +101,6 @@ $(document).ready(function(){
     estField.val('');
   }
   
-  createHTML();
   
 
 });
