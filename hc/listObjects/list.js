@@ -209,7 +209,6 @@ const createHTML = async () => {
   // ------------------------------------ The Table's Inputs --------------------------------------
 
 
-        var tInputs = '';
         for (const [inputKey, inputValue] of Object.entries(objTypeConfig.list)) {
           if(inputValue == 'id') {
             tempColumn = col-1;
