@@ -225,11 +225,12 @@ const createHTML = async () => {
           objItems += '<div class="col-"'+col+'>'+SLValue[firstValue]+'</div>'
         }
         $('#tableHeaders').append(tHeader);
+        $('#forLoop').append(objItems);
+
       }
     }
     objItems += '</div>';
     // append row to index.html
-    $('#forLoop').append(objItems);
 
 
   }
