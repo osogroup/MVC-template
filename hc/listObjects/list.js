@@ -220,9 +220,6 @@ const createHTML = async () => {
                       + '<input type="text" id="'+inputValue+'-field" placeholder="'+inputValue+'" />'
                     + '</div>';
         }
-
-        // appending the table inputs
-        $('#inputBoxes').append(tInputs);
       
         // creating table header from list configuration
         for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
