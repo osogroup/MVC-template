@@ -179,7 +179,7 @@ const createHTML = async () => {
                     + '</div>';
         }
 
-        // create the add button
+        // create the add button HTML
         addButtonHTML = '<div class="col-1"><button id="add-btn">Add</button></div>';
 
         // closing table input row and adding the add button
