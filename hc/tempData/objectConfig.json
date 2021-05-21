@@ -7,7 +7,7 @@
   },
   "task":{
     "required":["id","name"],
-    "list":["id","name","tag", "status"],
+    "list":["id","name","tags", "status"],
     "editable":["name","description","tag"] 
   },
   "tag":{
