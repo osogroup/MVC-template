@@ -222,7 +222,7 @@ const createHTML = async () => {
       }
 
       // closing object item rows
-      objItems += '</div>';
+      objItems += '<div class=col-1><button class="remove-item-btn"> - </button></div></div>';
     }
 
     // append each entire item row to index.html as it loops
