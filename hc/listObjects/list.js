@@ -226,7 +226,6 @@ const createHTML = async () => {
         }
         $('#tableHeaders').append(tHeader);
         $('#forLoop').append(objItems);
-
       }
     }
     objItems += '</div>';
