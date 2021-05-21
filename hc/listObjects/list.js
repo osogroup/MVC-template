@@ -205,7 +205,7 @@ const createHTML = async () => {
             tempColumn = col;
           }
           // creating table header HTML
-          tHeader += '<div class="col-'+tempColumn+'">'+listValue+'</div>';
+          tHeader += '<div class="col-'+tempColumn+' sort" data-sort="id">'+listValue+'</div>';
         }
       // closing the header row
       tHeader += '</div>';
@@ -214,41 +214,41 @@ const createHTML = async () => {
     //--------------------------------------- Item Rows --------------------------------------------
 
 
-    var objItems = tHeader;
+      var objItems = tHeader;
 
-    // containing list items
-    objItems += '<div class="list">';
+      // containing list items
+      objItems += '<div class="list">';
 
-    // getting item attributes
-    for (const [SLKey, SLValue] of Object.entries(val)) {
+      // getting item attributes
+      for (const [SLKey, SLValue] of Object.entries(val)) {
 
-      // creating the object item rows
-      objItems += '<div class="row">';
+        // creating the object item rows
+        objItems += '<div class="row">';
 
-      // getting list configuration
-      for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
+        // getting list configuration
+        for (const [firstKey, firstValue] of Object.entries(objTypeConfig.list)) {
 
-        if(firstValue == "id") {
-          var tempCol = col-1;
-        }else{
-          var tempCol = col;
+          if(firstValue == "id") {
+            var tempCol = col-1;
+          }else{
+            var tempCol = col;
+          }
+          // create item columns in HTML
+          objItems += '<div class="col-'+tempCol+'"><span class="'+firstValue+'"></span>'+SLValue[firstValue]+'</div>'
         }
-        // create item columns in HTML
-        objItems += '<div class="col-'+tempCol+'"><span class="'+firstValue+'"></span>'+SLValue[firstValue]+'</div>'
+
+        // closing object item rows
+        objItems += '<div class=col-1>'
+                    // + '<button onClick="removeRow();"> - </button>'
+                    + '<button class="remove-item-btn"> - </button>'
+                  + '</div>';
+
+        // closing object item row
+          objItems  += '</div>';
       }
 
-      // closing object item rows
-      objItems += '<div class=col-1>'
-                  // + '<button onClick="removeRow();"> - </button>'
-                  + '<button class="remove-item-btn"> - </button>'
-                + '</div>';
-
-      // closing object item row
-        objItems  += '</div>';
-    }
-
-    // closing list items
-    objItems += '</div>';
+      // closing list items
+      objItems += '</div>';
 
     // closing sortable list library container
     objItems += '</div>';
