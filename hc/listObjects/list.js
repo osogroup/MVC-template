@@ -204,6 +204,7 @@ const createHTML = async () => {
                    + '</div>';
 
       // appending tHeader to index.html
+      $('#tableHeaders').append(tHeader);
     }
 
 
@@ -225,7 +226,6 @@ const createHTML = async () => {
           // create item column HTML
           objItems += '<div class="col-"'+col+'>'+SLValue[firstValue]+'</div>'
         }
-        $('#tableHeaders').append(tHeader);
       }
     objItems += '</div>';
     // append row to index.html
