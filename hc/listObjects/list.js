@@ -321,6 +321,11 @@ const createHTML = async () => {
       addBtn.show();
     });
 
+    for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
+      console.log(variableValue ,"is variableValue");
+      // var field[variableValue] = $('#'+objType+'-'+);
+    }
+
     function refreshCallbacks(obj) {
       var idField = $('#'+objType+'-id-field'),
       nameField = $('#'+objType+'-name-field'),
