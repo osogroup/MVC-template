@@ -293,6 +293,8 @@ const createHTML = async () => {
     var containerList = {};
     containerList[objType] = new List(objType+'Container', options);
     
+    var field = {};
+    
     refreshCallbacks(containerList[objType]);
 
     // variable declaration
@@ -305,7 +307,6 @@ const createHTML = async () => {
     // estField = $('#'+objType+'-est-field');
     
     // dynamically declaring variables
-    var field = {};
     for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
       field[variableValue] = $('#'+objType+'-'+variableValue+'-field');
       console.log('field[variableValue] is: ', field[variableValue], ' at this time');
