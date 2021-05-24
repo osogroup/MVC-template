@@ -308,7 +308,7 @@ const createHTML = async () => {
         console.log("Entering remove function", this);
         var itemId = $(this).parent().parent().find('.name').text();
         console.log("this is the item id " + itemId);
-        obj.remove('id', itemId);
+        obj.remove('name', itemId);
       });
       
       editBtns.click(function() {
