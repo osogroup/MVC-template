@@ -18,7 +18,7 @@ $(document).ready(function(){
   // dueField = $('#due-field'),
   // estField = $('#est-field'),
   // addBtn = $('#add-btn'),
-  // applyBtn = $('#edit-btn').hide(),
+  // editBtn = $('#edit-btn').hide(),
   // removeBtns = $('.remove-item-btn'),
   // editBtns = $('.edit-item-btn');
   
@@ -40,7 +40,7 @@ $(document).ready(function(){
   // });
   
   
-  // // applyBtn.click(function() {
+  // // editBtn.click(function() {
   // //   var item = contactList.get('id', idField.val())[0];
   // //   item.values({
   //   //     id:idField.val(),
@@ -50,7 +50,7 @@ $(document).ready(function(){
   //   //     solution: solutionField.val()
   //   //   });
   //   //   clearFields();
-  //   //   applyBtn.hide();
+  //   //   editBtn.hide();
   //   //   addBtn.show();
   //   // });
   
@@ -63,7 +63,7 @@ $(document).ready(function(){
   //   dueField = $('#due-field'),
   //   estField = $('#est-field'),
   //   addBtn = $('#add-btn'),
-  //   applyBtn = $('#edit-btn').hide(),
+  //   editBtn = $('#edit-btn').hide(),
   //   removeBtns = $('.remove-item-btn'),
   //   editBtns = $('.edit-item-btn');
   //   // Needed to add new buttons to jQuery-extended object
@@ -88,7 +88,7 @@ $(document).ready(function(){
   //     dueField.val(itemValues.due);
   //     estField.val(itemValues.est);
       
-  //     applyBtn.show();
+  //     editBtn.show();
   //     addBtn.hide();
   //   });
   // }
@@ -293,63 +293,44 @@ const createHTML = async () => {
     var containerList = {};
     containerList[objType] = new List(objType+'Container', options);
     
-    var field = {};
-
     refreshCallbacks(containerList[objType]);
 
     // variable declaration
-    // var idField = $('#'+objType+'-id-field'),
-    // nameField = $('#'+objType+'-name-field'),
-    // descField = $('#'+objType+'-desc-field'),
-    // statusField = $('#'+objType+'-status-field'),
-    // tagsField = $('#'+objType+'-tags-field'),
-    // dueField = $('#'+objType+'-due-field'),
-    // estField = $('#'+objType+'-est-field');
-    
-    // dynamically declaring variables
-    for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
-      field[variableValue] = $('#'+objType+'-'+variableValue+'-field');
-      console.log('field[variableValue] is: ', field[variableValue], ' at this time');
-    }
-
-    var applyBtn = $('.edit-btn').hide(),
+    var idField = $('#'+objType+'-id-field'),
+    nameField = $('#'+objType+'-name-field'),
+    descField = $('#'+objType+'-desc-field'),
+    statusField = $('#'+objType+'-status-field'),
+    tagsField = $('#'+objType+'-tags-field'),
+    dueField = $('#'+objType+'-due-field'),
+    estField = $('#'+objType+'-est-field'),
+    editBtn = $('.edit-btn').hide(),
     addBtn = $('.add-btn');
 
     // pushes the edited values into the rows to be updated
-    applyBtn.click(function() {
-      for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
-        var item = containerList[objType].get('id', field[variableValue].val())[0];
-      
-        // filling item.values object with field array values
-        item.values({
-          [variableValue]: field[variableValue].val(),
-        });
-        console.log("this is variableValue in the applyBtn function: ", variableValue);
-      }
-        // id:idField.val(),
-        // name: nameField.val()
+    editBtn.click(function() {
+      var item = containerList[objType].get('id', idField.val())[0];
+      item.values({
+        id:idField.val(),
+        name: nameField.val()
         // city: cityField.val(),
         // problem: problemField.val(),
         // solution: solutionField.val()
-
+      });
       clearFields();
-      applyBtn.hide();
+      editBtn.hide();
       addBtn.show();
     });
 
-
     function refreshCallbacks(obj) {
-      for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
-        field[variableValue] = $('#'+objType+'-'+variableValue+'-field');
-      }
-      // nameField = $('#'+objType+'-name-field'),
-      // descField = $('#'+objType+'-desc-field'),
-      // statusField = $('#'+objType+'-status-field'),
-      // tagsField = $('#'+objType+'-tags-field'),
-      // dueField = $('#'+objType+'-due-field'),
-      // estField = $('#'+objType+'-est-field'),
-      var addBtn = $('.add-btn'),
-      applyBtn = $('.edit-btn').hide(),
+      var idField = $('#'+objType+'-id-field'),
+      nameField = $('#'+objType+'-name-field'),
+      descField = $('#'+objType+'-desc-field'),
+      statusField = $('#'+objType+'-status-field'),
+      tagsField = $('#'+objType+'-tags-field'),
+      dueField = $('#'+objType+'-due-field'),
+      estField = $('#'+objType+'-est-field'),
+      addBtn = $('.add-btn'),
+      editBtn = $('.edit-btn').hide(),
       removeBtns = $('.remove-item-btn'),
       MultipleEditBtns = $('.edit-item-btn');
       
@@ -367,19 +348,15 @@ const createHTML = async () => {
       MultipleEditBtns.click(function() {
         var itemId = $(this).parent().parent().find('.id').text();
         var itemValues = obj.get('id', itemId)[0].values();
-
-        for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
-          field[variableValue].val(itemValues.variableValue);
-        }
-        // idField.val(itemValues.id);
-        // nameField.val(itemValues.name);
+        idField.val(itemValues.id);
+        nameField.val(itemValues.name);
         // descField.val(itemValues.desc);
         // statusField.val(itemValues.status);
         // tagsField.val(itemValues.tags);
         // dueField.val(itemValues.due);
         // estField.val(itemValues.est);
         
-        applyBtn.show();
+        editBtn.show();
         addBtn.hide();
       });
       // Exit of refreshCallbacks();
@@ -388,36 +365,29 @@ const createHTML = async () => {
     // adds what is typed into the input fields into a new row
     addBtn.click(function() {
       console.log("Entering addBtn.click(function() {...}");
-      for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
-        containerList[objType].add({
-          [variableValue]: field[variableValue].val()
-          
-          // id: idField.val(),
-          // name: nameField.val()
-          // id: Math.floor(Math.random()*110000),
-          // desc: descField.val(),
-          // status: statusField.val(),
-          // tags: tagsField.val(),
-          // due: dueField.val(),
-          // est: estField.val()
-        });
-      }
+      containerList[objType].add({
+        id: idField.val(),
+        name: nameField.val()
+        // id: Math.floor(Math.random()*110000),
+        // desc: descField.val(),
+        // status: statusField.val(),
+        // tags: tagsField.val(),
+        // due: dueField.val(),
+        // est: estField.val()
+      });
       clearFields();
       refreshCallbacks(containerList[objType]);
     });
 
     // clears the input fields after "Edit" or "Add" buttons are pushed
     function clearFields() {
-      for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
-        field[variableValue].val('');
-      }
-      // idField.val('');
-      // nameField.val('');
-      // descField.val('');
-      // statusField.val('');
-      // tagsField.val('');
-      // dueField.val('');
-      // estField.val('');
+      idField.val('');
+      nameField.val('');
+      descField.val('');
+      statusField.val('');
+      tagsField.val('');
+      dueField.val('');
+      estField.val('');
     }
 
     // Exiting the last forOf loop
