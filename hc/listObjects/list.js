@@ -282,6 +282,8 @@ const createHTML = async () => {
     // closing each id=hacker-list div
     $('#tableHeadersandItems').append('</div>');
 
+    var addBtn = $('#add-btn');
+
     function refreshCallbacks(obj) {
       var idField = $('#'+key+'id-field'),
       nameField = $('#'+key+'name-field'),
