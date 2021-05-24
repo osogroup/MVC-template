@@ -317,10 +317,10 @@ const createHTML = async () => {
 
     // pushes the edited values into the rows to be updated
     editBtn.click(function() {
-      var item = containerList[objType].get('id', field[variableValue].val())[0];
-      
-      // filling item.values object with field array values
       for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
+        var item = containerList[objType].get('id', field[variableValue].val())[0];
+      
+        // filling item.values object with field array values
         item.values({
           variableValue: field[variableValue].val(),
         });
