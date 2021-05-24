@@ -330,7 +330,9 @@ const createHTML = async () => {
         editBtn.show();
         addBtn.hide();
       });
+      console.log("Now exiting refreshCallbacks(obj) function");
     }
+
   }
   console.log("Exiting createHTML()");
 }
