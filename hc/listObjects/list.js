@@ -116,7 +116,7 @@ const tempData = async () => {
   return objVars;
 }
 
-// gathers, sorts and organizes all the Objects and data from the JSON files, generates HTML and appends it to #TitleOfList in index.html
+// gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
 const createHTML = async () => {
   console.log("Entering createHTML()");
   var data = await tempData();
