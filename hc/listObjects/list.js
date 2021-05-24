@@ -280,7 +280,7 @@ const createHTML = async () => {
     $('#tableHeadersandItems').append('</div>');
     console.log("Exiting createHTML()");
   }
-  
+
   refreshCallbacks(containerList);
 
   function refreshCallbacks(obj) {
@@ -302,7 +302,6 @@ const createHTML = async () => {
       console.log("this is the item id " + itemId);
       obj.remove('id', itemId);
     });
-    
     
     editBtns.click(function() {
       var itemId = $(this).closest('tr').find('.id').text();
