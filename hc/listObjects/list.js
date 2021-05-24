@@ -1,6 +1,6 @@
 $(document).ready(function(){
   
-  console.log("objType in the JS file " , objType);
+  // console.log("objType in the JS file " , objType);
 
   createHTML();
 
@@ -238,7 +238,7 @@ const createHTML = async () => {
       objItems += '<div class="list">';
 
       // getting item attributes
-      console.log("THIS IS MY FOCUS", data[objType]);
+      // console.log("THIS IS MY FOCUS", data[objType]);
       for (const [SLKey, SLValue] of Object.entries(data[objType])) {
 
         // creating the object item rows
