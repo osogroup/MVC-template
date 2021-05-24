@@ -388,16 +388,20 @@ const createHTML = async () => {
     // adds what is typed into the input fields into a new row
     addBtn.click(function() {
       console.log("Entering addBtn.click(function() {...}");
-      containerList[objType].add({
-        id: idField.val(),
-        name: nameField.val()
-        // id: Math.floor(Math.random()*110000),
-        // desc: descField.val(),
-        // status: statusField.val(),
-        // tags: tagsField.val(),
-        // due: dueField.val(),
-        // est: estField.val()
-      });
+      for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
+        containerList[objType].add({
+          variableValue: field[variableValue].val();
+          
+          // id: idField.val(),
+          // name: nameField.val()
+          // id: Math.floor(Math.random()*110000),
+          // desc: descField.val(),
+          // status: statusField.val(),
+          // tags: tagsField.val(),
+          // due: dueField.val(),
+          // est: estField.val()
+        });
+      }
       clearFields();
       refreshCallbacks(containerList[objType]);
     });
