@@ -297,9 +297,9 @@ const createHTML = async () => {
       item.values({
         id:idField.val(),
         name: nameField.val(),
-        city: cityField.val(),
-        problem: problemField.val(),
-        solution: solutionField.val()
+        // city: cityField.val(),
+        // problem: problemField.val(),
+        // solution: solutionField.val()
       });
       clearFields();
       editBtn.hide();
