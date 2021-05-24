@@ -338,14 +338,16 @@ const createHTML = async () => {
 
 
     function refreshCallbacks(obj) {
-      var idField = $('#'+objType+'-id-field'),
-      nameField = $('#'+objType+'-name-field'),
-      descField = $('#'+objType+'-desc-field'),
-      statusField = $('#'+objType+'-status-field'),
-      tagsField = $('#'+objType+'-tags-field'),
-      dueField = $('#'+objType+'-due-field'),
-      estField = $('#'+objType+'-est-field'),
-      addBtn = $('.add-btn'),
+      for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
+        field[variableValue] = $('#'+objType+'-'+variableValue+'-field');
+      }
+      // nameField = $('#'+objType+'-name-field'),
+      // descField = $('#'+objType+'-desc-field'),
+      // statusField = $('#'+objType+'-status-field'),
+      // tagsField = $('#'+objType+'-tags-field'),
+      // dueField = $('#'+objType+'-due-field'),
+      // estField = $('#'+objType+'-est-field'),
+      var addBtn = $('.add-btn'),
       editBtn = $('.edit-btn').hide(),
       removeBtns = $('.remove-item-btn'),
       MultipleEditBtns = $('.edit-item-btn');
