@@ -6,7 +6,7 @@ $(document).ready(function(){
   
   createHTML();
 
-  var contactList = new List('tableHeadersandItems', options);
+  var contactList = new List('contacts', options);
   
   var idField = $('#id-field'),
   nameField = $('#name-field'),
@@ -39,68 +39,68 @@ $(document).ready(function(){
   
   
   // editBtn.click(function() {
-    //   var item = contactList.get('id', idField.val())[0];
-    //   item.values({
-      //     id:idField.val(),
-      //     name: nameField.val(),
-      //     city: cityField.val(),
-      //     problem: problemField.val(),
-      //     solution: solutionField.val()
-      //   });
-      //   clearFields();
-      //   editBtn.hide();
-      //   addBtn.show();
-      // });
-      
-      function refreshCallbacks(contactList) {
-        var idField = $('#id-field'),
-        nameField = $('#name-field'),
-        descField = $('#desc-field'),
-        statusField = $('#status-field'),
-        tagsField = $('#tags-field'),
-        dueField = $('#due-field'),
-        estField = $('#est-field'),
-        addBtn = $('#add-btn'),
-        editBtn = $('#edit-btn').hide(),
-        removeBtns = $('.remove-item-btn'),
-        editBtns = $('.edit-item-btn');
-        // Needed to add new buttons to jQuery-extended object
-        
-        removeBtns.click(function() {
-          console.log("Entering remove function", this);
-          var itemId = $(this).parent().parent().find('.id').text();
-          console.log($(this).parent().parent().find('.id'));
-          console.log("this is the item id " + itemId);
-          contactList.remove('id', itemId);
-        });
-        
-        
-        editBtns.click(function() {
-          var itemId = $(this).closest('tr').find('.id').text();
-          var itemValues = contactList.get('id', itemId)[0].values();
-          idField.val(itemValues.id);
-          nameField.val(itemValues.name);
-          descField.val(itemValues.desc);
-          statusField.val(itemValues.status);
-          tagsField.val(itemValues.tags);
-          dueField.val(itemValues.due);
-          estField.val(itemValues.est);
-          
-          editBtn.show();
-          addBtn.hide();
-        });
-      }
-      
-      function clearFields() {
-        idField.val('');
-        nameField.val('');
-        descField.val('');
-        statusField.val('');
-        tagsField.val('');
-        dueField.val('');
-        estField.val('');
-      }      
+  //   var item = contactList.get('id', idField.val())[0];
+  //   item.values({
+    //     id:idField.val(),
+    //     name: nameField.val(),
+    //     city: cityField.val(),
+    //     problem: problemField.val(),
+    //     solution: solutionField.val()
+    //   });
+    //   clearFields();
+    //   editBtn.hide();
+    //   addBtn.show();
+    // });
+  
+  function refreshCallbacks(contactList) {
+    var idField = $('#id-field'),
+    nameField = $('#name-field'),
+    descField = $('#desc-field'),
+    statusField = $('#status-field'),
+    tagsField = $('#tags-field'),
+    dueField = $('#due-field'),
+    estField = $('#est-field'),
+    addBtn = $('#add-btn'),
+    editBtn = $('#edit-btn').hide(),
+    removeBtns = $('.remove-item-btn'),
+    editBtns = $('.edit-item-btn');
+    // Needed to add new buttons to jQuery-extended object
+    
+    removeBtns.click(function() {
+      console.log("Entering remove function", this);
+      var itemId = $(this).parent().parent().find('.id').text();
+      console.log($(this).parent().parent().find('.id'));
+      console.log("this is the item id " + itemId);
+      contactList.remove('id', itemId);
     });
+    
+    
+    editBtns.click(function() {
+      var itemId = $(this).closest('tr').find('.id').text();
+      var itemValues = contactList.get('id', itemId)[0].values();
+      idField.val(itemValues.id);
+      nameField.val(itemValues.name);
+      descField.val(itemValues.desc);
+      statusField.val(itemValues.status);
+      tagsField.val(itemValues.tags);
+      dueField.val(itemValues.due);
+      estField.val(itemValues.est);
+      
+      editBtn.show();
+      addBtn.hide();
+    });
+  }
+  
+  function clearFields() {
+    idField.val('');
+    nameField.val('');
+    descField.val('');
+    statusField.val('');
+    tagsField.val('');
+    dueField.val('');
+    estField.val('');
+  }      
+});
     
     
 const configData = async () => {
@@ -276,7 +276,47 @@ const createHTML = async () => {
 
     var containerList = new List( key+'Container', options);
 
+    function refreshCallbacks(obj) {
+      var idField = $('#id-field'),
+      nameField = $('#name-field'),
+      descField = $('#desc-field'),
+      statusField = $('#status-field'),
+      tagsField = $('#tags-field'),
+      dueField = $('#due-field'),
+      estField = $('#est-field'),
+      addBtn = $('#add-btn'),
+      editBtn = $('#edit-btn').hide(),
+      removeBtns = $('.remove-item-btn'),
+      editBtns = $('.edit-item-btn');
+
+      removeBtns.click(function() {
+        console.log("Entering remove function", this);
+        var itemId = $(this).parent().parent().find('.id').text();
+        console.log($(this).parent().parent().find('.id'));
+        console.log("this is the item id " + itemId);
+        obj.remove('id', itemId);
+      });
+      
+      
+      editBtns.click(function() {
+        var itemId = $(this).closest('tr').find('.id').text();
+        var itemValues = obj.get('id', itemId)[0].values();
+        idField.val(itemValues.id);
+        nameField.val(itemValues.name);
+        descField.val(itemValues.desc);
+        statusField.val(itemValues.status);
+        tagsField.val(itemValues.tags);
+        dueField.val(itemValues.due);
+        estField.val(itemValues.est);
+        
+        editBtn.show();
+        addBtn.hide();
+      });
+    }
+
+    refreshCallbacks(containerList);
+
+    $('#tableHeadersandItems').append('</div>');
+    console.log("Exiting createHTML()");
   }
-  $('#tableHeadersandItems').append('</div>');
-  console.log("Exiting createHTML()");
 }
