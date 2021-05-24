@@ -329,8 +329,8 @@ const createHTML = async () => {
       // removes a row of data from the container
       removeBtns.click(function() {
         console.log("Entering remove function", this);
-        var itemId = $(this).parent().parent().parent().parent();
-        console.log($(this).parent().parent().parent().parent());
+        var itemId = $(this).parent().parent().parent().parent().attr('id');
+        console.log($(this).parent().parent().parent().parent().attr('class'));
         console.log("this is the item id " + itemId);
         obj.remove('id', itemId);
       });
