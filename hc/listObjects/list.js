@@ -293,7 +293,7 @@ const createHTML = async () => {
     addBtn = $('.add-btn');
 
     editBtn.click(function() {
-      var item = contactList.get('id', idField.val())[0];
+      var item = containerList.get('id', idField.val())[0];
       item.values({
         id:idField.val(),
         name: nameField.val(),
