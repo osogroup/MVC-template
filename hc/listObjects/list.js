@@ -354,7 +354,7 @@ const createHTML = async () => {
       estField.val('');
     }
 
-    console.log("Exiting last forOf loop");
+    // Exiting the last forOf loop
   }
-  console.log("Exiting createHTML()");
+  console.log("Exiting createHTML(), Buttons ready..");
 }
