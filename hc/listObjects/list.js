@@ -332,7 +332,7 @@ const createHTML = async () => {
       });
       console.log("Now exiting refreshCallbacks(obj) function");
     }
-
+    console.log("Exiting last forOf loop");
   }
   console.log("Exiting createHTML()");
 }
