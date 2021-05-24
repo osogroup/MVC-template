@@ -1,5 +1,7 @@
 $(document).ready(function(){
   
+  console.log("objType in the JS file " , objType);
+
   createHTML();
 
   // var options = {
@@ -139,6 +141,10 @@ const createHTML = async () => {
                    + '<h1>OAS Object List'
                  + '</div>'
   $('#TitleOfList').append(headerHTML);
+
+  console.log()
+
+
 
   // creating object row
   var inputThings = '<div class="row hacker-list">'
