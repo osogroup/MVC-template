@@ -340,7 +340,7 @@ const createHTML = async () => {
         var listContainer = $(this).parent().parent().parent().parent().attr('id');
         var itemId = $(this).parent().parent().find('.id').text();
         console.log("this is the item id " + itemId);
-        var obj = new List(listContainer);
+        var obj = new List(listContainer,options);
         obj.remove('id', itemId);
       });
       
