@@ -284,9 +284,8 @@ const createHTML = async () => {
     
     
     function refreshCallbacks(obj) {
-      for(const[fieldKey, fieldValue] of Object.entries()) {
-        var 
-      }
+      // for(const[fieldKey, fieldValue] of Object.entries()) {
+      // }
       var idField = $('#id-field'),
       nameField = $('#name-field'),
       descField = $('#desc-field'),
