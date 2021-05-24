@@ -191,7 +191,7 @@ const createHTML = async () => {
         }
 
         // creating the add button HTML
-        addButtonHTML = '<div class="col-1"><button class="edit-btn">Edit</button><button class="add-btn">Add</button></div>';
+        addButtonHTML = '<div class="col-1"><button class="edit-btn">Apply</button><button class="add-btn">Add</button></div>';
 
         // closing table input row and adding addButtonHTML to tHeader
         tHeader += addButtonHTML + '</div>';
