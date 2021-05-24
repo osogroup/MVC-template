@@ -145,9 +145,7 @@ const createHTML = async () => {
                  + '</div>'
   $('#TitleOfList').append(headerHTML);
 
-  console.log("objType in createHTML() ", objType);
-
-
+  // console.log("objType in createHTML() ", objType);
 
   // creating object row
   var inputThings = '<div class="row hacker-list">'
