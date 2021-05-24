@@ -118,6 +118,7 @@ const tempData = async () => {
 }
 
 const createHTML = async () => {
+  console.log("Entering createHTML()");
   var data = await tempData();
   var config = await configData();
 
@@ -139,6 +140,7 @@ const createHTML = async () => {
                  + '</div>'
   $('#TitleOfList').append(headerHTML);
 
+  // creating object row
   var inputThings = '<div class="row" id="hacker-list">'
                    + '<div class="col-12">';
 
@@ -268,7 +270,7 @@ const createHTML = async () => {
     var options = {
       valueNames: [  ]
     };
-    
+
     // adding object list to valueNames for sortability
     for(const[sortKey, sortValue] of Object.entries(objTypeConfig.list)) {
       options.valueNames.push(sortValue);
