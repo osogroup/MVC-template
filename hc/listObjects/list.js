@@ -296,13 +296,13 @@ const createHTML = async () => {
     refreshCallbacks(containerList[objType]);
 
     // variable declaration
-    var idField = $('#'+objType+'-id-field'),
-    nameField = $('#'+objType+'-name-field'),
-    descField = $('#'+objType+'-desc-field'),
-    statusField = $('#'+objType+'-status-field'),
-    tagsField = $('#'+objType+'-tags-field'),
-    dueField = $('#'+objType+'-due-field'),
-    estField = $('#'+objType+'-est-field');
+    // var idField = $('#'+objType+'-id-field'),
+    // nameField = $('#'+objType+'-name-field'),
+    // descField = $('#'+objType+'-desc-field'),
+    // statusField = $('#'+objType+'-status-field'),
+    // tagsField = $('#'+objType+'-tags-field'),
+    // dueField = $('#'+objType+'-due-field'),
+    // estField = $('#'+objType+'-est-field');
     
     // dynamically declaring variables
     var field = {};
