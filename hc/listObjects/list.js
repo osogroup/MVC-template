@@ -292,6 +292,20 @@ const createHTML = async () => {
     editBtn = $('.edit-btn').hide(),
     addBtn = $('.add-btn');
 
+    editBtn.click(function() {
+      var item = contactList.get('id', idField.val())[0];
+      item.values({
+        id:idField.val(),
+        name: nameField.val(),
+        city: cityField.val(),
+        problem: problemField.val(),
+        solution: solutionField.val()
+      });
+      clearFields();
+      editBtn.hide();
+      addBtn.show();
+    });
+
     function refreshCallbacks(obj) {
       var idField = $('#'+key+'-id-field'),
       nameField = $('#'+key+'-name-field'),
