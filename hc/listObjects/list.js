@@ -268,6 +268,7 @@ const createHTML = async () => {
     var options = {
       valueNames: [  ]
     };
+    
     // adding object list to valueNames for sortability
     for(const[sortKey, sortValue] of Object.entries(objTypeConfig.list)) {
       options.valueNames.push(sortValue);
