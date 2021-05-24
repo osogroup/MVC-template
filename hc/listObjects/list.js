@@ -324,7 +324,7 @@ const createHTML = async () => {
         item.values({
           [variableValue]: field[variableValue].val(),
         });
-        console.log("this is variableValue in the editBtn function: ",variableValue);
+        console.log("this is variableValue in the editBtn function: ", variableValue);
       }
         // id:idField.val(),
         // name: nameField.val()
