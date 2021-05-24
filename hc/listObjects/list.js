@@ -124,7 +124,7 @@ const createHTML = async () => {
   // ---------------------------------------- Page Header ------------------------------------------
 
 
-  var headerHTML = '<div id="contacts" class="container>'
+  var headerHTML = '<div id="contacts" class="container">'
                    + '<div class="row">'
                      + '<div class="col-12">'
                        + '<p id="header">'
