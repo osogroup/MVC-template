@@ -154,7 +154,7 @@ const createHTML = async () => {
                    + '<div class="col-12">';
 
     // getting Object names and data
-    // for (const [key, val] of Object.entries(data)) {
+    for (const [key, val] of Object.entries(data.objType)) {
 
     // displaying Object Name
     var tHeader = inputThings + '<h1>'+objType+'</h1>';
@@ -239,7 +239,7 @@ const createHTML = async () => {
 
       // getting item attributes
       console.log("THIS IS MY FOCUS", );
-      for (const [SLKey, SLValue] of Object.entries()) {
+      for (const [SLKey, SLValue] of Object.entries(val)) {
 
         // creating the object item rows
         objItems += '<div class="row">';
@@ -393,6 +393,6 @@ const createHTML = async () => {
     }
 
     // Exiting the last forOf loop
-  // }
+  }
   console.log("Exiting createHTML(), Buttons ready..");
 }
