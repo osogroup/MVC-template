@@ -330,10 +330,10 @@ const createHTML = async () => {
       removeBtns.click(function() {
         console.log("Entering remove function", this);
         var listContainer = $(this).parent().parent().parent().parent().attr('id');
+        var itemId = $(this).parent().parent().find('.id').text();
         console.log("this is the item id " + itemId);
-        var obj = new List(itemId, options);
-
-        // obj.remove('id', itemId);
+        var obj = new List(listContainer);
+        obj.remove('id', itemId);
       });
       
       // pulls the value from the rows and puts them into the input boxes for editing 
