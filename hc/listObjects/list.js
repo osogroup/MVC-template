@@ -238,8 +238,8 @@ const createHTML = async () => {
       objItems += '<div class="list">';
 
       // getting item attributes
-      console.log("Object.values(objType)", Object.values(objType));
-      for (const [SLKey, SLValue] of Object.entries(Object.values(objType))) {
+      console.log("Object.values(data)", Object.values(data));
+      for (const [SLKey, SLValue] of Object.entries(Object.values(data))) {
 
         // creating the object item rows
         objItems += '<div class="row">';
