@@ -18,7 +18,7 @@ $(document).ready(function(){
   // dueField = $('#due-field'),
   // estField = $('#est-field'),
   // addBtn = $('#add-btn'),
-  // editBtn = $('#edit-btn').hide(),
+  // applyBtn = $('#edit-btn').hide(),
   // removeBtns = $('.remove-item-btn'),
   // editBtns = $('.edit-item-btn');
   
@@ -40,7 +40,7 @@ $(document).ready(function(){
   // });
   
   
-  // // editBtn.click(function() {
+  // // applyBtn.click(function() {
   // //   var item = contactList.get('id', idField.val())[0];
   // //   item.values({
   //   //     id:idField.val(),
@@ -50,7 +50,7 @@ $(document).ready(function(){
   //   //     solution: solutionField.val()
   //   //   });
   //   //   clearFields();
-  //   //   editBtn.hide();
+  //   //   applyBtn.hide();
   //   //   addBtn.show();
   //   // });
   
@@ -63,7 +63,7 @@ $(document).ready(function(){
   //   dueField = $('#due-field'),
   //   estField = $('#est-field'),
   //   addBtn = $('#add-btn'),
-  //   editBtn = $('#edit-btn').hide(),
+  //   applyBtn = $('#edit-btn').hide(),
   //   removeBtns = $('.remove-item-btn'),
   //   editBtns = $('.edit-item-btn');
   //   // Needed to add new buttons to jQuery-extended object
@@ -88,7 +88,7 @@ $(document).ready(function(){
   //     dueField.val(itemValues.due);
   //     estField.val(itemValues.est);
       
-  //     editBtn.show();
+  //     applyBtn.show();
   //     addBtn.hide();
   //   });
   // }
@@ -312,11 +312,11 @@ const createHTML = async () => {
       console.log('field[variableValue] is: ', field[variableValue], ' at this time');
     }
 
-    var editBtn = $('.edit-btn').hide(),
+    var applyBtn = $('.edit-btn').hide(),
     addBtn = $('.add-btn');
 
     // pushes the edited values into the rows to be updated
-    editBtn.click(function() {
+    applyBtn.click(function() {
       for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
         var item = containerList[objType].get('id', field[variableValue].val())[0];
       
@@ -324,7 +324,7 @@ const createHTML = async () => {
         item.values({
           [variableValue]: field[variableValue].val(),
         });
-        console.log("this is variableValue in the editBtn function: ", variableValue);
+        console.log("this is variableValue in the applyBtn function: ", variableValue);
       }
         // id:idField.val(),
         // name: nameField.val()
@@ -333,7 +333,7 @@ const createHTML = async () => {
         // solution: solutionField.val()
 
       clearFields();
-      editBtn.hide();
+      applyBtn.hide();
       addBtn.show();
     });
 
@@ -349,7 +349,7 @@ const createHTML = async () => {
       // dueField = $('#'+objType+'-due-field'),
       // estField = $('#'+objType+'-est-field'),
       var addBtn = $('.add-btn'),
-      editBtn = $('.edit-btn').hide(),
+      applyBtn = $('.edit-btn').hide(),
       removeBtns = $('.remove-item-btn'),
       MultipleEditBtns = $('.edit-item-btn');
       
@@ -379,7 +379,7 @@ const createHTML = async () => {
         // dueField.val(itemValues.due);
         // estField.val(itemValues.est);
         
-        editBtn.show();
+        applyBtn.show();
         addBtn.hide();
       });
       // Exit of refreshCallbacks();
