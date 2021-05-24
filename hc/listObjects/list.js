@@ -317,6 +317,6 @@ const createHTML = async () => {
         addBtn.hide();
       });
     }
-    }
+  }
   console.log("Exiting createHTML()");
 }
