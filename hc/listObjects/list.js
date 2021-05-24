@@ -142,7 +142,7 @@ const createHTML = async () => {
                  + '</div>'
   $('#TitleOfList').append(headerHTML);
 
-  console.log()
+  console.log("objType in createHTML() ", objType);
 
 
 
