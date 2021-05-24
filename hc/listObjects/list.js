@@ -278,9 +278,10 @@ const createHTML = async () => {
     }
 
     // creating
-    var containerList = new List(key+'Container', options);
+    var containerList = {};
+    containerList[key] = new List(key+'Container', options);
     
-    refreshCallbacks(containerList);
+    refreshCallbacks(containerList[key]);
     
     // closing each id=hacker-list div
     $('#TitleOfList').append('</div>');
