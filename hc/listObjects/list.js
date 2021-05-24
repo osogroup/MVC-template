@@ -336,6 +336,16 @@ const createHTML = async () => {
       refreshCallbacks(containerList);
     });
 
+    function clearFields() {
+      idField.val('');
+      nameField.val('');
+      descField.val('');
+      statusField.val('');
+      tagsField.val('');
+      dueField.val('');
+      estField.val('');
+    }
+
     console.log("Exiting last forOf loop");
   }
   console.log("Exiting createHTML()");
