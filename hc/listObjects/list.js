@@ -325,7 +325,7 @@ const createHTML = async () => {
         editBtn.show();
         addBtn.hide();
       });
-      console.log("Now exiting refreshCallbacks(obj) function");
+      // Exit of refreshCallbacks();
     }
 
     addBtn.click(function() {
