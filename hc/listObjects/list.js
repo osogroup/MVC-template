@@ -128,7 +128,7 @@ const createHTML = async () => {
                    + '<div class="row">'
                      + '<div class="col-12">'
                        + '<p id="header">'
-                       + '<img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80px">'
+                       + '<img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80">'
                        + '<a class="headerLinks" href="#">Tag</a>'
                        + '<a class="headerLinks" href="#">Task</a>'
                        + '<a class="headerLinks" href="#">Deliverable</a>'
