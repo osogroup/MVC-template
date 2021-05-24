@@ -274,9 +274,9 @@ const createHTML = async () => {
       options.valueNames.push(sortValue);
     }
 
-    var containerList = new List(key+'Container', options);
-    
     refreshCallbacks(containerList);
+
+    var containerList = new List(key+'Container', options);
     
     // closing each id=hacker-list div
     $('#tableHeadersandItems').append('</div>');
