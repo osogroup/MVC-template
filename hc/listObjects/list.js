@@ -139,7 +139,7 @@ const createHTML = async () => {
   $('#TitleOfList').append(headerHTML);
 
   // creating object row
-  var inputThings = '<div class="row" id="hacker-list">'
+  var inputThings = '<div class="row hacker-list">'
                    + '<div class="col-12">';
 
     // getting Object names and data
