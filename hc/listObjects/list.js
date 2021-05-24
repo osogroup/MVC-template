@@ -296,7 +296,7 @@ const createHTML = async () => {
       var item = containerList.get('id', idField.val())[0];
       item.values({
         id:idField.val(),
-        name: nameField.val(),
+        name: nameField.val()
         // city: cityField.val(),
         // problem: problemField.val(),
         // solution: solutionField.val()
