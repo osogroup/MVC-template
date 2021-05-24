@@ -278,11 +278,11 @@ const createHTML = async () => {
     
     refreshCallbacks(containerList);
     
+    // closing each id=hacker-list div
     $('#tableHeadersandItems').append('</div>');
-    console.log("Exiting createHTML()");
   }
-
-
+  
+  
   function refreshCallbacks(obj) {
     var idField = $('#id-field'),
     nameField = $('#name-field'),
@@ -295,7 +295,7 @@ const createHTML = async () => {
     editBtn = $('#edit-btn').hide(),
     removeBtns = $('.remove-item-btn'),
     editBtns = $('.edit-item-btn');
-
+    
     removeBtns.click(function() {
       console.log("Entering remove function", this);
       var itemId = $(this).parent().parent().find('.id').text();
@@ -318,4 +318,5 @@ const createHTML = async () => {
       addBtn.hide();
     });
   }
+  console.log("Exiting createHTML()");
 }
