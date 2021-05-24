@@ -390,7 +390,7 @@ const createHTML = async () => {
       console.log("Entering addBtn.click(function() {...}");
       for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
         containerList[objType].add({
-          variableValue: field[variableValue].val();
+          variableValue: field[variableValue].val()
           
           // id: idField.val(),
           // name: nameField.val()
