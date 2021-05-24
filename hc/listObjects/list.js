@@ -282,6 +282,7 @@ const createHTML = async () => {
     // closing each id=hacker-list div
     $('#TitleOfList').append('</div>');
 
+    // variable declaration
     var idField = $('#'+key+'-id-field'),
     nameField = $('#'+key+'-name-field'),
     descField = $('#'+key+'-desc-field'),
@@ -292,6 +293,7 @@ const createHTML = async () => {
     editBtn = $('.edit-btn').hide(),
     addBtn = $('.add-btn');
 
+    // pushes the edited values into the rows to be updated
     editBtn.click(function() {
       var item = containerList.get('id', idField.val())[0];
       item.values({
@@ -319,6 +321,7 @@ const createHTML = async () => {
       removeBtns = $('.remove-item-btn'),
       MultipleEditBtns = $('.edit-item-btn');
       
+      // removes a row of data from the container
       removeBtns.click(function() {
         console.log("Entering remove function", this);
         var itemId = $(this).parent().parent().find('.id').text();
@@ -326,6 +329,7 @@ const createHTML = async () => {
         obj.remove('id', itemId);
       });
       
+      // pulls the value from the rows and puts them into the input boxes for editing 
       MultipleEditBtns.click(function() {
         var itemId = $(this).parent().parent().find('.id').text();
         var itemValues = obj.get('id', itemId)[0].values();
@@ -343,12 +347,13 @@ const createHTML = async () => {
       // Exit of refreshCallbacks();
     }
 
+    // adds what is typed into the input fields into a new row
     addBtn.click(function() {
       console.log("Entering addBtn.click(function() {...}");
       containerList.add({
-        // id: Math.floor(Math.random()*110000),
         id: idField.val(),
         name: nameField.val()
+        // id: Math.floor(Math.random()*110000),
         // desc: descField.val(),
         // status: statusField.val(),
         // tags: tagsField.val(),
@@ -359,6 +364,7 @@ const createHTML = async () => {
       refreshCallbacks(containerList);
     });
 
+    // clears the input fields after "Edit" or "Add" buttons are pushed
     function clearFields() {
       idField.val('');
       nameField.val('');
