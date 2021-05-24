@@ -280,4 +280,5 @@ const createHTML = async () => {
 
   }
   $('#tableHeadersandItems').append('</div>');
+  console.log("Exiting createHTML()");
 }
