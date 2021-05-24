@@ -36,6 +36,11 @@
   <script src="/vendor/list.min.js"></script>
   <!-- helper functions JS -->
   <script src="/components/helper.js"></script>
+  <script>
+    const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      var vw = urlParams.get('view');
+    </script>
 
   <meta name="theme-color" content="#fafafa">
 </head>
