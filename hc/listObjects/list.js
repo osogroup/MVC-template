@@ -154,7 +154,7 @@ const createHTML = async () => {
                    + '<div class="col-12">';
 
     // getting Object names and data
-    for (const [key, val] of Object.entries(data[objType])) {
+    for (const [key, val] of Object.entries(data.objType)) {
 
     // displaying Object Name
     var tHeader = inputThings + '<h1>'+objType+'</h1>';
