@@ -263,7 +263,7 @@ const createHTML = async () => {
     objItems += '</div>';
 
     // append each entire item row to index.html as it loops
-    $('#tableHeadersandItems').append(objItems);
+    $('#TitleOfList').append(objItems);
 
     var options = {
       valueNames: [  ]
@@ -280,7 +280,7 @@ const createHTML = async () => {
     refreshCallbacks(containerList);
     
     // closing each id=hacker-list div
-    $('#tableHeadersandItems').append('</div>');
+    $('#TitleOfList').append('</div>');
 
     var idField = $('#'+key+'-id-field'),
     nameField = $('#'+key+'-name-field'),
