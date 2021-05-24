@@ -317,9 +317,11 @@ const createHTML = async () => {
     // pushes the edited values into the rows to be updated
     editBtn.click(function() {
       var item = containerList[objType].get('id', idField.val())[0];
+      
+      // filling item.values object with field array values
       for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
         item.values({
-          variableValue: field[variableValue].val()
+          variableValue: field[variableValue].val(),
         });
         console.log("this is variableValue in the editBtn function: ",variableValue);
       }
