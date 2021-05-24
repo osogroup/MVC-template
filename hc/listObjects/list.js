@@ -274,7 +274,7 @@ const createHTML = async () => {
       options.valueNames.push(sortValue);
     }
 
-    var containerList = new List( key+'Container', options);
+    var containerList = new List(key+'Container', options);
 
     
     refreshCallbacks(containerList);
