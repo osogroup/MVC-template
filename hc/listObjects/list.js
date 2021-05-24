@@ -317,7 +317,7 @@ const createHTML = async () => {
 
     // pushes the edited values into the rows to be updated
     editBtn.click(function() {
-      var item = containerList[objType].get('id', idField.val())[0];
+      var item = containerList[objType].get('id', field[variableValue].val())[0];
       
       // filling item.values object with field array values
       for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
@@ -408,13 +408,16 @@ const createHTML = async () => {
 
     // clears the input fields after "Edit" or "Add" buttons are pushed
     function clearFields() {
-      idField.val('');
-      nameField.val('');
-      descField.val('');
-      statusField.val('');
-      tagsField.val('');
-      dueField.val('');
-      estField.val('');
+      for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
+        field[variableValue].val('');
+      }
+      // idField.val('');
+      // nameField.val('');
+      // descField.val('');
+      // statusField.val('');
+      // tagsField.val('');
+      // dueField.val('');
+      // estField.val('');
     }
 
     // Exiting the last forOf loop
