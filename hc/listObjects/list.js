@@ -317,7 +317,7 @@ const createHTML = async () => {
       addBtn = $('.add-btn'),
       editBtn = $('.edit-btn').hide(),
       removeBtns = $('.remove-item-btn'),
-      editBtns = $('.edit-item-btn');
+      MultipleEditBtns = $('.edit-item-btn');
       
       removeBtns.click(function() {
         console.log("Entering remove function", this);
@@ -326,7 +326,7 @@ const createHTML = async () => {
         obj.remove('id', itemId);
       });
       
-      editBtns.click(function() {
+      MultipleEditBtns.click(function() {
         var itemId = $(this).parent().parent().find('.id').text();
         var itemValues = obj.get('id', itemId)[0].values();
         idField.val(itemValues.id);
