@@ -105,13 +105,13 @@ $(document).ready(function(){
     
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
-  // console.log("configData output ", listConfig);
+  console.log("configData output ", listConfig);
   return listConfig;
 }
 
 const tempData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
-  // console.log("tempData output ", objVars);
+  console.log("tempData output ", objVars);
   return objVars;
 }
 
@@ -284,6 +284,9 @@ const createHTML = async () => {
     
     
     function refreshCallbacks(obj) {
+      for(const[fieldKey, fieldValue] of Object.entries()) {
+        var 
+      }
       var idField = $('#id-field'),
       nameField = $('#name-field'),
       descField = $('#desc-field'),
