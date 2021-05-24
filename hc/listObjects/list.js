@@ -276,12 +276,12 @@ const createHTML = async () => {
 
     var containerList = new List(key+'Container', options);
     
+    refreshCallbacks(containerList);
     
     $('#tableHeadersandItems').append('</div>');
     console.log("Exiting createHTML()");
   }
 
-  refreshCallbacks(containerList);
 
   function refreshCallbacks(obj) {
     var idField = $('#id-field'),
