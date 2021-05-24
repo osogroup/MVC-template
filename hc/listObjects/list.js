@@ -289,7 +289,7 @@ const createHTML = async () => {
     tagsField = $('#'+key+'-tags-field'),
     dueField = $('#'+key+'-due-field'),
     estField = $('#'+key+'-est-field'),
-    editBtn = $('#edit-btn').hide(),
+    editBtn = $('.edit-btn').hide(),
     addBtn = $('.add-btn');
 
     function refreshCallbacks(obj) {
@@ -301,7 +301,7 @@ const createHTML = async () => {
       dueField = $('#'+key+'-due-field'),
       estField = $('#'+key+'-est-field'),
       addBtn = $('.add-btn'),
-      editBtn = $('#edit-btn').hide(),
+      editBtn = $('.edit-btn').hide(),
       removeBtns = $('.remove-item-btn'),
       editBtns = $('.edit-item-btn');
       
