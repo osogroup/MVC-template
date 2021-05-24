@@ -132,11 +132,15 @@ const createHTML = async () => {
                    + '<div class="row">'
                      + '<div class="col-12">'
                        + '<p id="header">'
-                       + '<img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80">'
-                       + '<a class="headerLinks" href="#">Tag</a>'
-                       + '<a class="headerLinks" href="#">Task</a>'
-                       + '<a class="headerLinks" href="#">Deliverable</a>'
-                     + '</p>'
+                       + '<img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80">';
+
+  // creating the links for the header
+  for(const [headerKey, headerValue] of Object.entries(data)) {
+    headerHTML +=        '<a class="headerLinks" href="/?type='+headerKey+'">'+headerKey+'</a>';
+
+  }
+
+        headerHTML  += '</p>'
                    + '</div>'
                    + '<h1>OAS Object List'
                  + '</div>'
