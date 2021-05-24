@@ -38,9 +38,11 @@
   <script src="/components/helper.js"></script>
   <script>
     const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      var objType = urlParams.get('type');
-      console.log("This is the objType: " + objType);
+    console.log("queryString", queryString);
+    const urlParams = new URLSearchParams(queryString);
+    console.log("urlParams", urlParams);
+    var objType = urlParams.get('type');
+    console.log("This is the objType: " + objType);
     </script>
 
   <meta name="theme-color" content="#fafafa">
