@@ -283,13 +283,13 @@ const createHTML = async () => {
     $('#tableHeadersandItems').append('</div>');
 
     function refreshCallbacks(obj) {
-      var idField = $('#id-field'),
-      nameField = $('#name-field'),
-      descField = $('#desc-field'),
-      statusField = $('#status-field'),
-      tagsField = $('#tags-field'),
-      dueField = $('#due-field'),
-      estField = $('#est-field'),
+      var idField = $('#'+key+'id-field'),
+      nameField = $('#'+key+'name-field'),
+      descField = $('#'+key+'desc-field'),
+      statusField = $('#'+key+'status-field'),
+      tagsField = $('#'+key+'tags-field'),
+      dueField = $('#'+key+'due-field'),
+      estField = $('#'+key+'est-field'),
       addBtn = $('#add-btn'),
       editBtn = $('#edit-btn').hide(),
       removeBtns = $('.remove-item-btn'),
