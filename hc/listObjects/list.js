@@ -6,7 +6,7 @@ $(document).ready(function(){
   
   createHTML();
 
-  var contactList = new List('contacts', options);
+  var contactList = new List('tableHeadersandItems', options);
   
   var idField = $('#id-field'),
   nameField = $('#name-field'),
@@ -17,7 +17,7 @@ $(document).ready(function(){
   estField = $('#est-field'),
   addBtn = $('#add-btn'),
   editBtn = $('#edit-btn').hide(),
-  removeBtns = $('#remove-item-btn'),
+  removeBtns = $('.remove-item-btn'),
   editBtns = $('.edit-item-btn');
   
   
