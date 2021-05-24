@@ -289,6 +289,7 @@ const createHTML = async () => {
     tagsField = $('#'+key+'-tags-field'),
     dueField = $('#'+key+'-due-field'),
     estField = $('#'+key+'-est-field'),
+    editBtn = $('#edit-btn').hide(),
     addBtn = $('.add-btn');
 
     function refreshCallbacks(obj) {
