@@ -308,7 +308,7 @@ const createHTML = async () => {
     var field = {};
     for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
       field[variableValue] = $('#'+objType+'-'+variableValue+'-field');
-      console.log('field[variableValue is: ', field[variableValue], ' at this time');
+      console.log('field[variableValue] is: ', field[variableValue], ' at this time');
     }
 
     var editBtn = $('.edit-btn').hide(),
