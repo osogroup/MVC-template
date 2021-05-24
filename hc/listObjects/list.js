@@ -302,7 +302,7 @@ const createHTML = async () => {
     statusField = $('#'+objType+'-status-field'),
     tagsField = $('#'+objType+'-tags-field'),
     dueField = $('#'+objType+'-due-field'),
-    estField = $('#'+objType+'-est-field'),
+    estField = $('#'+objType+'-est-field');
     
     // dynamically declaring variables
     var field = {};
