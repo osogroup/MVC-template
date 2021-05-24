@@ -322,6 +322,7 @@ const createHTML = async () => {
     }
 
     addBtn.click(function() {
+      console.log("Entering addBtn.click(function() {...");
       contactList.add({
         id: Math.floor(Math.random()*110000),
         name: nameField.val(),
