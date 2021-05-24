@@ -161,7 +161,7 @@ const createHTML = async () => {
     tHeader += '<div id="'+objType+'Container">';
 
       // creating table input Row
-      tHeader += '<div class="row">';
+      tHeader += '<div class="inputBoxes row">';
 
         // setting object type configuration
         var objTypeConfig = config[objType];
@@ -198,7 +198,7 @@ const createHTML = async () => {
   // -------------------------------------- The Search Box -----------------------------------------
 
         // creating the search box and designating its own row
-        var searchVariable =  '<div class="row">'
+        var searchVariable =  '<div class="searchBox row">'
                               + '<div class="col-4">'
                                 + '<input class="search" placeholder="Search"/>'
                               + '</div>'
@@ -209,7 +209,7 @@ const createHTML = async () => {
   // ------------------------------------- The Table Headers ----------------------------------------
   
         // opening table header row and adding The Search Box to tHeader
-        tHeader += searchVariable + '<div class="row">';
+        tHeader += searchVariable + '<div class="tableHeader row">';
       
         // creating table header from list configuration
         for (const [listKey, listValue] of Object.entries(objTypeConfig.list)) {
@@ -233,7 +233,7 @@ const createHTML = async () => {
       var objItems = tHeader;
 
       // containing list items
-      objItems += '<div class="list">';
+      objItems += '<div class="inputValues list">';
 
       // getting item attributes
       // console.log("THIS IS MY FOCUS", data[objType]);
