@@ -299,7 +299,7 @@ const createHTML = async () => {
 
     // pushes the edited values into the rows to be updated
     editBtn.click(function() {
-      var item = containerList.get('id', idField.val())[0];
+      var item = containerList[key].get('id', idField.val())[0];
       item.values({
         id:idField.val(),
         name: nameField.val()
@@ -354,7 +354,7 @@ const createHTML = async () => {
     // adds what is typed into the input fields into a new row
     addBtn.click(function() {
       console.log("Entering addBtn.click(function() {...}");
-      containerList.add({
+      containerList[key].add({
         id: idField.val(),
         name: nameField.val()
         // id: Math.floor(Math.random()*110000),
@@ -365,7 +365,7 @@ const createHTML = async () => {
         // est: estField.val()
       });
       clearFields();
-      refreshCallbacks(containerList);
+      refreshCallbacks(containerList[key]);
     });
 
     // clears the input fields after "Edit" or "Add" buttons are pushed
