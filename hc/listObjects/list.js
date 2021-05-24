@@ -322,7 +322,7 @@ const createHTML = async () => {
       
         // filling item.values object with field array values
         item.values({
-          variableValue: field[variableValue].val(),
+          [variableValue]: field[variableValue].val(),
         });
         console.log("this is variableValue in the editBtn function: ",variableValue);
       }
