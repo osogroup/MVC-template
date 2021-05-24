@@ -303,28 +303,37 @@ const createHTML = async () => {
     tagsField = $('#'+objType+'-tags-field'),
     dueField = $('#'+objType+'-due-field'),
     estField = $('#'+objType+'-est-field'),
-    editBtn = $('.edit-btn').hide(),
+    
+    // dynamically declaring variables
+    var field = {};
+    for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
+      console.log(variableValue ,"is variableValue");
+      field[variableValue] = $('#'+objType+'-'+variableValue+'-field');
+    }
+
+    var editBtn = $('.edit-btn').hide(),
     addBtn = $('.add-btn');
 
     // pushes the edited values into the rows to be updated
     editBtn.click(function() {
       var item = containerList[objType].get('id', idField.val())[0];
-      item.values({
-        id:idField.val(),
-        name: nameField.val()
+      for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
+        item.values({
+          variableValue: field[variableValue].val()
+        });
+        console.log("this is variableValue in the editBtn function: ",variableValue);
+      }
+        // id:idField.val(),
+        // name: nameField.val()
         // city: cityField.val(),
         // problem: problemField.val(),
         // solution: solutionField.val()
-      });
+
       clearFields();
       editBtn.hide();
       addBtn.show();
     });
 
-    for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
-      console.log(variableValue ,"is variableValue");
-      // var field[variableValue] = $('#'+objType+'-'+);
-    }
 
     function refreshCallbacks(obj) {
       var idField = $('#'+objType+'-id-field'),
