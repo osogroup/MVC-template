@@ -281,20 +281,6 @@ const createHTML = async () => {
     
     // closing each id=hacker-list div
     $('#tableHeadersandItems').append('</div>');
-    
-    addBtn.click(function() {
-      contactList.add({
-        id: Math.floor(Math.random()*110000),
-        name: nameField.val(),
-        desc: descField.val(),
-        status: statusField.val(),
-        tags: tagsField.val(),
-        due: dueField.val(),
-        est: estField.val()
-      });
-      clearFields();
-      refreshCallbacks(contactList);
-    });
 
     function refreshCallbacks(obj) {
       var idField = $('#id-field'),
@@ -332,6 +318,21 @@ const createHTML = async () => {
       });
       console.log("Now exiting refreshCallbacks(obj) function");
     }
+
+    addBtn.click(function() {
+      contactList.add({
+        id: Math.floor(Math.random()*110000),
+        name: nameField.val(),
+        desc: descField.val(),
+        status: statusField.val(),
+        tags: tagsField.val(),
+        due: dueField.val(),
+        est: estField.val()
+      });
+      clearFields();
+      refreshCallbacks(contactList);
+    });
+
     console.log("Exiting last forOf loop");
   }
   console.log("Exiting createHTML()");
