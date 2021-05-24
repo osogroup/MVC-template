@@ -4,8 +4,9 @@ $(document).ready(function(){
     valueNames: [ 'id', 'name', 'desc', 'status', 'tags', 'due', 'est' ]
   };
   
+  createHTML();
+
   var contactList = new List('contacts', options);
-  
   
   var idField = $('#id-field'),
   nameField = $('#name-field'),
@@ -98,10 +99,7 @@ $(document).ready(function(){
         tagsField.val('');
         dueField.val('');
         estField.val('');
-      }
-      
-      createHTML();
-      
+      }      
     });
     
     
