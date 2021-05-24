@@ -323,7 +323,7 @@ const createHTML = async () => {
 
     addBtn.click(function() {
       console.log("Entering addBtn.click(function() {...}");
-      contactList.add({
+      containerList.add({
         id: Math.floor(Math.random()*110000),
         name: nameField.val(),
         desc: descField.val(),
@@ -333,7 +333,7 @@ const createHTML = async () => {
         est: estField.val()
       });
       clearFields();
-      refreshCallbacks(contactList);
+      refreshCallbacks(containerList);
     });
 
     console.log("Exiting last forOf loop");
