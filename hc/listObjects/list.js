@@ -280,43 +280,43 @@ const createHTML = async () => {
     
     // closing each id=hacker-list div
     $('#tableHeadersandItems').append('</div>');
-  }
-  
-  
-  function refreshCallbacks(obj) {
-    var idField = $('#id-field'),
-    nameField = $('#name-field'),
-    descField = $('#desc-field'),
-    statusField = $('#status-field'),
-    tagsField = $('#tags-field'),
-    dueField = $('#due-field'),
-    estField = $('#est-field'),
-    addBtn = $('#add-btn'),
-    editBtn = $('#edit-btn').hide(),
-    removeBtns = $('.remove-item-btn'),
-    editBtns = $('.edit-item-btn');
     
-    removeBtns.click(function() {
-      console.log("Entering remove function", this);
-      var itemId = $(this).parent().parent().find('.id').text();
-      console.log("this is the item id " + itemId);
-      obj.remove('id', itemId);
-    });
     
-    editBtns.click(function() {
-      var itemId = $(this).closest('tr').find('.id').text();
-      var itemValues = obj.get('id', itemId)[0].values();
-      idField.val(itemValues.id);
-      nameField.val(itemValues.name);
-      descField.val(itemValues.desc);
-      statusField.val(itemValues.status);
-      tagsField.val(itemValues.tags);
-      dueField.val(itemValues.due);
-      estField.val(itemValues.est);
+    function refreshCallbacks(obj) {
+      var idField = $('#id-field'),
+      nameField = $('#name-field'),
+      descField = $('#desc-field'),
+      statusField = $('#status-field'),
+      tagsField = $('#tags-field'),
+      dueField = $('#due-field'),
+      estField = $('#est-field'),
+      addBtn = $('#add-btn'),
+      editBtn = $('#edit-btn').hide(),
+      removeBtns = $('.remove-item-btn'),
+      editBtns = $('.edit-item-btn');
       
-      editBtn.show();
-      addBtn.hide();
-    });
-  }
+      removeBtns.click(function() {
+        console.log("Entering remove function", this);
+        var itemId = $(this).parent().parent().find('.id').text();
+        console.log("this is the item id " + itemId);
+        obj.remove('id', itemId);
+      });
+      
+      editBtns.click(function() {
+        var itemId = $(this).closest('tr').find('.id').text();
+        var itemValues = obj.get('id', itemId)[0].values();
+        idField.val(itemValues.id);
+        nameField.val(itemValues.name);
+        descField.val(itemValues.desc);
+        statusField.val(itemValues.status);
+        tagsField.val(itemValues.tags);
+        dueField.val(itemValues.due);
+        estField.val(itemValues.est);
+        
+        editBtn.show();
+        addBtn.hide();
+      });
+    }
+    }
   console.log("Exiting createHTML()");
 }
