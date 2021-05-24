@@ -102,19 +102,21 @@ $(document).ready(function(){
   // }      
 });
     
-    
+// gets all the Objects/Arrays from objectConfig.json and returns them
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
   console.log("configData output ", listConfig);
   return listConfig;
 }
 
+// gets all the Objects/Arrays from listOfObjects.json and returns them
 const tempData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
   console.log("tempData output ", objVars);
   return objVars;
 }
 
+// gathers, sorts and organizes all the Objects and data from the JSON files, generates HTML and appends it to #TitleOfList in index.html
 const createHTML = async () => {
   console.log("Entering createHTML()");
   var data = await tempData();
@@ -265,6 +267,7 @@ const createHTML = async () => {
     // append each entire item row to index.html as it loops
     $('#TitleOfList').append(objItems);
 
+    // valueNames instantiation
     var options = {
       valueNames: [  ]
     };
