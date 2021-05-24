@@ -282,7 +282,20 @@ const createHTML = async () => {
     // closing each id=hacker-list div
     $('#tableHeadersandItems').append('</div>');
     
-    
+    addBtn.click(function() {
+      contactList.add({
+        id: Math.floor(Math.random()*110000),
+        name: nameField.val(),
+        desc: descField.val(),
+        status: statusField.val(),
+        tags: tagsField.val(),
+        due: dueField.val(),
+        est: estField.val()
+      });
+      clearFields();
+      refreshCallbacks(contactList);
+    });
+
     function refreshCallbacks(obj) {
       var idField = $('#id-field'),
       nameField = $('#name-field'),
@@ -304,7 +317,7 @@ const createHTML = async () => {
       });
       
       editBtns.click(function() {
-        var itemId = $(this).closest('tr').find('.id').text();
+        var itemId = $(this).parent().parent().find('.id').text();
         var itemValues = obj.get('id', itemId)[0].values();
         idField.val(itemValues.id);
         nameField.val(itemValues.name);
