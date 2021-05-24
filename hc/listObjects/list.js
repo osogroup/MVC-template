@@ -282,7 +282,14 @@ const createHTML = async () => {
     // closing each id=hacker-list div
     $('#tableHeadersandItems').append('</div>');
 
-    var addBtn = $('#add-btn');
+    var idField = $('#'+key+'id-field'),
+    nameField = $('#'+key+'name-field'),
+    descField = $('#'+key+'desc-field'),
+    statusField = $('#'+key+'status-field'),
+    tagsField = $('#'+key+'tags-field'),
+    dueField = $('#'+key+'due-field'),
+    estField = $('#'+key+'est-field'),
+    addBtn = $('#'+key+'add-btn');
 
     function refreshCallbacks(obj) {
       var idField = $('#'+key+'id-field'),
