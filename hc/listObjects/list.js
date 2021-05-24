@@ -137,7 +137,6 @@ const createHTML = async () => {
   // creating the links for the header
   for(const [headerKey, headerValue] of Object.entries(data)) {
     headerHTML +=        '<a class="headerLinks" href="/hc/listObjects/?type='+headerKey+'">'+headerKey+'</a>';
-
   }
 
         headerHTML  += '</p>'
@@ -155,19 +154,19 @@ const createHTML = async () => {
                    + '<div class="col-12">';
 
     // getting Object names and data
-    for (const [key, val] of Object.entries(data)) {
+    // for (const [key, val] of Object.entries(data)) {
 
     // displaying Object Name
-    var tHeader = inputThings + '<h1>'+key+'</h1>';
+    var tHeader = inputThings + '<h1>'+objType+'</h1>';
 
     // creating sortable list library container 
-    tHeader += '<div id="'+key+'Container">';
+    tHeader += '<div id="'+objType+'Container">';
 
       // creating table input Row
       tHeader += '<div class="row">';
 
         // setting object type configuration
-        var objTypeConfig = config[key];
+        var objTypeConfig = config[objType];
 
         // setting table column width for each object type
         var col = 12/(objTypeConfig.list.length);
@@ -187,7 +186,7 @@ const createHTML = async () => {
 
           // creating table inputs
           tHeader +=  '<div class="col-'+tempColumn+'">'
-                      + '<input type="text" id="'+key+'-'+inputValue+'-field" placeholder="'+inputValue+'" />'
+                      + '<input type="text" id="'+objType+'-'+inputValue+'-field" placeholder="'+inputValue+'" />'
                     + '</div>';
         }
 
@@ -293,24 +292,24 @@ const createHTML = async () => {
     $('#TitleOfList').append('</div>');
 
     var containerList = {};
-    containerList[key] = new List(key+'Container', options);
+    containerList[objType] = new List(objType+'Container', options);
     
-    refreshCallbacks(containerList[key]);
+    refreshCallbacks(containerList[objType]);
 
     // variable declaration
-    var idField = $('#'+key+'-id-field'),
-    nameField = $('#'+key+'-name-field'),
-    descField = $('#'+key+'-desc-field'),
-    statusField = $('#'+key+'-status-field'),
-    tagsField = $('#'+key+'-tags-field'),
-    dueField = $('#'+key+'-due-field'),
-    estField = $('#'+key+'-est-field'),
+    var idField = $('#'+objType+'-id-field'),
+    nameField = $('#'+objType+'-name-field'),
+    descField = $('#'+objType+'-desc-field'),
+    statusField = $('#'+objType+'-status-field'),
+    tagsField = $('#'+objType+'-tags-field'),
+    dueField = $('#'+objType+'-due-field'),
+    estField = $('#'+objType+'-est-field'),
     editBtn = $('.edit-btn').hide(),
     addBtn = $('.add-btn');
 
     // pushes the edited values into the rows to be updated
     editBtn.click(function() {
-      var item = containerList[key].get('id', idField.val())[0];
+      var item = containerList[objType].get('id', idField.val())[0];
       item.values({
         id:idField.val(),
         name: nameField.val()
@@ -324,13 +323,13 @@ const createHTML = async () => {
     });
 
     function refreshCallbacks(obj) {
-      var idField = $('#'+key+'-id-field'),
-      nameField = $('#'+key+'-name-field'),
-      descField = $('#'+key+'-desc-field'),
-      statusField = $('#'+key+'-status-field'),
-      tagsField = $('#'+key+'-tags-field'),
-      dueField = $('#'+key+'-due-field'),
-      estField = $('#'+key+'-est-field'),
+      var idField = $('#'+objType+'-id-field'),
+      nameField = $('#'+objType+'-name-field'),
+      descField = $('#'+objType+'-desc-field'),
+      statusField = $('#'+objType+'-status-field'),
+      tagsField = $('#'+objType+'-tags-field'),
+      dueField = $('#'+objType+'-due-field'),
+      estField = $('#'+objType+'-est-field'),
       addBtn = $('.add-btn'),
       editBtn = $('.edit-btn').hide(),
       removeBtns = $('.remove-item-btn'),
@@ -367,7 +366,7 @@ const createHTML = async () => {
     // adds what is typed into the input fields into a new row
     addBtn.click(function() {
       console.log("Entering addBtn.click(function() {...}");
-      containerList[key].add({
+      containerList[objType].add({
         id: idField.val(),
         name: nameField.val()
         // id: Math.floor(Math.random()*110000),
@@ -378,7 +377,7 @@ const createHTML = async () => {
         // est: estField.val()
       });
       clearFields();
-      refreshCallbacks(containerList[key]);
+      refreshCallbacks(containerList[objType]);
     });
 
     // clears the input fields after "Edit" or "Add" buttons are pushed
@@ -393,6 +392,6 @@ const createHTML = async () => {
     }
 
     // Exiting the last forOf loop
-  }
+  // }
   console.log("Exiting createHTML(), Buttons ready..");
 }
