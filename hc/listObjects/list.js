@@ -278,13 +278,14 @@ const createHTML = async () => {
     }
 
     // creating
+    
+    // closing each id=hacker-list div
+    $('#TitleOfList').append('</div>');
+
     var containerList = {};
     containerList[key] = new List(key+'Container', options);
     
     refreshCallbacks(containerList[key]);
-    
-    // closing each id=hacker-list div
-    $('#TitleOfList').append('</div>');
 
     // variable declaration
     var idField = $('#'+key+'-id-field'),
