@@ -294,7 +294,7 @@ const createHTML = async () => {
     containerList[objType] = new List(objType+'Container', options);
     
     var field = {};
-    
+
     refreshCallbacks(containerList[objType]);
 
     // variable declaration
@@ -367,8 +367,12 @@ const createHTML = async () => {
       MultipleEditBtns.click(function() {
         var itemId = $(this).parent().parent().find('.id').text();
         var itemValues = obj.get('id', itemId)[0].values();
-        idField.val(itemValues.id);
-        nameField.val(itemValues.name);
+
+        for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
+          field[variableValue].val(itemValues.variableValue);
+        }
+        // idField.val(itemValues.id);
+        // nameField.val(itemValues.name);
         // descField.val(itemValues.desc);
         // statusField.val(itemValues.status);
         // tagsField.val(itemValues.tags);
