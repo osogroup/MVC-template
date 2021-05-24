@@ -369,6 +369,7 @@ const createHTML = async () => {
         var itemValues = obj.get('id', itemId)[0].values();
 
         for (const [variableKey, variableValue] of Object.entries(objTypeConfig.list)) {
+          console.log("quick check", variableValue);
           field[variableValue].val(itemValues.variableValue);
         }
         // idField.val(itemValues.id);
