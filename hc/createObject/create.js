@@ -33,8 +33,13 @@ const createHTML = async () => {
   }
   
   headerHTML  +=  '</p>'
-              + '</div>'
-              + '<h1>Create '+objType+' Item</h1>'
-            + '</div>';
+              + '</div>';
+  if (objType == null) {
+    headerHTML += '<h1>Create Item</h1>';
+  }
+  else {
+    headerHTML += '<h1>Create '+objType+' Item</h1>';
+  }
+  headerHTML += '</div>';
   $('#everything').append(headerHTML);
 }
