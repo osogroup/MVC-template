@@ -22,7 +22,8 @@ const outputHTML = async () => {
   var data = await tempData();
   var config = await configData();
 
-  // use itemid to get data out of the JSON file that create and fill in the input boxes
+  // create input boxes with the type and id (since that stuff isn't in the editable areas) 
+  // use objItemID (and the other ones) to get data out of the JSON file that create and fill in the input boxes
 
 
 
