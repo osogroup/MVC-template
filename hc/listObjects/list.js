@@ -259,7 +259,7 @@ const createHTML = async () => {
         // for loop to get all the editable fields
         for (const[editableKey, editableValue] of Object.entries(objTypeConfig.editable)) {
           console.log("This is editableValue: ", editableValue);
-        }
+        } 
         objItems += '<a href="/hc/editObject/?type='+objType+'&itemid='+SLValue.id+'&itemname='+SLValue.name+'"><button class="edit-item-btn"> Edit </button></a>'
                 + '</div>'
                 + '<div class=col-1>'
