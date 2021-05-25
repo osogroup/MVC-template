@@ -50,19 +50,19 @@ const outputHTML = async () => {
 
   // create the item header row
   var itemHeader = '<div class="row">'
-                   + '<div class="col-1"><div class="col-10">ID</div></div>'
-                   + '<div class="col-4"><div class="col-10">Name</div></div>'
-                   + '<div class="col-6"><div class="col-10">Description</div></div>'
-                   + '<div class="col-1"><div class="col-10">Tags</div></div>'
+                   + '<div class="col-1"><div class="col-12">ID</div></div>'
+                   + '<div class="col-4"><div class="col-12">Name</div></div>'
+                   + '<div class="col-6"><div class="col-12">Description</div></div>'
+                   + '<div class="col-1"><div class="col-12">Tags</div></div>'
                  + '</div>';  
   $('#HTMLoutput').append(itemHeader);
 
   // create items and input boxes
   var itemFields = '<div class="row">'
-                   + '<div class="col-1"><div class="col-10">'+objItemID+'</div></div>'
-                   + '<div class="col-4"><input class="col-10" type="text" placeholder="'+objItemName+'"></div>'
-                   + '<div class="col-6"><input class="col-10" type="text" placeholder="'+objItemDesc+'"></div>'
-                   + '<div class="col-1"><input class="col-10" type="text" placeholder="'+objItemTags+'"></div>'
+                   + '<div class="col-1"><div class="col-12">'+objItemID+'</div></div>'
+                   + '<div class="col-4"><input class="col-12" type="text" placeholder="'+objItemName+'"></div>'
+                   + '<div class="col-6"><input class="col-12" type="text" placeholder="'+objItemDesc+'"></div>'
+                   + '<div class="col-1"><input class="col-12" type="text" placeholder="'+objItemTags+'"></div>'
                  + '</div>';
   $('#HTMLoutput').append(itemFields);
 
