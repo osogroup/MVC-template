@@ -1,11 +1,14 @@
 #header {
-    background-color: black;
-    padding: 10px 10px 0px 10px;
-  }
-  .headerLinks {
-    color: white;
-    font-family: "Lucida Console", "Courier New", monospace;
-    text-decoration: none;
-    font-size: 200%;
-    padding: 0px 0px 0px 15px;
-  }
+  background-color: black;
+  padding: 10px 10px 0px 10px;
+}
+.headerLinks {
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-decoration: none;
+  font-size: 200%;
+  padding: 0px 0px 0px 15px;
+}
+.capitalize {
+  text-transform: capitalize;
+}
