@@ -55,7 +55,9 @@ const outputHTML = async () => {
   // create the items header row
   var itemHeader = '<div class="row">'
 
-
+                 // for (every item in the objType list) {
+                   
+                 // }
                    + '<div class="col-1"><div class="col-12">ID</div></div>'
                    + '<div class="col-2"><div class="col-12">Name</div></div>'
                    + '<div class="col-2"><div class="col-12">Description</div></div>'
@@ -89,14 +91,14 @@ const outputHTML = async () => {
                    + '<div class="col-1"><div class="col-12">'+objItemID+'</div></div>'
 
                    // creating item input boxes
-                   + '<div class="col-2"><input class="col-12" type="text" placeholder="'+objItemName+'"></div>'
-                   + '<div class="col-2"><input class="col-12" type="text" placeholder="'+objItemDesc+'"></div>'
+                   + '<div class="col-2"><input class="col-12" type="textarea" placeholder="'+objItemName+'"></div>'
+                   + '<div class="col-2"><input class="col-12" type="textarea" placeholder="'+objItemDesc+'"></div>'
 
                    // creating item area
                    + '<div class="col-2"><div class="col-12">'+objItemStatus+'</div></div>'
 
                    //  creating item input box
-                   + '<div class="col-2"><input class="col-12" type="text" placeholder="'+objItemTags+'"></div>'
+                   + '<div class="col-2"><input class="col-12" type="textarea" placeholder="'+objItemTags+'"></div>'
 
                    //  creating item areas
                    + '<div class="col-2"><div class="col-12">'+objItemDue+'</div></div>'
