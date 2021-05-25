@@ -56,6 +56,8 @@ const outputHTML = async () => {
                    + '<div class="col-1">'+objItemTags+'</div>'
                  + '</div>';
 
+    
+  $('#HTMLoutput').append(itemHeader);
   // create uneditable items
   var uneditableFields = '<div class="row">'
                      + '<div class="col-1">'+objItemID+'</div>'
