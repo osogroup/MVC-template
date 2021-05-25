@@ -27,7 +27,7 @@ const outputHTML = async () => {
   var inputBoxes = '';
   var objTypeData = data[objType];
 
-  // ------------------------------------------- Navigation Bar -------------------------------------------
+  // -------------------------------------------------- Navigation Bar --------------------------------------------------
 
 
   var headerHTML = '<div id="contacts">'
@@ -49,10 +49,10 @@ const outputHTML = async () => {
   $('#HTMLoutput').append(headerHTML);
 
 
-  // ------------------------------------------- Items Header -------------------------------------------
+  // -------------------------------------------------- Items Header --------------------------------------------------
 
 
-  // create the items header row
+  // creating items header row
   var itemHeader = '<div class="row">';
 
   // This is INCORRECT, using the ID is only going to work when the ID is equal to the position in the array
@@ -69,17 +69,10 @@ const outputHTML = async () => {
   }
   // closing item header row
   itemHeader += '</div>';
-  //            + '<div class="col-1"><div class="col-12">ID</div></div>'
-  //            + '<div class="col-2"><div class="col-12">Name</div></div>'
-  //            + '<div class="col-2"><div class="col-12">Description</div></div>'
-  //            + '<div class="col-2"><div class="col-12">Status</div></div>'
-  //            + '<div class="col-2"><div class="col-12">Tags</div></div>'
-  //            + '<div class="col-2"><div class="col-12">Due Date</div></div>'
-  //            + '<div class="col-1"><div class="col-12">EstEff</div></div>'
   $('#HTMLoutput').append(itemHeader);
 
 
-  // ------------------------------------------- Items Values -------------------------------------------
+  // -------------------------------------------------- Items Values --------------------------------------------------
   
   
   // creating the item value row
