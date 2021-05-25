@@ -26,6 +26,7 @@ const outputHTML = async () => {
   var config = await configData();
   var inputBoxes = '';
   var objTypeData = data[objType];
+  console.log("This is the objTypeData: ", objTypeData);
   var col = objTypeData[objItemID].length;
   console.log("This is the col: ", col);
   // -------------------------------------------------- Navigation Bar --------------------------------------------------
