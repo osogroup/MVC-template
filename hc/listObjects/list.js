@@ -227,7 +227,7 @@ const createHTML = async () => {
       tHeader += '</div>';
 
 
-    //----------------------------------------- Item Rows --------------------------------------------
+    // -------------------------------------------- Item Rows --------------------------------------------
 
 
       var objItems = tHeader;
@@ -253,10 +253,13 @@ const createHTML = async () => {
           objItems += '<div class="col-'+tempCol+'"><span class="'+firstValue+'">'+SLValue[firstValue]+'</span></div>';
         }
 
-        // closing object item rows
+
+  // ----------------------------------------- Edit Button URL -----------------------------------------
+
+
+        // creating edit buttons
         objItems += '<div class=col-1><a href="/hc/editObject/?type='+objType;
 
-        var objTypeData = data[objType];
         // for loop to get all the editable fields
         for (const[editableKey, editableValue] of Object.entries(SLValue)) {
           // console.log("This is editableKey: ", editableKey);
