@@ -66,6 +66,13 @@ const outputHTML = async () => {
                  + '</div>';
   $('#HTMLoutput').append(itemFields);
 
+  // making the Update Button
+  var updateButton = '<div class="row">'
+                    +  '<div class="col-10"></div>'
+                    +  '<div class="col-2"><button>Update</button></div>'
+                   + '</div>';
+   $('#HTMLoutput').append(updateButton);
+
   // create input boxes with the type and id (since that stuff isn't in the editable areas) 
   // inputBoxes += 
 
