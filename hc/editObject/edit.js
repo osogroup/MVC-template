@@ -64,7 +64,7 @@ const outputHTML = async () => {
                    + '<div class="col-2"><div class="col-12">Status</div></div>'
                    + '<div class="col-2"><div class="col-12">Tags</div></div>'
                    + '<div class="col-2"><div class="col-12">Due Date</div></div>'
-                   + '<div class="col-1"><div class="col-12">Est Eff</div></div>'
+                   + '<div class="col-1"><div class="col-12">EstEff</div></div>'
 
                  + '</div>';  
   $('#HTMLoutput').append(itemHeader);
