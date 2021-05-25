@@ -48,6 +48,10 @@ const outputHTML = async () => {
             + '</div>';
   $('#HTMLoutput').append(headerHTML);
 
+
+  // ------------------------------------------- Items Header -------------------------------------------
+
+
   // create the items header row
   var itemHeader = '<div class="row">'
                    + '<div class="col-1"><div class="col-12">ID</div></div>'
@@ -57,7 +61,10 @@ const outputHTML = async () => {
                  + '</div>';  
   $('#HTMLoutput').append(itemHeader);
 
-  // create items and input boxes
+
+  // ------------------------------------------- Items Values -------------------------------------------
+  
+  
   // creating the item value row
   var itemFields = '<div class="row">'
  
