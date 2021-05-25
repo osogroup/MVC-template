@@ -250,7 +250,7 @@ const createHTML = async () => {
             var tempCol = col;
           }
           // create item columns in HTML
-          objItems += '<div class="col-'+tempCol+'"><span class="'+firstValue+'">'+SLValue[firstValue]+'</span></div>'
+          objItems += '<div class="col-'+tempCol+'"><span class="'+firstValue+'">'+SLValue[firstValue]+'</span></div>';
         }
 
         // closing object item rows
