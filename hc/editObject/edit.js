@@ -23,6 +23,24 @@ const outputHTML = async () => {
   var config = await configData();
   var inputBoxes = '';
 
+  var headerHTML = '<div id="contacts">'
+  + '<div class="row">'
+    + '<p id="header">'
+      + '<img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80">';
+  
+  // creating the links for the header
+  for(const [headerKey, headerValue] of Object.entries(data)) {
+    headerHTML += '<a class="headerLinks" href="?type='+headerKey+'">'+headerKey+'</a>';
+  }
+  
+  // closing header row
+  headerHTML += '</p>';
+
+  // making a propt scenario where there is no object type selected
+  headerHTML += '<h1>Edit '+objType+' Item</h1>'
+            + '</div>';
+  $('#everything').append(headerHTML);
+
   // create input headers
 
   // create input boxes with the type and id (since that stuff isn't in the editable areas) 
