@@ -256,7 +256,7 @@ const createHTML = async () => {
 
         // closing object item rows
         objItems += '<div class=col-1>'
-                    + '<button class="edit-item-btn"> Edit </button>'
+                    + '<a href="/hc/editObject/?type='+objType+'&itemid='+data[objType][id]+'"><button class="edit-item-btn"> Edit </button>'
                   + '</div>'
                   + '<div class=col-1>'
                     + '<button class="remove-item-btn"> Remove </button>'
