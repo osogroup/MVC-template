@@ -260,7 +260,7 @@ const createHTML = async () => {
 
         var objTypeData = data[objType];
         // for loop to get all the editable fields
-        for (const[editableKey, editableValue] of Object.entries(objTypeData)) {
+        for (const[editableKey, editableValue] of Object.entries(objTypeData[SLValue])) {
           console.log("This is editableValue: ", editableValue);
           objItems += '&item'+editableValue+'='+SLValue[editableValue];
         } 
