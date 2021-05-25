@@ -50,10 +50,10 @@ const outputHTML = async () => {
 
   // create the item header row
   var itemHeader = '<div class="row">'
-                   + '<div class="col-1">ID</div>'
-                   + '<div class="col-4">Name</div>'
-                   + '<div class="col-6">Description</div>'
-                   + '<div class="col-1">Tags</div>'
+                   + '<div class="col-1"><div class="col-10">ID</div></div>'
+                   + '<div class="col-4"><div class="col-10">Name</div></div>'
+                   + '<div class="col-6"><div class="col-10">Description</div></div>'
+                   + '<div class="col-1"><div class="col-10">Tags</div></div>'
                  + '</div>';  
   $('#HTMLoutput').append(itemHeader);
 
