@@ -1,4 +1,4 @@
-// get type and itemid from URL (objType and objItemID)
+// get type and itemid from URL (objType and objItemID) ex. task and 0
 
 // function to create editObject HTML
 
