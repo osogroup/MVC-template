@@ -39,12 +39,12 @@ const outputHTML = async () => {
   // making a propt scenario where there is no object type selected
   headerHTML += '<h1>Edit '+objType+' Item</h1>'
             + '</div>';
-  $('#everything').append(headerHTML);
+  $('#HTMLoutput').append(headerHTML);
 
   // create input headers
 
   // create input boxes with the type and id (since that stuff isn't in the editable areas) 
-  inputBoxes += 
+  // inputBoxes += 
 
   // use objItemID (and the other ones) to get data out of the JSON file that create and fill in the input boxes
 
