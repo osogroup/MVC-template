@@ -261,7 +261,7 @@ const createHTML = async () => {
         for (const[editableKey, editableValue] of Object.entries(SLValue)) {
           console.log("This is editableKey: ", editableKey);
           console.log("This is editableValue: ", editableValue);
-          objItems += '&item'+editableKey+'='+editableKey[editableValue];
+          objItems += '&item'+editableKey+'='+editableValue;
         } 
         objItems += '"><button class="edit-item-btn"> Edit </button></a>'
                 + '</div>'
