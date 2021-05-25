@@ -254,9 +254,7 @@ const createHTML = async () => {
         }
 
         // closing object item rows
-        objItems += '<div class=col-1><a href="/hc/editObject/?type='+objType+'&itemid='+SLValue.id;
-
-        objItem = {};
+        objItems += '<div class=col-1><a href="/hc/editObject/?type='+objType;
 
         var objTypeData = data[objType];
         // for loop to get all the editable fields
