@@ -1,4 +1,4 @@
-// get type and itemid from URL
+// get type and itemid from URL (objType and objItemID)
 
 // function to create editObject HTML
 
