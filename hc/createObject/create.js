@@ -35,7 +35,7 @@ const createHTML = async () => {
   headerHTML  +=  '</p>'
               + '</div>';
   if (objType == null) {
-    headerHTML += '<h1>Create Item</h1>';
+    headerHTML += '<h1>Select Item from Header to Create Item</h1>';
   }
   else {
     headerHTML += '<h1>Create '+objType+' Item</h1>';
