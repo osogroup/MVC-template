@@ -30,7 +30,7 @@ const createHTML = async () => {
     headerHTML += '<a class="headerLinks" href="?type='+headerKey+'">'+headerKey+'</a>';
   }
   
-  // closing header and col-12 
+  // closing header row
   headerHTML += '</p>';
 
   // making a propt scenario where there is no object type selected
