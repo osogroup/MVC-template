@@ -4,14 +4,14 @@ $(document).ready(function(){
 });
 
 const configData = async () => {
-  var listConfig = await fetch("../../tempData/objectConfig.json").then(response=>{return response.json();});
+  var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
   // console.log("configData output ", listConfig);
   return listConfig;
 }
 
 // gets all the Objects/Arrays from listOfObjects.json and returns them
 const tempData = async () => {
-  var objVars = await fetch("../../tempData/listOfObjects.json").then(response=>{return response.json();});
+  var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
   // console.log("tempData output ", objVars);
   return objVars;
 }
