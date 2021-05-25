@@ -74,6 +74,8 @@ const outputHTML = async () => {
                    + '<<input type="text" class="col-1">'+objItemTags+'</div>'
                  + '</div>';
 
+  $('#HTMLoutput').append(itemFields);
+
   // create input boxes with the type and id (since that stuff isn't in the editable areas) 
   // inputBoxes += 
 
