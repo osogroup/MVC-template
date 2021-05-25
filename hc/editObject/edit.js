@@ -52,7 +52,7 @@ const outputHTML = async () => {
   var itemHeader = '<div class="row">'
                    + '<div class="col-1">'+objItemID+'</div>'
                    + '<div class="col-3">'+objItemName+'</div>'
-                   + '<div class="col-7">'+objItemDesc+'</div>'
+                   + '<div class="col-5">'+objItemDesc+'</div>'
                    + '<div class="col-1">'+objItemTags+'</div>'
                  + '</div>';
 
