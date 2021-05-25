@@ -51,16 +51,16 @@ const outputHTML = async () => {
   // create the item header row
   var itemHeader = '<div class="row">'
                    + '<div class="col-1">ID</div>'
-                   + '<div class="col-3">Name</div>'
-                   + '<div class="col-5">Description</div>'
+                   + '<div class="col-4">Name</div>'
+                   + '<div class="col-6">Description</div>'
                    + '<div class="col-1">Tags</div>'
                  + '</div>';
 
   // These are the items not the item header fields *******************************************
   // var itemHeader = '<div class="row">'
   //                  + '<div class="col-1">'+objItemID+'</div>'
-  //                  + '<div class="col-3">'+objItemName+'</div>'
-  //                  + '<div class="col-5">'+objItemDesc+'</div>'
+  //                  + '<div class="col-4">'+objItemName+'</div>'
+  //                  + '<div class="col-6">'+objItemDesc+'</div>'
   //                  + '<div class="col-1">'+objItemTags+'</div>'
   //                + '</div>';
 
