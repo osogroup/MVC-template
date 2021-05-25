@@ -26,6 +26,10 @@ const outputHTML = async () => {
   var config = await configData();
   var inputBoxes = '';
 
+
+  // -------------------------------------------------- Navigation Bar ------------------------------------------------
+
+
   var headerHTML = '<div id="contacts">'
   + '<div class="row">'
     + '<p id="header">'
