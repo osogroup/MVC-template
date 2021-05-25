@@ -34,7 +34,7 @@ const createHTML = async () => {
   
   headerHTML  +=  '</p>'
               + '</div>'
-              + '<h1>OAS Object List'
-            + '</div>'
+              + '<h1>Create '+objType+' Item</h1>'
+            + '</div>';
   $('#everything').append(headerHTML);
 }
