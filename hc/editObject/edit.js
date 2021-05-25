@@ -60,9 +60,9 @@ const outputHTML = async () => {
   // create items and input boxes
   var itemFields = '<div class="row">'
                    + '<div class="col-1">'+objItemID+'</div>'
-                   + '<input type="text" class="col-4" placeholder="'+objItemName+'"></div>'
-                   + '<input type="text" class="col-6" placeholder="'+objItemDesc+'"></div>'
-                   + '<input type="text" class="col-1" placeholder="'+objItemTags+'"></div>'
+                   + '<input type="text" class="col-4" placeholder="'+objItemName+'">'
+                   + '<input type="text" class="col-6" placeholder="'+objItemDesc+'">'
+                   + '<input type="text" class="col-1" placeholder="'+objItemTags+'">'
                  + '</div>';
   $('#HTMLoutput').append(itemFields);
 
