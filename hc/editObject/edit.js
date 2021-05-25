@@ -56,13 +56,13 @@ const outputHTML = async () => {
   var itemHeader = '<div class="row">'
 
 
-                   + '<div class="col-2"><div class="col-12">ID</div></div>'
+                   + '<div class="col-1"><div class="col-12">ID</div></div>'
                    + '<div class="col-2"><div class="col-12">Name</div></div>'
                    + '<div class="col-2"><div class="col-12">Description</div></div>'
                    + '<div class="col-2"><div class="col-12">Status</div></div>'
                    + '<div class="col-2"><div class="col-12">Tags</div></div>'
                    + '<div class="col-2"><div class="col-12">Due Date</div></div>'
-                   + '<div class="col-2"><div class="col-12">Est Eff</div></div>'
+                   + '<div class="col-1"><div class="col-12">Est Eff</div></div>'
 
                  + '</div>';  
   $('#HTMLoutput').append(itemHeader);
@@ -74,13 +74,23 @@ const outputHTML = async () => {
   // creating the item value row
   var itemFields = '<div class="row">'
  
-                   // create item areas with the type and id (since that stuff isn't in the editable areas) 
+                   // creating item area
                    + '<div class="col-1"><div class="col-12">'+objItemID+'</div></div>'
 
-                   // creating the input boxes in the item row  
-                   + '<div class="col-4"><input class="col-12" type="text" placeholder="'+objItemName+'"></div>'
-                   + '<div class="col-6"><input class="col-12" type="text" placeholder="'+objItemDesc+'"></div>'
-                   + '<div class="col-1"><input class="col-12" type="text" placeholder="'+objItemTags+'"></div>'
+                   // creating item input boxes
+                   + '<div class="col-2"><input class="col-12" type="text" placeholder="'+objItemName+'"></div>'
+                   + '<div class="col-2"><input class="col-12" type="text" placeholder="'+objItemDesc+'"></div>'
+
+                   // creating item area
+                   + '<div class="col-2"><div class="col-12">'+objItemID+'</div></div>'
+
+                   //  creating item input box
+                   + '<div class="col-2"><input class="col-12" type="text" placeholder="'+objItemTags+'"></div>'
+
+                   //  creating item areas
+                   + '<div class="col-2"><div class="col-12">'+objItemID+'</div></div>'
+                   + '<div class="col-2"><div class="col-12">'+objItemID+'</div></div>'
+
                  // closing item row
                  + '</div>';
   $('#HTMLoutput').append(itemFields);
