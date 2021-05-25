@@ -22,7 +22,6 @@ const outputHTML = async () => {
   var data = await tempData();
   var config = await configData();
 
-  
   // use itemid to get data out of the JSON file that create and fill in the input boxes
 
 
