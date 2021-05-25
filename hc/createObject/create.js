@@ -42,4 +42,5 @@ const createHTML = async () => {
   }
   headerHTML += '</div>';
   $('#everything').append(headerHTML);
+  
 }
