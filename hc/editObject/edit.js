@@ -67,8 +67,12 @@ const outputHTML = async () => {
     
   $('#HTMLoutput').append(itemHeader);
   // create uneditable items
-  var uneditableFields = '<div class="row">'
-                     + '<div class="col-1">'+objItemID+'</div>'
+  var itemFields = '<div class="row">'
+                   + '<div class="col-1">'+objItemID+'</div>'
+                   + '<input type="text" class="col-4">'+objItemName+'</div>'
+                   + '<input type="text" class="col-6">'+objItemDesc+'</div>'
+                   + '<<input type="text" class="col-1">'+objItemTags+'</div>'
+                 + '</div>';
 
   // create input boxes with the type and id (since that stuff isn't in the editable areas) 
   // inputBoxes += 
