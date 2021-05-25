@@ -55,11 +55,11 @@ const outputHTML = async () => {
   // create the items header row
   var itemHeader = '<div class="row">';
 
-                 for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
-                   console.log("This is headerKey: ", headerKey);
-                   console.log("This is headerValue: ", headerValue);
-                   
-                 }
+                // This is INCORRECT, using the ID is only going to work when the ID is equal to the position in the array
+                for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
+                  console.log("This is headerKey: ", headerKey);
+                  console.log("This is headerValue: ", headerValue);   
+                }
       itemHeader += '<div class="col-1"><div class="col-12">ID</div></div>'
                     + '<div class="col-2"><div class="col-12">Name</div></div>'
                     + '<div class="col-2"><div class="col-12">Description</div></div>'
