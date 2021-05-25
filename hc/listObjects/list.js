@@ -260,11 +260,11 @@ const createHTML = async () => {
         for (const[editableKey, editableValue] of Object.entries(objTypeConfig.editable)) {
           console.log("This is editableValue: ", editableValue);
         }
-                    // + '<a href="/hc/editObject/?type='+objType+'&itemid='+SLValue.id+'&itemname='+SLValue.name+'"><button class="edit-item-btn"> Edit </button></a>'
-        objItems += '</div>'
-                 + '<div class=col-1>'
-                   + '<button class="remove-item-btn"> Remove </button>'
-                 + '</div>';
+        objItems += '<a href="/hc/editObject/?type='+objType+'&itemid='+SLValue.id+'&itemname='+SLValue.name+'"><button class="edit-item-btn"> Edit </button></a>'
+                + '</div>'
+                + '<div class=col-1>'
+                  + '<button class="remove-item-btn"> Remove </button>'
+                + '</div>';
 
         // closing object item row
           objItems  += '</div>';
