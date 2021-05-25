@@ -55,19 +55,27 @@ const outputHTML = async () => {
   // create the items header row
   var itemHeader = '<div class="row">';
 
-                // This is INCORRECT, using the ID is only going to work when the ID is equal to the position in the array
-                for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
-                  console.log("This is headerKey: ", headerKey);
-                  console.log("This is headerValue: ", headerValue);   
-                }
-      itemHeader += '<div class="col-1"><div class="col-12">ID</div></div>'
-                    + '<div class="col-2"><div class="col-12">Name</div></div>'
-                    + '<div class="col-2"><div class="col-12">Description</div></div>'
-                    + '<div class="col-2"><div class="col-12">Status</div></div>'
-                    + '<div class="col-2"><div class="col-12">Tags</div></div>'
-                    + '<div class="col-2"><div class="col-12">Due Date</div></div>'
-                    + '<div class="col-1"><div class="col-12">EstEff</div></div>'
-                  + '</div>';  
+  // This is INCORRECT, using the ID is only going to work when the ID is equal to the position in the array
+  for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
+    console.log("This is headerKey: ", headerKey);
+    console.log("This is headerValue: ", headerValue);
+    if (headerKey == 'id' || headerKey == 'estEff') {
+      var colSize = 1;
+    }
+    else {
+      var colSize = 2;
+    }
+    itemHeader += '<div class="col-'+colSize+'"><div class="col-12">'+headerKey+'</div></div>';
+  }
+  // closing item header row
+  itemHeader += '</div>';
+  //            + '<div class="col-1"><div class="col-12">ID</div></div>'
+  //            + '<div class="col-2"><div class="col-12">Name</div></div>'
+  //            + '<div class="col-2"><div class="col-12">Description</div></div>'
+  //            + '<div class="col-2"><div class="col-12">Status</div></div>'
+  //            + '<div class="col-2"><div class="col-12">Tags</div></div>'
+  //            + '<div class="col-2"><div class="col-12">Due Date</div></div>'
+  //            + '<div class="col-1"><div class="col-12">EstEff</div></div>'
   $('#HTMLoutput').append(itemHeader);
 
 
