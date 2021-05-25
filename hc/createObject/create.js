@@ -17,6 +17,9 @@ const tempData = async () => {
 }
 
 function createHTML() {
+  var data = await tempData();
+  var config = await configData();
+
   var headerHTML = '<div id="contacts">'
   + '<div class="row">'
   + '<div class="col-12">'
