@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  createHTML();
+  outputHTML();
 });
 // get information from URL (objType, objItemID, objItemName, objItemDesc, and objItemTags) 
 // ex. task, 0, COI: Design Wireframes, These tasks will result in a user interface to create an object item, and 0
