@@ -53,22 +53,21 @@ const outputHTML = async () => {
 
 
   // create the items header row
-  var itemHeader = '<div class="row">'
+  var itemHeader = '<div class="row">';
 
                  for (const [headerKey, headerValue] of Object.entries(data[objType])) {
                    console.log("This is headerKey: ", headerKey);
                    console.log("This is headerValue: ", headerValue);
                    
                  }
-                   + '<div class="col-1"><div class="col-12">ID</div></div>'
-                   + '<div class="col-2"><div class="col-12">Name</div></div>'
-                   + '<div class="col-2"><div class="col-12">Description</div></div>'
-                   + '<div class="col-2"><div class="col-12">Status</div></div>'
-                   + '<div class="col-2"><div class="col-12">Tags</div></div>'
-                   + '<div class="col-2"><div class="col-12">Due Date</div></div>'
-                   + '<div class="col-1"><div class="col-12">EstEff</div></div>'
-
-                 + '</div>';  
+      itemHeader += '<div class="col-1"><div class="col-12">ID</div></div>'
+                    + '<div class="col-2"><div class="col-12">Name</div></div>'
+                    + '<div class="col-2"><div class="col-12">Description</div></div>'
+                    + '<div class="col-2"><div class="col-12">Status</div></div>'
+                    + '<div class="col-2"><div class="col-12">Tags</div></div>'
+                    + '<div class="col-2"><div class="col-12">Due Date</div></div>'
+                    + '<div class="col-1"><div class="col-12">EstEff</div></div>'
+                  + '</div>';  
   $('#HTMLoutput').append(itemHeader);
 
 
