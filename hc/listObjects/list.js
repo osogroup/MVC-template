@@ -262,9 +262,7 @@ const createHTML = async () => {
         for (const[editableKey, editableValue] of Object.entries(objTypeConfig.editable)) {
           console.log("This is editableValue: ", editableValue);
           objItems += '&item'+editableValue+'='+SLValue[editableValue];
-          objItem[editableValue] = urlParams.get('item'+editableValue);
         } 
-        console.log("This is the objItem object...", objItem);
         objItems += '"><button class="edit-item-btn"> Edit </button></a>'
                 + '</div>'
                 + '<div class=col-1>'
