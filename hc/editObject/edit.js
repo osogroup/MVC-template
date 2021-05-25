@@ -74,6 +74,17 @@ const outputHTML = async () => {
   // creating the item value row
   var itemFields = '<div class="row">'
  
+                 // for (every item in the objType list) {
+                   // if (the objItem is in the editable list) 
+                   // {
+                     // make it an input textbox
+                   // }
+                   // else
+                   // {
+                     // make it a regular div
+                   // }
+                 // }
+
                    // creating item area
                    + '<div class="col-1"><div class="col-12">'+objItemID+'</div></div>'
 
