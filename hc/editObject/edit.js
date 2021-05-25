@@ -48,8 +48,9 @@ const outputHTML = async () => {
             + '</div>';
   $('#HTMLoutput').append(headerHTML);
 
-  // create input headers
-
+  // create uneditable items
+  uneditableFields = '<div class="row">'
+                     + '<div class="col-1">'+objItemID+'</div>'
 
   // create input boxes with the type and id (since that stuff isn't in the editable areas) 
   // inputBoxes += 
