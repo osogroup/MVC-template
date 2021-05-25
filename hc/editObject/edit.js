@@ -37,7 +37,7 @@ const outputHTML = async () => {
   
   // creating the links for the header
   for(const [headerKey, headerValue] of Object.entries(data)) {
-    headerHTML += '<a class="headerLinks" href="../listObjects/?type='+headerKey+'">'+headerKey+'">'+headerKey+'</a>';
+    headerHTML += '<a class="headerLinks" href="../listObjects/?type='+headerKey+'">'+headerKey+'</a>';
   }
   
   // closing header row
