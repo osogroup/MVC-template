@@ -55,9 +55,11 @@ const outputHTML = async () => {
   // create the items header row
   var itemHeader = '<div class="row">'
 
-                 // for (every item in the objType list) {
+                 for (const [headerKey, headerValue] of Object.entries(data[objType])) {
+                   console.log("This is headerKey: ", headerKey);
+                   console.log("This is headerValue: ", headerValue);
                    
-                 // }
+                 }
                    + '<div class="col-1"><div class="col-12">ID</div></div>'
                    + '<div class="col-2"><div class="col-12">Name</div></div>'
                    + '<div class="col-2"><div class="col-12">Description</div></div>'
