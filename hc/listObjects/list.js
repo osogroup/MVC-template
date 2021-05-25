@@ -141,7 +141,7 @@ const createHTML = async () => {
 
         headerHTML  += '</p>'
                    + '</div>'
-                   + '<h1>OAS Object List'
+                   + '<h1>OAS Object List</h1>'
                  + '</div>'
   $('#TitleOfList').append(headerHTML);
 
