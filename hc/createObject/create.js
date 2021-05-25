@@ -16,7 +16,7 @@ const tempData = async () => {
   return objVars;
 }
 
-function createHTML() {
+const createHTML = async () => {
   var data = await tempData();
   var config = await configData();
 
