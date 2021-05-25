@@ -25,7 +25,7 @@ const outputHTML = async () => {
   var data = await tempData();
   var config = await configData();
   var inputBoxes = '';
-
+  var objTypeData = data[objType];
 
   // ------------------------------------------- Navigation Bar -------------------------------------------
 
@@ -55,7 +55,7 @@ const outputHTML = async () => {
   // create the items header row
   var itemHeader = '<div class="row">';
 
-                 for (const [headerKey, headerValue] of Object.entries(data[objType])) {
+                 for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
                    console.log("This is headerKey: ", headerKey);
                    console.log("This is headerValue: ", headerValue);
                    
