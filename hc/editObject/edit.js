@@ -27,7 +27,7 @@ const outputHTML = async () => {
   var inputBoxes = '';
 
 
-  // -------------------------------------------------- Navigation Bar ------------------------------------------------
+  // ------------------------------------------- Navigation Bar -------------------------------------------
 
 
   var headerHTML = '<div id="contacts">'
@@ -43,7 +43,7 @@ const outputHTML = async () => {
   // closing header row
   headerHTML += '</p>';
 
-  // making a propt scenario where there is no object type selected
+  // H1 header to let the user know which object they're editing
   headerHTML += '<h1>Edit '+objType+' Item</h1>'
             + '</div>';
   $('#HTMLoutput').append(headerHTML);
