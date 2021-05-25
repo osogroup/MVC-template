@@ -89,7 +89,7 @@ const outputHTML = async () => {
 
                    //  creating item areas
                    + '<div class="col-2"><div class="col-12">'+objItemID+'</div></div>'
-                   + '<div class="col-2"><div class="col-12">'+objItemID+'</div></div>'
+                   + '<div class="col-1"><div class="col-12">'+objItemID+'</div></div>'
 
                  // closing item row
                  + '</div>';
