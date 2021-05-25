@@ -3,6 +3,19 @@ $(document).ready(function(){
   createHTML();
 });
 
+const configData = async () => {
+  var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
+  // console.log("configData output ", listConfig);
+  return listConfig;
+}
+
+// gets all the Objects/Arrays from listOfObjects.json and returns them
+const tempData = async () => {
+  var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
+  // console.log("tempData output ", objVars);
+  return objVars;
+}
+
 function createHTML() {
   var headerHTML = '<div id="contacts">'
   + '<div class="row">'
