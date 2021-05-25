@@ -37,7 +37,7 @@ const outputHTML = async () => {
   
   // creating the links for the header
   for(const [headerKey, headerValue] of Object.entries(data)) {
-    headerHTML += '<a class="headerLinks" href="?type='+headerKey+'">'+headerKey+'</a>';
+    headerHTML += '<a class="headerLinks" href="../listObjects/?type='+headerKey+'">'+headerKey+'">'+headerKey+'</a>';
   }
   
   // closing header row
@@ -49,6 +49,7 @@ const outputHTML = async () => {
   $('#HTMLoutput').append(headerHTML);
 
   // create input headers
+
 
   // create input boxes with the type and id (since that stuff isn't in the editable areas) 
   // inputBoxes += 
