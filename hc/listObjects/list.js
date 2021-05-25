@@ -238,7 +238,6 @@ const createHTML = async () => {
       // getting item attributes
       // console.log("THIS IS MY FOCUS", data[objType]);
       for (const [SLKey, SLValue] of Object.entries(data[objType])) {
-
         // creating the object item rows
         objItems += '<div class="row">';
 
@@ -256,7 +255,7 @@ const createHTML = async () => {
 
         // closing object item rows
         objItems += '<div class=col-1>'
-                    + '<a href="/hc/editObject/?type='+objType+'&itemid='+data[objType][id]+'"><button class="edit-item-btn"> Edit </button>'
+                    + '<a href="/hc/editObject/?type='+objType+'&itemid='+SLValue.id+'"><button class="edit-item-btn"> Edit </button>'
                   + '</div>'
                   + '<div class=col-1>'
                     + '<button class="remove-item-btn"> Remove </button>'
