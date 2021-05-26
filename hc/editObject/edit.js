@@ -30,6 +30,8 @@ const outputHTML = async () => {
   // console.log("This is the objTypeData: ", objTypeData);
   // var col = objTypeData[objItemid].length;
   // console.log("This is the col: ", col);
+
+  
   // -------------------------------------------------- Navigation Bar --------------------------------------------------
 
 
