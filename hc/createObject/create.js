@@ -72,4 +72,7 @@ function doTheHTML() {
   localStorage.setItem("name", "Riley Anderson");
   console.log(localStorage);
 
+  var inputBox = '<input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" oninput="addLocal('+headerKey+', this.value)">';
+  $('#everything').append(inputBox);
+
 }
