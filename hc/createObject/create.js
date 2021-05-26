@@ -23,7 +23,7 @@ const createHTML = async () => {
   var headerHTML = '<div id="contacts">'
   + '<div class="row">'
     + '<p id="header">'
-      + '<img src="https://brandmark.io/logo-rank/random/pepsi.png" alt="LogoImage" width="80">';
+      + '<img src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
   
   // creating the links for the header
   for(const [headerKey, headerValue] of Object.entries(data)) {
