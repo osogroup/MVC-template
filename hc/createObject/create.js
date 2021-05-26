@@ -75,7 +75,7 @@ function doTheHTML() {
 
   var local = "name";
   // localStorage.clear();
-  // localStorage.setItem("name", "Riley Anderson");
+  localStorage.setItem("name", "Riley Anderson");
   console.log(localStorage);
 
   var inputBox = '<input class="col-12" id="input" type="textarea" value="'+localStorage.getItem("")+'" oninput="addLocal('+local+', this.value);">';
