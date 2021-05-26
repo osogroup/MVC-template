@@ -69,7 +69,7 @@ const createHTML = async () => {
 function doTheHTML() {
 
   // localStorage.clear();
-  localStorage.setItem("name", "Riley Anderson");
+  // localStorage.setItem("name", "Riley Anderson");
   console.log(localStorage);
 
   var inputBox = '<input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" oninput="addLocal('+headerKey+', this.value)">';
