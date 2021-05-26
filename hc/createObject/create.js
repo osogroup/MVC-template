@@ -48,6 +48,7 @@ const createHTML = async () => {
 
 function doTheHTML() {
 
-  
+  localStorage.setItem("name", "Riley");
+  console.log(localStorage);
 
 }
