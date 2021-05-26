@@ -82,7 +82,7 @@ const outputHTML = async () => {
     if (configTypeData.editable.includes(headerKey) == true)
     {
       // making object item an input textbox
-      itemHeader += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" onchange="addLocal('+headerValue+', this.value)">';
+      itemHeader += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" onchange="addLocal('+headerKey+', this.value)">';
     }
     else
     {
