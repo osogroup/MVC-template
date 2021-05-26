@@ -20,7 +20,7 @@ const tempData = async () => {
 }
 
 function addLocal(localKey, localVal) {
-  localStorage.setItem('"'+localKey+'"', '"'+localVal+'"');
+  localStorage.setItem(localKey, localVal);
 }
 
 // function to create editObject HTML
