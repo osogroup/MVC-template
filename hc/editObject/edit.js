@@ -61,13 +61,13 @@ const outputHTML = async () => {
   for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
     // console.log("This is headerKey: ", headerKey);
     // console.log("This is headerValue: ", headerValue);
-    if (headerKey == 'id' || headerKey == 'estEff') {
-      var colSize = 1;
-    }
-    else {
-      var colSize = 2;
-    }
-    itemHeader += '<div class="col-'+colSize+'"><div class="col-12">'+headerKey+'</div></div>';
+    // if (headerKey == 'id' || headerKey == 'estEff') {
+    //   var colSize = 1;
+    // }
+    // else {
+    //   var colSize = 2;
+    // }
+    itemHeader += '<div class="col-3"><div class="col-12">'+headerKey+'</div></div>';
   }
   // closing item header row
   itemHeader += '</div>';
