@@ -34,7 +34,7 @@ const outputHTML = async () => {
 
   var headerHTML = '<div id="contacts">'
   + '<div class="row">'
-    + '<p id="header">'
+    + '<p id="header" class="col-12">'
       + '<img src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
   
   // creating the links for the header
