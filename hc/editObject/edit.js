@@ -74,7 +74,7 @@ const outputHTML = async () => {
   
 
   var n = objType.editable.includes("name");
-  console.log("Is n in the array...?", n)
+  console.log("Is n in the array...?", n);
 
 
   // creating the item value row
