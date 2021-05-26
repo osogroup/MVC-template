@@ -108,9 +108,9 @@ const outputHTML = async () => {
                    + '<div class="col-2"><div class="col-12">'+objItemDue+'</div></div>'
                    + '<div class="col-1"><div class="col-12">'+objItemEstEff+'</div></div>'
 
-                 // closing item row
+                 // closing item value row
                  + '</div>';
-  $('#HTMLoutput').append(itemFields);
+  // $('#HTMLoutput').append(itemFields);
 
   // making the Update Button
   var updateButton = '<div class="row">'
