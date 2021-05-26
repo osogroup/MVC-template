@@ -69,7 +69,7 @@ const outputHTML = async () => {
     // }
     itemHeader += '<div class="col-4">'
                   + '<div class="col-12">'+headerKey+'</div>'
-                  + '<br><input class="col-12" type="textarea" placeholder="objItem'+headerKey+'">'
+                  + '<br><input class="col-12" type="textarea" placeholder="'+headerValue+'">'
                 + '</div>';
   }
   // closing item header row
