@@ -72,7 +72,7 @@ function doTheHTML() {
   $('#everything').append(inputBox);
   
   
-   addLocal(localKey, localValue) {
+  addLocal(localKey, localValue) {
     console.log("localKey ", localKey);
     console.log("localValue ", localValue);
     localStorage.setItem(localKey, localValue);
