@@ -1,8 +1,8 @@
 #header {
-  background-color: black;
   padding: 10px 10px 0px 10px;
 }
 .headerLinks {
+  background-color: black;
   color: white;
   font-family: "Lucida Console", "Courier New", monospace;
   text-decoration: none;
