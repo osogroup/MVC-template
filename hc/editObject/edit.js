@@ -52,7 +52,7 @@ const outputHTML = async () => {
   $('#HTMLoutput').append(headerHTML);
 
 
-  // -------------------------------------------------- Items Header --------------------------------------------------
+  // -------------------------------------------------- Item Headers --------------------------------------------------
 
 
   // creating items header row
@@ -66,6 +66,10 @@ const outputHTML = async () => {
     // creating each object item column
     itemHeader += '<div class="col-4">'
                   + '<div class="col-12">'+headerKey+'</div>';
+
+
+  // -------------------------------------------------- Item Values --------------------------------------------------
+
 
     // checking to see if the headerKey is in the editable array (in objectConfig.json)
     if (configTypeData.editable.includes(headerKey) == true)
@@ -86,58 +90,16 @@ const outputHTML = async () => {
   itemHeader += '</div>';
   $('#HTMLoutput').append(itemHeader);
 
-
-  // -------------------------------------------------- Items Values --------------------------------------------------
   
 
-  // console.log("configTypeData is: ", configTypeData);
-  // var n = configTypeData.editable.includes("name");
-  // console.log("Is n in the array...?", n);
+  // -------------------------------------------------- Update Button --------------------------------------------------
 
 
-  // creating the item value row
-  var itemFields = '<div class="row">'
- 
-                   // creating item area
-                   + '<div class="col-1"><div class="col-12">'+objItemid+'</div></div>'
-
-                   // creating item input boxes
-                   + '<div class="col-2"><input class="col-12" type="textarea" placeholder="'+objItemname+'"></div>'
-                   + '<div class="col-2"><input class="col-12" type="textarea" placeholder="'+objItemdescription+'"></div>'
-
-                   // creating item area
-                   + '<div class="col-2"><div class="col-12">'+objItemstatus+'</div></div>'
-
-                   //  creating item input box
-                   + '<div class="col-2"><input class="col-12" type="textarea" placeholder="'+objItemtags+'"></div>'
-
-                   //  creating item areas
-                   + '<div class="col-2"><div class="col-12">'+objItemdueDate+'</div></div>'
-                   + '<div class="col-1"><div class="col-12">'+objItemestEff+'</div></div>'
-
-                 // closing item value row
-                 + '</div>';
-  // $('#HTMLoutput').append(itemFields);
-
-  // making the Update Button
   var updateButton = '<div class="row">'
                     +  '<div class="col-11"></div>'
                     +  '<div class="col-1"><button>Update</button></div>'
                    + '</div>';
    $('#HTMLoutput').append(updateButton);
-
-
-  // use objItemID (and the other ones) to get data out of the JSON file that create and fill in the input boxes
-
-
-
-
-
-
-
-
-
-
 
   console.log("Exiting outputHTML()");
 }
