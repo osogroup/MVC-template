@@ -90,7 +90,6 @@ const outputHTML = async () => {
   itemHeader += '</div>';
   $('#HTMLoutput').append(itemHeader);
 
-  
 
   // -------------------------------------------------- Update Button --------------------------------------------------
 
