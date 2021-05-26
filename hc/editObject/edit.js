@@ -27,7 +27,7 @@ const outputHTML = async () => {
   var inputBoxes = '';
   var objTypeData = data[objType];
   console.log("This is the objTypeData: ", objTypeData);
-  var col = objTypeData[objItemID].length;
+  var col = objTypeData[objItemid].length;
   console.log("This is the col: ", col);
   // -------------------------------------------------- Navigation Bar --------------------------------------------------
 
@@ -58,7 +58,7 @@ const outputHTML = async () => {
   var itemHeader = '<div class="row">';
 
   // This is INCORRECT, using the ID is only going to work when the ID is equal to the position in the array
-  for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
+  for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemid])) {
     // console.log("This is headerKey: ", headerKey);
     // console.log("This is headerValue: ", headerValue);
     // if (headerKey == 'id' || headerKey == 'estEff') {
@@ -92,21 +92,21 @@ const outputHTML = async () => {
                  // }
 
                    // creating item area
-                   + '<div class="col-1"><div class="col-12">'+objItemID+'</div></div>'
+                   + '<div class="col-1"><div class="col-12">'+objItemid+'</div></div>'
 
                    // creating item input boxes
-                   + '<div class="col-2"><input class="col-12" type="textarea" placeholder="'+objItemName+'"></div>'
-                   + '<div class="col-2"><input class="col-12" type="textarea" placeholder="'+objItemDesc+'"></div>'
+                   + '<div class="col-2"><input class="col-12" type="textarea" placeholder="'+objItemname+'"></div>'
+                   + '<div class="col-2"><input class="col-12" type="textarea" placeholder="'+objItemdescription+'"></div>'
 
                    // creating item area
-                   + '<div class="col-2"><div class="col-12">'+objItemStatus+'</div></div>'
+                   + '<div class="col-2"><div class="col-12">'+objItemstatus+'</div></div>'
 
                    //  creating item input box
-                   + '<div class="col-2"><input class="col-12" type="textarea" placeholder="'+objItemTags+'"></div>'
+                   + '<div class="col-2"><input class="col-12" type="textarea" placeholder="'+objItemtags+'"></div>'
 
                    //  creating item areas
-                   + '<div class="col-2"><div class="col-12">'+objItemDue+'</div></div>'
-                   + '<div class="col-1"><div class="col-12">'+objItemEstEff+'</div></div>'
+                   + '<div class="col-2"><div class="col-12">'+objItemdueDate+'</div></div>'
+                   + '<div class="col-1"><div class="col-12">'+objItemestEff+'</div></div>'
 
                  // closing item value row
                  + '</div>';
