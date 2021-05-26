@@ -61,12 +61,6 @@ const outputHTML = async () => {
   for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemid])) {
     // console.log("This is headerKey: ", headerKey);
     // console.log("This is headerValue: ", headerValue);
-    // if (headerKey == 'id' || headerKey == 'estEff') {
-    //   var colSize = 1;
-    // }
-    // else {
-    //   var colSize = 2;
-    // }
     itemHeader += '<div class="col-4">'
                   + '<div class="col-12">'+headerKey+'</div>'
                   + '<br><input class="col-12" type="textarea" placeholder="'+headerValue+'">'
