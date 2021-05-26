@@ -75,8 +75,8 @@ const outputHTML = async () => {
   // -------------------------------------------------- Items Values --------------------------------------------------
   
 
-  console.log("objTypeData is: ", objTypeData)
-  var n = objTypeData.editable.includes("name");
+  console.log("configTypeData is: ", configTypeData)
+  var n = configTypeData.editable.includes("name");
   console.log("Is n in the array...?", n);
 
 
