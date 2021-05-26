@@ -19,6 +19,10 @@ const tempData = async () => {
   return objVars;
 }
 
+function addLocal(localKey, localVal) {
+  localStorage.setItem('"'+localKey+'"', localVal);
+}
+
 // function to create editObject HTML
 const outputHTML = async () => {
   console.log("Entering outputHTML()");
@@ -78,7 +82,7 @@ const outputHTML = async () => {
     if (configTypeData.editable.includes(headerKey) == true)
     {
       // making object item an input textbox
-      itemHeader += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" onchange="localStorage.setItem("name", this.value)">';
+      itemHeader += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" onchange="addLocal('+headerValue+', this.value)">';
     }
     else
     {
