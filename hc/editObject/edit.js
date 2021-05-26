@@ -72,7 +72,7 @@ const outputHTML = async () => {
   }
   // closing item header row
   itemHeader += '</div>';
-
+  $('#HTMLoutput').append(itemHeader);
 
   // -------------------------------------------------- Items Values --------------------------------------------------
   
