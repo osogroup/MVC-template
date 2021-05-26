@@ -109,4 +109,5 @@ const outputHTML = async () => {
    $('#HTMLoutput').append(updateButton);
 
   console.log("Exiting outputHTML()");
+  localStorage.removeItem('');
 }
