@@ -60,12 +60,24 @@ const outputHTML = async () => {
 
   // This is INCORRECT, using the ID is only going to work when the ID is equal to the position in the array
   for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemid])) {
-    // console.log("This is headerKey: ", headerKey);
-    // console.log("This is headerValue: ", headerValue);
+    console.log("This is headerKey: ", headerKey);
+    console.log("This is headerValue: ", headerValue);
     itemHeader += '<div class="col-4">'
-                  + '<div class="col-12">'+headerKey+'</div>'
-                  + '<br><input class="col-12" type="textarea" placeholder="'+headerValue+'">'
-                + '</div>';
+                  + '<div class="col-12">'+headerKey+'</div>';
+
+    // if (the objItem is in the editable list) 
+    if (configTypeData.editable.includes(headerKey) == true)
+    {
+      // make it an input textbox
+      
+    }
+    else
+    {
+      // make it a regular div
+    }
+
+                   + '<br><input class="col-12" type="textarea" placeholder="'+headerValue+'">'
+    itemHeader += '</div>';
   }
   // closing item header row
   itemHeader += '</div>';
@@ -83,17 +95,6 @@ const outputHTML = async () => {
   // creating the item value row
   var itemFields = '<div class="row">'
  
-                 // for (every item in the objType list) {
-                   // if (the objItem is in the editable list) 
-                   // {
-                     // make it an input textbox
-                   // }
-                   // else
-                   // {
-                     // make it a regular div
-                   // }
-                 // }
-
                    // creating item area
                    + '<div class="col-1"><div class="col-12">'+objItemid+'</div></div>'
 
