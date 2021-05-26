@@ -73,7 +73,7 @@ const outputHTML = async () => {
   // -------------------------------------------------- Items Values --------------------------------------------------
   
   let isInArray = objType.editable.includes(valueToFind[0, fromIndex]);
-  console.log(objType[editable].includes(objItemid));
+  console.log(objType.editable.includes(objItemid));
   // creating the item value row
   var itemFields = '<div class="row">'
  
