@@ -138,11 +138,10 @@ const createHTML = async () => {
   for(const [headerKey, headerValue] of Object.entries(data)) {
     headerHTML +=        '<a class="headerLinks" href="/hc/listObjects/?type='+headerKey+'">'+headerKey.toUpperCase()+'</a>';
   }
-
-        headerHTML  += '</p>'
-                   + '</div>'
-                   + '<h1>OAS Object List</h1>'
-                 + '</div>'
+  headerHTML  += '</p>'
+              + '</div>'
+              + '<h1>OAS '+objType.toUpperCase()+' List</h1>'
+            + '</div>';
   $('#TitleOfList').append(headerHTML);
 
   // console.log("objType in createHTML() ", objType);
