@@ -60,23 +60,26 @@ const outputHTML = async () => {
 
   // This is INCORRECT, using the ID is only going to work when the ID is equal to the position in the array
   for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemid])) {
-    console.log("This is headerKey: ", headerKey);
-    console.log("This is headerValue: ", headerValue);
+    // console.log("This is headerKey: ", headerKey);
+    // console.log("This is headerValue: ", headerValue);
+    
+    // creating each object item column
     itemHeader += '<div class="col-4">'
                   + '<div class="col-12">'+headerKey+'</div>';
 
-    // if (the objItem is in the editable list) 
+    // checking to see if the headerKey is in the editable array (in objectConfig.json)
     if (configTypeData.editable.includes(headerKey) == true)
     {
-      // make it an input textbox
+      // making object item an input textbox
       itemHeader += '<br><input class="col-12" type="textarea" placeholder="'+headerValue+'">';
     }
     else
     {
-      // make it a regular div
+      // making object item a regular div
       itemHeader += '<br><div class="col-12">'+headerValue+'</div>';
     }
 
+    // closing each object item column
     itemHeader += '</div>';
   }
   // closing item header row
@@ -88,7 +91,7 @@ const outputHTML = async () => {
   
 
   // console.log("configTypeData is: ", configTypeData);
-  var n = configTypeData.editable.includes("name");
+  // var n = configTypeData.editable.includes("name");
   // console.log("Is n in the array...?", n);
 
 
