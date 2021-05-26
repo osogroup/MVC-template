@@ -1,6 +1,7 @@
 $(document).ready(function(){
   
-  createHTML();
+  // createHTML();
+  doTheHTML();
 });
 
 const configData = async () => {
