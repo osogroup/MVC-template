@@ -47,7 +47,7 @@ const outputHTML = async () => {
   headerHTML += '</p>';
 
   // H1 header to let the user know which object they're editing
-  headerHTML += '<h1>Edit '+objType.toUpperCase()+' Item</h1>'
+  headerHTML += '<h1>Edit '+objType+' Item</h1>'
             + '</div>';
   $('#HTMLoutput').append(headerHTML);
 
