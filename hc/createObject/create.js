@@ -73,7 +73,7 @@ function doTheHTML() {
   console.log(localStorage);
 
   for(const[] of Object.entries())
-  var inputBox = '<input class="col-12" id="input" type="textarea" value="'+localStorage.getItem("")+'" oninput="'+localStorage.setItem("name", this.value)+'">';
+  var inputBox = '<input class="col-12" id="input" type="textarea" value="'+localStorage.getItem("")+'" oninput="localStorage.setItem("", this.value)">';
   $('#everything').append(inputBox);
 
 }
