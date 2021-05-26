@@ -45,3 +45,9 @@ const createHTML = async () => {
   $('#everything').append(headerHTML);
   
 }
+
+function doTheHTML() {
+
+  
+
+}
