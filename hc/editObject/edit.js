@@ -25,6 +25,7 @@ const outputHTML = async () => {
   var data = await tempData();
   var config = await configData();
   var inputBoxes = '';
+  var configTypeData = config[objType];
   var objTypeData = data[objType];
   // console.log("This is the objTypeData: ", objTypeData);
   // var col = objTypeData[objItemid].length;
@@ -70,8 +71,10 @@ const outputHTML = async () => {
   itemHeader += '</div>';
   $('#HTMLoutput').append(itemHeader);
 
+
   // -------------------------------------------------- Items Values --------------------------------------------------
   
+
   console.log("objTypeData is: ", objTypeData)
   var n = objTypeData.editable.includes("name");
   console.log("Is n in the array...?", n);
