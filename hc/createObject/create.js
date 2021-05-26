@@ -65,6 +65,7 @@ const createHTML = async () => {
 
 function addLocal(localKey, localValue) {
   localStorage.setItem(localKey, localValue);
+  console.log(localStorage);
 }
 
 
