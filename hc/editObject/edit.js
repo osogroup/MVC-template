@@ -67,7 +67,7 @@ const outputHTML = async () => {
     // else {
     //   var colSize = 2;
     // }
-    itemHeader += '<div class="col-3"><div class="col-12">'+headerKey+'</div></div>';
+    itemHeader += '<div class="col-4"><div class="col-12">'+headerKey+'</div></div>';
   }
   // closing item header row
   itemHeader += '</div>';
