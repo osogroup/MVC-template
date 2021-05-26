@@ -20,6 +20,7 @@ const tempData = async () => {
 }
 
 function addLocal(localKey, localVal) {
+  localStorage.remove(localKey);
   localStorage.setItem(localKey, localVal);
 }
 
