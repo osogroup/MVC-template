@@ -61,23 +61,24 @@ const createHTML = async () => {
 
 
 
+
+
+function addLocal(localKey, localValue) {
+  console.log("localKey ", localKey);
+  console.log("localValue ", localValue);
+  localStorage.setItem(localKey, localValue);
+  console.log(localStorage);
+}
+
+
 function doTheHTML() {
-  
+
   var local = "name";
   // localStorage.clear();
   // localStorage.setItem("name", "Riley Anderson");
   console.log(localStorage);
-  
+
   var inputBox = '<input class="col-12" id="input" type="textarea" value="'+localStorage.getItem("")+'" oninput="addLocal('+local+', this.value);">';
   $('#everything').append(inputBox);
-  
-  
-  addLocal(localKey, localValue) {
-    console.log("localKey ", localKey);
-    console.log("localValue ", localValue);
-    localStorage.setItem(localKey, localValue);
-    console.log(localStorage);
-  }
+
 }
-
-
