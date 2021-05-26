@@ -31,7 +31,7 @@ const outputHTML = async () => {
   // var col = objTypeData[objItemid].length;
   // console.log("This is the col: ", col);
 
-  
+
   // -------------------------------------------------- Navigation Bar --------------------------------------------------
 
 
@@ -66,7 +66,7 @@ const outputHTML = async () => {
     // console.log("This is headerValue: ", headerValue);
     
     // creating each object item column
-    itemHeader += '<div class="col-4">'
+    itemHeader += '<div class="col-4 minHeight">'
                   + '<div class="col-12">'+headerKey+'</div>';
 
 
