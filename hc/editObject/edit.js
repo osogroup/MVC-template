@@ -75,9 +75,9 @@ const outputHTML = async () => {
   // -------------------------------------------------- Items Values --------------------------------------------------
   
 
-  console.log("configTypeData is: ", configTypeData);
+  // console.log("configTypeData is: ", configTypeData);
   var n = configTypeData.editable.includes("name");
-  console.log("Is n in the array...?", n);
+  // console.log("Is n in the array...?", n);
 
 
   // creating the item value row
