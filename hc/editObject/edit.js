@@ -69,14 +69,14 @@ const outputHTML = async () => {
     if (configTypeData.editable.includes(headerKey) == true)
     {
       // make it an input textbox
-      
+      itemHeader += '<br><input class="col-12" type="textarea" placeholder="'+headerValue+'">';
     }
     else
     {
       // make it a regular div
+      itemHeader += '<br><div class="col-12">'+headerValue+'</div>';
     }
 
-                   + '<br><input class="col-12" type="textarea" placeholder="'+headerValue+'">'
     itemHeader += '</div>';
   }
   // closing item header row
