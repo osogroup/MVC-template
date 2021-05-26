@@ -125,7 +125,7 @@ const createHTML = async () => {
   var config = await configData();
 
 
-  // ---------------------------------------- Page Header ------------------------------------------
+  // ------------------------------------------------------- Page Header -------------------------------------------------------
 
 
   var headerHTML = '<div id="contacts">'
@@ -170,7 +170,7 @@ const createHTML = async () => {
         var col = 12/(objTypeConfig.list.length);
 
 
-  // ------------------------------------- The Input Boxes -----------------------------------------
+  // ------------------------------------------------------- The Input Boxes -------------------------------------------------------
 
         // getting config Objects and data
         for (const [inputKey, inputValue] of Object.entries(objTypeConfig.required)) {
@@ -195,7 +195,7 @@ const createHTML = async () => {
         tHeader += addButtonHTML + '</div>';
         
         
-  // -------------------------------------- The Search Box -----------------------------------------
+  // ------------------------------------------------------- The Search Box -------------------------------------------------------
 
         // creating the search box and designating its own row
         var searchVariable =  '<div class="searchBox row">'
@@ -206,7 +206,7 @@ const createHTML = async () => {
         
 
   
-  // ------------------------------------- The Table Headers ----------------------------------------
+  // ------------------------------------------------------- The Table Headers -------------------------------------------------------
   
         // opening table header row and adding The Search Box to tHeader
         tHeader += searchVariable + '<div class="tableHeader row">';
@@ -227,7 +227,7 @@ const createHTML = async () => {
       tHeader += '</div>';
 
 
-    // -------------------------------------------- Item Rows --------------------------------------------
+    // ------------------------------------------------------- Item Rows -------------------------------------------------------
 
 
       var objItems = tHeader;
@@ -254,7 +254,7 @@ const createHTML = async () => {
         }
 
 
-  // ----------------------------------------- Edit Button URL -----------------------------------------
+  // ------------------------------------------------------- Edit Button URL -------------------------------------------------------
 
 
         // creating edit buttons
@@ -294,8 +294,6 @@ const createHTML = async () => {
     for(const[sortKey, sortValue] of Object.entries(objTypeConfig.list)) {
       options.valueNames.push(sortValue);
     }
-
-    // creating
     
     // closing each id=hacker-list div
     $('#TitleOfList').append('</div>');
