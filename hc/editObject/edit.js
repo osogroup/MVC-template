@@ -70,6 +70,10 @@ const outputHTML = async () => {
   // creating items header row
   var itemHeader = '<div class="row">';
 
+
+
+  console.log(objTypeData[objItemid]);
+
   // This is INCORRECT, using the ID is only going to work when the ID is equal to the position in the array
   for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemid])) {
 
