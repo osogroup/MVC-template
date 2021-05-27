@@ -137,6 +137,7 @@ const doTheStringify = async () => {
   // if item exists 
   if (objectKeys == true) {
     console.log("objectKeys exists..!");
+
     //   pull item from localStorage
     localStorage.getItem(objType+'_'+objItemID);
 
@@ -159,6 +160,11 @@ const doTheStringify = async () => {
   }
   
   // create HTML header and fields
+  for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemid])) {
+    console.log("This is headerKey", headerKey);
+    console.log("This is headerValue", headerValue);
+
+  }
 
   // update localStorage values when input fields are changed
   //   update objItem with new changes
