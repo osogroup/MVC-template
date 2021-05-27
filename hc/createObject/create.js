@@ -110,10 +110,6 @@ function anyChange(str) {
   backToString = JSON.stringify(myObject);
   console.log("This is backToString ", backToString);
   localStorage.setItem(superKey, backToString);
-  // var itemKey = objType+ '_' +objItemID;
-
-  // localStorage.setItem(itemKey.str, changeValue);
-  // console.log(localStorage);
 }
 
 const doTheStringify = async () => {
