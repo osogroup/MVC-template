@@ -59,7 +59,7 @@ const createHTML = async () => {
 
 
 function anyChange(str) {
-  var myName = document.getElementById('inputBox');
+  var myName = document.getElementById('inputBoxName');
   var myAge = document.getElementById('inputBoxAge');
   var myNameValue = myName.value;
   var myAgeValue = myAge.value;
