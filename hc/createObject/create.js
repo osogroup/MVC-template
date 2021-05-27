@@ -174,6 +174,7 @@ const doTheStringify = async () => {
 
   // closing item header row
   headerHTML += '</div>';
+  $('#everything').append(headerHTML);
 
   // update localStorage values when input fields are changed
   //   update objItem with new changes
