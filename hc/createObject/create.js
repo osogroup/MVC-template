@@ -75,7 +75,6 @@ function doTheHTML() {
                  + '<input class="col-8" id="inputBoxname" type="textarea" placeholder="name" value="'+localStorage.getItem("name")+'" oninput="anyChange(this.placeholder)"></div>';
      inputBox += '<div class="row"><div class="col-8">Age</div>'
                  + '<input class="col-8" id="inputBoxage" type="textarea" placeholder="age" value="'+localStorage.getItem("age")+'" oninput="anyChange(this.placeholder)"></div>';
-
   $('#everything').append(inputBox);
 
 }
