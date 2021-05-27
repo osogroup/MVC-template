@@ -63,8 +63,8 @@ const outputHTML = async () => {
   // This is INCORRECT, using the ID is only going to work when the ID is equal to the position in the array
   for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemid])) {
     localStorage.setItem(headerKey, headerValue);
-    // console.log("This is headerKey: ", headerKey);
-    // console.log("This is headerValue: ", headerValue);
+    console.log("This is headerKey: ", headerKey);
+    console.log("This is headerValue: ", headerValue);
     
     // creating each object item column
     itemHeader += '<div class="col-4 minHeight">'
