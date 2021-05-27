@@ -110,6 +110,7 @@ function anyChange(str) {
   backToString = JSON.stringify(myObject);
   // console.log("This is backToString ", backToString);
   localStorage.setItem(superKey, backToString);
+  console.log(localStorage);
 }
 
 const doTheStringify = async () => {
@@ -201,7 +202,6 @@ const doTheStringify = async () => {
   // closing item header row
   headerHTML += '</div>';
   $('#everything').append(headerHTML);
-  console.log(localStorage);
 
 }
 
