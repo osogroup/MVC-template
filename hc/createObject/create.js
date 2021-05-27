@@ -110,6 +110,7 @@ function doTheHTML() {
 
 const doTheStringify = async () => {
   var data = await tempData();
+  var objTypeData = data[objType];
 
   // example localStorage(task_0, '{"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10}');
 
