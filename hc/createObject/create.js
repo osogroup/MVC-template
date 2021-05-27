@@ -169,7 +169,7 @@ const doTheStringify = async () => {
     if (configTypeData.editable.includes(headerKey) == true)
     {
       // making object item an input textbox
-      headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+localStorage.getItem(headerKey)+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)">';
+      headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+localStorage.getItem(headerKey)+'" placeholder="'+headerKey+'" oninput="anyChange(objItemString, this.placeholder)">';
     }
     else
     {
@@ -187,7 +187,8 @@ const doTheStringify = async () => {
 }
 
 // update localStorage values when input fields are changed
-function anyChange(str) {
+function anyChange(objStr, str) {
+  console.log("This is the objStr ", objStr);
   var change = document.getElementById('input'+str);
   var changeValue = change.value;
 
