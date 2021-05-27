@@ -150,6 +150,8 @@ const doTheStringify = async () => {
       if (objType+'_'+repositoryKey == objectKeys) {
         objItem = repositoryItem[repositoryKey];
         console.log("This is objItem: ", objItem);
+        var objItemString = JSON.stringify(objItem);
+        console.log("This is objItemString: ", objItemString);
       }
     }
   }
