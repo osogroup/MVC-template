@@ -101,7 +101,7 @@ var JSONObject = JSON.parse(exampleJSON);
 
 console.log("This one's the JSONObject ", JSONObject);
 
-
+console.log("JSONObject.name... ", JSONObject.name);
 
 
 
