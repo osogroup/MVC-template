@@ -22,28 +22,28 @@ const createHTML = async () => {
   var data = await tempData();
   var config = await configData();
 
-  var headerHTML = '<div id="contacts">'
+  var HTMLoutput = '<div id="contacts">'
   + '<div class="row">'
     + '<p id="header">'
       + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
   
   // creating the links for the header
   for(const [headerKey, headerValue] of Object.entries(data)) {
-    headerHTML += '<a class="headerLinks" href="?type='+headerKey+'">'+headerKey.toUpperCase()+'</a>';
+    HTMLoutput += '<a class="headerLinks" href="?type='+headerKey+'">'+headerKey.toUpperCase()+'</a>';
   }
   
   // closing header row
-  headerHTML += '</p>';
+  HTMLoutput += '</p>';
 
   // making a propt scenario where there is no object type selected
   if (objType == null) {
-    headerHTML += '<h1>Select Item from Header to Create Item...</h1>';
+    HTMLoutput += '<h1>Select Item from Header to Create Item...</h1>';
   }
   else {
-    headerHTML += '<h1>Create '+objType+' Item</h1>';
+    HTMLoutput += '<h1>Create '+objType+' Item</h1>';
   }
-  headerHTML += '</div>';
-  $('#everything').append(headerHTML);
+  HTMLoutput += '</div>';
+  $('#everything').append(HTMLoutput);
   
 }
 
@@ -130,21 +130,21 @@ const doTheStringify = async () => {
     // -------------------------------------------- Navigation Bar --------------------------------------------
 
 
-    var headerHTML = '<div id="contacts">'
+    var HTMLoutput = '<div id="contacts">'
     + '<div class="row">'
       + '<p id="header" class="col-12">'
         + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
     
     // creating the links for the header
     for(const [headerKey, headerValue] of Object.entries(data)) {
-      headerHTML += '<a class="headerLinks" href="../listObjects/?type='+headerKey+'">'+headerKey.toUpperCase()+'</a>';
+      HTMLoutput += '<a class="headerLinks" href="../listObjects/?type='+headerKey+'">'+headerKey.toUpperCase()+'</a>';
     }
     
     // closing header row
-    headerHTML += '</p>';
+    HTMLoutput += '</p>';
   
     // H1 header to let the user know which object they're editing
-    headerHTML += '<h1>Edit '+objType+' Item</h1>'
+    HTMLoutput += '<h1>Edit '+objType+' Item</h1>'
               + '</div>';
 
     var objectKeys = objType + '_' + objItemID;
@@ -191,34 +191,34 @@ const doTheStringify = async () => {
       
     }
     // creating item header row
-    headerHTML += '<div class="row">';
+    HTMLoutput += '<div class="row">';
 
     // create HTML header and fields
     for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
       // console.log("This is headerKey", headerKey); // id, name
       // console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
-      headerHTML += '<div class="col-4 minHeight">'
+      HTMLoutput += '<div class="col-4 minHeight">'
                     + '<div class="col-12">'+headerKey+'</div>';
       if (configTypeData.editable.includes(headerKey) == true)
       {
 
         // making object item an input textbox
-        headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
+        HTMLoutput += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
       }
       else
       {
 
         // making object item a regular div
-        headerHTML += '<br><div class="col-12">'+headerValue+'</div>';
+        HTMLoutput += '<br><div class="col-12">'+headerValue+'</div>';
       }
 
       // closing object item column
-      headerHTML += '</div>';
+      HTMLoutput += '</div>';
     }
 
     // closing item header row
-    headerHTML += '</div>';
-    $('#everything').append(headerHTML);
+    HTMLoutput += '</div>';
+    $('#everything').append(HTMLoutput);
   }
 }
 
