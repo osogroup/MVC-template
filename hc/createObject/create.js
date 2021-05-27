@@ -96,7 +96,16 @@ function doTheHTML() {
 
 
 
+function anyChange(objStr, str) {
+  console.log("This is the objStr: ", objStr);
+  var change = document.getElementById('input'+str);
+  var changeValue = change.value;
 
+  console.log("Text Box contains..", changeValue);
+  console.log("str is: ", str);
+  localStorage.setItem(str, changeValue);
+  console.log(localStorage);
+}
 
 
 
@@ -106,16 +115,7 @@ const doTheStringify = async () => {
   var objTypeData = data[objType];
   var configTypeData = config[objType];
 
-  function anyChange(objStr, str) {
-    console.log("This is the objStr: ", objStr);
-    var change = document.getElementById('input'+str);
-    var changeValue = change.value;
-  
-    console.log("Text Box contains..", changeValue);
-    console.log("str is: ", str);
-    localStorage.setItem(str, changeValue);
-    console.log(localStorage);
-  }
+
 
   // example localStorage(task_0, '{"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10}');
 
