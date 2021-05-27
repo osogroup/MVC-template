@@ -21,7 +21,7 @@ const createHTML = async () => {
   var data = await tempData();
   var config = await configData();
 
-  var headerHTML = '<div id="contacts">'
+  var headerHTML = '<br><br><br><div id="contacts">'
   + '<div class="row">'
     + '<p id="header">'
       + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
