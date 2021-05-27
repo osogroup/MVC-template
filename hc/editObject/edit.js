@@ -2,7 +2,7 @@ $(document).ready(function(){
   // outputHTML();
   doTheStringify();
 });
-// get information from URL (objType, objItemID, objItemName, objItemDesc, and objItemTags) 
+// get information from URL (objType,id, objItemName, objItemDesc, and objItemTags) 
 // ex. task, 0, COI: Design Wireframes, These tasks will result in a user interface to create an object item, and 0
 
 
@@ -158,7 +158,7 @@ function showData() {
 }
 
 function anyChange(str) {
-  var superKey = objType+ '_' +objItemID;
+  var superKey = objType+ '_' +objItemid;
   // console.log("This is the str: ", str);
   var myString = localStorage.getItem(superKey);
   // console.log("This is myString", myString);
@@ -206,7 +206,7 @@ const doTheStringify = async () => {
     HTMLoutput += '<h1>Edit '+objType+' Item</h1>'
               + '</div>';
 
-    var objectKeys = objType + '_' + objItemID;
+    var objectKeys = objType + '_' + objItemid;
     // console.log("This is objectKeys: ", objectKeys);
     var objItem = {};
 
@@ -217,12 +217,12 @@ const doTheStringify = async () => {
       console.log(localStorage);
 
       // pull item from localStorage
-      localStorage.getItem(objType+'_'+objItemID);
+      localStorage.getItem(objType+'_'+objItemid);
 
       // create HTML header and fields
     } 
     else {
-      var forOfLoop = objTypeData[objItemID]
+      var forOfLoop = objTypeData[objItemid]
       console.log("objectKeys was just created..!");
       var repositoryItem = data[objType];
       // console.log("This is the repositoryItem..", repositoryItem);
