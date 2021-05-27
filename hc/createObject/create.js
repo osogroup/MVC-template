@@ -114,7 +114,6 @@ const doTheStringify = async () => {
   var configTypeData = config[objType];
 
 
-
   // example localStorage(task_0, '{"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10}');
 
   var exampleObj = {"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10};
@@ -161,6 +160,7 @@ const doTheStringify = async () => {
         console.log("This is objItem: ", objItem);
         var objItemString = JSON.stringify(objItem);
         console.log("This is objItemString: ", objItemString);
+        localStorage.setItem(objectKeys, objItemString);
       }
     }
   }
