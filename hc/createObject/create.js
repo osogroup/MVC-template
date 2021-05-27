@@ -143,12 +143,14 @@ const doTheStringify = async () => {
   else {
     var repositoryItem = data[objType];
     console.log("This is the repositoryItem..", repositoryItem);
+    console.log("This is repositoryItem[0]", repositoryItem[0])
     //   pull item from repository (get item by using "var objTypeData = data[objType]";)
 
     //   if object id is equal to the one im searching for
-      if (repositoryItem == objItemID) {
+      if (repositoryItem[id] == objectKeys) {
         objItem = repositoryItem;
-        console.log(objItem);
+        console.log("This is objItem: ", objItem);
+
       } 
     //     set this object to objItem
   }
@@ -160,7 +162,6 @@ const doTheStringify = async () => {
   //   stringify updated onjItem
   //   save (localStorage(<type_id>, objItem))
 
-  console.log("This is objItem: ", objItem);
 
 
 
