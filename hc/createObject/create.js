@@ -116,85 +116,91 @@ function anyChange(str) {
 
 
 const doTheStringify = async () => {
-  var data = await tempData();
-  var config = await configData();
-  var objTypeData = data[objType];
-  var configTypeData = config[objType];
+
+  if(objType == null || objItemID == null) {
+    alert('Please enter "?type=task&itemid=0" at the end of the current URL');
+  }
+  else {
+    var data = await tempData();
+    var config = await configData();
+    var objTypeData = data[objType];
+    var configTypeData = config[objType];
 
 
 
-  var objectKeys = objType + '_' + objItemID;
-  // console.log("This is objectKeys: ", objectKeys);
-  var objItem = {};
+    var objectKeys = objType + '_' + objItemID;
+    // console.log("This is objectKeys: ", objectKeys);
+    var objItem = {};
 
-  // if item exists 
-  if (localStorage.getItem(objectKeys) != null) {
-    var forOfLoop = JSON.parse(localStorage.getItem(objectKeys));
-    console.log("objectKeys exists..!");
-    console.log(localStorage);
+    // if item exists 
+    if (localStorage.getItem(objectKeys) != null) {
+      var forOfLoop = JSON.parse(localStorage.getItem(objectKeys));
+      console.log("objectKeys exists..!");
+      console.log(localStorage);
 
-    // pull item from localStorage
-    localStorage.getItem(objType+'_'+objItemID);
+      // pull item from localStorage
+      localStorage.getItem(objType+'_'+objItemID);
 
-    // creating item header row
-    var headerHTML = '<div class="row">';
+      // creating item header row
+      var headerHTML = '<div class="row">';
+
+      // create HTML header and fields
+    } 
+    else {
+      var forOfLoop = objTypeData[objItemID]
+      console.log("objectKeys was just created..!");
+      var repositoryItem = data[objType];
+      // console.log("This is the repositoryItem..", repositoryItem);
+      // console.log("This is repositoryItem[0]", repositoryItem[0]);
+
+      //   pull item from repository (get item by using "var objTypeData = data[objType]";)
+
+      //   if object id is equal to the one im searching for
+      for(const[repositoryKey, repositoryValue] of Object.entries(data[objType])) {
+        // console.log("This is repositoryKey: ", repositoryKey); // this is the id number 
+        // console.log("This is repositoryValue: ", repositoryValue); // this is the object
+        if (objType+'_'+repositoryKey == objectKeys) {
+          objItem = repositoryItem[repositoryKey];
+          // console.log("This is objItem: ", objItem);
+          var objItemString = JSON.stringify(objItem);
+          // console.log("This is objItemString: ", objItemString);
+          localStorage.setItem(objectKeys, objItemString);
+          console.log(localStorage);
+        }
+      }
+
+      // creating item header row
+      var headerHTML = '<div class="row">';
+
+    }
 
     // create HTML header and fields
-  } 
-  else {
-    var forOfLoop = objTypeData[objItemID]
-    console.log("objectKeys was just created..!");
-    var repositoryItem = data[objType];
-    // console.log("This is the repositoryItem..", repositoryItem);
-    // console.log("This is repositoryItem[0]", repositoryItem[0]);
+    for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
+      // console.log("This is headerKey", headerKey); // id, name
+      // console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
+      headerHTML += '<div class="col-4 minHeight">'
+                    + '<div class="col-12">'+headerKey+'</div>';
+      if (configTypeData.editable.includes(headerKey) == true)
+      {
 
-    //   pull item from repository (get item by using "var objTypeData = data[objType]";)
-
-    //   if object id is equal to the one im searching for
-    for(const[repositoryKey, repositoryValue] of Object.entries(data[objType])) {
-      // console.log("This is repositoryKey: ", repositoryKey); // this is the id number 
-      // console.log("This is repositoryValue: ", repositoryValue); // this is the object
-      if (objType+'_'+repositoryKey == objectKeys) {
-        objItem = repositoryItem[repositoryKey];
-        // console.log("This is objItem: ", objItem);
-        var objItemString = JSON.stringify(objItem);
-        // console.log("This is objItemString: ", objItemString);
-        localStorage.setItem(objectKeys, objItemString);
-        console.log(localStorage);
+        // making object item an input textbox
+        headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
       }
+      else
+      {
+
+        // making object item a regular div
+        headerHTML += '<br><div class="col-12">'+headerValue+'</div>';
+      }
+
+      // closing object item column
+      headerHTML += '</div>';
     }
 
-    // creating item header row
-    var headerHTML = '<div class="row">';
-
-  }
-
-  // create HTML header and fields
-  for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
-    // console.log("This is headerKey", headerKey); // id, name
-    // console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
-    headerHTML += '<div class="col-4 minHeight">'
-                  + '<div class="col-12">'+headerKey+'</div>';
-    if (configTypeData.editable.includes(headerKey) == true)
-    {
-
-      // making object item an input textbox
-      headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
-    }
-    else
-    {
-
-      // making object item a regular div
-      headerHTML += '<br><div class="col-12">'+headerValue+'</div>';
-    }
-
-    // closing object item column
+    // closing item header row
     headerHTML += '</div>';
+    $('#everything').append(headerHTML);
   }
-
-  // closing item header row
-  headerHTML += '</div>';
-  $('#everything').append(headerHTML);
 }
 
 
