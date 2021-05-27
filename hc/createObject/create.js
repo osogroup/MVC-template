@@ -156,9 +156,9 @@ const doTheStringify = async () => {
       // console.log("This is repositoryValue: ", repositoryValue); // this is the object
       if (objType+'_'+repositoryKey == objectKeys) {
         objItem = repositoryItem[repositoryKey];
-        console.log("This is objItem: ", objItem);
+        // console.log("This is objItem: ", objItem);
         var objItemString = JSON.stringify(objItem);
-        console.log("This is objItemString: ", objItemString);
+        // console.log("This is objItemString: ", objItemString);
         localStorage.setItem(objectKeys, objItemString);
         console.log(localStorage);
       }
