@@ -97,7 +97,7 @@ function doTheHTML() {
 
 
 function anyChange(str) {
-  console.log("This is the objStr: ", str);
+  console.log("This is the str: ", str);
   var change = document.getElementById('input'+str);
   var changeValue = change.value;
 
