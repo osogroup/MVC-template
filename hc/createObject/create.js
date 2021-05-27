@@ -177,7 +177,7 @@ const doTheStringify = async () => {
   var headerHTML = '<div class="row">';
 
   // create HTML header and fields
-  for (const [headerKey, headerValue] of Object.entries(objItem[objItemID])) {
+  for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
     console.log("This is headerKey", headerKey); // id, name
     console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
 
