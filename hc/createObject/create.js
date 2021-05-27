@@ -68,16 +68,6 @@ function anyChange(str) {
   console.log(localStorage);
 }
 
-
-
-// const yourInput = document.getelementbyid('yourInputId');
-
-
-// yourInput.addEventListener('change', (event) => {
-//   localStorage.setItem(keyName, event.target.value);
-// });
-
-
 function doTheHTML() {
   
   localStorage.clear();
