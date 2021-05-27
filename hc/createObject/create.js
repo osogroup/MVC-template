@@ -101,12 +101,13 @@ function anyChange(str) {
   var myString = localStorage.getItem(objType+ '_' +objItemID);
   console.log("This is myString", myString);
   var myObject = JSON.parse(myString);
-  console.log("This is myObject: ", myObject)
+  console.log("This is myObject: ", myObject);
   var change = document.getElementById('input'+str);
   var changeValue = change.value;
   console.log("Text Box contains..", changeValue);
 
-  // localStorage.setItem(str, changeValue);
+  var itemKey = objType+ '_' +objItemID;
+  localStorage.setItem(itemKey.str, changeValue);
   // console.log(localStorage);
 }
 
