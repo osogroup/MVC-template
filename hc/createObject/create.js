@@ -138,7 +138,7 @@ const doTheStringify = async () => {
   var objItem = {};
 
   // if item exists 
-  if (objectKeys == true) {
+  if (localStorage.includes(objectKeys) == true) {
     console.log("objectKeys exists..!");
     console.log(localStorage);
 
