@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  outputHTML();
+  // outputHTML();
+  doTheStringify();
 });
 // get information from URL (objType, objItemID, objItemName, objItemDesc, and objItemTags) 
 // ex. task, 0, COI: Design Wireframes, These tasks will result in a user interface to create an object item, and 0
@@ -124,4 +125,167 @@ const outputHTML = async () => {
   //  localStorage.removeItem('');
 
   console.log("Exiting outputHTML()");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function showValue() {
+  var superKey = objType+ '_' +objItemID;
+  var superObject = JSON.parse(localStorage.getItem(superKey));
+  console.log(superObject);
+}
+
+function showData() {
+  console.log(localStorage);
+}
+
+function anyChange(str) {
+  var superKey = objType+ '_' +objItemID;
+  // console.log("This is the str: ", str);
+  var myString = localStorage.getItem(superKey);
+  // console.log("This is myString", myString);
+  var myObject = JSON.parse(myString);
+  // console.log("This is myObject: ", myObject);
+  var change = document.getElementById('input'+str);
+  var changeValue = change.value;
+  myObject[str] = changeValue;
+  // console.log("this is myObject[str]", myObject[str]);
+  backToString = JSON.stringify(myObject);
+  // console.log("This is backToString ", backToString);
+  localStorage.setItem(superKey, backToString);
+}
+
+
+const doTheStringify = async () => {
+
+  if(objType == null || objItemID == null) {
+    alert('Please enter "?type=task&itemid=0" at the end of the current URL');
+  }
+  else {
+    var data = await tempData();
+    var config = await configData();
+    var objTypeData = data[objType];
+    var configTypeData = config[objType];
+
+
+    // -------------------------------------------- Navigation Bar --------------------------------------------
+
+
+    var HTMLoutput = '<div id="contacts">'
+    + '<div class="row">'
+      + '<p id="header" class="col-12">'
+        + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
+    
+    // creating the links for the header
+    for(const [headerKey, headerValue] of Object.entries(data)) {
+      HTMLoutput += '<a class="headerLinks" href="../listObjects/?type='+headerKey+'">'+headerKey.toUpperCase()+'</a>';
+    }
+    
+    // closing header row
+    HTMLoutput += '</p>';
+  
+    // H1 header to let the user know which object they're editing
+    HTMLoutput += '<h1>Edit '+objType+' Item</h1>'
+              + '</div>';
+
+    var objectKeys = objType + '_' + objItemID;
+    // console.log("This is objectKeys: ", objectKeys);
+    var objItem = {};
+
+    // if item exists 
+    if (localStorage.getItem(objectKeys) != null) {
+      var forOfLoop = JSON.parse(localStorage.getItem(objectKeys));
+      console.log("objectKeys exists..!");
+      console.log(localStorage);
+
+      // pull item from localStorage
+      localStorage.getItem(objType+'_'+objItemID);
+
+      // create HTML header and fields
+    } 
+    else {
+      var forOfLoop = objTypeData[objItemID]
+      console.log("objectKeys was just created..!");
+      var repositoryItem = data[objType];
+      // console.log("This is the repositoryItem..", repositoryItem);
+      // console.log("This is repositoryItem[0]", repositoryItem[0]);
+
+      //   pull item from repository (get item by using "var objTypeData = data[objType]";)
+
+      //   if object id is equal to the one im searching for
+      for(const[repositoryKey, repositoryValue] of Object.entries(data[objType])) {
+        // console.log("This is repositoryKey: ", repositoryKey); // this is the id number 
+        // console.log("This is repositoryValue: ", repositoryValue); // this is the object
+        if (objType+'_'+repositoryKey == objectKeys) {
+          objItem = repositoryItem[repositoryKey];
+          // console.log("This is objItem: ", objItem);
+          var objItemString = JSON.stringify(objItem);
+          // console.log("This is objItemString: ", objItemString);
+          localStorage.setItem(objectKeys, objItemString);
+          console.log(localStorage);
+        }
+      }
+
+
+    // --------------------------------------- Item Header and Inputs ---------------------------------------
+
+      
+    }
+    // creating item header row
+    HTMLoutput += '<div class="row">';
+
+    // create HTML header and fields
+    for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
+      // console.log("This is headerKey", headerKey); // id, name
+      // console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
+      HTMLoutput += '<div class="col-4 minHeight">'
+                    + '<div class="col-12">'+headerKey+'</div>';
+      if (configTypeData.editable.includes(headerKey) == true)
+      {
+
+        // making object item an input textbox
+        HTMLoutput += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
+      }
+      else
+      {
+
+        // making object item a regular div
+        HTMLoutput += '<br><div class="col-12">'+headerValue+'</div>';
+      }
+
+      // closing object item column
+      HTMLoutput += '</div>';
+    }
+
+    // closing item header row
+    HTMLoutput += '</div>';
+
+    // Update button that will activate a function that outputs the value to the console
+    HTMLoutput += '<div class="row">';
+
+    HTMLoutput += '<div class="col-10"></div>'
+                + '<div class="col-2"><button onclick="showValue()">Update</button></div>';
+
+    HTMLoutput += '</div>';
+
+    $('#everything').append(HTMLoutput);
+  }
 }
