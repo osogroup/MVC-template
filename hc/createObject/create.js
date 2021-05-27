@@ -105,14 +105,30 @@ console.log("JSONObject.name... ", JSONObject.name);
 
 
 
+var objItem = {};
 
-// check if item exists in localStorage
+// check if item (type_id) exists in localStorage
 
-  // if item doesn't exist then pull data from the object list
+  // if item exists then pull item from localStorage and set objectItem
+
+  // elseif item doesn't exist then pull data from the object list
 
   // pull item out of the object list
 
-  var objItem = {};
-  // get the objItem by using object type
+  // get the objItem by using object type (see line 39 in edit.js)
+
+  // if object id is equal to the one i want then set that object item into objItem
 
   // set object item 
+
+// create HTML header and fields
+
+// when input changes set localStorage
+
+  // update objItem with new changes
+
+  // stringify updated objItem (JSON.stringify(objItem))
+
+  // save to localStorage (with type_id as the localStorage key and the objItem is the value)
+
+  // 
