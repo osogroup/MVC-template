@@ -107,6 +107,7 @@ const doTheStringify = async () => {
   var configTypeData = config[objType];
 
   function anyChange(objStr, str) {
+    console.log("This is the objStr: ", objStr);
     var change = document.getElementById('input'+str);
     var changeValue = change.value;
   
