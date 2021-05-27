@@ -67,12 +67,12 @@ function anyChange() {
 
 
 
-const yourInput = document.getelementbyid('yourInputId');
+// const yourInput = document.getelementbyid('yourInputId');
 
 
-yourInput.addEventListener('change', (event) => {
-  localStorage.setItem(keyName, event.target.value);
-});
+// yourInput.addEventListener('change', (event) => {
+//   localStorage.setItem(keyName, event.target.value);
+// });
 
 
 function doTheHTML() {
