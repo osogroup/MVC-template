@@ -59,12 +59,15 @@ const createHTML = async () => {
 
 
 function anyChange(str) {
-  var ourText = document.getElementById('inputBox');
-  var changeValue = ourText.value;
+  var myName = document.getElementById('inputBox');
+  var myAge = document.getElementById('inputBoxAge');
+  var myNameValue = myName.value;
+  var myAgeValue = myAge.value;
 
-  console.log("Text Box contains..", changeValue);
+  console.log("Text Box contains..", myNameValue);
   console.log("str is: ", str);
-  localStorage.setItem(str, changeValue);
+  localStorage.setItem(str, myNameValue);
+  localStorage.setItem(str, myAgeValue);
   console.log(localStorage);
 }
 
@@ -84,7 +87,10 @@ function doTheHTML() {
   // localStorage.setItem("", "Riley Anderson");
   console.log(localStorage);
   var inputBox = '<br><br><br><div class="row"><div class="col-8">Name</div>'
-  inputBox += '<input class="col-8" id="inputBox" type="textarea" placeholder="name" value="Riley Anderson" oninput="anyChange(this.placeholder)"></div>';
+                 + '<input class="col-8" id="inputBoxName" type="textarea" placeholder="name" value="Riley Anderson" oninput="anyChange(this.placeholder)"></div>';
+     inputBox += '<br><br><br><div class="row"><div class="col-8">Age</div>'
+                 + '<input class="col-8" id="inputBoxAge" type="textarea" placeholder="age" value="22" oninput="anyChange(this.placeholder)"></div>';
+
   $('#everything').append(inputBox);
 
 }
