@@ -136,14 +136,17 @@ function doTheStringify() {
   // if item exists 
   if (objectKeys == true) {
     console.log("objectKeys exists..!");
+    //   pull item from localStorage
+
+  } 
+  else {
+    var repositoryItem = data[objType];
+    console.log("This is the repositoryItem..", repositoryItem);
+    //   pull item from repository (get item by using "var objTypeData = data[objType]";)
+
+    //   if object id is equal to the one im searching for
+    //     set this object to objItem
   }
-  //   pull item from localStorage
-  // 
-  // else
-  //   pull item from repository (get item by using "var objTypeData = data[objType]";)
-  // 
-  //   if object id is equal to the one im searching for
-  //     set this object to objItem
   
   // create HTML header and fields
 
