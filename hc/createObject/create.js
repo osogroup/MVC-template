@@ -146,6 +146,10 @@ const doTheStringify = async () => {
     //   pull item from repository (get item by using "var objTypeData = data[objType]";)
 
     //   if object id is equal to the one im searching for
+      if (repositoryItem == objectItemID) {
+        objItem = repositoryItem;
+        console.log(objItem);
+      } 
     //     set this object to objItem
   }
   
