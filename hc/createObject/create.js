@@ -97,7 +97,9 @@ console.log("This is exampleJSON: ", exampleJSON);
 
 console.log("Name via exampleObj: ", exampleObj.name);
 
+var JSONObject = JSON.parse(exampleJSON);
 
+console.log("This one's the JSONObject ", JSONObject);
 
 
 
