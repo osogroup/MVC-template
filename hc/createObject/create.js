@@ -160,12 +160,20 @@ const doTheStringify = async () => {
     }
   }
   
+  // creating item header row
+  var headerHTML = '<div class="row">';
+
   // create HTML header and fields
   for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
     console.log("This is headerKey", headerKey);
     console.log("This is headerValue", headerValue);
 
+     headerHTML += '<div class="col-4 minHeight">'
+                   + '<div class="col-12">'+headerKey+'</div>';
   }
+
+  // closing item header row
+  headerHTML += '</div>';
 
   // update localStorage values when input fields are changed
   //   update objItem with new changes
