@@ -58,7 +58,12 @@ const createHTML = async () => {
 
 
 
+function anyChange() {
+  var ourText = document.getElementById('inputBox');
+  var changeValue = ourText.value;
 
+  console.log("Text Box contains..", changeValue);
+}
 
 
 
@@ -76,7 +81,10 @@ function doTheHTML() {
   localStorage.setItem("", "Riley Anderson");
   console.log(localStorage);
 
-  var inputBox = '<br><br><br><input class="col-12" id="inputBox" type="textarea" value="'+localStorage.getItem("")+'" oninput="localStorage.setItem("", this.value)">';
+  var inputBox = '<br><br><br><input class="col-8" id="inputBox" type="textarea" oninput="anyChange()">';
   $('#everything').append(inputBox);
 
 }
+
+
+// value="'+localStorage.getItem("")+'"
