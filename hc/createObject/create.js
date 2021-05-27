@@ -115,6 +115,7 @@ function anyChange(str) {
 const doTheStringify = async () => {
   var data = await tempData();
   var config = await configData();
+  var objTypeData = data[objType];
   var configTypeData = config[objType];
 
 
@@ -143,7 +144,6 @@ const doTheStringify = async () => {
 
   // if item exists 
   if (localStorage.getItem(objectKeys) != null) {
-    var objTypeData = objTypeData[objItemID];
     console.log("objectKeys exists..!");
     console.log(localStorage);
 
@@ -152,13 +152,11 @@ const doTheStringify = async () => {
 
   } 
   else {
-    var objTypeData = data[objType];
-    var forOfLoopData = objTypeData[objItemID];
     console.log("objectKeys doesn't exist yet..!");
     var repositoryItem = data[objType];
     // console.log("This is the repositoryItem..", repositoryItem);
     // console.log("This is repositoryItem[0]", repositoryItem[0]);
-    //   pull item from repository 
+    //   pull item from repository (get item by using "var objTypeData = data[objType]";)
 
     //   if object id is equal to the one im searching for
     for(const[repositoryKey, repositoryValue] of Object.entries(data[objType])) {
