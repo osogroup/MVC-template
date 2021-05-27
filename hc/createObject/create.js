@@ -127,6 +127,25 @@ const doTheStringify = async () => {
     var configTypeData = config[objType];
 
 
+    // -------------------------------------------- Navigation Bar --------------------------------------------
+
+
+    var headerHTML = '<div id="contacts">'
+    + '<div class="row">'
+      + '<p id="header" class="col-12">'
+        + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
+    
+    // creating the links for the header
+    for(const [headerKey, headerValue] of Object.entries(data)) {
+      headerHTML += '<a class="headerLinks" href="../listObjects/?type='+headerKey+'">'+headerKey.toUpperCase()+'</a>';
+    }
+    
+    // closing header row
+    headerHTML += '</p>';
+  
+    // H1 header to let the user know which object they're editing
+    headerHTML += '<h1>Edit '+objType+' Item</h1>'
+              + '</div>';
 
     var objectKeys = objType + '_' + objItemID;
     // console.log("This is objectKeys: ", objectKeys);
