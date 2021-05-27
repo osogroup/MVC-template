@@ -138,6 +138,7 @@ const doTheStringify = async () => {
   if (objectKeys == true) {
     console.log("objectKeys exists..!");
     //   pull item from localStorage
+    localStorage.getItem(objType+'_'+objItemID);
 
   } 
   else {
@@ -153,9 +154,8 @@ const doTheStringify = async () => {
       if (objType+'_'+repositoryKey == objectKeys) {
         objItem = repositoryItem[repositoryKey];
         console.log("This is objItem: ", objItem);
-      } 
+      }
     }
-    //     set this object to objItem
   }
   
   // create HTML header and fields
