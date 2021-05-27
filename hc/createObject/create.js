@@ -100,8 +100,8 @@ function anyChange(str) {
   console.log("This is the str: ", str);
   var change = document.getElementById('input'+str);
   var changeValue = change.value;
+  console.log("Text Box contains..", changeValue);
 
-  // console.log("Text Box contains..", changeValue);
   // console.log("str is: ", str);
   // localStorage.setItem(str, changeValue);
   // console.log(localStorage);
