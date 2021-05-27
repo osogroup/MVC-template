@@ -145,6 +145,7 @@ const doTheStringify = async () => {
 
   // if item exists 
   if (localStorage.getItem(objectKeys) != null) {
+    var forOfLoop = JSON.parse(localStorage.getItem(objectKeys));
     console.log("objectKeys exists..!");
     console.log(localStorage);
 
@@ -155,33 +156,14 @@ const doTheStringify = async () => {
     var headerHTML = '<div class="row">';
 
     // create HTML header and fields
-    var objectKeysObject = JSON.parse(localStorage.getItem(objectKeys));
-    for (const [headerKey, headerValue] of Object.entries(objectKeysObject)) {
-      console.log("This is headerKey", headerKey); // id, name
-      console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
-
-      headerHTML += '<div class="col-4 minHeight">'
-                    + '<div class="col-12">'+headerKey+'</div>';
-      if (configTypeData.editable.includes(headerKey) == true)
-      {
-        // making object item an input textbox
-        headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)">';
-      }
-      else
-      {
-        // making object item a regular div
-        headerHTML += '<br><div class="col-12">'+headerValue+'</div>';
-      }
-
-      // closing object item column
-      headerHTML += '</div>';
-    }
   } 
   else {
+    var forOfLoop = objTypeData[objItemID]
     console.log("objectKeys doesn't exist yet..!");
     var repositoryItem = data[objType];
     // console.log("This is the repositoryItem..", repositoryItem);
     // console.log("This is repositoryItem[0]", repositoryItem[0]);
+    
     //   pull item from repository (get item by using "var objTypeData = data[objType]";)
 
     //   if object id is equal to the one im searching for
@@ -201,35 +183,34 @@ const doTheStringify = async () => {
     // creating item header row
     var headerHTML = '<div class="row">';
 
-    // create HTML header and fields
-    for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
-      console.log("This is headerKey", headerKey); // id, name
-      console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
-
-      headerHTML += '<div class="col-4 minHeight">'
-                    + '<div class="col-12">'+headerKey+'</div>';
-      if (configTypeData.editable.includes(headerKey) == true)
-      {
-        // making object item an input textbox
-        headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)">';
-      }
-      else
-      {
-        // making object item a regular div
-        headerHTML += '<br><div class="col-12">'+headerValue+'</div>';
-      }
-
-      // closing object item column
-      headerHTML += '</div>';
-    }
   }
-  
 
+  // create HTML header and fields
+  for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
+    console.log("This is headerKey", headerKey); // id, name
+    console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
+    headerHTML += '<div class="col-4 minHeight">'
+                  + '<div class="col-12">'+headerKey+'</div>';
+    if (configTypeData.editable.includes(headerKey) == true)
+    {
+
+      // making object item an input textbox
+      headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)">';
+    }
+    else
+    {
+
+      // making object item a regular div
+      headerHTML += '<br><div class="col-12">'+headerValue+'</div>';
+    }
+
+    // closing object item column
+    headerHTML += '</div>';
+  }
 
   // closing item header row
   headerHTML += '</div>';
   $('#everything').append(headerHTML);
-
 }
 
 // update localStorage values when input fields are changed
