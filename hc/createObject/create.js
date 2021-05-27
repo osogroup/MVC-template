@@ -143,7 +143,7 @@ const doTheStringify = async () => {
 
   // if item exists 
   if (localStorage.getItem(objectKeys) != null) {
-    var forOfLoopData = objectKeys;
+    var forOfLoopData = objItem;
     console.log("objectKeys exists..!");
     console.log(localStorage);
 
