@@ -134,7 +134,7 @@ function doTheStringify() {
   var objItem = {};
 
   // if item exists 
-  if (objItem)
+  // if (objItem)
   //   pull item from localStorage
   // 
   // else
