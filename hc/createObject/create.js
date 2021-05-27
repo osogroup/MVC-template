@@ -98,17 +98,17 @@ function doTheHTML() {
 
 function anyChange(str) {
   var superKey = objType+ '_' +objItemID;
-  console.log("This is the str: ", str);
+  // console.log("This is the str: ", str);
   var myString = localStorage.getItem(objType+ '_' +objItemID);
-  console.log("This is myString", myString);
+  // console.log("This is myString", myString);
   var myObject = JSON.parse(myString);
-  console.log("This is myObject: ", myObject);
+  // console.log("This is myObject: ", myObject);
   var change = document.getElementById('input'+str);
   var changeValue = change.value;
   myObject[str] = changeValue;
-  console.log("this is myObject[str]", myObject[str]);
+  // console.log("this is myObject[str]", myObject[str]);
   backToString = JSON.stringify(myObject);
-  console.log("This is backToString ", backToString);
+  // console.log("This is backToString ", backToString);
   localStorage.setItem(superKey, backToString);
 }
 
@@ -177,7 +177,7 @@ const doTheStringify = async () => {
   var headerHTML = '<div class="row">';
 
   // create HTML header and fields
-  for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
+  for (const [headerKey, headerValue] of Object.entries(objItem[objItemID])) {
     console.log("This is headerKey", headerKey); // id, name
     console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
 
