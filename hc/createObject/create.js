@@ -70,7 +70,7 @@ const createHTML = async () => {
 
 
 function anyChange(str) {
-  var change = document.getElementById('inputBox'+str);
+  var change = document.getElementById('input'+str);
   var changeValue = change.value;
 
   console.log("Text Box contains..", changeValue);
@@ -192,8 +192,9 @@ const doTheStringify = async () => {
   $('#everything').append(headerHTML);
 
   // update localStorage values when input fields are changed
+
   //   update objItem with new changes
-  //   stringify updated onjItem
+  //   stringify updated objItem
   //   save (localStorage(<type_id>, objItem))
 
 
