@@ -94,7 +94,9 @@ function doTheHTML() {
 
 
 
-
+function showData() {
+  console.log(localStorage);
+}
 
 function anyChange(str) {
   var superKey = objType+ '_' +objItemID;
@@ -110,7 +112,6 @@ function anyChange(str) {
   backToString = JSON.stringify(myObject);
   // console.log("This is backToString ", backToString);
   localStorage.setItem(superKey, backToString);
-  console.log(localStorage);
 }
 
 
@@ -178,7 +179,7 @@ const doTheStringify = async () => {
     {
 
       // making object item an input textbox
-      headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)">';
+      headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
     }
     else
     {
