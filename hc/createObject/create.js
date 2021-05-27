@@ -106,4 +106,13 @@ console.log("JSONObject.name... ", JSONObject.name);
 
 
 
+// check if item exists in localStorage
 
+  // if item doesn't exist then pull data from the object list
+
+  // pull item out of the object list
+
+  var objItem = {};
+  // get the objItem by using object type
+
+  // set object item 
