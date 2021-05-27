@@ -129,10 +129,12 @@ function doTheStringify() {
   // console.log("JSONObject.name... ", JSONObject.name);
 
 
-
+  var objectKeys = objType + '_' + objItemID;
+  console.log("This is objectKeys: ", objectKeys);
   var objItem = {};
 
   // if item exists 
+  if (objItem)
   //   pull item from localStorage
   // 
   // else
