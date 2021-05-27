@@ -160,9 +160,6 @@ const doTheStringify = async () => {
       // pull item from localStorage
       localStorage.getItem(objType+'_'+objItemID);
 
-      // creating item header row
-      var headerHTML = '<div class="row">';
-
       // create HTML header and fields
     } 
     else {
@@ -188,10 +185,13 @@ const doTheStringify = async () => {
         }
       }
 
-      // creating item header row
-      var headerHTML = '<div class="row">';
 
+    // -------------------------------------------- Item Header --------------------------------------------
+
+      
     }
+    // creating item header row
+    var headerHTML = '<div class="row">';
 
     // create HTML header and fields
     for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
