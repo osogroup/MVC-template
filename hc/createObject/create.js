@@ -98,8 +98,10 @@ function doTheHTML() {
 
 function anyChange(str) {
   console.log("This is the str: ", str);
-  var myObject = localStorage.getItem(objType+ '_' +objItemID);
-  console.log("This is myObject", myObject);
+  var myString = localStorage.getItem(objType+ '_' +objItemID);
+  console.log("This is myString", myString);
+  var myObject = JSON.parse(myString);
+  console.log("This is myObject: ", myObject)
   var change = document.getElementById('input'+str);
   var changeValue = change.value;
   console.log("Text Box contains..", changeValue);
