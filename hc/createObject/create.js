@@ -182,6 +182,9 @@ const doTheStringify = async () => {
       // making object item a regular div
       headerHTML += '<br><div class="col-12">'+headerValue+'</div>';
     }
+
+    // closing object item column
+    headerHTML += '</div>';
   }
 
   // closing item header row
