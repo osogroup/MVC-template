@@ -92,7 +92,10 @@ function doTheHTML() {
 
 
 
-
+function showValue() {
+  var superKey = objType+ '_' +objItemID;
+  console.log(localStorage.getItem(superKey));
+}
 
 function showData() {
   console.log(localStorage);
@@ -218,6 +221,15 @@ const doTheStringify = async () => {
 
     // closing item header row
     HTMLoutput += '</div>';
+
+    // Update button that will activate a function that outputs the value to the console
+    HTMLoutput += '<div class="row">';
+
+    HTMLoutput += '<div class="col-10"></div>'
+                + '<div class="col-2"><button onclick="showValue()">Update</button></div>';
+
+    HTMLoutput += '</div>';
+
     $('#everything').append(HTMLoutput);
   }
 }
