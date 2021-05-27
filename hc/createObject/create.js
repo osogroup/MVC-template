@@ -107,8 +107,6 @@ function anyChange(objStr, str) {
   console.log(localStorage);
 }
 
-
-
 const doTheStringify = async () => {
   var data = await tempData();
   var config = await configData();
