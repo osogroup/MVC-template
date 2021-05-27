@@ -62,7 +62,12 @@ const createHTML = async () => {
 
 
 
+const yourInput = document.getelementbyid('yourInputId');
 
+
+yourInput.addEventListener('change', (event) => {
+  localStorage.setItem(keyName, event.target.value);
+});
 
 
 function doTheHTML() {
@@ -71,7 +76,7 @@ function doTheHTML() {
   localStorage.setItem("", "Riley Anderson");
   console.log(localStorage);
 
-  var inputBox = '<br><br><br><input class="col-12" id="input" type="textarea" value="'+localStorage.getItem("")+'" oninput="localStorage.setItem("", this.value)">';
+  var inputBox = '<br><br><br><input class="col-12" id="inputBox" type="textarea" value="'+localStorage.getItem("")+'" oninput="localStorage.setItem("", this.value)">';
   $('#everything').append(inputBox);
 
 }
