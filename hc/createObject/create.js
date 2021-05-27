@@ -98,7 +98,7 @@ function doTheHTML() {
 
 function anyChange(str) {
   console.log("This is the str: ", str);
-  var myObject = localStorage.getItem(objType+ '_' +objItem);
+  var myObject = localStorage.getItem(objType+ '_' +objItemID);
   console.log(myObject);
   var change = document.getElementById('input'+str);
   var changeValue = change.value;
