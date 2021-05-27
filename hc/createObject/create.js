@@ -143,7 +143,7 @@ const doTheStringify = async () => {
 
   // if item exists 
   if (localStorage.getItem(objectKeys) != null) {
-    var objTypeData = 
+    var objTypeData = objTypeData[objItemID];
     console.log("objectKeys exists..!");
     console.log(localStorage);
 
@@ -153,7 +153,7 @@ const doTheStringify = async () => {
   } 
   else {
     var objTypeData = data[objType];
-    var forOfLoopData = objTypeData[objItemID]
+    var forOfLoopData = objTypeData[objItemID];
     console.log("objectKeys doesn't exist yet..!");
     var repositoryItem = data[objType];
     // console.log("This is the repositoryItem..", repositoryItem);
