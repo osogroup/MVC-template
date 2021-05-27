@@ -102,7 +102,6 @@ function anyChange(str) {
   var changeValue = change.value;
   console.log("Text Box contains..", changeValue);
 
-  // console.log("str is: ", str);
   // localStorage.setItem(str, changeValue);
   // console.log(localStorage);
 }
@@ -181,7 +180,7 @@ const doTheStringify = async () => {
     if (configTypeData.editable.includes(headerKey) == true)
     {
       // making object item an input textbox
-      headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+localStorage.getItem(headerKey)+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)">';
+      headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)">';
     }
     else
     {
