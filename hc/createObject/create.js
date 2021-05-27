@@ -93,7 +93,7 @@ console.log("This is exampleObj: ", exampleObj);
 
 var exampleJSON = JSON.stringify(exampleObj);
 
-console.log("This is exampleJSON: ", exampleJSON)
+console.log("This is exampleJSON: ", exampleJSON);
 
 console.log("Name via exampleObj: ", exampleObj.name);
 
