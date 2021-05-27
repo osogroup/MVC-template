@@ -21,7 +21,7 @@ const createHTML = async () => {
   var data = await tempData();
   var config = await configData();
 
-  var headerHTML = '<br><br><br><div id="contacts">'
+  var headerHTML = '<div id="contacts">'
   + '<div class="row">'
     + '<p id="header">'
       + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
@@ -71,7 +71,7 @@ function doTheHTML() {
   localStorage.setItem("", "Riley Anderson");
   console.log(localStorage);
 
-  var inputBox = '<input class="col-12" id="input" type="textarea" value="'+localStorage.getItem("")+'" oninput="localStorage.setItem("", this.value)">';
+  var inputBox = '<br><br><br><input class="col-12" id="input" type="textarea" value="'+localStorage.getItem("")+'" oninput="localStorage.setItem("", this.value)">';
   $('#everything').append(inputBox);
 
 }
