@@ -104,10 +104,11 @@ function anyChange(str) {
   console.log("This is myObject: ", myObject);
   var change = document.getElementById('input'+str);
   var changeValue = change.value;
-  console.log("Text Box contains..", changeValue);
+  console.log("This is changeValue: ", changeValue);
 
   var itemKey = objType+ '_' +objItemID;
-  localStorage.setItem(itemKey.str, changeValue);
+
+  // localStorage.setItem(itemKey.str, changeValue);
   // console.log(localStorage);
 }
 
