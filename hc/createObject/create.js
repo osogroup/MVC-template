@@ -83,8 +83,8 @@ function doTheHTML() {
   localStorage.clear();
   // localStorage.setItem("", "Riley Anderson");
   console.log(localStorage);
-  var inputBox = '<div class="col-8">Name</div>'
-  inputBox += '<br><br><br><input class="col-8" id="inputBox" type="textarea" placeholder="name" value="Riley Anderson" oninput="anyChange(this.placeholder)">';
+  var inputBox = '<br><br><br><div class="row"><div class="col-8">Name</div>'
+  inputBox += '<input class="col-8" id="inputBox" type="textarea" placeholder="name" value="Riley Anderson" oninput="anyChange(this.placeholder)"></div>';
   $('#everything').append(inputBox);
 
 }
