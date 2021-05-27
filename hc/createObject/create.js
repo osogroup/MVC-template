@@ -191,7 +191,7 @@ const doTheStringify = async () => {
       
     }
     // creating item header row
-    var headerHTML = '<div class="row">';
+    headerHTML += '<div class="row">';
 
     // create HTML header and fields
     for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
