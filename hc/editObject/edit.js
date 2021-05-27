@@ -75,7 +75,7 @@ const outputHTML = async () => {
 
     console.log("This is the objTypeData.id: ", objTypeData.id);
     // TOGGLE THIS TO PULL INFO FROM THE LIST PAGE*************************
-    localStorage.setItem(objType+headerKey+objTypeData.id, headerValue);
+    // localStorage.setItem(objType+headerKey+objTypeData.id, headerValue);
     console.log("This is headerKey: ", headerKey);
     console.log("This is headerValue: ", headerValue);
     
