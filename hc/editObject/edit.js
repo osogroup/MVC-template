@@ -148,7 +148,7 @@ const outputHTML = async () => {
 
 
 function showValue() {
-  var superKey = objType+ '_' +objItemID;
+  var superKey = objType+ '_' +objItemid;
   var superObject = JSON.parse(localStorage.getItem(superKey));
   console.log(superObject);
 }
@@ -176,7 +176,7 @@ function anyChange(str) {
 
 const doTheStringify = async () => {
 
-  if(objType == null || objItemID == null) {
+  if(objType == null || objItemid == null) {
     alert('Please enter "?type=task&itemid=0" at the end of the current URL');
   }
   else {
