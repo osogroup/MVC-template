@@ -105,10 +105,11 @@ function anyChange(str) {
   console.log("This is myObject: ", myObject);
   var change = document.getElementById('input'+str);
   var changeValue = change.value;
-  console.log("This is changeValue: ", changeValue);
-  console.log("this is superKey[str] " , superKey[str])
-  // localStorage.setItem(superKey[str], changeValue);
-
+  myObject[str] = changeValue;
+  console.log("this is myObject[str]", myObject[str]);
+  backToString = JSON.stringify(myObject);
+  console.log("This is backToString ", backToString);
+  
   // var itemKey = objType+ '_' +objItemID;
 
   // localStorage.setItem(itemKey.str, changeValue);
