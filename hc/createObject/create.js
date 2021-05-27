@@ -155,7 +155,7 @@ const doTheStringify = async () => {
     var headerHTML = '<div class="row">';
 
     // create HTML header and fields
-    var objectKeysObject = JSON.parse(objectKeys);
+    var objectKeysObject = JSON.parse(localStorage.getItem(objectKeys));
     for (const [headerKey, headerValue] of Object.entries(objectKeysObject)) {
       console.log("This is headerKey", headerKey); // id, name
       console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
