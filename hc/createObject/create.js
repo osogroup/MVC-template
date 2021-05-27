@@ -152,9 +152,9 @@ const doTheStringify = async () => {
       // console.log("This is repositoryValue: ", repositoryValue); // this is the object
       if (objType+repositoryItem[repositoryKey] == objectKeys) {
         objItem = repositoryItem[repositoryKey];
-        console.log("This is objItem: ", objItem);
-  
+        
       } 
+      console.log("This is objItem: ", objItem);
 
     }
     //     set this object to objItem
