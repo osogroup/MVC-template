@@ -5,6 +5,16 @@ $(document).ready(function(){
 // ex. task, 0, COI: Design Wireframes, These tasks will result in a user interface to create an object item, and 0
 
 
+function anyChange(str) {
+  var change = document.getElementById('input'+str);
+  var changeValue = change.value;
+
+  console.log("Text Box contains..", changeValue);
+  console.log("str is: ", str);
+  localStorage.setItem(str, changeValue);
+  console.log(localStorage);
+}
+
 // pull in data from objectList.JSON and configuration JSON file 
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
@@ -78,7 +88,7 @@ const outputHTML = async () => {
     if (configTypeData.editable.includes(headerKey) == true)
     {
       // making object item an input textbox
-      itemHeader += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+localStorage.getItem(headerKey)+'" placeholder="'+headerKey+'" oninput="alert("change");">';
+      itemHeader += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+localStorage.getItem(headerKey)+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)">';
     }
     else
     {
