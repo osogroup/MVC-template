@@ -69,15 +69,7 @@ const createHTML = async () => {
 
 
 
-function anyChange(str) {
-  var change = document.getElementById('input'+str);
-  var changeValue = change.value;
 
-  console.log("Text Box contains..", changeValue);
-  console.log("str is: ", str);
-  localStorage.setItem(str, changeValue);
-  console.log(localStorage);
-}
 
 function doTheHTML() {
   
@@ -190,51 +182,59 @@ const doTheStringify = async () => {
   // closing item header row
   headerHTML += '</div>';
   $('#everything').append(headerHTML);
-
-  // update localStorage values when input fields are changed
-
-  //   update objItem with new changes
-  //   stringify updated objItem
-  //   save (localStorage(<type_id>, objItem))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // check if item (type_id) exists in localStorage
-
-    // pull item from localStorage and set objectItem
-
-  // elseif item doesn't exist then pull data from the object list
-
-    // pull item out of the object list
-
-    // get the objItem by using object type (see line 39 in edit.js)
-
-    // if object id is equal to the one i want then set that object item into objItem
-
-    // set object item 
-
-  // create HTML header and fields
-
-  // when input changes set localStorage
-
-    // update objItem with new changes
-
-    // stringify updated objItem (JSON.stringify(objItem))
-
-    // save to localStorage (with type_id as the localStorage key and the objItem is the value)
-
-    // 
 }
+
+// update localStorage values when input fields are changed
+function anyChange(str) {
+  var change = document.getElementById('input'+str);
+  var changeValue = change.value;
+
+  console.log("Text Box contains..", changeValue);
+  console.log("str is: ", str);
+  localStorage.setItem(str, changeValue);
+  console.log(localStorage);
+}
+//   update objItem with new changes
+//   stringify updated objItem
+//   save (localStorage(<type_id>, objItem))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// check if item (type_id) exists in localStorage
+
+  // pull item from localStorage and set objectItem
+
+// elseif item doesn't exist then pull data from the object list
+
+  // pull item out of the object list
+
+  // get the objItem by using object type (see line 39 in edit.js)
+
+  // if object id is equal to the one i want then set that object item into objItem
+
+  // set object item 
+
+// create HTML header and fields
+
+// when input changes set localStorage
+
+  // update objItem with new changes
+
+  // stringify updated objItem (JSON.stringify(objItem))
+
+  // save to localStorage (with type_id as the localStorage key and the objItem is the value)
+
+  // 
