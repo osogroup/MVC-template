@@ -2,7 +2,7 @@ $(document).ready(function(){
   // outputHTML();
   doTheStringify();
 });
-// get information from URL (objType,id, objItemName, objItemDesc, and objItemTags) 
+// get information from URL (objType, objItemid, objItemName, objItemDesc, and objItemTags) 
 // ex. task, 0, COI: Design Wireframes, These tasks will result in a user interface to create an object item, and 0
 
 
