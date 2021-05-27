@@ -201,7 +201,7 @@ const doTheStringify = async () => {
   // closing item header row
   headerHTML += '</div>';
   $('#everything').append(headerHTML);
-
+  console.log(localStorage);
 
 }
 
