@@ -96,10 +96,10 @@ function doTheHTML() {
 
 
 
-function anyChange(objStr) {
-  console.log("This is the objStr: ", objStr);
-  // var change = document.getElementById('input'+str);
-  // var changeValue = change.value;
+function anyChange(str) {
+  console.log("This is the objStr: ", str);
+  var change = document.getElementById('input'+str);
+  var changeValue = change.value;
 
   // console.log("Text Box contains..", changeValue);
   // console.log("str is: ", str);
@@ -142,7 +142,7 @@ const doTheStringify = async () => {
     console.log("objectKeys exists..!");
     console.log(localStorage);
 
-    //   pull item from localStorage
+    // pull item from localStorage
     localStorage.getItem(objType+'_'+objItemID);
 
   } 
