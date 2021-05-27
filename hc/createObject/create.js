@@ -143,7 +143,7 @@ const doTheStringify = async () => {
   } 
   else {
     var forOfLoop = objTypeData[objItemID]
-    console.log("objectKeys doesn't exist yet..!");
+    console.log("objectKeys was just created..!");
     var repositoryItem = data[objType];
     // console.log("This is the repositoryItem..", repositoryItem);
     // console.log("This is repositoryItem[0]", repositoryItem[0]);
