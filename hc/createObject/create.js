@@ -115,7 +115,6 @@ function anyChange(str) {
 const doTheStringify = async () => {
   var data = await tempData();
   var config = await configData();
-  var objTypeData = data[objType];
   var configTypeData = config[objType];
 
 
@@ -144,6 +143,7 @@ const doTheStringify = async () => {
 
   // if item exists 
   if (localStorage.getItem(objectKeys) != null) {
+    var forOfLoopData = objectKeys;
     console.log("objectKeys exists..!");
     console.log(localStorage);
 
@@ -152,11 +152,13 @@ const doTheStringify = async () => {
 
   } 
   else {
+    var objTypeData = data[objType];
+    var forOfLoopData = objTypeData[objItemID]
     console.log("objectKeys doesn't exist yet..!");
     var repositoryItem = data[objType];
     // console.log("This is the repositoryItem..", repositoryItem);
     // console.log("This is repositoryItem[0]", repositoryItem[0]);
-    //   pull item from repository (get item by using "var objTypeData = data[objType]";)
+    //   pull item from repository 
 
     //   if object id is equal to the one im searching for
     for(const[repositoryKey, repositoryValue] of Object.entries(data[objType])) {
@@ -177,7 +179,7 @@ const doTheStringify = async () => {
   var headerHTML = '<div class="row">';
 
   // create HTML header and fields
-  for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
+  for (const [headerKey, headerValue] of Object.entries(forOfLoopData)) {
     console.log("This is headerKey", headerKey); // id, name
     console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
 
