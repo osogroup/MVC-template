@@ -97,6 +97,7 @@ function doTheHTML() {
 
 
 function anyChange(str) {
+  var superKey = objType+ '_' +objItemID;
   console.log("This is the str: ", str);
   var myString = localStorage.getItem(objType+ '_' +objItemID);
   console.log("This is myString", myString);
@@ -105,10 +106,9 @@ function anyChange(str) {
   var change = document.getElementById('input'+str);
   var changeValue = change.value;
   console.log("This is changeValue: ", changeValue);
-  console.log("myObject[str] before: ", myObject[str]);
-  myObject[str] = changeValue;
-  console.log("myObject[str] after: ", myObject[str]);
-  localStorage.setItem(str, myObject[str]);
+  console.log("this is superKey[str] " , superKey[str])
+  localStorage.setItem(superKey[str], changeValue);
+
   // var itemKey = objType+ '_' +objItemID;
 
   // localStorage.setItem(itemKey.str, changeValue);
