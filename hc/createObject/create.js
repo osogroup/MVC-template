@@ -134,7 +134,7 @@ function doTheStringify() {
   var objItem = {};
 
   // if item exists 
-  if (objectKeys) {
+  if (objectKeys == true) {
     console.log("objectKeys exists..!");
   }
   //   pull item from localStorage
