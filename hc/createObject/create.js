@@ -161,7 +161,7 @@ const doTheStringify = async () => {
   }
   
   // create HTML header and fields
-  for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemid])) {
+  for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemID])) {
     console.log("This is headerKey", headerKey);
     console.log("This is headerValue", headerValue);
 
