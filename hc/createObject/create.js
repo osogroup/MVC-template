@@ -59,15 +59,12 @@ const createHTML = async () => {
 
 
 function anyChange(str) {
-  var myName = document.getElementById('inputBoxName');
-  var myAge = document.getElementById('inputBoxAge');
-  var myNameValue = myName.value;
-  var myAgeValue = myAge.value;
+  var change = document.getElementById('inputBox'+str);
+  var changeValue = change.value;
 
-  console.log("Text Box contains..", myNameValue);
+  console.log("Text Box contains..", changeValue);
   console.log("str is: ", str);
-  localStorage.setItem(str, myNameValue);
-  localStorage.setItem(str, myAgeValue);
+  localStorage.setItem(str, changeValue);
   console.log(localStorage);
 }
 
