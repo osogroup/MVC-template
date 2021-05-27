@@ -140,6 +140,7 @@ const doTheStringify = async () => {
   // if item exists 
   if (objectKeys == true) {
     console.log("objectKeys exists..!");
+    console.log(localStorage);
 
     //   pull item from localStorage
     localStorage.getItem(objType+'_'+objItemID);
@@ -161,6 +162,7 @@ const doTheStringify = async () => {
         var objItemString = JSON.stringify(objItem);
         console.log("This is objItemString: ", objItemString);
         localStorage.setItem(objectKeys, objItemString);
+        console.log(localStorage);
       }
     }
   }
