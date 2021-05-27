@@ -108,7 +108,7 @@ function anyChange(str) {
   console.log("myObject[str] before: ", myObject[str]);
   myObject[str] = changeValue;
   console.log("myObject[str] after: ", myObject[str]);
-  localStorage.setItem(myObject[str], changeValue);
+  localStorage.setItem(str, myObject[str]);
   // var itemKey = objType+ '_' +objItemID;
 
   // localStorage.setItem(itemKey.str, changeValue);
