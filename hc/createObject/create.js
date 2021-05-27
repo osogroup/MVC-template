@@ -1,7 +1,8 @@
 $(document).ready(function(){
   
   // createHTML();
-  doTheHTML();
+  // doTheHTML();
+  doTheStringify();
 });
 
 const configData = async () => {
@@ -58,6 +59,16 @@ const createHTML = async () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
 function anyChange(str) {
   var change = document.getElementById('inputBox'+str);
   var changeValue = change.value;
@@ -85,50 +96,97 @@ function doTheHTML() {
 
 
 
-// example localStorage(task_0, '{"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10}');
-
-var exampleObj = {"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10};
-
-console.log("This is exampleObj: ", exampleObj);
-
-var exampleJSON = JSON.stringify(exampleObj);
-
-console.log("This is exampleJSON: ", exampleJSON);
-
-console.log("Name via exampleObj: ", exampleObj.name);
-
-var JSONObject = JSON.parse(exampleJSON);
-
-console.log("This one's the JSONObject ", JSONObject);
-
-console.log("JSONObject.name... ", JSONObject.name);
 
 
 
-var objItem = {};
 
-// check if item (type_id) exists in localStorage
 
-  // if item exists then pull item from localStorage and set objectItem
+
+
+
+
+
+
+
+function doTheStringify() {
+
+  // example localStorage(task_0, '{"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10}');
+
+  var exampleObj = {"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10};
+
+  console.log("This is exampleObj: ", exampleObj);
+
+  var exampleJSON = JSON.stringify(exampleObj);
+
+  console.log("This is exampleJSON: ", exampleJSON);
+
+  console.log("Name via exampleObj: ", exampleObj.name);
+
+  var JSONObject = JSON.parse(exampleJSON);
+
+  console.log("This one's the JSONObject ", JSONObject);
+
+  console.log("JSONObject.name... ", JSONObject.name);
+
+
+
+  var objItem = {};
+
+  // if item exists 
+  //   pull item from localStorage
+  // 
+  // else
+  //   pull item from repository (get item by using "var objTypeData = data[objType]";)
+  // 
+  //   if object id is equal to the one im searching for
+  //     set this object to objItem
+  
+  // create HTML header and fields
+
+  // update localStorage values when input fields are changed
+  //   update objItem with new changes
+  //   stringify updated onjItem
+  //   save (localStorage(<type_id>, objItem))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  // check if item (type_id) exists in localStorage
+
+    // pull item from localStorage and set objectItem
 
   // elseif item doesn't exist then pull data from the object list
 
-  // pull item out of the object list
+    // pull item out of the object list
 
-  // get the objItem by using object type (see line 39 in edit.js)
+    // get the objItem by using object type (see line 39 in edit.js)
 
-  // if object id is equal to the one i want then set that object item into objItem
+    // if object id is equal to the one i want then set that object item into objItem
 
-  // set object item 
+    // set object item 
 
-// create HTML header and fields
+  // create HTML header and fields
 
-// when input changes set localStorage
+  // when input changes set localStorage
 
-  // update objItem with new changes
+    // update objItem with new changes
 
-  // stringify updated objItem (JSON.stringify(objItem))
+    // stringify updated objItem (JSON.stringify(objItem))
 
-  // save to localStorage (with type_id as the localStorage key and the objItem is the value)
+    // save to localStorage (with type_id as the localStorage key and the objItem is the value)
 
-  // 
+    // 
+}
