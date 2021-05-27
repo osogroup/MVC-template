@@ -106,6 +106,16 @@ const doTheStringify = async () => {
   var objTypeData = data[objType];
   var configTypeData = config[objType];
 
+  function anyChange(str) {
+    var change = document.getElementById('input'+str);
+    var changeValue = change.value;
+  
+    console.log("Text Box contains..", changeValue);
+    console.log("str is: ", str);
+    localStorage.setItem(str, changeValue);
+    console.log(localStorage);
+  }
+
   // example localStorage(task_0, '{"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10}');
 
   var exampleObj = {"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10};
@@ -169,7 +179,7 @@ const doTheStringify = async () => {
     if (configTypeData.editable.includes(headerKey) == true)
     {
       // making object item an input textbox
-      headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+localStorage.getItem(headerKey)+'" placeholder="'+headerKey+'" oninput="anyChange(objItemString, this.placeholder)">';
+      headerHTML += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+localStorage.getItem(headerKey)+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)">';
     }
     else
     {
@@ -184,19 +194,12 @@ const doTheStringify = async () => {
   // closing item header row
   headerHTML += '</div>';
   $('#everything').append(headerHTML);
+
+
 }
 
 // update localStorage values when input fields are changed
-function anyChange(objStr, str) {
-  console.log("This is the objStr ", objStr);
-  var change = document.getElementById('input'+str);
-  var changeValue = change.value;
 
-  console.log("Text Box contains..", changeValue);
-  console.log("str is: ", str);
-  localStorage.setItem(str, changeValue);
-  console.log(localStorage);
-}
 //   update objItem with new changes
 //   stringify updated objItem
 //   save (localStorage(<type_id>, objItem))
