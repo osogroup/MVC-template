@@ -74,7 +74,7 @@ const outputHTML = async () => {
   for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemid])) {
 
     // TOGGLE THIS TO PULL INFO FROM THE LIST PAGE*************************
-    if (localStorage.getItem(id) != headerKey[id]) {
+    if (localStorage.getItem(id) != headerKey.id) {
       localStorage.setItem(headerKey, headerValue);
     }
     console.log("This is headerKey: ", headerKey);
