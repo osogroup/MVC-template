@@ -73,8 +73,8 @@ const outputHTML = async () => {
   // This is INCORRECT, using the ID is only going to work when the ID is equal to the position in the array
   for (const [headerKey, headerValue] of Object.entries(objTypeData[objItemid])) {
 
-    // TOGGLE THIS TO PULL INFO FROM THE LIST PAGE*************************
-    if (localStorage.getItem(headerKey) != headerValue) {
+    console.log("This is the headerValue[0] .. ", headerValue[0]);
+    if (localStorage.getItem(id) != headerValue[0]) {
       localStorage.setItem(headerKey, headerValue);
     }
     console.log("This is headerKey: ", headerKey);
