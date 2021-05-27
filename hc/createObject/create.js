@@ -113,30 +113,13 @@ function anyChange(str) {
   console.log(localStorage);
 }
 
+
 const doTheStringify = async () => {
   var data = await tempData();
   var config = await configData();
   var objTypeData = data[objType];
   var configTypeData = config[objType];
 
-
-  // example localStorage(task_0, '{"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10}');
-
-  var exampleObj = {"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10};
-
-  // console.log("This is exampleObj: ", exampleObj);
-
-  var exampleJSON = JSON.stringify(exampleObj);
-
-  // console.log("This is exampleJSON: ", exampleJSON);
-
-  // console.log("Name via exampleObj: ", exampleObj.name);
-
-  var JSONObject = JSON.parse(exampleJSON);
-
-  // console.log("This one's the JSONObject ", JSONObject);
-
-  // console.log("JSONObject.name... ", JSONObject.name);
 
 
   var objectKeys = objType + '_' + objItemID;
@@ -163,7 +146,7 @@ const doTheStringify = async () => {
     var repositoryItem = data[objType];
     // console.log("This is the repositoryItem..", repositoryItem);
     // console.log("This is repositoryItem[0]", repositoryItem[0]);
-    
+
     //   pull item from repository (get item by using "var objTypeData = data[objType]";)
 
     //   if object id is equal to the one im searching for
@@ -213,6 +196,43 @@ const doTheStringify = async () => {
   $('#everything').append(headerHTML);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // update localStorage values when input fields are changed
 
 //   update objItem with new changes
@@ -226,6 +246,24 @@ const doTheStringify = async () => {
 
 
 
+
+  // example localStorage(task_0, '{"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10}');
+
+  var exampleObj = {"id":0,"name":"COI: Design Wireframes","description":"These tasks will result in a user interface to create an object item.","status":"in-progress","tags":[0],"dueDate":"5/15/2021","estEff":10};
+
+  // console.log("This is exampleObj: ", exampleObj);
+
+  var exampleJSON = JSON.stringify(exampleObj);
+
+  // console.log("This is exampleJSON: ", exampleJSON);
+
+  // console.log("Name via exampleObj: ", exampleObj.name);
+
+  var JSONObject = JSON.parse(exampleJSON);
+
+  // console.log("This one's the JSONObject ", JSONObject);
+
+  // console.log("JSONObject.name... ", JSONObject.name);
 
 
 
