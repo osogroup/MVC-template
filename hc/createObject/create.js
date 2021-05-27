@@ -148,13 +148,13 @@ const doTheStringify = async () => {
 
     //   if object id is equal to the one im searching for
     for(const[repositoryKey, repositoryValue] of Object.entries(data[objType])) {
-      console.log("This is repositoryKey: ", repositoryKey); // this is the id number 
-      console.log("This is repositoryValue: ", repositoryValue); // this is the object
-      // if (repositoryItem[id] == objectKeys) {
-      //   objItem = repositoryItem;
-      //   console.log("This is objItem: ", objItem);
+      // console.log("This is repositoryKey: ", repositoryKey); // this is the id number 
+      // console.log("This is repositoryValue: ", repositoryValue); // this is the object
+      if (objType+repositoryItem[repositoryKey] == objectKeys) {
+        objItem = repositoryItem[repositoryKey];
+        console.log("This is objItem: ", objItem);
   
-      // } 
+      } 
 
     }
     //     set this object to objItem
