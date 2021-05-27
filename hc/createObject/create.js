@@ -124,7 +124,7 @@ const doTheStringify = async () => {
 
 
   var objectKeys = objType + '_' + objItemID;
-  console.log("This is objectKeys: ", objectKeys);
+  // console.log("This is objectKeys: ", objectKeys);
   var objItem = {};
 
   // if item exists 
@@ -171,8 +171,8 @@ const doTheStringify = async () => {
 
   // create HTML header and fields
   for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
-    console.log("This is headerKey", headerKey); // id, name
-    console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
+    // console.log("This is headerKey", headerKey); // id, name
+    // console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
     headerHTML += '<div class="col-4 minHeight">'
                   + '<div class="col-12">'+headerKey+'</div>';
     if (configTypeData.editable.includes(headerKey) == true)
