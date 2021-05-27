@@ -82,7 +82,7 @@ function doTheHTML() {
   localStorage.setItem("", "Riley Anderson");
   console.log(localStorage);
 
-  var inputBox = '<br><br><br><input class="col-8" id="inputBox" type="textarea" oninput="anyChange("name")">';
+  var inputBox = '<br><br><br><input class="col-8" id="inputBox" type="textarea" placeholder="name" oninput="anyChange(this.placeholder)">';
   $('#everything').append(inputBox);
 
 }
