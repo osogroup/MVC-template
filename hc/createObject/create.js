@@ -65,6 +65,7 @@ function anyChange(str) {
   console.log("Text Box contains..", changeValue);
   console.log("str is: ", str);
   localStorage.setItem(str, changeValue);
+  console.log(localStorage);
 }
 
 
