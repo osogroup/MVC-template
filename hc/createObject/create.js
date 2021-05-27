@@ -148,6 +148,7 @@ function doTheStringify() {
   //   stringify updated onjItem
   //   save (localStorage(<type_id>, objItem))
 
+  console.log("This is objItem: ", objItem);
 
 
 
@@ -163,7 +164,6 @@ function doTheStringify() {
 
 
 
-  
   // check if item (type_id) exists in localStorage
 
     // pull item from localStorage and set objectItem
