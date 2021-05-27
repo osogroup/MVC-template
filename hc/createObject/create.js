@@ -96,15 +96,15 @@ function doTheHTML() {
 
 
 
-function anyChange(objStr, str) {
+function anyChange(objStr) {
   console.log("This is the objStr: ", objStr);
-  var change = document.getElementById('input'+str);
-  var changeValue = change.value;
+  // var change = document.getElementById('input'+str);
+  // var changeValue = change.value;
 
-  console.log("Text Box contains..", changeValue);
-  console.log("str is: ", str);
-  localStorage.setItem(str, changeValue);
-  console.log(localStorage);
+  // console.log("Text Box contains..", changeValue);
+  // console.log("str is: ", str);
+  // localStorage.setItem(str, changeValue);
+  // console.log(localStorage);
 }
 
 const doTheStringify = async () => {
