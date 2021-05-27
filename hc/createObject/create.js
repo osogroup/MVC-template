@@ -107,7 +107,7 @@ function anyChange(str) {
   var changeValue = change.value;
   console.log("This is changeValue: ", changeValue);
   console.log("this is superKey[str] " , superKey[str])
-  localStorage.setItem(superKey[str], changeValue);
+  // localStorage.setItem(superKey[str], changeValue);
 
   // var itemKey = objType+ '_' +objItemID;
 
