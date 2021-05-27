@@ -94,8 +94,7 @@ function doTheHTML() {
 
 function showValue() {
   var superKey = objType+ '_' +objItemID;
-  var superString = localStorage.getItem(superKey);
-  var superObject = JSON.parse(superString);
+  var superObject = JSON.parse(localStorage.getItem(superKey));
   console.log(superObject);
 }
 
