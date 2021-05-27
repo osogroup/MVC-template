@@ -150,12 +150,11 @@ const doTheStringify = async () => {
     for(const[repositoryKey, repositoryValue] of Object.entries(data[objType])) {
       console.log("This is repositoryKey: ", repositoryKey);
       console.log("This is repositoryValue: ", repositoryValue);
-
-      if (repositoryItem[id] == objectKeys) {
-        objItem = repositoryItem;
-        console.log("This is objItem: ", objItem);
+      // if (repositoryItem[id] == objectKeys) {
+      //   objItem = repositoryItem;
+      //   console.log("This is objItem: ", objItem);
   
-      } 
+      // } 
 
     }
     //     set this object to objItem
