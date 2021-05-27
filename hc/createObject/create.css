@@ -11,3 +11,6 @@
 #imageSpacing {
   padding: 15px 0px 0px 15px;
 }
+.row .minHeight {
+  min-height: 85px;
+}
