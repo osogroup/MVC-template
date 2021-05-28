@@ -104,7 +104,7 @@ const createHTML = async () => {
                       + '<option value="table_class">PHP Table Class</option>'
                       + '<option value="order_forms">PHP Order Forms</option>'
                     + '</select>'
-                    + '<input type="text" size="30" name="display" id="display" />'
+                    + '<br><input type="text" size="30" name="display" id="display" />'
                   + '</p>'
                   + '<p>'
                     + '<input type="button" id="showVal" value="Value Property" />'
