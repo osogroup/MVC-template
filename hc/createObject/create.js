@@ -143,7 +143,7 @@ const createHTML = async () => {
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
       element.value = select.options[select.selectedIndex].text;
-      var HTMLelement = element.value+'<br>';
+      var HTMLelement = element.value+'<button onclick="removeField()">-</button><br>';
       $('#display').append(HTMLelement);
       
     }
@@ -177,7 +177,14 @@ const generateID = async () => {
 }
 
 
-
+removeBtns.click(function() {
+  console.log("Entering remove function", this);
+  var listContainer = $(this).parent().parent().parent().parent().attr('id');
+  var itemId = $(this).parent().parent().find('.id').text();
+  console.log("this is the item id " + itemId);
+  var obj = new List(listContainer, options);
+  obj.remove('id', itemId);
+});
 
 
 
