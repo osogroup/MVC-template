@@ -22,6 +22,10 @@ const createHTML = async () => {
   var data = await tempData();
   var config = await configData();
 
+
+  // ---------------------------------------------- Navigation Bar ----------------------------------------------
+
+
   var HTMLoutput = '<div id="contacts">'
   + '<div class="row">'
     + '<p id="header">'
