@@ -116,7 +116,7 @@ const createHTML = async () => {
       return option;
     }
     document.getElementById('showTxt').onclick = function() {
-
+      element.value = select.options[select.SelectedIndex].text;
     }
   }());
 
