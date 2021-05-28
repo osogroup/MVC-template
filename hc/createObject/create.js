@@ -5,8 +5,8 @@ $(document).ready(function(){
   // doTheStringify();
 });
 
-function getSelectedItem() {
-
+const getSelectedItem = async () => {
+  await createHTML();
   var selected = document.getElementsByClassName(options);
   var array = [];
 
