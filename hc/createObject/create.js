@@ -79,12 +79,20 @@ const createHTML = async () => {
   // closing item header and input row
   HTMLoutput += '</div>';
 
-  HTMLoutput += '<select name="letters" id="">'
+  HTMLoutput += '<select name="letters" id="option">'
                 + '<option value="a">a</option>'
                 + '<option value="b">b</option>'
                 + '<option value="c">c</option>'
               + '</select>';
 
+  var array = [];
+
+  function getSelectedItem(opt) {
+    var selected = document.getElementById(opt);
+    var strSelected = selected.options[selected.SelectedIndex].text;
+    array.push(strSelected);
+    console.log("This is my array: ", array);
+  }
 
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
