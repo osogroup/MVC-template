@@ -110,14 +110,14 @@ const createHTML = async () => {
 
 
     function getSelectedOption(select) {
-        var opt;
+        var option;
         for ( var i = 0, len = select.options.length; i < len; i++ ) {
-            opt = select.options[i];
-            if ( opt.selected === true ) {
+            option = select.options[i];
+            if ( option.selected === true ) {
                 break;
             }
         }
-        return opt;
+        return option;
     }
 
     // assign onclick handlers to the buttons
@@ -131,8 +131,8 @@ const createHTML = async () => {
     }
 
     document.getElementById('doLoop').onclick = function () {
-        var opt = getSelectedOption(select);
-        element.value = opt.value;
+        var option = getSelectedOption(select);
+        element.value = option.value;
     }
     
 }());
