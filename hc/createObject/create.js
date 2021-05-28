@@ -94,7 +94,6 @@ const createHTML = async () => {
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
                   + '<p>'
-                 // + '<input type="text" size="30" name="display" id="display" />'
                     + '<div id="display"></div>'
                     + '<br><select id="scripts" name="scripts">'
                       + '<option value="scroll">Scrolling Divs JavaScript</option>'
@@ -145,7 +144,6 @@ const createHTML = async () => {
       element.value = select.options[select.selectedIndex].text;
       var HTMLelement = element.value+' <button onclick="removeFunction()">-</button><br>';
       $('#display').append(HTMLelement);
-      
     }
 
     // document.getElementById('doLoop').onclick = function () {
