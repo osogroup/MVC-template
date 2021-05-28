@@ -103,6 +103,7 @@ const createHTML = async () => {
   
   $('#everything').append(HTMLoutput);
 
+  removeFunction();
 
   (function() {
     
@@ -128,8 +129,6 @@ const createHTML = async () => {
       $('#display').append(HTMLelement);
     }
   }());
-
-  removeFunction();
 
   function removeFunction() {
     var removeVar = $('.removeButton');
