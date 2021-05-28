@@ -132,7 +132,8 @@ const createHTML = async () => {
 
   removeFunction();
 
-  function removeFunction() {
+  const removeFunction = async () => {
+    await getSelectedOption();
     var removeVar = $('.removeButton');
   }
 
