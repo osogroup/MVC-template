@@ -173,7 +173,7 @@ const generateID = async () => {
   // console.log("this is the itemId " + itemId);
   // var obj = new List(listContainer, options);
   // obj.remove('id', itemId);
-}
+// }
 
 
 
