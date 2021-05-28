@@ -66,9 +66,9 @@ const createHTML = async () => {
     // else
     else {
       //   do what I already did below
-      HTMLoutput += '<br><input type=textarea>'
+      HTMLoutput += '<br><input type=textarea>';
     }
-                + '</div>';
+    HTMLoutput += '</div>';
   }
 
   // closing item header and input row
