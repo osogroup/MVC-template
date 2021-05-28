@@ -98,12 +98,12 @@ const createHTML = async () => {
               + '<button onClick="getSelectedItems()">Add</button>';
 
 
+  // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
+  
+  $('#everything').append(HTMLoutput);  
   var e = document.getElementById('options');
   var strUser = e.options[e.SelectedIndex].text;
   console.log("This is strUser: ", strUser);
-  // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
-
-  $('#everything').append(HTMLoutput);  
 }
 
 const generateID = async () => {
