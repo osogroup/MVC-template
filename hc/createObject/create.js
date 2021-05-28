@@ -141,8 +141,7 @@ const createHTML = async () => {
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
       element.value = select.options[select.selectedIndex].text;
-      HTMLoutput += '<div>'+element.value+'</div>';
-
+      arrayStuff += '<div>'+element.value+'</div>';
     }
 
     // document.getElementById('doLoop').onclick = function () {
@@ -152,12 +151,13 @@ const createHTML = async () => {
     
   }());
 
+  $('#everything').append(HTMLoutput);
 
-    // console.log("This is e: ", e);
-    // var strUser = e.options;
-    // console.log("This is strUser: ", strUser);
-    // var eSelected = strUser.option[strUser.innerHTML];
-    // console.log("This is eSelected: ", eSelected);
+  // console.log("This is e: ", e);
+  // var strUser = e.options;
+  // console.log("This is strUser: ", strUser);
+  // var eSelected = strUser.option[strUser.innerHTML];
+  // console.log("This is eSelected: ", eSelected);
 }
 
 const generateID = async () => {
