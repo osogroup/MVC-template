@@ -91,9 +91,9 @@ const createHTML = async () => {
   HTMLoutput += '</div>';
 
   HTMLoutput += '<select name="letters" id="options">'
-                + '<option value="a">a</option>'
-                + '<option value="b">b</option>'
-                + '<option value="c">c</option>'
+                + '<option value="a">A</option>'
+                + '<option value="b">B</option>'
+                + '<option value="c">C</option>'
               + '</select>'
               + '<button onClick="getSelectedItems()">Add</button>';
 
