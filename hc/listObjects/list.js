@@ -238,6 +238,7 @@ const createHTML = async () => {
       // getting item attributes
       // console.log("THIS IS MY FOCUS", data[objType]);
       for (const [SLKey, SLValue] of Object.entries(data[objType])) {
+        
         // creating the object item rows
         objItems += '<div class="row">';
 
@@ -258,19 +259,14 @@ const createHTML = async () => {
 
 
         // creating edit buttons
-        objItems += '<div class=col-1><a href="/hc/editObject/?type='+objType+'&itemid='+SLValue.id;
-
-        // for loop to get all the editable fields
-        // for (const[editableKey, editableValue] of Object.entries(SLValue)) {
-        //   // console.log("This is editableKey: ", editableKey);
-        //   // console.log("This is editableValue: ", editableValue);
-        //   objItems += '&item'+editableKey+'='+editableValue;
-        // } 
-        objItems += '"><button class="edit-item-btn"> Edit </button></a>'
-                + '</div>'
-                + '<div class=col-1>'
-                  + '<button class="remove-item-btn"> Remove </button>'
-                + '</div>';
+        objItems += '<div class=col-1>'
+                    + '<a href="/hc/editObject/?type='+objType+'&itemid='+SLValue.id;+'">'
+                      + '<button class="edit-item-btn"> Edit </button>'
+                    + '</a>'
+                  + '</div>'
+                  + '<div class=col-1>'
+                    + '<button class="remove-item-btn"> Remove </button>'
+                  + '</div>';
 
         // closing object item row
           objItems  += '</div>';
