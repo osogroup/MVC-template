@@ -57,7 +57,7 @@ const createHTML = async () => {
     // creating the header and input fields
     HTMLoutput += '<div class="col-4">'
                   + '<div class="col-12">'+editableValue+'</div>';
-    // 
+    
     // if the editableValue is in the required list according to objType 
     if (configTypeData.editable.includes(headerKey) == true) {
       //   make the input box with a "required" attribute
@@ -68,6 +68,8 @@ const createHTML = async () => {
       //   do what I already did below
       HTMLoutput += '<br><input type=textarea>';
     }
+
+    // closing the header and input fields
     HTMLoutput += '</div>';
   }
 
