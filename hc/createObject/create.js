@@ -39,16 +39,7 @@ const createHTML = async () => {
   // closing header row
   HTMLoutput += '</p>';
 
-//   // making a propt scenario where there is no object type selected
-//   if (objType == null) {
-//     HTMLoutput += '<h1>Select Item from Header to Create Item...</h1>';
-//   }
-//   else {
-//     HTMLoutput += '<h1>Create '+objType+' Item</h1>';
-//   }
-//   HTMLoutput += '</div>';
-//   $('#everything').append(HTMLoutput);
-  
+  $('everything').append(HTMLoutput);  
 }
 
 
@@ -75,6 +66,41 @@ const createHTML = async () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   // making a propt scenario where there is no object type selected
+//   if (objType == null) {
+//     HTMLoutput += '<h1>Select Item from Header to Create Item...</h1>';
+//   }
+//   else {
+//     HTMLoutput += '<h1>Create '+objType+' Item</h1>';
+//   }
+//   HTMLoutput += '</div>';
+//   $('#everything').append(HTMLoutput);
+
+
 // function doTheHTML() {
   
 //   console.log(localStorage);
@@ -85,13 +111,6 @@ const createHTML = async () => {
 //   $('#everything').append(inputBox);
 
 // }
-
-
-
-
-
-
-
 
 
 
