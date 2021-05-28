@@ -79,10 +79,10 @@ const createHTML = async () => {
   // closing item header and input row
   HTMLoutput += '</div>';
 
-  HTMLoutput += '<select name="" id="">'
-                + '<option value="a"></option>'
-                + '<option value="b"></option>'
-                + '<option value="c"></option>'
+  HTMLoutput += '<select name="letters" id="">'
+                + '<option value="a">a</option>'
+                + '<option value="b">b</option>'
+                + '<option value="c">b</option>'
               + '</select>';
 
 
