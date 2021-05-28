@@ -39,7 +39,7 @@ const createHTML = async () => {
   // closing header row
   HTMLoutput += '</p>';
 
-  $('everything').append(HTMLoutput);  
+  $('#everything').append(HTMLoutput);  
 }
 
 
