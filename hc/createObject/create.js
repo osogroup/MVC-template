@@ -124,10 +124,29 @@ const createHTML = async () => {
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
       element.value = select.options[select.selectedIndex].text;
-      var HTMLelement = '<div class="row">'+element.value+' <input type="button" value="-" onclick="removeFunction()"></div>';
+      var HTMLelement = '<div class="row">'+element.value+' <input type="button" class="removeButton" value="-"></div>';
       $('#display').append(HTMLelement);
     }
   }());
+
+  removeFunction()
+
+  function removeFunction() {
+    var removeVar = $('.removeButton');
+  }
+
+  removeVar.click(function() {
+    console.log("Entering removeField function", this);
+    // var listContainer = $(this).parent().parent().parent().parent().attr('id');
+    // console.log("This is listContainer: ", listContainer);
+    // var itemId = $(this).parent()find('.display').text();
+    // var itemId = $(this).parent();
+    // console.log("this is the itemId " + itemId);
+    // var obj = new List(listContainer, options);
+    // obj.remove('id', itemId);
+
+  });
+
 }
 
 const generateID = async () => {
@@ -145,13 +164,13 @@ const generateID = async () => {
 }
 
 
-function removeFunction() {
-  console.log("Entering removeField function", this);
+// function removeFunction() {
+//   console.log("Entering removeField function", this);
   // var listContainer = $(this).parent().parent().parent().parent().attr('id');
   // console.log("This is listContainer: ", listContainer);
   // var itemId = $(this).parent()find('.display').text();
-  var itemId = $(this).parent();
-  console.log("this is the itemId " + itemId);
+  // var itemId = $(this).parent();
+  // console.log("this is the itemId " + itemId);
   // var obj = new List(listContainer, options);
   // obj.remove('id', itemId);
 }
