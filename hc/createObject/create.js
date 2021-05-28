@@ -125,13 +125,15 @@ const createHTML = async () => {
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
       element.value = select.options[select.selectedIndex].text;
-      var HTMLelement = '<div class="row">'+element.value+' <input type="button" class="removeButton" value="-"></div>';
+      var HTMLelement = '<div class="row">'+element.value+' <input type="button" onclick="removeFunction()" value="-"></div>';
       $('#display').append(HTMLelement);
     }
   }());
 
   function removeFunction() {
-    $('.removeButton').click(function() {
+    var removeVar = $('.removeButton')
+    
+    removeVar.click(function() {
       console.log("Entering removeVar.click function", this);
       // var listContainer = $(this).parent().parent().parent().parent().attr('id');
       // console.log("This is listContainer: ", listContainer);
