@@ -125,7 +125,7 @@ const createHTML = async () => {
   var config = await configData();
 
 
-  // ------------------------------------------------------- Page Header -------------------------------------------------------
+  // --------------------------------------------- Navigation Bar ---------------------------------------------
 
 
   var headerHTML = '<div id="contacts">'
@@ -260,7 +260,7 @@ const createHTML = async () => {
 
         // creating edit buttons
         objItems += '<div class=col-1>'
-                    + '<a href="/hc/editObject/?type='+objType+'&itemid='+SLValue.id;+'">'
+                    + '<a href="/hc/editObject/?type='+objType+'&itemid='+SLValue.id+'">'
                       + '<button class="edit-item-btn"> Edit </button>'
                     + '</a>'
                   + '</div>'
