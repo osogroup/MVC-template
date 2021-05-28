@@ -106,7 +106,7 @@ const createHTML = async () => {
   var strUser = e.options;
   console.log("This is strUser: ", strUser);
   var eSelected = strUser[e.SelectedIndex].text;
-  console.log("This is strUser: ", strUser);
+  console.log("This is eSelected: ", eSelected);
 }
 
 const generateID = async () => {
