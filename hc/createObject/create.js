@@ -143,7 +143,7 @@ const createHTML = async () => {
       // var obj = new List(listContainer, options);
       // obj.remove('id', itemId);
     
-    });
+    // });
   }
 }
 
