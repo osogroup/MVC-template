@@ -86,8 +86,6 @@ const createHTML = async () => {
               + '</select>'
               + '<button onclick="getSelectedItems()">Add</button>';
 
-  var array = [];
-
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
   $('#everything').append(HTMLoutput);  
@@ -107,10 +105,15 @@ const generateID = async () => {
   return i;
 }
 
-function getSelectedItem(opt) {
-  var selected = document.getElementById(opt);
-  var strSelected = selected.options[selected.SelectedIndex].text;
-  array.push(strSelected);
+function getSelectedItem() {
+  var selected = document.getElementById(option);
+  var array = [];
+
+  for (var i = 0; i<selected.length; i++) {
+    var select = selected[i];
+    var strSelected = select.options[select.SelectedIndex].text;
+    array.push(strSelected);
+  }
   console.log("This is my array: ", array);
 }
 
