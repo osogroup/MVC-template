@@ -5,7 +5,7 @@ $(document).ready(function(){
   // doTheStringify();
 });
 
-window.addEventListener('click', function getSelectedItem() {
+function getSelectedItem() {
 
   var selected = document.getElementsByClassName(options);
   var array = [];
@@ -16,7 +16,7 @@ window.addEventListener('click', function getSelectedItem() {
     array.push(strSelected);
   }
   console.log("This is my array: ", array);
-});
+}
 
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
