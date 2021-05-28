@@ -92,7 +92,7 @@ const createHTML = async () => {
   // closing item header and input row
   HTMLoutput += '</div>';
 
-  HTMLoutput += '<select name="letters" class="options">'
+  HTMLoutput += '<select name="letters" id="options">'
                 + '<option value="a">a</option>'
                 + '<option value="b">b</option>'
                 + '<option value="c">c</option>'
@@ -102,6 +102,8 @@ const createHTML = async () => {
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
   $('#everything').append(HTMLoutput);  
+  var yourSelect = document.getElementById(options);
+  console.log(yourSelect.options[[yourSelect.SelectedIndex].value]);
 }
 
 const generateID = async () => {
