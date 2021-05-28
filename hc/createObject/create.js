@@ -90,22 +90,22 @@ const createHTML = async () => {
   // closing item header and input row
   HTMLoutput += '</div>';
 
-  HTMLoutput += '<select name="letters" id="option">'
-                + '<option value="a">A</option>'
-                + '<option value="b">B</option>'
-                + '<option value="c">C</option>'
-              + '</select>';
+  // HTMLoutput += '<select name="letters" id="options">'
+  //               + '<option value="a">A</option>'
+  //               + '<option value="b">B</option>'
+  //               + '<option value="c">C</option>'
+  //             + '</select>';
 
 
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
   
   $('#everything').append(HTMLoutput);  
 
-  var e = document.getElementById('options');
+  var e = document.getElementById('opt');
   console.log("This is e: ", e);
   var strUser = e.options;
   console.log("This is strUser: ", strUser);
-  var eSelected = strUser.innerHTML();
+  var eSelected = strUser.option[inner];
   console.log("This is eSelected: ", eSelected);
 }
 
