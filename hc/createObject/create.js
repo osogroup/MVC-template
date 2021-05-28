@@ -78,10 +78,15 @@ const createHTML = async () => {
   // closing item header and input row
   HTMLoutput += '</div>';
 
+  var arrayFields = [ 'peter', 'john', 'james' ];
+
   HTMLoutput += '<form action="#" method="post" id="demoForm" class="demoForm">'
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
                   + '<p>'
+  for (const[arrayKey] of Object.entries(arrayFields)) {
+    console.log("This is the arrayKey: ", arrayKey);
+  }
                     + '<div id="display"></div>'
                     + '<br><select id="scripts" name="scripts">'
                       + '<option value="scroll">Scrolling Divs JavaScript</option>'
@@ -134,7 +139,7 @@ function removeFunction() {
   var removeVar = $('.removeButton')
   
   // removeVar.click(function() {
-    console.log("This is this: ", this.HTMLInputElement());
+    console.log("This is this: ", this);
     // var listContainer = $(this).parent().parent().parent().parent().attr('id');
     // console.log("This is listContainer: ", listContainer);
     // var itemId = $(this).parent()find('.display').text();
