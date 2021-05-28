@@ -142,6 +142,7 @@ const createHTML = async () => {
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
       element.value = select.options[select.selectedIndex].text;
+      console.log(element.value);
     }
 
     // document.getElementById('doLoop').onclick = function () {
