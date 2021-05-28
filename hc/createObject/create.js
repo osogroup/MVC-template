@@ -90,11 +90,29 @@ const createHTML = async () => {
   // closing item header and input row
   HTMLoutput += '</div>';
 
-  // HTMLoutput += '<select name="letters" id="options">'
-  //               + '<option value="a">A</option>'
-  //               + '<option value="b">B</option>'
-  //               + '<option value="c">C</option>'
-  //             + '</select>';
+  HTMLoutput += '<form action="#" method="post" id="demoForm" class="demoForm">'
+                + '<fieldset>'
+                  + '<legend>Demo: Get Value or Text of Selected Option</legend>'
+                  + '<p>'
+                    + '<select id="scripts" name="scripts">'
+                      + '<option value="scroll">Scrolling Divs JavaScript</option>'
+                      + '<option value="tooltip">JavaScript Tooltips</option>'
+                      + '<option value="con_scroll">Continuous Scroller</option>'
+                      + '<option value="banner">Rotating Banner JavaScript</option>'
+                      + '<option value="random_img">Random Image PHP</option>'
+                      + '<option value="form_builder">PHP Form Generator</option>'
+                      + '<option value="table_class">PHP Table Class</option>'
+                      + '<option value="order_forms">PHP Order Forms</option>'
+                    + '</select>'
+                    + '<input type="text" size="30" name="display" id="display" />'
+                  + '</p>'
+                  + '<p>'
+                    + '<input type="button" id="showVal" value="Value Property" />'
+                    + '<input type="button" id="showTxt" value="selectedIndex/Text" />'
+                    + '<input type="button" id="doLoop" value="Value from Loop" />'
+                  + '</p>'
+                + '</fieldset>'
+              + '</form>';
 
 
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
