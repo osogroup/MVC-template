@@ -92,7 +92,7 @@ const createHTML = async () => {
 
   HTMLoutput += '<form action="#" method="post" id="demoForm" class="demoForm">'
                 + '<fieldset>'
-                  + '<legend>Demo: Get Value or Text of Selected Option</legend>'
+                  + '<legend>Get Text of Selected Option</legend>'
                   + '<p>'
                     + '<select id="scripts" name="scripts">'
                       + '<option value="scroll">Scrolling Divs JavaScript</option>'
