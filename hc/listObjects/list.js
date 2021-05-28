@@ -362,7 +362,7 @@ const createHTML = async () => {
         
         // editBtn.show();
         // addBtn.hide();
-      });
+      // });
       // Exit of refreshCallbacks();
     }
 
