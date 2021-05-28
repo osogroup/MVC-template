@@ -5,7 +5,8 @@ $(document).ready(function(){
   // doTheStringify();
 });
 
-function getSelectedItem() {
+window.addEventListener('load', function getSelectedItem() {
+
   var selected = document.getElementById(option);
   var array = [];
 
@@ -15,7 +16,7 @@ function getSelectedItem() {
     array.push(strSelected);
   }
   console.log("This is my array: ", array);
-}
+});
 
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
