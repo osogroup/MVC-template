@@ -47,6 +47,8 @@ const createHTML = async () => {
 }
 
 function generateID() {
+  var data = await tempData();
+  var objTypeData = data[objType];
   for(const [idKey, idValue] of Object.entries(objTypeData.id)) {
     console.log("This is idKey: ", idKey);
     console.log("This is idValue: ", idValue);
