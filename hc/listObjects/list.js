@@ -352,16 +352,16 @@ const createHTML = async () => {
       MultipleEditBtns.click(function() {
         var itemId = $(this).parent().parent().find('.id').text();
         var itemValues = obj.get('id', itemId)[0].values();
-        idField.val(itemValues.id);
-        nameField.val(itemValues.name);
+        // idField.val(itemValues.id);
+        // nameField.val(itemValues.name);
         // descField.val(itemValues.desc);
         // statusField.val(itemValues.status);
         // tagsField.val(itemValues.tags);
         // dueField.val(itemValues.due);
         // estField.val(itemValues.est);
         
-        editBtn.show();
-        addBtn.hide();
+        // editBtn.show();
+        // addBtn.hide();
       });
       // Exit of refreshCallbacks();
     }
