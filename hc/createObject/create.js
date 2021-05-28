@@ -101,7 +101,18 @@ const createHTML = async () => {
   
   $('#everything').append(HTMLoutput);  
 
-  var e = document.getElementById('opt');
+  var sel = document.getElementById('opt');
+
+  function getSelectedOption(sel) {
+    var option;
+    for ( var i = 0, len = sel.options.length; i < len; i++ ) {
+      option = sel.options[i];
+      if (option.selected == true) {
+        break;
+      }
+    }
+    return option;
+  }
   console.log("This is e: ", e);
   var strUser = e.options;
   console.log("This is strUser: ", strUser);
