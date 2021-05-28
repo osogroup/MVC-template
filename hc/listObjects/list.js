@@ -265,7 +265,7 @@ const createHTML = async () => {
         //   // console.log("This is editableKey: ", editableKey);
         //   // console.log("This is editableValue: ", editableValue);
         //   objItems += '&item'+editableKey+'='+editableValue;
-        } 
+        // } 
         objItems += '"><button class="edit-item-btn"> Edit </button></a>'
                 + '</div>'
                 + '<div class=col-1>'
