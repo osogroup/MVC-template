@@ -124,7 +124,7 @@ const createHTML = async () => {
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
       element.value = select.options[select.selectedIndex].text;
-      var HTMLelement = element.value+' <input type="button" onclick="removeFunction()">-<br>';
+      var HTMLelement = element.value+' <input type="button" onclick="removeFunction()">-</input><br>';
       $('#display').append(HTMLelement);
     }
   }());
