@@ -87,7 +87,7 @@ const createHTML = async () => {
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
     console.log("This is the arrayValue: ", arrayValue);
   }
-                    + '<div id="display"></div>'
+  HTMLoutput +=     '<div id="display"></div>'
                     + '<br><select id="scripts" name="scripts">'
                       + '<option value="scroll">Scrolling Divs JavaScript</option>'
                       + '<option value="tooltip">JavaScript Tooltips</option>'
