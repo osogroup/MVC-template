@@ -5,18 +5,6 @@ $(document).ready(function(){
   // doTheStringify();
 });
 
-function getSelectedItem() {
-  var selected = document.getElementById(option);
-  var array = [];
-
-  for (var i = 0; i<selected.length; i++) {
-    var select = selected[i];
-    var strSelected = select.options[select.SelectedIndex].text;
-    array.push(strSelected);
-  }
-  console.log("This is my array: ", array);
-}
-
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
   // console.log("configData output ", listConfig);
