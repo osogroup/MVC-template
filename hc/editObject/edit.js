@@ -127,32 +127,16 @@ const outputHTML = async () => {
   console.log("Exiting outputHTML()");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// function that is called when the Update button is pressed, it displays 
+// the value that is being edited in the console
 function showValue() {
   var superKey = objType+ '_' +objItemid;
   var superObject = JSON.parse(localStorage.getItem(superKey));
   console.log(superObject);
 }
 
+// function that is called when you blur a textbox, I use this in my onchange
+// attribute so I don't see the console log until I click away from an input
 function showData() {
   console.log(localStorage);
 }
@@ -172,7 +156,6 @@ function anyChange(str) {
   // console.log("This is backToString ", backToString);
   localStorage.setItem(superKey, backToString);
 }
-
 
 const doTheStringify = async () => {
 
