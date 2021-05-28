@@ -129,8 +129,6 @@ const createHTML = async () => {
     }
   }());
 
-  removeFunction();
-
 }
 
 const removeFunction = async () => {
