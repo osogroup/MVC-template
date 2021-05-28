@@ -84,8 +84,8 @@ const createHTML = async () => {
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
                   + '<p>'
-  for (const[arrayKey] of Object.entries(arrayFields)) {
-    console.log("This is the arrayKey: ", arrayKey);
+  for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
+    console.log("This is the arrayValue: ", arrayValue);
   }
                     + '<div id="display"></div>'
                     + '<br><select id="scripts" name="scripts">'
