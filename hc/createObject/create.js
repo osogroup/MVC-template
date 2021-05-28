@@ -46,7 +46,7 @@ const createHTML = async () => {
   $('#everything').append(HTMLoutput);  
 }
 
-function generateID() {
+const generateID = async () => {
   var data = await tempData();
   var objTypeData = data[objType];
   for(const [idKey, idValue] of Object.entries(objTypeData.id)) {
