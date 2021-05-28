@@ -258,13 +258,13 @@ const createHTML = async () => {
 
 
         // creating edit buttons
-        objItems += '<div class=col-1><a href="/hc/editObject/?type='+objType;
+        objItems += '<div class=col-1><a href="/hc/editObject/?type='+objType+'&itemid='+SLValue.id;
 
         // for loop to get all the editable fields
-        for (const[editableKey, editableValue] of Object.entries(SLValue)) {
-          // console.log("This is editableKey: ", editableKey);
-          // console.log("This is editableValue: ", editableValue);
-          objItems += '&item'+editableKey+'='+editableValue;
+        // for (const[editableKey, editableValue] of Object.entries(SLValue)) {
+        //   // console.log("This is editableKey: ", editableKey);
+        //   // console.log("This is editableValue: ", editableValue);
+        //   objItems += '&item'+editableKey+'='+editableValue;
         } 
         objItems += '"><button class="edit-item-btn"> Edit </button></a>'
                 + '</div>'
