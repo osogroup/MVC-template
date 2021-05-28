@@ -2,19 +2,7 @@ $(document).ready(function(){
   // outputHTML();
   doTheStringify();
 });
-// get information from URL (objType, objItemid, objItemName, objItemDesc, and objItemTags) 
-// ex. task, 0, COI: Design Wireframes, These tasks will result in a user interface to create an object item, and 0
 
-
-function anyChange(str) {
-  var change = document.getElementById('input'+str);
-  var changeValue = change.value;
-
-  console.log("Text Box contains..", changeValue);
-  console.log("str is: ", str);
-  localStorage.setItem(str, changeValue);
-  console.log(localStorage);
-}
 
 // pull in data from objectList.JSON and configuration JSON file 
 const configData = async () => {
@@ -23,12 +11,14 @@ const configData = async () => {
   return listConfig;
 }
   
+
   // gets all the Objects/Arrays from listOfObjects.json and returns them
 const tempData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
   // console.log("tempData output ", objVars);
   return objVars;
 }
+
 
 // function to create editObject HTML
 const outputHTML = async () => {
@@ -127,6 +117,7 @@ const outputHTML = async () => {
   console.log("Exiting outputHTML()");
 }
 
+
 // function that is called when the Update button is pressed, it displays 
 // the value that is being edited in the console
 function showValue() {
@@ -135,12 +126,16 @@ function showValue() {
   console.log(superObject);
 }
 
+
 // function that is called when you blur a textbox, I use this in my onchange
 // attribute so I don't see the console log until I click away from an input
 function showData() {
   console.log(localStorage);
 }
 
+
+// function that is linked to the oninput attribute in the input box, every time
+// the value in the box is changed, this function will update the localStorage
 function anyChange(str) {
   var superKey = objType+ '_' +objItemid;
   // console.log("This is the str: ", str);
@@ -156,6 +151,7 @@ function anyChange(str) {
   // console.log("This is backToString ", backToString);
   localStorage.setItem(superKey, backToString);
 }
+
 
 const doTheStringify = async () => {
 
