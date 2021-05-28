@@ -4,18 +4,6 @@ $(document).ready(function(){
   // doTheStringify();
 });
 
-function getSelectedItem() {
-  var selected = document.getElementsByClassName(options);
-  var array = [];
-
-  for (var i = 0; i<selected.length; i++) {
-    var select = selected[i];
-    var strSelected = select.options[select.SelectedIndex].text;
-    array.push(strSelected);
-  }
-  console.log("This is my array: ", array);
-}
-
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
   // console.log("configData output ", listConfig);
@@ -159,12 +147,12 @@ const generateID = async () => {
 
 function removeFunction() {
   console.log("Entering removeField function", this);
-  var listContainer = $(this).parent().attr('id');
+  var listContainer = $(this).parent().parent().parent().parent().attr('id');
   console.log("This is listContainer: ", listContainer);
-  // var itemId = $(this).parent().parent().find('.id').text();
-  // console.log("this is the item id " + itemId);
-  // var obj = new List(listContainer, options);
-  // obj.remove('id', itemId);
+  var itemId = $(this).parent().find('.id').text();
+  console.log("this is the item id " + itemId);
+  var obj = new List(listContainer, options);
+  obj.remove('id', itemId);
 }
 
 
