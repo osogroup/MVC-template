@@ -105,7 +105,7 @@ const createHTML = async () => {
   console.log("This is e: ", e);
   var strUser = e.options;
   console.log("This is strUser: ", strUser);
-  var eSelected = strUser[e.SelectedIndex].text;
+  var eSelected = strUser.innerHTML();
   console.log("This is eSelected: ", eSelected);
 }
 
