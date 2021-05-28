@@ -82,7 +82,7 @@ const createHTML = async () => {
   HTMLoutput += '<select name="letters" id="">'
                 + '<option value="a">a</option>'
                 + '<option value="b">b</option>'
-                + '<option value="c">b</option>'
+                + '<option value="c">c</option>'
               + '</select>';
 
 
