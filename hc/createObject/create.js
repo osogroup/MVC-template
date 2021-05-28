@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 window.addEventListener('click', function getSelectedItem() {
 
-  var selected = document.getElementById(option);
+  var selected = document.getElementsByClassName(options);
   var array = [];
 
   for (var i = 0; i<selected.length; i++) {
@@ -92,7 +92,7 @@ const createHTML = async () => {
   // closing item header and input row
   HTMLoutput += '</div>';
 
-  HTMLoutput += '<select name="letters" id="option">'
+  HTMLoutput += '<select name="letters" class="options">'
                 + '<option value="a">a</option>'
                 + '<option value="b">b</option>'
                 + '<option value="c">c</option>'
