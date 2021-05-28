@@ -88,13 +88,6 @@ const createHTML = async () => {
 
   var array = [];
 
-  function getSelectedItem(opt) {
-    var selected = document.getElementById(opt);
-    var strSelected = selected.options[selected.SelectedIndex].text;
-    array.push(strSelected);
-    console.log("This is my array: ", array);
-  }
-
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
   $('#everything').append(HTMLoutput);  
@@ -114,7 +107,12 @@ const generateID = async () => {
   return i;
 }
 
-
+function getSelectedItem(opt) {
+  var selected = document.getElementById(opt);
+  var strSelected = selected.options[selected.SelectedIndex].text;
+  array.push(strSelected);
+  console.log("This is my array: ", array);
+}
 
 
 
