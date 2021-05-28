@@ -102,6 +102,7 @@ const createHTML = async () => {
   $('#everything').append(HTMLoutput);  
 
   var e = document.getElementById('options');
+  console.log("This is e: ", e);
   var strUser = e.options[e.SelectedIndex].text;
   console.log("This is strUser: ", strUser);
 }
