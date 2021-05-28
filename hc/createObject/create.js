@@ -102,9 +102,15 @@ const createHTML = async () => {
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
   $('#everything').append(HTMLoutput);  
+}
+
+const getSelectedItems = async () => {
+  await createHTML();
   var yourSelect = document.getElementById(options);
   console.log("This is yourSelect.value()", yourSelect.options[[yourSelect.SelectedIndex].value]);
+
 }
+
 
 const generateID = async () => {
   var data = await tempData();
