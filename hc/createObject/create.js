@@ -29,6 +29,7 @@ const createHTML = async () => {
 
 
   var HTMLoutput = '<div id="contacts">'
+  // creating nav bar row
   + '<div class="row">'
     + '<p id="header">'
       + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
@@ -38,15 +39,18 @@ const createHTML = async () => {
     HTMLoutput += '<a class="headerLinks" href="?type='+headerKey+'">'+headerKey.toUpperCase()+'</a>';
   }
   
-  // closing header row
   HTMLoutput += '</p>';
 
+  // closing nav bar row
+  HTMLoutput += '</div>';
 
   // ------------------------------------------ Item Header and Inputs ------------------------------------------
 
   // looping to find all the values in the editable key according to objType (tag, task, deliverable)
   for (const [editableKey, editableValue] of Object.entries(configTypeData.editable)) {
-    console.log("This is the editableValue: ", editableValue);
+    // console.log("This is the editableValue: ", editableValue);
+
+    HTMLoutput += ''
   }
 
 
