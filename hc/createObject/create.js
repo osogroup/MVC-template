@@ -21,6 +21,8 @@ const tempData = async () => {
 const createHTML = async () => {
   var data = await tempData();
   var config = await configData();
+  var objTypeData = data[objType];
+  var configTypeData = config[objType];
 
 
   // ---------------------------------------------- Navigation Bar ----------------------------------------------
@@ -39,10 +41,18 @@ const createHTML = async () => {
   // closing header row
   HTMLoutput += '</p>';
 
+  HTMLoutput += '<button onclick="generateID()"></button>'
+
   $('#everything').append(HTMLoutput);  
 }
 
+function generateID() {
+  for(const [idKey, idValue] of Object.entries(objTypeData.id)) {
+    console.log("This is idKey: ", idKey);
+    console.log("This is idValue: ", idValue);
 
+  }
+}
 
 
 
