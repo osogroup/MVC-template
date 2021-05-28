@@ -107,9 +107,7 @@ const createHTML = async () => {
                     + '<br><input type="text" size="30" name="display" id="display" />'
                   + '</p>'
                   + '<p>'
-                    + '<input type="button" id="showVal" value="Value Property" />'
                     + '<input type="button" id="showTxt" value="selectedIndex/Text" />'
-                    + '<input type="button" id="doLoop" value="Value from Loop" />'
                   + '</p>'
                 + '</fieldset>'
               + '</form>';
