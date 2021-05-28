@@ -44,7 +44,7 @@ const createHTML = async () => {
   // closing nav bar row
   HTMLoutput += '</div>';
 
-  
+
   // ------------------------------------------ Item Header and Inputs ------------------------------------------
 
 
@@ -79,6 +79,9 @@ const createHTML = async () => {
   // closing item header and input row
   HTMLoutput += '</div>';
 
+
+
+  
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
   $('#everything').append(HTMLoutput);  
