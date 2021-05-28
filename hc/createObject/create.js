@@ -100,7 +100,8 @@ const createHTML = async () => {
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
   
   $('#everything').append(HTMLoutput);  
-  var e = document.getElementById('options');
+
+  var e = document.getElementById('option');
   var strUser = e.options[e.SelectedIndex].text;
   console.log("This is strUser: ", strUser);
 }
