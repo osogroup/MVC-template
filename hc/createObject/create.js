@@ -41,7 +41,7 @@ const createHTML = async () => {
   // closing header row
   HTMLoutput += '</p>';
 
-  HTMLoutput += '<button onclick="generateID()"></button>'
+  HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
   $('#everything').append(HTMLoutput);  
 }
