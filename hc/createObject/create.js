@@ -149,10 +149,10 @@ function removeFunction() {
   console.log("Entering removeField function", this);
   var listContainer = $(this).parent().parent().parent().parent().attr('id');
   console.log("This is listContainer: ", listContainer);
-  var itemId = $(this).parent().find('.display').text();
+  var itemId = $(this).parent().find('.display').val();
   console.log("this is the item id " + itemId);
   // var obj = new List(listContainer, options);
-  obj.remove('id', itemId);
+  // obj.remove('id', itemId);
 }
 
 
