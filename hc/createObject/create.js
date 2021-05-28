@@ -102,23 +102,39 @@ const createHTML = async () => {
   $('#everything').append(HTMLoutput);  
 
   (function() {
-    var select = document.getElementById('opt');
-    var element = document.getElementById('display');
+    
+    // get references to select list and display text box
+    var sel = document.getElementById('scripts');
+    var el = document.getElementById('display');
 
-    function getSelectedOption(select) {
-      var option;
-      for ( var i = 0, len = select.options.length; i < len; i++ ) {
-        option = select.options[i];
-        if (option.selected == true) {
-          break;
+
+    function getSelectedOption(sel) {
+        var opt;
+        for ( var i = 0, len = sel.options.length; i < len; i++ ) {
+            opt = sel.options[i];
+            if ( opt.selected === true ) {
+                break;
+            }
         }
-      }
-      return option;
+        return opt;
     }
-    document.getElementById('showTxt').onclick = function() {
-      element.value = select.options[select.SelectedIndex].text;
+
+    // assign onclick handlers to the buttons
+    document.getElementById('showVal').onclick = function () {
+        el.value = sel.value;    
     }
-  }());
+    
+    document.getElementById('showTxt').onclick = function () {
+        // access text property of selected option
+        el.value = sel.options[sel.selectedIndex].text;
+    }
+
+    document.getElementById('doLoop').onclick = function () {
+        var opt = getSelectedOption(sel);
+        el.value = opt.value;
+    }
+    
+}());
 
 
     // console.log("This is e: ", e);
