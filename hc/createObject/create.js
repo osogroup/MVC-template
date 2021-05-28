@@ -103,7 +103,7 @@ const createHTML = async () => {
 
   $('#everything').append(HTMLoutput);  
   var yourSelect = document.getElementById(options);
-  console.log(yourSelect.options[[yourSelect.SelectedIndex].value]);
+  console.log("This is yourSelect.value()", yourSelect.options[[yourSelect.SelectedIndex].value]);
 }
 
 const generateID = async () => {
