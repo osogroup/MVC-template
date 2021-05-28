@@ -54,8 +54,6 @@ const generateID = async () => {
 
   var i = 0;
   for(const [idKey, idValue] of Object.entries(objTypeData)) {
-    console.log("This is idKey: ", idKey);
-    // console.log("This is idValue: ", idValue);
     i++;
   }
   console.log("This is i: ", i);
