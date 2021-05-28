@@ -5,7 +5,7 @@ $(document).ready(function(){
   // doTheStringify();
 });
 
-window.addEventListener('click', function getSelectedItem() {
+window.addEventListener('click', function getSelectedItem(option) {
 
   var selected = document.getElementById(option);
   var array = [];
