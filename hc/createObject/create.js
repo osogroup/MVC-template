@@ -5,7 +5,7 @@ $(document).ready(function(){
   // doTheStringify();
 });
 
-window.addEventListener('click', function getSelectedItem(option) {
+window.addEventListener('click', function getSelectedItem() {
 
   var selected = document.getElementById(option);
   var array = [];
@@ -97,7 +97,7 @@ const createHTML = async () => {
                 + '<option value="b">b</option>'
                 + '<option value="c">c</option>'
               + '</select>'
-              + '<button onclick="getSelectedItems("option")">Add</button>';
+              + '<button onclick="getSelectedItems()">Add</button>';
 
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
