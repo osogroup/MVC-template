@@ -113,7 +113,6 @@ const createHTML = async () => {
 
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
   
-  $('#everything').append(HTMLoutput);  
 
 
   (function() {
@@ -124,14 +123,14 @@ const createHTML = async () => {
 
 
     function getSelectedOption(select) {
-        var option;
-        for ( var i = 0, len = select.options.length; i < len; i++ ) {
-            option = select.options[i];
-            if ( option.selected === true ) {
-                break;
-            }
+      var option;
+      for ( var i = 0, len = select.options.length; i < len; i++ ) {
+        option = select.options[i];
+        if ( option.selected === true ) {
+          break;
         }
-        return option;
+      }
+      return option;
     }
 
     // assign onclick handlers to the buttons
@@ -140,8 +139,10 @@ const createHTML = async () => {
     // }
     
     document.getElementById('showTxt').onclick = function () {
-        // access text property of selected option
-        element.value = select.options[select.selectedIndex].text;
+      // access text property of selected option
+      element.value = select.options[select.selectedIndex].text;
+      HTMLoutput += '<div>'+element.value+'</div>';
+
     }
 
     // document.getElementById('doLoop').onclick = function () {
@@ -149,7 +150,7 @@ const createHTML = async () => {
     //     element.value = option.value;
     // }
     
-}());
+  }());
 
 
     // console.log("This is e: ", e);
