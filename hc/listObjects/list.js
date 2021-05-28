@@ -170,7 +170,7 @@ const createHTML = async () => {
         var col = 12/(objTypeConfig.list.length);
 
 
-  // ------------------------------------------------------- The Input Boxes -------------------------------------------------------
+        // ------------------------------------------ The Input Boxes ------------------------------------------
 
         // getting config Objects and data
         for (const [inputKey, inputValue] of Object.entries(objTypeConfig.required)) {
@@ -195,7 +195,7 @@ const createHTML = async () => {
         tHeader += addButtonHTML + '</div>';
         
         
-  // ------------------------------------------------------- The Search Box -------------------------------------------------------
+        // ------------------------------------------ The Search Box ------------------------------------------
 
         // creating the search box and designating its own row
         var searchVariable =  '<div class="searchBox row">'
@@ -206,7 +206,7 @@ const createHTML = async () => {
         
 
   
-  // ------------------------------------------------------- The Table Headers -------------------------------------------------------
+        // ----------------------------------------- The Table Headers -----------------------------------------
   
         // opening table header row and adding The Search Box to tHeader
         tHeader += searchVariable + '<div class="tableHeader row">';
@@ -227,7 +227,7 @@ const createHTML = async () => {
       tHeader += '</div>';
 
 
-    // ------------------------------------------------------- Item Rows -------------------------------------------------------
+      // ---------------------------------------------- Item Rows ----------------------------------------------
 
 
       var objItems = tHeader;
@@ -238,7 +238,7 @@ const createHTML = async () => {
       // getting item attributes
       // console.log("THIS IS MY FOCUS", data[objType]);
       for (const [SLKey, SLValue] of Object.entries(data[objType])) {
-        
+
         // creating the object item rows
         objItems += '<div class="row">';
 
@@ -255,7 +255,7 @@ const createHTML = async () => {
         }
 
 
-  // ------------------------------------------------------- Edit Button URL -------------------------------------------------------
+        // ------------------------------------------ Edit Button URL ------------------------------------------
 
 
         // creating edit buttons
