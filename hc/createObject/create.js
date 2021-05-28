@@ -6,7 +6,7 @@ $(document).ready(function(){
 });
 
 function getSelectedItem() {
-
+  await createHTML();
   var selected = document.getElementsByClassName(options);
   var array = [];
 
