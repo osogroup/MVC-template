@@ -131,24 +131,24 @@ const createHTML = async () => {
 
   removeFunction();
 
-  const removeFunction = async () => {
-    await getSelectedOption();
-    var removeVar = $('.removeButton');
-  }
-
-  removeVar.click(function() {
-    console.log("Entering removeVar.click function", this);
-    // var listContainer = $(this).parent().parent().parent().parent().attr('id');
-    // console.log("This is listContainer: ", listContainer);
-    // var itemId = $(this).parent()find('.display').text();
-    // var itemId = $(this).parent();
-    // console.log("this is the itemId " + itemId);
-    // var obj = new List(listContainer, options);
-    // obj.remove('id', itemId);
-
-  });
-
 }
+
+const removeFunction = async () => {
+  await createHTML();
+  var removeVar = $('.removeButton');
+}
+
+removeVar.click(function() {
+  console.log("Entering removeVar.click function", this);
+  // var listContainer = $(this).parent().parent().parent().parent().attr('id');
+  // console.log("This is listContainer: ", listContainer);
+  // var itemId = $(this).parent()find('.display').text();
+  // var itemId = $(this).parent();
+  // console.log("this is the itemId " + itemId);
+  // var obj = new List(listContainer, options);
+  // obj.remove('id', itemId);
+
+});
 
 const generateID = async () => {
   var data = await tempData();
