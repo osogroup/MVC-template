@@ -46,6 +46,8 @@ const createHTML = async () => {
 
   // ------------------------------------------ Item Header and Inputs ------------------------------------------
 
+
+  HTMLoutput += '<h1>Creating '+objType+' Item</h1>';
   
   // creating item header and input row
   HTMLoutput += '<div class="row">'
@@ -75,10 +77,6 @@ const createHTML = async () => {
 
   // closing item header and input row
   HTMLoutput += '</div>';
-
-
-
-
 
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
