@@ -134,7 +134,7 @@ function removeFunction() {
   // var removeVar = $('.removeButton')
   
   // removeVar.click(function() {
-    console.log("Entering removeVar.click function", this);
+    console.log("This is this.JSONObject: ", this.JSONObject);
     // var listContainer = $(this).parent().parent().parent().parent().attr('id');
     // console.log("This is listContainer: ", listContainer);
     // var itemId = $(this).parent()find('.display').text();
