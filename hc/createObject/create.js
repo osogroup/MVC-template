@@ -103,6 +103,8 @@ const createHTML = async () => {
   
   $('#everything').append(HTMLoutput);
 
+  removeFunction();
+
   (function() {
     
     // get references to select list and display text box
@@ -128,7 +130,6 @@ const createHTML = async () => {
     }
   }());
 
-
   function removeFunction() {
     // var removeVar = $('.removeButton')
     
@@ -142,7 +143,7 @@ const createHTML = async () => {
       // var obj = new List(listContainer, options);
       // obj.remove('id', itemId);
     
-    // });
+    });
   }
 }
 
