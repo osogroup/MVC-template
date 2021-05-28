@@ -133,31 +133,13 @@ const createHTML = async () => {
       }
       return option;
     }
-
-    // assign onclick handlers to the buttons
-    // document.getElementById('showVal').onclick = function () {
-    //     element.value = select.value;    
-    // }
-    
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
       element.value = select.options[select.selectedIndex].text;
       var HTMLelement = element.value+' <input type="button" value="-" onclick="removeFunction()"><br>';
       $('#display').append(HTMLelement);
     }
-
-    // document.getElementById('doLoop').onclick = function () {
-    //     var option = getSelectedOption(select);
-    //     element.value = option.value;
-    // }
-    
   }());
-
-  // console.log("This is e: ", e);
-  // var strUser = e.options;
-  // console.log("This is strUser: ", strUser);
-  // var eSelected = strUser.option[strUser.innerHTML];
-  // console.log("This is eSelected: ", eSelected);
 }
 
 const generateID = async () => {
