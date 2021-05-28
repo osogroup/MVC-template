@@ -94,7 +94,7 @@ const createHTML = async () => {
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
                   + '<p>'
-                    // + '<input type="text" size="30" name="display" id="display" />'
+                 // + '<input type="text" size="30" name="display" id="display" />'
                     + '<div id="display"></div>'
                     + '<br><select id="scripts" name="scripts">'
                       + '<option value="scroll">Scrolling Divs JavaScript</option>'
