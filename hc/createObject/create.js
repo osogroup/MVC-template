@@ -138,19 +138,7 @@ const createHTML = async () => {
 }
 
 function removeFunction() {
-  var removeVar = $('.removeButton')
-  
-  // removeVar.click(function() {
-    console.log("This is this: ", this);
-    // var listContainer = $(this).parent().parent().parent().parent().attr('id');
-    // console.log("This is listContainer: ", listContainer);
-    // var itemId = $(this).parent()find('.display').text();
-    // var itemId = $(this).parent();
-    // console.log("this is the itemId " + itemId);
-    // var obj = new List(listContainer, options);
-    // obj.remove('id', itemId);
-  
-  // });
+  console.log("Entered removeFunction...");
 }
 
 
