@@ -136,7 +136,7 @@ const createHTML = async () => {
   }
 
   removeVar.click(function() {
-    console.log("Entering removeVar function", this);
+    console.log("Entering removeVar.click function", this);
     // var listContainer = $(this).parent().parent().parent().parent().attr('id');
     // console.log("This is listContainer: ", listContainer);
     // var itemId = $(this).parent()find('.display').text();
