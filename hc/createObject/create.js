@@ -46,22 +46,23 @@ const createHTML = async () => {
 
   // ------------------------------------------ Item Header and Inputs ------------------------------------------
 
+  
+  // creating item header and input row
+  HTMLoutput += '<div class="row">'
+
   // looping to find all the values in the editable key according to objType (tag, task, deliverable)
   for (const [editableKey, editableValue] of Object.entries(configTypeData.editable)) {
     // console.log("This is the editableValue: ", editableValue);
 
-    // creating item header and input row
-    HTMLoutput += '<div class="row">'
-                  + '<div class="col-4">'
-                    + '<div class="col-12">'+editableValue+'</div>'
-                    + '<br><input type=textarea>'
-                  + '</div>'
+    // creating the header and input fields
+    HTMLoutput += '<div class="col-4">'
+                  + '<div class="col-12">'+editableValue+'</div>'
+                  + '<br><input type=textarea>'
                 + '</div>';
-
-
-
-
   }
+
+  // closing item header and input row
+  HTMLoutput += '</div>';
 
 
 
