@@ -79,9 +79,13 @@ const createHTML = async () => {
   // closing item header and input row
   HTMLoutput += '</div>';
 
+  HTMLoutput += '<select name="" id="">'
+                + '<option value="a"></option>'
+                + '<option value="b"></option>'
+                + '<option value="c"></option>'
+              + '</select>';
 
 
-  
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
   $('#everything').append(HTMLoutput);  
