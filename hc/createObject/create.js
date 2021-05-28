@@ -151,7 +151,7 @@ function removeFunction() {
   console.log("This is listContainer: ", listContainer);
   var itemId = $(this).parent().find('.display').text();
   console.log("this is the item id " + itemId);
-  var obj = new List(listContainer, options);
+  // var obj = new List(listContainer, options);
   obj.remove('id', itemId);
 }
 
