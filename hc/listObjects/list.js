@@ -349,9 +349,9 @@ const createHTML = async () => {
       });
       
       // pulls the value from the rows and puts them into the input boxes for editing 
-      MultipleEditBtns.click(function() {
-        var itemId = $(this).parent().parent().find('.id').text();
-        var itemValues = obj.get('id', itemId)[0].values();
+      // MultipleEditBtns.click(function() {
+      //   var itemId = $(this).parent().parent().find('.id').text();
+      //   var itemValues = obj.get('id', itemId)[0].values();
         // idField.val(itemValues.id);
         // nameField.val(itemValues.name);
         // descField.val(itemValues.desc);
