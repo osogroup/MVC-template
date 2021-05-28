@@ -82,7 +82,6 @@ const createHTML = async () => {
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
                   + '<p>'
-                    + '<div class="row">'
                       + '<div id="display"></div>'
                     + '</div>'
                     + '<br><select id="scripts" name="scripts">'
@@ -126,7 +125,7 @@ const createHTML = async () => {
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
       element.value = select.options[select.selectedIndex].text;
-      var HTMLelement = element.value+' <input type="button" value="-" onclick="removeFunction()"></input><br>';
+      var HTMLelement = '<div class="row">'+element.value+' <input type="button" value="-" onclick="removeFunction()"></input></div><br>';
       $('#display').append(HTMLelement);
     }
   }());
