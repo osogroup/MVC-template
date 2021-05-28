@@ -113,6 +113,7 @@ const createHTML = async () => {
 
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
   
+  $('#everything').append(HTMLoutput);
 
 
   (function() {
@@ -151,7 +152,6 @@ const createHTML = async () => {
     
   }());
 
-  $('#everything').append(HTMLoutput);
 
   // console.log("This is e: ", e);
   // var strUser = e.options;
