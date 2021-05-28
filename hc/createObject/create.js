@@ -50,7 +50,17 @@ const createHTML = async () => {
   for (const [editableKey, editableValue] of Object.entries(configTypeData.editable)) {
     // console.log("This is the editableValue: ", editableValue);
 
-    HTMLoutput += ''
+    // creating item header and input row
+    HTMLoutput += '<div class="row">'
+                  + '<div class="col-4">'
+                    + '<div class="col-12">'+editableValue+'</div>'
+                    + '<br><input type=textarea>'
+                  + '</div>'
+                + '</div>';
+
+
+
+
   }
 
 
