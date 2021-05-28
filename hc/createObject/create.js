@@ -101,18 +101,26 @@ const createHTML = async () => {
   
   $('#everything').append(HTMLoutput);  
 
-  var sel = document.getElementById('opt');
+  (function() {
+    var select = document.getElementById('opt');
+    var element = document.getElementById('display');
 
-  function getSelectedOption(sel) {
-    var option;
-    for ( var i = 0, len = sel.options.length; i < len; i++ ) {
-      option = sel.options[i];
-      if (option.selected == true) {
-        break;
+    function getSelectedOption(select) {
+      var option;
+      for ( var i = 0, len = select.options.length; i < len; i++ ) {
+        option = select.options[i];
+        if (option.selected == true) {
+          break;
+        }
       }
+      return option;
     }
-    return option;
-  }
+    document.getElementById('showTxt').onclick = function() {
+
+    }
+  }());
+
+
   console.log("This is e: ", e);
   var strUser = e.options;
   console.log("This is strUser: ", strUser);
