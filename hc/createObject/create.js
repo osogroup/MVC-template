@@ -129,7 +129,7 @@ const createHTML = async () => {
     }
   }());
 
-  removeFunction()
+  removeFunction();
 
   function removeFunction() {
     var removeVar = $('.removeButton');
