@@ -44,7 +44,7 @@ const createHTML = async () => {
 
   // ------------------------------------------ Item Header and Inputs ------------------------------------------
 
-
+  // looping to find all the values in the editable key according to objType (tag, task, deliverable)
   for (const [editableKey, editableValue] of Object.entries(configTypeData.editable)) {
     console.log("This is the editableValue: ", editableValue);
   }
