@@ -95,7 +95,7 @@ const createHTML = async () => {
                 + '<option value="b">b</option>'
                 + '<option value="c">c</option>'
               + '</select>'
-              + '<button onclick="getSelectedItems()">Add</button>';
+              + '<button onClick="getSelectedItems()">Add</button>';
 
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
