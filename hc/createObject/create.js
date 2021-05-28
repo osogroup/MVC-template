@@ -41,7 +41,19 @@ const createHTML = async () => {
   // closing header row
   HTMLoutput += '</p>';
 
-  HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
+
+  // ------------------------------------------ Item Header and Inputs ------------------------------------------
+
+
+  for (const [editableKey, editableValue] of Object.entries(configTypeData.editable)) {
+    console.log("This is the editableValue: ", editableValue);
+  }
+
+
+
+
+
+  // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
   $('#everything').append(HTMLoutput);  
 }
