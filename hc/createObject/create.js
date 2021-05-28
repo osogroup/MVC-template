@@ -131,10 +131,10 @@ const createHTML = async () => {
 }
 
 function removeFunction() {
-  // var removeVar = $('.removeButton')
+  var removeVar = $('.removeButton')
   
   // removeVar.click(function() {
-    console.log("This is this: ", this);
+    console.log("This is this: ", this.HTMLInputElement());
     // var listContainer = $(this).parent().parent().parent().parent().attr('id');
     // console.log("This is listContainer: ", listContainer);
     // var itemId = $(this).parent()find('.display').text();
