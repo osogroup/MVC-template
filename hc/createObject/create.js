@@ -103,8 +103,6 @@ const createHTML = async () => {
   
   $('#everything').append(HTMLoutput);
 
-  removeFunction();
-
   (function() {
     
     // get references to select list and display text box
