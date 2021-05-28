@@ -44,6 +44,7 @@ const createHTML = async () => {
   // closing nav bar row
   HTMLoutput += '</div>';
 
+  
   // ------------------------------------------ Item Header and Inputs ------------------------------------------
 
 
