@@ -142,7 +142,7 @@ const createHTML = async () => {
       // access text property of selected option
       elementVal = select.options[select.selectedIndex].text;
 
-      localStorage.setItem(objType+generateID+elementVal,elementVal)
+      localStorage.setItem(objType+generateID()+elementVal,elementVal)
       localStorage;
       // console.log("This is elementValue: ", elementValue);
       arrayFields.push(elementVal);
