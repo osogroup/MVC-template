@@ -108,7 +108,7 @@ const createHTML = async () => {
 
     var element = document.getElementById('arraySpot');
     console.log("This is element: ", element);
-    element.parentNode.removeChild('arraySpot');
+    element.parentNode.removeChild(element);
     var newElement = document.createElement('div');
     newElement.setAttribute('id', 'arraySpot');
 
