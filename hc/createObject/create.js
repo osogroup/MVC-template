@@ -112,7 +112,7 @@ const createHTML = async () => {
   HTMLoutput +=     '<br><select id="scripts" name="scripts">';
 
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-    // console.log("This is arrayValue: ", arrayValue); (peter, james, john)
+    console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
     HTMLoutput +=     '<div class="col-4">'+arrayValue+'</div>';
   }
 
