@@ -143,7 +143,6 @@ const createHTML = async () => {
       // access text property of selected option
       elementVal = select.options[select.selectedIndex].text;
       arrayFields.push(elementVal);
-      localStorage.setItem(objType+'_0', arrayFields);
       // console.log("This is elementValue: ", elementValue);
       // arrayFields.push(elementVal);
       location.reload();
