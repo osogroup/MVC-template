@@ -106,7 +106,7 @@ const createHTML = async () => {
                   + '<legend>Get Text of Selected Option</legend>'
 
   // showing all the items in the arrayFields array
-  var parseData = JSON.parse(localStorage.task_0);
+  var parseData = JSON.parse(localStorage[task_0]);
   for (const[arrayKey, arrayValue] of Object.entries(parseData)) {
     // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
     console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
