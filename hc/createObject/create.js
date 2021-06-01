@@ -118,6 +118,7 @@ const createHTML = async () => {
 
     // showing all the items in the arrayFields array
     var parseArray = JSON.parse(arrayFields);
+    console.log("this is parseArray: ", parseArray);
     for (const[arrayKey, arrayValue] of Object.entries(localStorage[0])) {
       // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
       console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
