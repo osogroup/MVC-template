@@ -111,7 +111,7 @@ const createHTML = async () => {
     console.log("Loop number ", i);
   }
 
-  for (const[arrayKey, arrayValue] of Object.entries(parseData)) {
+  for (const[arrayKey, arrayValue] of Object.entries(localStorage)) {
     // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
     console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
     HTMLoutput +=     '<div class="row"><div class="col-4">'+arrayValue+'</div><div class="col-1"><input type="button" class="remvBtn" value="-"></div></div>';
