@@ -99,6 +99,7 @@ const createHTML = async () => {
 
   $('#everything').append(HTMLoutput);
 
+  var HTMLarray = '';
   displayArray();
 
 
@@ -112,7 +113,7 @@ const createHTML = async () => {
     // var newElement = document.createElement('div');
     // newElement.setAttribute('id', 'arraySpot');
 
-    var HTMLarray = '<form action="#" method="post" class="demoForm">'
+    HTMLarray += '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Get Text of Selected Option</legend>'
                     + '<div id="appendTo"></div>';
