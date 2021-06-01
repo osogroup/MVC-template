@@ -17,7 +17,29 @@ const tempData = async () => {
   return objVars;
 }
 
-var arrayFields = [ 'peter', 'john', 'james' ];
+var arrayFields = [ 'peter', 
+                    'john', 
+                    'james' 
+                  ];
+
+// + '<option value="scroll">Scrolling Divs JavaScript</option>'
+// + '<option value="tooltip">JavaScript Tooltips</option>'
+// + '<option value="con_scroll">Continuous Scroller</option>'
+// + '<option value="banner">Rotating Banner JavaScript</option>'
+// + '<option value="random_img">Random Image PHP</option>'
+// + '<option value="form_builder">PHP Form Generator</option>'
+// + '<option value="table_class">PHP Table Class</option>'
+// + '<option value="order_forms">PHP Order Forms</option>'
+
+var arrayOfOptions = [ 'Scrolling Divs JavaScript',
+                       'JavaScript Tooltips', 
+                       'Continuous Scroller', 
+                       'Rotating Banner JavaScript', 
+                       'Random Image PHP', 
+                       'PHP Form Generator', 
+                       'PHP Table Class', 
+                       'PHP Order Forms' 
+                      ];
 
 
 const createHTML = async () => {
@@ -91,15 +113,11 @@ const createHTML = async () => {
   }
   HTMLoutput +=     '<div id="display"></div>'
                     + '<br><select id="scripts" name="scripts">'
-                      + '<option value="scroll">Scrolling Divs JavaScript</option>'
-                      + '<option value="tooltip">JavaScript Tooltips</option>'
-                      + '<option value="con_scroll">Continuous Scroller</option>'
-                      + '<option value="banner">Rotating Banner JavaScript</option>'
-                      + '<option value="random_img">Random Image PHP</option>'
-                      + '<option value="form_builder">PHP Form Generator</option>'
-                      + '<option value="table_class">PHP Table Class</option>'
-                      + '<option value="order_forms">PHP Order Forms</option>'
-                    + '</select>'
+
+  for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
+    HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
+  }
+        HTMLoutput += '</select>'
                     + '<input type="button" id="showTxt" value="Add" />'
                   + '</p>'
                 + '</fieldset>'
