@@ -159,9 +159,9 @@ const createHTML = async () => {
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
       elementVal = select.options[select.selectedIndex].text;
+      arrayFields.push(elementVal);
       var indexOf = arrayFields.indexOf(elementVal);
       console.log("This is the indexOf: ", indexOf);
-      arrayFields.push(elementVal);
       localStorage.setItem('task_0', arrayFields);
 
       var HTMLelement = '<div class="row"><div class="col-4">'+elementVal+'</div><div class="col-1"><input type="button" class="remvBtn" value="-" onclick="removeFunction()"></div></div>';
