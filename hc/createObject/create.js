@@ -163,7 +163,7 @@ const createHTML = async () => {
       arrayFields.push(elementVal);
       localStorage.setItem('task_0', arrayFields);
 
-      var HTMLelement = '<div class="row"><div class="col-4">'+elementVal+'</div><div class="col-1"><input type="button" class="remvBtn" value="-" onclick="removeFunction('+i+')"></div></div>';
+      var HTMLelement = '<div class="row"><div class="col-4">'+elementVal+'</div><div class="col-1"><input type="button" class="remvBtn" value="-" onclick="removeFunction()"></div></div>';
 
       $('#appendTo').append(HTMLelement);
       // location.reload();
@@ -177,13 +177,13 @@ const createHTML = async () => {
   // ---------------------------------------------- Remove funtion ----------------------------------------------
 
 
-function removeFunction(val) {
+function removeFunction() {
   console.log("Entered removeFunction...");
-  console.log("This is the parameter 'val': ", val);
-  arrayFields.splice(val, 1);
-  localStorage.removeItem(val);
-  console.log("This is arrayFields after .splice(): ", arrayFields);
-  console.log(localStorage.key(val));
+  // console.log("This is the parameter 'val': ", val);
+  // arrayFields.splice(val, 1);
+  // localStorage.removeItem(val);
+  // console.log("This is arrayFields after .splice(): ", arrayFields);
+  // console.log(localStorage.key(val));
   // location.reload();
 }
 
