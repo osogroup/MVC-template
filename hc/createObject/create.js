@@ -37,10 +37,10 @@ const createHTML = async () => {
   var config = await configData();
   var objTypeData = data[objType];
   var configTypeData = config[objType];
-  arrayFields.push('Peter');
-  arrayFields.push('James');
-  arrayFields.push('John');
-  localStorage.setItem('task_0', arrayFields);
+  // arrayFields.push('Peter');
+  // arrayFields.push('James');
+  // arrayFields.push('John');
+  // localStorage.setItem('task_0', arrayFields);
 
 
   // ---------------------------------------------- Navigation Bar ----------------------------------------------
