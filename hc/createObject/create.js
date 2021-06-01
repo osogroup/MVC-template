@@ -164,7 +164,7 @@ const createHTML = async () => {
 
       }
       console.log("This is arrayFields: ", arrayFields);
-      $('#display').append(HTMLelement);
+      $('#display').document.write(HTMLelement);
     }
   }());
 
