@@ -145,6 +145,7 @@ const createHTML = async () => {
       arrayFields.push(elementVal);
       localStorage.setItem(objType+'_0', arrayFields);
       // location.reload();
+  console.log("localStorage: ", localStorage);
     }
   }());
   console.log("localStorage: ", localStorage);
