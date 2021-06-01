@@ -186,17 +186,6 @@ const generateID = async () => {
 }
 
 
-// function removeFunction() {
-//   console.log("Entering removeField function", this);
-  // var listContainer = $(this).parent().parent().parent().parent().attr('id');
-  // console.log("This is listContainer: ", listContainer);
-  // var itemId = $(this).parent()find('.display').text();
-  // var itemId = $(this).parent();
-  // console.log("this is the itemId " + itemId);
-  // var obj = new List(listContainer, options);
-  // obj.remove('id', itemId);
-// }
-
 
 
 
