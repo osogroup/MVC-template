@@ -110,7 +110,7 @@ const createHTML = async () => {
   // showing all the items in the arrayFields array
   for (const[arrayKey, arrayValue] of Object.entries(localStorage)) {
     console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
-    HTMLoutput +=     '<div class="row" id="'+arrayKey+'"><div class="col-4">'+arrayValue+'</div><input type="button" class="remvBtn" value="-"></div>';
+    HTMLoutput +=     '<div class="row" id="'+arrayKey+'"><div class="col-4">'+arrayValue+'</div><div class="col-1"><input type="button" class="remvBtn" value="-"></div></div>';
   }
 
   // creating the select options HTML
@@ -151,7 +151,6 @@ const createHTML = async () => {
       location.reload();
     }
   }());
-
 }
 
 
