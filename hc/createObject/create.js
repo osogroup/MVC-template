@@ -116,7 +116,7 @@ const createHTML = async () => {
     HTMLarray += '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Get Text of Selected Option</legend>'
-                    + '<div id="appendTo" class="row"></div>';
+                    + '<div id="appendTo"></div>';
 
     // showing all the items in the arrayFields array
     for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
@@ -162,7 +162,7 @@ const createHTML = async () => {
       arrayFields.push(elementVal);
       localStorage.setItem('task_0', arrayFields);
 
-      var HTMLelement = '<div class="col-4">'+elementVal+'</div><div class="col-1"><input type="button" class="remvBtn" value="-"></div>';
+      var HTMLelement = '<div class="row"><div class="col-4">'+elementVal+'</div><div class="col-1"><input type="button" class="remvBtn" value="-"></div></div>';
 
       $('#appendTo').append(HTMLelement);
       // location.reload();
