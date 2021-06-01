@@ -130,7 +130,7 @@ const createHTML = async () => {
       elementValue = select.options[select.selectedIndex].text;
       console.log("This is elementValue: ", elementValue);
       arrayFields.push(elementValue);
-      var HTMLelement = '<div class="row">'+elementValue+' <input type="button" onClick="removeFunction('+elementValue+')" value="-"></div>';
+      var HTMLelement = '<div class="row">'+elementValue+' <input type="button" onClick="removeFunction(\''+elementValue+'\')" value="-"></div>';
       console.log("This is arrayFields: ", arrayFields);
       $('#display').append(HTMLelement);
     }
