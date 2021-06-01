@@ -115,28 +115,32 @@ const createHTML = async () => {
     var element = document.getElementById('display');
 
 
-    function getSelectedOption(select) {
-      var option;
-      for ( var i = 0, len = select.options.length; i < len; i++ ) {
-        option = select.options[i];
-        if ( option.selected === true ) {
-          break;
-        }
-      }
-      return option;
-    }
+    // function getSelectedOption(select) {
+    //   var option;
+    //   for ( var i = 0, len = select.options.length; i < len; i++ ) {
+    //     option = select.options[i];
+    //     if ( option.selected === true ) {
+    //       break;
+    //     }
+    //   }
+    //   return option;
+    // }
+
+
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
       elementValue = select.options[select.selectedIndex].text;
       console.log("This is elementValue: ", elementValue);
       arrayFields.push(elementValue);
-      var HTMLelement = '<div class="row">'+elementValue+' <input type="button" onClick="removeFunction(\''+elementValue+'\')" value="-"></div>';
+      var HTMLelement = '<div class="row">'+elementValue+' <input type="button" class="remvBtn" onClick="removeFunction(\''+elementValue+'\')" value="-"></div>';
       console.log("This is arrayFields: ", arrayFields);
       $('#display').append(HTMLelement);
     }
   }());
 
 }
+
+
 
 function removeFunction(val) {
   console.log("Entered removeFunction...");
