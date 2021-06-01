@@ -132,7 +132,7 @@ const createHTML = async () => {
       elementValue = select.options[select.selectedIndex].text;
       console.log("This is elementValue: ", elementValue);
       arrayFields.push(elementValue);
-      var HTMLelement = '<div class="row">'+elementValue+' <input type="button" class="remvBtn" onClick="removeFunction(\''+elementValue+','+arrayFields+'\')" value="-"></div>';
+      var HTMLelement = '<div class="row">'+elementValue+' <input type="button" class="remvBtn" onClick="removeFunction(\''+elementValue+'\')" value="-"></div>';
       console.log("This is arrayFields: ", arrayFields);
       $('#display').append(HTMLelement);
     }
@@ -141,10 +141,10 @@ const createHTML = async () => {
 }
 
 
-function removeFunction(val, obj) {
+function removeFunction(val) {
   console.log("Entered removeFunction...");
   console.log("This is the parameter 'val': ", val);
-  var removeVal = obj.indexOf(val);
+  var removeVal = arrayFields.indexOf(val);
   console.log("This is removeVal: ", removeVal);
 }
 
