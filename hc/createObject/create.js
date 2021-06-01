@@ -148,7 +148,7 @@ function removeFunction(val) {
   var removeVal = arrayFields.indexOf(val);
   console.log("This is removeVal: ", removeVal);
   arrayFields.splice(removeVal, 1);
-  console.log("this is this: ", this);
+  console.log("This is this: ", this);
 }
 
 
