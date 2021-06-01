@@ -184,6 +184,7 @@ function removeFunction(val) {
   console.log("This is the parameter 'val': ", val);
   arrayFields.splice(val, 1);
   localStorage.removeItem(val);
+  console.log("This is arrayFields after .splice(): ", arrayFields);
   // location.reload();
 }
 
