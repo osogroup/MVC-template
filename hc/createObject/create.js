@@ -140,18 +140,12 @@ const createHTML = async () => {
 
   
 
-  MultipleRemoves = ('.remvBtn');
-  
-  MultipleRemoves.click(function () {
-    console.log("Entered remvBtn function...");
-  });
-
-  // function removeFunction(val) {
-  //   console.log("Entered removeFunction...");
-  //   console.log("This is the parameter 'val': ", val);
-  //   var removeVal = arrayFields.indexOf(val);
-  //   console.log("This is removeVal: ", removeVal);
-  // }
+  function removeFunction(val) {
+    console.log("Entered removeFunction...");
+    console.log("This is the parameter 'val': ", val);
+    var removeVal = arrayFields.indexOf(val);
+    console.log("This is removeVal: ", removeVal);
+  }
 
 }
 
