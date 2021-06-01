@@ -141,7 +141,7 @@ const createHTML = async () => {
       for (const [fieldKey, fieldValue] of Object.entries(arrayFields)) {
         // console.log("This is fieldKey: ", fieldKey); // 0,1,2
         // console.log("This is fieldValue: ", fieldValue); // peter, john, james
-        HTMLelement += '<div class="row">'+elementValue+' <input type="button" class="remvBtn" onClick="removeFunction(\''+elementValue+'\')" value="-"></div>';
+        HTMLelement += '<div class="row" id="'+objType+fieldKey+fieldValue+'">'+elementValue+' <input type="button" class="remvBtn" onClick="removeFunction(\''+elementValue+'\')" value="-"></div>';
 
       }
       console.log("This is arrayFields: ", arrayFields);
@@ -152,7 +152,7 @@ const createHTML = async () => {
 }
 
 
-  // ----------------------------------------------- rem funtion -----------------------------------------------
+  // ----------------------------------------------- Remove funtion -----------------------------------------------
 
 
 
@@ -162,7 +162,6 @@ function removeFunction(val) {
   var removeVal = arrayFields.indexOf(val);
   console.log("This is removeVal: ", removeVal);
   arrayFields.splice(removeVal, 1);
-
 }
 
 
