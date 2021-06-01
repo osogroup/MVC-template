@@ -112,7 +112,7 @@ const createHTML = async () => {
     var newElement = document.createElement('div');
     newElement.setAttribute('id', 'arraySpot');
 
-    HTMLarray = '<form action="#" method="post" id="demoForm" class="demoForm">'
+    var HTMLarray = '<form action="#" method="post" id="demoForm" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Get Text of Selected Option</legend>'
 
