@@ -160,7 +160,7 @@ const createHTML = async () => {
       elementVal = select.options[select.selectedIndex].text;
       arrayFields.push(elementVal);
       localStorage.setItem('task_0', arrayFields);
-      $('#appendTo').append(elementVal);)
+      $('#appendTo').append(elementVal);
       // location.reload();
       displayArray();
     }
