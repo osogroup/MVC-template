@@ -147,7 +147,7 @@ const createHTML = async () => {
   //   console.log("This is the parameter 'val': ", val);
   //   var removeVal = arrayFields.indexOf(val);
   //   console.log("This is removeVal: ", removeVal);
-  }
+  // }
 
 }
 
