@@ -97,38 +97,40 @@ const createHTML = async () => {
   // closing item header and input row
   HTMLoutput += '</div>';
 
-
+  displayArray();
   // ---------------------------------------------- Display Array ----------------------------------------------
 
+  function displayArray() {
 
-  HTMLoutput += '<form action="#" method="post" id="demoForm" class="demoForm">'
-                + '<fieldset>'
-                  + '<legend>Get Text of Selected Option</legend>'
+    HTMLoutput += '<form action="#" method="post" id="demoForm" class="demoForm">'
+                  + '<fieldset>'
+                    + '<legend>Get Text of Selected Option</legend>'
 
-  // showing all the items in the arrayFields array
-  for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-    // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
-    console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
-    HTMLoutput +=     '<div class="row"><div class="col-4">'+arrayValue+'</div><div class="col-1"><input type="button" class="remvBtn" value="-"></div></div>';
+    // showing all the items in the arrayFields array
+    for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
+      // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
+      console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
+      HTMLoutput +=     '<div class="row"><div class="col-4">'+arrayValue+'</div><div class="col-1"><input type="button" class="remvBtn" value="-"></div></div>';
+    }
+
+    // creating the select options HTML
+    HTMLoutput +=       '<br><select id="scripts" name="scripts">';
+
+    // creating all the options from the arrayOfOptions array in the select tag
+    for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
+      HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
+    }
+
+    HTMLoutput +=       '</select>'
+                      + '<input type="button" id="showTxt" value="Add"/>'
+                  + '</fieldset>'
+                + '</form>';
+
+
+    // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
+    
+    $('#everything').append(HTMLoutput);
   }
-
-  // creating the select options HTML
-  HTMLoutput +=       '<br><select id="scripts" name="scripts">';
-
-  // creating all the options from the arrayOfOptions array in the select tag
-  for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
-    HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
-  }
-
-  HTMLoutput +=       '</select>'
-                    + '<input type="button" id="showTxt" value="Add"/>'
-                + '</fieldset>'
-              + '</form>';
-
-
-  // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
-  
-  $('#everything').append(HTMLoutput);
 
   (function() {
     
