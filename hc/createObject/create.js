@@ -47,9 +47,9 @@ const createHTML = async () => {
 
   var HTMLoutput = '<div id="contacts">'
   // creating nav bar row
-  + '<div class="row">'
-    + '<p id="header">'
-      + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
+                  + '<div class="row">'
+                    + '<p id="header">'
+                      + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
   
   // creating the links for the header
   for(const [headerKey, headerValue] of Object.entries(data)) {
@@ -153,7 +153,6 @@ const createHTML = async () => {
 
 
   // ---------------------------------------------- Remove funtion ----------------------------------------------
-
 
 
 function removeFunction(val) {
