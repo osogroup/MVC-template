@@ -135,13 +135,13 @@ const createHTML = async () => {
     }
   }());
 
+  function removeFunction(val) {
+    console.log("Entered removeFunction...");
+    console.log("Finding 'this'... ", this);
+    console.log("This is the parameter 'val': ", val);
+  }
 }
 
-function removeFunction(val) {
-  console.log("Entered removeFunction...");
-  console.log("Finding 'this'... ", this);
-  console.log("This is the parameter 'val': ", val);
-}
 
 
 const generateID = async () => {
