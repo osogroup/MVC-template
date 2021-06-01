@@ -107,10 +107,6 @@ const createHTML = async () => {
 
   // showing all the items in the arrayFields array
 
-  for(var i = 0; i > 2; i++) {
-    console.log("Loop number ", i);
-  }
-
   for (const[arrayKey, arrayValue] of Object.entries(localStorage)) {
     // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
     console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
