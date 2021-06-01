@@ -129,6 +129,9 @@ const createHTML = async () => {
     // }
 
 
+    // ---------------------------------------------- Add funtion ----------------------------------------------
+
+
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
       HTMlelement = '';
@@ -136,8 +139,8 @@ const createHTML = async () => {
       console.log("This is elementValue: ", elementValue);
       arrayFields.push(elementValue);
       for (const [fieldKey, fieldValue] of Object.entries(arrayFields)) {
-        console.log("This is fieldKey: ", fieldKey);
-        console.log("This is fieldValue: ", fieldValue);
+        // console.log("This is fieldKey: ", fieldKey); // 0,1,2
+        // console.log("This is fieldValue: ", fieldValue); // peter, john, james
       }
       var HTMLelement = '<div class="row">'+elementValue+' <input type="button" class="remvBtn" onClick="removeFunction(\''+elementValue+'\')" value="-"></div>';
       console.log("This is arrayFields: ", arrayFields);
@@ -146,6 +149,11 @@ const createHTML = async () => {
   }());
 
 }
+
+
+  // ----------------------------------------------- Add funtion -----------------------------------------------
+
+
 
 function removeFunction(val) {
   console.log("Entered removeFunction...");
