@@ -145,7 +145,7 @@ const createHTML = async () => {
       localStorage.setItem(objType+generateID+elementVal,elementVal)
       localStorage;
       // console.log("This is elementValue: ", elementValue);
-      arrayFields.push(elementValue);
+      // arrayFields.push(elementValue);
       console.log("This is arrayFields: ", arrayFields);
     }
   }());
