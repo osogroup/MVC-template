@@ -108,6 +108,9 @@ const createHTML = async () => {
 
     var element = document.getElementById('arraySpot');
     console.log("This is element: ", element);
+    element.parentNode.removeChild('arraySpot');
+    var newElement = document.createElement('div');
+    newElement.setAttribute('id', 'arraySpot');
 
     HTMLarray = '<form action="#" method="post" id="demoForm" class="demoForm">'
                   + '<fieldset>'
