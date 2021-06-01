@@ -133,7 +133,7 @@ const createHTML = async () => {
 
     // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
     
-    $('#arraySpot').innerHTML = HTMLarray;
+  $('#arraySpot').append(HTMLarray);
 
   }
 
