@@ -18,8 +18,8 @@ const tempData = async () => {
 }
 
 var arrayFields = [ 'peter', 
-                    'john', 
-                    'james' 
+                    'james', 
+                    'john' 
                   ];
 
 // + '<option value="scroll">Scrolling Divs JavaScript</option>'
@@ -108,16 +108,19 @@ const createHTML = async () => {
   HTMLoutput += '<form action="#" method="post" id="demoForm" class="demoForm">'
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
+                  
+  HTMLoutput += '<br><select id="scripts" name="scripts">';
+
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-    console.log("This is arrayValue: ", arrayValue);
+    // console.log("This is arrayValue: ", arrayValue); (peter, james, john)
+
   }
-  HTMLoutput +=     '<div id="display"></div>'
-                    + '<br><select id="scripts" name="scripts">'
 
   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
     HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
   }
-        HTMLoutput += '</select>'
+
+  HTMLoutput +=       '</select>'
                     + '<input type="button" id="showTxt" value="Add" />'
                 + '</fieldset>'
               + '</form>';
