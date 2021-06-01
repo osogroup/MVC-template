@@ -182,6 +182,7 @@ const createHTML = async () => {
 function removeFunction(val) {
   console.log("Entered removeFunction...");
   console.log("This is the parameter 'val': ", val);
+  arrayFields.splice(i, 1);
   localStorage.removeItem(val);
   // location.reload();
 }
