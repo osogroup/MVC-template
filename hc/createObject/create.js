@@ -141,7 +141,7 @@ const createHTML = async () => {
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
       elementVal = select.options[select.selectedIndex].text;
-      localStorage.setItem(objType+nearestIDAvailable()+elementVal,elementVal)
+      localStorage.setItem(objType+nearestIDAvailable(),elementVal)
       // console.log("This is elementValue: ", elementValue);
       // arrayFields.push(elementVal);
       console.log("This is arrayFields: ", arrayFields);
@@ -184,7 +184,7 @@ function removeFunction(val) {
 // }
 
 function nearestIDAvailable() {
-  var i = 0;
+  var i;
   for(const [idKey, idValue] of Object.entries(localStorage)) {
     i++;
   }
