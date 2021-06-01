@@ -18,7 +18,7 @@ const tempData = async () => {
 }
 
 var arrayFields = { 'task0peter': 'peter', 
-                    'task1james':'james', 
+                    'task1james': 'james', 
                     'task2john': 'john' 
                   };
 
