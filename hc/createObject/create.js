@@ -114,7 +114,8 @@ const createHTML = async () => {
 
     var HTMLarray = '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
-                    + '<legend>Get Text of Selected Option</legend>';
+                    + '<legend>Get Text of Selected Option</legend>'
+                    + '<div id="appendTo"></div>';
 
     // showing all the items in the arrayFields array
     for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
@@ -159,6 +160,7 @@ const createHTML = async () => {
       elementVal = select.options[select.selectedIndex].text;
       arrayFields.push(elementVal);
       localStorage.setItem('task_0', arrayFields);
+      $('#appendTo').append(elementVal);)
       // location.reload();
       displayArray();
     }
