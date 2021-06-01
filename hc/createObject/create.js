@@ -17,10 +17,7 @@ const tempData = async () => {
   return objVars;
 }
 
-var arrayFields = { 'task0peter': 'peter', 
-                    'task1james': 'james', 
-                    'task2john': 'john' 
-                  };
+var arrayFields = {};
 
 
 var arrayOfOptions = [ 'Scrolling Divs JavaScript',
