@@ -140,10 +140,10 @@ const createHTML = async () => {
 
     // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
     
-    $('#arraySpot').append(HTMLarray);
     console.log("localStorage: ", localStorage);
-
+    
   }
+  $('#arraySpot').append(HTMLarray);
 
   (function() {
     
