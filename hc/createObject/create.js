@@ -109,11 +109,11 @@ const createHTML = async () => {
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
                   
-  HTMLoutput += '<br><select id="scripts" name="scripts">';
+  HTMLoutput +=     '<br><select id="scripts" name="scripts">';
 
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
     // console.log("This is arrayValue: ", arrayValue); (peter, james, john)
-
+    HTMLoutput +=     '<div class="col-4">'+arrayValue+'</div>';
   }
 
   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
