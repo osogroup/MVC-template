@@ -139,6 +139,7 @@ const createHTML = async () => {
 
 function removeFunction() {
   console.log("Entered removeFunction...");
+  console.log("Finding this... ", this);
 }
 
 
