@@ -161,7 +161,10 @@ const createHTML = async () => {
       elementVal = select.options[select.selectedIndex].text;
       arrayFields.push(elementVal);
       localStorage.setItem('task_0', arrayFields);
-      $('#appendTo').append(elementVal);
+
+      var HTMLelement = '<div class="col-4">'+elementVal+'</div><div class="col-1"><input type="button" class="remvBtn" value="-"></div>';
+
+      $('#appendTo').append(HTMLelement);
       // location.reload();
       displayArray();
     }
