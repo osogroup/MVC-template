@@ -122,7 +122,7 @@ const createHTML = async () => {
   }
 
   HTMLoutput +=       '</select>'
-                    + '<input type="button" id="showTxt" value="Add" />'
+                    + '<input type="button" id="showTxt" value="Add" onclick="addDiv()"/>'
                 + '</fieldset>'
               + '</form>';
 
@@ -138,18 +138,6 @@ const createHTML = async () => {
     var element = document.getElementById('display');
 
 
-    // function getSelectedOption(select) {
-    //   var option;
-    //   for ( var i = 0, len = select.options.length; i < len; i++ ) {
-    //     option = select.options[i];
-    //     if ( option.selected === true ) {
-    //       break;
-    //     }
-    //   }
-    //   return option;
-    // }
-
-
     // ---------------------------------------------- Add function ----------------------------------------------
 
 
@@ -157,18 +145,9 @@ const createHTML = async () => {
       // access text property of selected option
       var HTMLelement = '';
       elementValue = select.options[select.selectedIndex].text;
-      console.log("This is elementValue: ", elementValue);
+      // console.log("This is elementValue: ", elementValue);
       arrayFields.push(elementValue);
-      // for (const [fieldKey, fieldValue] of Object.entries(arrayFields)) {
-      //   // console.log("This is fieldKey: ", fieldKey); // 0,1,2
-      //   // console.log("This is fieldValue: ", fieldValue); // peter, john, james
-        
-
-      //   HTMLelement += '<div class="row" id="'+objType+fieldKey+fieldValue+'"><div class="col-4">'+fieldValue+'</div><input type="button" class="remvBtn" onClick="removeFunction(\''+elementValue+'\')" value="-"></div>';
-
-      // }
       console.log("This is arrayFields: ", arrayFields);
-      // location.reload();
       // $('#display').append(HTMLelement);
     }
   }());
