@@ -107,7 +107,7 @@ const createHTML = async () => {
   // showing all the items in the arrayFields array
   for (const[arrayKey, arrayValue] of Object.entries(localStorage)) {
     console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
-    HTMLoutput +=     '<div class="row" id="'+arrayKey+'"><div class="col-4">'+arrayValue+'</div><div class="col-1"><input type="button" class="remvBtn" value="-"></div></div>';
+    HTMLoutput +=     '<div class="row" id="'+arrayKey+'"><div class="col-4">'+arrayValue+'</div><div class="col-1"><input type="button" class="remvBtn" value="-" onclick="removeFunction(\''+arrayKey+'\')"></div></div>';
   }
 
   // creating the select options HTML
@@ -158,9 +158,10 @@ const createHTML = async () => {
 function removeFunction(val) {
   console.log("Entered removeFunction...");
   console.log("This is the parameter 'val': ", val);
-  var removeVal = arrayFields.indexOf(val);
-  console.log("This is removeVal: ", removeVal);
-  arrayFields.splice(removeVal, 1);
+  localStorage.removeItem(val);
+  // var removeVal = arrayFields.indexOf(val);
+  // console.log("This is removeVal: ", removeVal);
+  // arrayFields.splice(removeVal, 1);
 }
 
 
