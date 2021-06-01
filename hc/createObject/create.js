@@ -134,15 +134,16 @@ const createHTML = async () => {
 
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
-      HTMlelement = '';
+      var HTMlelement = '';
       elementValue = select.options[select.selectedIndex].text;
       console.log("This is elementValue: ", elementValue);
       arrayFields.push(elementValue);
       for (const [fieldKey, fieldValue] of Object.entries(arrayFields)) {
         // console.log("This is fieldKey: ", fieldKey); // 0,1,2
         // console.log("This is fieldValue: ", fieldValue); // peter, john, james
+        HTMLelement += '<div class="row">'+elementValue+' <input type="button" class="remvBtn" onClick="removeFunction(\''+elementValue+'\')" value="-"></div>';
+
       }
-      var HTMLelement = '<div class="row">'+elementValue+' <input type="button" class="remvBtn" onClick="removeFunction(\''+elementValue+'\')" value="-"></div>';
       console.log("This is arrayFields: ", arrayFields);
       $('#display').append(HTMLelement);
     }
@@ -151,7 +152,7 @@ const createHTML = async () => {
 }
 
 
-  // ----------------------------------------------- Add funtion -----------------------------------------------
+  // ----------------------------------------------- rem funtion -----------------------------------------------
 
 
 
