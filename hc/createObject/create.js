@@ -40,6 +40,9 @@ const createHTML = async () => {
   var config = await configData();
   var objTypeData = data[objType];
   var configTypeData = config[objType];
+  localStorage.setItem('task0peter', 'peter');
+  localStorage.setItem('task1james', 'james');
+  localStorage.setItem('task2john', 'john');
 
 
   // ---------------------------------------------- Navigation Bar ----------------------------------------------
