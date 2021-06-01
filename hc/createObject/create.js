@@ -159,7 +159,6 @@ const createHTML = async () => {
       arrayFields.push(elementVal);
       localStorage.setItem('task_0', arrayFields);
       // location.reload();
-      console.log("localStorage: ", localStorage);
       displayArray();
     }
   }());
