@@ -108,7 +108,7 @@ const createHTML = async () => {
                   + '<legend>Get Text of Selected Option</legend>'
 
   // showing all the items in the arrayFields array
-  for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
+  for (const[arrayKey, arrayValue] of Object.entries(localStorage)) {
     console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
     HTMLoutput +=     '<div class="row" id="'+arrayKey+'"><div class="col-4">'+arrayValue+'</div><input type="button" class="remvBtn" value="-"></div>';
   }
