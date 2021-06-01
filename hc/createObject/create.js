@@ -140,6 +140,7 @@ const createHTML = async () => {
     // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
     
     $('#arraySpot').append(HTMLarray);
+    console.log("localStorage: ", localStorage);
 
   }
 
@@ -162,7 +163,6 @@ const createHTML = async () => {
       displayArray();
     }
   }());
-  console.log("localStorage: ", localStorage);
 }
 
 
