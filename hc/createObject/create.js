@@ -146,7 +146,7 @@ const createHTML = async () => {
       elementVal = select.options[select.selectedIndex].text;
       localStorage.setItem(objType+nearestIDAvailable()+elementVal,elementVal)
       // console.log("This is elementValue: ", elementValue);
-      arrayFields.push(elementVal);
+      // arrayFields.push(elementVal);
       console.log("This is arrayFields: ", arrayFields);
     }
   }());
