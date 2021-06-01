@@ -143,7 +143,7 @@ const createHTML = async () => {
       elementVal = select.options[select.selectedIndex].text;
 
       localStorage.setItem(objType+generateID+elementVal,elementVal)
-
+      localStorage;
       // console.log("This is elementValue: ", elementValue);
       arrayFields.push(elementValue);
       console.log("This is arrayFields: ", arrayFields);
