@@ -144,9 +144,9 @@ const createHTML = async () => {
       // access text property of selected option
       elementVal = select.options[select.selectedIndex].text;
       arrayFields.push(elementVal);
-      localStorage.setItem(objType+'_0', arrayFields);
+      localStorage.setItem('task_0', arrayFields);
       // location.reload();
-  console.log("localStorage: ", localStorage);
+      console.log("localStorage: ", localStorage);
     }
   }());
   console.log("localStorage: ", localStorage);
