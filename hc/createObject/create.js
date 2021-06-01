@@ -148,6 +148,7 @@ const createHTML = async () => {
       location.reload();
     }
   }());
+  console.log("This is the localStorage: ", localStorage);
 }
 
 
