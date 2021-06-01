@@ -17,6 +17,9 @@ const tempData = async () => {
   return objVars;
 }
 
+var arrayFields = [ 'peter', 'john', 'james' ];
+
+
 const createHTML = async () => {
   var data = await tempData();
   var config = await configData();
@@ -78,7 +81,6 @@ const createHTML = async () => {
   // closing item header and input row
   HTMLoutput += '</div>';
 
-  var arrayFields = [ 'peter', 'john', 'james' ];
 
   HTMLoutput += '<form action="#" method="post" id="demoForm" class="demoForm">'
                 + '<fieldset>'
@@ -138,7 +140,7 @@ const createHTML = async () => {
     }
   }());
 
-  
+}
 
   function removeFunction(val) {
     console.log("Entered removeFunction...");
@@ -146,8 +148,6 @@ const createHTML = async () => {
     var removeVal = arrayFields.indexOf(val);
     console.log("This is removeVal: ", removeVal);
   }
-
-}
 
 
 
