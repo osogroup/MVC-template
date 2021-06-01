@@ -183,7 +183,7 @@ function removeFunction(val) {
 
 function nearestIDAvailable() {
   var i = 0;
-  for(const [idKey, idValue] of Object.entries(arrayFields)) {
+  for(const [idKey, idValue] of Object.entries(localStorage)) {
     i++;
   }
   console.log("This is i: ", i);
