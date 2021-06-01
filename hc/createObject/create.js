@@ -50,7 +50,7 @@ const createHTML = async () => {
   // creating nav bar row
                   + '<div class="row">'
                     + '<p id="header">'
-                      + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
+                      + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="60">';
   
   // creating the links for the header
   for(const [headerKey, headerValue] of Object.entries(data)) {
@@ -98,7 +98,7 @@ const createHTML = async () => {
   HTMLoutput += '</div>';
 
 
-  // ------------------------------------------------ Array List ------------------------------------------------
+  // ---------------------------------------------- Display Array ----------------------------------------------
 
 
   HTMLoutput += '<form action="#" method="post" id="demoForm" class="demoForm">'
