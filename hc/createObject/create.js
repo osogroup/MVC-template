@@ -99,7 +99,7 @@ const createHTML = async () => {
 
   displayArray();
 
-  
+
   // ---------------------------------------------- Display Array ----------------------------------------------
 
   function displayArray() {
@@ -151,6 +151,7 @@ const createHTML = async () => {
       localStorage.setItem('task_0', arrayFields);
       // location.reload();
       console.log("localStorage: ", localStorage);
+      displayArray();
     }
   }());
   console.log("localStorage: ", localStorage);
