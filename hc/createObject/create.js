@@ -138,7 +138,11 @@ const createHTML = async () => {
     }
   }());
 
-  remvBtn.click(function () {
+  
+
+  MultipleRemoves = ('.remvBtn');
+  
+  MultipleRemoves.click(function () {
     console.log("Entered remvBtn function...");
   });
 
