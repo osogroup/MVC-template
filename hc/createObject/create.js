@@ -17,7 +17,7 @@ const tempData = async () => {
   return objVars;
 }
 
-var arrayFields = [ 'Peter', 'James', 'John' ];
+var arrayFields = [];
 
 
 var arrayOfOptions = [ 'Scrolling Divs JavaScript',
@@ -37,9 +37,10 @@ const createHTML = async () => {
   var config = await configData();
   var objTypeData = data[objType];
   var configTypeData = config[objType];
-  // localStorage.setItem('task0peter', 'peter');
-  // localStorage.setItem('task1james', 'james');
-  // localStorage.setItem('task2john', 'john');
+  arrayFields.push('Peter');
+  arrayFields.push('James');
+  arrayFields.push('John');
+  localStorage.setItem('task_0', arrayFields);
 
 
   // ---------------------------------------------- Navigation Bar ----------------------------------------------
