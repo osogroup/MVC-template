@@ -144,11 +144,10 @@ const createHTML = async () => {
       elementVal = select.options[select.selectedIndex].text;
       arrayFields.push(elementVal);
       localStorage.setItem(objType+'_0', arrayFields);
-      // console.log("This is elementValue: ", elementValue);
       // location.reload();
     }
   }());
-  console.log("This is the localStorage: ", localStorage);
+  console.log("localStorage: ", localStorage);
 }
 
 
@@ -160,9 +159,6 @@ function removeFunction(val) {
   console.log("This is the parameter 'val': ", val);
   localStorage.removeItem(val);
   // location.reload();
-  // var removeVal = arrayFields.indexOf(val);
-  // console.log("This is removeVal: ", removeVal);
-  // arrayFields.splice(removeVal, 1);
 }
 
 
