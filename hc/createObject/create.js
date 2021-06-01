@@ -38,7 +38,8 @@ var arrayOfOptions = [ 'Scrolling Divs JavaScript',
                        'Random Image PHP', 
                        'PHP Form Generator', 
                        'PHP Table Class', 
-                       'PHP Order Forms' 
+                       'PHP Order Forms',
+                       'Test Option'
                       ];
 
 
