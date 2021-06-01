@@ -159,6 +159,7 @@ function removeFunction(val) {
   console.log("Entered removeFunction...");
   console.log("This is the parameter 'val': ", val);
   localStorage.removeItem(val);
+  location.reload();
   // var removeVal = arrayFields.indexOf(val);
   // console.log("This is removeVal: ", removeVal);
   // arrayFields.splice(removeVal, 1);
