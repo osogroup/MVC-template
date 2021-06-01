@@ -21,15 +21,7 @@ var arrayFields = [ 'peter',
                     'james', 
                     'john' 
                   ];
-
-// + '<option value="scroll">Scrolling Divs JavaScript</option>'
-// + '<option value="tooltip">JavaScript Tooltips</option>'
-// + '<option value="con_scroll">Continuous Scroller</option>'
-// + '<option value="banner">Rotating Banner JavaScript</option>'
-// + '<option value="random_img">Random Image PHP</option>'
-// + '<option value="form_builder">PHP Form Generator</option>'
-// + '<option value="table_class">PHP Table Class</option>'
-// + '<option value="order_forms">PHP Order Forms</option>'
+                  
 
 var arrayOfOptions = [ 'Scrolling Divs JavaScript',
                        'JavaScript Tooltips', 
