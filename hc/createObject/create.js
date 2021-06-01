@@ -134,7 +134,7 @@ const createHTML = async () => {
 
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
-      var HTMlelement = '';
+      var HTMLelement = '';
       elementValue = select.options[select.selectedIndex].text;
       console.log("This is elementValue: ", elementValue);
       arrayFields.push(elementValue);
