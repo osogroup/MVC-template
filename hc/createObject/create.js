@@ -113,7 +113,7 @@ const createHTML = async () => {
 
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
     console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
-    HTMLoutput +=     '<div class="row" id="'+objType+fieldKey+fieldValue+'"><div class="col-4">'+fieldValue+'</div><input type="button" class="remvBtn" onClick="removeFunction(\''+elementValue+'\')" value="-"></div>';
+    HTMLoutput +=     '<div class="row" id="'+objType+arrayKey+arrayValue+'"><div class="col-4">'+arrayValue+'</div><input type="button" class="remvBtn" '/* onClick="removeFunction(\''+elementValue+'\')" */+'value="-"></div>';
   }
 
   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
