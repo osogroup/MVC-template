@@ -167,7 +167,7 @@ const createHTML = async () => {
 
       // }
       console.log("This is arrayFields: ", arrayFields);
-      location.reload();
+      // location.reload();
       // $('#display').append(HTMLelement);
     }
   }());
