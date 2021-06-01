@@ -98,6 +98,8 @@ const createHTML = async () => {
   HTMLoutput += '</div>';
 
   displayArray();
+
+  
   // ---------------------------------------------- Display Array ----------------------------------------------
 
   function displayArray() {
