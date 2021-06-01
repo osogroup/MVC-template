@@ -106,6 +106,12 @@ const createHTML = async () => {
 
   function displayArray() {
 
+    var element = document.getElementById('arrayChild');
+    element.parentNode.removeChild(element);
+    var tag = document.createElement("div");
+    tag.setAttribute('id', 'arrayChild');
+
+
     HTMLarray = '<form action="#" method="post" id="demoForm" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Get Text of Selected Option</legend>'
@@ -133,7 +139,7 @@ const createHTML = async () => {
 
     // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
     
-  $('#arraySpot').append(HTMLarray);
+  $('#arrayChild').append(HTMLarray);
 
   }
 
