@@ -108,7 +108,6 @@ const createHTML = async () => {
   HTMLoutput += '<form action="#" method="post" id="demoForm" class="demoForm">'
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
-                  + '<p>'
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
     console.log("This is arrayValue: ", arrayValue);
   }
@@ -120,7 +119,6 @@ const createHTML = async () => {
   }
         HTMLoutput += '</select>'
                     + '<input type="button" id="showTxt" value="Add" />'
-                  + '</p>'
                 + '</fieldset>'
               + '</form>';
 
