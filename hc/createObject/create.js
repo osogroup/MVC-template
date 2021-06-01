@@ -21,7 +21,7 @@ var arrayFields = [ 'peter',
                     'james', 
                     'john' 
                   ];
-                  
+
 
 var arrayOfOptions = [ 'Scrolling Divs JavaScript',
                        'JavaScript Tooltips', 
@@ -97,24 +97,29 @@ const createHTML = async () => {
   HTMLoutput += '</div>';
 
 
+  // ------------------------------------------------ Array List ------------------------------------------------
+
+
   HTMLoutput += '<form action="#" method="post" id="demoForm" class="demoForm">'
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
 
+  // showing all the items in the arrayFields array
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
     console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
     HTMLoutput +=     '<div class="row" id="'+objType+arrayKey+arrayValue+'"><div class="col-4">'+arrayValue+'</div><input type="button" class="remvBtn" value="-"></div>';
   }
 
   // creating the select options HTML
-  HTMLoutput +=     '<br><select id="scripts" name="scripts">';
+  HTMLoutput +=       '<br><select id="scripts" name="scripts">';
 
+  // creating all the options from the arrayOfOptions array in the select tag
   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
     HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
   }
 
   HTMLoutput +=       '</select>'
-                    + '<input type="button" id="showTxt" value="Add" onclick="addDiv()"/>'
+                    + '<input type="button" id="showTxt" value="Add"/>'
                 + '</fieldset>'
               + '</form>';
 
@@ -135,12 +140,10 @@ const createHTML = async () => {
 
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
-      var HTMLelement = '';
       elementValue = select.options[select.selectedIndex].text;
       // console.log("This is elementValue: ", elementValue);
       arrayFields.push(elementValue);
       console.log("This is arrayFields: ", arrayFields);
-      // $('#display').append(HTMLelement);
     }
   }());
 
