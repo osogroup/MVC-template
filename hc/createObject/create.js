@@ -114,6 +114,7 @@ const createHTML = async () => {
     HTMLoutput +=     '<div class="row" id="'+objType+arrayKey+arrayValue+'"><div class="col-4">'+arrayValue+'</div><input type="button" class="remvBtn" value="-"></div>';
   }
 
+  // creating the select options HTML
   HTMLoutput +=     '<br><select id="scripts" name="scripts">';
 
   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
@@ -167,7 +168,7 @@ const createHTML = async () => {
 
       // }
       console.log("This is arrayFields: ", arrayFields);
-      // location.reload();
+      location.reload();
       // $('#display').append(HTMLelement);
     }
   }());
