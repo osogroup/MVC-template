@@ -131,9 +131,14 @@ const createHTML = async () => {
 
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
+      HTMlelement = '';
       elementValue = select.options[select.selectedIndex].text;
       console.log("This is elementValue: ", elementValue);
       arrayFields.push(elementValue);
+      for (const [fieldKey, fieldValue] of Object.entries(arrayFields)) {
+        console.log("This is fieldKey: ", fieldKey);
+        console.log("This is fieldValue: ", fieldValue);
+      }
       var HTMLelement = '<div class="row">'+elementValue+' <input type="button" class="remvBtn" onClick="removeFunction(\''+elementValue+'\')" value="-"></div>';
       console.log("This is arrayFields: ", arrayFields);
       $('#display').append(HTMLelement);
@@ -148,6 +153,7 @@ function removeFunction(val) {
   var removeVal = arrayFields.indexOf(val);
   console.log("This is removeVal: ", removeVal);
   arrayFields.splice(removeVal, 1);
+
 }
 
 
