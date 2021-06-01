@@ -108,13 +108,13 @@ const createHTML = async () => {
   HTMLoutput += '<form action="#" method="post" id="demoForm" class="demoForm">'
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
-                  
-  HTMLoutput +=     '<br><select id="scripts" name="scripts">';
 
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
     console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
-    HTMLoutput +=     '<div class="row" id="'+objType+arrayKey+arrayValue+'"><div class="col-4">'+arrayValue+'</div><input type="button" class="remvBtn" '/* onClick="removeFunction(\''+elementValue+'\')" */+'value="-"></div>';
+    HTMLoutput +=     '<div class="row" id="'+objType+arrayKey+arrayValue+'"><div class="col-4">'+arrayValue+'</div><input type="button" class="remvBtn" value="-"></div>';
   }
+
+  HTMLoutput +=     '<br><select id="scripts" name="scripts">';
 
   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
     HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
