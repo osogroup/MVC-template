@@ -110,7 +110,7 @@ const createHTML = async () => {
   // showing all the items in the arrayFields array
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
     console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
-    HTMLoutput +=     '<div class="row" id="'+objType+arrayKey+arrayValue+'"><div class="col-4">'+arrayValue+'</div><input type="button" class="remvBtn" value="-"></div>';
+    HTMLoutput +=     '<div class="row" id="'+arrayKey+'"><div class="col-4">'+arrayValue+'</div><input type="button" class="remvBtn" value="-"></div>';
   }
 
   // creating the select options HTML
