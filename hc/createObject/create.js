@@ -167,21 +167,30 @@ function removeFunction(val) {
 // ------------------------------------------------ ID Generator ------------------------------------------------
 
 
-const generateID = async () => {
-  var data = await tempData();
-  // console.log("This is data: ", data);
-  var objTypeData = data[objType];
-  // console.log("This is objTypeData: ", objTypeData);
+// const generateID = async () => {
+//   var data = await tempData();
+//   // console.log("This is data: ", data);
+//   var objTypeData = data[objType];
+//   // console.log("This is objTypeData: ", objTypeData);
+
+//   var i = 0;
+//   for(const [idKey, idValue] of Object.entries(objTypeData)) {
+//     i++;
+//   }
+//   console.log("This is i: ", i);
+//   return i;
+// }
+
+function newGenerateID() {
+
 
   var i = 0;
-  for(const [idKey, idValue] of Object.entries(objTypeData)) {
+  for(const [idKey, idValue] of Object.entries(arrayFields)) {
     i++;
   }
   console.log("This is i: ", i);
   return i;
 }
-
-
 
 
 
