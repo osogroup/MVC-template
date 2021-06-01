@@ -106,11 +106,11 @@ const createHTML = async () => {
 
   function displayArray() {
 
-    var element = document.getElementById('arraySpot');
-    console.log("This is element: ", element);
-    element.parentNode.removeChild(element);
-    var newElement = document.createElement('div');
-    newElement.setAttribute('id', 'arraySpot');
+    // var element = document.getElementById('arraySpot');
+    // console.log("This is element: ", element);
+    // element.parentNode.removeChild(element);
+    // var newElement = document.createElement('div');
+    // newElement.setAttribute('id', 'arraySpot');
 
     var HTMLarray = '<form action="#" method="post" id="demoForm" class="demoForm">'
                   + '<fieldset>'
