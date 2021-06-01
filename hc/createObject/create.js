@@ -127,10 +127,10 @@ const createHTML = async () => {
     }
     document.getElementById('showTxt').onclick = function () {
       // access text property of selected option
-      element.value = select.options[select.selectedIndex].text;
-      console.log("This is element.value: ", element.value);
-      arrayFields.push(element.value);
-      var HTMLelement = '<div class="row">'+element.value+' <input type="button" onClick="removeFunction('+element.value+')" value="-"></div>';
+      element = select.options[select.selectedIndex].text;
+      console.log("This is element.value: ", element);
+      arrayFields.push(element);
+      var HTMLelement = '<div class="row">'+element+' <input type="button" onClick="removeFunction('+element+')" value="-"></div>';
       console.log("This is arrayFields: ", arrayFields);
       $('#display').append(HTMLelement);
     }
