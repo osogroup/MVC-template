@@ -100,6 +100,7 @@ const createHTML = async () => {
   $('#everything').append(HTMLoutput);
 
   var HTMLarray = '';
+  var HTMLarrayValues = '';
 
 
   // ---------------------------------------------- Display Array ----------------------------------------------
@@ -116,7 +117,7 @@ const createHTML = async () => {
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
     // (arrayKey: 0, 1, 2)
     // (arrayValue: peter, james, john)
-    HTMLarray +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
+    HTMLarrayValues +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
     
     // counts up the indices if there's any preset values in the array (uncommon)
     i++;
