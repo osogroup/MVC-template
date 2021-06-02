@@ -136,7 +136,7 @@ const createHTML = async () => {
 
   // closing the form tags and creating the add button
   HTMLarray +=       '</select>'
-                    + '<input type="button" id="showTxt" value="Add"/>'
+                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
                 + '</fieldset>'
               + '</form>';
 
