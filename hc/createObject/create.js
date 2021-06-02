@@ -228,12 +228,22 @@ function removeFunction(val) {
 
 
 
-
-
 function arrayList(vars) {
+  if (!vars.existing || !vars.options || !vars.attrType){
+    alert("vars has an empty array");
+  }
+
   var arrayFields = vars.existing;
+  var arrayOfOptions = vars.options;
+  var type = vars.attrType;
+
+  return vars;
 
 }
+
+
+
+
 
 
 var variables = {
@@ -242,11 +252,9 @@ var variables = {
   attrType : []
 };
 
+var functionCall = arrayList(variables);
 
-
-
-
-
+console.log("This is functionCall: ", functionCall);
 
 
 
