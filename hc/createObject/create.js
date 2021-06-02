@@ -180,6 +180,7 @@ function arrayList() {
 
 
   (function() {
+    
     document.getElementsByClassName('removeButton').onclick = function () {
 
       var HTMLelement = '';
