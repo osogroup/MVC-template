@@ -232,6 +232,16 @@ function removeFunction(val) {
 
 
 
+var fillFields =  [ 'Filler Text 1 Filler Text 1',
+                    'Filler Text 2 Filler Text 2',
+                    'Filler Text 3 Filler Text 3',
+                    'Filler Text 4 Filler Text 4',
+                    'Filler Text 5 Filler Text 5',
+                    'Filler Text 6 Filler Text 6',
+                    'Filler Text 7 Filler Text 7' 
+                  ];
+
+
 
 
 
@@ -250,6 +260,9 @@ function createHTML2() {
                     + '<div id="objAppend"></div>'
                   + '</div>'
                   + '<br><select>'
+  for (const [] of Object.entries(objectFields)) {
+
+  }
                     + '<option>Filler Text Filler Text</option>'
                     + '<input type="button" id="showObj" value="+">'
                   + '</select>'
