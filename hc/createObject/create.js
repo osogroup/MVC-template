@@ -311,7 +311,7 @@ function arrayList(vars) {
   $('#arraySpot').append(HTMLoutput);
   $('#appendTo').append(HTMLarrayValues);
 
-  // console.log("This is arrayList() output: ", HTMLoutput);
+  console.log("This is arrayList() output: ", HTMLoutput);
   return HTMLoutput;
 }
 
@@ -323,7 +323,7 @@ var variables = {
 
 var functionCall = arrayList(variables);
 
-// console.log("This is functionCall: ", functionCall);
+console.log("This is functionCall: ", functionCall);
 
 
 
