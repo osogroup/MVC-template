@@ -188,7 +188,7 @@ function removeFunction(val) {
   $('#appendTo').append(HTMLelement);
   console.log("This is arrayFields after .splice(): ", arrayFields);
 
-  // adjusting indices
+  // adjusting indices for add function
   i--;
 }
 
