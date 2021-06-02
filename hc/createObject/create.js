@@ -311,7 +311,7 @@ function arrayList(vars) {
     + '</fieldset>'
   + '</form>';
 
-  $('#arraySpot').append(HTMLarray);
+  $('#arraySpot').append(HTMLoutput);
   $('#appendTo').append(HTMLarrayValues);
 
   console.log("This is arrayList() output: ", HTMLoutput);
