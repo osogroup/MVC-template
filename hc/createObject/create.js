@@ -250,6 +250,9 @@ function createHTML2() {
                   + '</select>'
                 + '</fieldset>'
               + '</form>';
+              
+  $('#objectSpot').append(outputHTML);
+
   console.log("Exiting createHTML2()...");
 }
 
