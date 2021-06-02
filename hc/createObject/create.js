@@ -241,12 +241,13 @@ function createHTML2() {
   console.log("Entering createHTML2()...");
 
   var outputHTML = '';
+  var objectFields = { 'oneKey': 'oneValue', 'twoKey': 'twoValue', 'threeKey': 'threeValue' };
 
   outputHTML += '<form>'
                 + '<fieldset>'
                   + '<legend>Object List</legend>'
                   + '<select>'
-                    + '<option>Filler Text</option>'
+                    + '<option>Filler Text Filler Text</option>'
                   + '</select>'
                 + '</fieldset>'
               + '</form>';
