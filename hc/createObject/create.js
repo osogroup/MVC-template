@@ -342,7 +342,7 @@ var elm = document.getElementById("objOuter");
 elm.appendChild(tag);
 $('#objAppend').append(HTMLelement);
 
-console.log("This is arrayFields after .splice(): ", arrayFields);
+console.log("This is objectFields after .splice(): ", objectFields);
 
 // adjusting indices for add function
 i--;
