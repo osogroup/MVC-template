@@ -172,7 +172,7 @@ const createHTML = async () => {
 
 
 function removeFunction(val) {
-  console.log("Entered removeFunction...");
+  // console.log("Entered removeFunction...");
   // console.log("This is the parameter 'val': ", val);
   arrayFields.splice(val, 1);
   var element = document.querySelector('#remvBtn'+val);
