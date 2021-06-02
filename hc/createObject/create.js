@@ -138,8 +138,8 @@ const createHTML = async () => {
     
     // console.log("localStorage: ", localStorage);
     
+    $('#arraySpot').append(HTMLarray);
   }
-  $('#arraySpot').append(HTMLarray);
 
   (function() {
     
