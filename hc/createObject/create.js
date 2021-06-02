@@ -238,7 +238,7 @@ function removeFunction(val) {
 
 
 function createHTML2() {
-  console.log("Entering createHTML2()...")
+  console.log("Entering createHTML2()...");
 
   var outputHTML = '';
 
