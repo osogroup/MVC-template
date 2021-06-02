@@ -116,7 +116,7 @@ const createHTML = async () => {
     for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
       // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
       // console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
-      HTMLarray +=     '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" class="remvBtn" value="-" onclick="removeFunction('+arrayKey+')></div></div>';
+      HTMLarray +=     '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')></div></div>';
       i++;
     }
 
