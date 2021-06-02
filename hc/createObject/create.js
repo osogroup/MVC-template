@@ -231,11 +231,12 @@ function removeFunction(val) {
 
 
 function arrayList(vars) {
-  
+  var arrayFields = vars.existing;
+
 }
 
 
-var vars = {
+var variables = {
   options : [],
   existing : [],
   attrType : []
