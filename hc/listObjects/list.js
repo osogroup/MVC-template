@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  if (objType == null)
   alert("add '?type=task' to the URL");
 
   // console.log("objType in the JS file " , objType);
