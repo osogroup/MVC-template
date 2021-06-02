@@ -105,7 +105,6 @@ const createHTML = async () => {
   // ---------------------------------------------- Display Array ----------------------------------------------
 
 
-    // sets i to zero so the for of loop has to count up all the indexes when it loops
     HTMLarray += '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Get Text of Selected Option</legend>'
@@ -113,7 +112,7 @@ const createHTML = async () => {
                       + '<div id="appendTo"></div>'
                     + '</div>';
 
-    // showing all the items in the arrayFields array
+    // showing all the items in the arrayFields array (none if the array is preset as empty)
     for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
       // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
       // console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
