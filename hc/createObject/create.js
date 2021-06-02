@@ -139,7 +139,7 @@ const createHTML = async () => {
     // console.log("localStorage: ", localStorage);
     
   }
-  
+
   $('#arraySpot').append(HTMLarray);
 
   (function() {
@@ -163,7 +163,7 @@ const createHTML = async () => {
 
       // $('#appendTo').append(HTMLelement);
       // location.reload();
-      displayArray();
+      createHTML();
       i++;
     }
   }());
