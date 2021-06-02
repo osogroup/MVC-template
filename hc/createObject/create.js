@@ -268,7 +268,7 @@ function createObjectList() {
 
   for (const[objectKey, objectValue] of Object.entries(objectFields)) {
     // (objectKey: option 1, option 2, option 3)
-    HTMLobjectValues += '<div class="row"><div class="col-6">'+objectValue+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeObject('+i+')"></div></div>';
+    HTMLobjectValues += '<div class="row"><div class="col-6">'+objectValue+'</div><div class="col-1"><input type="button" id="remvObj'+i+'" value="-" onclick="removeObject('+i+')"></div></div>';
     // counts up the indices if there's any preset values in the array (uncommon)
     i++;
   }
@@ -305,7 +305,7 @@ function createObjectList() {
       objectFields.push(elementVal);
       
       // adding a new row and columns to the HTML
-      var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeObject('+i+')"></div></div>';
+      var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvObj'+i+'" value="-" onclick="removeObject('+i+')"></div></div>';
       $('#objAppend').append(HTMLelement);
 
       // adjusting indices
@@ -323,17 +323,17 @@ function removeObject(val) {
 var HTMLelement = '';
 
 // removing 1 value from arrayFields starting at index 'val'
-arrayFields.splice(val, 1);
+objectFields.splice(val, 1);
 
 // getting a variable that represents whichever remove button I push on the browser (technically dont need
 // the specific id since the the value is deleted from arrayFields anyway and then arrayFields is ran through,
 // recreating the display)
-var element = document.querySelector('#remvBtn'+val);
+var element = document.querySelector('#remvObj'+val);
 
 // deleting the entire div containing the arrayField values
 element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
-for (const [elementKey, elementValue] of Object.entries(arrayFields)) {
-  HTMLelement += '<div class="row"><div class="col-6">'+elementValue+'</div><div class="col-1"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeObject('+elementKey+')"></div></div>';
+for (const [elementKey, elementValue] of Object.entries(objectFields)) {
+  HTMLelement += '<div class="row"><div class="col-6">'+elementValue+'</div><div class="col-1"><input type="button" id="remvObj'+elementKey+'" value="-" onclick="removeObject('+elementKey+')"></div></div>';
 }
 // next 5 lines create a new div within outerDiv that has the id="appendTo"
 var tag = document.createElement('div');
