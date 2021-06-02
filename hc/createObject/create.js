@@ -253,9 +253,9 @@ var fillFields =  {
 
 
 function createObjectList() {
-  var i = 0;
   console.log("Entering createHTML2()...");
-
+  
+  var i = 0;
   var outputHTML = '';
   var HTMLobjectValues = '';
 
@@ -288,10 +288,6 @@ function createObjectList() {
   $('#objAppend').append(HTMLobjectValues);
 
 
-  console.log("Exiting createHTML2()...");
-
-
-
 
   // begin addFunction()
   (function() {
@@ -317,6 +313,7 @@ function createObjectList() {
       i++;
     }
   }());
+  console.log("Exiting createHTML2()...");
 }
 
 
