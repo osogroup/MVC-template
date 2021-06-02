@@ -171,6 +171,10 @@ function arrayList() {
     }
   }());
 
+
+  // -------------------------------------------- New Remove Function --------------------------------------------
+
+
   (function() {
     document.getElementsByClassName('removeButton').onclick = function () {
 
