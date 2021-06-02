@@ -315,7 +315,7 @@ function arrayList(vars) {
 }
 
 var variables = {
-  options : aarrayOfOptions,
+  options : arrayOfOptions,
   existing : arrayFields,
   attrType : objType
 };
