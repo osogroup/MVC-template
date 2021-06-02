@@ -273,7 +273,6 @@ function createObjectList() {
     i++;
   }
 
-
   outputHTML +=     '<br><select id="objScripts" name="objScripts">';
 
   for (const [fillKey, fillValue] of Object.entries(fillFields)) {
@@ -293,17 +292,17 @@ function createObjectList() {
   (function() {
     
     // get reference to select tag's id
-    var select = document.getElementById('scripts');
+    var select = document.getElementById('objScripts');
 
 
     // ---------------------------------------------- Add function ----------------------------------------------
 
     // creating Add button click function
-    document.getElementById('showTxt').onclick = function () {
+    document.getElementById('showObj').onclick = function () {
 
       // access text property of selected option
       elementVal = select.options[select.selectedIndex].text;
-      arrayFields.push(elementVal);
+      objFields.push(elementVal);
       
       // adding a new row and columns to the HTML
       var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
