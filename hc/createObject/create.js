@@ -122,8 +122,8 @@ const createHTML = async () => {
       i++;
     }
 
-    // creating the select options HTML
-    HTMLarray +=       '<br><select id="scripts" name="scripts">';
+    // creating the select tag in the HTML
+    HTMLarray +=      '<br><select id="scripts" name="scripts">';
 
     // creating all the options from the arrayOfOptions array in the select tag
     for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
