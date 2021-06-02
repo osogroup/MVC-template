@@ -176,7 +176,7 @@ function removeFunction(val) {
   // console.log("This is the parameter 'val': ", val);
   arrayFields.splice(val, 1);
   var element = document.querySelector('#remvBtn'+val);
-  element.parentNode.parentNode.remove(element.parentNode.parentNode);
+  element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
   console.log("This is arrayFields after .splice(): ", arrayFields);
 }
 
