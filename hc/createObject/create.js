@@ -275,6 +275,7 @@ function arrayList(vars) {
   console.log("This is arrayList(vars): ", vars);
 
   var HTMLoutput = '';
+  var HTMLarrayValues = '';
   var arrayFields = vars.existing;
   var arrayOfOptions = vars.options;
   var type = vars.attrType;
