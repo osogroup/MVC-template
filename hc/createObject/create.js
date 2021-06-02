@@ -105,10 +105,8 @@ const createHTML = async () => {
 
   // ---------------------------------------------- Display Array ----------------------------------------------
 
-  function displayArray() {
 
     // sets i to zero so the for of loop has to count up all the indexes when it loops
-    i = 0;
     HTMLarray += '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Get Text of Selected Option</legend>'
@@ -141,10 +139,6 @@ const createHTML = async () => {
 
 
     // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
-    
-    // console.log("localStorage: ", localStorage);
-    
-  }
   
   $('#arraySpot').append(HTMLarray);
 
