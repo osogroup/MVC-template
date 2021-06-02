@@ -291,7 +291,7 @@ function createObjectList() {
 
 
   $('#objectSpot').append(outputHTML);
-  $('#appendTo').append(HTMLarrayValues);
+  $('#objAppend').append(HTMLarrayValues);
 
   // begin addFunction()
   (function() {
@@ -311,7 +311,7 @@ function createObjectList() {
       
       // adding a new row and columns to the HTML
       var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
-      $('#appendTo').append(HTMLelement);
+      $('#objAppend').append(HTMLelement);
 
       // adjusting indices
       i++;
