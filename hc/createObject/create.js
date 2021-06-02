@@ -260,11 +260,10 @@ function createHTML2() {
                     + '<div id="objAppend"></div>'
                   + '</div>'
                   + '<br><select>'
-  for (const [] of Object.entries(objectFields)) {
-
+  for (const [objectKey, objectValue] of Object.entries(objectFields)) {
+  ouputHTML +=        '<option>'+objectValue+'</option>'
   }
-                    + '<option>Filler Text Filler Text</option>'
-                    + '<input type="button" id="showObj" value="+">'
+  outputHTML +=     + '<input type="button" id="showObj" value="+">'
                   + '</select>'
                 + '</fieldset>'
               + '</form>';
