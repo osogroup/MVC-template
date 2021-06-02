@@ -195,6 +195,7 @@ function removeFunction(val) {
   var elm = document.getElementById("outerDiv");
   elm.appendChild(tag);
   $('#appendTo').append(HTMLelement);
+  
   console.log("This is arrayFields after .splice(): ", arrayFields);
 
   // adjusting indices for add function
