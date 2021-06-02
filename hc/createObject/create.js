@@ -232,14 +232,15 @@ function removeFunction(val) {
 
 
 
-var fillFields =  [ 'Filler Text 1 Filler Text 1',
-                    'Filler Text 2 Filler Text 2',
-                    'Filler Text 3 Filler Text 3',
-                    'Filler Text 4 Filler Text 4',
-                    'Filler Text 5 Filler Text 5',
-                    'Filler Text 6 Filler Text 6',
-                    'Filler Text 7 Filler Text 7' 
-                  ];
+var fillFields =  { 
+  'option 1': 'Filler Text 1 Filler Text 1',
+  'option 2': 'Filler Text 2 Filler Text 2',
+  'option 3': 'Filler Text 3 Filler Text 3',
+  'option 4': 'Filler Text 4 Filler Text 4',
+  'option 5': 'Filler Text 5 Filler Text 5',
+  'option 6': 'Filler Text 6 Filler Text 6',
+  'option 7': 'Filler Text 7 Filler Text 7' 
+};
 
 
 
@@ -251,7 +252,6 @@ function createHTML2() {
   console.log("Entering createHTML2()...");
 
   var outputHTML = '';
-  var objectFields = { 'oneKey': 'oneValue', 'twoKey': 'twoValue', 'threeKey': 'threeValue' };
 
   outputHTML += '<form>'
                 + '<fieldset>'
