@@ -243,10 +243,12 @@ function createHTML2() {
   var outputHTML = '';
 
   outputHTML += '<form>'
-                + '<legend>Object List</legend>'
-                + '<select>'
-                  + '<option></option>'
-                + '</select>'
+                + '<fieldset>'
+                  + '<legend>Object List</legend>'
+                  + '<select>'
+                    + '<option></option>'
+                  + '</select>'
+                + '</fieldset>'
               + '</form>';
   console.log("Exiting createHTML2()...");
 }
