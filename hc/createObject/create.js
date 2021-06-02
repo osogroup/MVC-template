@@ -142,7 +142,6 @@ function arrayList() {
 
   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
-
   $('#arraySpot').append(HTMLarray);
   $('#appendTo').append(HTMLarrayValues);
 
@@ -154,6 +153,7 @@ function arrayList() {
 
 
     // ---------------------------------------------- Add function ----------------------------------------------
+
 
     // creating Add button click function
     document.getElementById('showTxt').onclick = function () {
