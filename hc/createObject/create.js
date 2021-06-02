@@ -166,8 +166,9 @@ const createHTML = async () => {
       var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
 
       $('#appendTo').append(HTMLelement);
-      // location.reload();
-      displayArray();
+
+      // passes through the displayArray() function to count up the i's 
+      i++;
     }
   }());
 }
