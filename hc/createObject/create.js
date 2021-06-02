@@ -100,7 +100,7 @@ const createHTML = async () => {
   $('#everything').append(HTMLoutput);
 
   displayArray();
-  
+
   $('#arraySpot').append(HTMLarray);
 }
 
@@ -144,6 +144,7 @@ function displayArray() {
   
   // console.log("localStorage: ", localStorage);
   
+  return HTMLarray;
 }
 
 
