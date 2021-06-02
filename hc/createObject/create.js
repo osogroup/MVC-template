@@ -112,8 +112,8 @@ const createHTML = async () => {
                   + '<fieldset>'
                     + '<legend>Get Text of Selected Option</legend>'
                     + '<div id="outerDiv">'
-                      + '<div id="appendTo"></div>';
-                    + '</div>'
+                      + '<div id="appendTo"></div>'
+                    + '</div>';
 
     // showing all the items in the arrayFields array
     for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
