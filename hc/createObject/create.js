@@ -337,10 +337,10 @@ for (const [elementKey, elementValue] of Object.entries(objectFields)) {
 }
 // next 5 lines create a new div within outerDiv that has the id="appendTo"
 var tag = document.createElement('div');
-tag.setAttribute("id", "appendTo");
-var elm = document.getElementById("outerDiv");
+tag.setAttribute("id", "objAppend");
+var elm = document.getElementById("objOuter");
 elm.appendChild(tag);
-$('#appendTo').append(HTMLelement);
+$('#objAppend').append(HTMLelement);
 
 console.log("This is arrayFields after .splice(): ", arrayFields);
 
