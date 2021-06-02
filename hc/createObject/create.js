@@ -165,20 +165,20 @@ const createHTML = async () => {
       displayArray();
     }
   }());
-}
-
-
-  // ---------------------------------------------- Remove funtion ----------------------------------------------
-
-
-function removeFunction(val) {
-  console.log("Entered removeFunction...");
-  console.log("This is the parameter 'val': ", val);
-  // arrayFields.splice(val, 1);
-  // localStorage.removeItem(val);
-  // console.log("This is arrayFields after .splice(): ", arrayFields);
-  // console.log(localStorage.key(val));
-
+  
+  
+    // ---------------------------------------------- Remove funtion ----------------------------------------------
+  
+  
+  function removeFunction(val) {
+    console.log("Entered removeFunction...");
+    console.log("This is the parameter 'val': ", val);
+    // arrayFields.splice(val, 1);
+    // localStorage.removeItem(val);
+    // console.log("This is arrayFields after .splice(): ", arrayFields);
+    // console.log(localStorage.key(val));
+    
+  }
 }
 
 
