@@ -120,7 +120,7 @@ function arrayList() {
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
     // (arrayKey: 0, 1, 2)
     // (arrayValue: peter, james, john)
-    HTMLarrayValues +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
+    HTMLarrayValues +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" class="removeButton" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
     
     // counts up the indices if there's any preset values in the array (uncommon)
     i++;
@@ -163,14 +163,19 @@ function arrayList() {
       arrayFields.push(elementVal);
       
       // adding a new row and columns to the HTML
-      var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
+      var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" class="removeButton" value="-" onclick="removeFunction('+i+')"></div></div>';
       $('#appendTo').append(HTMLelement);
 
       // adjusting indices
       i++;
     }
   }());
-  
+
+  (function() {
+    document.getElementsByClassName('')
+
+  }());
+
 }
 
 
@@ -191,7 +196,7 @@ function arrayList() {
 //   // deleting the entire div containing the arrayField values
 //   element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
 //   for (const [elementKey, elementValue] of Object.entries(arrayFields)) {
-//     HTMLelement += '<div class="row"><div class="col-6">'+elementValue+'</div><div class="col-1"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeFunction('+elementKey+')"></div></div>';
+//     HTMLelement += '<div class="row"><div class="col-6">'+elementValue+'</div><div class="col-1"><input type="button" id="remvBtn'+elementKey+'" class="removeButton" value="-" onclick="removeFunction('+elementKey+')"></div></div>';
 //   }
 //   // next 5 lines create a new div within outerDiv that has the id="appendTo"
 //   var tag = document.createElement('div');
