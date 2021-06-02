@@ -114,11 +114,11 @@ const createHTML = async () => {
 
     // showing all the items in the arrayFields array (none if the array is preset as empty)
     for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-      // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
-      // console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
-      HTMLarray +=     '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')></div></div>';
+      // (arrayKey: 0, 1, 2)
+      // (arrayValue: peter, james, john)
+      HTMLarray +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')></div></div>';
       
-      // counts up 
+      // counts up the index if there's any preset values in the array
       i++;
     }
 
