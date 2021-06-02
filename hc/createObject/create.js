@@ -246,7 +246,7 @@ function createHTML2() {
                 + '<fieldset>'
                   + '<legend>Object List</legend>'
                   + '<select>'
-                    + '<option></option>'
+                    + '<option>Filler Text</option>'
                   + '</select>'
                 + '</fieldset>'
               + '</form>';
