@@ -141,6 +141,7 @@ const createHTML = async () => {
 
 
   $('#arraySpot').append(HTMLarray);
+  $('#appendTo').append(HTMLarrayValues);
 
   // begin addFunction()
   (function() {
