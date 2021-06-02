@@ -175,6 +175,7 @@ function arrayList() {
     document.getElementsByClassName('removeButton').onclick = function () {
 
       var HTMLelement = '';
+      console.log("This is this: ", this);
 
       // removing 1 value from arrayFields starting at index 'val'
       arrayFields.splice(val, 1);
