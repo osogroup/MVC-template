@@ -310,6 +310,9 @@ function arrayList(vars) {
     + '</fieldset>'
   + '</form>';
 
+  $('#arraySpot').append(HTMLarray);
+  $('#appendTo').append(HTMLarrayValues);
+
   console.log("This is arrayList() output: ", HTMLoutput);
   return HTMLoutput;
 }
