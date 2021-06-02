@@ -234,7 +234,7 @@ function removeFunction(val) {
 
 
 
-
+var objectFields = {};
 
 var fillFields =  { 
   'option 1': 'Filler Text 1 Filler Text 1',
@@ -262,8 +262,19 @@ function createHTML2() {
                   + '<legend>Object List</legend>'
                   + '<div id="objOuter">'
                     + '<div id="objAppend"></div>'
-                  + '</div>'
-                  + '<br><select>';
+                  + '</div>';
+
+  for (const[arrayKey, arrayValue] of Object.entries(objectFields)) {
+    // (arrayKey: 0, 1, 2)
+    // (arrayValue: peter, james, john)
+    outputHTML +=   '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
+    
+    // counts up the indices if there's any preset values in the array (uncommon)
+    i++;
+  }
+
+
+  outputHTML +=     '<br><select>';
 
   for (const [objectKey, objectValue] of Object.entries(fillFields)) {
   outputHTML +=        '<option value="'+objectKey+'">'+objectKey+'</option>';
