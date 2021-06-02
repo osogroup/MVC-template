@@ -267,15 +267,14 @@ function createObjectList() {
                   + '</div>';
 
   for (const[objectKey, objectValue] of Object.entries(objectFields)) {
-    // (arrayKey: 0, 1, 2)
-    // (arrayValue: peter, james, john)
-    HTMLobjectValues +=   '<div class="row"><div class="col-6">'+objectValue+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
+    // (objectKey: option 1, option 2, option 3)
+    HTMLobjectValues += '<div class="row"><div class="col-6">'+objectValue+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
     // counts up the indices if there's any preset values in the array (uncommon)
     i++;
   }
 
 
-  outputHTML +=     '<br><select>';
+  outputHTML +=     '<br><select id="objScripts" name="objScripts">';
 
   for (const [fillKey, fillValue] of Object.entries(fillFields)) {
   outputHTML +=        '<option value="'+fillKey+'">'+fillKey+'</option>';
