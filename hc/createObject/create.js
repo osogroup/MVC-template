@@ -187,6 +187,7 @@ function removeFunction(val) {
   tag.setAttribute("id", "appendTo");
   var elm = document.getElementById("outerDiv");
   elm.appendChild(tag);
+  $('#appendTo').append(HTMLelement);
   console.log("This is arrayFields after .splice(): ", arrayFields);
 }
 
