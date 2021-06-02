@@ -225,7 +225,29 @@ function removeFunction(val) {
 // }
 
 
+// ---------------------------------------------- Add function ----------------------------------------------
 
+
+function addFunction() {
+  var select = document.getElementById('scripts');
+
+  
+
+  // creating Add button click function
+  document.getElementById('showTxt').onclick = function () {
+
+    // access text property of selected option
+    elementVal = select.options[select.selectedIndex].text;
+    arrayFields.push(elementVal);
+    
+    // adding a new row and columns to the HTML
+    var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
+    $('#appendTo').append(HTMLelement);
+
+    // adjusting indices
+    i++;
+  }
+}
 
 
 
@@ -307,7 +329,7 @@ function arrayList(vars) {
 
   // closing the form tags and creating the add button
   HTMLoutput +=       '</select>'
-        + '<input type="button" id="showTxt" value="Add"/>'
+        + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
     + '</fieldset>'
   + '</form>';
 
