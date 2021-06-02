@@ -183,7 +183,10 @@ function removeFunction(val) {
   for (const [elementKey, elementValue] of Object.entries(arrayFields)) {
     HTMLelement += '<div class="row"><div class="col-6">'+elementValue+'</div><div class="col-1"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeFunction('+elementKey+')></div></div>';
   }
-  
+  var tag = document.createElement('div');
+  tag.setAttribute("id", "appendTo");
+  var elm = document.getElementById("outerDiv");
+  elm.appendChild(tag);
   console.log("This is arrayFields after .splice(): ", arrayFields);
 }
 
