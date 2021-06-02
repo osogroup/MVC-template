@@ -231,8 +231,6 @@ function removeFunction(val) {
 function addFunction() {
   var select = document.getElementById('scripts');
 
-  
-
   // creating Add button click function
   document.getElementById('showTxt').onclick = function () {
 
