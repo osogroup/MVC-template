@@ -242,6 +242,8 @@ function createHTML2() {
 
   var outputHTML = '';
 
+  outputHTML += '<select></select>';
+
   console.log("Exiting createHTML2()...");
 }
 
