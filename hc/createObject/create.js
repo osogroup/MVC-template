@@ -230,10 +230,16 @@ function removeFunction(val) {
 
 
 
+function arrayList(vars) {
+  
+}
 
 
-
-var vars = {};
+var vars = {
+  options : [],
+  existing : [],
+  attrType : []
+};
 
 
 
