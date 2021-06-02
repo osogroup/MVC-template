@@ -122,7 +122,7 @@ const createHTML = async () => {
       i++;
     }
 
-    // creating the select tag in the HTML
+    // creating the select tag
     HTMLarray +=      '<br><select id="scripts" name="scripts">';
 
     // creating all the options from the arrayOfOptions array in the select tag
@@ -130,6 +130,7 @@ const createHTML = async () => {
       HTMLarray +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
     }
 
+    // closing the form tags and creating the add button
     HTMLarray +=       '</select>'
                       + '<input type="button" id="showTxt" value="Add"/>'
                   + '</fieldset>'
