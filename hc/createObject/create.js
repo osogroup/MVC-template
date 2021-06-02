@@ -98,14 +98,16 @@ const createHTML = async () => {
   HTMLoutput += '</div>';
 
   $('#everything').append(HTMLoutput);
+}
 
+  
+// ---------------------------------------------- Display Array ----------------------------------------------
+
+
+function arrayList() {
   var HTMLarray = '';
   var HTMLarrayValues = '';
-
-
-  // ---------------------------------------------- Display Array ----------------------------------------------
-
-
+  
   HTMLarray += '<form action="#" method="post" class="demoForm">'
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
