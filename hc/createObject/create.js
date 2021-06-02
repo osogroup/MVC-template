@@ -181,7 +181,6 @@ function removeFunction(val) {
   // console.log(localStorage.key(val));
   // location.reload();
   displayArray();
-  i--;
 }
 
 
