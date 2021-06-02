@@ -21,7 +21,7 @@ const tempData = async () => {
   return objVars;
 }
 
-var arrayFields = [ /* 'Ron', 'John', 'James' */ ];
+var arrayFields = [ 'Ron', 'John', 'James' ];
 var i = 0;
 
 var arrayOfOptions = [ 'Scrolling Divs JavaScript',
@@ -233,11 +233,13 @@ function arrayList(vars) {
     alert("vars has an empty array");
   }
   console.log("This is arrayList(vars): ", vars);
-  var HTMLoutput = '';
 
+  var HTMLoutput = '';
   var arrayFields = vars.existing;
   var arrayOfOptions = vars.options;
   var type = vars.attrType;
+
+
 
   console.log("This is arrayList() output: ", HTMLoutput);
   return HTMLoutput;
@@ -249,9 +251,9 @@ function arrayList(vars) {
 
 
 var variables = {
-  options : [],
-  existing : [],
-  attrType : []
+  options : arrayOfOptions,
+  existing : arrayFields,
+  attrType : objType
 };
 
 var functionCall = arrayList(variables);
