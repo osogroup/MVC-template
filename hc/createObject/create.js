@@ -164,7 +164,6 @@ const createHTML = async () => {
       $('#appendTo').append(HTMLelement);
       // location.reload();
       displayArray();
-      i++;
     }
   }());
 }
