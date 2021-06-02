@@ -248,7 +248,7 @@ function createHTML2() {
                   + '<legend>Object List</legend>'
                   + '<div id="objOuter">'
                     + '<div id="objAppend"></div>'
-                  + '</div>';
+                  + '</div>'
                   + '<select>'
                     + '<option>Filler Text Filler Text</option>'
                     + '<input type="button" id="showObj" value="+">'
