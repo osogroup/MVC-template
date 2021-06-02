@@ -232,13 +232,15 @@ function arrayList(vars) {
   if (!vars.existing || !vars.options || !vars.attrType){
     alert("vars has an empty array");
   }
+  console.log("This is arrayList(vars): ", vars);
+  var HTMLoutput = '';
 
   var arrayFields = vars.existing;
   var arrayOfOptions = vars.options;
   var type = vars.attrType;
 
-  return vars;
-
+  console.log("This is arrayList() output: ", HTMLoutput);
+  return HTMLoutput;
 }
 
 
