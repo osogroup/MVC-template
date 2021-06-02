@@ -147,7 +147,7 @@ const createHTML = async () => {
   $('#arraySpot').append(HTMLarray);
   $('#appendTo').append(HTMLarrayValues);
 
-  // begin addFunction()
+  // begin addFunction() aaaa
   (function() {
     
     // get reference to select tag's id
