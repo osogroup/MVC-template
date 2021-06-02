@@ -302,7 +302,7 @@ function createObjectList() {
 
       // access text property of selected option
       elementVal = select.options[select.selectedIndex].text;
-      objFields.push(elementVal);
+      objectFields.push(elementVal);
       
       // adding a new row and columns to the HTML
       var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
