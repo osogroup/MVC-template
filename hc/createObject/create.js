@@ -101,70 +101,71 @@ const createHTML = async () => {
 
   var HTMLarray = '';
   displayArray();
-
-
-  // ---------------------------------------------- Display Array ----------------------------------------------
-
-  function displayArray() {
-    i = 0;
-    HTMLarray += '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset>'
-                    + '<legend>Get Text of Selected Option</legend>'
-                    + '<div id="appendTo"></div>';
-
-    // showing all the items in the arrayFields array
-    for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-      // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
-      // console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
-      HTMLarray +=     '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')></div></div>';
-      i++;
-    }
-
-    // creating the select options HTML
-    HTMLarray +=       '<br><select id="scripts" name="scripts">';
-
-    // creating all the options from the arrayOfOptions array in the select tag
-    for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
-      HTMLarray +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
-    }
-
-    HTMLarray +=       '</select>'
-                      + '<input type="button" id="showTxt" value="Add"/>'
-                  + '</fieldset>'
-                + '</form>';
-
-
-    // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
-    
-    // console.log("localStorage: ", localStorage);
-    
-  }
-  
-  $('#arraySpot').append(HTMLarray);
-
-  (function() {
-    
-    // get references to select list and display text box
-    var select = document.getElementById('scripts');
-
-
-    // ---------------------------------------------- Add function ----------------------------------------------
-
-
-    document.getElementById('showTxt').onclick = function () {
-      // access text property of selected option
-      elementVal = select.options[select.selectedIndex].text;
-      arrayFields.push(elementVal);
-      // localStorage.setItem('task_0', arrayFields);
-
-      var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" class="remvBtn" value="-" onclick="removeFunction('+i+')"></div></div>';
-
-      $('#appendTo').append(HTMLelement);
-      // location.reload();
-      displayArray();
-    }
-  }());
 }
+
+
+// ---------------------------------------------- Display Array ----------------------------------------------
+
+
+function displayArray() {
+  i = 0;
+  HTMLarray += '<form action="#" method="post" class="demoForm">'
+                + '<fieldset>'
+                  + '<legend>Get Text of Selected Option</legend>'
+                  + '<div id="appendTo"></div>';
+
+  // showing all the items in the arrayFields array
+  for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
+    // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
+    // console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
+    HTMLarray +=     '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')></div></div>';
+    i++;
+  }
+
+  // creating the select options HTML
+  HTMLarray +=       '<br><select id="scripts" name="scripts">';
+
+  // creating all the options from the arrayOfOptions array in the select tag
+  for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
+    HTMLarray +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
+  }
+
+  HTMLarray +=       '</select>'
+                    + '<input type="button" id="showTxt" value="Add"/>'
+                + '</fieldset>'
+              + '</form>';
+
+
+  // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
+  
+  // console.log("localStorage: ", localStorage);
+  
+}
+
+$('#arraySpot').append(HTMLarray);
+
+(function() {
+  
+  // get references to select list and display text box
+  var select = document.getElementById('scripts');
+
+
+  // ---------------------------------------------- Add function ----------------------------------------------
+
+
+  document.getElementById('showTxt').onclick = function () {
+    // access text property of selected option
+    elementVal = select.options[select.selectedIndex].text;
+    arrayFields.push(elementVal);
+    // localStorage.setItem('task_0', arrayFields);
+
+    var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" class="remvBtn" value="-" onclick="removeFunction('+i+')"></div></div>';
+
+    $('#appendTo').append(HTMLelement);
+    // location.reload();
+    displayArray();
+  }
+}());
 
 
 // ---------------------------------------------- Remove funtion ----------------------------------------------
@@ -177,7 +178,7 @@ function removeFunction(val) {
   // localStorage.removeItem(val);
   // console.log("This is arrayFields after .splice(): ", arrayFields);
   // console.log(localStorage.key(val));
-  
+  displayArray();
 }
 
 
