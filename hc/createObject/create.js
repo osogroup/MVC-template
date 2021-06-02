@@ -172,15 +172,16 @@ const createHTML = async () => {
 
 
 function removeFunction(val) {
+  var HTMLelement = '';
   // console.log("Entered removeFunction...");
   // console.log("This is the parameter 'val': ", val);
   arrayFields.splice(val, 1);
   var element = document.querySelector('#remvBtn'+val);
   element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
   for (const [elementKey, elementValue] of Object.entries(arrayFields)) {
-    HTMLarray +=     '<div class="row"><div class="col-6">'+elementValue+'</div><div class="col-1"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeFunction('+elementKey+')></div></div>';
-
+    HTMLelement +=     '<div class="row"><div class="col-6">'+elementValue+'</div><div class="col-1"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeFunction('+elementKey+')></div></div>';
   }
+  
   console.log("This is arrayFields after .splice(): ", arrayFields);
 }
 
