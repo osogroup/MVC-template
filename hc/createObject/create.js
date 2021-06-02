@@ -285,13 +285,13 @@ function createObjectList() {
               + '</form>';
               
   $('#objectSpot').append(outputHTML);
+  $('#objAppend').append(HTMLobjectValues);
+
 
   console.log("Exiting createHTML2()...");
 
 
 
-  $('#objectSpot').append(outputHTML);
-  $('#objAppend').append(HTMLarrayValues);
 
   // begin addFunction()
   (function() {
