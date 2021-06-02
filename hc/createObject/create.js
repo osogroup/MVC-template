@@ -106,14 +106,13 @@ const createHTML = async () => {
   // ---------------------------------------------- Display Array ----------------------------------------------
 
   function displayArray() {
-
+    i = 0;
     HTMLarray += '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Get Text of Selected Option</legend>'
                     + '<div id="appendTo"></div>';
 
     // showing all the items in the arrayFields array
-    i = 0;
     for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
       // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
       // console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
