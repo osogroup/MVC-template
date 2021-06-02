@@ -261,7 +261,7 @@ function createHTML2() {
                   + '</div>'
                   + '<br><select>';
 
-  for (const [objectKey, objectValue] of Object.entries(objectFields)) {
+  for (const [objectKey, objectValue] of Object.entries(fillFields)) {
   outputHTML +=        '<option>'+objectValue+'</option>';
   }
   outputHTML +=     + '<input type="button" id="showObj" value="+">'
