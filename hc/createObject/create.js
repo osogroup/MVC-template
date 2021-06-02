@@ -18,7 +18,6 @@ const tempData = async () => {
 }
 
 var arrayFields = [ 'Ron', 'John', 'James' ];
-var i = 0;
 
 var arrayOfOptions = [ 'Scrolling Divs JavaScript',
                        'JavaScript Tooltips', 
@@ -106,6 +105,7 @@ const createHTML = async () => {
 
 
 function arrayList() {
+  var i = 0;
   var HTMLarray = '';
   var HTMLarrayValues = '';
 
