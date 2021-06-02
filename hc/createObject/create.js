@@ -234,21 +234,21 @@ function removeFunction(val) {
 
 
 
-var objectFields = {
-  1: 'Filler Text 1 Filler Text 1',
-  2: 'Filler Text 2 Filler Text 2',
-  3: 'Filler Text 3 Filler Text 3'
-};
+var objectFields = [
+  {1: 'Filler Text 1 Filler Text 1'},
+  {2: 'Filler Text 2 Filler Text 2'},
+  {3: 'Filler Text 3 Filler Text 3'}
+];
 
-var fillFields =  { 
-  1: 'Filler Text 1 Filler Text 1',
-  2: 'Filler Text 2 Filler Text 2',
-  3: 'Filler Text 3 Filler Text 3',
-  4: 'Filler Text 4 Filler Text 4',
-  5: 'Filler Text 5 Filler Text 5',
-  6: 'Filler Text 6 Filler Text 6',
-  7: 'Filler Text 7 Filler Text 7' 
-};
+var fillFields =  [ 
+  {1: 'Filler Text 1 Filler Text 1'},
+  {2: 'Filler Text 2 Filler Text 2'},
+  {3: 'Filler Text 3 Filler Text 3'},
+  {4: 'Filler Text 4 Filler Text 4'},
+  {5: 'Filler Text 5 Filler Text 5'},
+  {6: 'Filler Text 6 Filler Text 6'},
+  {7: 'Filler Text 7 Filler Text 7'} 
+];
 
 
 
