@@ -173,10 +173,10 @@ const createHTML = async () => {
 
 function removeFunction(val) {
   console.log("Entered removeFunction...");
-  console.log("This is the parameter 'val': ", val);
+  // console.log("This is the parameter 'val': ", val);
   arrayFields.splice(val, 1);
   var element = document.querySelector('#remvBtn'+val);
-  element.parentNode.parentNode.remove(element.parentNode.parentNode);
+  remove(element.parentNode.parentNode);
   console.log("This is arrayFields after .splice(): ", arrayFields);
 }
 
