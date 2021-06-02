@@ -106,6 +106,7 @@ const createHTML = async () => {
   // ---------------------------------------------- Display Array ----------------------------------------------
 
   function displayArray() {
+
     i = 0;
     HTMLarray += '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
@@ -173,7 +174,7 @@ const createHTML = async () => {
 function removeFunction(val) {
   console.log("Entered removeFunction...");
   console.log("This is the parameter 'val': ", val);
-  // arrayFields.splice(val, 1);
+  arrayFields.splice(val, 1);
   // localStorage.removeItem(val);
   // console.log("This is arrayFields after .splice(): ", arrayFields);
   // console.log(localStorage.key(val));
