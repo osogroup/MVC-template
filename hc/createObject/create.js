@@ -248,6 +248,7 @@ function createHTML2() {
                   + '<legend>Object List</legend>'
                   + '<select>'
                     + '<option>Filler Text Filler Text</option>'
+                    + '<input type="button" id="showObj" value="+">'
                   + '</select>'
                 + '</fieldset>'
               + '</form>';
