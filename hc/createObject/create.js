@@ -167,7 +167,6 @@ const createHTML = async () => {
 
       $('#appendTo').append(HTMLelement);
 
-      // passes through the displayArray() function to count up the i's 
       i++;
     }
   }());
