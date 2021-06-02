@@ -240,7 +240,7 @@ function removeFunction(val) {
 function createHTML2() {
   console.log("Entering createHTML2()...")
 
-  
+  var outputHTML = '';
 
   console.log("Exiting createHTML2()...");
 }
