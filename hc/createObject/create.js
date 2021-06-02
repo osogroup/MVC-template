@@ -111,7 +111,9 @@ const createHTML = async () => {
     HTMLarray += '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Get Text of Selected Option</legend>'
-                    + '<div id="appendTo"></div>';
+                    + '<div id="outerDiv">'
+                      + '<div id="appendTo"></div>';
+                    + '</div>'
 
     // showing all the items in the arrayFields array
     for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
