@@ -234,7 +234,11 @@ function removeFunction(val) {
 
 
 
-var objectFields = {};
+var objectFields = {
+  'option 1': 'Filler Text 1 Filler Text 1',
+  'option 2': 'Filler Text 2 Filler Text 2',
+  'option 3': 'Filler Text 3 Filler Text 3'
+};
 
 var fillFields =  { 
   'option 1': 'Filler Text 1 Filler Text 1',
@@ -265,7 +269,6 @@ function createHTML2() {
     // (arrayKey: 0, 1, 2)
     // (arrayValue: peter, james, john)
     outputHTML +=   '<div class="row"><div class="col-6">'+objectValue+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
-    
     // counts up the indices if there's any preset values in the array (uncommon)
     i++;
   }
