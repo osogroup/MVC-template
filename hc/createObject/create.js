@@ -232,7 +232,7 @@ function addFunction() {
   var select = document.getElementById('scripts');
 
   // creating Add button click function
-  document.getElementById('showTxt').onclick = function () {
+  
 
     // access text property of selected option
     elementVal = select.options[select.selectedIndex].text;
@@ -244,7 +244,7 @@ function addFunction() {
 
     // adjusting indices
     i++;
-  }
+  
 }
 
 
