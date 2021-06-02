@@ -181,7 +181,7 @@ function removeFunction(val) {
   var element = document.querySelector('#remvBtn'+val);
   element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
   for (const [elementKey, elementValue] of Object.entries(arrayFields)) {
-    HTMLelement += '<div class="row"><div class="col-6">'+elementValue+'</div><div class="col-1"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeFunction('+elementKey+')></div></div>';
+    HTMLelement += '<div class="row"><div class="col-6">'+elementValue+'</div><div class="col-1"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeFunction('+elementKey+')></div></div></div>';
   }
   var tag = document.createElement('div');
   tag.setAttribute("id", "appendTo");
