@@ -295,7 +295,7 @@ function createObjectList() {
     var select = document.getElementById('objScripts');
 
 
-    // ---------------------------------------------- Add function ----------------------------------------------
+    // ------------------------------------------- Obj Add function ----------------------------------------------
 
     // creating Add button click function
     document.getElementById('showObj').onclick = function () {
@@ -316,7 +316,7 @@ function createObjectList() {
 }
 
 
-// ---------------------------------------------- Remove funtion ----------------------------------------------
+// --------------------------------------------- Obj Remove funtion ---------------------------------------------
 
 
 function removeObject(val) {
