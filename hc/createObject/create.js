@@ -112,7 +112,7 @@ const createHTML = async () => {
 
   HTMLarray += '<form action="#" method="post" class="demoForm">'
                 + '<fieldset>'
-                  + '<legend>Get Text of Selected Option</legend>'
+                  + '<legend>Array List</legend>'
                   + '<div id="outerDiv">'
                     + '<div id="appendTo"></div>'
                   + '</div>';
