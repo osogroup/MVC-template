@@ -99,7 +99,6 @@ const createHTML = async () => {
 
   $('#everything').append(HTMLoutput);
 
-  var i = 0;
   var HTMLarray = '';
   displayArray();
 
@@ -153,18 +152,17 @@ const createHTML = async () => {
 
 
     document.getElementById('showTxt').onclick = function () {
-      var elementIndex = 0;
       // access text property of selected option
       elementVal = select.options[select.selectedIndex].text;
       arrayFields.push(elementVal);
       // localStorage.setItem('task_0', arrayFields);
 
-      // var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" class="remvBtn" value="-" onclick="removeFunction('+elementIndex+')"></div></div>';
+      var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" class="remvBtn" value="-" onclick="removeFunction('+elementIndex+')"></div></div>';
 
-      // $('#appendTo').append(HTMLelement);
+      $('#appendTo').append(HTMLelement);
       // location.reload();
       displayArray();
-      i++;
+
     }
   }());
 }
