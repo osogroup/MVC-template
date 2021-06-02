@@ -14,9 +14,3 @@
 .row .minHeight {
   min-height: 85px;
 }
-.container {
-  background-color: lightgray;
-}
-body {
-  background-color: darkslategray;
-}
