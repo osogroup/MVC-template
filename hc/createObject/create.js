@@ -176,13 +176,20 @@ const createHTML = async () => {
 function removeFunction(val) {
   var HTMLelement = '';
 
-  // removing 1 value starting at index 'val'
+  // removing 1 value from arrayFields starting at index 'val'
   arrayFields.splice(val, 1);
+
+  // getting a variable that represents whichever remove button I push on the browser (technically dont need
+  // the specific id since the the value is deleted from arrayFields anyway and then arrayFields is ran through,
+  // recreating the display)
   var element = document.querySelector('#remvBtn'+val);
+
+  // deleting the entire div containing the arrayField values
   element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
   for (const [elementKey, elementValue] of Object.entries(arrayFields)) {
     HTMLelement += '<div class="row"><div class="col-6">'+elementValue+'</div><div class="col-1"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeFunction('+elementKey+')"></div></div>';
   }
+  // next 5 lines create a new div within outerDiv that has the id="appendTo"
   var tag = document.createElement('div');
   tag.setAttribute("id", "appendTo");
   var elm = document.getElementById("outerDiv");
