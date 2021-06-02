@@ -142,7 +142,7 @@ const createHTML = async () => {
 
     // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
     
-    console.log("localStorage: ", localStorage);
+    // console.log("localStorage: ", localStorage);
     
   }
   $('#arraySpot').append(HTMLarray);
@@ -161,9 +161,9 @@ const createHTML = async () => {
       // access text property of selected option
       elementVal = select.options[select.selectedIndex].text;
       arrayFields.push(elementVal);
-      localStorage.setItem('task_0', arrayFields);
+      // localStorage.setItem('task_0', arrayFields);
 
-      var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" class="remvBtn" value="-" onclick="removeFunction()"></div></div>';
+      var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" class="remvBtn" value="-" onclick="removeFunction('+arrayFields.indexOf(this)+')"></div></div>';
 
       $('#appendTo').append(HTMLelement);
       // location.reload();
@@ -207,7 +207,7 @@ function removeFunction() {
 
 function nearestIDAvailable() {
   var i = 0;
-  for(const [idKey, idValue] of Object.entries(localStorage)) {
+  for(const [idKey, idValue] of Object.entries(arrayFields)) {
     i++;
   }
   console.log("This is i: ", i);
