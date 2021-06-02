@@ -102,7 +102,11 @@ const createHTML = async () => {
 }
 
   
-// ---------------------------------------------- Display Array ----------------------------------------------
+
+
+
+
+// --------------------------------------------- New Display Array ---------------------------------------------
 
 
 function arrayList() {
@@ -120,7 +124,7 @@ function arrayList() {
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
     // (arrayKey: 0, 1, 2)
     // (arrayValue: peter, james, john)
-    HTMLarrayValues +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" class="removeButton" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
+    HTMLarrayValues +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" class="removeButton" value="-"></div></div>';
     
     // counts up the indices if there's any preset values in the array (uncommon)
     i++;
@@ -152,7 +156,7 @@ function arrayList() {
     var select = document.getElementById('scripts');
 
 
-    // ---------------------------------------------- Add function ----------------------------------------------
+    // -------------------------------------------- New Add function --------------------------------------------
 
 
     // creating Add button click function
@@ -163,7 +167,7 @@ function arrayList() {
       arrayFields.push(elementVal);
       
       // adding a new row and columns to the HTML
-      var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" class="removeButton" value="-" onclick="removeFunction('+i+')"></div></div>';
+      var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" class="removeButton" value="-"></div></div>';
       $('#appendTo').append(HTMLelement);
 
       // adjusting indices
@@ -192,7 +196,7 @@ function arrayList() {
       // deleting the entire div containing the arrayField values
       element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
       for (const [elementKey, elementValue] of Object.entries(arrayFields)) {
-        HTMLelement += '<div class="row"><div class="col-6">'+elementValue+'</div><div class="col-1"><input type="button" id="remvBtn'+elementKey+'" class="removeButton" value="-" onclick="removeFunction('+elementKey+')"></div></div>';
+        HTMLelement += '<div class="row"><div class="col-6">'+elementValue+'</div><div class="col-1"><input type="button" id="remvBtn'+elementKey+'" class="removeButton" value="-"></div></div>';
       }
       // next 5 lines create a new div within outerDiv that has the id="appendTo"
       var tag = document.createElement('div');
@@ -210,6 +214,79 @@ function arrayList() {
   }());
 
 }
+
+
+
+
+  
+// ---------------------------------------------- Display Array ----------------------------------------------
+
+
+// function arrayList() {
+//   var HTMLarray = '';
+//   var HTMLarrayValues = '';
+
+//   HTMLarray += '<form action="#" method="post" class="demoForm">'
+//                 + '<fieldset>'
+//                   + '<legend>Get Text of Selected Option</legend>'
+//                   + '<div id="outerDiv">'
+//                     + '<div id="appendTo"></div>'
+//                   + '</div>';
+
+//   // showing all the items in the arrayFields array (none if the array is preset as empty)
+//   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
+//     // (arrayKey: 0, 1, 2)
+//     // (arrayValue: peter, james, john)
+//     HTMLarrayValues +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" class="removeButton" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
+    
+//     // counts up the indices if there's any preset values in the array (uncommon)
+//     i++;
+//   }
+
+//   // creating the select tag
+//   HTMLarray +=      '<br><select id="scripts" name="scripts">';
+
+//   // creating all the options from the arrayOfOptions array in the select tag
+//   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
+//     HTMLarray +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
+//   }
+
+//   // closing the form tags and creating the add button
+//   HTMLarray +=       '</select>'
+//                     + '<input type="button" id="showTxt" value="Add"/>'
+//                 + '</fieldset>'
+//               + '</form>';
+
+//   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
+
+//   $('#arraySpot').append(HTMLarray);
+//   $('#appendTo').append(HTMLarrayValues);
+
+//   // begin addFunction()
+//   (function() {
+    
+//     // get reference to select tag's id
+//     var select = document.getElementById('scripts');
+
+
+//     // ---------------------------------------------- Add function ----------------------------------------------
+
+
+//     // creating Add button click function
+//     document.getElementById('showTxt').onclick = function () {
+
+//       // access text property of selected option
+//       elementVal = select.options[select.selectedIndex].text;
+//       arrayFields.push(elementVal);
+      
+//       // adding a new row and columns to the HTML
+//       var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" class="removeButton" value="-" onclick="removeFunction('+i+')"></div></div>';
+//       $('#appendTo').append(HTMLelement);
+
+//       // adjusting indices
+//       i++;
+//     }
+//   }());
 
 
 // ---------------------------------------------- Remove funtion ----------------------------------------------
@@ -243,6 +320,18 @@ function arrayList() {
 //   // adjusting indices for add function
 //   i--;
 // }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // ------------------------------------------------ ID Generator ------------------------------------------------
