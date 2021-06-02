@@ -107,6 +107,7 @@ const createHTML = async () => {
 
   function displayArray() {
 
+    // sets i to zero so the for of loop has to count up all the indexes when it loops
     i = 0;
     HTMLarray += '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
@@ -120,6 +121,8 @@ const createHTML = async () => {
       // console.log("This is arrayKey: ", arrayKey); // (0, 1, 2)
       // console.log("This is arrayValue: ", arrayValue); // (peter, james, john)
       HTMLarray +=     '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')></div></div>';
+      
+      // counts up 
       i++;
     }
 
