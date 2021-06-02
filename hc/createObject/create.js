@@ -17,7 +17,7 @@ const tempData = async () => {
   return objVars;
 }
 
-var arrayFields = [ 'Matthew', 'Mark', 'Luke', 'John' ];
+var arrayFields = [ 'Ron', 'John', 'James' ];
 var i = 0;
 
 var arrayOfOptions = [ 'Scrolling Divs JavaScript',
@@ -195,7 +195,7 @@ function removeFunction(val) {
   var elm = document.getElementById("outerDiv");
   elm.appendChild(tag);
   $('#appendTo').append(HTMLelement);
-  
+
   console.log("This is arrayFields after .splice(): ", arrayFields);
 
   // adjusting indices for add function
