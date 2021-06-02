@@ -248,10 +248,6 @@ var fillFields =  {
 
 
 
-
-
-
-
 function createHTML2() {
   console.log("Entering createHTML2()...");
 
@@ -264,7 +260,7 @@ function createHTML2() {
                     + '<div id="objAppend"></div>'
                   + '</div>';
 
-  for (const[arrayKey, arrayValue] of Object.entries(objectFields)) {
+  for (const[objectKey, objectValue] of Object.entries(objectFields)) {
     // (arrayKey: 0, 1, 2)
     // (arrayValue: peter, james, john)
     outputHTML +=   '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
@@ -276,8 +272,8 @@ function createHTML2() {
 
   outputHTML +=     '<br><select>';
 
-  for (const [objectKey, objectValue] of Object.entries(fillFields)) {
-  outputHTML +=        '<option value="'+objectKey+'">'+objectKey+'</option>';
+  for (const [fillKey, fillValue] of Object.entries(fillFields)) {
+  outputHTML +=        '<option value="'+fillKey+'">'+fillKey+'</option>';
   }
   outputHTML +=       '<input type="button" id="showObj" value="+">'
                   + '</select>'
