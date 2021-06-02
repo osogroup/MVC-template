@@ -177,7 +177,7 @@ function removeFunction(val) {
   arrayFields.splice(val, 1);
   var element = document.querySelector('#remvBtn'+val);
   console.log("trying to get parent...", element.parentNode.parentNode);
-  element.parentNode.parentNode.removeChild(element.parentNode);
+  element.parentNode.parentNode.remove(element.parentNode);
   // localStorage.removeItem(val);
   // console.log("This is arrayFields after .splice(): ", arrayFields);
   // console.log(localStorage.key(val));
