@@ -249,7 +249,7 @@ function createHTML2() {
                   + '<div id="objOuter">'
                     + '<div id="objAppend"></div>'
                   + '</div>'
-                  + '<select>'
+                  + '<br><select>'
                     + '<option>Filler Text Filler Text</option>'
                     + '<input type="button" id="showObj" value="+">'
                   + '</select>'
