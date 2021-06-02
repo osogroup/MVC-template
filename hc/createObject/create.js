@@ -148,33 +148,29 @@ const createHTML = async () => {
   $('#appendTo').append(HTMLarrayValues);
 
   // begin addFunction() aaaa
-  (function() {
-    
-    // get reference to select tag's id
-    var select = document.getElementById('scripts');
-
-
-    // ---------------------------------------------- Add function ----------------------------------------------
-
-    // creating Add button click function
-    document.getElementById('showTxt').onclick = function () {
-
-      // access text property of selected option
-      elementVal = select.options[select.selectedIndex].text;
-      arrayFields.push(elementVal);
-      
-      // adding a new row and columns to the HTML
-      var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
-      $('#appendTo').append(HTMLelement);
-
-      // adjusting indices
-      i++;
-    }
-  }());
 }
 
 
-// ---------------------------------------------- Remove funtion ----------------------------------------------
+// ------------------------------------------------ Add funtion ------------------------------------------------
+
+
+function addFunction() {
+  var select = document.getElementById('scripts');  
+
+  // access text property of selected option
+  elementVal = select.options[select.selectedIndex].text;
+  arrayFields.push(elementVal);
+  
+  // adding a new row and columns to the HTML
+  var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
+  $('#appendTo').append(HTMLelement);
+
+  // adjusting indices
+  i++;
+}
+
+
+// ----------------------------------------------- Remove funtion -----------------------------------------------
 
 
 function removeFunction(val) {
@@ -225,23 +221,7 @@ function removeFunction(val) {
 // }
 
 
-// ---------------------------------------------- Add function ----------------------------------------------
 
-
-function addFunction() {
-  var select = document.getElementById('scripts');  
-
-  // access text property of selected option
-  elementVal = select.options[select.selectedIndex].text;
-  arrayFields.push(elementVal);
-  
-  // adding a new row and columns to the HTML
-  var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
-  $('#appendTo').append(HTMLelement);
-
-  // adjusting indices
-  i++;
-}
 
 
 
@@ -287,6 +267,7 @@ function addFunction() {
 function arrayList(vars) {
   if (!vars.existing || !vars.options || !vars.attrType){
     alert("vars has an empty array");
+    return;
   }
   console.log("This is arrayList(vars): ", vars);
 
