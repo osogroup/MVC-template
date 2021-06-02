@@ -118,7 +118,7 @@ const createHTML = async () => {
     // (arrayValue: peter, james, john)
     HTMLarray +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')></div></div>';
     
-    // counts up the index if there's any preset values in the array
+    // counts up the indices if there's any preset values in the array (uncommon)
     i++;
   }
 
