@@ -315,11 +315,6 @@ function arrayList(vars) {
   return HTMLoutput;
 }
 
-
-
-
-
-
 var variables = {
   options : arrayOfOptions,
   existing : arrayFields,
