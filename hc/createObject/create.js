@@ -18,7 +18,7 @@ const tempData = async () => {
 }
 
 var arrayFields = [];
-
+var i = 0;
 
 var arrayOfOptions = [ 'Scrolling Divs JavaScript',
                        'JavaScript Tooltips', 
@@ -162,7 +162,7 @@ const createHTML = async () => {
       $('#appendTo').append(HTMLelement);
       // location.reload();
       displayArray();
-
+      i++;
     }
   }());
 }
@@ -180,6 +180,7 @@ function removeFunction(val) {
   // console.log(localStorage.key(val));
   // location.reload();
   displayArray();
+  i--;
 }
 
 
