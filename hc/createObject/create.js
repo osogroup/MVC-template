@@ -98,6 +98,7 @@ const createHTML = async () => {
   HTMLoutput += '</div>';
 
   $('#everything').append(HTMLoutput);
+  arrayList();
 }
 
   
@@ -107,7 +108,7 @@ const createHTML = async () => {
 function arrayList() {
   var HTMLarray = '';
   var HTMLarrayValues = '';
-  
+
   HTMLarray += '<form action="#" method="post" class="demoForm">'
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
