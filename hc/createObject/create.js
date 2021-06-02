@@ -311,12 +311,11 @@ function arrayList(vars) {
   $('#arraySpot').append(HTMLoutput);
   $('#appendTo').append(HTMLarrayValues);
 
-  // console.log("This is arrayList() output: ", HTMLoutput);
   return HTMLoutput;
 }
 
 var variables = {
-  options : arrayOfOptions,
+  options : aarrayOfOptions,
   existing : arrayFields,
   attrType : objType
 };
