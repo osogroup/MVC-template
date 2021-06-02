@@ -3,6 +3,7 @@ $(document).ready(function(){
   alert("add '?type=task' to the URL");
   
   createHTML();
+  createHTML2();
   // doTheHTML();
   // doTheStringify();
 });
@@ -222,6 +223,35 @@ function removeFunction(val) {
 //   console.log("This is i: ", i);
 //   return i;
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function createHTML2() {
+
+  
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
