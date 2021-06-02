@@ -105,61 +105,63 @@ const createHTML = async () => {
   // ---------------------------------------------- Display Array ----------------------------------------------
 
 
-    HTMLarray += '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset>'
-                    + '<legend>Get Text of Selected Option</legend>'
-                    + '<div id="outerDiv">'
-                      + '<div id="appendTo"></div>'
-                    + '</div>';
+  HTMLarray += '<form action="#" method="post" class="demoForm">'
+                + '<fieldset>'
+                  + '<legend>Get Text of Selected Option</legend>'
+                  + '<div id="outerDiv">'
+                    + '<div id="appendTo"></div>'
+                  + '</div>';
 
-    // showing all the items in the arrayFields array (none if the array is preset as empty)
-    for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-      // (arrayKey: 0, 1, 2)
-      // (arrayValue: peter, james, john)
-      HTMLarray +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')></div></div>';
-      
-      // counts up the index if there's any preset values in the array
-      i++;
-    }
+  // showing all the items in the arrayFields array (none if the array is preset as empty)
+  for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
+    // (arrayKey: 0, 1, 2)
+    // (arrayValue: peter, james, john)
+    HTMLarray +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')></div></div>';
+    
+    // counts up the index if there's any preset values in the array
+    i++;
+  }
 
-    // creating the select tag
-    HTMLarray +=      '<br><select id="scripts" name="scripts">';
+  // creating the select tag
+  HTMLarray +=      '<br><select id="scripts" name="scripts">';
 
-    // creating all the options from the arrayOfOptions array in the select tag
-    for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
-      HTMLarray +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
-    }
+  // creating all the options from the arrayOfOptions array in the select tag
+  for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
+    HTMLarray +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
+  }
 
-    // closing the form tags and creating the add button
-    HTMLarray +=       '</select>'
-                      + '<input type="button" id="showTxt" value="Add"/>'
-                  + '</fieldset>'
-                + '</form>';
+  // closing the form tags and creating the add button
+  HTMLarray +=       '</select>'
+                    + '<input type="button" id="showTxt" value="Add"/>'
+                + '</fieldset>'
+              + '</form>';
+
+  // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
 
 
-    // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
-  
   $('#arraySpot').append(HTMLarray);
 
+  // begin addFunction()
   (function() {
     
-    // get references to select list and display text box
+    // get reference to select tag's id
     var select = document.getElementById('scripts');
 
 
     // ---------------------------------------------- Add function ----------------------------------------------
 
-
+    // creating Add button click function
     document.getElementById('showTxt').onclick = function () {
+
       // access text property of selected option
       elementVal = select.options[select.selectedIndex].text;
       arrayFields.push(elementVal);
-      // localStorage.setItem('task_0', arrayFields);
-
       var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
 
+      // adding a new row and columns to the HTML
       $('#appendTo').append(HTMLelement);
 
+      // adjusting indices
       i++;
     }
   }());
@@ -171,8 +173,8 @@ const createHTML = async () => {
 
 function removeFunction(val) {
   var HTMLelement = '';
-  // console.log("Entered removeFunction...");
-  // console.log("This is the parameter 'val': ", val);
+
+  // removing 1 value starting at index 'val'
   arrayFields.splice(val, 1);
   var element = document.querySelector('#remvBtn'+val);
   element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
@@ -205,15 +207,6 @@ function removeFunction(val) {
 //   console.log("This is i: ", i);
 //   return i;
 // }
-
-function nearestIDAvailable() {
-  var i = 0;
-  for(const [idKey, idValue] of Object.entries(arrayFields)) {
-    i++;
-  }
-  console.log("This is i: ", i);
-  return i;
-}
 
 
 
