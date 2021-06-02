@@ -100,6 +100,8 @@ const createHTML = async () => {
   $('#everything').append(HTMLoutput);
 
   displayArray();
+  
+  $('#arraySpot').append(HTMLarray);
 }
 
 
@@ -144,7 +146,6 @@ function displayArray() {
   
 }
 
-$('#arraySpot').append(HTMLarray);
 
 (function() {
   
