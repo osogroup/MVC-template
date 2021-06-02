@@ -178,8 +178,7 @@ function removeFunction(val) {
   // localStorage.removeItem(val);
   // console.log("This is arrayFields after .splice(): ", arrayFields);
   // console.log(localStorage.key(val));
-  // location.reload();
-  displayArray();
+
 }
 
 
