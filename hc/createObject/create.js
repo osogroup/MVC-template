@@ -146,7 +146,6 @@ const createHTML = async () => {
     
     // get references to select list and display text box
     var select = document.getElementById('scripts');
-    var element = document.getElementById('display');
 
 
     // ---------------------------------------------- Add function ----------------------------------------------
