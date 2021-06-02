@@ -99,7 +99,6 @@ const createHTML = async () => {
 
   $('#everything').append(HTMLoutput);
 
-  var HTMLarray = '';
   displayArray();
 }
 
@@ -108,7 +107,10 @@ const createHTML = async () => {
 
 
 function displayArray() {
+  
+  var HTMLarray = '';
   i = 0;
+
   HTMLarray += '<form action="#" method="post" class="demoForm">'
                 + '<fieldset>'
                   + '<legend>Get Text of Selected Option</legend>'
