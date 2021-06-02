@@ -290,7 +290,7 @@ function createObjectList() {
 
 
 
-  $('#arraySpot').append(HTMLarray);
+  $('#objectSpot').append(outputHTML);
   $('#appendTo').append(HTMLarrayValues);
 
   // begin addFunction()
