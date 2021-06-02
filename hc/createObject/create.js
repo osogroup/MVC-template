@@ -100,7 +100,6 @@ const createHTML = async () => {
   $('#everything').append(HTMLoutput);
 
   var HTMLarray = '';
-  displayArray();
 
 
   // ---------------------------------------------- Display Array ----------------------------------------------
