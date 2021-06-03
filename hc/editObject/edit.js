@@ -20,8 +20,7 @@ const tempData = async () => {
 
 const whatever = async () => {
   var inputVars = await fetch("../tempData/task.json").then(response=>{return response.json();});
-
-  return
+  return inputVars;
 }
 
 
