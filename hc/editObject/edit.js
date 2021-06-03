@@ -524,17 +524,18 @@ function arrayList(vars) {
   $('#appendTo').append(HTMLarrayValues);
 }
   
-var arrayOfOptions = [ 'Scrolling Divs JavaScript',
-                       'JavaScript Tooltips', 
-                       'Continuous Scroller', 
-                       'Rotating Banner JavaScript', 
-                       'Random Image PHP', 
-                       'PHP Form Generator', 
-                       'PHP Table Class', 
-                       'PHP Order Forms',
-                       'Test Option'
-                      ];
-                      
+var arrayOfOptions = [ 
+  'Scrolling Divs JavaScript',
+  'JavaScript Tooltips', 
+  'Continuous Scroller', 
+  'Rotating Banner JavaScript', 
+  'Random Image PHP', 
+  'PHP Form Generator', 
+  'PHP Table Class', 
+  'PHP Order Forms',
+  'Test Option'
+  ];
+
 var variables = {
   options : arrayOfOptions,
   existing : arrayFields,
