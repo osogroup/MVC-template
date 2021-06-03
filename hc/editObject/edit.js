@@ -7,7 +7,6 @@ $(document).ready(function(){
 // pull in data from objectList.JSON and configuration JSON file 
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
-  // console.log("configData output ", listConfig);
   return listConfig;
 }
   
@@ -15,8 +14,14 @@ const configData = async () => {
   // gets all the Objects/Arrays from listOfObjects.json and returns them
 const tempData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
-  // console.log("tempData output ", objVars);
   return objVars;
+}
+
+
+const whatever = async () => {
+  var inputVars = await fetch("../tempData/task.json").then(response=>{return response.json();});
+
+  return
 }
 
 
@@ -242,6 +247,7 @@ const doTheStringify = async () => {
       {
 
         // making object item an input textbox
+        for (const [] of Object.entries())
         HTMLoutput += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
       }
       else
