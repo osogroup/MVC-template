@@ -8,7 +8,7 @@
   "task":{
     "required":["id","name"],
     "list":["id","name","tags", "status"],
-    "editable":["name","description","tags"] 
+    "editable":["name","description","tags", "status", "due_date", "estEff"] 
   },
   "tag":{
     "required":["id","name"],
