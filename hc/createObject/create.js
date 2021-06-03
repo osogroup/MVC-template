@@ -405,24 +405,3 @@ function createObjectList() {
     
     // get reference to select tag's id
     var select = document.getElementById('objScripts');
-
-
-    // ------------------------------------------- Obj Add function ----------------------------------------------
-
-    // creating Add button click function
-    document.getElementById('showObj').onclick = function () {
-
-      // access text property of selected option
-      elementVal = select.options[select.selectedIndex].text;
-      objectFields.push(elementVal);
-      
-      // adding a new row and columns to the HTML
-      var HTMLelement = '<div class="row"><div class="col-6">'+elementVal+'</div><div class="col-1"><input type="button" id="remvObj'+i+'" value="-" onclick="removeObject('+i+')"></div></div>';
-      $('#objAppend').append(HTMLelement);
-
-      // adjusting indices
-      i++;
-    }
-  }());
-  console.log("Exiting createHTML2()...");
-}
