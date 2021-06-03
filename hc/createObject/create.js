@@ -310,7 +310,7 @@ calendarAttribute();
 function objectAttribute(obj) {
   var objectHTML = '';
 
-  objectHTML += '<div class="col-4">'
+  objectHTML += '<div class="col-6">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>Object List</legend>'
