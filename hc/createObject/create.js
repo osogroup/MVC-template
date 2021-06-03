@@ -147,8 +147,7 @@ function arrayList(vars) {
                       + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
                     + '</fieldset>'
                   + '</form>'
-                + '</div>'
-              + '</div>';
+                + '</div>';
 
   $('#arraySpot').append(HTMLoutput);
   $('#appendTo').append(HTMLarrayValues);
@@ -244,13 +243,14 @@ function selectAttribute(vars) {
                       + '<select name=optionDisp value="optionDisp>';
                       
   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
-    selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
+    selectHTML +=         '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
-  selectHTML +=       '</select>'
-                  + '</div>'                  
-                + '</fieldset>'
-              + '</form>'
-            + '<div>';
+  selectHTML +=         '</select>'
+                    + '</div>'                  
+                  + '</fieldset>'
+                + '</form>'
+              + '</div>'
+            + '</div>';
   $('#arraySpot').append(selectHTML);
 }
 
