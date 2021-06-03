@@ -3,16 +3,16 @@
   "deliverable":{
     "required":["id","name"],
     "list":["id","name","status","tasks"],
-    "editable":[ "id", "name","description", "status","tasks"] 
+    "editable":["name","description","tasks"] 
   },
   "task":{
     "required":["id","name"],
     "list":["id","name","tags", "status"],
-    "editable":[ "id", "name","description","tags", "status", "due_date", "estEff"] 
+    "editable":["name","description","tags"] 
   },
   "tag":{
     "required":["id","name"],
     "list":["id","name","description"],
-    "editable":[ "id", "name","description"] 
+    "editable":["name","description"] 
   }
 }
