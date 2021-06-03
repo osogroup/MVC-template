@@ -246,7 +246,7 @@ optionVariables = {
   options : arrayOfOptions
 };
 
-selectAttribute(optionVariables)
+selectAttribute(optionVariables);
 
 
 
