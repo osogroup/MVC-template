@@ -294,6 +294,7 @@ function calendarAttribute() {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset>'
                       + '<legend>Calendar List</legend>'
+                      + '<div>Due Date</div>'
                       + '<input type="date" id="calInput" name="">'
                     + '</fieldset>'
                   + '</form>'
