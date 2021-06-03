@@ -148,7 +148,7 @@ function arrayList(vars) {
                 + '</form>'
               + '</div>';
 
-  $('#arraySpot').append(HTMLoutput);
+  $('#optionSpot').append(HTMLoutput);
   $('#appendTo').append(HTMLarrayValues);
 }
   
