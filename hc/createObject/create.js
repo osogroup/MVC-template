@@ -273,7 +273,7 @@ function numberAttribute(vars) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Number List</legend>'
-                    + '<input type="number" id="" name="" min="0" max="'+vars+'">'
+                    + '<input type="number" id="numInput" name="" min="0" max="'+vars+'">'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
@@ -294,7 +294,7 @@ function calendarAttribute() {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset>'
                       + '<legend>Calendar List</legend>'
-                      + '<input type="date" id="" name="">'
+                      + '<input type="date" id="calInput" name="">'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
