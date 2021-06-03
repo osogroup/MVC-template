@@ -174,8 +174,24 @@ function inputFunction(fieldType) {
 
   if (fieldType == "text") {
     console.log("fieldType == 'text'");
+    textAttribute();
   }
-  
+  if (fieldType == "textarea") {
+    console.log("fieldType == 'textarea'");
+    textareaAttribute();
+  }
+  if (fieldType == "number") {
+    console.log("fieldType == 'number'");
+  }
+  if (fieldType == "date") {
+    console.log("fieldType == 'date'");
+  }
+  if (fieldType == "array") {
+    console.log("fieldType == 'array'");
+  }
+  if (fieldType == "option") {
+    console.log("fieldType == 'option'");
+  }
 }
 
 // ----------------------------------------------- Text Attribute -----------------------------------------------
