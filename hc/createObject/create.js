@@ -148,8 +148,6 @@ function arrayList(vars) {
 
   $('#arraySpot').append(HTMLoutput);
   $('#appendTo').append(HTMLarrayValues);
-
-  return HTMLoutput;
 }
   
 var variables = {
