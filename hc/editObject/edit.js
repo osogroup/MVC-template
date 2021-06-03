@@ -474,7 +474,7 @@ calendarAttribute();
 
 
 function arrayList(vars) {
-
+  var i = 0;
   if (!vars.existing || !vars.options || !vars.attrType){
     alert("vars has an empty array");
     return;
