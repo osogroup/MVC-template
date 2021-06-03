@@ -231,10 +231,15 @@ function removeFunction(val) {
 function selectAttribute(vars) {
   if (!vars) {return alert("vars doesnt exist");}
   var selectHTML = '';
-  for (const [] of Object.entries(vars)) {
-    selectHTML += '<div class="col-6"></div>'
+
+  selectHTML += '<div class="col-6">'
+                + '<select name=optionDisp value="optionDisp>';
+  for (const [varsKey, varsValue] of Object.entries(vars.options)) {
+    selectHTML +=   '<option>'+varsValue+'</option>';
   }
-  
+  selectHTML +=   '</select>'
+              + '</div>';
+  $('#optionSpot').append(selectHTML);
 }
 
 optionVariables = {
@@ -243,7 +248,6 @@ optionVariables = {
 
 selectAttribute(optionVariables)
 
-$('#optionSpot').append(selectHTML);
 
 
 
