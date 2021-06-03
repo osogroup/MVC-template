@@ -171,7 +171,6 @@ const generateID = async () => {
 
 
 function inputFunction(fieldType) {
-
   if (fieldType == "text") {
     console.log("fieldType == 'text'");
     textAttribute();
