@@ -120,7 +120,7 @@ function arrayList(vars) {
   HTMLoutput += '<div class="col-6">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
-                    + '<legend>Array List</legend>'
+                    + '<legend>Tags</legend>'
                       + '<div id="outerDiv">'
                         + '<div id="appendTo"></div>'
                       + '</div>';
