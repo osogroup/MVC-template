@@ -117,12 +117,13 @@ function arrayList(vars) {
   var arrayOfOptions = vars.options;
   var type = vars.attrType;
 
-  HTMLoutput += '<form action="#" method="post" class="demoForm">'
-                + '<fieldset>'
-                  + '<legend>Array List</legend>'
-                    + '<div id="outerDiv">'
-                      + '<div id="appendTo"></div>'
-                    + '</div>';
+  HTMLoutput += '<div class="col-8">'
+                  '<form action="#" method="post" class="demoForm">'
+                  + '<fieldset>'
+                    + '<legend>Array List</legend>'
+                      + '<div id="outerDiv">'
+                        + '<div id="appendTo"></div>'
+                      + '</div>';
 
   // showing all the items in the arrayFields array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
@@ -144,7 +145,8 @@ function arrayList(vars) {
   HTMLoutput +=       '</select>'
                     + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
                   + '</fieldset>'
-                + '</form>';
+                + '</form>'
+              + '</div>';
 
   $('#arraySpot').append(HTMLoutput);
   $('#appendTo').append(HTMLarrayValues);
