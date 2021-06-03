@@ -4,8 +4,6 @@ $(document).ready(function(){
   
   createHTML();
   // createObjectList();
-  // doTheHTML();
-  // doTheStringify();
 });
 
 const configData = async () => {
