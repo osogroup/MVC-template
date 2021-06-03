@@ -118,7 +118,7 @@ function arrayList(vars) {
   var type = vars.attrType;
 
   HTMLoutput += '<div class="col-8">'
-                  '<form action="#" method="post" class="demoForm">'
+                + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Array List</legend>'
                       + '<div id="outerDiv">'
