@@ -100,7 +100,7 @@ const createHTML = async () => {
 }
 
 
-// ------------------------------------------------ Add funtion ------------------------------------------------
+// ------------------------------------------------ Add function ------------------------------------------------
 
 
 function addFunction(variable) {
@@ -119,7 +119,7 @@ function addFunction(variable) {
 }
 
 
-// ----------------------------------------------- Remove funtion -----------------------------------------------
+// ----------------------------------------------- Remove function -----------------------------------------------
 
 
 function removeFunction(val) {
@@ -191,6 +191,7 @@ function inputFunction(fieldType) {
   }
   if (fieldType == "option") {
     console.log("fieldType == 'option'");
+    selectAttribute(vars);
   }
 }
 
