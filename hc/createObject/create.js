@@ -176,7 +176,7 @@ function removeFunction(val) {
 function textAttribute() {
   var textHTML = '';
 
-  textHTML += '<div class="col-4">'
+  textHTML += '<div class="col-6">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Est Eff</legend>'
