@@ -3,8 +3,6 @@ $(document).ready(function(){
   doTheStringify();
 });
 
-import { inputFunction } from "../createObject/create.js";
-
 // pull in data from objectList.JSON and configuration JSON file 
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
