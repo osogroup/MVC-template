@@ -249,7 +249,7 @@ function selectAttribute(vars) {
                 + '</fieldset>'
               + '</form>'
             + '<div>';
-  $('#optionSpot').append(selectHTML);
+  $('#arraySpot').append(selectHTML);
 }
 
 optionVariables = {
