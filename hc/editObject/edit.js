@@ -267,7 +267,7 @@ const doTheStringify = async () => {
 
 
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        for (const [] of Object.entries()) {
+        for (const [] of Object.entries(data)) {
 
         }
         
