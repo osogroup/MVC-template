@@ -267,8 +267,8 @@ const doTheStringify = async () => {
         var taskHeader = taskStuff[headerKey];
         
         for (const [stuffKey, stuffValue] of Object.entries(taskHeader)) {
-          console.log("This is stuffKey: ", stuffKey); // (required, type, inpType)
-          console.log("This is stuffValue: ", stuffValue); // (true, string, text)
+          // console.log("This is stuffKey: ", stuffKey); // (required, type, inpType)
+          // console.log("This is stuffValue: ", stuffValue); // (true, string, text)
           if (stuffKey == "inpType") {
             console.log("This is the stuffValue of stuffKey", stuffValue);
           }
