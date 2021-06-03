@@ -264,7 +264,8 @@ const doTheStringify = async () => {
 
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-        for (const [stuffKey, stuffValue] of Object.entries(taskStuff[headerKey])) {
+        var taskHeader = taskStuff[headerKey];
+        for (const [stuffKey, stuffValue] of Object.entries(taskHeader)) {
           console.log("This is stuffKey: ", stuffKey);
           console.log("This is stuffValue: ", stuffValue);
         }
