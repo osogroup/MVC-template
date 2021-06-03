@@ -40,10 +40,6 @@ const createHTML = async () => {
   var config = await configData();
   var objTypeData = data[objType];
   var configTypeData = config[objType];
-  // arrayFields.push('Peter');
-  // arrayFields.push('James');
-  // arrayFields.push('John');
-  // localStorage.setItem('task_0', arrayFields);
 
 
   // ---------------------------------------------- Navigation Bar ----------------------------------------------
@@ -130,8 +126,6 @@ function arrayList(vars) {
 
   // showing all the items in the arrayFields array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-  // (arrayKey: 0, 1, 2)
-  // (arrayValue: peter, james, john)
   HTMLarrayValues +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
 
   // counts up the indices if there's any preset values in the array (uncommon)
@@ -167,44 +161,6 @@ var variables = {
 var functionCall = arrayList(variables);
 
 console.log("This is functionCall: ", functionCall);
-
-
-//   HTMLarray += '<form action="#" method="post" class="demoForm">'
-//                 + '<fieldset>'
-//                   + '<legend>Array List</legend>'
-//                   + '<div id="outerDiv">'
-//                     + '<div id="appendTo"></div>'
-//                   + '</div>';
-
-//   // showing all the items in the arrayFields array (none if the array is preset as empty)
-//   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-//     // (arrayKey: 0, 1, 2)
-//     // (arrayValue: peter, james, john)
-//     HTMLarrayValues +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
-    
-//     // counts up the indices if there's any preset values in the array (uncommon)
-//     i++;
-//   }
-
-//   // creating the select tag
-//   HTMLarray +=      '<br><select id="scripts" name="scripts">';
-
-//   // creating all the options from the arrayOfOptions array in the select tag
-//   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
-//     HTMLarray +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
-//   }
-
-//   // closing the form tags and creating the add button
-//   HTMLarray +=       '</select>'
-//                     + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
-//                 + '</fieldset>'
-//               + '</form>';
-
-//   // HTMLoutput += '<button onclick="generateID()">Run generateID()</button>';
-
-
-//   $('#arraySpot').append(HTMLarray);
-//   $('#appendTo').append(HTMLarrayValues);
 
 
 // ------------------------------------------------ Add funtion ------------------------------------------------
@@ -275,32 +231,6 @@ function removeFunction(val) {
 //   console.log("This is i: ", i);
 //   return i;
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
