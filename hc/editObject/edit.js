@@ -20,7 +20,22 @@ const tempData = async () => {
 
 const taskData = async () => {
   var taskVars = await fetch("../tempData/task.json").then(response=>{return response.json();});
+  console.log("This is taskVars", taskVars);
   return taskVars;
+}
+
+
+const tagData = async () => {
+  var tagVars = await fetch("../tempData/tag.json").then(response=>{return response.json();});
+  console.log("This is tagVars", tagVars);
+  return tagVars;
+}
+
+
+const deliverableData = async () => {
+  var deliverableVars = await fetch("../tempData/deliverable.json").then(response=>{return response.json();});
+  console.log("This is deliverableVars", deliverableVars);
+  return deliverableVars;
 }
 
 
