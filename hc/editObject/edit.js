@@ -355,6 +355,7 @@ function inputFunction(fieldType) {
     console.log("fieldType == 'option'");
     selectAttribute(optionVariables);
   }
+  console.log("Exiting inputFunction...");
 }
 
 
