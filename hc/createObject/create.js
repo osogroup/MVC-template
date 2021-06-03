@@ -256,6 +256,7 @@ function selectAttribute(vars) {
   $('#optionSpot').append(selectHTML);
 }
 
+// variables that will be passed into selectAttribute()
 optionVariables = {
   options : [ 'in-progress', 'complete' ]
 };
