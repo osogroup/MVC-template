@@ -263,8 +263,9 @@ const doTheStringify = async () => {
 
 
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        for (const [] of Object.entries(data)) {
-
+        for (const [stuffKey, stuffValue] of Object.entries(taskStuff)) {
+          console.log("This is stuffKey: ", stuffKey);
+          console.log("This is stuffValue: ", stuffValue);
         }
         
         HTMLoutput += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
