@@ -103,8 +103,8 @@ const createHTML = async () => {
 // ------------------------------------------------ Add funtion ------------------------------------------------
 
 
-function addFunction() {
-  var select = document.getElementById('scripts');  
+function addFunction(variable) {
+  var select = document.getElementById(variable);  
 
   // access text property of selected option
   elementVal = select.options[select.selectedIndex].text;
@@ -329,7 +329,7 @@ function arrayList(vars) {
 
   // closing the form tags and creating the add button
   HTMLoutput +=       '</select>'
-                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
+                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction(scripts)"/>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
