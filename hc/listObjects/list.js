@@ -141,9 +141,9 @@ const createHTML = async () => {
   }
 
   headerHTML += '</p>'
-    + '</div>'
-    + '<h1>OAS Object List</h1>'
-    + '</div>'
+            + '</div>'
+              + '<h1>OAS Object List</h1>'
+            + '</div>'
   $('#TitleOfList').append(headerHTML);
 
   // console.log("objType in createHTML() ", objType);
@@ -156,7 +156,7 @@ const createHTML = async () => {
   // for (const [key, val] of Object.entries(data)) {
 
   // displaying Object Name
-  var tHeader = inputThings + '<h1>' + objType + '</h1><a href="../createObject/?type='+objType+'"><button>Create Item</button></a>';
+  var tHeader = inputThings + '<a href="../createObject/?type='+objType+'"><button>Create Item</button></a><h1>' + objType + '</h1>';
 
   // creating sortable list library container 
   tHeader += '<div id="' + objType + 'Container">';
