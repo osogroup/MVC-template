@@ -238,7 +238,9 @@ function selectAttribute(vars) {
     selectHTML +=   '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
   selectHTML +=   '</select>'
-              + '</div>';
+              + '</div>'                  
+            + '</fieldset>'
+          + '</form>';
   $('#optionSpot').append(selectHTML);
 }
 
