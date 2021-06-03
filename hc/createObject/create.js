@@ -397,5 +397,4 @@ function createObjectList() {
               
   $('#objectSpot').append(outputHTML);
   $('#objAppend').append(HTMLobjectValues);
-
 }
