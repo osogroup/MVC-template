@@ -284,9 +284,21 @@ function numberAttribute(vars) {
 numberAttribute(10);
 
 
+// ------------------------------------------------ Number Attr ------------------------------------------------
 
 
+function calendarAttribute() {
+  var calenderHTML = '';
 
+  calenderHTML += '<div class="col-4">'
+                  + '<form action="#" method="post" class="demoForm">'
+                    + '<fieldset>'
+                      + '<legend>Calendar List</legend>'
+                      + '<input type="date" id="" name="">'
+                    + '</fieldset>'
+                  + '</form>'
+                + '</div>';
+}
 
 
 
