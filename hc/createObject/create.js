@@ -241,14 +241,12 @@ function selectAttribute(vars) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Status</legend>'
-                    + '<div class="col-6">'
-                      + '<select name="optionDisp" value="optionDisp">';
+                    + '<select name="optionDisp" value="optionDisp">';
 
   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
-    selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
+selectHTML +=         '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
-  selectHTML +=       '</select>'
-                  + '</div>'
+selectHTML +=       '</select>'
                 + '</fieldset>'
               + '</form>'
             + '</div>';
