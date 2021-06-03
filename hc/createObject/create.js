@@ -65,34 +65,34 @@ const createHTML = async () => {
 
   HTMLoutput += '<h1>Creating '+objType+' Item</h1>';
   
-  // creating item header and input row
-  HTMLoutput += '<div class="row">'
+  // // creating item header and input row
+  // HTMLoutput += '<div class="row">'
 
-  // looping to find all the values in the editable key according to objType (tag, task, deliverable)
-  for (const [editableKey, editableValue] of Object.entries(configTypeData.editable)) {
-    // console.log("This is the editableValue: ", editableValue); (name, description, tags)
+  // // looping to find all the values in the editable key according to objType (tag, task, deliverable)
+  // for (const [editableKey, editableValue] of Object.entries(configTypeData.editable)) {
+  //   // console.log("This is the editableValue: ", editableValue); (name, description, tags)
 
-    // creating the header and input fields
-    HTMLoutput += '<div class="col-4">'
-                  + '<div class="col-12">'+editableValue+'</div>';
+  //   // creating the header and input fields
+  //   HTMLoutput += '<div class="col-4">'
+  //                 + '<div class="col-12">'+editableValue+'</div>';
     
-    // if the editableValue is in the required list according to objType 
-    if (configTypeData.required.includes(editableValue) == true) {
-      // make the input box with a "required" attribute (includes '*' to let the admin see the required fields)
-      HTMLoutput += '<br><input type=textarea placeholder="*" required>';
-    }
-    // else
-    else {
-      //   do what I already did below
-      HTMLoutput += '<br><input type=textarea>';
-    }
+  //   // if the editableValue is in the required list according to objType 
+  //   if (configTypeData.required.includes(editableValue) == true) {
+  //     // make the input box with a "required" attribute (includes '*' to let the admin see the required fields)
+  //     HTMLoutput += '<br><input type=textarea placeholder="*" required>';
+  //   }
+  //   // else
+  //   else {
+  //     //   do what I already did below
+  //     HTMLoutput += '<br><input type=textarea>';
+  //   }
 
-    // closing the header and input fields
-    HTMLoutput += '</div>';
-  }
+  //   // closing the header and input fields
+  //   HTMLoutput += '</div>';
+  // }
 
-  // closing item header and input row
-  HTMLoutput += '</div>';
+  // // closing item header and input row
+  // HTMLoutput += '</div>';
 
   $('#everything').append(HTMLoutput);
 }
