@@ -273,11 +273,7 @@ function numberAttribute(vars) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Number List</legend>'
-                    + '';
-
-  for (const [varsKey, varsValue] of Object.entries(vars.options)) {
-    selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
-  }
+                    + '<input type="number"';
 
   $('#numberSpot').append(numberHTML);
 }
