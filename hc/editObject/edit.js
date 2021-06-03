@@ -268,7 +268,7 @@ const doTheStringify = async () => {
         
         for (const [stuffKey, stuffValue] of Object.entries(taskHeader)) {
           console.log("This is stuffKey: ", stuffKey); // (required, type, inpType)
-          console.log("This is stuffValue: ", stuffValue);
+          console.log("This is stuffValue: ", stuffValue); // (true, string, text)
         }
         
         HTMLoutput += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
