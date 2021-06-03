@@ -28,4 +28,5 @@
    "inpType":"object",
    "opts":"{task}",
    "placeholder":"What is the Due Date"
+ }
 }
