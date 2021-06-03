@@ -117,7 +117,7 @@ function arrayList(vars) {
   var arrayOfOptions = vars.options;
   var type = vars.attrType;
 
-  HTMLoutput += '<div class="col-7">'
+  HTMLoutput += '<div class="col-8">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Array List</legend>'
