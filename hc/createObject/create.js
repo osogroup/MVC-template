@@ -302,7 +302,7 @@ function calendarAttribute() {
   $('#calendarSpot').append(calendarHTML);
 }
 
-
+calendarAttribute();
 
 
 
