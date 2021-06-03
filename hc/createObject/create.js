@@ -2,7 +2,7 @@ $(document).ready(function(){
   if (objType == null)
   alert("add '?type=task' to the URL");
   
-  createHTML();
+  // createHTML();
   // createObjectList();
   // doTheHTML();
   // doTheStringify();
