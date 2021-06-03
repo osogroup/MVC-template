@@ -363,7 +363,7 @@ function objectAttribute() {
                         + '<option value="3">opt3</option>'
                         + '<option value="4">opt4</option>'
                       + '</select>'
-                      + '<input type="button" id="showObject" value="Add" onclick="addFunction(\'objScripts)"/>'
+                      + '<input type="button" id="showObject" value="Add" onclick="addFunction(\'objScripts\')"/>'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
