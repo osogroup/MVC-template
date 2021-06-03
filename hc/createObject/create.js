@@ -242,6 +242,7 @@ function selectAttribute(vars) {
                   + '<fieldset>'
                     + '<legend>Option List</legend>'
                     + '<div class="col-6">'
+                      + '<div>Status</div>'
                       + '<select name=optionDisp value="optionDisp>';
 
   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
