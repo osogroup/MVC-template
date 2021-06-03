@@ -24,7 +24,7 @@
  },
  "status":{
    "type":"string",
-   "inpType":"text",
+   "inpType":"option",
    "placeholder":"Select a Status",
    "opts":["Not Started","In-Progress","Complete"]
  },
