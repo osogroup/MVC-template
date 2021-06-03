@@ -237,7 +237,11 @@ function selectAttribute(vars) {
   
 }
 
+optionVariables = {
+  options : arrayOfOptions
+};
 
+selectAttribute(options)
 
 
 
