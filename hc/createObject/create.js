@@ -258,7 +258,7 @@ function selectAttribute(vars) {
 
 // variables that will be passed into selectAttribute()
 optionVariables = {
-  options : [ 'in-progress', 'complete' ];
+  options : [ 'in-progress', 'complete' ]
 };
 
 selectAttribute(optionVariables);
