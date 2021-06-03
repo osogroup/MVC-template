@@ -281,7 +281,7 @@ function numberAttribute(vars) {
   $('#numberSpot').append(numberHTML);
 }
 
-
+numberAttribute(10);
 
 
 
