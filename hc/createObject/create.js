@@ -179,7 +179,7 @@ function textAttribute() {
   textHTML += '<div class="col-6">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>Name or Description</legend>'
+                    + '<legend>Name/Description</legend>'
                     + '<input type="text" id="textInput" name="">'
                   + '</fieldset>'
                 + '</form>'
