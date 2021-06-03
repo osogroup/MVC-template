@@ -329,7 +329,7 @@ function arrayList(vars) {
 
   // closing the form tags and creating the add button
   HTMLoutput +=       '</select>'
-                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\"scripts\")"/>'
+                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scripts\')"/>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
