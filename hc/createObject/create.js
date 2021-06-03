@@ -269,9 +269,11 @@ function numberAttribute(vars) {
   if (!vars) {return alert("vars doesnt exist");}
   var numberHTML = '';
 
-  numberHTML += '<form action="">'
-                + '<fieldset>'
-                  + '<legend>Number List</legend>';
+  numberHTML += '<div class="col-4">'
+                + '<form action="#" method="post" class="demoForm">'
+                  + '<fieldset>'
+                    + '<legend>Number List</legend>'
+                    + '<select name=numberDisp value="numberDisp>';
 
   $('#numberSpot').append(numberHTML);
 }
