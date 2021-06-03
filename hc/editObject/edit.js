@@ -524,6 +524,8 @@ function arrayList(vars) {
   $('#appendTo').append(HTMLarrayValues);
 }
   
+var arrayFields = [ 'Ron', 'John', 'James' ];
+
 var arrayOfOptions = [ 
   'Scrolling Divs JavaScript',
   'JavaScript Tooltips', 
