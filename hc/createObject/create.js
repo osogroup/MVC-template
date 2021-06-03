@@ -288,9 +288,9 @@ numberAttribute(10);
 
 
 function calendarAttribute() {
-  var calenderHTML = '';
+  var calendarHTML = '';
 
-  calenderHTML += '<div class="col-4">'
+  calendarHTML += '<div class="col-4">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset>'
                       + '<legend>Calendar List</legend>'
@@ -298,6 +298,8 @@ function calendarAttribute() {
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
+
+  $('#calendarSpot').append(calendarHTML);
 }
 
 
