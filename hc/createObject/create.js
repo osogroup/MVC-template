@@ -194,19 +194,19 @@ textAttribute();
 // --------------------------------------------- Textarea Attribute ---------------------------------------------
 
 
-function textAttribute() {
-  var textHTML = '';
+function textareaAttribute() {
+  var textareaHTML = '';
 
-  textHTML += '<div class="col-6">'
+  textareaHTML += '<div class="col-6">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Textarea</legend>'
-                    + '<textarea id="textareaInput" rows="3" cols="20">'
+                    + '<textarea id="textareaInput" rows="3" cols="20"></textarea>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
 
-  $('#textSpot').append(textHTML);
+  $('#textareaSpot').append(textareaHTML);
 }
 
 textAttribute();
