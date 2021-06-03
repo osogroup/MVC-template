@@ -307,8 +307,19 @@ calendarAttribute();
 // ------------------------------------------------ Object List ------------------------------------------------
 
 
-function objectAttribute() {
+function objectAttribute(obj) {
+  var objectHTML = '';
 
+  objectHTML += '<div class="col-4">'
+                  + '<form action="#" method="post" class="demoForm">'
+                    + '<fieldset class="minHeight">'
+                      + '<legend>Object List</legend>'
+                      + '<input type="date" id="calInput" name="">'
+                    + '</fieldset>'
+                  + '</form>'
+                + '</div>';
+
+  $('#calendarSpot').append(objectHTML);
 }
 
 
