@@ -275,6 +275,8 @@ function numberAttribute(vars) {
                     + '<legend>Number List</legend>'
                     + '<select name=numberDisp value="numberDisp>';
 
+                    
+
   $('#numberSpot').append(numberHTML);
 }
 
