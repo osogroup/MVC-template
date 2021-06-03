@@ -360,7 +360,7 @@ function objectAttribute() {
                       + '<div id="objOuter">'
                         + '<div id="objAppend"></div>'
                       + '</div>'
-                      + '<select id="objScripts">'
+                      + '<br><select id="objScripts">'
                         + '<option value="1">opt1</option>'
                         + '<option value="2">opt2</option>'
                         + '<option value="3">opt3</option>'
