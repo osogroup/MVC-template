@@ -156,7 +156,7 @@ const createHTML = async () => {
   // for (const [key, val] of Object.entries(data)) {
 
   // displaying Object Name
-  var tHeader = inputThings + '<h1>' + objType + '</h1>';
+  var tHeader = inputThings + '<h1>' + objType + '</h1><a href="../createObject/?type='+objType+'"><button>Create Item</button></a>';
 
   // creating sortable list library container 
   tHeader += '<div id="' + objType + 'Container">';
