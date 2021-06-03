@@ -181,16 +181,18 @@ function inputFunction(fieldType) {
   }
   if (fieldType == "number") {
     console.log("fieldType == 'number'");
+    numberAttribute(10);
   }
   if (fieldType == "date") {
     console.log("fieldType == 'date'");
+    calendarAttribute();
   }
   if (fieldType == "array") {
     console.log("fieldType == 'array'");
   }
   if (fieldType == "option") {
     console.log("fieldType == 'option'");
-    selectAttribute(vars);
+    selectAttribute(optionVariables);
   }
 }
 
@@ -212,7 +214,7 @@ function textAttribute() {
   $('#textSpot').append(textHTML);
 }
 
-textAttribute();
+// textAttribute();
 
 
 // --------------------------------------------- Textarea Attribute ---------------------------------------------
@@ -233,7 +235,7 @@ function textareaAttribute() {
   $('#textareaSpot').append(textareaHTML);
 }
 
-textareaAttribute();
+// textareaAttribute();
 
 
 // ------------------------------------------------ Select Attr ------------------------------------------------
@@ -264,7 +266,7 @@ optionVariables = {
   options : [ 'in-progress', 'complete' ]
 };
 
-selectAttribute(optionVariables);
+// selectAttribute(optionVariables);
 
 
 // ------------------------------------------------ Number Attr ------------------------------------------------
@@ -286,7 +288,7 @@ function numberAttribute(vars) {
   $('#numberSpot').append(numberHTML);
 }
 
-numberAttribute(10);
+// numberAttribute(10);
 
 
 // ----------------------------------------------- Calendar Attr -----------------------------------------------
@@ -307,7 +309,7 @@ function calendarAttribute() {
   $('#calendarSpot').append(calendarHTML);
 }
 
-calendarAttribute();
+// calendarAttribute();
 
 
 // ------------------------------------------------- Array List -------------------------------------------------
