@@ -264,7 +264,12 @@ const doTheStringify = async () => {
       {
 
         // making object item an input textbox
-        for (const [] of Object.entries())
+
+
+        // for (const [] of Object.entries()) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
+        
+        
         HTMLoutput += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
       }
       else
