@@ -357,6 +357,9 @@ function objectAttribute() {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>Object List</legend>'
+                      + '<select>'
+                        + '<option value=""></option>'
+                      + '</select>'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
