@@ -18,9 +18,9 @@ const tempData = async () => {
 }
 
 
-const whatever = async () => {
-  var inputVars = await fetch("../tempData/task.json").then(response=>{return response.json();});
-  return inputVars;
+const taskData = async () => {
+  var taskVars = await fetch("../tempData/task.json").then(response=>{return response.json();});
+  return taskVars;
 }
 
 
