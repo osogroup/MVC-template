@@ -533,8 +533,8 @@ var arrayOfOptions = [
   'PHP Form Generator', 
   'PHP Table Class', 
   'PHP Order Forms',
-  'Test Option'
-  ];
+  'Test Option' 
+];
 
 var variables = {
   options : arrayOfOptions,
