@@ -314,7 +314,6 @@ function objectAttribute() {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>Object List</legend>'
-                      + '<input type="date" id="calInput" name="">'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
