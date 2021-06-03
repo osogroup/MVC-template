@@ -44,6 +44,9 @@ const outputHTML = async () => {
   console.log("Entering outputHTML()");
   var data = await tempData();
   var config = await configData();
+  var taskStuff = await taskData();
+  var tagStuff = await tagData();
+  var deliverableStuff = await deliverableData();
   var inputBoxes = '';
   var configTypeData = config[objType];
   var objTypeData = data[objType];
