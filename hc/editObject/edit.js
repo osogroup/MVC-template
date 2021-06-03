@@ -174,8 +174,17 @@ const doTheStringify = async () => {
   else {
     var data = await tempData();
     var config = await configData();
+    var taskStuff = await taskData();
+    var tagStuff = await tagData();
+    var deliverableStuff = await deliverableData();
     var objTypeData = data[objType];
     var configTypeData = config[objType];
+    var objTypeTask = taskStuff[objType];
+    var objTypeTag = tagStuff[objType];
+    var objTypeDeliverable = deliverableStuff[objType];
+    console.log("This is taskStuff: ", taskStuff);
+    console.log("This is objTypeTask: ", objTypeTask);
+
 
 
     // -------------------------------------------- Navigation Bar --------------------------------------------
@@ -257,9 +266,10 @@ const doTheStringify = async () => {
         // making object item an input textbox
 
 
-        // for (const [] of Object.entries()) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        
-        
+        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        for (const [] of Object.entries()) {
+
+        }
         
         HTMLoutput += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
       }
