@@ -275,6 +275,7 @@ function numberAttribute(vars) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Number List</legend>'
+                    + '<div>Est Eff</div>'
                     + '<input type="number" id="numInput" name="" min="0" max="'+vars+'">'
                   + '</fieldset>'
                 + '</form>'
