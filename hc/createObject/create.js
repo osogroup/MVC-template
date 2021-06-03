@@ -142,9 +142,9 @@ function arrayList(vars) {
 
   // closing the form tags and creating the add button
   HTMLoutput +=       '</select>'
-        + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
-    + '</fieldset>'
-  + '</form>';
+                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
+                  + '</fieldset>'
+                + '</form>';
 
   $('#arraySpot').append(HTMLoutput);
   $('#appendTo').append(HTMLarrayValues);
