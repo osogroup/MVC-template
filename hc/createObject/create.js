@@ -109,7 +109,7 @@ function arrayList(vars) {
     alert("vars has an empty array");
     return;
   }
-  console.log("This is arrayList(vars): ", vars);
+  console.log("This is the input for arrayList(vars): ", vars);
 
   var HTMLoutput = '';
   var HTMLarrayValues = '';
