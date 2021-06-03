@@ -273,7 +273,10 @@ function numberAttribute(vars) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
                     + '<legend>Number List</legend>'
-                    + '<input type="number" id="" name="" min="0" max="10">';
+                    + '<input type="number" id="" name="" min="0" max="10">'
+                  + '</fieldset>'
+                + '</form>'
+              + '</div>';
 
   $('#numberSpot').append(numberHTML);
 }
