@@ -170,7 +170,7 @@ const generateID = async () => {
 }
 
 
-export function inputFunction(fieldType) {
+function inputFunction(fieldType) {
   if (fieldType == "text") {
     console.log("fieldType == 'text'");
     textAttribute();
