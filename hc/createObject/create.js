@@ -244,12 +244,12 @@ function selectAttribute(vars) {
                     + '<select name="optionDisp" value="optionDisp">';
 
   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
-selectHTML +=         '<option value="'+varsValue+'">'+varsValue+'</option>';
+    selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
-selectHTML +=       '</select>'
-                + '</fieldset>'
-              + '</form>'
-            + '</div>';
+selectHTML +=         '</select>'
+                  + '</fieldset>'
+                + '</form>'
+              + '</div>';
   $('#optionSpot').append(selectHTML);
 }
 
