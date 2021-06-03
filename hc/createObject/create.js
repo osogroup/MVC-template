@@ -307,7 +307,7 @@ calendarAttribute();
 // ------------------------------------------------ Object List ------------------------------------------------
 
 
-function objectAttribute(obj) {
+function objectAttribute() {
   var objectHTML = '';
 
   objectHTML += '<div class="col-6">'
@@ -322,7 +322,7 @@ function objectAttribute(obj) {
   $('#objectSpot').append(objectHTML);
 }
 
-
+objectAttribute();
 
 
 
