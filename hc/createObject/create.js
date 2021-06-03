@@ -360,6 +360,7 @@ function objectAttribute() {
                       + '<select>'
                         + '<option value=""></option>'
                       + '</select>'
+                      + '<input type="button" id="showObject" value="Add" onclick="addFunction()"/>'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
