@@ -268,6 +268,8 @@ selectAttribute(optionVariables);
 function numberAttribute(vars) {
   if (!vars) {return alert("vars doesnt exist");}
   var numberHTML = '';
+
+  $('#numberSpot').append(numberHTML);
 }
 
 
