@@ -189,6 +189,7 @@ function inputFunction(fieldType) {
   }
   if (fieldType == "array") {
     console.log("fieldType == 'array'");
+    arrayList(variables);
   }
   if (fieldType == "option") {
     console.log("fieldType == 'option'");
@@ -370,7 +371,7 @@ var variables = {
   attrType : objType
 };
 
-arrayList(variables);
+// arrayList(variables);
 
 
 // ------------------------------------------------ Object List ------------------------------------------------
