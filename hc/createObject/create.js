@@ -174,8 +174,21 @@ function removeFunction(val) {
 
 
 function textAttribute() {
-  
+  var textHTML = '';
+
+  textHTML += '<div class="col-4">'
+                + '<form action="#" method="post" class="demoForm">'
+                  + '<fieldset class="minHeight">'
+                    + '<legend>Est Eff</legend>'
+                    + '<input type="text" id="textInput" name="">'
+                  + '</fieldset>'
+                + '</form>'
+              + '</div>';
+
+  $('#texSpot').append(textHTML);
 }
+
+textAttribute();
 
 
 // ------------------------------------------------ Select Attr ------------------------------------------------
