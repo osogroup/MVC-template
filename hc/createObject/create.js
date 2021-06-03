@@ -240,9 +240,8 @@ function selectAttribute(vars) {
   selectHTML += '<div class="col-4">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
-                    + '<legend>Option List</legend>'
+                    + '<legend>Status</legend>'
                     + '<div class="col-6">'
-                      + '<div>Status</div>'
                       + '<select name="optionDisp" value="optionDisp">';
 
   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
@@ -274,8 +273,7 @@ function numberAttribute(vars) {
   numberHTML += '<div class="col-4">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset>'
-                    + '<legend>Number List</legend>'
-                    + '<div>Est Eff</div>'
+                    + '<legend>Est Eff</legend>'
                     + '<input type="number" id="numInput" name="" min="0" max="'+vars+'">'
                   + '</fieldset>'
                 + '</form>'
@@ -296,8 +294,7 @@ function calendarAttribute() {
   calendarHTML += '<div class="col-4">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset>'
-                      + '<legend>Calendar List</legend>'
-                      + '<div>Due Date</div>'
+                      + '<legend>Due Date</legend>'
                       + '<input type="date" id="calInput" name="">'
                     + '</fieldset>'
                   + '</form>'
