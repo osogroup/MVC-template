@@ -191,6 +191,7 @@ const doTheStringify = async () => {
 
     // if item exists 
     if (localStorage.getItem(objectKeys) != null) {
+      console.log("This is localStorage.getItem(objectKeys)", localStorage.getItem(objectKeys));
       var forOfLoop = JSON.parse(localStorage.getItem(objectKeys));
       console.log("objectKeys exists..!");
       console.log(localStorage);
