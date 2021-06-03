@@ -230,6 +230,9 @@ function removeFunction(val) {
 // }
 
 
+// ------------------------------------------------ Select Attr ------------------------------------------------
+
+
 function selectAttribute(vars) {
   if (!vars) {return alert("vars doesnt exist");}
   var selectHTML = '';
@@ -258,6 +261,14 @@ optionVariables = {
 
 selectAttribute(optionVariables);
 
+
+// ------------------------------------------------ Select Attr ------------------------------------------------
+
+
+function numberAttribute(vars) {
+  if (!vars) {return alert("vars doesnt exist");}
+  var numberHTML = '';
+}
 
 
 
