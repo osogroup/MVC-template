@@ -170,6 +170,9 @@ const generateID = async () => {
 }
 
 
+// ---------------------------------------------------- GOD ----------------------------------------------------
+
+
 function inputFunction(fieldType) {
   if (fieldType == "text") {
     console.log("fieldType == 'text'");
@@ -196,6 +199,7 @@ function inputFunction(fieldType) {
     selectAttribute(optionVariables);
   }
 }
+
 
 // ----------------------------------------------- Text Attribute -----------------------------------------------
 
