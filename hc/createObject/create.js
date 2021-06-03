@@ -180,7 +180,7 @@ function textAttribute() {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Text</legend>'
-                    + '<input type="text" id="textInput" name="">'
+                    + '<input type="text" class="textInput" name="">'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
@@ -201,7 +201,7 @@ function textareaAttribute() {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Textarea</legend>'
-                    + '<textarea id="textareaInput" rows="3" cols="20"></textarea>'
+                    + '<textarea class="textareaInput" rows="3" cols="20"></textarea>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
