@@ -119,7 +119,7 @@ function arrayList(vars) {
 
   HTMLoutput += '<div class="col-6">'
                 + '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset class="minHeight">'
+                  + '<fieldset>'
                     + '<legend>Tags</legend>'
                       + '<div id="outerDiv">'
                         + '<div id="appendTo"></div>'
@@ -239,7 +239,7 @@ function selectAttribute(vars) {
 
   selectHTML += '<div class="col-4">'
                 + '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset>'
+                  + '<fieldset class="minHeight">'
                     + '<legend>Status</legend>'
                     + '<div class="col-6">'
                       + '<select name="optionDisp" value="optionDisp">';
