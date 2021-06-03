@@ -156,10 +156,7 @@ var variables = {
   attrType : objType
 };
 
-var functionCall = arrayList(variables);
-
-console.log("This is functionCall: ", functionCall);
-
+arrayList(variables);
 
 // ------------------------------------------------ Add funtion ------------------------------------------------
 
