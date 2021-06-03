@@ -398,10 +398,4 @@ function createObjectList() {
   $('#objectSpot').append(outputHTML);
   $('#objAppend').append(HTMLobjectValues);
 
-
-
-  // begin addFunction()
-  (function() {
-    
-    // get reference to select tag's id
-    var select = document.getElementById('objScripts');
+}
