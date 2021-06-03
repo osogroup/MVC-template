@@ -209,7 +209,7 @@ function textareaAttribute() {
   $('#textareaSpot').append(textareaHTML);
 }
 
-textAttribute();
+textareaAttribute();
 
 
 // ------------------------------------------------ Select Attr ------------------------------------------------
