@@ -3,41 +3,32 @@ $(document).ready(function(){
   doTheStringify();
 });
 
-
 // pull in data from objectList.JSON and configuration JSON file 
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
   return listConfig;
 }
   
-
   // gets all the Objects/Arrays from listOfObjects.json and returns them
 const tempData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
   return objVars;
 }
 
-
 const taskData = async () => {
   var taskVars = await fetch("../tempData/task.json").then(response=>{return response.json();});
-  console.log("This is taskVars", taskVars);
   return taskVars;
 }
 
-
 const tagData = async () => {
   var tagVars = await fetch("../tempData/tag.json").then(response=>{return response.json();});
-  console.log("This is tagVars", tagVars);
   return tagVars;
 }
 
-
 const deliverableData = async () => {
   var deliverableVars = await fetch("../tempData/deliverable.json").then(response=>{return response.json();});
-  console.log("This is deliverableVars", deliverableVars);
   return deliverableVars;
 }
-
 
 // function to create editObject HTML
 const outputHTML = async () => {
