@@ -200,8 +200,8 @@ function textAttribute() {
   textHTML += '<div class="col-6">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>Text</legend>'
-                    + '<input type="text" id="textInput" name="">'
+                    + '<legend>Textarea</legend>'
+                    + '<textarea id="textareaInput" rows="3" cols="20">'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
