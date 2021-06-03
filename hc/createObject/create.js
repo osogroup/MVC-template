@@ -228,7 +228,14 @@ function removeFunction(val) {
 // }
 
 
+function selectAttribute(vars) {
 
+  if (!vars) 
+  {
+    return alert("vars doesnt exist");
+  }
+  
+}
 
 
 
