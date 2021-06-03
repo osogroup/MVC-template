@@ -179,11 +179,7 @@ const doTheStringify = async () => {
     var deliverableStuff = await deliverableData();
     var objTypeData = data[objType];
     var configTypeData = config[objType];
-    var objTypeTask = taskStuff[objType];
-    var objTypeTag = tagStuff[objType];
-    var objTypeDeliverable = deliverableStuff[objType];
     console.log("This is taskStuff: ", taskStuff);
-    console.log("This is objTypeTask: ", objTypeTask);
 
 
 
