@@ -235,7 +235,7 @@ function selectAttribute(vars) {
   selectHTML += '<div class="col-6">'
                 + '<select name=optionDisp value="optionDisp>';
   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
-    selectHTML +=   '<option>'+varsValue+'</option>';
+    selectHTML +=   '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
   selectHTML +=   '</select>'
               + '</div>';
