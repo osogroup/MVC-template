@@ -331,6 +331,7 @@ const doTheStringify = async () => {
 
 
 function inputFunction(fieldType) {
+  console.log("Entering inputFunction()...");
   if (fieldType == "text") {
     console.log("fieldType == 'text'");
     textAttribute();
@@ -355,7 +356,7 @@ function inputFunction(fieldType) {
     console.log("fieldType == 'option'");
     selectAttribute(optionVariables);
   }
-  console.log("Exiting inputFunction...");
+  console.log("Exiting inputFunction()...");
 }
 
 
