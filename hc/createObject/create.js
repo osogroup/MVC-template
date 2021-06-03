@@ -101,12 +101,72 @@ const createHTML = async () => {
   HTMLoutput += '</div>';
 
   $('#everything').append(HTMLoutput);
+}
 
-  var HTMLarray = '';
+
+// ---------------------------------------------- Display Array ----------------------------------------------
+
+
+function arrayList(vars) {
+
+  if (!vars.existing || !vars.options || !vars.attrType){
+    alert("vars has an empty array");
+    return;
+  }
+  console.log("This is arrayList(vars): ", vars);
+
+  var HTMLoutput = '';
   var HTMLarrayValues = '';
+  var arrayFields = vars.existing;
+  var arrayOfOptions = vars.options;
+  var type = vars.attrType;
 
+  HTMLoutput += '<form action="#" method="post" class="demoForm">'
+  + '<fieldset>'
+    + '<legend>Array List</legend>'
+    + '<div id="outerDiv">'
+      + '<div id="appendTo"></div>'
+    + '</div>';
 
-  // ---------------------------------------------- Display Array ----------------------------------------------
+  // showing all the items in the arrayFields array (none if the array is preset as empty)
+  for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
+  // (arrayKey: 0, 1, 2)
+  // (arrayValue: peter, james, john)
+  HTMLarrayValues +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
+
+  // counts up the indices if there's any preset values in the array (uncommon)
+  i++;
+  }
+
+  // creating the select tag
+  HTMLoutput +=      '<br><select id="scripts" name="scripts">';
+
+  // creating all the options from the arrayOfOptions array in the select tag
+  for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
+  HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
+  }
+
+  // closing the form tags and creating the add button
+  HTMLoutput +=       '</select>'
+        + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
+    + '</fieldset>'
+  + '</form>';
+
+  $('#arraySpot').append(HTMLoutput);
+  $('#appendTo').append(HTMLarrayValues);
+
+  return HTMLoutput;
+}
+  
+var variables = {
+  options : arrayOfOptions,
+  existing : arrayFields,
+  attrType : objType
+};
+
+var functionCall = arrayList(variables);
+
+console.log("This is functionCall: ", functionCall);
 
 
 //   HTMLarray += '<form action="#" method="post" class="demoForm">'
@@ -145,7 +205,6 @@ const createHTML = async () => {
 
 //   $('#arraySpot').append(HTMLarray);
 //   $('#appendTo').append(HTMLarrayValues);
-}
 
 
 // ------------------------------------------------ Add funtion ------------------------------------------------
@@ -254,66 +313,7 @@ function removeFunction(val) {
 
 
 
-function arrayList(vars) {
 
-  if (!vars.existing || !vars.options || !vars.attrType){
-    alert("vars has an empty array");
-    return;
-  }
-  console.log("This is arrayList(vars): ", vars);
-
-  var HTMLoutput = '';
-  var HTMLarrayValues = '';
-  var arrayFields = vars.existing;
-  var arrayOfOptions = vars.options;
-  var type = vars.attrType;
-
-  HTMLoutput += '<form action="#" method="post" class="demoForm">'
-  + '<fieldset>'
-    + '<legend>Array List</legend>'
-    + '<div id="outerDiv">'
-      + '<div id="appendTo"></div>'
-    + '</div>';
-
-  // showing all the items in the arrayFields array (none if the array is preset as empty)
-  for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-  // (arrayKey: 0, 1, 2)
-  // (arrayValue: peter, james, john)
-  HTMLarrayValues +=    '<div class="row"><div class="col-6">'+arrayValue+'</div><div class="col-1"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
-
-  // counts up the indices if there's any preset values in the array (uncommon)
-  i++;
-  }
-
-  // creating the select tag
-  HTMLoutput +=      '<br><select id="scripts" name="scripts">';
-
-  // creating all the options from the arrayOfOptions array in the select tag
-  for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
-  HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
-  }
-
-  // closing the form tags and creating the add button
-  HTMLoutput +=       '</select>'
-        + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
-    + '</fieldset>'
-  + '</form>';
-
-  $('#arraySpot').append(HTMLoutput);
-  $('#appendTo').append(HTMLarrayValues);
-
-  return HTMLoutput;
-}
-
-var variables = {
-  options : arrayOfOptions,
-  existing : arrayFields,
-  attrType : objType
-};
-
-var functionCall = arrayList(variables);
-
-console.log("This is functionCall: ", functionCall);
 
 
 
