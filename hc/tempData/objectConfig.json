@@ -3,7 +3,7 @@
   "deliverable":{
     "required":["id","name"],
     "list":["id","name","status","tasks"],
-    "editable":["name","description","tasks"] 
+    "editable":[ "id", "name","description","tasks"] 
   },
   "task":{
     "required":["id","name"],
@@ -13,6 +13,6 @@
   "tag":{
     "required":["id","name"],
     "list":["id","name","description"],
-    "editable":["name","description"] 
+    "editable":[ "id", "name","description"] 
   }
 }
