@@ -28,7 +28,7 @@
    "placeholder":"Select a Status",
    "opts":["Not Started","In-Progress","Complete"]
  },
- "due_date":{
+ "dueDate":{
    "type":"timestamp",
    "inpType":"date",
    "placeholder":"What is the Due Date"
