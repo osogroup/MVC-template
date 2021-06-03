@@ -373,8 +373,6 @@ var fillFields =  {
   'option_7': 'Filler Text 7 Filler Text 7' 
 };
 
-
-
 function createObjectList() {
   console.log("Entering createHTML2()...");
   
