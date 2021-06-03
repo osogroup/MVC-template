@@ -119,7 +119,7 @@ function arrayList(vars) {
 
   HTMLoutput += '<div class="col-6">'
                 + '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset>'
+                  + '<fieldset class="minHeight">'
                     + '<legend>Tags</legend>'
                       + '<div id="outerDiv">'
                         + '<div id="appendTo"></div>'
