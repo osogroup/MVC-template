@@ -232,15 +232,18 @@ function selectAttribute(vars) {
   if (!vars) {return alert("vars doesnt exist");}
   var selectHTML = '';
 
-  selectHTML += '<div class="col-6">'
-                + '<select name=optionDisp value="optionDisp>';
+  selectHTML += '<form action="#" method="post" class="demoForm">'
+                + '<fieldset>'
+                  + '<legend>Array List</legend>'
+                  + '<div class="col-6">'
+                    + '<select name=optionDisp value="optionDisp>';
   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
-    selectHTML +=   '<option value="'+varsValue+'">'+varsValue+'</option>';
+    selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
-  selectHTML +=   '</select>'
-              + '</div>'                  
-            + '</fieldset>'
-          + '</form>';
+  selectHTML +=       '</select>'
+                  + '</div>'                  
+                + '</fieldset>'
+              + '</form>';
   $('#optionSpot').append(selectHTML);
 }
 
