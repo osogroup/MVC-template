@@ -165,7 +165,7 @@ function anyChange(str) {
   localStorage.setItem(superKey, backToString);
 }
 
-var statusOptions = {};
+var statusOptions = [];
 
 const doTheStringify = async () => {
 
