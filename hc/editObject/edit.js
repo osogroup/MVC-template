@@ -272,11 +272,12 @@ const doTheStringify = async () => {
           // console.log("This is stuffValue: ", stuffValue); // (true, string, text)
           if (stuffKey == "inpType") {
             // console.log("This is the stuffValue of stuffKey", stuffValue); // (text, textarea, text, array, date, number)
-            var params = {
+            var parameters = {
               sVal : stuffValue,  // text, textarea, array, ...
-              hVal : headerValue  // 1 (id value), COI: Static Site HTML Structure (name value), ...
+              hKey : headerKey, // id, name, description, ...
+              hVal : headerValue  // 1, COI: Static Site HTML Structure, ...
             };
-            HTMLoutput += inputFunction(params);
+            HTMLoutput += inputFunction(parameters);
           }
         }
         
@@ -337,8 +338,12 @@ const doTheStringify = async () => {
 function inputFunction(params) {
   console.log("Entering inputFunction()...");
   if (params.sVal == "text") {
+    newParams = {
+      newHKey : params.hKey,
+      newHVal : params.hVal
+    };
     console.log("params.sVal == 'text'");
-    return textAttribute(params.hVal);
+    return textAttribute(newParams);
   }
   if (params.sVal == "textarea") {
     console.log("params.sVal == 'textarea'");
@@ -374,7 +379,8 @@ function textAttribute(text) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Text</legend>'
-                    + '<input type="text" class="textInput" name="" value="'+text+'">'
+                    + '<input type="text" class="col-12 textInput" name="" value="'+text.newHVal+'" placeholder="'+text.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
+                    // + '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
