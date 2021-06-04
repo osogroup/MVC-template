@@ -416,9 +416,6 @@ function textareaAttribute(textarea) {
 // ------------------------------------------------ Select Attr ------------------------------------------------
 
 
-// needs to be passed newHKey, newHVal and the options which are found in task.json => status.opts
-// data from task.json can be grabbed from the async function taskData() and put into a variable 
-// to be passed through
 function selectAttribute(options) {
   var selectHTML = '';
 
