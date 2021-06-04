@@ -416,6 +416,11 @@ function textareaAttribute(textarea) {
 
 function selectAttribute(options) {
   var selectHTML = '';
+  var superKey = objType+ '_' +objItemid;
+  var myString = localStorage.getItem(superKey);
+  console.log("This is myString", myString);
+  var myObject = JSON.parse(myString);
+  console.log("This is myObject: ", myObject);
 
   selectHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
@@ -424,6 +429,7 @@ function selectAttribute(options) {
                     + '<select id="input'+options.newHKey+'" name="'+options.newHKey+'" value="optionDisp" onchange="selectedOption(this.name)">';
 
   for (const [varsKey, varsValue] of Object.entries(statusOptions[0])) {
+
     selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
   selectHTML +=       '</select>'
