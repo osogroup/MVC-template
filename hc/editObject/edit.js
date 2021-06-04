@@ -484,13 +484,13 @@ selectHTML +=         '</select>'
 // ----------------------------------------------- Calendar Attr -----------------------------------------------
 
 
-function calendarAttribute() {
+function calendarAttribute(date) {
   var calendarHTML = '';
 
   calendarHTML += '<div class="col-4">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
-                      + '<legend>Due Date</legend>'
+                      + '<legend>'+date.newHKey+'</legend>'
                       + '<input type="date" id="calInput" name="">'
                     + '</fieldset>'
                   + '</form>'
