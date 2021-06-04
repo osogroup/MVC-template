@@ -444,6 +444,8 @@ selectHTML +=         '</select>'
 
 function numberAttribute(num) {
   var numberHTML = '';
+  console.log("This is num.newHKey: ", num.newHKey);
+  console.log("This is num.newHVal: ", num.newHVal);
 
   numberHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
@@ -463,8 +465,6 @@ function numberAttribute(num) {
 
 function calendarAttribute(date) {
   var calendarHTML = '';
-  console.log("This is date.newHKey: ", date.newHKey);
-  console.log("This is date.newHVal: ", date.newHVal);
 
   calendarHTML += '<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
