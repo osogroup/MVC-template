@@ -165,6 +165,7 @@ function anyChange(str) {
   localStorage.setItem(superKey, backToString);
 }
 
+var statusOptions = [];
 
 const doTheStringify = async () => {
 
@@ -270,6 +271,10 @@ const doTheStringify = async () => {
         for (const [stuffKey, stuffValue] of Object.entries(taskHeader)) {
           // console.log("This is stuffKey: ", stuffKey); // (required, type, inpType)
           // console.log("This is stuffValue: ", stuffValue); // (true, string, text)
+          if (stuffKey == 'opts') {
+            statusOptions.push(stuffValue);
+            console.log("This is statusOptions: ", statusOptions);
+          }
           if (stuffKey == "inpType") {
             // console.log("This is the stuffValue of stuffKey", stuffValue); // (text, textarea, text, array, date, number)
             var parameters = {
@@ -421,6 +426,8 @@ function textareaAttribute(textarea) {
 
 
 // needs to be passed newHKey, newHVal and the options which are found in task.json => status.opts
+// data from task.json can be grabbed from the async function taskData() and put into a variable 
+// to be passed through
 function selectAttribute(options) {
   var selectHTML = '';
 
