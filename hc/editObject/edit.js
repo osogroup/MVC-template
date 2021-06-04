@@ -421,7 +421,7 @@ function selectAttribute(options) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+options.newHKey+'</legend>'
-                    + '<select id="input'+options.newHKey+'" name="optionDisp" value="optionDisp" placeholder="'+options.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
+                    + '<select id="input'+options.newHKey+'" name="optionDisp" value="optionDisp" selected="'+options.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
 
   for (const [varsKey, varsValue] of Object.entries(statusOptions[0])) {
     selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
@@ -431,6 +431,8 @@ function selectAttribute(options) {
                 + '</form>'
               + '</div>';
 
+  var selected = $('#inputdueDate option:selected').text;
+  console.log("This is selected: ", selected);
   return selectHTML;
 }
 
