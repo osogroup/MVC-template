@@ -491,7 +491,7 @@ function calendarAttribute(date) {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+date.newHKey+'</legend>'
-                      + '<input type="date" id="input'+date.newHKey+'" value="2021-05-15" name="">'
+                      + '<input type="date" id="input'+date.newHKey+'" value="'+date.newHVal+'" oninput="anyChange(this.placeholder)" onchange="showData()" name="">'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
