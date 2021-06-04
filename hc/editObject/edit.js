@@ -20,6 +20,8 @@ const typeData = async () => {
   return typeVars;
 }
 
+var i = 0;
+
 // function to create editObject HTML
 const outputHTML = async () => {
   console.log("Entering outputHTML()");
@@ -336,11 +338,11 @@ function addFunction(variable) {
   arrayFields.push(elementVal);
   
   // adding a new row and columns to the HTML
-  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn'+variable.count+'" value="-" onclick="removeFunction('+i+')"></div></div>';
+  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
   $('#appendTo').append(HTMLelement);
 
   // adjusting indices
-  return variable.count++;
+  i++;
 }
 
 
