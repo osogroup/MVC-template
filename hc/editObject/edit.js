@@ -616,7 +616,6 @@ function arrayList(array) {
               + '</div>';
 
   $('#arraySpot').append(HTMLoutput);
-  $('#appendTo').append(HTMLarrayValues);
 
   return HTMLoutput;
 }
