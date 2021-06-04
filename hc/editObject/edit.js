@@ -332,42 +332,6 @@ const doTheStringify = async () => {
 
 
 
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GOD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-function inputFunction(params) {
-  console.log("Entering inputFunction()...");
-  if (params.sVal == "text") {
-    newParams = {
-      newHKey : params.hKey,
-      newHVal : params.hVal
-    };
-    console.log("params.sVal == 'text'");
-    return textAttribute(newParams);
-  }
-  if (params.sVal == "textarea") {
-    console.log("params.sVal == 'textarea'");
-    textareaAttribute();
-  }
-  if (params.sVal == "number") {
-    console.log("params.sVal == 'number'");
-    numberAttribute(10);
-  }
-  if (params.sVal == "date") {
-    console.log("params.sVal == 'date'");
-    calendarAttribute();
-  }
-  if (params.sVal == "array") {
-    console.log("params.sVal == 'array'");
-    arrayList(variables);
-  }
-  if (params.sVal == "option") {
-    console.log("params.sVal == 'option'");
-    selectAttribute(optionVariables);
-  }
-  console.log("Exiting inputFunction()...");
-}
-
 
 // ----------------------------------------------- Text Attribute -----------------------------------------------
 
@@ -559,3 +523,46 @@ var variables = {
 };
 
 arrayList(variables);
+
+
+
+
+
+
+
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GOD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+function inputFunction(params) {
+  console.log("Entering inputFunction()...");
+  if (params.sVal == "text") {
+    newParams = {
+      newHKey : params.hKey,
+      newHVal : params.hVal
+    };
+    console.log("params.sVal == 'text'");
+    return textAttribute(newParams);
+  }
+  if (params.sVal == "textarea") {
+    console.log("params.sVal == 'textarea'");
+    textareaAttribute();
+  }
+  if (params.sVal == "number") {
+    console.log("params.sVal == 'number'");
+    numberAttribute(10);
+  }
+  if (params.sVal == "date") {
+    console.log("params.sVal == 'date'");
+    calendarAttribute();
+  }
+  if (params.sVal == "array") {
+    console.log("params.sVal == 'array'");
+    arrayList(variables);
+  }
+  if (params.sVal == "option") {
+    console.log("params.sVal == 'option'");
+    selectAttribute(optionVariables);
+  }
+  console.log("Exiting inputFunction()...");
+}
