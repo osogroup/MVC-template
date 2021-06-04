@@ -156,6 +156,7 @@ function anyChange(str) {
 }
 
 var statusOptions = [];
+var tagOptions = [];
 
 const doTheStringify = async () => {
 
@@ -176,17 +177,17 @@ const doTheStringify = async () => {
     
 
     // Something that gets the values from the array in task => tags so I'll know which tags.name to include
-    for (const [tagKey, tagValue] of Object.entries(tagData[0][1])) {
-      // console.log("This is tagKey: ", tagKey); // (0, 1, 2)
-      // console.log("This is tagValue: ", tagValue); // (object 0, object 1, object 2)
-      for (const [innerKey, innerValue] of Object.entries(tagValue)) {
-        console.log("This is innerKey: ", innerKey); 
-        console.log("This is innerValue: ", innerValue);
-        if (innerKey == 'name') {
-          arrayOfOptions.push(innerValue);
-        }
-      }
-    }
+    // for (const [tagKey, tagValue] of Object.entries(tagData[0][1])) {
+    //   // console.log("This is tagKey: ", tagKey); // (0, 1, 2)
+    //   // console.log("This is tagValue: ", tagValue); // (object 0, object 1, object 2)
+    //   for (const [innerKey, innerValue] of Object.entries(tagValue)) {
+    //     console.log("This is innerKey: ", innerKey); 
+    //     console.log("This is innerValue: ", innerValue);
+    //     if (innerKey == 'name') {
+    //       arrayOfOptions.push(innerValue);
+    //     }
+    //   }
+    // }
 
 
 
@@ -279,6 +280,12 @@ const doTheStringify = async () => {
           if (headerKey == 'status' && stuffKey == 'opts') {
             statusOptions.push(stuffValue);
             // console.log("This is statusOptions: ", statusOptions);
+          }
+          if (headerKey == 'tags') {
+            for (const [tagKey, tagValue] of Object.entries(headerKey.tags)) {
+              console.log("This is the tagKey: ", tagKey);
+              console.log("This is the tagValue: ", tagValue);
+            }
           }
         }
 
