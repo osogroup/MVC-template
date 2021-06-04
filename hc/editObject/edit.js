@@ -178,6 +178,8 @@ const doTheStringify = async () => {
       // console.log("This is tagKey: ", tagKey); // (0, 1, 2)
       // console.log("This is tagValue: ", tagValue); // (object 0, object 1, object 2)
       for (const [innerKey, innerValue] of Object.entries(tagValue)) {
+        console.log("This is tagKey: ", tagKey); 
+        console.log("This is tagValue: ", tagValue);
         if (innerKey == 'name') {
           arrayOfOptions.push(innerValue);
         }
