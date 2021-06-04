@@ -421,7 +421,7 @@ function selectAttribute(options) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+options.newHKey+'</legend>'
-                    + '<select id="input'+options.newHKey+'" name="optionDisp" value="optionDisp" onchange="selectedOption()">';
+                    + '<select id="input'+options.newHKey+'" name="optionDisp" value="optionDisp" onchange="selectedOption('+options.newHKey+')">';
 
   for (const [varsKey, varsValue] of Object.entries(statusOptions[0])) {
     selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
@@ -435,7 +435,8 @@ function selectAttribute(options) {
   return selectHTML;
 }
 
-function selectedOption() {
+function selectedOption(str) {
+  console.log("This is str: ", str);
   var selected = $('#inputstatus').find(':selected').text();
   console.log("This is selected: ", selected);
 
@@ -446,8 +447,8 @@ function selectedOption() {
   console.log("This is myObject: ", myObject);
   var change = selected;
   var changeValue = change.value;
-  myObject[options.newHKey] = changeValue;
-  console.log("this is myObject[options.newHKey]", myObject[options.newHKey]);
+  myObject[str] = changeValue;
+  console.log("this is myObject[options.newHKey]", myObject[str]);
   backToString = JSON.stringify(myObject);
   console.log("This is backToString ", backToString);
   localStorage.setItem(superKey, backToString);
