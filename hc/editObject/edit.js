@@ -421,6 +421,8 @@ function selectAttribute(options) {
   console.log("This is myString...", myString);
   var myObject = JSON.parse(myString);
   console.log("This is myObject... ", myObject);
+  var myObjectStatus = myObject[options.newHKey];
+  console.log("This is myObjectStatus...", myObjectStatus);
 
   selectHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
