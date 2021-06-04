@@ -618,11 +618,9 @@ function arrayList(array) {
   return HTMLoutput;
 }
   
-var arrayFields = [ 'Ron', 'John', 'James' ];
+var arrayFields = [];
 
-var arrayOfOptions = [ 
-  'Test Option' 
-];
+var arrayOfOptions = [];
 
 var variables = {
   options : arrayOfOptions,
