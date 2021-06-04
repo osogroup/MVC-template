@@ -447,21 +447,13 @@ function selectAttribute(options) {
 }
 
 function selectedOption(str) {
-  console.log("This is str: ", str);
   var selected = $('#inputstatus').find(':selected').text();
-  console.log("This is selected: ", selected);
-
   var superKey = objType+ '_' +objItemid;
   var myString = localStorage.getItem(superKey);
-  console.log("This is myString", myString);
   var myObject = JSON.parse(myString);
-  console.log("This is myObject: ", myObject);
   var change = selected;
-  console.log("This is change: ", change);
   myObject[str] = change;
-  console.log("this is myObject[str]", myObject[str]);
   backToString = JSON.stringify(myObject);
-  console.log("This is backToString ", backToString);
   localStorage.setItem(superKey, backToString);
 }
 
@@ -496,12 +488,16 @@ function calendarAttribute(date) {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+date.newHKey+'</legend>'
-                      + '<input type="date" id="input'+date.newHKey+'" value="'+date.newHVal+'" placeholder="'+date.newHKey+'" oninput="anyChange(this.value)" onchange="showData()" name="">'
+                      + '<input type="date" id="input'+date.newHKey+'" value="'+date.newHVal+'" name="'+date.newHKey+'" onchange="newDate(this.name)">'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
 
   return calendarHTML;
+}
+
+function newDate(date) {
+  console.log("This is date: ", date);
 }
 
 
