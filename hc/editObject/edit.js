@@ -172,15 +172,15 @@ const doTheStringify = async () => {
     console.log("This is typeStuff: ", typeStuff);
 
     // filling arrayOfOptions[]
-  var tagData = data.tags;
-  console.log("This is tagData: ", tagData);
-  var nameTagData = tagData.name;
-  console.log("This is nameTagData: ", nameTagData);
-  for (const [tagKey, tagValue] of Object.entries(tagData)) {
-    if (tagKey == 'name') {
-      arrayOfOptions.push(tagValue);
+    var tagData = data.tags;
+    console.log("This is tagData: ", tagData);
+    var nameTagData = tagData.name;
+    console.log("This is nameTagData: ", nameTagData);
+    for (const [tagKey, tagValue] of Object.entries(tagData)) {
+      if (tagKey == 'name') {
+        arrayOfOptions.push(tagValue);
+      }
     }
-  }
 
 
 
@@ -196,10 +196,10 @@ const doTheStringify = async () => {
     for(const [headerKey, headerValue] of Object.entries(data)) {
       HTMLoutput += '<a class="headerLinks" href="../listObjects/?type='+headerKey+'">'+headerKey.toUpperCase()+'</a>';
     }
-    
+  
     // closing header row
     HTMLoutput += '</p>';
-  
+
     // H1 header to let the user know which object they're editing
     HTMLoutput += '<h1>Edit '+objType+' Item</h1>'
               + '</div>';
@@ -244,7 +244,7 @@ const doTheStringify = async () => {
       }
 
 
-    // --------------------------------------- Item Header and Inputs ---------------------------------------
+      // --------------------------------------- Item Header and Inputs ---------------------------------------
 
       
     }
