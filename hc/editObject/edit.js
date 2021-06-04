@@ -351,7 +351,7 @@ function inputFunction(params) {
   }
   if (params.sVal == "number") {
     console.log("params.sVal == 'number'");
-    numberAttribute(10);
+    numberAttribute();
   }
   if (params.sVal == "date") {
     console.log("params.sVal == 'date'");
@@ -359,7 +359,7 @@ function inputFunction(params) {
   }
   if (params.sVal == "array") {
     console.log("params.sVal == 'array'");
-    arrayList(variables);
+    arrayList();
   }
   if (params.sVal == "option") {
     console.log("params.sVal == 'option'");
@@ -558,4 +558,4 @@ var variables = {
   attrType : objType
 };
 
-arrayList(variables);
+// arrayList(variables);
