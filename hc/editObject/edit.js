@@ -487,7 +487,7 @@ selectHTML +=         '</select>'
 function calendarAttribute(date) {
   var calendarHTML = '';
 
-  calendarHTML += '<div class="col-4">'
+  calendarHTML += '<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+date.newHKey+'</legend>'
