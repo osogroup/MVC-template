@@ -447,7 +447,7 @@ function selectedOption() {
   var change = selected;
   var changeValue = change.value;
   myObject[options.newHKey] = changeValue;
-  console.log("this is myObject[str]", myObject[str]);
+  console.log("this is myObject[options.newHKey]", myObject[options.newHKey]);
   backToString = JSON.stringify(myObject);
   console.log("This is backToString ", backToString);
   localStorage.setItem(superKey, backToString);
