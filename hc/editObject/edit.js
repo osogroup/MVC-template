@@ -329,18 +329,18 @@ function addFunction(variable) {
 
 
 function addFunction(variable) {
-  var select = document.getElementById(variable);  
+  var select = document.getElementById(variable.id);  
 
   // access text property of selected option
   elementVal = select.options[select.selectedIndex].text;
   arrayFields.push(elementVal);
   
   // adding a new row and columns to the HTML
-  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
+  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn'+variable.count+'" value="-" onclick="removeFunction('+i+')"></div></div>';
   $('#appendTo').append(HTMLelement);
 
   // adjusting indices
-  i++;
+  return variable.count++;
 }
 
 
@@ -604,8 +604,12 @@ function arrayList(array) {
   }
 
   // closing the form tags and creating the add button
+  var inputVals = {
+    count : i,
+    id: "scripts"
+  };
   HTMLoutput +=       '</select>'
-                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scripts\')"/>'
+                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction('+inputVals+')"/>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
