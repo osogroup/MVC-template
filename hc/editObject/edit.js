@@ -442,7 +442,6 @@ function selectAttribute(options) {
                 + '</form>'
               + '</div>';
 
-  console.log("status is now ", myObjectStatus);
   return selectHTML;
 }
 
@@ -455,6 +454,8 @@ function selectedOption(str) {
   myObject[str] = change;
   backToString = JSON.stringify(myObject);
   localStorage.setItem(superKey, backToString);
+  console.log("status is now ", change);
+  
 }
 
 
