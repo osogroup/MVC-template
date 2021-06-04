@@ -404,7 +404,7 @@ function textareaAttribute(textarea) {
   textareaHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>'+textarea+'</legend>'
+                    + '<legend>'+textarea.newHKey+'</legend>'
                     + '<textarea class="textareaInput" rows="2" cols="30"></textarea>'
      // + '<input type="textarea" class="col-12" id="input'+headerKey+'" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
 
