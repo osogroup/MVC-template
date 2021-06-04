@@ -15,19 +15,9 @@ const tempData = async () => {
   return objVars;
 }
 
-const taskData = async () => {
-  var taskVars = await fetch("../tempData/task.json").then(response=>{return response.json();});
-  return taskVars;
-}
-
-const tagData = async () => {
-  var tagVars = await fetch("../tempData/tag.json").then(response=>{return response.json();});
-  return tagVars;
-}
-
-const deliverableData = async () => {
-  var deliverableVars = await fetch("../tempData/deliverable.json").then(response=>{return response.json();});
-  return deliverableVars;
+const typeData = async () => {
+  var typeVars = await fetch("../tempData/"+objType+".json").then(response=>{return response.json();});
+  return typeVars;
 }
 
 // function to create editObject HTML
@@ -35,9 +25,7 @@ const outputHTML = async () => {
   console.log("Entering outputHTML()");
   var data = await tempData();
   var config = await configData();
-  var taskStuff = await taskData();
-  var tagStuff = await tagData();
-  var deliverableStuff = await deliverableData();
+  var typeStuff = await typeData();
   var inputBoxes = '';
   var configTypeData = config[objType];
   var objTypeData = data[objType];
@@ -176,12 +164,10 @@ const doTheStringify = async () => {
   else {
     var data = await tempData();
     var config = await configData();
-    var taskStuff = await taskData();
-    var tagStuff = await tagData();
-    var deliverableStuff = await deliverableData();
+    var typeStuff = await typeData();
     var objTypeData = data[objType];
     var configTypeData = config[objType];
-    // console.log("This is taskStuff: ", taskStuff);
+    console.log("This is typeStuff: ", typeStuff);
 
 
 
@@ -267,17 +253,17 @@ const doTheStringify = async () => {
         // ######################################################################################################################
 
 
-        var taskHeader = taskStuff[headerKey];
+        var typeHeader = typeStuff[headerKey];
         
         // filling up the statusOptions array before calling selectAttribute()
-        for (const [stuffKey, stuffValue] of Object.entries(taskHeader)) {
+        for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
           if (headerKey == 'status' && stuffKey == 'opts') {
             statusOptions.push(stuffValue);
             // console.log("This is statusOptions: ", statusOptions);
           }
         }
 
-        for (const [stuffKey, stuffValue] of Object.entries(taskHeader)) {
+        for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
           // console.log("This is stuffKey: ", stuffKey); // (required, type, inpType)
           // console.log("This is stuffValue: ", stuffValue); // (true, string, text)
           if (stuffKey == "inpType") {
