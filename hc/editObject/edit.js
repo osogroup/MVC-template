@@ -378,7 +378,7 @@ function textAttribute(text) {
   textHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>Text</legend>'
+                    + '<legend>'+text.newHKey+'</legend>'
                     + '<input type="text" class="col-12 textInput" name="" value="'+text.newHVal+'" placeholder="'+text.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
                     // + '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
                   + '</fieldset>'
