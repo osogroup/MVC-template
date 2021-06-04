@@ -351,23 +351,23 @@ function inputFunction(params) {
       newHKey : params.hKey,
       newHVal : params.hVal
     }
-    textareaAttribute(newParams);
+    return textareaAttribute(newParams);
   }
   if (params.sVal == "number") {
     console.log("params.sVal == 'number'");
-    // numberAttribute();
+    // return numberAttribute();
   }
   if (params.sVal == "date") {
     console.log("params.sVal == 'date'");
-    // calendarAttribute();
+    // return calendarAttribute();
   }
   if (params.sVal == "array") {
     console.log("params.sVal == 'array'");
-    // arrayList();
+    // return arrayList();
   }
   if (params.sVal == "option") {
     console.log("params.sVal == 'option'");
-    // selectAttribute();
+    // return selectAttribute();
   }
   console.log("Exiting inputFunction()...");
 }
