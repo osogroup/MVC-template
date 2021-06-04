@@ -428,10 +428,25 @@ function selectAttribute(options) {
   for (const [varsKey, varsValue] of Object.entries(statusOptions[0])) {
     selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
-selectHTML +=         '</select>'
+  selectHTML +=       '</select>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
+
+  const selectElement = document.getElementById('inputdueDate');
+
+  selectElement.addEventListener('change', (event) => {
+    var superKey = objType+ '_' +objItemid;
+    var myString = localStorage.getItem(superKey);
+    var myObject = JSON.parse(myString);
+    console.log("This is myObject: ", myObject);
+    var change = selectElement;
+    var changeValue = change.value;
+    myObject[options.newHKey] = changeValue;
+    backToString = JSON.stringify(myObject);
+    localStorage.setItem(superKey, backToString);
+  }
+
   return selectHTML;
 }
 
