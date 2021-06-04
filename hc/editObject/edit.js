@@ -373,7 +373,7 @@ function inputFunction(params) {
       newHVal : params.hVal
     };
     console.log("params.sVal == 'date'");
-    return calendarAttribute();
+    return calendarAttribute(newParams);
   }
   if (params.sVal == "array") {
     var newParams = {
