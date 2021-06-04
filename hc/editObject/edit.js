@@ -463,6 +463,8 @@ function numberAttribute(num) {
 
 function calendarAttribute(date) {
   var calendarHTML = '';
+  console.log("This is date.newHKey: ", date.newHKey);
+  console.log("This is date.newHVal: ", date.newHVal);
 
   calendarHTML += '<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
