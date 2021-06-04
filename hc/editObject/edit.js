@@ -407,7 +407,6 @@ function textareaAttribute(textarea) {
                     + '<legend>'+textarea.newHKey+'</legend>'
                     + '<textarea class="textareaInput" id="input'+textarea.newHKey+'" value="'+textarea.newHVal+'" placeholder="'+textarea.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()" rows="2" cols="30"></textarea>'
      // + '<input type="textarea" class="col-12" id="input'+headerKey+'" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
-
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
