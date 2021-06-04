@@ -496,7 +496,7 @@ function calendarAttribute(date) {
                   + '</form>'
                 + '</div>';
 
-  $('#calendarSpot').append(calendarHTML);
+  return calendarHTML;
 }
 
 
