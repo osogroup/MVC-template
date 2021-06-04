@@ -371,8 +371,12 @@ function inputFunction(params) {
     // return calendarAttribute();
   }
   if (params.sVal == "array") {
+    var newParams = {
+      newHKey : params.hKey,
+      newHVal : params.hVal
+    };
     console.log("params.sVal == 'array'");
-    // return arrayList();
+    return arrayList(newParams);
   }
   if (params.sVal == "option") {
     var newParams = {
@@ -498,13 +502,13 @@ selectHTML +=         '</select>'
 // ------------------------------------------------- Array List -------------------------------------------------
 
 
-function arrayList(vars) {
+function arrayList(array) {
   var i = 0;
-  if (!vars.existing || !vars.options || !vars.attrType){
-    alert("vars has an empty array");
-    return;
-  }
-  console.log("This is the input for arrayList(vars): ", vars);
+  // if (!vars.existing || !vars.options || !vars.attrType){
+  //   alert("vars has an empty array");
+  //   return;
+  // }
+  console.log("This is the input for arrayList(array): ", array);
 
   var HTMLoutput = '';
   var HTMLarrayValues = '';
