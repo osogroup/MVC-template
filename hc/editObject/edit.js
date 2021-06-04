@@ -498,54 +498,56 @@ selectHTML +=         '</select>'
 // ------------------------------------------------- Array List -------------------------------------------------
 
 
-// function arrayList(vars) {
-//   var i = 0;
-//   if (!vars.existing || !vars.options || !vars.attrType){
-//     alert("vars has an empty array");
-//     return;
-//   }
-//   console.log("This is the input for arrayList(vars): ", vars);
+function arrayList(vars) {
+  var i = 0;
+  if (!vars.existing || !vars.options || !vars.attrType){
+    alert("vars has an empty array");
+    return;
+  }
+  console.log("This is the input for arrayList(vars): ", vars);
 
-//   var HTMLoutput = '';
-//   var HTMLarrayValues = '';
-//   var arrayFields = vars.existing;
-//   var arrayOfOptions = vars.options;
-//   var type = vars.attrType;
+  var HTMLoutput = '';
+  var HTMLarrayValues = '';
+  var arrayFields = vars.existing;
+  var arrayOfOptions = vars.options;
+  var type = vars.attrType;
 
-//   HTMLoutput += '<div class="col-6">'
-//                 + '<form action="#" method="post" class="demoForm">'
-//                   + '<fieldset class="minHeight">'
-//                     + '<legend>Tags</legend>'
-//                       + '<div id="outerDiv">'
-//                         + '<div id="appendTo"></div>'
-//                       + '</div>';
+  HTMLoutput += '<div class="col-6">'
+                + '<form action="#" method="post" class="demoForm">'
+                  + '<fieldset class="minHeight">'
+                    + '<legend>Tags</legend>'
+                      + '<div id="outerDiv">'
+                        + '<div id="appendTo"></div>'
+                      + '</div>';
 
-//   // showing all the items in the arrayFields array (none if the array is preset as empty)
-//   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-//   HTMLarrayValues +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
+  // showing all the items in the arrayFields array (none if the array is preset as empty)
+  for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
+  HTMLoutput +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
 
-//   // counts up the indices if there's any preset values in the array (uncommon)
-//   i++;
-//   }
+  // counts up the indices if there's any preset values in the array (uncommon)
+  i++;
+  }
 
-//   // creating the select tag
-//   HTMLoutput +=      '<br><select id="scripts" name="scripts">';
+  // creating the select tag
+  HTMLoutput +=      '<br><select id="scripts" name="scripts">';
 
-//   // creating all the options from the arrayOfOptions array in the select tag
-//   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
-//   HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
-//   }
+  // creating all the options from the arrayOfOptions array in the select tag
+  for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
+  HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
+  }
 
-//   // closing the form tags and creating the add button
-//   HTMLoutput +=       '</select>'
-//                     + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scripts\')"/>'
-//                   + '</fieldset>'
-//                 + '</form>'
-//               + '</div>';
+  // closing the form tags and creating the add button
+  HTMLoutput +=       '</select>'
+                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scripts\')"/>'
+                  + '</fieldset>'
+                + '</form>'
+              + '</div>';
 
-//   $('#arraySpot').append(HTMLoutput);
-//   $('#appendTo').append(HTMLarrayValues);
-// }
+  // $('#arraySpot').append(HTMLoutput);
+  // $('#appendTo').append(HTMLarrayValues);
+
+  return HTMLoutput;
+}
   
 // var arrayFields = [ 'Ron', 'John', 'James' ];
 
@@ -567,4 +569,3 @@ selectHTML +=         '</select>'
 //   attrType : objType
 // };
 
-// arrayList(variables);
