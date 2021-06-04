@@ -583,15 +583,13 @@ function arrayList(array) {
   var HTMLoutput = '';
   var HTMLarrayValues = '';
 
-  HTMLoutput1 += '<div class="col-12">'
+  HTMLoutput += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Tags</legend>'
                       + '<div id="outerDiv">'
                         + '<div id="appendTo"></div>'
                       + '</div>';
-
-  $('#arraySpot').append(HTMLoutput1);
 
   // showing all the items in the arrayFields array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
@@ -600,8 +598,7 @@ function arrayList(array) {
   // counts up the indices if there's any preset values in the array (uncommon)
   i++;
   }
-
-  $('#appendTo').append(HTMLarrayValues);
+  HTMLoutput = HTMLoutput+HTMLarrayValues;
   console.log("This is HTMLoutput: ", HTMLoutput);
 
   // creating the select tag
@@ -620,7 +617,7 @@ function arrayList(array) {
                 + '</form>'
               + '</div>';
 
-  $('#arraySpot').append(HTMLoutput);
+  // $('#arraySpot').append(HTMLoutput);
 
   return HTMLoutput;
 }
