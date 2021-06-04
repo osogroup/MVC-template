@@ -271,7 +271,7 @@ const doTheStringify = async () => {
         // filling up the statusOptions array before calling selectAttribute()
         for (const [stuffKey, stuffValue] of Object.entries(taskHeader)) {
           if (stuffKey == 'opts') {
-            statusOptions.push({stuffKey, stuffValue});
+            statusOptions.push(stuffValue);
             console.log("This is statusOptions: ", statusOptions);
           }
         }
