@@ -19,7 +19,7 @@
  },
  "status":{
    "type":"string",
-   "inpType":"select",
+   "inpType":"option",
    "placeholder":"Select a Status",
    "opts":["Not Started","In-Progress","Complete"]
  },
