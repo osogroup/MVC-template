@@ -273,9 +273,8 @@ const doTheStringify = async () => {
           if (stuffKey == "inpType") {
             // console.log("This is the stuffValue of stuffKey", stuffValue); // (text, textarea, text, array, date, number)
             var params = {
-              sKey : stuffKey,
-              sVal : stuffValue,
-              hVal : headerValue
+              sVal : stuffValue,  // text, textarea, array, ...
+              hVal : headerValue  // 1 (id value), COI: Static Site HTML Structure (name value), ...
             };
             HTMLoutput += inputFunction(params);
           }
@@ -339,7 +338,7 @@ function inputFunction(params) {
   console.log("Entering inputFunction()...");
   if (params.sVal == "text") {
     console.log("params.sVal == 'text'");
-    return textAttribute(params.sVal);
+    return textAttribute(params.hVal);
   }
   if (params.sVal == "textarea") {
     console.log("params.sVal == 'textarea'");
