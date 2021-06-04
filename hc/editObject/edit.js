@@ -255,7 +255,7 @@ const doTheStringify = async () => {
     // create HTML header and fields
     for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
       // console.log("This is headerKey", headerKey); // id, name
-      // console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
+      console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure
       HTMLoutput += '<div class="col-4 minHeight">'
                     + '<div class="col-12">'+headerKey+'</div>';
       if (configTypeData.editable.includes(headerKey) == true)
