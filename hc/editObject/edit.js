@@ -361,7 +361,7 @@ function removeFunction(val) {
   var element = document.querySelector('#remvBtn'+val);
 
   // deleting the entire div containing the arrayField values
-  element.parentNode.parentNode.remove(element.parentNode.parentNode);
+  element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
   for (const [elementKey, elementValue] of Object.entries(arrayFields)) {
     HTMLelement += '<div class="row"><div class="col-10">'+elementValue+'</div><div class="col-2"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeFunction('+elementKey+')"></div></div>';
   }
