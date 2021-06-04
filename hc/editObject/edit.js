@@ -165,7 +165,7 @@ function anyChange(str) {
   localStorage.setItem(superKey, backToString);
 }
 
-var statusOptions = [];
+var statusOptions = {};
 
 const doTheStringify = async () => {
 
@@ -441,7 +441,7 @@ function selectAttribute(options) {
                     + '<legend>'+options.newHKey+'</legend>'
                     + '<select name="optionDisp" value="optionDisp">';
 
-  for (const [varsKey, varsValue] of Object.entries(statusOptions[0])) {
+  for (const [varsKey, varsValue] of Object.entries(statusOptions[options.newHKey])) {
     selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
 selectHTML +=         '</select>'
