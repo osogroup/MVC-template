@@ -281,7 +281,7 @@ const doTheStringify = async () => {
           }
         }
         
-        HTMLoutput += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
+        // HTMLoutput += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
       }
       else
       {
@@ -338,7 +338,7 @@ const doTheStringify = async () => {
 function inputFunction(params) {
   console.log("Entering inputFunction()...");
   if (params.sVal == "text") {
-    newParams = {
+    var newParams = {
       newHKey : params.hKey,
       newHVal : params.hVal
     };
@@ -347,7 +347,11 @@ function inputFunction(params) {
   }
   if (params.sVal == "textarea") {
     console.log("params.sVal == 'textarea'");
-    // textareaAttribute();
+    var newParams = {
+      newHKey : params.hKey,
+      newHVal : params.hVal
+    }
+    textareaAttribute(newParams);
   }
   if (params.sVal == "number") {
     console.log("params.sVal == 'number'");
@@ -394,20 +398,20 @@ function textAttribute(text) {
 // --------------------------------------------- Textarea Attribute ---------------------------------------------
 
 
-// function textareaAttribute() {
-//   var textareaHTML = '';
+function textareaAttribute(textarea) {
+  var textareaHTML = '';
 
-//   textareaHTML += '<div class="col-6">'
-//                 + '<form action="#" method="post" class="demoForm">'
-//                   + '<fieldset class="minHeight">'
-//                     + '<legend>Textarea</legend>'
-//                     + '<textarea class="textareaInput" rows="2" cols="30"></textarea>'
-//                   + '</fieldset>'
-//                 + '</form>'
-//               + '</div>';
+  textareaHTML += '<div class="col-6">'
+                + '<form action="#" method="post" class="demoForm">'
+                  + '<fieldset class="minHeight">'
+                    + '<legend>'+textarea+'</legend>'
+                    + '<textarea class="textareaInput" rows="2" cols="30"></textarea>'
+                  + '</fieldset>'
+                + '</form>'
+              + '</div>';
 
-//   $('#textareaSpot').append(textareaHTML);
-// }
+  return textareaHTML;
+}
 
 // textareaAttribute();
 
