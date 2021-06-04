@@ -483,7 +483,7 @@ function calendarAttribute(date) {
 
 function newDate(date) {
   console.log("This is date: ", date);
-  var selected = $('#inputdueDate').datepicker();
+  var selected = $('#inputdueDate').text();
   console.log("This is selected: ", selected);
   var superKey = objType+ '_' +objItemid;
   var myString = localStorage.getItem(superKey);
