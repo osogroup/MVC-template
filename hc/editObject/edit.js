@@ -174,6 +174,8 @@ const doTheStringify = async () => {
     // filling arrayOfOptions[]
   var tagData = data.tags;
   console.log("This is tagData: ", tagData);
+  var nameTagData = tagData.name;
+  console.log("This is nameTagData: ", nameTagData);
   for (const [tagKey, tagValue] of Object.entries(tagData)) {
     if (tagKey == 'name') {
       arrayOfOptions.push(tagValue);
