@@ -436,7 +436,7 @@ function selectAttribute(options) {
 }
 
 function selectedOption() {
-  var selected = $('#inputdueDate option:selected').text;
+  var selected = $('#inputdueDate').find(':selected').text();
   console.log("This is selected: ", selected);
 }
 
