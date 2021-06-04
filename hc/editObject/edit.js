@@ -579,6 +579,7 @@ function arrayList(array) {
   console.log("This is the input for arrayList(array): ", array);
 
   var HTMLoutput = '';
+  var HTMLarrayValues = '';
 
   HTMLoutput += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
