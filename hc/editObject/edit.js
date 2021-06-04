@@ -172,7 +172,7 @@ const doTheStringify = async () => {
     console.log("This is typeStuff: ", typeStuff);
 
     // filling arrayOfOptions[]
-    var tagData = data[tags];
+    var tagData = data.tags;
     console.log("This is tagData: ", tagData);
     var nameTagData = tagData.name;
     console.log("This is nameTagData: ", nameTagData);
