@@ -435,7 +435,7 @@ function selectAttribute(options) {
 
   const selectElement = document.getElementById('inputdueDate');
 
-  selectElement.addEventListener('change', (event) => {
+  selectElement.addEventListener('change', function() {
     var superKey = objType+ '_' +objItemid;
     var myString = localStorage.getItem(superKey);
     var myObject = JSON.parse(myString);
