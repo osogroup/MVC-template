@@ -609,12 +609,9 @@ function arrayList(array) {
   }
 
   // closing the form tags and creating the add button
-  var inputVals = {
-    count : i,
-    id: "scripts"
-  };
+
   HTMLoutput +=       '</select>'
-                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction('+inputVals+')"/>'
+                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scriptss\')"/>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
