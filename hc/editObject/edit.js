@@ -156,7 +156,6 @@ function anyChange(str) {
 }
 
 var statusOptions = [];
-var tagOptions = [];
 
 const doTheStringify = async () => {
 
@@ -174,7 +173,10 @@ const doTheStringify = async () => {
     // filling arrayOfOptions[]
     var tagData = data.tags;
     console.log("This is tagData: ", tagData);
-    for (const [tagKey, tagValue] of Object.entries(tagData)) {
+    
+
+    // Something that gets the values from the array in task => tags so I'll know which tags.name to include
+    for (const [tagKey, tagValue] of Object.entries(tagData[0][1])) {
       // console.log("This is tagKey: ", tagKey); // (0, 1, 2)
       // console.log("This is tagValue: ", tagValue); // (object 0, object 1, object 2)
       for (const [innerKey, innerValue] of Object.entries(tagValue)) {
