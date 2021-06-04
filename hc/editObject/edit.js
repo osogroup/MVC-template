@@ -270,7 +270,6 @@ const doTheStringify = async () => {
         // making object item an input textbox
 
 
-        // ######################################################################################################################
 
 
         var typeHeader = typeStuff[headerKey];
@@ -281,11 +280,13 @@ const doTheStringify = async () => {
             statusOptions.push(stuffValue);
             // console.log("This is statusOptions: ", statusOptions);
           }
+
+          
+        // ######################################################################################################################
+
+        
           if (headerKey == 'tags') {
-            for (const [tagKey, tagValue] of Object.entries(headerKey[tags])) {
-              console.log("This is the tagKey: ", tagKey);
-              console.log("This is the tagValue: ", tagValue);
-            }
+            
           }
         }
 
