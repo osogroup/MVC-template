@@ -435,7 +435,7 @@ function textareaAttribute(textarea) {
 function selectAttribute(options) {
   var selectHTML = '';
 
-  selectHTML += '<div class="col-4">'
+  selectHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+options.newHKey+'</legend>'
