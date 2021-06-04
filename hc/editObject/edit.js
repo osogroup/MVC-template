@@ -282,7 +282,7 @@ const doTheStringify = async () => {
             // console.log("This is statusOptions: ", statusOptions);
           }
           if (headerKey == 'tags') {
-            for (const [tagKey, tagValue] of Object.entries(headerKey.tags)) {
+            for (const [tagKey, tagValue] of Object.entries(headerKey[tags])) {
               console.log("This is the tagKey: ", tagKey);
               console.log("This is the tagValue: ", tagValue);
             }
