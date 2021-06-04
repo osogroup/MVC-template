@@ -511,10 +511,6 @@ function arrayList(array) {
   console.log("This is the input for arrayList(array): ", array);
 
   var HTMLoutput = '';
-  var HTMLarrayValues = '';
-  var arrayFields = vars.existing;
-  var arrayOfOptions = vars.options;
-  var type = vars.attrType;
 
   HTMLoutput += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
