@@ -441,7 +441,7 @@ function selectAttribute(options) {
                     + '<legend>'+options.newHKey+'</legend>'
                     + '<select name="optionDisp" value="optionDisp">';
 
-  for (const [varsKey, varsValue] of Object.entries(vars.options)) {
+  for (const [varsKey, varsValue] of Object.entries(statusOptions)) {
     selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
 selectHTML +=         '</select>'
