@@ -347,23 +347,23 @@ function inputFunction(params) {
   }
   if (params.sVal == "textarea") {
     console.log("params.sVal == 'textarea'");
-    textareaAttribute();
+    // textareaAttribute();
   }
   if (params.sVal == "number") {
     console.log("params.sVal == 'number'");
-    numberAttribute();
+    // numberAttribute();
   }
   if (params.sVal == "date") {
     console.log("params.sVal == 'date'");
-    calendarAttribute();
+    // calendarAttribute();
   }
   if (params.sVal == "array") {
     console.log("params.sVal == 'array'");
-    arrayList();
+    // arrayList();
   }
   if (params.sVal == "option") {
     console.log("params.sVal == 'option'");
-    selectAttribute();
+    // selectAttribute();
   }
   console.log("Exiting inputFunction()...");
 }
