@@ -401,11 +401,13 @@ function textAttribute(text) {
 function textareaAttribute(textarea) {
   var textareaHTML = '';
 
-  textareaHTML += '<div class="col-6">'
+  textareaHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+textarea+'</legend>'
                     + '<textarea class="textareaInput" rows="2" cols="30"></textarea>'
+     // + '<input type="textarea" class="col-12" id="input'+headerKey+'" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
+
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
