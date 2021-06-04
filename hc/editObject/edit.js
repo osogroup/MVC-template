@@ -273,7 +273,7 @@ const doTheStringify = async () => {
         for (const [stuffKey, stuffValue] of Object.entries(taskHeader)) {
           if (headerKey == 'status' && stuffKey == 'opts') {
             statusOptions.push(stuffValue);
-            console.log("This is statusOptions: ", statusOptions);
+            // console.log("This is statusOptions: ", statusOptions);
           }
         }
 
