@@ -447,9 +447,7 @@ function selectedOption(str) {
   console.log("This is myObject: ", myObject);
   var change = selected;
   console.log("This is change: ", change);
-  var changeValue = change.value;
-  console.log("This is changeValue: ", changeValue);
-  myObject[str] = changeValue;
+  myObject[str] = change;
   console.log("this is myObject[str]", myObject[str]);
   backToString = JSON.stringify(myObject);
   console.log("This is backToString ", backToString);
