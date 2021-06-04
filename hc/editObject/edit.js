@@ -442,7 +442,7 @@ function selectAttribute(options) {
                 + '</form>'
               + '</div>';
 
-
+  console.log("status is now ", myObjectStatus);
   return selectHTML;
 }
 
