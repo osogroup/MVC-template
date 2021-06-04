@@ -327,25 +327,6 @@ function addFunction(variable) {
 }
 
 
-// ------------------------------------------------ Add function ------------------------------------------------
-
-
-function addFunction(variable) {
-  var select = document.getElementById(variable);  
-
-  // access text property of selected option
-  elementVal = select.options[select.selectedIndex].text;
-  arrayFields.push(elementVal);
-  
-  // adding a new row and columns to the HTML
-  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
-  $('#appendTo').append(HTMLelement);
-
-  // adjusting indices
-  i++;
-}
-
-
 // ----------------------------------------------- Remove function -----------------------------------------------
 
 
