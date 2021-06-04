@@ -418,11 +418,8 @@ function selectAttribute(options) {
   var selectHTML = '';
   var superKey = objType+ '_' +objItemid;
   var myString = localStorage.getItem(superKey);
-  console.log("This is myString...", myString);
   var myObject = JSON.parse(myString);
-  console.log("This is myObject... ", myObject);
-  var myObjectStatus = myObject[options.newHKey];
-  console.log("This is myObjectStatus...", myObjectStatus);
+  var myObjectStatus = myObject[options.newHKey]; // in-progress
 
   selectHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
@@ -431,8 +428,12 @@ function selectAttribute(options) {
                     + '<select id="input'+options.newHKey+'" name="'+options.newHKey+'" value="optionDisp" onchange="selectedOption(this.name)">';
 
   for (const [varsKey, varsValue] of Object.entries(statusOptions[0])) {
-
-    selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
+    if (varsValue == myObjectStatus) {
+      selectHTML +=     '<option value="'+varsValue+'" selected>'+varsValue+'</option>';
+    }
+    else {
+      selectHTML +=     '<option value="'+varsValue+'">'+varsValue+'</option>';
+    }
   }
   selectHTML +=       '</select>'
                   + '</fieldset>'
