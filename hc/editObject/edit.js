@@ -588,8 +588,7 @@ function arrayList(array) {
                   + '<fieldset class="minHeight">'
                     + '<legend>Tags</legend>'
                       + '<div id="outerDiv">'
-                        + '<div id="appendTo"></div>'
-                      + '</div>';
+                        + '<div id="appendTo">';
 
   // showing all the items in the arrayFields array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
@@ -602,7 +601,9 @@ function arrayList(array) {
   console.log("This is HTMLoutput: ", HTMLoutput);
 
   // creating the select tag
-  HTMLoutput +=      '<br><select id="scripts" name="scripts">';
+  HTMLoutput +=       '</div>'
+                  + '</div>'
+                +'<br><select id="scripts" name="scripts">';
 
   // creating all the options from the arrayOfOptions array in the select tag
   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
