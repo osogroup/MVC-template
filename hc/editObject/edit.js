@@ -615,8 +615,8 @@ function arrayList(array) {
                 + '</form>'
               + '</div>';
 
-  // $('#arraySpot').append(HTMLoutput);
-  // $('#appendTo').append(HTMLarrayValues);
+  $('#arraySpot').append(HTMLoutput);
+  $('#appendTo').append(HTMLarrayValues);
 
   return HTMLoutput;
 }
