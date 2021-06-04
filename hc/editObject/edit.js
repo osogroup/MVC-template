@@ -346,7 +346,6 @@ const doTheStringify = async () => {
 
 
 function inputFunction(params) {
-  // console.log("Entering inputFunction()...");
   var newParams = {
     newHKey : params.hKey,
     newHVal : params.hVal
@@ -369,7 +368,6 @@ function inputFunction(params) {
   if (params.sVal == "option") {
     return selectAttribute(newParams);
   }
-  // console.log("Exiting inputFunction()...");
 }
 
 
