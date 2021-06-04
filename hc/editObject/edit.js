@@ -272,7 +272,12 @@ const doTheStringify = async () => {
           // console.log("This is stuffValue: ", stuffValue); // (true, string, text)
           if (stuffKey == "inpType") {
             // console.log("This is the stuffValue of stuffKey", stuffValue); // (text, textarea, text, array, date, number)
-            HTMLoutput += inputFunction(stuffValue, headerValue);
+            var params = {
+              sKey : stuffKey,
+              sVal : stuffValue,
+              hVal : headerValue
+            };
+            HTMLoutput += inputFunction(params);
           }
         }
         
@@ -330,11 +335,11 @@ const doTheStringify = async () => {
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GOD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-function inputFunction(fieldType, fieldInput) {
+function inputFunction(params) {
   console.log("Entering inputFunction()...");
   if (fieldType == "text") {
     console.log("fieldType == 'text'");
-    return textAttribute(fieldInput);
+    return textAttribute(params.sVal);
   }
   if (fieldType == "textarea") {
     console.log("fieldType == 'textarea'");
