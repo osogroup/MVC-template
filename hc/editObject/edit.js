@@ -350,12 +350,16 @@ function inputFunction(params) {
     var newParams = {
       newHKey : params.hKey,
       newHVal : params.hVal
-    }
+    };
     return textareaAttribute(newParams);
   }
   if (params.sVal == "number") {
+    var newParams = {
+      newHKey : params.hKey,
+      newHVal : params.hVal
+    };
     console.log("params.sVal == 'number'");
-    // return numberAttribute();
+    return numberAttribute(newParams);
   }
   if (params.sVal == "date") {
     console.log("params.sVal == 'date'");
@@ -392,8 +396,6 @@ function textAttribute(text) {
   return textHTML;
 }
 
-// textAttribute();
-
 
 // --------------------------------------------- Textarea Attribute ---------------------------------------------
 
@@ -414,38 +416,29 @@ function textareaAttribute(textarea) {
   return textareaHTML;
 }
 
-// textareaAttribute();
-
 
 // ------------------------------------------------ Select Attr ------------------------------------------------
 
 
-// function selectAttribute(vars) {
-//   if (!vars) {return alert("vars doesnt exist");}
-//   var selectHTML = '';
+// needs to be passed newHKey, newHVal and the options which are found in task.json => status.opts
+function selectAttribute(options) {
+  var selectHTML = '';
 
-//   selectHTML += '<div class="col-4">'
-//                 + '<form action="#" method="post" class="demoForm">'
-//                   + '<fieldset class="minHeight">'
-//                     + '<legend>Status</legend>'
-//                     + '<select name="optionDisp" value="optionDisp">';
+  selectHTML += '<div class="col-4">'
+                + '<form action="#" method="post" class="demoForm">'
+                  + '<fieldset class="minHeight">'
+                    + '<legend>'+options.newHKey+'</legend>'
+                    + '<select name="optionDisp" value="optionDisp">';
 
-//   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
-//     selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
-//   }
-// selectHTML +=         '</select>'
-//                   + '</fieldset>'
-//                 + '</form>'
-//               + '</div>';
-//   $('#optionSpot').append(selectHTML);
-// }
-
-// variables that will be passed into selectAttribute()
-// optionVariables = {
-//   options : [ 'in-progress', 'complete' ]
-// };
-
-// selectAttribute();
+  for (const [varsKey, varsValue] of Object.entries(vars.options)) {
+    selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
+  }
+selectHTML +=         '</select>'
+                  + '</fieldset>'
+                + '</form>'
+              + '</div>';
+  return selectHTML;
+}
 
 
 // ------------------------------------------------ Number Attr ------------------------------------------------
