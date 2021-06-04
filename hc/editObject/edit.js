@@ -434,6 +434,7 @@ function selectAttribute(options) {
               + '</div>';
 
   const selectElement = document.getElementById('inputdueDate');
+  console.log("This is selectElement: ", selectElement);
 
   selectElement.addEventListener('change', function() {
     var superKey = objType+ '_' +objItemid;
