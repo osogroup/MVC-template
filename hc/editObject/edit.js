@@ -445,7 +445,7 @@ function selectAttribute(options) {
     myObject[options.newHKey] = changeValue;
     backToString = JSON.stringify(myObject);
     localStorage.setItem(superKey, backToString);
-  }
+  });
 
   return selectHTML;
 }
