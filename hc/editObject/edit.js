@@ -272,7 +272,7 @@ const doTheStringify = async () => {
           // console.log("This is stuffValue: ", stuffValue); // (true, string, text)
           if (stuffKey == "inpType") {
             // console.log("This is the stuffValue of stuffKey", stuffValue); // (text, textarea, text, array, date, number)
-            HTMLoutput += inputFunction(stuffValue);
+            HTMLoutput += inputFunction(stuffValue, headerValue);
           }
         }
         
@@ -330,11 +330,11 @@ const doTheStringify = async () => {
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GOD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-function inputFunction(fieldType) {
+function inputFunction(fieldType, fieldInput) {
   console.log("Entering inputFunction()...");
   if (fieldType == "text") {
     console.log("fieldType == 'text'");
-    return textAttribute();
+    return textAttribute(fieldInput);
   }
   if (fieldType == "textarea") {
     console.log("fieldType == 'textarea'");
@@ -363,14 +363,14 @@ function inputFunction(fieldType) {
 // ----------------------------------------------- Text Attribute -----------------------------------------------
 
 
-function textAttribute() {
+function textAttribute(text) {
   var textHTML = '';
 
   textHTML += '<div class="col-6">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Text</legend>'
-                    + '<input type="text" class="textInput" name="">'
+                    + '<input type="text" class="textInput" name="" value="'+text+'">'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
