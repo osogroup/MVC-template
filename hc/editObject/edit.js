@@ -347,47 +347,31 @@ const doTheStringify = async () => {
 
 function inputFunction(params) {
   // console.log("Entering inputFunction()...");
+  var newParams = {
+    newHKey : params.hKey,
+    newHVal : params.hVal
+  };
   if (params.sVal == "text") {
-    var newParams = {
-      newHKey : params.hKey,
-      newHVal : params.hVal
-    };
     console.log("params.sVal == 'text'");
     return textAttribute(newParams);
   }
   if (params.sVal == "textarea") {
     console.log("params.sVal == 'textarea'");
-    var newParams = {
-      newHKey : params.hKey,
-      newHVal : params.hVal
-    };
     return textareaAttribute(newParams);
   }
   if (params.sVal == "number") {
     console.log("params.sVal == 'number'");
-    // return numberAttribute(newParams);
+    return numberAttribute(newParams);
   }
   if (params.sVal == "date") {
-    var newParams = {
-      newHKey : params.hKey,
-      newHVal : params.hVal
-    };
     console.log("params.sVal == 'date'");
     return calendarAttribute(newParams);
   }
   if (params.sVal == "array") {
-    var newParams = {
-      newHKey : params.hKey,
-      newHVal : params.hVal
-    };
     console.log("params.sVal == 'array'");
     // return arrayList(newParams);
   }
   if (params.sVal == "option") {
-    var newParams = {
-      newHKey : params.hKey,
-      newHVal : params.hVal
-    };
     console.log("params.sVal == 'option'");
     return selectAttribute(newParams);
   }
@@ -464,21 +448,21 @@ selectHTML +=         '</select>'
 // ------------------------------------------------ Number Attr ------------------------------------------------
 
 
-// function numberAttribute(vars) {
-//   if (!vars) {return alert("vars doesnt exist");}
-//   var numberHTML = '';
+function numberAttribute(vars) {
+  if (!vars) {return alert("vars doesnt exist");}
+  var numberHTML = '';
 
-//   numberHTML += '<div class="col-4">'
-//                 + '<form action="#" method="post" class="demoForm">'
-//                   + '<fieldset class="minHeight">'
-//                     + '<legend>Est Eff</legend>'
-//                     + '<input type="number" id="numInput" name="" min="0" max="'+vars+'">'
-//                   + '</fieldset>'
-//                 + '</form>'
-//               + '</div>';
+  numberHTML += '<div class="col-4">'
+                + '<form action="#" method="post" class="demoForm">'
+                  + '<fieldset class="minHeight">'
+                    + '<legend>Est Eff</legend>'
+                    + '<input type="number" id="numInput" name="" min="0" max="'+vars+'">'
+                  + '</fieldset>'
+                + '</form>'
+              + '</div>';
 
-//   $('#numberSpot').append(numberHTML);
-// }
+  $('#numberSpot').append(numberHTML);
+}
 
 
 // ----------------------------------------------- Calendar Attr -----------------------------------------------
