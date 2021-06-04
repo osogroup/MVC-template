@@ -580,8 +580,7 @@ function arrayList(array) {
   // }
   console.log("This is the input for arrayList(array): ", array);
 
-  var HTMLoutput1 = '';
-  var HTMLoutput2 = '';
+  var HTMLoutput = '';
   var HTMLarrayValues = '';
 
   HTMLoutput1 += '<div class="col-12">'
@@ -603,26 +602,27 @@ function arrayList(array) {
   }
 
   $('#appendTo').append(HTMLarrayValues);
+  console.log("This is HTMLoutput: ", HTMLoutput);
 
   // creating the select tag
-  HTMLoutput2 +=      '<br><select id="scripts" name="scripts">';
+  HTMLoutput +=      '<br><select id="scripts" name="scripts">';
 
   // creating all the options from the arrayOfOptions array in the select tag
   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
-  HTMLoutput2 +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
+  HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
   }
 
   // closing the form tags and creating the add button
 
-  HTMLoutput2 +=       '</select>'
+  HTMLoutput +=       '</select>'
                     + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scripts\')"/>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
 
-  $('#arraySpot').append(HTMLoutput2);
+  $('#arraySpot').append(HTMLoutput);
 
-  return;
+  return HTMLoutput;
 }
   
 var arrayFields = [ 'Ron', 'John', 'James' ];
