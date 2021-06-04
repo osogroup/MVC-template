@@ -174,8 +174,10 @@ const doTheStringify = async () => {
     // filling arrayOfOptions[]
   var tagData = data.tags;
   console.log("This is tagData: ", tagData);
-  for (const [] of Object.entries(data[tags])) {
-    arrayOfOptions.push();
+  for (const [tagKey, tagValue] of Object.entries(tagData)) {
+    if (tagKey == 'name') {
+      arrayOfOptions.push(tagValue);
+    }
   }
 
 
