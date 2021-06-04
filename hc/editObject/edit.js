@@ -442,14 +442,13 @@ selectHTML +=         '</select>'
 // ------------------------------------------------ Number Attr ------------------------------------------------
 
 
-function numberAttribute(vars) {
-  if (!vars) {return alert("vars doesnt exist");}
+function numberAttribute(num) {
   var numberHTML = '';
 
-  numberHTML += '<div class="col-4">'
+  numberHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>Est Eff</legend>'
+                    + '<legend>'+num.newHKey+'</legend>'
                     + '<input type="number" id="numInput" name="" min="0" max="'+vars+'">'
                   + '</fieldset>'
                 + '</form>'
