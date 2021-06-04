@@ -359,12 +359,8 @@ function inputFunction(params) {
     return textareaAttribute(newParams);
   }
   if (params.sVal == "number") {
-    var newParams = {
-      newHKey : params.hKey,
-      newHVal : params.hVal
-    };
     console.log("params.sVal == 'number'");
-    return numberAttribute(newParams);
+    // return numberAttribute(newParams);
   }
   if (params.sVal == "date") {
     console.log("params.sVal == 'date'");
@@ -375,8 +371,12 @@ function inputFunction(params) {
     // return arrayList();
   }
   if (params.sVal == "option") {
+    var newParams = {
+      newHKey : params.hKey,
+      newHVal : params.hVal
+    };
     console.log("params.sVal == 'option'");
-    // return selectAttribute();
+    return selectAttribute(newParams);
   }
   console.log("Exiting inputFunction()...");
 }
