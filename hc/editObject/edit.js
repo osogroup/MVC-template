@@ -151,17 +151,17 @@ function showData() {
 // the value in the box is changed, this function will update the localStorage
 function anyChange(str) {
   var superKey = objType+ '_' +objItemid;
-  console.log("This is the str: ", str);
+  // console.log("This is the str: ", str);
   var myString = localStorage.getItem(superKey);
-  console.log("This is myString", myString);
+  // console.log("This is myString", myString);
   var myObject = JSON.parse(myString);
-  console.log("This is myObject: ", myObject);
+  // console.log("This is myObject: ", myObject);
   var change = document.getElementById('input'+str);
   var changeValue = change.value;
   myObject[str] = changeValue;
-  console.log("this is myObject[str]", myObject[str]);
+  // console.log("this is myObject[str]", myObject[str]);
   backToString = JSON.stringify(myObject);
-  console.log("This is backToString ", backToString);
+  // console.log("This is backToString ", backToString);
   localStorage.setItem(superKey, backToString);
 }
 
@@ -464,8 +464,6 @@ function selectedOption(str) {
 
 function numberAttribute(num) {
   var numberHTML = '';
-  console.log("This is num.newHKey: ", num.newHKey);
-  console.log("This is num.newHVal: ", num.newHVal);
 
   numberHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
