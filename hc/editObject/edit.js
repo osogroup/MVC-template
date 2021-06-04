@@ -617,8 +617,6 @@ function arrayList(array) {
 
   $('#arraySpot').append(HTMLoutput);
   $('#appendTo').append(HTMLarrayValues);
-
-  return HTMLoutput;
 }
   
 var arrayFields = [ 'Ron', 'John', 'James' ];
