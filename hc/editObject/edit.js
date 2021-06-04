@@ -598,7 +598,8 @@ function arrayList(array) {
   // counts up the indices if there's any preset values in the array (uncommon)
   i++;
   }
-  HTMLoutput = HTMLoutput+HTMLarrayValues;
+
+  $('#appendTo').append(HTMLarrayValues);
   console.log("This is HTMLoutput: ", HTMLoutput);
 
   // creating the select tag
