@@ -165,7 +165,7 @@ function anyChange(str) {
   localStorage.setItem(superKey, backToString);
 }
 
-var statusOptions = [];
+var statusOptions = {};
 
 const doTheStringify = async () => {
 
@@ -271,10 +271,9 @@ const doTheStringify = async () => {
         // filling up the statusOptions array before calling selectAttribute()
         for (const [stuffKey, stuffValue] of Object.entries(taskHeader)) {
           if (stuffKey == 'opts') {
-            var plsBStatus = plsBStatus + stuffValue;
+            statusOptions.push(stuffValue);
+            console.log("This is statusOptions: ", statusOptions);
           }
-          statusOptions.push(plsBStatus);
-          console.log("This is statusOptions: ", statusOptions);
         }
 
         for (const [stuffKey, stuffValue] of Object.entries(taskHeader)) {
