@@ -375,7 +375,7 @@ function inputFunction(params) {
 function textAttribute(text) {
   var textHTML = '';
 
-  textHTML += '<div class="col-6">'
+  textHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Text</legend>'
