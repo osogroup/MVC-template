@@ -562,6 +562,12 @@ function arrayList(array) {
 
   var HTMLoutput = '';
   var HTMLarrayValues = '';
+  
+  var tagData = data[tags];
+  console.log("This is tagData: ", tagData);
+  for (const [] of Object.entries(data[tags])) {
+    arrayOfOptions.push();
+  }
 
   HTMLoutput += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
