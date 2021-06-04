@@ -352,27 +352,21 @@ function inputFunction(params) {
     newHVal : params.hVal
   };
   if (params.sVal == "text") {
-    console.log("params.sVal == 'text'");
     return textAttribute(newParams);
   }
   if (params.sVal == "textarea") {
-    console.log("params.sVal == 'textarea'");
     return textareaAttribute(newParams);
   }
   if (params.sVal == "number") {
-    console.log("params.sVal == 'number'");
     return numberAttribute(newParams);
   }
   if (params.sVal == "date") {
-    console.log("params.sVal == 'date'");
     return calendarAttribute(newParams);
   }
   if (params.sVal == "array") {
-    console.log("params.sVal == 'array'");
     // return arrayList(newParams);
   }
   if (params.sVal == "option") {
-    console.log("params.sVal == 'option'");
     return selectAttribute(newParams);
   }
   // console.log("Exiting inputFunction()...");
