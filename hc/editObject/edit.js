@@ -596,6 +596,7 @@ function arrayList(array) {
   // counts up the indices if there's any preset values in the array (uncommon)
   i++;
   }
+  HTMLoutput = HTMLoutput+HTMLarrayValues;
 
   // creating the select tag
   HTMLoutput +=      '<br><select id="scripts" name="scripts">';
@@ -617,7 +618,8 @@ function arrayList(array) {
               + '</div>';
 
   $('#arraySpot').append(HTMLoutput);
-  $('#appendTo').append(HTMLarrayValues);
+
+  return HTMLoutput;
 }
   
 var arrayFields = [ 'Ron', 'John', 'James' ];
