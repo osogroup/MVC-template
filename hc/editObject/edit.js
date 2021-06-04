@@ -599,6 +599,7 @@ function arrayList(array) {
   i++;
   }
   HTMLoutput = HTMLoutput+HTMLarrayValues;
+  console.log("This is HTMLoutput: ", HTMLoutput);
 
   // creating the select tag
   HTMLoutput +=      '<br><select id="scripts" name="scripts">';
