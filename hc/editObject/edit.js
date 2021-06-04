@@ -455,8 +455,6 @@ function numberAttribute(num) {
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
-
-  console.log("Exiting numberAttribute() ... ");
   return numberHTML;
 }
 
