@@ -449,7 +449,7 @@ function numberAttribute(num) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+num.newHKey+'</legend>'
-                    + '<input type="number" id="input'+num.newHKey+'" name="" min="0" max="'+vars+'">'
+                    + '<input type="number" id="input'+num.newHKey+'" value="'+num.newHKey+'" min="0">'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
