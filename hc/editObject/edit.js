@@ -306,6 +306,77 @@ const doTheStringify = async () => {
 }
 
 
+// ------------------------------------------------ Add function ------------------------------------------------
+
+
+function addFunction(variable) {
+  var select = document.getElementById(variable);  
+
+  // access text property of selected option
+  elementVal = select.options[select.selectedIndex].text;
+  arrayFields.push(elementVal);
+  
+  // adding a new row and columns to the HTML
+  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
+  $('#appendTo').append(HTMLelement);
+
+  // adjusting indices
+  i++;
+}
+
+
+// ------------------------------------------------ Add function ------------------------------------------------
+
+
+function addFunction(variable) {
+  var select = document.getElementById(variable);  
+
+  // access text property of selected option
+  elementVal = select.options[select.selectedIndex].text;
+  arrayFields.push(elementVal);
+  
+  // adding a new row and columns to the HTML
+  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
+  $('#appendTo').append(HTMLelement);
+
+  // adjusting indices
+  i++;
+}
+
+
+// ----------------------------------------------- Remove function -----------------------------------------------
+
+
+function removeFunction(val) {
+  var HTMLelement = '';
+
+  // removing 1 value from arrayFields starting at index 'val'
+  arrayFields.splice(val, 1);
+
+  // getting a variable that represents whichever remove button I push on the browser (technically dont need
+  // the specific id since the the value is deleted from arrayFields anyway and then arrayFields is ran through,
+  // recreating the display)
+  var element = document.querySelector('#remvBtn'+val);
+
+  // deleting the entire div containing the arrayField values
+  element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
+  for (const [elementKey, elementValue] of Object.entries(arrayFields)) {
+    HTMLelement += '<div class="row"><div class="col-10">'+elementValue+'</div><div class="col-2"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeFunction('+elementKey+')"></div></div>';
+  }
+  // next 5 lines create a new div within outerDiv that has the id="appendTo"
+  var tag = document.createElement('div');
+  tag.setAttribute("id", "appendTo");
+  var elm = document.getElementById("outerDiv");
+  elm.appendChild(tag);
+  $('#appendTo').append(HTMLelement);
+
+  console.log("This is arrayFields after .splice(): ", arrayFields);
+
+  // adjusting indices for add function
+  i--;
+}
+
+
 
 
 
