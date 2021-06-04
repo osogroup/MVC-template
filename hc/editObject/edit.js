@@ -438,6 +438,19 @@ function selectAttribute(options) {
 function selectedOption() {
   var selected = $('#inputstatus').find(':selected').text();
   console.log("This is selected: ", selected);
+
+  var superKey = objType+ '_' +objItemid;
+  var myString = localStorage.getItem(superKey);
+  console.log("This is myString", myString);
+  var myObject = JSON.parse(myString);
+  console.log("This is myObject: ", myObject);
+  var change = selected;
+  var changeValue = change.value;
+  myObject[options.newHKey] = changeValue;
+  console.log("this is myObject[str]", myObject[str]);
+  backToString = JSON.stringify(myObject);
+  console.log("This is backToString ", backToString);
+  localStorage.setItem(superKey, backToString);
 }
 
 
