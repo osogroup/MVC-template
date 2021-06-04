@@ -331,7 +331,7 @@ function addFunction(variable) {
 
 
 function addFunction(variable) {
-  var select = document.getElementById(variable.id);  
+  var select = document.getElementById(variable);  
 
   // access text property of selected option
   elementVal = select.options[select.selectedIndex].text;
