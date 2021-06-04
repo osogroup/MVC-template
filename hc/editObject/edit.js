@@ -363,7 +363,7 @@ function inputFunction(params) {
   }
   if (params.sVal == "option") {
     console.log("params.sVal == 'option'");
-    selectAttribute(optionVariables);
+    selectAttribute();
   }
   console.log("Exiting inputFunction()...");
 }
