@@ -337,28 +337,28 @@ const doTheStringify = async () => {
 
 function inputFunction(params) {
   console.log("Entering inputFunction()...");
-  if (fieldType == "text") {
-    console.log("fieldType == 'text'");
+  if (params.sVal == "text") {
+    console.log("params.sVal == 'text'");
     return textAttribute(params.sVal);
   }
-  if (fieldType == "textarea") {
-    console.log("fieldType == 'textarea'");
+  if (params.sVal == "textarea") {
+    console.log("params.sVal == 'textarea'");
     textareaAttribute();
   }
-  if (fieldType == "number") {
-    console.log("fieldType == 'number'");
+  if (params.sVal == "number") {
+    console.log("params.sVal == 'number'");
     numberAttribute(10);
   }
-  if (fieldType == "date") {
-    console.log("fieldType == 'date'");
+  if (params.sVal == "date") {
+    console.log("params.sVal == 'date'");
     calendarAttribute();
   }
-  if (fieldType == "array") {
-    console.log("fieldType == 'array'");
+  if (params.sVal == "array") {
+    console.log("params.sVal == 'array'");
     arrayList(variables);
   }
-  if (fieldType == "option") {
-    console.log("fieldType == 'option'");
+  if (params.sVal == "option") {
+    console.log("params.sVal == 'option'");
     selectAttribute(optionVariables);
   }
   console.log("Exiting inputFunction()...");
