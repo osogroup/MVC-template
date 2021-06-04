@@ -166,6 +166,7 @@ function anyChange(str) {
 }
 
 var statusOptions = [];
+// var tagOptions = [];
 
 const doTheStringify = async () => {
 
@@ -367,8 +368,12 @@ function inputFunction(params) {
     // return numberAttribute(newParams);
   }
   if (params.sVal == "date") {
+    var newParams = {
+      newHKey : params.hKey,
+      newHVal : params.hVal
+    };
     console.log("params.sVal == 'date'");
-    // return calendarAttribute();
+    return calendarAttribute();
   }
   if (params.sVal == "array") {
     var newParams = {
@@ -376,7 +381,7 @@ function inputFunction(params) {
       newHVal : params.hVal
     };
     console.log("params.sVal == 'array'");
-    return arrayList(newParams);
+    // return arrayList(newParams);
   }
   if (params.sVal == "option") {
     var newParams = {
@@ -475,79 +480,75 @@ selectHTML +=         '</select>'
 //   $('#numberSpot').append(numberHTML);
 // }
 
-// numberAttribute(10);
-
 
 // ----------------------------------------------- Calendar Attr -----------------------------------------------
 
 
-// function calendarAttribute() {
-//   var calendarHTML = '';
+function calendarAttribute() {
+  var calendarHTML = '';
 
-//   calendarHTML += '<div class="col-4">'
-//                   + '<form action="#" method="post" class="demoForm">'
-//                     + '<fieldset class="minHeight">'
-//                       + '<legend>Due Date</legend>'
-//                       + '<input type="date" id="calInput" name="">'
-//                     + '</fieldset>'
-//                   + '</form>'
-//                 + '</div>';
+  calendarHTML += '<div class="col-4">'
+                  + '<form action="#" method="post" class="demoForm">'
+                    + '<fieldset class="minHeight">'
+                      + '<legend>Due Date</legend>'
+                      + '<input type="date" id="calInput" name="">'
+                    + '</fieldset>'
+                  + '</form>'
+                + '</div>';
 
-//   $('#calendarSpot').append(calendarHTML);
-// }
-
-// calendarAttribute();
+  $('#calendarSpot').append(calendarHTML);
+}
 
 
 // ------------------------------------------------- Array List -------------------------------------------------
 
 
-function arrayList(array) {
-  var i = 0;
-  // if (!vars.existing || !vars.options || !vars.attrType){
-  //   alert("vars has an empty array");
-  //   return;
-  // }
-  console.log("This is the input for arrayList(array): ", array);
+// function arrayList(array) {
+//   var i = 0;
+//   // if (!vars.existing || !vars.options || !vars.attrType){
+//   //   alert("vars has an empty array");
+//   //   return;
+//   // }
+//   console.log("This is the input for arrayList(array): ", array);
 
-  var HTMLoutput = '';
+//   var HTMLoutput = '';
 
-  HTMLoutput += '<div class="col-12">'
-                + '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset class="minHeight">'
-                    + '<legend>Tags</legend>'
-                      + '<div id="outerDiv">'
-                        + '<div id="appendTo"></div>'
-                      + '</div>';
+//   HTMLoutput += '<div class="col-12">'
+//                 + '<form action="#" method="post" class="demoForm">'
+//                   + '<fieldset class="minHeight">'
+//                     + '<legend>Tags</legend>'
+//                       + '<div id="outerDiv">'
+//                         + '<div id="appendTo"></div>'
+//                       + '</div>';
 
-  // showing all the items in the arrayFields array (none if the array is preset as empty)
-  for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-  HTMLoutput +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
+//   // showing all the items in the arrayFields array (none if the array is preset as empty)
+//   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
+//   HTMLoutput +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
 
-  // counts up the indices if there's any preset values in the array (uncommon)
-  i++;
-  }
+//   // counts up the indices if there's any preset values in the array (uncommon)
+//   i++;
+//   }
 
-  // creating the select tag
-  HTMLoutput +=      '<br><select id="scripts" name="scripts">';
+//   // creating the select tag
+//   HTMLoutput +=      '<br><select id="scripts" name="scripts">';
 
-  // creating all the options from the arrayOfOptions array in the select tag
-  for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
-  HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
-  }
+//   // creating all the options from the arrayOfOptions array in the select tag
+//   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
+//   HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
+//   }
 
-  // closing the form tags and creating the add button
-  HTMLoutput +=       '</select>'
-                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scripts\')"/>'
-                  + '</fieldset>'
-                + '</form>'
-              + '</div>';
+//   // closing the form tags and creating the add button
+//   HTMLoutput +=       '</select>'
+//                     + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scripts\')"/>'
+//                   + '</fieldset>'
+//                 + '</form>'
+//               + '</div>';
 
-  // $('#arraySpot').append(HTMLoutput);
-  // $('#appendTo').append(HTMLarrayValues);
+//   // $('#arraySpot').append(HTMLoutput);
+//   // $('#appendTo').append(HTMLarrayValues);
 
-  return HTMLoutput;
-}
+//   return HTMLoutput;
+// }
   
 // var arrayFields = [ 'Ron', 'John', 'James' ];
 
