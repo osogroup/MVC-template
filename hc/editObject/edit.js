@@ -418,9 +418,9 @@ function selectAttribute(options) {
   var selectHTML = '';
   var superKey = objType+ '_' +objItemid;
   var myString = localStorage.getItem(superKey);
-  console.log("This is myString", myString);
+  console.log("This is myString...", myString);
   var myObject = JSON.parse(myString);
-  console.log("This is myObject: ", myObject);
+  console.log("This is myObject... ", myObject);
 
   selectHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
