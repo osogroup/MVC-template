@@ -20,7 +20,6 @@ const typeData = async () => {
   return typeVars;
 }
 
-var i = 0;
 
 // function to create editObject HTML
 const outputHTML = async () => {
@@ -159,7 +158,7 @@ var tagOptions = [];
 
 const doTheStringify = async () => {
 
-
+  var i = 0;
 
   if(objType == null || objItemid == null) {
     alert('Please enter "?type=task&itemid=0" at the end of the current URL');
