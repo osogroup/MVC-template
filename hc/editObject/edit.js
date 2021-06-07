@@ -376,6 +376,8 @@ const doTheStringify = async () => {
 
 
 function addFunction(variable) {
+  console.log("This is variable: ", variable);
+
   var select = document.getElementById('scripts');  
 
   // access text property of selected option
@@ -678,7 +680,7 @@ function arrayList(array) {
 
   // closing the form tags and creating the add button
   HTMLoutput +=       '</select>'
-                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction('+i+')"/>'
+                    + '<input type="button" id="showTxt_'+i+'" value="Add" onclick="addFunction(this.id)"/>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
