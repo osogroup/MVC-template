@@ -376,8 +376,8 @@ const doTheStringify = async () => {
 
 
 function addFunction(variable) {
-  console.log("This is variable: ", variable);
-  console.log("This is the variable.id: ", variable.id);
+  console.log("This is variable: ", variable); // <input type="button" id="....
+  console.log("This is the variable.id: ", variable.id); // showTxt_3
 
   var select = document.getElementById('scripts');
 
