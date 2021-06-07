@@ -173,8 +173,6 @@ const doTheStringify = async () => {
     var configTypeData = config[objType];
     console.log("This is typeStuff: ", typeStuff);
 
-    var arrayFields = [  ];
-
     var arrayOfOptions = [];
     var arrayOfOptionsNames = [];
 
@@ -338,7 +336,9 @@ const doTheStringify = async () => {
             var parameters = {
               sVal : stuffValue,  // text, textarea, array, ...
               hKey : headerKey, // id, name, description, ...
-              hVal : headerValue  // 1, COI: Static Site HTML Structure, ...
+              hVal : headerValue,  // 1, COI: Static Site HTML Structure, ...
+              options: arrayOfOptions, // 0,1
+              names: arrayOfOptionsNames // Design Wireframes, Code Structure & Style
             };
             HTMLoutput += inputFunction(parameters);
           }
