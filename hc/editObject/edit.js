@@ -226,7 +226,7 @@ const doTheStringify = async () => {
       localStorage.getItem(objType+'_'+objItemid);
 
       // create HTML header and fields
-    } 
+    }
     else {
       var forOfLoop = objTypeData[objItemid]
       console.log("objectKeys was just created..!");
@@ -253,7 +253,7 @@ const doTheStringify = async () => {
 
       // --------------------------------------- Item Header and Inputs ---------------------------------------
 
-      
+
     }
     // creating item header row
     HTMLoutput += '<div class="row">';
@@ -270,8 +270,6 @@ const doTheStringify = async () => {
         // making object item an input textbox
 
 
-
-
         var typeHeader = typeStuff[headerKey];
         
         // filling up the statusOptions array before calling selectAttribute()
@@ -284,7 +282,7 @@ const doTheStringify = async () => {
           
         // ######################################################################################################################
 
-        
+
           if (headerKey == 'tags') {
             
           }
@@ -628,7 +626,7 @@ function arrayList(array) {
   return HTMLoutput;
 }
   
-var arrayFields = [];
+var arrayFields = [ 'tag1' , 'tag2' ];
 
 var arrayOfOptions = [];
 
