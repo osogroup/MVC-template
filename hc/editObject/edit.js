@@ -167,8 +167,7 @@ const doTheStringify = async () => {
     var config = await configData();
     var typeStuff = await typeData();
     var objTypeData = data[objType];
-    var tagTypeData = data['tags'];
-    console.log("This is tagTypeData: ", tagTypeData);
+    var tagTypeData = data['tags']; // objTypeData specifically for tags
     var configTypeData = config[objType];
     console.log("This is typeStuff: ", typeStuff);
 
@@ -264,7 +263,7 @@ const doTheStringify = async () => {
       // console.log("This is headerKey", headerKey); // id, name, ... tags
       // console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure, ... [0]
       HTMLoutput += '<div class="col-4 minHeight">'
-                    + '<div class="col-12">'+headerKey+'</div>';
+                    // + '<div class="col-12">'+headerKey+'</div>';
 
       
 
@@ -305,10 +304,12 @@ const doTheStringify = async () => {
                 console.log("This is tagKey: ", tagKey); // positions in array
                 console.log("This is tagValue: ", tagValue); // values in those positions
                 arrayOfOptions.push(tagValue);
-  
               }
-  
               console.log("This is arrayOfOptions post-filled: ", arrayOfOptions);
+              
+              // Taking info from arrayOfOptions and using them to get the names from the list
+
+
             }
 
             var parameters = {
