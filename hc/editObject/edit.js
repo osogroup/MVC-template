@@ -27,7 +27,6 @@ const outputHTML = async () => {
   console.log("Entering outputHTML()");
   var data = await tempData();
   var config = await configData();
-  var typeStuff = await typeData();
   var inputBoxes = '';
   var configTypeData = config[objType];
   var objTypeData = data[objType];
