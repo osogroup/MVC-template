@@ -396,6 +396,7 @@ function addFunction(variable) {
   $('#appendTo').append(HTMLelement);
 
   // adjusting indices
+  return variable++;
 }
 
 
