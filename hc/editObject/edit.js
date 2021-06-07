@@ -406,7 +406,7 @@ function removeFunction(val) {
   var HTMLelement = '';
   console.log("This is removeFunction(val)'s parameters: ", val);
   // removing 1 value from arrayFields starting at index 'val'
-  arrayFields.splice(val, 1);
+  // arrayFields.splice(val, 1);
 
   // getting a variable that represents whichever remove button I push on the browser (technically dont need
   // the specific id since the the value is deleted from arrayFields anyway and then arrayFields is ran through,
