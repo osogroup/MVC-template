@@ -425,12 +425,12 @@ function removeFunction(val) {
 
 
   // next 5 lines create a new div within outerDiv that has the id="appendTo"
-  var tag = document.createElement('div');
-  tag.setAttribute("id", "appendTo");
-  var elm = document.getElementById("outerDiv");
-  // console.log("This is elm: ", elm);
-  elm.appendChild(tag);
-  $('#appendTo').append(HTMLelement);
+  // var tag = document.createElement('div');
+  // tag.setAttribute("id", "appendTo");
+  // var elm = document.getElementById("outerDiv");
+  // // console.log("This is elm: ", elm);
+  // elm.appendChild(tag);
+  // $('#appendTo').append(HTMLelement);
 
   // console.log("This is arrayFields after .splice(): ", arrayFields);
 
