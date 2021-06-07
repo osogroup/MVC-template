@@ -377,9 +377,19 @@ const doTheStringify = async () => {
 function addFunction(variable) {
   var select = document.getElementById(variable);  
 
+  var deletion = document.getElementById('appendTo');
+  remove(deletion);
+
   // access text property of selected option
   elementVal = select.options[select.selectedIndex].text;
   arrayFields.push(elementVal);
+
+  var tag = document.createElement('div');
+  tag.setAttribute("id", "appendTo");
+  var elm = document.getElementById("outerDiv");
+  // console.log("This is elm: ", elm);
+  elm.appendChild(tag);
+  $('#appendTo').append(HTMLelement);
   
 
   // creating parameters for removeFunction *need arrayFields and count
@@ -392,7 +402,6 @@ function addFunction(variable) {
   $('#appendTo').append(HTMLelement);
 
   // adjusting indices
-  i++;
 }
 
 
@@ -426,7 +435,6 @@ function removeFunction(val) {
   console.log("This is arrayFields after .splice(): ", arrayFields);
 
   // adjusting indices for add function
-  i--;
 }
 
 
