@@ -414,7 +414,7 @@ function removeFunction(val) {
   var element = document.querySelector('#remvBtn'+val);
 
   // deleting the row
-  element.parentNode.parentNode.remove();
+  element.parentNode.parentNode.remove(element.parentNode.parentNode);
 
 
   // deleting the entire div containing the arrayField values
