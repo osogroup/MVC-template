@@ -394,9 +394,6 @@ function addFunction(variable) {
   // adding a new row and columns to the HTML
   var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn'+variable+'" value="-" onclick="removeFunction('+variable+')"></div></div>';
   $('#appendTo').append(HTMLelement);
-
-  // adjusting indices
-  return variable++;
 }
 
 
@@ -404,7 +401,6 @@ function addFunction(variable) {
 
 
 function removeFunction(val) {
-  var HTMLelement = '';
   // console.log("This is removeFunction(val)'s parameters: ", val);
   // removing 1 value from arrayFields starting at index 'val'
   // arrayFields.splice(val, 1);
@@ -666,6 +662,12 @@ function arrayList(array) {
   // counts up the indices if there's any preset values in the array (uncommon)
   i++;
   }
+
+  for(const[] of Object.entries()) {
+  HTMLarrayValues +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
+
+  }
+
   HTMLoutput = HTMLoutput+HTMLarrayValues;
   // console.log("This is HTMLoutput: ", HTMLoutput);
 
