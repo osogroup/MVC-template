@@ -395,7 +395,7 @@ function addFunction(variable) {
   // creating parameters for removeFunction *need arrayFields and count
 
   // adding a new row and columns to the HTML
-  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variable+'" value="-" onclick="removeFunction('+variable+')"></div></div>';
+  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variable.id+'" value="-" onclick="removeFunction('+variable+')"></div></div>';
   $('#appendTo').append(HTMLelement);
 }
 
