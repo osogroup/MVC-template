@@ -333,7 +333,7 @@ const doTheStringify = async () => {
               hKey : headerKey, // id, name, description, ...
               hVal : headerValue  // 1, COI: Static Site HTML Structure, ...
             };
-            // HTMLoutput += inputFunction(parameters);
+            HTMLoutput += inputFunction(parameters);
           }
         }
         
