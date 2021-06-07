@@ -384,6 +384,12 @@ function addFunction(variable) {
   elementVal = select.options[select.selectedIndex].text;
   arrayFields.push(elementVal);
   
+
+  // creating parameters for removeFunction *need arrayFields and count
+  var removeFunctionParameters = {
+    count : i
+  };
+
   // adding a new row and columns to the HTML
   var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
   $('#appendTo').append(HTMLelement);
@@ -656,8 +662,12 @@ function arrayList(array) {
   HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
   }
 
-  // closing the form tags and creating the add button
+  // creating parameters for addFunction
+  addFunctionParameters = {
 
+  };
+
+  // closing the form tags and creating the add button
   HTMLoutput +=       '</select>'
                     + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scripts\')"/>'
                   + '</fieldset>'
