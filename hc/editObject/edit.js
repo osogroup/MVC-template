@@ -157,7 +157,6 @@ var statusOptions = [];
 
 const doTheStringify = async () => {
 
-  var i = 0;
   var arrayFields = [];
   var arrayOfOptions = [];
   var arrayOfOptionsNames = [];
@@ -338,7 +337,6 @@ const doTheStringify = async () => {
               fields : arrayFields,
               options: arrayOfOptions, // 0,1
               names: arrayOfOptionsNames, // Design Wireframes, Code Structure & Style
-              count : i,
               scripts : "scripts"
             };
             HTMLoutput += inputFunction(parameters);
@@ -472,7 +470,6 @@ function inputFunction(params) {
   var arrayParams = {
     newHKey : params.hKey,
     newHVal : params.hVal,
-    newCount : params.count,
     newScripts : params.scripts,
     newFields : params.fields,
     newNames: params.names
@@ -649,7 +646,7 @@ function arrayList(array) {
   // }
   console.log("This is the input for arrayList(array): ", array);
 
-  var i = array.newCount;
+  var i = 0;
   var HTMLoutput = '';
   var HTMLarrayValues = '';
 
@@ -662,7 +659,7 @@ function arrayList(array) {
 
   // showing all the items in the arrayFields array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(array.newFields)) {
-  HTMLarrayValues +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
+  HTMLarrayValues +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
 
   // counts up the indices if there's any preset values in the array (uncommon)
   i++;
@@ -679,8 +676,6 @@ function arrayList(array) {
   for (const [optionKey, optionValue] of Object.entries(array.newNames)) {
   HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
   }
-
-  console.log("This is var i after looping: ", i);
 
   // creating parameters for addFunction
   addFunctionParameters = {
