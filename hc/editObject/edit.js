@@ -628,7 +628,7 @@ function arrayList(array) {
   return HTMLoutput;
 }
   
-var arrayFields = [ 'tag1' , 'tag2' ];
+var arrayFields = [ 'tag1' ];
 
 var arrayOfOptions = [ 'option1', 'option2', 'option3' ];
 
