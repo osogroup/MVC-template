@@ -378,8 +378,14 @@ const doTheStringify = async () => {
 function addFunction(variable) {
   var select = document.getElementById('scripts');  
 
+  addArray = [variable];
+
+  console.log("This is addArray[]: ", addArray);
+
   var deletion = document.getElementById('appendTo');
   deletion.remove();
+
+  console.log("")
 
   // access text property of selected option
   elementVal = select.options[select.selectedIndex].text;
