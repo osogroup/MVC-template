@@ -432,7 +432,7 @@ function removeFunction(val) {
   elm.appendChild(tag);
   $('#appendTo').append(HTMLelement);
 
-  console.log("This is arrayFields after .splice(): ", arrayFields);
+  // console.log("This is arrayFields after .splice(): ", arrayFields);
 
   // adjusting indices for add function
 }
