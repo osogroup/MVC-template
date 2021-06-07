@@ -173,6 +173,7 @@ const doTheStringify = async () => {
     var configTypeData = config[objType];
     console.log("This is typeStuff: ", typeStuff);
 
+    var arrayFields = [];
     var arrayOfOptions = [];
     var arrayOfOptionsNames = [];
 
