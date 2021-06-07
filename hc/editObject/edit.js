@@ -264,8 +264,10 @@ const doTheStringify = async () => {
       console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure, ... [0]
       HTMLoutput += '<div class="col-4 minHeight">'
                     + '<div class="col-12">'+headerKey+'</div>';
-      if (configTypeData.editable.includes(headerKey) == true)
-      {
+
+      
+
+      if (configTypeData.editable.includes(headerKey) == true) {
 
         // making object item an input textbox
 
@@ -279,18 +281,16 @@ const doTheStringify = async () => {
             // console.log("This is statusOptions: ", statusOptions);
           }
 
-          
-        // ######################################################################################################################
-
-
-          if (headerKey == 'tags') {
-            
-          }
-        }
+        }  
+        // #####################################################################################################################
 
         for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
           // console.log("This is stuffKey: ", stuffKey); // (required, type, inpType)
           // console.log("This is stuffValue: ", stuffValue); // (true, string, text)
+
+          // filling arrayOfOptions
+          if (headerKey == 'tags') {
+
           if (stuffKey == "inpType") {
             // console.log("This is the stuffValue of stuffKey", stuffValue); // (text, textarea, text, array, date, number)
             var parameters = {
