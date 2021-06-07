@@ -309,8 +309,8 @@ const doTheStringify = async () => {
 
               console.log("The information lines up..");
               for (const [tagKey, tagValue] of Object.entries(headerValue)) {
-                console.log("This is tagKey: ", tagKey); // positions in array
-                console.log("This is tagValue: ", tagValue); // values in those positions
+                // console.log("This is tagKey: ", tagKey); // positions in array
+                // console.log("This is tagValue: ", tagValue); // values in those positions
                 arrayOfOptions.push(tagValue);
               }
               // console.log("This is arrayOfOptions post-filled: ", arrayOfOptions);
