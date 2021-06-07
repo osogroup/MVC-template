@@ -282,7 +282,6 @@ const doTheStringify = async () => {
           }
 
         }  
-        // #####################################################################################################################
 
         for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
           // console.log("This is stuffKey: ", stuffKey); // (required, type, inpType)
@@ -290,7 +289,12 @@ const doTheStringify = async () => {
 
           // filling arrayOfOptions
           if (stuffKey == 'inpType' && stuffValue == 'array') {
+
+            // #####################################################################################################################
+
             console.log("The information lines up..");
+            arrayOfOptions.push(headerValue);
+            console.log("This is arrayOfOptions post-filled: ", arrayOfOptions);
           }
 
           if (stuffKey == "inpType") {
