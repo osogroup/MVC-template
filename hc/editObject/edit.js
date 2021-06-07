@@ -628,7 +628,7 @@ function arrayList(array) {
   
 var arrayFields = [ 'tag1' , 'tag2' ];
 
-var arrayOfOptions = [];
+var arrayOfOptions = [ 'option1', 'option2', 'option3' ];
 
 var variables = {
   options : arrayOfOptions,
