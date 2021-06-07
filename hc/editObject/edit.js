@@ -192,7 +192,6 @@ const doTheStringify = async () => {
     // }
 
 
-
     // -------------------------------------------- Navigation Bar --------------------------------------------
 
 
@@ -378,6 +377,9 @@ const doTheStringify = async () => {
 function addFunction(variable) {
   console.log("This is variable: ", variable); // <input type="button" id="....
   console.log("This is the variable.id: ", variable.id); // showTxt_3
+
+  var number = parseInt(element.id.match(/^button(\d+)$/)[1], 10);
+  console.log("This is number: ", number);
 
   var select = document.getElementById('scripts');
 
