@@ -378,7 +378,7 @@ function addFunction(variable) {
   var select = document.getElementById(variable);  
 
   var deletion = document.getElementById('appendTo');
-  remove(deletion);
+  deletion.remove();
 
   // access text property of selected option
   elementVal = select.options[select.selectedIndex].text;
