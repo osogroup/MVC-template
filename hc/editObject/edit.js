@@ -167,7 +167,7 @@ const doTheStringify = async () => {
     var config = await configData();
     var typeStuff = await typeData();
     var objTypeData = data[objType];
-    var tagTypeData = data[tags];
+    var tagTypeData = data['tags'];
     console.log("This is tagTypeData: ", tagTypeData);
     var configTypeData = config[objType];
     console.log("This is typeStuff: ", typeStuff);
