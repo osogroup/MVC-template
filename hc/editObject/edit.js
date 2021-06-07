@@ -314,7 +314,11 @@ const doTheStringify = async () => {
               console.log("This is arrayOfOptions post-filled: ", arrayOfOptions);
               
               // Taking info from arrayOfOptions and using them to get the names from the list
+              for (const [tagTypeKey, tagTypeVal] of Object.entries(tagTypeData)) {
+                console.log("This is tagTypeKey: ", tagTypeKey);
+                console.log("This is tagTypeVal: ", tagTypeVal);
 
+              }
 
             }
 
