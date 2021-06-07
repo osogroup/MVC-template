@@ -378,7 +378,7 @@ const doTheStringify = async () => {
 function addFunction(variable) {
   console.log("This is variable: ", variable);
 
-  var select = document.getElementById('scripts');  
+  var select = document.getElementById('scripts');
 
   // access text property of selected option
   elementVal = select.options[select.selectedIndex].text;
