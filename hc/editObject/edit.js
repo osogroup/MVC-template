@@ -158,9 +158,9 @@ var statusOptions = [];
 const doTheStringify = async () => {
 
   var i = 0;
-  var arrayFields = [ 'Ron', 'John', 'James' ];
-  var arrayOfOptions = [  ];
-  var arrayOfOptionsNames = [  ];
+  var arrayFields = [];
+  var arrayOfOptions = [];
+  var arrayOfOptionsNames = [];
 
   if(objType == null || objItemid == null) {
     alert('Enter "?type=task&itemid=0" at the end of the current URL');
