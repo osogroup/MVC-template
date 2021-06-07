@@ -682,7 +682,7 @@ function arrayList(array) {
 
   // closing the form tags and creating the add button
   HTMLoutput +=       '</select>'
-                    + '<input type="button" id="showTxt_'+i+'" value="Add" onclick="addFunction(this.id)"/>'
+                    + '<input type="button" id="showTxt_'+i+'" value="Add" onclick="addFunction(this)"/>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
