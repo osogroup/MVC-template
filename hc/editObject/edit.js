@@ -158,6 +158,9 @@ var statusOptions = [];
 const doTheStringify = async () => {
 
   var i = 0;
+  var arrayFields = [  ];
+  var arrayOfOptions = [  ];
+  var arrayOfOptionsNames = [  ];
 
   if(objType == null || objItemid == null) {
     alert('Enter "?type=task&itemid=0" at the end of the current URL');
@@ -698,14 +701,3 @@ function arrayList(array) {
 
   return HTMLoutput;
 }
-
-var arrayFields = [  ];
-
-var arrayOfOptions = [  ];
-var arrayOfOptionsNames = [  ];
-
-var variables = {
-  options : arrayOfOptions,
-  existing : arrayFields,
-  attrType : objType
-};
