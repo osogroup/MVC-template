@@ -333,8 +333,11 @@ const doTheStringify = async () => {
               sVal : stuffValue,  // text, textarea, array, ...
               hKey : headerKey, // id, name, description, ...
               hVal : headerValue,  // 1, COI: Static Site HTML Structure, ...
+              fields : arrayFields,
               options: arrayOfOptions, // 0,1
-              names: arrayOfOptionsNames // Design Wireframes, Code Structure & Style
+              names: arrayOfOptionsNames, // Design Wireframes, Code Structure & Style
+              count : i,
+              scripts : "scripts"
             };
             HTMLoutput += inputFunction(parameters);
           }
@@ -457,7 +460,21 @@ function inputFunction(params) {
   var newParams = {
     newHKey : params.hKey,
     newHVal : params.hVal
+
+
+
   };
+
+  Val : stuffValue,  // text, textarea, array, ...
+              hKey : headerKey, // id, name, description, ...
+              hVal : headerValue,  // 1, COI: Static Site HTML Structure, ...
+              fields : arrayFields,
+              options: arrayOfOptions, // 0,1
+              names: arrayOfOptionsNames, // Design Wireframes, Code Structure & Style
+              count : i,
+              scripts : "scripts"
+};
+
   if (params.sVal == "text") {
     return textAttribute(newParams);
   }
