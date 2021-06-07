@@ -158,7 +158,7 @@ var statusOptions = [];
 const doTheStringify = async () => {
 
   var i = 0;
-  var arrayFields = [  ];
+  var arrayFields = [ 'Ron', 'John', 'James' ];
   var arrayOfOptions = [  ];
   var arrayOfOptionsNames = [  ];
 
