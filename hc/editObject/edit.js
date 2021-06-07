@@ -293,7 +293,7 @@ const doTheStringify = async () => {
             // #####################################################################################################################
 
             console.log("The information lines up..");
-            arrayOfOptions.push(headerValue);
+            arrayOfOptions.push(headerValue[0]);
             console.log("This is arrayOfOptions post-filled: ", arrayOfOptions);
           }
 
