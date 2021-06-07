@@ -376,7 +376,7 @@ const doTheStringify = async () => {
 
 
 function addFunction(variable) {
-  var select = document.getElementById(variable);  
+  var select = document.getElementById('scripts');  
 
   var deletion = document.getElementById('appendTo');
   deletion.remove();
@@ -678,17 +678,9 @@ function arrayList(array) {
   HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
   }
 
-  // creating parameters for addFunction
-  addFunctionParameters = {
-    addScripts : array.newScripts,
-    addFields : array.newFields,
-    addCount : i
-  };
-  console.log("This is addFunctionParameters: ", addFunctionParameters);
-
   // closing the form tags and creating the add button
   HTMLoutput +=       '</select>'
-                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction('+addFunctionParameters+')"/>'
+                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction('+array.newFields+')"/>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
