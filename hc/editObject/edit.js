@@ -394,7 +394,6 @@ function addFunction(variable) {
 
   // creating parameters for removeFunction *need arrayFields and count
   var removeFunctionParameters = {
-    count : i
   };
 
   // adding a new row and columns to the HTML
@@ -410,7 +409,6 @@ function addFunction(variable) {
 
 function removeFunction(val) {
   var HTMLelement = '';
-
   // removing 1 value from arrayFields starting at index 'val'
   arrayFields.splice(val, 1);
 
