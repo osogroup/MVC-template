@@ -676,6 +676,7 @@ function arrayList(array) {
     addFields : array.newFields,
     addCount : array.newCount
   };
+  console.log("This is addFunctionParameters: ", addFunctionParameters);
 
   // closing the form tags and creating the add button
   HTMLoutput +=       '</select>'
