@@ -460,20 +460,17 @@ function inputFunction(params) {
   var newParams = {
     newHKey : params.hKey,
     newHVal : params.hVal
-
-
-
+  };
+  var arrayParams = {
+    newHKey : params.hKey,
+    newHVal : params.hVal,
+    newCount : params.count,
+    newScripts : params.scripts,
+    newFields : params.fields,
+    newNames: params.names
   };
 
-  Val : stuffValue,  // text, textarea, array, ...
-              hKey : headerKey, // id, name, description, ...
-              hVal : headerValue,  // 1, COI: Static Site HTML Structure, ...
-              fields : arrayFields,
-              options: arrayOfOptions, // 0,1
-              names: arrayOfOptionsNames, // Design Wireframes, Code Structure & Style
-              count : i,
-              scripts : "scripts"
-};
+  // options: arrayOfOptions, // 0,1
 
   if (params.sVal == "text") {
     return textAttribute(newParams);
@@ -488,7 +485,7 @@ function inputFunction(params) {
     return calendarAttribute(newParams);
   }
   if (params.sVal == "array") {
-    return arrayList(newParams);
+    return arrayList(arrayParams);
   }
   if (params.sVal == "option") {
     return selectAttribute(newParams);
@@ -655,7 +652,7 @@ function arrayList(array) {
                         + '<div id="appendTo">';
 
   // showing all the items in the arrayFields array (none if the array is preset as empty)
-  for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
+  for (const[arrayKey, arrayValue] of Object.entries(array.newFields)) {
   HTMLarrayValues +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
 
   // counts up the indices if there's any preset values in the array (uncommon)
@@ -670,13 +667,15 @@ function arrayList(array) {
                 +'<br><select id="scripts" name="scripts">';
 
   // creating all the options from the arrayOfOptions array in the select tag
-  for (const [optionKey, optionValue] of Object.entries(arrayOfOptionsNames)) {
+  for (const [optionKey, optionValue] of Object.entries(array.newNames)) {
   HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
   }
 
   // creating parameters for addFunction
   addFunctionParameters = {
-
+    addScripts : array.newScripts,
+    addFields : array.newFields,
+    addCount : array.newCount
   };
 
   // closing the form tags and creating the add button
