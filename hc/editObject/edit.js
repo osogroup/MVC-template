@@ -321,7 +321,7 @@ const doTheStringify = async () => {
 
                 // checks the values of arrayOfOptions
                 if (arrayOfOptions.includes(tagTypeValue['id'])) {
-                  arrayOfOptionsNames.push(tagData[tagTypeValue['id']]);
+                  arrayOfOptionsNames.push(tagData[tagTypeValue['id']].name);
                 }
               }
               console.log("This is arrayOfOptionsNames: ", arrayOfOptionsNames);
