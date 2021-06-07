@@ -10,7 +10,7 @@
     "list":["id","name","tags", "status"],
     "editable":["name","description","tags", "status", "dueDate", "estEff"] 
   },
-  "tag":{
+  "tags":{
     "required":["id","name"],
     "list":["id","name","description"],
     "editable":["name","description"] 
