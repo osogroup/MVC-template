@@ -160,7 +160,7 @@ const doTheStringify = async () => {
   var i = 0;
 
   if(objType == null || objItemid == null) {
-    alert('Please enter "?type=task&itemid=0" at the end of the current URL');
+    alert('Enter "?type=task&itemid=0" at the end of the current URL');
   }
   else {
     var data = await tempData();
