@@ -175,16 +175,8 @@ const doTheStringify = async () => {
 
     var arrayFields = [  ];
 
-    var arrayOfOptions = [  ];
-    var arrayOfOptionsNames = [  ];
-
-    var variables = {
-      options : arrayOfOptions,
-      existing : arrayFields,
-      attrType : objType
-    };
-
-
+    var arrayOfOptions = [];
+    var arrayOfOptionsNames = [];
 
     // filling arrayOfOptions[]
     var tagData = data.tags;
