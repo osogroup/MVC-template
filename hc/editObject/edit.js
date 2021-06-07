@@ -333,7 +333,7 @@ const doTheStringify = async () => {
               hKey : headerKey, // id, name, description, ...
               hVal : headerValue  // 1, COI: Static Site HTML Structure, ...
             };
-            HTMLoutput += inputFunction(parameters);
+            // HTMLoutput += inputFunction(parameters);
           }
         }
         
@@ -661,10 +661,10 @@ function arrayList(array) {
   return HTMLoutput;
 }
   
-var arrayFields = [ 'tag1' ];
+var arrayFields = [  ];
 
-var arrayOfOptions = [ 'option1', 'option2', 'option3' ];
-var arrayOfOptionsNames = [];
+var arrayOfOptions = [  ];
+var arrayOfOptionsNames = [  ];
 
 var variables = {
   options : arrayOfOptions,
