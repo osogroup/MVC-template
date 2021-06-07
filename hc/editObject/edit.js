@@ -293,6 +293,12 @@ const doTheStringify = async () => {
             // #####################################################################################################################
 
             console.log("The information lines up..");
+            for (const [tagKey, tagValue] of Object.entries(headerValue)) {
+              console.log("This is tagKey: ", tagKey);
+              console.log("This is tagValue: ", tagValue);
+
+            }
+
             arrayOfOptions.push(headerValue[0]);
             console.log("This is arrayOfOptions post-filled: ", arrayOfOptions);
           }
