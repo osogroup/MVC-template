@@ -287,24 +287,29 @@ const doTheStringify = async () => {
           // console.log("This is stuffKey: ", stuffKey); // (required, type, inpType)
           // console.log("This is stuffValue: ", stuffValue); // (true, string, text)
 
-          // filling arrayOfOptions
-          if (stuffKey == 'inpType' && stuffValue == 'array') {
 
             // #####################################################################################################################
 
-            console.log("The information lines up..");
-            for (const [tagKey, tagValue] of Object.entries(headerValue)) {
-              console.log("This is tagKey: ", tagKey); // positions in array
-              console.log("This is tagValue: ", tagValue); // values in those positions
-              arrayOfOptions.push(tagValue);
 
-            }
-
-            console.log("This is arrayOfOptions post-filled: ", arrayOfOptions);
-          }
+          
 
           if (stuffKey == "inpType") {
-            // console.log("This is the stuffValue of stuffKey", stuffValue); // (text, textarea, text, array, date, number)
+            // stuffValue: text, textarea, text, array, date, number
+
+            // filling arrayOfOptions
+            if (stuffValue == 'array') {
+
+              console.log("The information lines up..");
+              for (const [tagKey, tagValue] of Object.entries(headerValue)) {
+                console.log("This is tagKey: ", tagKey); // positions in array
+                console.log("This is tagValue: ", tagValue); // values in those positions
+                arrayOfOptions.push(tagValue);
+  
+              }
+  
+              console.log("This is arrayOfOptions post-filled: ", arrayOfOptions);
+            }
+
             var parameters = {
               sVal : stuffValue,  // text, textarea, array, ...
               hKey : headerKey, // id, name, description, ...
