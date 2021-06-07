@@ -647,7 +647,6 @@ function arrayList(array) {
   console.log("This is the input for arrayList(array): ", array);
 
   var i = array.newCount;
-  console.log("This is var i: ", i);
   var HTMLoutput = '';
   var HTMLarrayValues = '';
 
@@ -682,7 +681,7 @@ function arrayList(array) {
   addFunctionParameters = {
     addScripts : array.newScripts,
     addFields : array.newFields,
-    addCount : array.newCount
+    addCount : i
   };
   console.log("This is addFunctionParameters: ", addFunctionParameters);
 
