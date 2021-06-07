@@ -159,6 +159,8 @@ var tagOptions = [];
 
 const doTheStringify = async () => {
 
+
+
   if(objType == null || objItemid == null) {
     alert('Please enter "?type=task&itemid=0" at the end of the current URL');
   }
@@ -170,6 +172,19 @@ const doTheStringify = async () => {
     var tagTypeData = data['tags']; // objTypeData specifically for tags
     var configTypeData = config[objType];
     console.log("This is typeStuff: ", typeStuff);
+
+    var arrayFields = [  ];
+
+    var arrayOfOptions = [  ];
+    var arrayOfOptionsNames = [  ];
+
+    var variables = {
+      options : arrayOfOptions,
+      existing : arrayFields,
+      attrType : objType
+    };
+
+
 
     // filling arrayOfOptions[]
     var tagData = data.tags;
@@ -660,4 +675,3 @@ function arrayList(array) {
 
   return HTMLoutput;
 }
-  
