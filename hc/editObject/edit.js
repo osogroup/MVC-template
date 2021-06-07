@@ -661,14 +661,3 @@ function arrayList(array) {
   return HTMLoutput;
 }
   
-var arrayFields = [  ];
-
-var arrayOfOptions = [  ];
-var arrayOfOptionsNames = [  ];
-
-var variables = {
-  options : arrayOfOptions,
-  existing : arrayFields,
-  attrType : objType
-};
-
