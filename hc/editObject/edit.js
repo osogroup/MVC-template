@@ -410,6 +410,7 @@ function addFunction(variable) {
 
 function removeFunction(val) {
   var HTMLelement = '';
+  console.log("This is removeFunction(val)'s parameters: ", val);
   // removing 1 value from arrayFields starting at index 'val'
   arrayFields.splice(val, 1);
 
@@ -687,7 +688,7 @@ function arrayList(array) {
 
   // closing the form tags and creating the add button
   HTMLoutput +=       '</select>'
-                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scripts\')"/>'
+                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction('+addFunctionParameters+')"/>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
