@@ -378,7 +378,7 @@ function addFunction(variable) {
   console.log("This is variable: ", variable); // <input type="button" id="....
   console.log("This is the variable.id: ", variable.id); // showTxt_3
 
-  var number = parseInt(element.id.match(/^button(\d+)$/)[1], 10);
+  var number = $('div').attr('id').replace(/\D/g,'');
   console.log("This is number: ", number);
 
   var select = document.getElementById('scripts');
