@@ -662,12 +662,7 @@ function arrayList(array) {
   // counts up the indices if there's any preset values in the array (uncommon)
   i++;
   }
-
-  for(const[] of Object.entries()) {
-  HTMLarrayValues +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
-
-  }
-
+  
   HTMLoutput = HTMLoutput+HTMLarrayValues;
   // console.log("This is HTMLoutput: ", HTMLoutput);
 
