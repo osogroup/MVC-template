@@ -318,10 +318,13 @@ const doTheStringify = async () => {
                 // console.log("This is tagTypeKey: ", tagTypeKey); // 0, 1, 2
                 // console.log("This is tagTypeValue: ", tagTypeValue); // object 0, object 1, object 2
                 console.log("This is tagTypeValue[id]: ", tagTypeValue['id']);
+
+                // checks the values of arrayOfOptions
                 if (arrayOfOptions.includes(tagTypeValue['id'])) {
-                  console.log("%%%%%%%%%%%%%%%%%%%%%%%");
+                  arrayOfOptionsNames.push(tagData[tagTypeValue['id']]);
                 }
               }
+              console.log("This is arrayOfOptionsNames: ", arrayOfOptionsNames);
 
             }
 
@@ -661,6 +664,7 @@ function arrayList(array) {
 var arrayFields = [ 'tag1' ];
 
 var arrayOfOptions = [ 'option1', 'option2', 'option3' ];
+var arrayOfOptionsNames = [];
 
 var variables = {
   options : arrayOfOptions,
