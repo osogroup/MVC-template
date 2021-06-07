@@ -381,12 +381,12 @@ function addFunction(variable) {
   // access text property of selected option
   elementVal = select.options[select.selectedIndex].text;
 
-  var tag = document.createElement('div');
-  tag.setAttribute("id", "appendTo");
-  var elm = document.getElementById("outerDiv");
-  // console.log("This is elm: ", elm);
-  elm.appendChild(tag);
-  $('#appendTo').append(HTMLelement);
+  // var tag = document.createElement('div');
+  // tag.setAttribute("id", "appendTo");
+  // var elm = document.getElementById("outerDiv");
+  // // console.log("This is elm: ", elm);
+  // elm.appendChild(tag);
+  // $('#appendTo').append(HTMLelement);
   
 
   // creating parameters for removeFunction *need arrayFields and count
