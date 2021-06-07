@@ -677,6 +677,8 @@ function arrayList(array) {
   HTMLoutput +=       '<option value="'+optionValue+'">'+optionValue+'</option>';
   }
 
+  console.log("This is var i after looping: ", i);
+
   // creating parameters for addFunction
   addFunctionParameters = {
     addScripts : array.newScripts,
