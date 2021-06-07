@@ -397,7 +397,7 @@ function addFunction(variable) {
   };
 
   // adding a new row and columns to the HTML
-  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
+  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn'+variable.addCount+'" value="-" onclick="removeFunction('+i+')"></div></div>';
   $('#appendTo').append(HTMLelement);
 
   // adjusting indices
@@ -646,6 +646,8 @@ function arrayList(array) {
   // }
   console.log("This is the input for arrayList(array): ", array);
 
+  var i = array.newCount;
+  console.log("This is var i: ", i);
   var HTMLoutput = '';
   var HTMLarrayValues = '';
 
