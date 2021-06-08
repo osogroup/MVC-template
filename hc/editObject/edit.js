@@ -492,6 +492,7 @@ function selectAttribute(options) {
   return selectHTML;
 }
 
+
 function selectedOption(str) {
   var selected = $('#inputstatus').find(':selected').text();
   var superKey = objType+ '_' +objItemid;
@@ -541,6 +542,7 @@ function calendarAttribute(date) {
 
   return calendarHTML;
 }
+
 
 function newDate(date) {
   var selected = $('#inputdueDate').val();
