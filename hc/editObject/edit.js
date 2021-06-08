@@ -294,7 +294,9 @@ function addFunction(variable) {
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
-  var addArray = [localStorage.getItem(objType+'_'+objItemid+'_HTMLnames')];
+  var storageItem = objType+'_'+objItemid+'_HTMLnames';
+
+  var addArray = [localStorage.getItem(storageItem)];
   console.log("This is addArray: ", addArray);
 
   // grab only the number from the button's ID
@@ -322,10 +324,14 @@ function addFunction(variable) {
 
   // access text property of selected option
   elementVal = select.options[select.selectedIndex].text;
+  addArray.push(elementVal);
+  
+  console.log("This is the new addArray: ", addArray);
 
   // adding a new row and columns to the HTML
   var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variableID+'" value="-" onclick="removeFunction('+variableID+')"></div></div>';
   $('#appendTo').append(HTMLelement);
+  localStorage.setItem(storageItem, );
 }
 
 
