@@ -63,7 +63,7 @@ function anyChange(str) {
 // ------------------------------------------ Check localStorage ------------------------------------------
 
 
-function checkLocalStorage() {
+function checkLocalStorage(otd) {
 
   var objItem = {};
   var objectKeys = objType + '_' + objItemid;
@@ -80,7 +80,7 @@ function checkLocalStorage() {
     // create HTML header and fields
   }
   else {
-    var forOfLoop = objTypeData[objItemid];
+    var forOfLoop = otd[objItemid];
     console.log("objectKeys was just created..!");
     var repositoryItem = data[objType];
     // console.log("This is the repositoryItem..", repositoryItem);
@@ -102,6 +102,7 @@ function checkLocalStorage() {
       }
     }
   }
+  // this is either coming from localStorage or from the 
   return forOfLoop;
 }
 
@@ -151,7 +152,7 @@ const doTheStringify = async () => {
     HTMLoutput += '<h1>Edit '+objType+' Item</h1>'
               + '</div>';
 
-    var forOfLoop = checkLocalStorage();
+    var forOfLoop = checkLocalStorage(objTypeData);
 
 
     // --------------------------------------- Item Header and Inputs ---------------------------------------
