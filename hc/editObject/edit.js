@@ -382,8 +382,13 @@ function addFunction(variable) {
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
+  var thisButton = variable;
+  console.log("This is thisButton: ", thisButton);
+  
+
   var variableID = variable.id.replace(/showTxt_/, '');
   console.log("This is variableID...", variableID);
+
 
   var select = document.getElementById('scripts');
 
