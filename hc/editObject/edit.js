@@ -302,6 +302,7 @@ function addFunction(variable) {
   var parseObjLoop = JSON.parse(objLoop);
   console.log("This is parseObjLoop: ", parseObjLoop);
 
+  // filling 
   for(const [addKey, addValue] of Object.entries(parseObjLoop)) {
     // console.log("This is addKey: ", addKey); 0, 1
     console.log("This is addValue: ", addValue); // Design Wireframes, Code Structure & Style
