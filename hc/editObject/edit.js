@@ -575,7 +575,7 @@ function arrayList(array) {
   var HTMLoutput = '';
   var HTMLarrayValues = '';
   var objectKeyNames = objType+'_'+objItemid+'_';
-  var HTMLnames = {};
+  var HTMLnames = [];
 
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
