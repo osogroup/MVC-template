@@ -336,7 +336,7 @@ function removeFunction(val) {
   // deleting the row
   element.parentNode.parentNode.remove(element.parentNode.parentNode);
 
-  // // get the Add button
+  // get the Add button
   // var thisButton = document.getElementById('showTxt_'+val);
   // console.log("This is thisButton: ", thisButton);
 
@@ -351,7 +351,12 @@ function removeFunction(val) {
   // $('#buttonSpot').append(newButton);
 
 
- 
+  // deleting the entire div containing the arrayField values
+  // element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
+  // for (const [elementKey, elementValue] of Object.entries(arrayFields)) {
+  //   HTMLelement += '<div class="row"><div class="col-10">'+elementValue+'</div><div class="col-2"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeFunction('+elementKey+')"></div></div>';
+  // }
+
 
   // next 5 lines create a new div within outerDiv that has the id="appendTo"
   // var tag = document.createElement('div');
@@ -360,6 +365,10 @@ function removeFunction(val) {
   // // console.log("This is elm: ", elm);
   // elm.appendChild(tag);
   // $('#appendTo').append(HTMLelement);
+
+  // console.log("This is arrayFields after .splice(): ", arrayFields);
+
+  // adjusting indices for add function
 }
 
 
@@ -575,6 +584,7 @@ function arrayList(array) {
   // counts up the indices if there's any preset values in the array (uncommon)
   i++;
   }
+  i--;
   
   HTMLoutput = HTMLoutput+HTMLarrayValues;
   // console.log("This is HTMLoutput: ", HTMLoutput);
