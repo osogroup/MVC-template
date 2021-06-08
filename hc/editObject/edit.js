@@ -659,7 +659,7 @@ function arrayList(array) {
                         + '<div id="appendTo">';
 
   // showing all the items in the arrayFields array (none if the array is preset as empty)
-  for (const[arrayKey, arrayValue] of Object.entries(array.newFields)) {
+  for (const[arrayKey, arrayValue] of Object.entries(array.newNames)) {
   HTMLarrayValues +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
 
   // counts up the indices if there's any preset values in the array (uncommon)
