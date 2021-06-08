@@ -333,6 +333,11 @@ function addFunction(variable) {
 
 function removeFunction(val) {
   console.log("This is removeFunction(val)'s parameters: ", val);
+
+  var addArray = [localStorage.getItem(HTMLnames)];
+  console.log("This is addArray: ", addArray);
+
+
   // removing 1 value from arrayFields starting at index 'val'
   // arrayFields.splice(val, 1);
 
@@ -376,6 +381,33 @@ function removeFunction(val) {
 
   // adjusting indices for add function
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GOD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
