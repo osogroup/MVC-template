@@ -636,7 +636,7 @@ function arrayList(array) {
   // counts up the indices if there's any preset values in the array
   i++;
   }
-  localStorage.setItem(objectKeyNames+'HTMLnames', HTMLnames);
+  localStorage.setItem(objectKeyNames+'HTMLnames', JSON.stringify(HTMLnames));
   // removing the extra i++ that is called
   i--;
   
