@@ -574,6 +574,7 @@ function arrayList(array) {
   var i = 0;
   var HTMLoutput = '';
   var HTMLarrayValues = '';
+  var objectKeyNames = objType+'_'+objItemid+'_';
   var HTMLnames = '';
 
   HTMLoutput  +='<div class="col-12">'
@@ -591,6 +592,7 @@ function arrayList(array) {
   i++;
   }
   console.log("This is HTMLnames: ", HTMLnames);
+  localStorage.setItem(, HTMLnames)
   // removing the extra i++ that is called
   i--;
   
