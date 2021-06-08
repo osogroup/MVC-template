@@ -302,10 +302,10 @@ function addFunction(variable) {
   var parseObjLoop = JSON.parse(objLoop);
   console.log("This is parseObjLoop: ", parseObjLoop);
   
-  for(const [addKey, addValue] of Object.entries(parseObjLoop)) {
-    console.log("This is addKey: ", addKey);
-    console.log("This is addValue: ", addValue);
-  }
+  // for(const [addKey, addValue] of Object.entries(parseObjLoop)) {
+  //   console.log("This is addKey: ", addKey);
+  //   console.log("This is addValue: ", addValue);
+  // }
 
   console.log("This is addArray: ", addArray);
 
