@@ -378,7 +378,8 @@ function addFunction(variable) {
   console.log("This is variable: ", variable); // <input type="button" id="....
   console.log("This is the variable.id: ", variable.id); // showTxt_3
 
-  console.log("This is variable.id.replace(/showTxt_/, ''): ", variable.id.replace(/showTxt_/, ''));
+  var variableID = variable.id.replace(/showTxt_/, '');
+  console.log("Pls be 3...", variableID);
 
   var select = document.getElementById('scripts');
 
