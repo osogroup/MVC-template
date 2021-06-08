@@ -375,8 +375,8 @@ const doTheStringify = async () => {
 
 
 function addFunction(variable) {
-  console.log("This is variable: ", variable); // <input type="button" id="....
-  console.log("This is the variable.id: ", variable.id); // showTxt_3
+  // console.log("This is variable: ", variable); // <input type="button" id="....
+  // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
   var variableID = variable.id.replace(/showTxt_/, '');
   console.log("Pls be 3...", variableID);
@@ -385,16 +385,6 @@ function addFunction(variable) {
 
   // access text property of selected option
   elementVal = select.options[select.selectedIndex].text;
-
-  // var tag = document.createElement('div');
-  // tag.setAttribute("id", "appendTo");
-  // var elm = document.getElementById("outerDiv");
-  // // console.log("This is elm: ", elm);
-  // elm.appendChild(tag);
-  // $('#appendTo').append(HTMLelement);
-  
-
-  // creating parameters for removeFunction *need arrayFields and count
 
   // adding a new row and columns to the HTML
   var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variable.id+'" value="-" onclick="removeFunction('+variable.id+')"></div></div>';
