@@ -285,7 +285,7 @@ const doTheStringify = async () => {
         for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
           if (headerKey == 'status' && stuffKey == 'opts') {
             statusOptions.push(stuffValue);
-            // console.log("This is statusOptions: ", statusOptions);
+            console.log("This is statusOptions: ", statusOptions);
           }
 
         }  
@@ -455,6 +455,7 @@ function removeFunction(val) {
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GOD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+// takes the inpType and sends new parameters to the proper function
 function inputFunction(params) {
   var newParams = {
     newHKey : params.hKey,
