@@ -301,7 +301,7 @@ function addFunction(variable) {
   console.log("This is objLoop: ", objLoop);
   var parseObjLoop = JSON.parse(objLoop);
   console.log("This is parseObjLoop: ", parseObjLoop);
-  
+
   for(const [addKey, addValue] of Object.entries(parseObjLoop)) {
     console.log("This is addKey: ", addKey);
     console.log("This is addValue: ", addValue);
@@ -322,7 +322,7 @@ function addFunction(variable) {
 
   // delete the Add button
   thisButton.remove();
-  
+
   // create a new button with incremented value
   var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
   // console.log("This is the new button: ", newButton);
