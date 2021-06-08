@@ -353,7 +353,6 @@ function removeFunction(val) {
   var storageKey = objType+'_'+objItemid+'_HTMLnames';
   var removeArray = [];
 
-  
 
   // get the localStorage
   var stringThing = localStorage.getItem(storageKey);
@@ -363,13 +362,15 @@ function removeFunction(val) {
   var parseThing = JSON.parse(stringThing);
   console.log("This is parseThing: ", parseThing);
 
-  // splice
+  // push values into array
+  for (const [removeKey, removeValue] of Object.entries()) {
+    
+  }
+
+  // splice array
   removeArray.splice(val, 1);
 
-  // stringify
-
-
-  // set item in localStorage
+  // stringify into localStorage
 
 
   // removing 1 value from arrayFields starting at index 'val'
