@@ -296,11 +296,11 @@ function addFunction(variable) {
 
   var addArray = [];
   var storageKey = objType+'_'+objItemid+'_HTMLnames';
-  console.log("This is storageKey: ", storageKey);
+  // console.log("This is storageKey: ", storageKey);
   var objLoop = localStorage.getItem(storageKey);
-  console.log("This is objLoop: ", objLoop);
+  // console.log("This is objLoop: ", objLoop);
   var parseObjLoop = JSON.parse(objLoop);
-  console.log("This is parseObjLoop: ", parseObjLoop);
+  // console.log("This is parseObjLoop: ", parseObjLoop);
 
   // filling addArray with localStorage values
   for(const [addKey, addValue] of Object.entries(parseObjLoop)) {
