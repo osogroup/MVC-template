@@ -156,7 +156,7 @@ function anyChange(str) {
 
 const doTheStringify = async () => {
 
-  var arrayFields = [ 'Ron', 'John', 'James' ];
+  var arrayFields = [];
   var arrayOfOptions = [];
   var arrayOfOptionsNames = [];
   var statusOptions = [];
