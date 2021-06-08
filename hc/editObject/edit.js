@@ -351,6 +351,7 @@ function addFunction(variable) {
 function removeFunction(val) {
   console.log("This is removeFunction(val)'s parameters: ", val);
   var storageKey = objType+'_'+objItemid+'_HTMLnames';
+  var removeArray = [];
 
   // get the localStorage
   var stringThing = localStorage.getItem(storageKey);
@@ -361,7 +362,7 @@ function removeFunction(val) {
   console.log("This is parseThing: ", parseThing);
 
   // splice
-
+  removeArray.splice(val, 1);
 
   // stringify
 
