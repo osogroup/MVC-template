@@ -191,11 +191,9 @@ const doTheStringify = async () => {
                     // + '<div class="col-12">'+headerKey+'</div>';
       }
       
-
       if (configTypeData.editable.includes(headerKey) == true) {
 
         // making object item an input textbox
-
 
         var typeHeader = typeStuff[headerKey];
         
