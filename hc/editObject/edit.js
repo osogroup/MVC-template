@@ -340,7 +340,7 @@ const doTheStringify = async () => {
               options: arrayOfOptions, // 0,1
               names: arrayOfOptionsNames, // Design Wireframes, Code Structure & Style
               scripts : "scripts",
-              statOpt : statusOptions
+              StatOpts : statusOptions
             };
             HTMLoutput += inputFunction(parameters);
           }
@@ -475,7 +475,7 @@ function inputFunction(params) {
   var optParams = {
     newHKey : params.hKey,
     newHVal : params.hVal,
-    newStatOpt : params.statOpt,
+    newStatOpt : params.StatOpts,
     newFields : params.fields
   };
 
@@ -558,7 +558,7 @@ function selectAttribute(options) {
                     + '<legend>'+options.newHKey+'</legend>'
                     + '<select id="input'+options.newHKey+'" name="'+options.newHKey+'" value="optionDisp" onchange="selectedOption(this.name)">';
 
-  for (const [varsKey, varsValue] of Object.entries(options.newStatOpt[0])) {
+  for (const [varsKey, varsValue] of Object.entries(options.newStatOpts[0])) {
 
     // checking if the option is the one existing in the localStorage... if it is then it puts the 'selected' attribute in the tag
     if (varsValue == myObjectStatus) {
