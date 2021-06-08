@@ -294,7 +294,14 @@ function addFunction(variable) {
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
+  var addArray = [];
   var storageItem = objType+'_'+objItemid+'_HTMLnames';
+
+  for(const [addKey, addValue] of Object.entries(localStorage.getItem(storageItem))) {
+    console.log("This is addKey: ", addKey);
+    console.log("This is addValue: ", addValue);
+
+  }
 
   var addArray = [localStorage.getItem(storageItem)];
   console.log("This is addArray: ", addArray);
