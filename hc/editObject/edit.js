@@ -301,7 +301,7 @@ function addFunction(variable) {
   console.log("This is objLoop: ", objLoop);
   var parseObjLoop = JSON.parse(objLoop);
   
-  for(const [addKey, addValue] of Object.entries(objLoop)) {
+  for(const [addKey, addValue] of Object.entries(parseObjLoop)) {
     console.log("This is addKey: ", addKey);
     console.log("This is addValue: ", addValue);
   }
