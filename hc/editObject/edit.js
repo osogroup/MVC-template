@@ -328,27 +328,25 @@ function removeFunction(val) {
   // removing 1 value from arrayFields starting at index 'val'
   // arrayFields.splice(val, 1);
 
-  // getting a variable that represents whichever remove button I push on the browser (technically dont need
-  // the specific id since the the value is deleted from arrayFields anyway and then arrayFields is ran through,
-  // recreating the display)
+  // getting the remove button at index 'val'
   var element = document.querySelector('#remvBtn_'+val);
 
   // deleting the row
   element.parentNode.parentNode.remove(element.parentNode.parentNode);
 
-  // get the Add button
-  // var thisButton = document.getElementById('showTxt_'+val);
-  // console.log("This is thisButton: ", thisButton);
+    // get the Add button
+    // var thisButton = document.getElementById('showTxt_'+val);
+    // console.log("This is thisButton: ", thisButton);
 
-  // // delete the Add button
-  // thisButton.remove();
+    // // delete the Add button
+    // thisButton.remove();
 
-  // // create a new button with incremented value
-  // var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
-  // // console.log("This is the new button: ", newButton);
+    // // create a new button with incremented value
+    // var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
+    // // console.log("This is the new button: ", newButton);
 
-  // // append button to the buttonSpot div
-  // $('#buttonSpot').append(newButton);
+    // // append button to the buttonSpot div
+    // $('#buttonSpot').append(newButton);
 
 
   // deleting the entire div containing the arrayField values
