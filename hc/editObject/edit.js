@@ -294,6 +294,8 @@ function addFunction(variable) {
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
+  var 
+
   // grab only the number from the button's ID
   var variableID = variable.id.replace(/showTxt_/, '');
   // console.log("This is variableID...", variableID);
