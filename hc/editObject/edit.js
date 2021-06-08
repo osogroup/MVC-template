@@ -323,7 +323,7 @@ function addFunction(variable) {
   console.log("This is thisButton: ", thisButton);
 
   // change input's id
-  console.log("This is $(this): ", $(this));
+  console.log("This is $(this).prev('input'): ", $(this).prev('input'));
   // $(this).prop('id', 'showTxt_100');
 
   // create a new button with incremented value
