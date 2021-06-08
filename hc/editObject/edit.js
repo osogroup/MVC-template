@@ -310,9 +310,7 @@ function addFunction(variable) {
     // addKey: 0, 1
     // addValue: Design Wireframes, Code Structure & Style
     addArray.push(addValue);
-    i++;
   }
-  console.log("This is i: ", i);
 
   // grab only the number from the button's ID
   var variableID = variable.id.replace(/showTxt_/, '');
@@ -329,7 +327,7 @@ function addFunction(variable) {
   // thisButton.remove();
 
   // *** Change add button id ***************************************
-  // jQuery(this).prev("li").attr("id","newId");
+  $(this).prev("input").attr("id","showTxt_"+variableID);
 
   // create a new button with incremented value
   // var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
