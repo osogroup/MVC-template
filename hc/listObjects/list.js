@@ -133,7 +133,7 @@ const createHTML = async () => {
     + '<div class="row">'
     + '<div class="col-12">'
     + '<p id="header">'
-    + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="50">';
+    + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
 
   // creating the links for the header
   for (const [headerKey, headerValue] of Object.entries(data)) {
