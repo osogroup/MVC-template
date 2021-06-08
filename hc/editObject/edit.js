@@ -323,10 +323,7 @@ function addFunction(variable) {
   var thisButton = variable;
   console.log("This is thisButton: ", thisButton);
 
-  // delete the Add button
-  // thisButton.remove();
-
-  // *** Change add button id ***************************************
+  // change input's id
   $(this).prev("input").attr("id","showTxt_"+variableID);
 
   // create a new button with incremented value
