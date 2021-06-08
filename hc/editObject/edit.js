@@ -115,6 +115,9 @@ function checkLocalStorage(check) {
 }
 
 
+// ------------------------------------------------ Stringify ------------------------------------------------
+
+
 const doTheStringify = async () => {
 
   var arrayFields = [];
