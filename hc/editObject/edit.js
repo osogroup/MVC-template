@@ -286,7 +286,7 @@ const doTheStringify = async () => {
         for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
           if (headerKey == 'status' && stuffKey == 'opts') {
             statusOptions.push(stuffValue);
-            console.log("This is statusOptions: ", statusOptions);
+            // console.log("This is statusOptions: ", statusOptions);
           }
 
         }  
@@ -307,7 +307,7 @@ const doTheStringify = async () => {
             // filling arrayOfOptions
             if (stuffValue == 'array') {
 
-              console.log("The information lines up..");
+              // console.log("The information lines up..");
               for (const [tagKey, tagValue] of Object.entries(headerValue)) {
                 // console.log("This is tagKey: ", tagKey); // positions in array
                 // console.log("This is tagValue: ", tagValue); // values in those positions
@@ -326,7 +326,7 @@ const doTheStringify = async () => {
                   arrayOfOptionsNames.push(tagData[tagTypeValue['id']].name);
                 }
               }
-              console.log("This is arrayOfOptionsNames: ", arrayOfOptionsNames);
+              // console.log("This is arrayOfOptionsNames: ", arrayOfOptionsNames);
 
             }
 
@@ -645,7 +645,7 @@ function arrayList(array) {
   //   alert("vars has an empty array");
   //   return;
   // }
-  console.log("This is the input for arrayList(array): ", array);
+  // console.log("This is the input for arrayList(array): ", array);
 
   var i = 0;
   var HTMLoutput = '';
