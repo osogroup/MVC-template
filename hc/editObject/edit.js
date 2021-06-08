@@ -294,7 +294,7 @@ function addFunction(variable) {
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
-  var addArray = [localStorage.getItem(HTMLnames)];
+  var addArray = [localStorage.getItem(objType+'_'+objItemid+'_HTMLnames')];
   console.log("This is addArray: ", addArray);
 
   // grab only the number from the button's ID
@@ -334,9 +334,6 @@ function addFunction(variable) {
 
 function removeFunction(val) {
   console.log("This is removeFunction(val)'s parameters: ", val);
-
-
-
 
   // removing 1 value from arrayFields starting at index 'val'
   // arrayFields.splice(val, 1);
@@ -623,7 +620,7 @@ function arrayList(array) {
   // counts up the indices if there's any preset values in the array
   i++;
   }
-  localStorage.setItem(objectKeyNames, HTMLnames);
+  localStorage.setItem(objectKeyNames+'HTMLnames', HTMLnames);
   // removing the extra i++ that is called
   i--;
   
