@@ -307,7 +307,7 @@ function addFunction(variable) {
   // console.log("This is the new button: ", newButton);
 
   // append button to the buttonSpot div
-  $('buttonSpot').append(newButton);
+  $('#buttonSpot').append(newButton);
 
   var select = document.getElementById('scripts');
 
