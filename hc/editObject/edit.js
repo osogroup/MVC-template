@@ -555,7 +555,7 @@ function selectAttribute(options) {
                     + '<legend>'+options.newHKey+'</legend>'
                     + '<select id="input'+options.newHKey+'" name="'+options.newHKey+'" value="optionDisp" onchange="selectedOption(this.name)">';
 
-  for (const [varsKey, varsValue] of Object.entries(options.newStatOpt)) {
+  for (const [varsKey, varsValue] of Object.entries(options.newStatOpt[0])) {
 
     // checking if the option is the one existing in the localStorage... if it is then it puts the 'selected' attribute in the tag
     if (varsValue == myObjectStatus) {
