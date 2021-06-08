@@ -378,9 +378,7 @@ function addFunction(variable) {
   console.log("This is variable: ", variable); // <input type="button" id="....
   console.log("This is the variable.id: ", variable.id); // showTxt_3
 
-  console.log("variable.id.replace(/showTxt/, '') ", variable.id.replace(/showTxt/, ''));
-  var number = $('input').attr('id').replace(/[^\d]/g,'');
-  console.log("This is number: ", number);
+  console.log("This is variable.id.replace(/showTxt_/, ''): ", variable.id.replace(/showTxt_/, ''));
 
   var select = document.getElementById('scripts');
 
