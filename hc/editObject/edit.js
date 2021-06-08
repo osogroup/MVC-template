@@ -288,18 +288,24 @@ function addFunction(variable) {
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
-  var thisButton = variable;
-  console.log("This is thisButton: ", thisButton);
-  thisButton.remove();
-
+  
+  // grab only the number from the button's ID
   var variableID = variable.id.replace(/showTxt_/, '');
   console.log("This is variableID...", variableID);
 
+  // get entire button
+  var thisButton = variable;
+  // console.log("This is thisButton: ", thisButton);
+
+  // delete the Add button
+  thisButton.remove();
+  
   variableID++;
   
   var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
   console.log("This is the new button: ", newButton);
 
+  // 
 
   var select = document.getElementById('scripts');
 
