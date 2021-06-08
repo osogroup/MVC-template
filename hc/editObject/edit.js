@@ -303,8 +303,8 @@ function addFunction(variable) {
   console.log("This is parseObjLoop: ", parseObjLoop);
 
   for(const [addKey, addValue] of Object.entries(parseObjLoop)) {
-    console.log("This is addKey: ", addKey);
-    console.log("This is addValue: ", addValue);
+    // console.log("This is addKey: ", addKey); 0, 1
+    console.log("This is addValue: ", addValue); // Design Wireframes, Code Structure & Style
   }
 
   console.log("This is addArray: ", addArray);
