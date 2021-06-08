@@ -64,7 +64,7 @@ function anyChange(str) {
 
 
 function clearLocalStorage() {
-  localStorage.clear;
+  localStorage.clear();
 }
 
 clearLocalStorage();
