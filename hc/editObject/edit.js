@@ -85,6 +85,8 @@ function checkLocalStorage(check) {
     // pull item from localStorage
     localStorage.getItem(objType+'_'+objItemid);
 
+    console.log(localStorage);
+
     // create HTML header and fields
   }
   else {
@@ -318,17 +320,20 @@ function addFunction(variable) {
 
   // get entire button
   var thisButton = variable;
-  // console.log("This is thisButton: ", thisButton);
+  console.log("This is thisButton: ", thisButton);
 
   // delete the Add button
-  thisButton.remove();
+  // thisButton.remove();
+
+  // *** Change add button id ***************************************
+  // jQuery(this).prev("li").attr("id","newId");
 
   // create a new button with incremented value
-  var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
+  // var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
   // console.log("This is the new button: ", newButton);
 
   // append button to the buttonSpot div
-  $('#buttonSpot').append(newButton);
+  // $('#buttonSpot').append(newButton);
 
   var select = document.getElementById('scripts');
 
