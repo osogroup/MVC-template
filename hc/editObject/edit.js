@@ -61,7 +61,9 @@ function anyChange(str) {
 
 
 function checkLocalStorage() {
-  
+
+  var objectKeys = objType + '_' + objItemid;
+
   if (localStorage.getItem(objectKeys) != null) {
     // console.log("This is localStorage.getItem(objectKeys)", localStorage.getItem(objectKeys));
     var forOfLoop = JSON.parse(localStorage.getItem(objectKeys));
@@ -118,7 +120,6 @@ const doTheStringify = async () => {
     var tagTypeData = data['tags']; // objTypeData specifically for tags
     var configTypeData = config[objType];
     console.log("This is typeStuff: ", typeStuff);
-    var objectKeys = objType + '_' + objItemid;
 
     // filling arrayOfOptions[]
     var tagData = data.tags;
