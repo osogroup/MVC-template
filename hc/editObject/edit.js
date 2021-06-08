@@ -297,12 +297,13 @@ function addFunction(variable) {
   var addArray = [];
   var storageItem = objType+'_'+objItemid+'_HTMLnames';
   var loopity = localStorage.getItem(storageItem);
+  var objLoopity = JSON.parse(loopity);
   console.log("This is loopity: ", loopity);
 
 
-  for(const [addKey] of Object.entries(loopity)) {
+  for(const [addKey, addValue] of Object.entries(loopity)) {
     console.log("This is addKey: ", addKey);
-    // console.log("This is addValue: ", addValue);
+    console.log("This is addValue: ", addValue);
   }
 
   console.log("This is addArray: ", addArray);
