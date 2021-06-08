@@ -300,7 +300,7 @@ function addFunction(variable) {
   console.log("This is loopity: ", loopity);
 
 
-  for(const [addKey, addValue] of Object.entries(loopity)) {
+  for(const [addKey, addValue] of Object.entries(loopity[0])) {
     console.log("This is addKey: ", addKey);
     console.log("This is addValue: ", addValue);
   }
