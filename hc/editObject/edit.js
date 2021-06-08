@@ -305,6 +305,7 @@ function addFunction(variable) {
   for(const [addKey, addValue] of Object.entries(parseObjLoop)) {
     // console.log("This is addKey: ", addKey); 0, 1
     console.log("This is addValue: ", addValue); // Design Wireframes, Code Structure & Style
+    addArray.push(addValue);
   }
 
   console.log("This is addArray: ", addArray);
