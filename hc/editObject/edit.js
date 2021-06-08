@@ -353,6 +353,8 @@ function removeFunction(val) {
   var storageKey = objType+'_'+objItemid+'_HTMLnames';
   var removeArray = [];
 
+  
+
   // get the localStorage
   var stringThing = localStorage.getItem(storageKey);
   console.log("This is stringThing: ", stringThing);
