@@ -363,8 +363,9 @@ function removeFunction(val) {
   console.log("This is parseThing: ", parseThing);
 
   // push values into array
-  for (const [removeKey, removeValue] of Object.entries()) {
-    
+  for (const [removeKey, removeValue] of Object.entries(parseThing)) {
+    console.log("This is removeKey: ", removeKey);
+    console.log("This is removeValue: ", removeValue);
   }
 
   // splice array
