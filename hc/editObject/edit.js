@@ -592,7 +592,7 @@ function arrayList(array) {
   i++;
   }
   console.log("This is HTMLnames: ", HTMLnames);
-  localStorage.setItem(, HTMLnames)
+  localStorage.setItem(objectKeyNames, HTMLnames);
   // removing the extra i++ that is called
   i--;
   
