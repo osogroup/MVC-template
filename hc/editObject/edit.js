@@ -384,8 +384,6 @@ function addFunction(variable) {
 
   var variableID = variable.id.replace(/showTxt_/, '');
   console.log("This is variableID...", variableID);
-  variableID++;
-  console.log("This is variableID++: ", variableID);
 
   var select = document.getElementById('scripts');
 
