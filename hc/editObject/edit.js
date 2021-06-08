@@ -336,6 +336,19 @@ function removeFunction(val) {
   // deleting the row
   element.parentNode.parentNode.remove(element.parentNode.parentNode);
 
+  // get the Add button
+  var thisButton = document.getElementById('showTxt_'+val);
+
+  // delete the Add button
+  thisButton.remove();
+
+  // create a new button with incremented value
+  var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
+  // console.log("This is the new button: ", newButton);
+
+  // append button to the buttonSpot div
+  $('#buttonSpot').append(newButton);
+
 
   // deleting the entire div containing the arrayField values
   // element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
