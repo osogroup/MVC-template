@@ -118,25 +118,12 @@ const doTheStringify = async () => {
     var tagTypeData = data['tags']; // objTypeData specifically for tags
     var configTypeData = config[objType];
     console.log("This is typeStuff: ", typeStuff);
+    var objectKeys = objType + '_' + objItemid;
 
     // filling arrayOfOptions[]
     var tagData = data.tags;
     console.log("This is tagData: ", tagData);
     
-
-    // Something that gets the values from the array in task => tags so I'll know which tags.name to include
-    // for (const [tagKey, tagValue] of Object.entries(tagData[0][1])) {
-    //   // console.log("This is tagKey: ", tagKey); // (0, 1, 2)
-    //   // console.log("This is tagValue: ", tagValue); // (object 0, object 1, object 2)
-    //   for (const [innerKey, innerValue] of Object.entries(tagValue)) {
-    //     console.log("This is innerKey: ", innerKey); 
-    //     console.log("This is innerValue: ", innerValue);
-    //     if (innerKey == 'name') {
-    //       arrayOfOptions.push(innerValue);
-    //     }
-    //   }
-    // }
-
 
     // -------------------------------------------- Navigation Bar --------------------------------------------
 
@@ -158,8 +145,6 @@ const doTheStringify = async () => {
     HTMLoutput += '<h1>Edit '+objType+' Item</h1>'
               + '</div>';
 
-    var objectKeys = objType + '_' + objItemid;
-    // console.log("This is objectKeys: ", objectKeys);
     var objItem = {};
 
 
