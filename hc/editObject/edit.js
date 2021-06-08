@@ -391,7 +391,7 @@ function addFunction(variable) {
   elementVal = select.options[select.selectedIndex].text;
 
   // adding a new row and columns to the HTML
-  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variable.id+'" value="-" onclick="removeFunction('+variable.id+')"></div></div>';
+  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variableID+'" value="-" onclick="removeFunction('+variable.id+')"></div></div>';
   $('#appendTo').append(HTMLelement);
 }
 
