@@ -340,7 +340,7 @@ const doTheStringify = async () => {
               options: arrayOfOptions, // 0,1
               names: arrayOfOptionsNames, // Design Wireframes, Code Structure & Style
               scripts : "scripts",
-              StatOpts : statusOptions
+              statOpts : statusOptions
             };
             HTMLoutput += inputFunction(parameters);
           }
@@ -475,7 +475,7 @@ function inputFunction(params) {
   var optParams = {
     newHKey : params.hKey,
     newHVal : params.hVal,
-    newStatOpt : params.StatOpts,
+    newStatOpts : params.statOpts,
     newFields : params.fields
   };
 
