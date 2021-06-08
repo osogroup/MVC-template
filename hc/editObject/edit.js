@@ -362,14 +362,9 @@ function removeFunction(val) {
   var parseThing = JSON.parse(stringThing);
   console.log("This is parseThing: ", parseThing);
 
+  // put localStorage into removeArray
   removeArray = parseThing;
-  console.log("This is removeArray: ", removeArray);
-
-  // push values into array
-  for (const [removeKey, removeValue] of Object.entries(parseThing)) {
-    console.log("This is removeKey: ", removeKey);
-    console.log("This is removeValue: ", removeValue);
-  }
+  // console.log("This is removeArray: ", removeArray);
 
   // splice array
   removeArray.splice(val, 1);
