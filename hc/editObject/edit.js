@@ -293,6 +293,7 @@ const doTheStringify = async () => {
 
 
 function addFunction(variable) {
+  var i = 0;
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
@@ -309,7 +310,9 @@ function addFunction(variable) {
     // addKey: 0, 1
     // addValue: Design Wireframes, Code Structure & Style
     addArray.push(addValue);
+    i++;
   }
+  console.log("This is i: ", i);
 
   // grab only the number from the button's ID
   var variableID = variable.id.replace(/showTxt_/, '');
