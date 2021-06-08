@@ -304,12 +304,10 @@ function addFunction(variable) {
 
   // filling addArray with localStorage values
   for(const [addKey, addValue] of Object.entries(parseObjLoop)) {
-    // console.log("This is addKey: ", addKey); 0, 1
-    // console.log("This is addValue: ", addValue); Design Wireframes, Code Structure & Style
+    // addKey: 0, 1
+    // addValue: Design Wireframes, Code Structure & Style
     addArray.push(addValue);
   }
-
-  // console.log("This is addArray: ", addArray);
 
   // grab only the number from the button's ID
   var variableID = variable.id.replace(/showTxt_/, '');
