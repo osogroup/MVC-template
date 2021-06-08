@@ -153,13 +153,14 @@ function anyChange(str) {
   localStorage.setItem(superKey, backToString);
 }
 
-var statusOptions = [];
 
 const doTheStringify = async () => {
 
   var arrayFields = [ 'Ron', 'John', 'James' ];
   var arrayOfOptions = [];
   var arrayOfOptionsNames = [];
+  var statusOptions = [];
+
 
   if(objType == null || objItemid == null) {
     alert('Enter "?type=task&itemid=0" at the end of the current URL');
@@ -336,7 +337,8 @@ const doTheStringify = async () => {
               fields : arrayFields,
               options: arrayOfOptions, // 0,1
               names: arrayOfOptionsNames, // Design Wireframes, Code Structure & Style
-              scripts : "scripts"
+              scripts : "scripts",
+              statOpt : statusOptions
             };
             HTMLoutput += inputFunction(parameters);
           }
@@ -468,6 +470,11 @@ function inputFunction(params) {
     newFields : params.fields,
     newNames: params.names
   };
+  var optParams = {
+    newHKey : params.hKey,
+    newHVal : params.hVal,
+    newStatOpt : params.statOpt
+  };
 
   // options: arrayOfOptions, // 0,1
 
@@ -487,7 +494,7 @@ function inputFunction(params) {
     return arrayList(arrayParams);
   }
   if (params.sVal == "option") {
-    return selectAttribute(newParams);
+    return selectAttribute(optParams);
   }
 }
 
@@ -548,7 +555,7 @@ function selectAttribute(options) {
                     + '<legend>'+options.newHKey+'</legend>'
                     + '<select id="input'+options.newHKey+'" name="'+options.newHKey+'" value="optionDisp" onchange="selectedOption(this.name)">';
 
-  for (const [varsKey, varsValue] of Object.entries(statusOptions[0])) {
+  for (const [varsKey, varsValue] of Object.entries(options.newStatOpt[0])) {
 
     // checking if the option is the one existing in the localStorage... if it is then it puts the 'selected' attribute in the tag
     if (varsValue == myObjectStatus) {
