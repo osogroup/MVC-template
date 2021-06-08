@@ -297,7 +297,7 @@ function addFunction(variable) {
   var addArray = [];
   var storageItem = objType+'_'+objItemid+'_HTMLnames';
   var objLoopity = JSON.parse(localStorage.getItem('storageItem'));
-  console.log("This is loopity: ", loopity);
+  console.log("This is objLoopity: ", objLoopity);
 
 
   for(const [addKey, addValue] of Object.entries(objLoopity)) {
