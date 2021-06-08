@@ -560,10 +560,7 @@ function newDate(date) {
 
 
 function arrayList(array) {
-  // if (!vars.existing || !vars.options || !vars.attrType){
-  //   alert("vars has an empty array");
-  //   return;
-  // }
+  
   // console.log("This is the input for arrayList(array): ", array);
 
   var i = 0;
