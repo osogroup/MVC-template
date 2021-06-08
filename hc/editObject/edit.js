@@ -639,7 +639,7 @@ function arrayList(array) {
 
   var HTMLnamesString = JSON.stringify(HTMLnames);
 
-  localStorage.setItem(objectKeyNames+'HTMLnames', HTMLnames);
+  localStorage.setItem(objectKeyNames+'HTMLnames', HTMLnamesString);
   // removing the extra i++ that is called
   i--;
   
