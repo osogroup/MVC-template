@@ -89,7 +89,7 @@ function checkLocalStorage(check) {
     //   pull item from repository (get item by using "var objTypeData = data[objType]";)
 
     //   if object id is equal to the one im searching for
-    for(const[repositoryKey, repositoryValue] of Object.entries(data[objType])) {
+    for(const[repositoryKey, repositoryValue] of Object.entries(check.data[objType])) {
       // console.log("This is repositoryKey: ", repositoryKey); // this is the id number 
       // console.log("This is repositoryValue: ", repositoryValue); // this is the object
       if (objType+'_'+repositoryKey == objectKeys) {
