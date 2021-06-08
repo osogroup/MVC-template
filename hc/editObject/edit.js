@@ -588,7 +588,6 @@ function arrayList(array) {
   i--;
   
   HTMLoutput = HTMLoutput+HTMLarrayValues;
-  // console.log("This is HTMLoutput: ", HTMLoutput);
 
   // creating the select tag
   HTMLoutput        +='</div>'
@@ -608,8 +607,6 @@ function arrayList(array) {
                 + '</fieldset>'
               + '</form>'
             + '</div>';
-
-  // $('#arraySpot').append(HTMLoutput);
 
   return HTMLoutput;
 }
