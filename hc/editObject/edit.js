@@ -358,6 +358,7 @@ function removeFunction(val) {
 
   // parse
   var parseThing = JSON.parse(stringThing);
+  console.log("This is parseThing: ", parseThing);
 
   // splice
 
