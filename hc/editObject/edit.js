@@ -304,9 +304,8 @@ function addFunction(variable) {
   
   // create a new button with incremented value
   var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
-  console.log("This is the new button: ", newButton);
+  // console.log("This is the new button: ", newButton);
 
-  
   // append button to the buttonSpot div
   $('buttonSpot').append(newButton);
 
