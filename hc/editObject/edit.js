@@ -290,7 +290,7 @@ function addFunction(variable) {
 
   // grab only the number from the button's ID
   var variableID = variable.id.replace(/showTxt_/, '');
-  console.log("This is variableID...", variableID);
+  // console.log("This is variableID...", variableID);
 
   // increment number for newButton
   variableID++;
@@ -338,6 +338,7 @@ function removeFunction(val) {
 
   // get the Add button
   var thisButton = document.getElementById('showTxt_'+val);
+  console.log("This is thisButton: ", thisButton);
 
   // delete the Add button
   thisButton.remove();
