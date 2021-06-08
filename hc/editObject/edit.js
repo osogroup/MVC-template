@@ -320,6 +320,8 @@ const doTheStringify = async () => {
                 // console.log("This is tagTypeKey: ", tagTypeKey); // 0, 1, 2
                 // console.log("This is tagTypeValue: ", tagTypeValue); // object 0, object 1, object 2
                 console.log("This is tagTypeValue['name']: ", tagTypeValue['name']);
+                arrayFields.push(tagTypeValue['name']);
+                console.log("This is arrayFields: ", arrayFields);
 
                 // filling arrayOfOptionsNames with tag names if arrayOfOptions includes the tag's ID number
                 if (arrayOfOptions.includes(tagTypeValue['id'])) {
