@@ -575,7 +575,7 @@ function arrayList(array) {
   var HTMLoutput = '';
   var HTMLarrayValues = '';
   var objectKeyNames = objType+'_'+objItemid+'_';
-  var HTMLnames = '';
+  var HTMLnames = {};
 
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
@@ -587,7 +587,7 @@ function arrayList(array) {
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(array.newNames)) {
   HTMLarrayValues +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
-  HTMLnames += arrayValue;
+  HTMLnames.push(arrayValue);
   // counts up the indices if there's any preset values in the array
   i++;
   }
