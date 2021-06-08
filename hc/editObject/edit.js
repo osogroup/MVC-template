@@ -581,7 +581,7 @@ function arrayList(array) {
   for (const[arrayKey, arrayValue] of Object.entries(array.newNames)) {
   HTMLarrayValues +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
 
-  // counts up the indices if there's any preset values in the array (uncommon)
+  // counts up the indices if there's any preset values in the array
   i++;
   }
   // removing the extra i++ that is called
