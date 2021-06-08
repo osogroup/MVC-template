@@ -300,7 +300,6 @@ function addFunction(variable) {
   var objLoopity = JSON.parse(localStorage.getItem('storageItem'));
   console.log("This is objLoopity: ", objLoopity);
 
-
   for(const [addKey, addValue] of Object.entries(objLoopity)) {
     console.log("This is addKey: ", addKey);
     console.log("This is addValue: ", addValue);
