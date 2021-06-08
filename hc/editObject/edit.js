@@ -296,6 +296,7 @@ function addFunction(variable) {
 
   var addArray = [];
   var storageItem = objType+'_'+objItemid+'_HTMLnames';
+  console.log("This is storageItem: ", storageItem);
   var objLoopity = JSON.parse(localStorage.getItem('storageItem'));
   console.log("This is objLoopity: ", objLoopity);
 
