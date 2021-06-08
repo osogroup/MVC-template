@@ -300,6 +300,7 @@ function addFunction(variable) {
   var objLoop = localStorage.getItem(storageKey);
   console.log("This is objLoop: ", objLoop);
   var parseObjLoop = JSON.parse(objLoop);
+  console.log("This is parseObjLoop: ", parseObjLoop);
   
   for(const [addKey, addValue] of Object.entries(parseObjLoop)) {
     console.log("This is addKey: ", addKey);
