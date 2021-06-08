@@ -290,6 +290,7 @@ function addFunction(variable) {
 
   var thisButton = variable;
   console.log("This is thisButton: ", thisButton);
+  thisButton.remove();
 
   var variableID = variable.id.replace(/showTxt_/, '');
   console.log("This is variableID...", variableID);
