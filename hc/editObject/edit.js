@@ -292,11 +292,11 @@ function addFunction(variable) {
   console.log("This is thisButton: ", thisButton);
   thisButton.remove();
 
-  var newButton = '<input type="button" id="showTxt_'+variable+'" value="Add" onclick="addFunction(this)"/>';
-  console.log("This is the new button: ", newButton);
-
   var variableID = variable.id.replace(/showTxt_/, '');
   console.log("This is variableID...", variableID);
+  
+  var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
+  console.log("This is the new button: ", newButton);
 
 
   var select = document.getElementById('scripts');
