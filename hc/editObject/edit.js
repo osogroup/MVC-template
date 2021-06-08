@@ -65,6 +65,7 @@ function anyChange(str) {
 
 function checkLocalStorage() {
 
+  var objItem = {};
   var objectKeys = objType + '_' + objItemid;
 
   if (localStorage.getItem(objectKeys) != null) {
@@ -150,15 +151,12 @@ const doTheStringify = async () => {
     HTMLoutput += '<h1>Edit '+objType+' Item</h1>'
               + '</div>';
 
-    var objItem = {};
-
     var forOfLoop = checkLocalStorage();
 
 
-      // --------------------------------------- Item Header and Inputs ---------------------------------------
+    // --------------------------------------- Item Header and Inputs ---------------------------------------
 
 
-    }
     // creating item header row
     HTMLoutput += '<div class="row">';
 
