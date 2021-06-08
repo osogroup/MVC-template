@@ -231,7 +231,7 @@ const doTheStringify = async () => {
               for (const [tagTypeKey, tagTypeValue] of Object.entries(tagTypeData)) {
                 // console.log("This is tagTypeKey: ", tagTypeKey); // 0, 1, 2
                 // console.log("This is tagTypeValue: ", tagTypeValue); // object 0, object 1, object 2
-                console.log("This is tagTypeValue['name']: ", tagTypeValue['name']);
+                // console.log("This is tagTypeValue['name']: ", tagTypeValue['name']);
                 arrayFields.push(tagTypeValue['name']);
                 // console.log("This is arrayFields: ", arrayFields);
 
