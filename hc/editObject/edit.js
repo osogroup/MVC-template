@@ -567,17 +567,17 @@ function arrayList(array) {
 
   // creating all the options from the arrayOfOptions array in the select tag
   for (const [optionKey, optionValue] of Object.entries(array.newFields)) {
-  HTMLoutput +=    '<option value="'+optionValue+'">'+optionValue+'</option>';
+  HTMLoutput      +='<option value="'+optionValue+'">'+optionValue+'</option>';
   }
 
   // closing the form tags and creating the add button
-  HTMLoutput   +='</select>'
-                 + '<div id="buttonSpot">'
-                   + '<input type="button" id="showTxt_'+i+'" value="Add" onclick="addFunction(this)"/>'
-                 + '</div>'
-               + '</fieldset>'
-             + '</form>'
-           + '</div>';
+  HTMLoutput    +='</select>'
+                  + '<div id="buttonSpot">'
+                    + '<input type="button" id="showTxt_'+i+'" value="Add" onclick="addFunction(this)"/>'
+                  + '</div>'
+                + '</fieldset>'
+              + '</form>'
+            + '</div>';
 
   // $('#arraySpot').append(HTMLoutput);
 
