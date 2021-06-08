@@ -202,8 +202,7 @@ const doTheStringify = async () => {
             statusOptions.push(stuffValue);
             // console.log("This is statusOptions: ", statusOptions);
           }
-
-        }  
+        }
 
         for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
           // console.log("This is stuffKey: ", stuffKey); // (required, type, inpType)
@@ -212,8 +211,6 @@ const doTheStringify = async () => {
 
             // #####################################################################################################################
 
-
-          
 
           if (stuffKey == "inpType") {
             // stuffValue: text, textarea, text, array, date, number
