@@ -356,11 +356,11 @@ function removeFunction(val) {
 
   // get the localStorage
   var stringThing = localStorage.getItem(storageKey);
-  console.log("This is stringThing: ", stringThing);
+  // console.log("This is stringThing: ", stringThing);
 
   // parse
   var parseThing = JSON.parse(stringThing);
-  console.log("This is parseThing: ", parseThing);
+  // console.log("This is parseThing: ", parseThing);
 
   // put localStorage into removeArray
   removeArray = parseThing;
