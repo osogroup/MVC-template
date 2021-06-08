@@ -383,7 +383,7 @@ function addFunction(variable) {
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
   var variableID = variable.id.replace(/showTxt_/, '');
-  console.log("Pls be 3...", variableID);
+  console.log("This is variableID...", variableID);
 
   var select = document.getElementById('scripts');
 
