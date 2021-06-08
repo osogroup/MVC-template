@@ -294,7 +294,7 @@ function addFunction(variable) {
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
-  var 
+
 
   // grab only the number from the button's ID
   var variableID = variable.id.replace(/showTxt_/, '');
@@ -574,6 +574,7 @@ function arrayList(array) {
   var i = 0;
   var HTMLoutput = '';
   var HTMLarrayValues = '';
+  var HTMLnames = '';
 
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
@@ -585,10 +586,11 @@ function arrayList(array) {
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(array.newNames)) {
   HTMLarrayValues +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
-
+  HTMLnames += arrayValue;
   // counts up the indices if there's any preset values in the array
   i++;
   }
+  console.log("This is HTMLnames: ", HTMLnames);
   // removing the extra i++ that is called
   i--;
   
