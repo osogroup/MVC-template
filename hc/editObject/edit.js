@@ -297,10 +297,10 @@ function addFunction(variable) {
   var addArray = [];
   var storageKey = objType+'_'+objItemid+'_HTMLnames';
   console.log("This is storageKey: ", storageKey);
-  var objLoopity = localStorage.getItem(storageKey);
-  console.log("This is objLoopity: ", objLoopity);
+  var objLoop = localStorage.getItem(storageKey);
+  console.log("This is objLoop: ", objLoop);
 
-  for(const [addKey, addValue] of Object.entries(objLoopity)) {
+  for(const [addKey, addValue] of Object.entries(objLoop)) {
     console.log("This is addKey: ", addKey);
     console.log("This is addValue: ", addValue);
   }
