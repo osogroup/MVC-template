@@ -296,14 +296,14 @@ function addFunction(variable) {
 
   var addArray = [];
   var storageItem = objType+'_'+objItemid+'_HTMLnames';
+  var loopity = localStorage.getItem(storageItem);
 
-  for(const [addKey, addValue] of Object.entries(localStorage.getItem(storageItem))) {
+
+  for(const [addKey, addValue] of Object.entries(loopity)) {
     console.log("This is addKey: ", addKey);
     console.log("This is addValue: ", addValue);
-
   }
 
-  var addArray = [localStorage.getItem(storageItem)];
   console.log("This is addArray: ", addArray);
 
   // grab only the number from the button's ID
