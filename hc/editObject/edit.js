@@ -584,6 +584,7 @@ function arrayList(array) {
   // counts up the indices if there's any preset values in the array (uncommon)
   i++;
   }
+  // removing the extra i++ that is called
   i--;
   
   HTMLoutput = HTMLoutput+HTMLarrayValues;
