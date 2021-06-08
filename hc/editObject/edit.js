@@ -337,7 +337,7 @@ function addFunction(variable) {
   // access text property of selected option
   elementVal = select.options[select.selectedIndex].text;
   addArray.push(elementVal);
-  
+
   console.log("This is the new addArray: ", addArray);
 
   // adding a new row and columns to the HTML
