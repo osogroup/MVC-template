@@ -60,6 +60,9 @@ function anyChange(str) {
 }
 
 
+// ------------------------------------------ Check localStorage ------------------------------------------
+
+
 function checkLocalStorage() {
 
   var objectKeys = objType + '_' + objItemid;
@@ -76,7 +79,7 @@ function checkLocalStorage() {
     // create HTML header and fields
   }
   else {
-    var forOfLoop = objTypeData[objItemid]
+    var forOfLoop = objTypeData[objItemid];
     console.log("objectKeys was just created..!");
     var repositoryItem = data[objType];
     // console.log("This is the repositoryItem..", repositoryItem);
@@ -97,7 +100,8 @@ function checkLocalStorage() {
         console.log(localStorage);
       }
     }
-
+  }
+  return forOfLoop;
 }
 
 
@@ -148,44 +152,7 @@ const doTheStringify = async () => {
 
     var objItem = {};
 
-
-    // ------------------------------------------ Check localStorage ------------------------------------------
-
-
-    // if item exists 
-    if (localStorage.getItem(objectKeys) != null) {
-      // console.log("This is localStorage.getItem(objectKeys)", localStorage.getItem(objectKeys));
-      var forOfLoop = JSON.parse(localStorage.getItem(objectKeys));
-      console.log("objectKeys exists..!");
-      // console.log(localStorage);
-
-      // pull item from localStorage
-      localStorage.getItem(objType+'_'+objItemid);
-
-      // create HTML header and fields
-    }
-    else {
-      var forOfLoop = objTypeData[objItemid]
-      console.log("objectKeys was just created..!");
-      var repositoryItem = data[objType];
-      // console.log("This is the repositoryItem..", repositoryItem);
-      // console.log("This is repositoryItem[0]", repositoryItem[0]);
-
-      //   pull item from repository (get item by using "var objTypeData = data[objType]";)
-
-      //   if object id is equal to the one im searching for
-      for(const[repositoryKey, repositoryValue] of Object.entries(data[objType])) {
-        // console.log("This is repositoryKey: ", repositoryKey); // this is the id number 
-        // console.log("This is repositoryValue: ", repositoryValue); // this is the object
-        if (objType+'_'+repositoryKey == objectKeys) {
-          objItem = repositoryItem[repositoryKey];
-          // console.log("This is objItem: ", objItem);
-          var objItemString = JSON.stringify(objItem);
-          // console.log("This is objItemString: ", objItemString);
-          localStorage.setItem(objectKeys, objItemString);
-          console.log(localStorage);
-        }
-      }
+    var forOfLoop = checkLocalStorage();
 
 
       // --------------------------------------- Item Header and Inputs ---------------------------------------
