@@ -384,6 +384,8 @@ function addFunction(variable) {
 
   var variableID = variable.id.replace(/showTxt_/, '');
   console.log("This is variableID...", variableID);
+  variableID++;
+  console.log("This is variableID++: ", variableID);
 
   var select = document.getElementById('scripts');
 
@@ -391,7 +393,7 @@ function addFunction(variable) {
   elementVal = select.options[select.selectedIndex].text;
 
   // adding a new row and columns to the HTML
-  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variableID+'" value="-" onclick="removeFunction('+variable.id+')"></div></div>';
+  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variableID+'" value="-" onclick="removeFunction('+variableID+')"></div></div>';
   $('#appendTo').append(HTMLelement);
 }
 
