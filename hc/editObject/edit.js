@@ -67,8 +67,6 @@ function clearLocalStorage() {
   localStorage.clear();
 }
 
-clearLocalStorage();
-
 
 // ------------------------------------------ Check localStorage ------------------------------------------
 
