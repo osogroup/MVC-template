@@ -309,7 +309,7 @@ function addFunction(variable) {
     addArray.push(addValue);
   }
 
-  console.log("This is addArray: ", addArray);
+  // console.log("This is addArray: ", addArray);
 
   // grab only the number from the button's ID
   var variableID = variable.id.replace(/showTxt_/, '');
