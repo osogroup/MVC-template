@@ -331,7 +331,7 @@ function removeFunction(val) {
   // getting a variable that represents whichever remove button I push on the browser (technically dont need
   // the specific id since the the value is deleted from arrayFields anyway and then arrayFields is ran through,
   // recreating the display)
-  var element = document.querySelector('#remvBtn'+val);
+  var element = document.querySelector('#remvBtn_'+val);
 
   // deleting the row
   element.parentNode.parentNode.remove(element.parentNode.parentNode);
