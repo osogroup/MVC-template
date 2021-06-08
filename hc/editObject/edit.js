@@ -60,6 +60,9 @@ function anyChange(str) {
 }
 
 
+// ------------------------------------------ Clear localStorage ------------------------------------------
+
+
 function clearLocalStorage() {
   localStorage.clear;
 }
