@@ -295,9 +295,9 @@ function addFunction(variable) {
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
   var addArray = [];
-  var storageItem = objType+'_'+objItemid+'_HTMLnames';
-  console.log("This is storageItem: ", storageItem);
-  var objLoopity = JSON.parse(localStorage.getItem(storageItem));
+  var storageKey = objType+'_'+objItemid+'_HTMLnames';
+  console.log("This is storageKey: ", storageKey);
+  var objLoopity = JSON.parse(localStorage.getItem(storageKey));
   console.log("This is objLoopity: ", objLoopity);
 
   for(const [addKey, addValue] of Object.entries(objLoopity)) {
@@ -339,7 +339,7 @@ function addFunction(variable) {
   // adding a new row and columns to the HTML
   var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variableID+'" value="-" onclick="removeFunction('+variableID+')"></div></div>';
   $('#appendTo').append(HTMLelement);
-  localStorage.setItem(storageItem, addArray);
+  localStorage.setItem(storageKey, addArray);
 }
 
 
