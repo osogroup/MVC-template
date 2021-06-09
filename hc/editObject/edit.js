@@ -631,7 +631,7 @@ function arrayList(array) {
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>Tags</legend>'
+                    + '<legend>'+array.newHKey+'</legend>'
                       + '<div id="outerDiv">'
                         + '<div id="appendTo">';
 
