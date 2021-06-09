@@ -349,7 +349,9 @@ function addFunction(variable) {
   var tagNumber = selOpt.id.replace(/optionValue_/, '');
   console.log("This is tagNumber: ", tagNumber);
 
-  tagArray.push(tagNumber);
+  if (tagArray.includes(tagNumber)) {
+    tagArray.push(tagNumber);
+  }
 
   console.log("This is tagArray post-tagNumber push: ", tagArray)
 
