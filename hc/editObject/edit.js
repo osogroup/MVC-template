@@ -341,10 +341,10 @@ function addFunction(variable) {
 
   // access text property of selected option
   var select = document.getElementById('scripts');
-  tagVal = select.options[select.selectedIndex];
+  selOpt = select.options[select.selectedIndex];
   elementVal = select.options[select.selectedIndex].text;
 
-  console.log("This is tagVal: ", tagVal);
+  console.log("This is selOpt: ", selOpt);
 
   var tagID = elementVal.replace(/optionValue_/, '')
 
