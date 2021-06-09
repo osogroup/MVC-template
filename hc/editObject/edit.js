@@ -321,7 +321,7 @@ function addFunction(variable) {
   // get entire button
 
   // change input's id
-  variable.id.prop('id', 'showTxt_1000');
+  variable.id = 'showTxt_1000';
 
   // create a new button with incremented value
   // var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
