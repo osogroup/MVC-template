@@ -383,6 +383,7 @@ function removeFunction(val) {
   element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
 
   // get the Add button
+  
 
     // // delete the Add button
     // thisButton.remove();
