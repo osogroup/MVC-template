@@ -380,7 +380,7 @@ function removeFunction(val) {
     i++;
   }
 
-  // changing the id of the Add button
+  // removing the child of buttonSpot
   var buttonSpot = document.getElementById('buttonSpot');
   var child = buttonSpot.firstChild;
   buttonSpot.removeChild(child);
