@@ -414,7 +414,6 @@ console.log("This is taskAndID:",taskAndID);
 var currentKey = JSON.parse(taskAndID);
 console.log("This is currentKey:",currentKey);
 
-
 // access the tags in task_0
 
 
