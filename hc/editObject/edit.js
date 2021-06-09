@@ -313,26 +313,13 @@ function addFunction(variable) {
 
   // grab only the number from the button's ID
   var variableID = variable.id.replace(/showTxt_/, '');
-  // console.log("This is variableID...", variableID);
-
-  // increment number for newButton
   variableID++;
-
-  // get entire button
 
   // change input's id
   variable.id = 'showTxt_'+variableID;
-
-  // create a new button with incremented value
-  // var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
-  // console.log("This is the new button: ", newButton);
-
-  // append button to the buttonSpot div
-  // $('#buttonSpot').append(newButton);
-
-  var select = document.getElementById('scripts');
-
+ 
   // access text property of selected option
+  var select = document.getElementById('scripts');
   elementVal = select.options[select.selectedIndex].text;
   addArray.push(elementVal);
 
