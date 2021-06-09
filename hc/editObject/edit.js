@@ -355,6 +355,7 @@ function addFunction(variable) {
   else {
     addArray.push(elementVal);
     tagArray.push(tagNumber);
+    console.log("This is tagArray: ", tagArray);
   
     console.log("This is the new addArray: ", addArray);
   
