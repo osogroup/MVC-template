@@ -378,6 +378,9 @@ function removeFunction(val) {
     HTMLelement += '<div class="row"><div class="col-10">'+itemValue+'</div><div class="col-2"><input type="button" id="remvBtn'+itemKey+'" value="-" onclick="removeFunction('+itemKey+')"></div></div>';
   }
 
+  // changing the id of the Add button
+
+
   // stringify removeArray into localStorage
   localStorage.setItem(storageKey, JSON.stringify(removeArray));
 
