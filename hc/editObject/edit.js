@@ -121,7 +121,7 @@ function checkLocalStorage(check) {
 
 
 function addToLocalStorage(position, value) {
-
+  localStorage.setItem(position, value);
 }
 
 
