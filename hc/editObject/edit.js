@@ -664,7 +664,7 @@ function arrayList(array) {
   // creating the select tag
   HTMLoutput            +='</div>'
                       + '</div>'
-                      +'<br><select id="scripts" name="scripts">';
+                      + '<br><select id="scripts" name="scripts">';
 
   // creating all the options from the arrayOfOptions array in the select tag
   for (const [optionKey, optionValue] of Object.entries(array.newFields)) {
