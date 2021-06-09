@@ -379,8 +379,9 @@ function removeFunction(val) {
   element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
 
   // reshowing all the items 
-  for (const [itemKey, itemValue] of Object.entries()) {
-
+  for (const [itemKey, itemValue] of Object.entries(removeArray)) {
+    console.log("This is itemKey: ", itemKey);
+    console.log("This is itemValue: ", itemValue);
   }
 
   // stringify into localStorage
