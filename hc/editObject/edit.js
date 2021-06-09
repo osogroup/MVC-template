@@ -636,7 +636,7 @@ function arrayList(array) {
                         + '<div id="appendTo">';
 
   // if objectKeyNames_name exists in localStorage {
-    if (localStorage.getItem(objectKeyNames != null)) {
+    if (localStorage.getItem(objectKeyNames) != null) {
       // pull from localStorage
       itemValueNames = localStorage.getItem(objectKeyNames);
       console.log("This is itemValueNames: ", itemValueNames);
