@@ -406,7 +406,21 @@ function removeFunction(val) {
 
 
 
+// get task_0 
+var taskAndID = objType+'_'+objItemid;
+console.log("This is taskAndID:",taskAndID);
+var currentKey = objType
 
+// parse it
+
+
+// access the tags in task_0
+
+
+// stringify tag ids
+
+
+// push the tag ids into task_0.tags array
 
 
 
