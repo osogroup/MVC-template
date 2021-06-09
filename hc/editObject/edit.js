@@ -416,7 +416,8 @@ var currentKey = JSON.parse(localStorage.getItem(taskAndID));
 console.log("This is currentKey:",currentKey);
 
 // access the tags in task_0
-
+var currentTags = currentKey.tags;
+console.log("This is currentTags",currentTags);
 
 // stringify tag ids
 
