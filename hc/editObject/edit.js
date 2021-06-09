@@ -379,12 +379,11 @@ function removeFunction(val) {
   // getting the remove button at index 'val'
   var element = document.querySelector('#remvBtn_'+val);
 
-  // deleting the row
-  element.parentNode.parentNode.remove(element.parentNode.parentNode);
+  // deleting the whole area
+  element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
 
   // get the Add button
 
-  
     // // delete the Add button
     // thisButton.remove();
 
