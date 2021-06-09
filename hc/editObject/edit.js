@@ -325,7 +325,7 @@ function addFunction(variable) {
 
   // change input's id
   variable.id = 'showTxt_'+variableID;
- 
+
   // access text property of selected option
   var select = document.getElementById('scripts');
   elementVal = select.options[select.selectedIndex].text;
@@ -692,22 +692,22 @@ function arrayList(array) {
 // ----------------------------------------------- Update localStorage -----------------------------------------------
 
 
-// get task_0 
-var taskAndID = objType+'_'+objItemid;
-console.log("This is taskAndID: ",taskAndID);
+// // get task_0 
+// var taskAndID = objType+'_'+objItemid;
+// console.log("This is taskAndID: ",taskAndID);
 
-// parse it
-var currentKey = JSON.parse(localStorage.getItem(taskAndID));
-console.log("This is currentKey: ",currentKey);
+// // parse it
+// var currentKey = JSON.parse(localStorage.getItem(taskAndID));
+// console.log("This is currentKey: ",currentKey);
 
-// access the tags in task_0
-var currentTags = currentKey.tags;
-console.log("This is currentTags: ",currentTags);
+// // access the tags in task_0
+// var currentTags = currentKey.tags;
+// console.log("This is currentTags: ",currentTags);
 
-// add a value to tags in task_0 from the task_0 name
-
-
-// stringify tag ids
+// // add a value to tags in task_0 from the task_0 name
 
 
-// push the tag ids into task_0.tags array
+// // stringify tag ids
+
+
+// // push the tag ids into task_0.tags array
