@@ -324,15 +324,15 @@ const doTheStringify = async () => {
 function addFunction(variable) {
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
+  
+  var superKey = objType+'_'+objItemid;
+  var superObjLoop = JSON.parse(localStorage.getItem(superKey));
 
   var addArray = [];
-  var superKey = objType+'_'+objItemid;
   var storageKey = objType+'_'+objItemid+'_name';
   // console.log("This is storageKey: ", storageKey);
-  var superObjLoop = localStorage.getItem(superKey);
   var objLoop = localStorage.getItem(storageKey);
   // console.log("This is objLoop: ", objLoop);
-  var parseSuperObjLoop = JSON.parse(superObjLoop);
   var parseObjLoop = JSON.parse(objLoop);
   // console.log("This is parseObjLoop: ", parseObjLoop);
 
