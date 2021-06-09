@@ -506,7 +506,7 @@ function textareaAttribute(textarea) {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+textarea.newHKey+'</legend>'
-                      + '<textarea class="textareaInput" id="input'+textarea.newHKey+'" placeholder="'+textarea.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()" rows="3" cols="20">'+textarea.newHVal+'</textarea>'
+                      + '<textarea class="textareaInput" id="input'+textarea.newHKey+'" placeholder="'+textarea.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()" rows="6" cols="20">'+textarea.newHVal+'</textarea>'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
