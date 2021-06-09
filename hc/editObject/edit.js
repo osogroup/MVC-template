@@ -305,7 +305,7 @@ function addFunction(variable) {
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
   var addArray = [];
-  var storageKey = objType+'_'+objItemid+'_HTMLnames';
+  var storageKey = objType+'_'+objItemid+'_name';
   // console.log("This is storageKey: ", storageKey);
   var objLoop = localStorage.getItem(storageKey);
   // console.log("This is objLoop: ", objLoop);
@@ -350,7 +350,7 @@ function addFunction(variable) {
 
 function removeFunction(val) {
   console.log("This is val: ", val);
-  var storageKey = objType+'_'+objItemid+'_HTMLnames';
+  var storageKey = objType+'_'+objItemid+'_name';
   var removeArray = [];
   var HTMLelement = '';
   var i = 0;
@@ -628,7 +628,7 @@ function arrayList(array) {
   var HTMLoutput = '';
   var HTMLarrayValues = '';
   var objectKeyNames = objType+'_'+objItemid+'_';
-  var HTMLnames = [];
+  var name = [];
 
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
@@ -640,11 +640,11 @@ function arrayList(array) {
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(array.newNames)) {
     HTMLarrayValues +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
-    HTMLnames.push(arrayValue);
+    name.push(arrayValue);
     // counts up the indices if there's any preset values in the array
     i++;
   }
-  addToLocalStorage(objectKeyNames+'HTMLnames', JSON.stringify(HTMLnames));
+  addToLocalStorage(objectKeyNames+'name', JSON.stringify(name));
   // removing the extra i++ that is called
   i--;
   
