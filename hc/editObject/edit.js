@@ -376,6 +376,7 @@ function addFunction(variable) {
 
 function removeFunction(val) {
   console.log("This is val: ", val);
+  var superKey = objType+'_'+objItemid;
   var storageKey = objType+'_'+objItemid+'_name';
   var removeArray = [];
   var HTMLelement = '';
@@ -424,6 +425,8 @@ function removeFunction(val) {
   var elm = document.getElementById("outerDiv");
   // console.log("This is elm: ", elm);
   elm.appendChild(tag);
+
+  
   
   // append HTMLelement to created div
   $('#appendTo').append(HTMLelement);
