@@ -361,22 +361,18 @@ function removeFunction(val) {
 
   // parse
   var parseThing = JSON.parse(stringThing);
-  console.log("parseThing", parseThing);
 
   // put localStorage into removeArray
   removeArray = parseThing;
-  console.log("removeArray", removeArray);
 
   // getting the remove button at index 'val'
   var element = document.querySelector('#remvBtn_'+val);
-  console.log("element", element);
 
   // deleting the whole area
   element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
 
   // splice array and console.log()
   removeArray.splice(val, 1);
-  console.log("This is the new removeArray: ", removeArray);
 
   // reshowing all the items
   for (const [itemKey, itemValue] of Object.entries(removeArray)) {
