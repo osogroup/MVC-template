@@ -364,12 +364,12 @@ function removeFunction(val) {
   // put localStorage into removeArray
   removeArray = parseThing;
 
+  // getting the remove button at index 'val'
+  var element = document.querySelector('#remvBtn_'+val);
+
   // splice array and console.log()
   removeArray.splice(val, 1);
   console.log("This is the new removeArray: ", removeArray);
-
-  // getting the remove button at index 'val'
-  var element = document.querySelector('#remvBtn_'+val);
 
   // deleting the whole area
   element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
