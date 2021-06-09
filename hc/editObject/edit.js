@@ -317,6 +317,7 @@ function addFunction(variable) {
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
+  var tagArray = [];
   var superKey = objType+'_'+objItemid;
   var superObjLoop = JSON.parse(localStorage.getItem(superKey));
   console.log("This is superObjLoop: ", superObjLoop);
