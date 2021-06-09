@@ -503,15 +503,14 @@ function textAttribute(text) {
 function textareaAttribute(textarea) {
   var textareaHTML = '';
 
-  textareaHTML += '<div class="col-12">'
-                + '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset class="minHeight">'
-                    + '<legend>'+textarea.newHKey+'</legend>'
-                    + '<textarea class="textareaInput" id="input'+textarea.newHKey+'" placeholder="'+textarea.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()" rows="3" cols="20">'+textarea.newHVal+'</textarea>'
-     // + '<input type="textarea" class="col-12" id="input'+headerKey+'" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
-                  + '</fieldset>'
-                + '</form>'
-              + '</div>';
+  textareaHTML  +='<div class="col-12">'
+                  + '<form action="#" method="post" class="demoForm">'
+                    + '<fieldset class="minHeight">'
+                      + '<legend>'+textarea.newHKey+'</legend>'
+                      + '<textarea class="textareaInput" id="input'+textarea.newHKey+'" placeholder="'+textarea.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()" rows="3" cols="20">'+textarea.newHVal+'</textarea>'
+                    + '</fieldset>'
+                  + '</form>'
+                + '</div>';
 
   return textareaHTML;
 }
@@ -527,7 +526,7 @@ function selectAttribute(options) {
   var myObject = JSON.parse(myString);
   var myObjectStatus = myObject[options.newHKey]; // in-progress
 
-  selectHTML += '<div class="col-12">'
+  selectHTML  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+options.newHKey+'</legend>'
@@ -537,13 +536,13 @@ function selectAttribute(options) {
 
     // checking if the option is the one existing in the localStorage... if it is then it puts the 'selected' attribute in the tag
     if (varsValue == myObjectStatus) {
-      selectHTML +=     '<option value="'+varsValue+'" selected>'+varsValue+'</option>';
+      selectHTML      +='<option value="'+varsValue+'" selected>'+varsValue+'</option>';
     }
     else {
-      selectHTML +=     '<option value="'+varsValue+'">'+varsValue+'</option>';
+      selectHTML      +='<option value="'+varsValue+'">'+varsValue+'</option>';
     }
   }
-  selectHTML +=       '</select>'
+  selectHTML        +='</select>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
@@ -572,7 +571,7 @@ function selectedOption(str) {
 function numberAttribute(num) {
   var numberHTML = '';
 
-  numberHTML += '<div class="col-12">'
+  numberHTML  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+num.newHKey+'</legend>'
@@ -590,7 +589,7 @@ function numberAttribute(num) {
 function calendarAttribute(date) {
   var calendarHTML = '';
 
-  calendarHTML += '<div class="col-12">'
+  calendarHTML  +='<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+date.newHKey+'</legend>'
@@ -639,7 +638,7 @@ function arrayList(array) {
 
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(array.newNames)) {
-    HTMLarrayValues +=    '<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
+    HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
     name.push(arrayValue);
     // counts up the indices if there's any preset values in the array
     i++;
@@ -651,23 +650,23 @@ function arrayList(array) {
   HTMLoutput = HTMLoutput+HTMLarrayValues;
 
   // creating the select tag
-  HTMLoutput        +='</div>'
-                  + '</div>'
-                +'<br><select id="scripts" name="scripts">';
+  HTMLoutput            +='</div>'
+                      + '</div>'
+                      +'<br><select id="scripts" name="scripts">';
 
   // creating all the options from the arrayOfOptions array in the select tag
   for (const [optionKey, optionValue] of Object.entries(array.newFields)) {
-    HTMLoutput    +='<option value="'+optionValue+'">'+optionValue+'</option>';
+    HTMLoutput          +='<option value="'+optionValue+'">'+optionValue+'</option>';
   }
 
   // closing the form tags and creating the add button
-  HTMLoutput    +='</select>'
-                  + '<div id="buttonSpot">'
-                    + '<input type="button" id="showTxt_'+i+'" value="Add" onclick="addFunction(this)"/>'
-                  + '</div>'
-                + '</fieldset>'
-              + '</form>'
-            + '</div>';
+  HTMLoutput          +='</select>'
+                      + '<div id="buttonSpot">'
+                      + '<input type="button" id="showTxt_'+i+'" value="Add" onclick="addFunction(this)"/>'
+                    + '</div>'
+                  + '</fieldset>'
+                + '</form>'
+              + '</div>';
 
   return HTMLoutput;
 }
