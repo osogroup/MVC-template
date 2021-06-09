@@ -324,15 +324,17 @@ function addFunction(variable) {
   if (addArray.includes(elementVal)) {
     console.log(elementVal+' exists in addArray already');
   }
+  else {
+    addArray.push(elementVal);
+  
+    console.log("This is the new addArray: ", addArray);
+  
+    // adding a new row and columns to the HTML
+    var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variableID+'" value="-" onclick="removeFunction('+variableID+')"></div></div>';
+    $('#appendTo').append(HTMLelement);
+    localStorage.setItem(storageKey, JSON.stringify(addArray));
+  }
 
-  addArray.push(elementVal);
-
-  console.log("This is the new addArray: ", addArray);
-
-  // adding a new row and columns to the HTML
-  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variableID+'" value="-" onclick="removeFunction('+variableID+')"></div></div>';
-  $('#appendTo').append(HTMLelement);
-  localStorage.setItem(storageKey, JSON.stringify(addArray));
 }
 
 
