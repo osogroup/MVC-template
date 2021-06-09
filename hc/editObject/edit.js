@@ -342,7 +342,6 @@ function addFunction(variable) {
     $('#appendTo').append(HTMLelement);
     addToLocalStorage(storageKey, JSON.stringify(addArray));
   }
-
 }
 
 
@@ -391,7 +390,7 @@ function removeFunction(val) {
   $('#buttonSpot').append(addButton);
 
   // stringify removeArray into localStorage
-  localStorage.setItem(storageKey, JSON.stringify(removeArray));
+  addToLocalStorage(storageKey, JSON.stringify(removeArray));
 
   // next 4 lines create a new div within outerDiv that has the id="appendTo"
   var tag = document.createElement('div');
