@@ -320,7 +320,7 @@ function addFunction(variable) {
   var tagArray = [];
   var superKey = objType+'_'+objItemid;
   var superObjLoop = JSON.parse(localStorage.getItem(superKey));
-  console.log("This is superObjLoop: ", superObjLoop);
+  // console.log("This is superObjLoop: ", superObjLoop);
   var superKeyTags = superObjLoop.tags;
   console.log("This is superKeyTags: ", superKeyTags);
 
