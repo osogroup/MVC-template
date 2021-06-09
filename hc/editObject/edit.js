@@ -392,40 +392,6 @@ function removeFunction(val) {
   
   // append HTMLelement to created div
   $('#appendTo').append(HTMLelement);
-
-
-  // get the Add button
-
-
-    // // delete the Add button
-    // thisButton.remove();
-
-    // // create a new button with incremented value
-    // var newButton = '<input type="button" id="showTxt_'+variableID+'" value="Add" onclick="addFunction(this)"/>';
-    // // console.log("This is the new button: ", newButton);
-
-    // // append button to the buttonSpot div
-    // $('#buttonSpot').append(newButton);
-
-
-  // deleting the entire div containing the arrayField values
-  // element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
-  // for (const [elementKey, elementValue] of Object.entries(arrayFields)) {
-  //   HTMLelement += '<div class="row"><div class="col-10">'+elementValue+'</div><div class="col-2"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeFunction('+elementKey+')"></div></div>';
-  // }
-
-
-  // next 5 lines create a new div within outerDiv that has the id="appendTo"
-  // var tag = document.createElement('div');
-  // tag.setAttribute("id", "appendTo");
-  // var elm = document.getElementById("outerDiv");
-  // // console.log("This is elm: ", elm);
-  // elm.appendChild(tag);
-  // $('#appendTo').append(HTMLelement);
-
-  // console.log("This is arrayFields after .splice(): ", arrayFields);
-
-  // adjusting indices for add function
 }
 
 
