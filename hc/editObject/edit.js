@@ -380,7 +380,7 @@ function removeFunction(val) {
 
   // reshowing all the items
   for (const [itemKey, itemValue] of Object.entries(removeArray)) {
-    HTMLelement += '<div class="row"><div class="col-10">'+itemValue+'</div><div class="col-2"><input type="button" id="remvBtn'+itemKey+'" value="-" onclick="removeFunction('+itemKey+')"></div></div>';
+    HTMLelement += '<div class="row"><div class="col-10">'+itemValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+itemKey+'" value="-" onclick="removeFunction('+itemKey+')"></div></div>';
     i++;
   }
   i--;
