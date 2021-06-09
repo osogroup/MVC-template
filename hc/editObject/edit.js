@@ -349,21 +349,12 @@ function addFunction(variable) {
   var tagNumber = selOpt.id.replace(/optionValue_/, '');
   console.log("This is tagNumber: ", tagNumber);
 
-  if (tagArray.includes(tagNumber)) {
-    console.log("tagArray already includes", tagNumber);
-  }
-  else {
-    tagArray.push(tagNumber);
-  }
-
-  console.log("This is tagArray post-tagNumber push: ", tagArray)
-
-
   if (addArray.includes(elementVal)) {
     console.log(elementVal+' exists in addArray already');
   }
   else {
     addArray.push(elementVal);
+    tagArray.push(tagNumber);
   
     console.log("This is the new addArray: ", addArray);
   
