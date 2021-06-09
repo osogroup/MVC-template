@@ -120,8 +120,8 @@ function checkLocalStorage(check) {
 // ------------------------------------------ Add To localStorage ------------------------------------------
 
 
-function addToLocalStorage() {
-  
+function addToLocalStorage(position, value) {
+
 }
 
 
