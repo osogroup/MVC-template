@@ -326,9 +326,9 @@ function addFunction(variable) {
 
   // populate tagArray with superKeyTags
   for (const [tagKey, tagValue] of Object.entries(superKeyTags)) {
-    console.log("This is tagKey: ", tagKey);
-    console.log("This is tagValue: ", tagValue);
+    tagArray.push(tagValue);
   }
+  console.log("This is tagArray post-population: ", tagArray);
 
   var addArray = [];
   var storageKey = objType+'_'+objItemid+'_name';
