@@ -404,6 +404,7 @@ function removeFunction(val) {
 }
 
 
+// ----------------------------------------------- Update localStorage -----------------------------------------------
 
 
 // get task_0 
@@ -421,6 +422,10 @@ console.log("This is currentKey:",currentKey);
 
 
 // push the tag ids into task_0.tags array
+
+
+
+
 
 
 
