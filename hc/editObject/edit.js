@@ -300,7 +300,7 @@ const doTheStringify = async () => {
 // ------------------------------------------------ Add function ------------------------------------------------
 
 
-function addFunction() {
+function addFunction(variable) {
 
 }
 
@@ -308,7 +308,7 @@ function addFunction() {
 // ----------------------------------------------- Remove function -----------------------------------------------
 
 
-function removeFunction() {
+function removeFunction(val) {
 
 }
 
