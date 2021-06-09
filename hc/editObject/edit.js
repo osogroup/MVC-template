@@ -382,9 +382,9 @@ function removeFunction(val) {
   // deleting the row
   element.parentNode.parentNode.remove(element.parentNode.parentNode);
 
-    // get the Add button
-    var thisButton = document.getElementById('showTxt_'+val);
-    console.log("This is thisButton: ", thisButton);
+  // get the Add button
+  var thisButton = document.getElementById('showTxt_'+val);
+  console.log("This is thisButton: ", thisButton);
 
     // // delete the Add button
     // thisButton.remove();
