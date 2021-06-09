@@ -625,7 +625,7 @@ function arrayList(array) {
   var i = 0;
   var HTMLoutput = '';
   var HTMLarrayValues = '';
-  var objectKeyNames = objType+'_'+objItemid+'_';
+  var objectKeyNames = objType+'_'+objItemid+'_name';
   var name = [];
 
   HTMLoutput  +='<div class="col-12">'
@@ -636,9 +636,9 @@ function arrayList(array) {
                         + '<div id="appendTo">';
 
   // if objectKeyNames_name exists in localStorage {
-    if (localStorage.getItem(objectKeyNames+'name' != null)) {
+    if (localStorage.getItem(objectKeyNames != null)) {
       // pull from localStorage
-      itemValueNames = localStorage.getItem(objectKeyNames+'name');
+      itemValueNames = localStorage.getItem(objectKeyNames);
       console.log("This is itemValueNames: ", itemValueNames);
     }
   else {
@@ -655,7 +655,7 @@ function arrayList(array) {
     // counts up the indices if there's any preset values in the array
     i++;
   }
-  addToLocalStorage(objectKeyNames+'name', JSON.stringify(name));
+  addToLocalStorage(objectKeyNames, JSON.stringify(name));
   // removing the extra i++ that is called
   i--;
   
