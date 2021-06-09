@@ -321,6 +321,10 @@ function addFunction(variable) {
   // access text property of selected option
   var select = document.getElementById('scripts');
   elementVal = select.options[select.selectedIndex].text;
+  if (addArray.includes(elementVal)) {
+    console.log(elementVal+' exists in addArray already');
+  }
+
   addArray.push(elementVal);
 
   console.log("This is the new addArray: ", addArray);
