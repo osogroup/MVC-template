@@ -310,6 +310,7 @@ function addFunction(variable) {
   // use this value (0/1/2) from elementVal to add the values to task_0.tag
   var HTMLelement = '<div class="row"><div class="col-10">'+JSON.parse(localStorage.getItem(objType+'_'+objItemid)).tags[elementIDNum]+'</div><div class="col-2"><input type="button" id="remvBtn_'+elementIDNum+'" value="-" onclick="removeFunction('+elementIDNum+')"></div></div>';
 
+  console.log("This is JSON.parse(localStorage.getItem(objType+'_'+objItemid)).tags[elementIDNum]: ", JSON.parse(localStorage.getItem(objType+'_'+objItemid)).tags[elementIDNum])
 
 
 }
