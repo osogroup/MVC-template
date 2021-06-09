@@ -431,6 +431,7 @@ function removeFunction(val) {
   var superKeyTags = superObjLoop.tags;
   tagArray = superKeyTags;
   console.log("This is tagArray: ", tagArray);
+  tagArray.splice(val, 1);
   
   // append HTMLelement to created div
   $('#appendTo').append(HTMLelement);
