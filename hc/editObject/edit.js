@@ -346,7 +346,7 @@ function addFunction(variable) {
 
   console.log("This is selOpt: ", selOpt);
 
-  var tagID = selOpt.id.replace(/optionValue_/, '')
+  var tagID = selOpt.id.replace(/optionValue_/, '');
 
 
   if (addArray.includes(elementVal)) {
