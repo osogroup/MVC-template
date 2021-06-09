@@ -300,19 +300,6 @@ const doTheStringify = async () => {
 // ------------------------------------------------ Add function ------------------------------------------------
 
 
-// // access the tags in task_0
-// var currentTags = currentKey.tags;
-// console.log("This is currentTags: ",currentTags);
-
-// // add a value to tags in task_0 from the task_0 name
-
-
-// // stringify tag ids
-
-
-// // push the tag ids into task_0.tags array
-
-
 function addFunction(variable) {
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
