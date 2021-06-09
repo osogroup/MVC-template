@@ -358,6 +358,8 @@ function addFunction(variable) {
     
     console.log("This is the new addArray: ", addArray);
     console.log("This is the new tagArray: ", tagArray);
+
+    superObjLoop.tags = tagArray;
   
     // adding a new row and columns to the HTML
     var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variableID+'" value="-" onclick="removeFunction('+variableID+')"></div></div>';
