@@ -352,7 +352,7 @@ function removeFunction(val) {
   console.log("This is val: ", val);
   var storageKey = objType+'_'+objItemid+'_HTMLnames';
   var removeArray = [];
-  HTMLelement = '';
+  var HTMLelement = '';
   var i = 0;
 
   // get the localStorage
@@ -385,6 +385,11 @@ function removeFunction(val) {
   var buttonSpot = document.getElementById('buttonSpot');
   var child = buttonSpot.firstChild;
   buttonSpot.removeChild(child);
+
+  // recreating Add button
+  var addButton = '<input type="button" id="showTxt_'+i+'" value="Add" onclick="addFunction(this)"/>';
+  $('buttonSpot').append(addButton);
+
 
   // stringify removeArray into localStorage
   localStorage.setItem(storageKey, JSON.stringify(removeArray));
