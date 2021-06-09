@@ -638,7 +638,7 @@ function arrayList(array) {
   // if objectKeyNames_name exists in localStorage {
     if (localStorage.getItem(objectKeyNames) != null) {
       // pull from localStorage
-      itemValueNames = localStorage.getItem(objectKeyNames);
+      itemValueNames = JSON.parse(localStorage.getItem(objectKeyNames));
       console.log("This is itemValueNames: ", itemValueNames);
     }
   else {
