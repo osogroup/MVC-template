@@ -330,6 +330,13 @@ function addFunction(variable) {
   }
   console.log("This is tagArray post-population: ", tagArray);
 
+  tagVal = select.options[select.selectedIndex];
+  console.log("This is tagVal: ", tagVal);
+
+  var tagID = elementVal.replace(/optionValue_/, '')
+
+
+
   var addArray = [];
   var storageKey = objType+'_'+objItemid+'_name';
   // console.log("This is storageKey: ", storageKey);
@@ -355,6 +362,7 @@ function addFunction(variable) {
   // access text property of selected option
   var select = document.getElementById('scripts');
   elementVal = select.options[select.selectedIndex].text;
+
   if (addArray.includes(elementVal)) {
     console.log(elementVal+' exists in addArray already');
   }
