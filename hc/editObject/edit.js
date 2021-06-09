@@ -671,7 +671,7 @@ function arrayList(array) {
   // creating all the options from the arrayOfOptions array in the select tag
   var optionCount = 0;
   for (const [optionKey, optionValue] of Object.entries(array.newFields)) {
-    HTMLoutput          +='<option value="'+optionValue+'">'+optionValue+'</option>';
+    HTMLoutput          +='<option id="optionValue_'+optionCount+'" value="'+optionValue+'">'+optionValue+'</option>';
     optionCount++;
   }
 
