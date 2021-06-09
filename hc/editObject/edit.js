@@ -378,6 +378,7 @@ function removeFunction(val) {
   console.log("This is val: ", val);
   var superKey = objType+'_'+objItemid;
   var storageKey = objType+'_'+objItemid+'_name';
+  var tagArray = [];
   var removeArray = [];
   var HTMLelement = '';
   var i = 0;
@@ -428,7 +429,8 @@ function removeFunction(val) {
 
   var superObjLoop = JSON.parse(localStorage.getItem(superKey));
   var superKeyTags = superObjLoop.tags;
-  console.log("This is superKeyTags: ", superKeyTags);
+  tagArray = superKeyTags;
+  console.log("This is tagArray: ", tagArray);
   
   // append HTMLelement to created div
   $('#appendTo').append(HTMLelement);
