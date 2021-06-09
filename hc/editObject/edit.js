@@ -301,6 +301,7 @@ const doTheStringify = async () => {
 
 
 function addFunction(variable) {
+  var data = await tempData();
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
