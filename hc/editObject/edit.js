@@ -427,7 +427,8 @@ function removeFunction(val) {
   elm.appendChild(tag);
 
   var superObjLoop = JSON.parse(localStorage.getItem(superKey));
-  console.log("This is superObjLoop: ", superObjLoop);
+  var superKeyTags = superObjLoop.tags;
+  console.log("This is superKeyTags: ", superKeyTags);
   
   // append HTMLelement to created div
   $('#appendTo').append(HTMLelement);
