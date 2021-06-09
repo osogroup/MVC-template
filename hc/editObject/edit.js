@@ -353,6 +353,7 @@ function removeFunction(val) {
   var storageKey = objType+'_'+objItemid+'_HTMLnames';
   var removeArray = [];
   HTMLelement = '';
+  var i = 0;
 
   // get the localStorage
   var stringThing = localStorage.getItem(storageKey);
@@ -376,6 +377,7 @@ function removeFunction(val) {
   // reshowing all the items 
   for (const [itemKey, itemValue] of Object.entries(removeArray)) {
     HTMLelement += '<div class="row"><div class="col-10">'+itemValue+'</div><div class="col-2"><input type="button" id="remvBtn'+itemKey+'" value="-" onclick="removeFunction('+itemKey+')"></div></div>';
+    i++;
   }
 
   // changing the id of the Add button
