@@ -370,8 +370,6 @@ function removeFunction(val) {
 
   console.log("This is the new removeArray: ", removeArray);
 
-  // stringify into localStorage
-  localStorage.setItem(storageKey, JSON.stringify(removeArray))
 
   // removing 1 value from arrayFields starting at index 'val'
   // arrayFields.splice(val, 1);
@@ -382,8 +380,16 @@ function removeFunction(val) {
   // deleting the whole area
   element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
 
+  // reshowing all the items 
+  for (const [itemKey, itemValue] of Object.entries()) {
+
+  }
+
+  // stringify into localStorage
+  localStorage.setItem(storageKey, JSON.stringify(removeArray));
+
   // get the Add button
-  
+
 
     // // delete the Add button
     // thisButton.remove();
