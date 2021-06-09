@@ -350,6 +350,9 @@ function addFunction(variable) {
   console.log("This is tagNumber: ", tagNumber);
 
   if (tagArray.includes(tagNumber)) {
+    console.log("tagArray already includes", tagNumber);
+  }
+  else {
     tagArray.push(tagNumber);
   }
 
