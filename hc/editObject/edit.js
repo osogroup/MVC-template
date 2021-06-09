@@ -374,14 +374,15 @@ function removeFunction(val) {
   // deleting the whole area
   element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
 
-  // reshowing all the items 
+  // reshowing all the items
   for (const [itemKey, itemValue] of Object.entries(removeArray)) {
     HTMLelement += '<div class="row"><div class="col-10">'+itemValue+'</div><div class="col-2"><input type="button" id="remvBtn'+itemKey+'" value="-" onclick="removeFunction('+itemKey+')"></div></div>';
     i++;
   }
 
   // changing the id of the Add button
-
+  var buttonSpot = $('#buttonSpot');
+  console.log("This is buttonSpot: ", buttonSpot);
 
   // stringify removeArray into localStorage
   localStorage.setItem(storageKey, JSON.stringify(removeArray));
