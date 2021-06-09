@@ -483,15 +483,14 @@ function inputFunction(params) {
 function textAttribute(text) {
   var textHTML = '';
 
-  textHTML += '<div class="col-12">'
-                + '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset class="minHeight">'
-                    + '<legend>'+text.newHKey+'</legend>'
-                    + '<input type="text" class="col-12 textInput" id="input'+text.newHKey+'" value="'+text.newHVal+'" placeholder="'+text.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
-                    // + '<input type="textarea" class="col-12" id="input'+headerKey+'" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
-                  + '</fieldset>'
-                + '</form>'
-              + '</div>';
+  textHTML  +='<div class="col-12">'
+              + '<form action="#" method="post" class="demoForm">'
+                + '<fieldset class="minHeight">'
+                  + '<legend>'+text.newHKey+'</legend>'
+                  + '<input type="text" class="col-12 textInput" id="input'+text.newHKey+'" value="'+text.newHVal+'" placeholder="'+text.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
+                + '</fieldset>'
+              + '</form>'
+            + '</div>';
 
   return textHTML;
 }
