@@ -669,8 +669,10 @@ function arrayList(array) {
                       + '<br><select id="scripts" name="scripts">';
 
   // creating all the options from the arrayOfOptions array in the select tag
+  var optionCount = 0;
   for (const [optionKey, optionValue] of Object.entries(array.newFields)) {
     HTMLoutput          +='<option value="'+optionValue+'">'+optionValue+'</option>';
+    optionCount++;
   }
 
   // closing the form tags and creating the add button
