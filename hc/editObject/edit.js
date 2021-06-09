@@ -308,7 +308,7 @@ function addFunction(variable) {
   console.log("This is elementVal: ", elementIDNum);
 }
 
-// use this value (0) from elementVal to get the 
+// use this value (0) from elementVal to add the values to task_0.tag
 
 // ----------------------------------------------- Remove function -----------------------------------------------
 
