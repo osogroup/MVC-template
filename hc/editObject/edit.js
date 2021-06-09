@@ -303,11 +303,12 @@ const doTheStringify = async () => {
 function addFunction(variable) {
   console.log("This is variable: ", variable);
   var select = document.getElementById('scripts');
-  elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
+  elementIDNum = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
 
-  console.log("This is elementVal: ", elementVal);
+  console.log("This is elementVal: ", elementIDNum);
 }
 
+// use this value (0) from elementVal to get the 
 
 // ----------------------------------------------- Remove function -----------------------------------------------
 
