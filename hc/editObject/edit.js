@@ -357,7 +357,6 @@ function removeFunction(val) {
 
   // get the localStorage
   var stringThing = localStorage.getItem(storageKey);
-  console.log("stringThing", stringThing);
 
   // parse
   var parseThing = JSON.parse(stringThing);
