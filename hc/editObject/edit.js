@@ -306,9 +306,14 @@ function addFunction(variable) {
   elementIDNum = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
 
   console.log("This is elementVal: ", elementIDNum);
+  
+  // use this value (0/1/2) from elementVal to add the values to task_0.tag
+  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variableID+'" value="-" onclick="removeFunction('+variableID+')"></div></div>';
+
+
+
 }
 
-// use this value (0) from elementVal to add the values to task_0.tag
 
 // ----------------------------------------------- Remove function -----------------------------------------------
 
