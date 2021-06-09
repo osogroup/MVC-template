@@ -322,7 +322,7 @@ function addFunction(variable) {
   var superObjLoop = JSON.parse(localStorage.getItem(superKey));
   // console.log("This is superObjLoop: ", superObjLoop);
   var superKeyTags = superObjLoop.tags;
-  console.log("This is superKeyTags: ", superKeyTags);
+  // console.log("This is superKeyTags: ", superKeyTags);
 
   // populate tagArray with superKeyTags
   for (const [tagKey, tagValue] of Object.entries(superKeyTags)) {
