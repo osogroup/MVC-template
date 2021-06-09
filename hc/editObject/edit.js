@@ -404,28 +404,7 @@ function removeFunction(val) {
 }
 
 
-// ----------------------------------------------- Update localStorage -----------------------------------------------
 
-
-// get task_0 
-var taskAndID = objType+'_'+objItemid;
-console.log("This is taskAndID: ",taskAndID);
-
-// parse it
-var currentKey = JSON.parse(localStorage.getItem(taskAndID));
-console.log("This is currentKey: ",currentKey);
-
-// access the tags in task_0
-var currentTags = currentKey.tags;
-console.log("This is currentTags: ",currentTags);
-
-// add a value to tags in task_0 from the task_0 name
-
-
-// stringify tag ids
-
-
-// push the tag ids into task_0.tags array
 
 
 
@@ -705,3 +684,30 @@ function arrayList(array) {
 
   return HTMLoutput;
 }
+
+
+
+
+
+// ----------------------------------------------- Update localStorage -----------------------------------------------
+
+
+// get task_0 
+var taskAndID = objType+'_'+objItemid;
+console.log("This is taskAndID: ",taskAndID);
+
+// parse it
+var currentKey = JSON.parse(localStorage.getItem(taskAndID));
+console.log("This is currentKey: ",currentKey);
+
+// access the tags in task_0
+var currentTags = currentKey.tags;
+console.log("This is currentTags: ",currentTags);
+
+// add a value to tags in task_0 from the task_0 name
+
+
+// stringify tag ids
+
+
+// push the tag ids into task_0.tags array
