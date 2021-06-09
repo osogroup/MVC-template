@@ -300,15 +300,39 @@ const doTheStringify = async () => {
 // ------------------------------------------------ Add function ------------------------------------------------
 
 
+// // get task_0 
+// var taskAndID = objType+'_'+objItemid;
+// console.log("This is taskAndID: ",taskAndID);
+
+// // parse it
+// var currentKey = JSON.parse(localStorage.getItem(taskAndID));
+// console.log("This is currentKey: ",currentKey);
+
+// // access the tags in task_0
+// var currentTags = currentKey.tags;
+// console.log("This is currentTags: ",currentTags);
+
+// // add a value to tags in task_0 from the task_0 name
+
+
+// // stringify tag ids
+
+
+// // push the tag ids into task_0.tags array
+
+
 function addFunction(variable) {
   // console.log("This is variable: ", variable); // <input type="button" id="....
   // console.log("This is the variable.id: ", variable.id); // showTxt_3
 
   var addArray = [];
+  var superKey = objType+'_'+objItemid;
   var storageKey = objType+'_'+objItemid+'_name';
   // console.log("This is storageKey: ", storageKey);
+  var superObjLoop = localStorage.getItem(superKey);
   var objLoop = localStorage.getItem(storageKey);
   // console.log("This is objLoop: ", objLoop);
+  var parseSuperObjLoop = JSON.parse(superObjLoop);
   var parseObjLoop = JSON.parse(objLoop);
   // console.log("This is parseObjLoop: ", parseObjLoop);
 
