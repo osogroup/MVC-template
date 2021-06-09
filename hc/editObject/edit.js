@@ -381,7 +381,7 @@ function removeFunction(val) {
   }
 
   // changing the id of the Add button
-  var buttonSpot = $('#buttonSpot');
+  var buttonSpot = document.getElementById('buttonSpot');
   console.log("This is buttonSpot: ", buttonSpot);
 
   // stringify removeArray into localStorage
