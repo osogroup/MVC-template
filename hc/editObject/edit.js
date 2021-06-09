@@ -340,7 +340,7 @@ function addFunction(variable) {
     // adding a new row and columns to the HTML
     var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn_'+variableID+'" value="-" onclick="removeFunction('+variableID+')"></div></div>';
     $('#appendTo').append(HTMLelement);
-    localStorage.setItem(storageKey, JSON.stringify(addArray));
+    addToLocalStorage(storageKey, JSON.stringify(addArray));
   }
 
 }
