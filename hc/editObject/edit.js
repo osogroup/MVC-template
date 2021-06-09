@@ -317,8 +317,6 @@ function addFunction(variable) {
   }
   console.log("This is tagArray post-population: ", tagArray);
 
-  console.log("This is tagVal: ", tagVal);
-
   var addArray = [];
   var storageKey = objType+'_'+objItemid+'_name';
   // console.log("This is storageKey: ", storageKey);
@@ -345,6 +343,8 @@ function addFunction(variable) {
   var select = document.getElementById('scripts');
   tagVal = select.options[select.selectedIndex];
   elementVal = select.options[select.selectedIndex].text;
+
+  console.log("This is tagVal: ", tagVal);
 
   var tagID = elementVal.replace(/optionValue_/, '')
 
