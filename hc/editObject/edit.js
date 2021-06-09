@@ -302,6 +302,8 @@ const doTheStringify = async () => {
 
 function addFunction(variable) {
   console.log("This is variable: ", variable);
+  var variableID = variable.id;
+  console.log("This is variableID: ", variableID);
 }
 
 
