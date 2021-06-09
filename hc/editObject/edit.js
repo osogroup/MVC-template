@@ -385,8 +385,6 @@ function removeFunction(val) {
   var child = buttonSpot.firstChild;
   buttonSpot.removeChild(child);
 
-
-
   // stringify removeArray into localStorage
   localStorage.setItem(storageKey, JSON.stringify(removeArray));
 
