@@ -155,7 +155,7 @@ const doTheStringify = async () => {
 
     // filling arrayOfOptions[]
     var tagData = data.tags;
-    console.log("This is tagData: ", tagData);
+    console.log("This is tagData (data.tags): ", tagData);
     
 
     // -------------------------------------------- Navigation Bar --------------------------------------------
@@ -418,6 +418,9 @@ console.log("This is currentKey: ",currentKey);
 // access the tags in task_0
 var currentTags = currentKey.tags;
 console.log("This is currentTags: ",currentTags);
+
+// add a value to tags in task_0 from the task_0 name
+
 
 // stringify tag ids
 
