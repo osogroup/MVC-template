@@ -352,6 +352,7 @@ function removeFunction(val) {
   console.log("This is val: ", val);
   var storageKey = objType+'_'+objItemid+'_HTMLnames';
   var removeArray = [];
+  HTMLelement = '';
 
   // get the localStorage
   var stringThing = localStorage.getItem(storageKey);
@@ -363,14 +364,10 @@ function removeFunction(val) {
 
   // put localStorage into removeArray
   removeArray = parseThing;
-  // console.log("This is removeArray: ", removeArray);
 
-  // splice array
+  // splice array and console.log()
   removeArray.splice(val, 1);
   console.log("This is the new removeArray: ", removeArray);
-
-  // removing 1 value from arrayFields starting at index 'val'
-  // arrayFields.splice(val, 1);
 
   // getting the remove button at index 'val'
   var element = document.querySelector('#remvBtn_'+val);
@@ -380,12 +377,22 @@ function removeFunction(val) {
 
   // reshowing all the items 
   for (const [itemKey, itemValue] of Object.entries(removeArray)) {
-    console.log("This is itemKey: ", itemKey);
-    console.log("This is itemValue: ", itemValue);
+    HTMLelement += '<div class="row"><div class="col-10">'+itemValue+'</div><div class="col-2"><input type="button" id="remvBtn'+itemKey+'" value="-" onclick="removeFunction('+itemKey+')"></div></div>';
   }
 
-  // stringify into localStorage
+  // stringify removeArray into localStorage
   localStorage.setItem(storageKey, JSON.stringify(removeArray));
+
+  // next 4 lines create a new div within outerDiv that has the id="appendTo"
+  var tag = document.createElement('div');
+  tag.setAttribute("id", "appendTo");
+  var elm = document.getElementById("outerDiv");
+  // console.log("This is elm: ", elm);
+  elm.appendChild(tag);
+  
+  // append HTMLelement to created div
+  $('#appendTo').append(HTMLelement);
+
 
   // get the Add button
 
