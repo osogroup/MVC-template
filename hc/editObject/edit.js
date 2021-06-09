@@ -351,6 +351,8 @@ function addFunction(variable) {
 
   tagArray.push(tagNumber);
 
+  console.log("This is tagArray post-tagNumber push: ", tagArray)
+
 
   if (addArray.includes(elementVal)) {
     console.log(elementVal+' exists in addArray already');
