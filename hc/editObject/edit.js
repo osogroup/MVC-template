@@ -349,7 +349,7 @@ function addFunction(variable) {
 
 
 function removeFunction(val) {
-  console.log("This is removeFunction(val)'s parameters: ", val);
+  console.log("This is val: ", val);
   var storageKey = objType+'_'+objItemid+'_HTMLnames';
   var removeArray = [];
 
