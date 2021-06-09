@@ -56,7 +56,7 @@ function anyChange(str) {
   // console.log("this is myObject[str]", myObject[str]);
   backToString = JSON.stringify(myObject);
   // console.log("This is backToString ", backToString);
-  localStorage.setItem(superKey, backToString);
+  addToLocalStorage(superKey, backToString);
 }
 
 
@@ -107,7 +107,7 @@ function checkLocalStorage(check) {
         // console.log("This is objItem: ", objItem);
         var objItemString = JSON.stringify(objItem);
         // console.log("This is objItemString: ", objItemString);
-        localStorage.setItem(objectKeys, objItemString);
+        addToLocalStorage(objectKeys, objItemString);
         console.log(localStorage);
       }
     }
@@ -560,7 +560,7 @@ function selectedOption(str) {
   var change = selected;
   myObject[str] = change;
   backToString = JSON.stringify(myObject);
-  localStorage.setItem(superKey, backToString);
+  addToLocalStorage(superKey, backToString);
   console.log("status is now ", change);
   
 }
@@ -611,7 +611,7 @@ function newDate(date) {
   var change = selected;
   myObject[date] = change;
   backToString = JSON.stringify(myObject);
-  localStorage.setItem(superKey, backToString);
+  addToLocalStorage(superKey, backToString);
   console.log("dueDate is now ", change);
   
 }
@@ -644,7 +644,7 @@ function arrayList(array) {
     // counts up the indices if there's any preset values in the array
     i++;
   }
-  localStorage.setItem(objectKeyNames+'HTMLnames', JSON.stringify(HTMLnames));
+  addToLocalStorage(objectKeyNames+'HTMLnames', JSON.stringify(HTMLnames));
   // removing the extra i++ that is called
   i--;
   
