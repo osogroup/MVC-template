@@ -635,6 +635,17 @@ function arrayList(array) {
                       + '<div id="outerDiv">'
                         + '<div id="appendTo">';
 
+  // if objectKeyNames_name exists in localStorage {
+    if (localStorage.getItem(objectKeyNames+'_name' != null)) {
+      // pull from localStorage
+      itemValueNames = localStorage.getItem(objectKeyNames+'_name');
+      console.log("This is itemValueNames: ", itemValueNames);
+    }
+  // else {
+    // pull from array.newNames
+  // }
+
+
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(array.newNames)) {
     HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
