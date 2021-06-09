@@ -388,8 +388,7 @@ function removeFunction(val) {
 
   // recreating Add button
   var addButton = '<input type="button" id="showTxt_'+i+'" value="Add" onclick="addFunction(this)"/>';
-  $('buttonSpot').append(addButton);
-
+  $('#buttonSpot').append(addButton);
 
   // stringify removeArray into localStorage
   localStorage.setItem(storageKey, JSON.stringify(removeArray));
