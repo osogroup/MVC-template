@@ -370,7 +370,6 @@ function removeFunction(val) {
 
   console.log("This is the new removeArray: ", removeArray);
 
-
   // removing 1 value from arrayFields starting at index 'val'
   // arrayFields.splice(val, 1);
 
