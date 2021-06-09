@@ -303,7 +303,7 @@ const doTheStringify = async () => {
 function addFunction(variable) {
   console.log("This is variable: ", variable);
   var select = document.getElementById('scripts');
-  elementVal = select.options[select.selectedIndex].id;
+  elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
 
   console.log("This is elementVal: ", elementVal);
 }
