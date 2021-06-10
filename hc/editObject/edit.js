@@ -317,7 +317,7 @@ function addFunction() {
     console.log("This is tagList: ", tagList);
 
     // if tagList includes elementVal {
-    if (tagList.includes(elementVal)) {
+    if (tagList.includes(Number(elementVal))) {
       // dont add the option
       console.log("tagList already includes", Number(elementVal));
     }
