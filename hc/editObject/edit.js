@@ -322,6 +322,7 @@ function addFunction() {
     console.log("This is the localObj with updated tags: ", localObj);
     localStorage.setItem(objTypeID, JSON.stringify(localObj));
   }
+  location.reload();
 }
 
 
