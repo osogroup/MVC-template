@@ -304,6 +304,7 @@ const doTheStringify = async () => {
 function addFunction() {
   var objTypeID = objType+'_'+objItemid;
   var tagList = [];
+  var localObj = localStorage.getItem(objTypeID);
   var select = document.getElementById('scripts');
   // console.log("This is select: ", select);
   elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
@@ -333,6 +334,7 @@ function addFunction() {
     console.log("This is stringified tagList: ", tagList);
 
     localStorage.setItem(objTypeID.tags, tagList);
+
 
 
   }
