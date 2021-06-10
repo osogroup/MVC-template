@@ -596,12 +596,12 @@ function arrayList(array) {
     // console.log("This is arrayKey: ", arrayKey);
     // console.log("This is arrayValue: ", arrayValue);
     console.log("This is arrayValue.id: ", arrayValue.id);
-    for (const [innerKey, innerValue] of Object.entries(arrayValue)) {
-      console.log("This is innerKey: ", innerKey);
-      console.log("This is innerValue: ", innerValue);
-      if (tagNumbers.includes(innerKey)) {
+    // for (const [innerKey, innerValue] of Object.entries(arrayValue)) {
+    //   console.log("This is innerKey: ", innerKey);
+    //   console.log("This is innerValue: ", innerValue);
+    //   if (tagNumbers.includes(innerKey)) {
         // console.log("tagNumbers includes", innerKey);
-      }
+      // }
     }
   }
 
