@@ -595,6 +595,9 @@ function arrayList(array) {
   for (const [arrayKey, arrayValue] of Object.entries(newDataArray)) {
     // console.log("This is arrayKey: ", arrayKey);
     // console.log("This is arrayValue: ", arrayValue);
+    if (tagNumbers.includes(arrayValue.id)) {
+      console.log("tagNumbers includes", arrayValue.id);
+    }
     console.log("This is arrayValue.id: ", arrayValue.id);
     // for (const [innerKey, innerValue] of Object.entries(arrayValue)) {
     //   console.log("This is innerKey: ", innerKey);
