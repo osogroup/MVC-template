@@ -312,21 +312,19 @@ function addFunction() {
 
   // if the tag list doesn't include elementVal then add the selected option to the list
 
-    // set tagList equal to the tags in the objType localStorage
-    tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
-    console.log("This is tagList: ", tagList);
+  // set tagList equal to the tags in the objType localStorage
+  tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
+  console.log("This is tagList: ", tagList);
 
-    // if tagList includes elementVal {
-    if (tagList.includes(Number(elementVal))) {
-      // dont add the option
-      console.log("tagList already includes", elementVal);
-    }
-    else {
-      // add elementVal to localStorage
-      console.log("tagList doesn't include", elementVal); 
-    }
-
-
+  // if tagList includes elementVal {
+  if (tagList.includes(Number(elementVal))) {
+    // dont add the option
+    console.log("tagList already includes", elementVal);
+  }
+  else {
+    // add elementVal to localStorage
+    console.log("tagList doesn't include", elementVal);
+  }
 }
 
 
