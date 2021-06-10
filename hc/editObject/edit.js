@@ -329,8 +329,7 @@ function addFunction() {
 // ----------------------------------------------- Remove function -----------------------------------------------
 
 
-function removeFunction(val) {
-  console.log("This is 'val' in removeFunction(val): ",val);
+function removeFunction(val) { // val is the entire remove button
   var valIDNum = val.id.replace(/remvBtn_/, '');
   console.log("This is valIDNum: ", valIDNum);
 
