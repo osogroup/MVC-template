@@ -324,6 +324,7 @@ function addFunction() {
   else {
     // add elementVal to localStorage
     console.log("tagList doesn't include", elementVal);
+    
   }
 }
 
