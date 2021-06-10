@@ -581,6 +581,7 @@ function arrayList(array) {
   }
   console.log("This is tagNames: ", tagNames);
 
+  // filling tagObj with two arrays: tagNumbers and tagNames
   tagNumbers.forEach((key, i) => tagObj[key] = tagNames[i]);
   console.log("This is tagObj: ", tagObj);
 
