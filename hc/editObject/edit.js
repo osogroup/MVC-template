@@ -593,7 +593,7 @@ function arrayList(array) {
   console.log("This is tagObj: ", tagObj);
 
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
-  for (const[arrayKey, arrayValue] of Object.entries(tagNames)) {
+  for (const[arrayKey, arrayValue] of Object.entries(tagObj)) {
     HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
     name.push(arrayValue);
     // counts up the indices if there's any preset values in the array
