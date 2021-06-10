@@ -573,8 +573,6 @@ function arrayList(array) {
 
   // if tag number array includes the tag number, display the tag name
   for (const [arrayKey, arrayValue] of Object.entries(array.newData.tags)) {
-    console.log("This is arrayKey: ", arrayKey);
-    console.log("This is arrayValue: ", arrayValue);
     if (tagNumbers.includes(arrayValue.id)) {
       tagNames.push(arrayValue.name);
     }
@@ -582,7 +580,6 @@ function arrayList(array) {
 
   // filling tagObj with two arrays: tagNumbers and tagNames
   tagNumbers.forEach((key, i) => tagObj[key] = tagNames[i]);
-  console.log("This is tagObj: ", tagObj);
 
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(tagObj)) {
