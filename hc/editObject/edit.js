@@ -305,6 +305,7 @@ function addFunction() {
   var objTypeID = objType+'_'+objItemid;
   var tagList = [];
   var localObj = localStorage.getItem(objTypeID);
+  console.log("This is localObj: ", localObj);
   var select = document.getElementById('scripts');
   // console.log("This is select: ", select);
   elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
