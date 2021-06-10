@@ -326,6 +326,8 @@ function addFunction() {
     console.log("tagList doesn't include", elementVal);
     tagList.push(Number(elementVal));
 
+    // organize tagList
+
 
     // stringify elementVal
 
