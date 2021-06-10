@@ -303,6 +303,7 @@ const doTheStringify = async () => {
 
 function addFunction() {
   var objTypeID = objType+'_'+objItemid;
+  var tagList = [];
   var select = document.getElementById('scripts');
   console.log("This is select: ", select);
   elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
@@ -312,10 +313,10 @@ function addFunction() {
   // if the tag list doesn't include elementVal then add the selected option to the list
 
     // get the tags from localStorage
-      console.log("parsing tags shit: ", JSON.parse(localStorage.getItem(objTypeID)).tags);
+    console.log("parsing tags shit: ", JSON.parse(localStorage.getItem(objTypeID)).tags);
 
     // put them in a tagList array
-
+    tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
 
     // if tagList includes elementVal {
       // dont add the option
