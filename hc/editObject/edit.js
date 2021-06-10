@@ -324,9 +324,11 @@ function addFunction() {
   else {
     // add elementVal to tagList 
     console.log("tagList doesn't include", elementVal);
+    tagList.push(Number(elementVal));
+
 
     // stringify elementVal
-    
+
 
     // localStorage.setItem(objTypeID.tags,)
 
