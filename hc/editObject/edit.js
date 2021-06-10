@@ -597,7 +597,6 @@ function arrayList(array) {
     // console.log("This is arrayKey: ", arrayKey);
     // console.log("This is arrayValue: ", arrayValue);
     if (tagNumbers.includes(arrayValue.id)) {
-      console.log("tagNumbers includes", arrayValue.id);
       tagNames.push(arrayValue.name);
     }
   }
