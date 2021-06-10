@@ -312,7 +312,7 @@ function addFunction() {
 
   // if the tag list doesn't include elementVal then add the selected option to the list
 
-    // put the tags from localStorage in a tagList array
+    // set tagList equal to the tags in the objType localStorage
     tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
 
     // if tagList includes elementVal {
