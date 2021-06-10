@@ -305,35 +305,18 @@ function addFunction() {
   // console.log("This is select: ", select);
   elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
 
-  console.log("This is elementVal: ", elementVal);
-
-  // if the tag list doesn't include elementVal then add the selected option to the list
-
-  // set tagList equal to the tags in the objType localStorage
   tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
   console.log("This is tagList: ", tagList);
 
-  // if tagList includes elementVal {
   if (tagList.includes(Number(elementVal))) {
-    // dont add the option
     console.log("tagList already includes", elementVal);
   }
   else {
-    // add elementVal to tagList 
-    console.log("tagList doesn't include", elementVal);
     tagList.push(Number(elementVal));
     tagList.sort();
-    console.log("But now it does, see: ", tagList);
-
-    // stringify elementVal
     JSON.stringify(tagList);
-    console.log("This is stringified tagList: ", tagList);
-
     localObj.tags = tagList;
     console.log("This is the localObj with updated tags: ", localObj);
-
-
-
     localStorage.setItem(objTypeID, JSON.stringify(localObj));
   }
 }
