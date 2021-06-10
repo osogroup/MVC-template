@@ -347,7 +347,7 @@ function removeFunction(val) { // val is the entire remove button
 
   localStorage.setItem(objTypeID, JSON.stringify(localObj));
 
-  location.reload();
+  // location.reload();
 }
 
 
