@@ -596,10 +596,10 @@ function arrayList(array) {
     // console.log("This is arrayKey: ", arrayKey);
     // console.log("This is arrayValue: ", arrayValue);
     for (const [innerKey, innerValue] of Object.entries(arrayValue)) {
+      console.log("This is innerKey: ", innerKey);
+      console.log("This is innerValue: ", innerValue);
+      console.log("tagNumbers includes", innerKey);
       if (tagNumbers.includes(innerKey)) {
-        console.log("This is innerKey: ", innerKey);
-        console.log("This is innerValue: ", innerValue);
-        console.log("tagNumbers includes", innerKey);
       }
     }
   }
