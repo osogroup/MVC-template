@@ -600,9 +600,9 @@ function arrayList(array) {
       console.log("tagNumbers includes", arrayValue.id);
       tagNames.push(arrayValue.name);
     }
-    console.log("This is tagNames: ", tagNames);
   }
-  
+  console.log("This is tagNames: ", tagNames);
+
 
 
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
