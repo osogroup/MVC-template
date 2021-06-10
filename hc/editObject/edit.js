@@ -547,7 +547,6 @@ function arrayList(array) {
   
   // console.log("This is the input for arrayList(array): ", array);
 
-  var i = 0;
   var HTMLoutput = '';
   var HTMLarrayValues = '';
   var objTypeID = objType+'_'+objItemid;
@@ -574,12 +573,10 @@ function arrayList(array) {
     }
   }
 
-  // var newDataArray = array.newData.tags;
-
   // if tag number array includes the tag number, display the tag name
   for (const [arrayKey, arrayValue] of Object.entries(array.newData.tags)) {
-    // console.log("This is arrayKey: ", arrayKey);
-    // console.log("This is arrayValue: ", arrayValue);
+    console.log("This is arrayKey: ", arrayKey);
+    console.log("This is arrayValue: ", arrayValue);
     if (tagNumbers.includes(arrayValue.id)) {
       tagNames.push(arrayValue.name);
     }
@@ -595,11 +592,9 @@ function arrayList(array) {
     HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction(this)"></div></div>';
     name.push(arrayValue);
     // counts up the indices if there's any preset values in the array
-    i++;
   }
   addToLocalStorage(objectKeyNames, JSON.stringify(name));
   // removing the extra i++ that is called
-  i--;
   
   HTMLoutput = HTMLoutput+HTMLarrayValues;
 
