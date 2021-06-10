@@ -592,7 +592,7 @@ function arrayList(array) {
   console.log("This is newDataArray: ", newDataArray);
 
   // if tag number array includes the tag number, display the tag name
-  for (const [arrayKey, arrayValue] of Object.entries(JSON.parse(array.newData.tags))) {
+  for (const [arrayKey, arrayValue] of Object.entries(newDataArray)) {
     console.log("This is arrayKey: ", arrayKey);
     console.log("This is arrayValue: ", arrayValue);
   }
