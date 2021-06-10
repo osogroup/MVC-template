@@ -575,6 +575,7 @@ function arrayList(array) {
       }
     }
   }
+  
   console.log("This is tagNumbers: ", tagNumbers);
 
   var newDataArray = array.newData.tags;
