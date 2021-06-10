@@ -592,6 +592,9 @@ function arrayList(array) {
     name.push(arrayValue);
     // counts up the indices if there's any preset values in the array
   }
+
+  console.log("This is name: ", name);
+
   addToLocalStorage(objectKeyNames, JSON.stringify(name));
   // removing the extra i++ that is called
   
