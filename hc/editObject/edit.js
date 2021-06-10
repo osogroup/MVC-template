@@ -596,7 +596,7 @@ function arrayList(array) {
     console.log("This is arrayKey: ", arrayKey);
     console.log("This is arrayValue: ", arrayValue);
     if (tagNumbers.includes(arrayKey)) {
-      console.log("tagArray includes", arrayKey);
+      console.log("tagNumbers includes", arrayKey);
     }
   }
 
