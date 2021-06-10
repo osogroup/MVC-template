@@ -589,13 +589,10 @@ function arrayList(array) {
     HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction(this)"></div></div>';
     // counts up the indices if there's any preset values in the array
   }
-
-  // removing the extra i++ that is called
   
-  HTMLoutput = HTMLoutput+HTMLarrayValues;
-
   // creating the select tag
-  HTMLoutput            +='</div>'
+  HTMLoutput += HTMLarrayValues
+                        + '</div>'
                       + '</div>'
                       + '<br><select id="scripts" name="scripts">';
 
