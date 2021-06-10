@@ -314,7 +314,6 @@ function addFunction(variable) {
   var HTMLelement = '<div class="row"><div class="col-10">'+JSON.parse(localStorage.getItem(objType+'_'+objItemid)).tags[elementIDNum]+'</div><div class="col-2"><input type="button" id="remvBtn_'+elementIDNum+'" value="-" onclick="removeFunction('+elementIDNum+')"></div></div>';
 
 
-
 }
 
 
@@ -322,7 +321,7 @@ function addFunction(variable) {
 
 
 function removeFunction(val) {
-
+  console.log("This is 'val' in removeFunction(val): ",val);
 }
 
 
