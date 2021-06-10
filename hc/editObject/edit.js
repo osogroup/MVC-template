@@ -319,11 +319,11 @@ function addFunction() {
     // if tagList includes elementVal {
     if (tagList.includes(elementVal)) {
       // dont add the option
-      console.log("tagList already includes", elementVal);
+      console.log("tagList already includes", Number(elementVal));
     }
     else {
       // add elementVal to localStorage
-      console.log("tagList doesn't include", elementVal); 
+      console.log("tagList doesn't include", Number(elementVal)); 
     }
 
 
