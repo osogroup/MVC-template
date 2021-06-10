@@ -331,7 +331,6 @@ function addFunction() {
 
 function removeFunction(val) { // val is the entire remove button
   var objTypeID = objType+'_'+objItemid;
-  var localObjTags = {};
   var valIDNum = val.id.replace(/remvBtn_/, '');
   console.log("This is valIDNum: ", valIDNum);
   var localObj = JSON.parse(localStorage.getItem(objTypeID));
