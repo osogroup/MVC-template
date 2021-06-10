@@ -588,7 +588,7 @@ function arrayList(array) {
   }
   console.log("This is tagNumbers: ", tagNumbers);
 
-  var newDataArray = array.newData[tags];
+  var newDataArray = array.newData.tags;
   console.log("This is newDataArray: ", newDataArray);
 
   // if tag number array includes the tag number, display the tag name
