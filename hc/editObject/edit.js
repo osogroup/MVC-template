@@ -308,8 +308,8 @@ function addFunction(variable) {
   console.log("This is elementVal: ", elementIDNum);
   
   // use this value (0/1/2) from elementVal to add the values to task_0.tag
-  console.log("This is JSON.parse(localStorage.getItem(objType+'_'+objItemid)).tags[elementIDNum]: ", JSON.parse(localStorage.getItem(objType+'_'+objItemid)).tags[elementIDNum])
-  
+  console.log("This is JSON.parse(localStorage.getItem(objType+'_'+objItemid)).tags[elementIDNum]: ", JSON.parse(localStorage.setItem(objType+'_'+objItemid)).tags[elementIDNum],);
+
   var HTMLelement = '<div class="row"><div class="col-10">'+JSON.parse(localStorage.getItem(objType+'_'+objItemid)).tags[elementIDNum]+'</div><div class="col-2"><input type="button" id="remvBtn_'+elementIDNum+'" value="-" onclick="removeFunction('+elementIDNum+')"></div></div>';
 
 
@@ -570,6 +570,11 @@ function arrayList(array) {
     console.log("This is array.newNames: ", array.newNames);
   }
 
+  // fill up array with tag numbers
+
+
+  // if tag number array includes the tag number, display the tag name
+  
 
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(itemValueNames)) {
