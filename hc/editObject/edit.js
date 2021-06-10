@@ -331,8 +331,8 @@ function addFunction() {
 
 function removeFunction(val) {
   console.log("This is 'val' in removeFunction(val): ",val);
-  var valID = val.id;
-  console.log("This is valID: ", valID);
+  var valIDNum = val.id.replace(/remvBtn_/, '');
+  console.log("This is valIDNum: ", valIDNum);
 
 
   // remove val's id number from task_0.tag
