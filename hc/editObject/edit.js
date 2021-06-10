@@ -578,8 +578,8 @@ function arrayList(array) {
     // console.log("This is arrayValue: ", arrayValue); // 1, COI: Static Site HTML Structure, This task creates the structure of the Static site, ...
     if (arrayKey == 'tags') {
       for (const [tagKey, tagValue] of Object.entries(arrayValue)) {
-        console.log("This is tagKey: ", tagKey);
-        console.log("This is tagValue: ", tagValue);
+        console.log("This is tagKey: ", tagKey); // keys
+        console.log("This is tagValue: ", tagValue); // values
         tagNumbers.push(tagValue);
       }
     }
