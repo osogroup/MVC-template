@@ -551,6 +551,7 @@ function arrayList(array) {
   var objTypeID = objType+'_'+objItemid;
   var objectKeyNames = objType+'_'+objItemid+'_name';
   var name = [];
+  var tagNumbers = [];
 
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
@@ -579,8 +580,10 @@ function arrayList(array) {
       for (const [tagKey, tagValue] of Object.entries(arrayValue)) {
         console.log("This is tagKey: ", tagKey);
         console.log("This is tagValue: ", tagValue);
+        tagNumbers.push(tagValue);
       }
     }
+    console.log("This is tagNumbers: ", tagNumbers);
   }
 
   // if tag number array includes the tag number, display the tag name
