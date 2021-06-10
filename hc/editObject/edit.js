@@ -301,10 +301,9 @@ const doTheStringify = async () => {
 // ------------------------------------------------ Add function ------------------------------------------------
 
 
-function addFunction(variable) {
-  console.log("This is variable: ", variable);
-  
+function addFunction() {
   var select = document.getElementById('scripts');
+  console.log("This is select: ", select);
   elementIDNum = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
 
   console.log("This is elementVal: ", elementIDNum);
@@ -605,7 +604,7 @@ function arrayList(array) {
   // closing the form tags and creating the add button
   HTMLoutput          +='</select>'
                       + '<div id="buttonSpot">'
-                      + '<input type="button" id="showTxt" value="Add" onclick="addFunction(this)"/>'
+                      + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
                     + '</div>'
                   + '</fieldset>'
                 + '</form>'
