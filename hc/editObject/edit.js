@@ -305,7 +305,6 @@ function addFunction() {
   var objTypeID = objType+'_'+objItemid;
   var tagList = [];
   var localObj = JSON.parse(localStorage.getItem(objTypeID));
-  console.log("This is localObj.tags: ", localObj.tags);
   var select = document.getElementById('scripts');
   // console.log("This is select: ", select);
   elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
@@ -334,7 +333,10 @@ function addFunction() {
     JSON.stringify(tagList);
     console.log("This is stringified tagList: ", tagList);
 
-    localStorage.setItem(objTypeID.tags, tagList);
+    localObj.tags = taglist;
+    console.log("This is the localObj with updated tags: ", localObj);
+
+    // localStorage.setItem(objTypeID, localObj);
 
 
 
