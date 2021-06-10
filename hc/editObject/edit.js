@@ -308,7 +308,7 @@ function addFunction() {
 
   console.log("This is elementVal: ", elementVal);
 
-  // if the tag list doesnt include element
+  // if the tag list doesnt include elementVal then add the selected option to the list
   
   // use this value (0/1/2) from elementVal to add the values to task_0.tag
   // console.log("This is JSON.parse(localStorage.getItem(objType+'_'+objItemid)).tags[elementIDNum]: ", JSON.parse(localStorage.setItem(objType+'_'+objItemid)).tags[elementIDNum],);
