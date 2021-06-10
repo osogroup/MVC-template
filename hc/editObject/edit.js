@@ -572,7 +572,7 @@ function arrayList(array) {
   }
 
   // fill up array with tag numbers
-  for (const [arrayKey, arrayValue] of Object.entries(objTypeID)) {
+  for (const [arrayKey, arrayValue] of Object.entries(localStorage.getItem(objTypeID))) {
     console.log("This is arrayKey: ", arrayKey);
     console.log("This is arrayValue: ", arrayValue);
   }
