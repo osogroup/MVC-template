@@ -328,11 +328,8 @@ function addFunction() {
     tagList.sort();
     console.log("But now it does, see: ", tagList);
 
-    // organize tagList ascending
-
-
     // stringify elementVal
-
+    JSON.stringify(tagList);
 
     // localStorage.setItem(objTypeID.tags,)
 
