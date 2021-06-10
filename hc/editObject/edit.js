@@ -304,9 +304,11 @@ const doTheStringify = async () => {
 function addFunction() {
   var select = document.getElementById('scripts');
   console.log("This is select: ", select);
-  elementIDNum = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
+  elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
 
-  console.log("This is elementVal: ", elementIDNum);
+  console.log("This is elementVal: ", elementVal);
+
+  // if the tag list doesnt include element
   
   // use this value (0/1/2) from elementVal to add the values to task_0.tag
   // console.log("This is JSON.parse(localStorage.getItem(objType+'_'+objItemid)).tags[elementIDNum]: ", JSON.parse(localStorage.setItem(objType+'_'+objItemid)).tags[elementIDNum],);
