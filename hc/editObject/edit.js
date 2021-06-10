@@ -308,12 +308,21 @@ function addFunction() {
 
   console.log("This is elementVal: ", elementVal);
 
-  // if the tag list doesnt include elementVal then add the selected option to the list
-  
-  // use this value (0/1/2) from elementVal to add the values to task_0.tag
-  // console.log("This is JSON.parse(localStorage.getItem(objType+'_'+objItemid)).tags[elementIDNum]: ", JSON.parse(localStorage.setItem(objType+'_'+objItemid)).tags[elementIDNum],);
+  // if the tag list doesn't include elementVal then add the selected option to the list
 
-  var HTMLelement = '<div class="row"><div class="col-10">'+JSON.parse(localStorage.getItem(objType+'_'+objItemid)).tags[elementVal]+'</div><div class="col-2"><input type="button" id="remvBtn_'+elementVal+'" value="-" onclick="removeFunction('+elementVal+')"></div></div>';
+    // get the tags from localStorage
+
+
+    // put them in a tagList array
+
+
+    // if tagList includes elementVal {
+      // dont add the option
+    // }
+    // else {
+      // add elementVal to localStorage
+    // }
+
 
 
 }
