@@ -599,17 +599,10 @@ function arrayList(array) {
     if (tagNumbers.includes(arrayValue.id)) {
       console.log("tagNumbers includes", arrayValue.id);
       tagNames.push(arrayValue.name);
-      console.log("This is tagNames: ", tagNames);
     }
-    // for (const [innerKey, innerValue] of Object.entries(arrayValue)) {
-    //   console.log("This is innerKey: ", innerKey);
-    //   console.log("This is innerValue: ", innerValue);
-    //   if (tagNumbers.includes(innerKey)) {
-    //     console.log("tagNumbers includes", innerKey);
-    //   }
-    // }
+    console.log("This is tagNames: ", tagNames);
   }
-
+  
 
 
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
