@@ -300,6 +300,8 @@ const doTheStringify = async () => {
 function addFunction() {
   var objTypeID = objType+'_'+objItemid;
   var tagList = [];
+
+  // setting localObj equal to objTypeID (task_0)
   var localObj = JSON.parse(localStorage.getItem(objTypeID));
   var select = document.getElementById('scripts');
   // console.log("This is select: ", select);
