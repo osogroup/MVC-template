@@ -603,7 +603,7 @@ function arrayList(array) {
   console.log("This is tagNames: ", tagNames);
 
   var tagObj = {};
-  tagNumbers.forEach((tagNumbers, i) => tagObj[tagNumbers] = tagNames[i]);
+  tagNumbers.forEach((key, i) => tagObj[key] = tagNames[i]);
   console.log("This is tagObj: ", tagObj);
 
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
