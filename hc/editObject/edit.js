@@ -549,9 +549,9 @@ function arrayList(array) {
   var HTMLoutput = '';
   var HTMLarrayValues = '';
   var objTypeID = objType+'_'+objItemid;
-  var objectKeyNames = objType+'_'+objItemid+'_name';
   var tagNumbers = [];
   var tagNames = [];
+  var tagObj = {};
 
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
@@ -581,7 +581,6 @@ function arrayList(array) {
   }
   console.log("This is tagNames: ", tagNames);
 
-  var tagObj = {};
   tagNumbers.forEach((key, i) => tagObj[key] = tagNames[i]);
   console.log("This is tagObj: ", tagObj);
 
