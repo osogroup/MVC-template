@@ -609,7 +609,6 @@ function arrayList(array) {
   }
 
   // closing the form tags and creating the add button
-
   HTMLoutput          +='</select>'
                       + '<div id="buttonSpot">'
                       + '<input type="button" id="showTxt" value="Add" onclick="addFunction(this)"/>'
@@ -617,15 +616,6 @@ function arrayList(array) {
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
-
-
-  // HTMLoutput          +='</select>'
-  //                     + '<div id="buttonSpot">'
-  //                     + '<input type="button" id="showTxt_'+i+'" value="Add" onclick="addFunction(this)"/>'
-  //                   + '</div>'
-  //                 + '</fieldset>'
-  //               + '</form>'
-  //             + '</div>';
 
   return HTMLoutput;
 }
