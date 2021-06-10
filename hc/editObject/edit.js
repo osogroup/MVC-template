@@ -583,10 +583,12 @@ function arrayList(array) {
         tagNumbers.push(tagValue);
       }
     }
-    console.log("This is tagNumbers: ", tagNumbers);
   }
+  console.log("This is tagNumbers: ", tagNumbers);
 
   // if tag number array includes the tag number, display the tag name
+  
+
 
 
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
