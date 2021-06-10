@@ -339,6 +339,9 @@ function removeFunction(val) { // val is the entire remove button
   localObjTags = localObj.tags;
   console.log("This is localObjTags: ", localObjTags);
 
+  localObjTags.splice(valIDNum, 1);
+  console.log("This is the updated localObjTags: ", localObjTags);
+
   // remove val's id number from task_0.tag
 }
 
