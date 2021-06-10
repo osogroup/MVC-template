@@ -605,7 +605,7 @@ function arrayList(array) {
     //   if (tagNumbers.includes(innerKey)) {
         // console.log("tagNumbers includes", innerKey);
       // }
-    }
+    // }
   }
 
 
