@@ -575,12 +575,11 @@ function arrayList(array) {
       }
     }
   }
-  
-  var newDataArray = array.newData.tags;
-  console.log("This is newDataArray: ", newDataArray);
+
+  // var newDataArray = array.newData.tags;
 
   // if tag number array includes the tag number, display the tag name
-  for (const [arrayKey, arrayValue] of Object.entries(newDataArray)) {
+  for (const [arrayKey, arrayValue] of Object.entries(array.newData.tags)) {
     // console.log("This is arrayKey: ", arrayKey);
     // console.log("This is arrayValue: ", arrayValue);
     if (tagNumbers.includes(arrayValue.id)) {
