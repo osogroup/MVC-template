@@ -314,6 +314,7 @@ function addFunction() {
 
     // set tagList equal to the tags in the objType localStorage
     tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
+    console.log("This is tagList: ", tagList);
 
     // if tagList includes elementVal {
       // dont add the option
