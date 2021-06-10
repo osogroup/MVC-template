@@ -563,18 +563,6 @@ function arrayList(array) {
                       + '<div id="outerDiv">'
                         + '<div id="appendTo">';
 
-  // // if objectKeyNames_name exists in localStorage {
-  // if (localStorage.getItem(objectKeyNames) != null) {
-  //   // pull from localStorage
-  //   itemValueNames = JSON.parse(localStorage.getItem(objectKeyNames));
-  //   console.log("This is itemValueNames: ", itemValueNames);
-  // }
-  // else {
-  //   // pull from array.newNames
-  //   itemValueNames = array.newNames;
-  //   console.log("This is array.newNames: ", array.newNames);
-  // }
-
   // fill up array with tag numbers
   for (const [arrayKey, arrayValue] of Object.entries(JSON.parse(localStorage.getItem(objTypeID)))) {
     // console.log("This is arrayKey: ", arrayKey); // id, name, description, status, ...
