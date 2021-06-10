@@ -322,10 +322,14 @@ function addFunction() {
     console.log("tagList already includes", elementVal);
   }
   else {
-    // add elementVal to localStorage
+    // add elementVal to tagList 
     console.log("tagList doesn't include", elementVal);
 
+    // stringify elementVal
     
+
+    // localStorage.setItem(objTypeID.tags,)
+
 
   }
 }
