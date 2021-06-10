@@ -345,6 +345,8 @@ function removeFunction(val) { // val is the entire remove button
   localObj.tags = localObjTags;
   console.log("This is localObj now: ", localObj);
 
+  localStorage.setItem(objTypeID, localObj);
+
   // remove val's id number from task_0.tag
 }
 
