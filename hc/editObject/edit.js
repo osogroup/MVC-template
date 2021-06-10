@@ -548,6 +548,7 @@ function arrayList(array) {
   var i = 0;
   var HTMLoutput = '';
   var HTMLarrayValues = '';
+  var objTypeID = objType+'_'+objItemid;
   var objectKeyNames = objType+'_'+objItemid+'_name';
   var name = [];
 
@@ -571,10 +572,13 @@ function arrayList(array) {
   }
 
   // fill up array with tag numbers
-
+  for (const [arrayKey, arrayValue] of Object.entries(objTypeID)) {
+    console.log("This is arrayKey: ", arrayKey);
+    console.log("This is arrayValue: ", arrayValue);
+  }
 
   // if tag number array includes the tag number, display the tag name
-  
+
 
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
   for (const[arrayKey, arrayValue] of Object.entries(itemValueNames)) {
