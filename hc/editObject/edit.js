@@ -325,6 +325,7 @@ function addFunction() {
     // add elementVal to tagList 
     console.log("tagList doesn't include", elementVal);
     tagList.push(Number(elementVal));
+    tagList.sort();
     console.log("But now it does, see: ", tagList);
 
     // organize tagList ascending
