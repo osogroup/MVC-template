@@ -563,7 +563,7 @@ function arrayList(array) {
                       + '<div id="outerDiv">'
                         + '<div id="appendTo">';
 
-  // fill up array with tag numbers
+  // fill up array (tagNumbers) with tag numbers
   for (const [arrayKey, arrayValue] of Object.entries(JSON.parse(localStorage.getItem(objTypeID)))) {
     // console.log("This is arrayKey: ", arrayKey); // id, name, description, status, ...
     // console.log("This is arrayValue: ", arrayValue); // 1, COI: Static Site HTML Structure, This task creates the structure of the Static site, ...
@@ -575,7 +575,7 @@ function arrayList(array) {
       }
     }
   }
-  
+
   console.log("This is tagNumbers: ", tagNumbers);
 
   var newDataArray = array.newData.tags;
