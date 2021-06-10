@@ -330,6 +330,7 @@ function addFunction() {
 
     // stringify elementVal
     JSON.stringify(tagList);
+    console.log("This is stringified tagList: ", tagList);
 
     localStorage.setItem(objTypeID.tags, tagList);
 
