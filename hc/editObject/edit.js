@@ -305,7 +305,7 @@ function addFunction() {
   var objTypeID = objType+'_'+objItemid;
   var tagList = [];
   var select = document.getElementById('scripts');
-  console.log("This is select: ", select);
+  // console.log("This is select: ", select);
   elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
 
   console.log("This is elementVal: ", elementVal);
