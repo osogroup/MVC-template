@@ -598,8 +598,8 @@ function arrayList(array) {
     for (const [innerKey, innerValue] of Object.entries(arrayValue)) {
       console.log("This is innerKey: ", innerKey);
       console.log("This is innerValue: ", innerValue);
-      console.log("tagNumbers includes", innerKey);
       if (tagNumbers.includes(innerKey)) {
+        console.log("tagNumbers includes", innerKey);
       }
     }
   }
