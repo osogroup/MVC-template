@@ -63,7 +63,7 @@ function anyChange(str) {
 // -------------------------------------------- Clear localStorage --------------------------------------------
 
 
-function clear() {
+function clr() {
   localStorage.clear();
 }
 
