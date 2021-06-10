@@ -331,9 +331,11 @@ function addFunction() {
 
 function removeFunction(val) {
   console.log("This is 'val' in removeFunction(val): ",val);
+  var valID = val.id;
+  console.log("This is valID: ", valID);
 
 
-  // remove val from task_0.tag
+  // remove val's id number from task_0.tag
 }
 
 
