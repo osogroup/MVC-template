@@ -262,7 +262,8 @@ const doTheStringify = async () => {
               options: arrayOfOptions, // 0,1
               names: arrayOfOptionsNames, // Design Wireframes, Code Structure & Style
               scripts : "scripts",
-              statOpts : statusOptions
+              statOpts : statusOptions,
+              data : data
             };
             HTMLoutput += inputFunction(parameters);
           }
@@ -368,7 +369,8 @@ function inputFunction(params) {
     newHVal : params.hVal,
     newScripts : params.scripts,
     newFields : params.fields,
-    newNames: params.names
+    newNames: params.names,
+    newData : data
   };
   var optParams = {
     newHKey : params.hKey,
@@ -587,7 +589,9 @@ function arrayList(array) {
   console.log("This is tagNumbers: ", tagNumbers);
 
   // if tag number array includes the tag number, display the tag name
-  
+  for (const [arrayKey, arrayValue] of Object.entries(JSON.parse())) {
+
+  }
 
 
 
