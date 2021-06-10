@@ -332,7 +332,7 @@ function addFunction() {
 function removeFunction(val) { // val is the entire remove button
   var valIDNum = val.id.replace(/remvBtn_/, '');
   console.log("This is valIDNum: ", valIDNum);
-
+  var localObj = {};
 
   // remove val's id number from task_0.tag
 }
