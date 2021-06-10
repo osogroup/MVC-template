@@ -347,6 +347,8 @@ function removeFunction(val) { // val is the entire remove button
 
   localStorage.setItem(objTypeID, JSON.stringify(localObj));
 
+  location.reload();
+
   // remove val's id number from task_0.tag
 }
 
