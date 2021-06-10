@@ -599,7 +599,7 @@ function arrayList(array) {
       console.log("This is innerKey: ", innerKey);
       console.log("This is innerValue: ", innerValue);
       if (tagNumbers.includes(innerKey)) {
-        console.log("tagNumbers includes", innerKey);
+        // console.log("tagNumbers includes", innerKey);
       }
     }
   }
