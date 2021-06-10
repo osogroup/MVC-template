@@ -573,8 +573,14 @@ function arrayList(array) {
 
   // fill up array with tag numbers
   for (const [arrayKey, arrayValue] of Object.entries(JSON.parse(localStorage.getItem(objTypeID)))) {
-    console.log("This is arrayKey: ", arrayKey); // id, name, description, status, ...
-    console.log("This is arrayValue: ", arrayValue); // 1, COI: Static Site HTML Structure, This task creates the structure of the Static site, ...
+    // console.log("This is arrayKey: ", arrayKey); // id, name, description, status, ...
+    // console.log("This is arrayValue: ", arrayValue); // 1, COI: Static Site HTML Structure, This task creates the structure of the Static site, ...
+    if (arrayKey == 'tags') {
+      for (const [tagKey, tagValue] of Object.entries(arrayValue)) {
+        console.log("This is tagKey: ", tagKey);
+        console.log("This is tagValue: ", tagValue);
+      }
+    }
   }
 
   // if tag number array includes the tag number, display the tag name
