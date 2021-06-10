@@ -370,7 +370,7 @@ function inputFunction(params) {
     newScripts : params.scripts,
     newFields : params.fields,
     newNames: params.names,
-    newData : data
+    newData : params.data
   };
   var optParams = {
     newHKey : params.hKey,
