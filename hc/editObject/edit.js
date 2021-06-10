@@ -563,11 +563,11 @@ function arrayList(array) {
                         + '<div id="appendTo">';
 
   // if objectKeyNames_name exists in localStorage {
-    if (localStorage.getItem(objectKeyNames) != null) {
-      // pull from localStorage
-      itemValueNames = JSON.parse(localStorage.getItem(objectKeyNames));
-      console.log("This is itemValueNames: ", itemValueNames);
-    }
+  if (localStorage.getItem(objectKeyNames) != null) {
+    // pull from localStorage
+    itemValueNames = JSON.parse(localStorage.getItem(objectKeyNames));
+    console.log("This is itemValueNames: ", itemValueNames);
+  }
   else {
     // pull from array.newNames
     itemValueNames = array.newNames;
@@ -597,6 +597,7 @@ function arrayList(array) {
     // console.log("This is arrayValue: ", arrayValue);
     if (tagNumbers.includes(arrayValue.id)) {
       console.log("tagNumbers includes", arrayValue.id);
+      
     }
     console.log("This is arrayValue.id: ", arrayValue.id);
     // for (const [innerKey, innerValue] of Object.entries(arrayValue)) {
