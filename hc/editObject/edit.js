@@ -304,7 +304,7 @@ const doTheStringify = async () => {
 function addFunction() {
   var objTypeID = objType+'_'+objItemid;
   var tagList = [];
-  var localObj = localStorage.getItem(objTypeID);
+  var localObj = JSON.parse(localStorage.getItem(objTypeID));
   console.log("This is localObj: ", localObj);
   var select = document.getElementById('scripts');
   // console.log("This is select: ", select);
