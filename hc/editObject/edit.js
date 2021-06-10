@@ -330,9 +330,11 @@ function addFunction() {
 
 
 function removeFunction(val) { // val is the entire remove button
+  var objTypeID = objType+'_'+objItemid;
   var valIDNum = val.id.replace(/remvBtn_/, '');
   console.log("This is valIDNum: ", valIDNum);
-  var localObj = {};
+  var localObj = JSON.parse(localStorage.getItem(objTypeID));
+  console.log("This is localObj: ", localObj);
 
   // remove val's id number from task_0.tag
 }
