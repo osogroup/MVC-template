@@ -550,7 +550,6 @@ function arrayList(array) {
   var HTMLarrayValues = '';
   var objTypeID = objType+'_'+objItemid;
   var objectKeyNames = objType+'_'+objItemid+'_name';
-  var name = [];
   var tagNumbers = [];
   var tagNames = [];
 
