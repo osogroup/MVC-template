@@ -301,7 +301,7 @@ function addFunction() {
   var objTypeID = objType+'_'+objItemid;
   var tagList = [];
 
-  // setting localObj equal to objTypeID (task_0)
+  // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
   var localObj = JSON.parse(localStorage.getItem(objTypeID));
   var select = document.getElementById('scripts');
   // console.log("This is select: ", select);
