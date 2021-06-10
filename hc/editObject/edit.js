@@ -563,17 +563,17 @@ function arrayList(array) {
                       + '<div id="outerDiv">'
                         + '<div id="appendTo">';
 
-  // if objectKeyNames_name exists in localStorage {
-  if (localStorage.getItem(objectKeyNames) != null) {
-    // pull from localStorage
-    itemValueNames = JSON.parse(localStorage.getItem(objectKeyNames));
-    console.log("This is itemValueNames: ", itemValueNames);
-  }
-  else {
-    // pull from array.newNames
-    itemValueNames = array.newNames;
-    console.log("This is array.newNames: ", array.newNames);
-  }
+  // // if objectKeyNames_name exists in localStorage {
+  // if (localStorage.getItem(objectKeyNames) != null) {
+  //   // pull from localStorage
+  //   itemValueNames = JSON.parse(localStorage.getItem(objectKeyNames));
+  //   console.log("This is itemValueNames: ", itemValueNames);
+  // }
+  // else {
+  //   // pull from array.newNames
+  //   itemValueNames = array.newNames;
+  //   console.log("This is array.newNames: ", array.newNames);
+  // }
 
   // fill up array with tag numbers
   for (const [arrayKey, arrayValue] of Object.entries(JSON.parse(localStorage.getItem(objTypeID)))) {
@@ -605,7 +605,7 @@ function arrayList(array) {
 
 
   // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
-  for (const[arrayKey, arrayValue] of Object.entries(itemValueNames)) {
+  for (const[arrayKey, arrayValue] of Object.entries(tagNames)) {
     HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction('+i+')"></div></div>';
     name.push(arrayValue);
     // counts up the indices if there's any preset values in the array
