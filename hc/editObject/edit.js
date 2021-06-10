@@ -331,7 +331,7 @@ function addFunction() {
     // stringify elementVal
     JSON.stringify(tagList);
 
-    // localStorage.setItem(objTypeID.tags,)
+    localStorage.setItem(objTypeID.tags, tagList);
 
 
   }
