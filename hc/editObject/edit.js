@@ -554,6 +554,7 @@ function arrayList(array) {
   var objectKeyNames = objType+'_'+objItemid+'_name';
   var name = [];
   var tagNumbers = [];
+  var tagNames = [];
 
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
@@ -597,6 +598,8 @@ function arrayList(array) {
     // console.log("This is arrayValue: ", arrayValue);
     if (tagNumbers.includes(arrayValue.id)) {
       console.log("tagNumbers includes", arrayValue.id);
+      tagNames.push(arrayValue.name);
+      console.log("This is tagNames: ", tagNames);
     }
     // for (const [innerKey, innerValue] of Object.entries(arrayValue)) {
     //   console.log("This is innerKey: ", innerKey);
