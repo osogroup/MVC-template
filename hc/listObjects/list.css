@@ -11,3 +11,7 @@
 #imageSpacing {
   padding: 15px 0px 0px 15px;
 }
+#btn-logout {
+  background-color: black;
+  color: white;
+}
