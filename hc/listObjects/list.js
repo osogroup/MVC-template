@@ -2,23 +2,23 @@ $(document).ready(function () {
 
   let auth0 = null;
 
-const fetchAuthConfig = () => fetch("/auth_config.json");
+  const fetchAuthConfig = () => fetch("/auth_config.json");
 
-const configureClient = async () => {
-  const response = await fetchAuthConfig();
-  const config = await response.json();
+  const configureClient = async () => {
+    const response = await fetchAuthConfig();
+    const config = await response.json();
 
-  auth0 = await createAuth0Client({
-    domain: config.domain,
-    client_id: config.clientId
-  });
-};
+    auth0 = await createAuth0Client({
+      domain: config.domain,
+      client_id: config.clientId
+    });
+  };
 
-const logout = () => {
-  auth0.logout({
-    returnTo: window.location.origin
-  });
-};
+  const logout = () => {
+    auth0.logout({
+      returnTo: window.location.origin
+    });
+  };
 
   createHTML();
 });
