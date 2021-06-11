@@ -62,7 +62,7 @@ const updateUI = async () => {
 
 const login = async () => {
   await auth0.loginWithRedirect({
-    redirect_uri: window.location.origin
+    redirect_uri: 'http://oso.group.s3-website-us-east-1.amazonaws.com/hc/createObject/?type=task'
   });
 };
 
