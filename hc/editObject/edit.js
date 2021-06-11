@@ -233,7 +233,7 @@ const doTheStringify = async () => {
                 // console.log("This is tagValue: ", tagValue); // values in those positions
                 arrayOfOptions.push(tagValue);
               }
-              // console.log("This is arrayOfOptions post-filled: ", arrayOfOptions);
+              console.log("This is arrayOfOptions post-filled: ", arrayOfOptions);
               
               // Taking info from arrayOfOptions and using them to get the names from the list
               for (const [tagTypeKey, tagTypeValue] of Object.entries(tagTypeData)) {
