@@ -296,62 +296,6 @@ const doTheStringify = async () => {
 }
 
 
-// ------------------------------------------------ Add function ------------------------------------------------
-
-
-function addFunction() {
-  var objTypeID = objType+'_'+objItemid;
-  var tagList = [];
-
-  // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
-  var localObj = JSON.parse(localStorage.getItem(objTypeID));
-  var select = document.getElementById('scripts');
-
-  // getting the number from the id of the selected option
-  elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
-
-  tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
-  console.log("This is tagList: ", tagList);
-
-  if (tagList.includes(Number(elementVal))) {
-    console.log("tagList already includes", elementVal);
-  }
-  else {
-    tagList.push(Number(elementVal));
-    tagList.sort();
-    JSON.stringify(tagList);
-    localObj.tags = tagList;
-    console.log("This is the localObj with updated tags: ", localObj);
-    localStorage.setItem(objTypeID, JSON.stringify(localObj));
-  }
-  location.reload();
-}
-
-
-// ----------------------------------------------- Remove function -----------------------------------------------
-
-
-function removeFunction(val) { // val is the entire remove button
-  var objTypeID = objType+'_'+objItemid;
-  var valIDNum = val.id.replace(/remvBtn_/, '');
-  console.log("This is valIDNum: ", valIDNum);
-  var localObj = JSON.parse(localStorage.getItem(objTypeID));
-  console.log("This is localObj: ", localObj);
-  
-  localObjTags = localObj.tags;
-  console.log("This is localObjTags: ", localObjTags);
-
-  console.log("This is the index of valIDNum: ", localObjTags.indexOf(Number(valIDNum)));
-  localObjTags.splice(localObjTags.indexOf(Number(valIDNum)), 1);
-  console.log("This is the updated localObjTags: ", localObjTags);
-
-  localObj.tags = localObjTags;
-  console.log("This is localObj now: ", localObj);
-
-  localStorage.setItem(objTypeID, JSON.stringify(localObj));
-
-  location.reload();
-}
 
 
 
@@ -383,7 +327,7 @@ function removeFunction(val) { // val is the entire remove button
 
 
 
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GOD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// ----------------------------------------------- Input Function -----------------------------------------------
 
 
 // takes the inpType and sends new parameters to the proper function
@@ -637,4 +581,62 @@ function arrayList(array) {
               + '</div>';
 
   return HTMLoutput;
+}
+
+
+// ------------------------------------------------ Add function ------------------------------------------------
+
+
+function addFunction() {
+  var objTypeID = objType+'_'+objItemid;
+  var tagList = [];
+
+  // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
+  var localObj = JSON.parse(localStorage.getItem(objTypeID));
+  var select = document.getElementById('scripts');
+
+  // getting the number from the id of the selected option
+  elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
+
+  tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
+  console.log("This is tagList: ", tagList);
+
+  if (tagList.includes(Number(elementVal))) {
+    console.log("tagList already includes", elementVal);
+  }
+  else {
+    tagList.push(Number(elementVal));
+    tagList.sort();
+    JSON.stringify(tagList);
+    localObj.tags = tagList;
+    console.log("This is the localObj with updated tags: ", localObj);
+    localStorage.setItem(objTypeID, JSON.stringify(localObj));
+  }
+  location.reload();
+}
+
+
+// ----------------------------------------------- Remove function -----------------------------------------------
+
+
+function removeFunction(val) { // val is the entire remove button
+  var objTypeID = objType+'_'+objItemid;
+  var valIDNum = val.id.replace(/remvBtn_/, '');
+  console.log("This is valIDNum: ", valIDNum);
+  var localObj = JSON.parse(localStorage.getItem(objTypeID));
+  console.log("This is localObj: ", localObj);
+  
+  localObjTags = localObj.tags;
+  console.log("This is localObjTags: ", localObjTags);
+
+  console.log("This is the index of valIDNum: ", localObjTags.indexOf(Number(valIDNum)));
+  localObjTags.splice(localObjTags.indexOf(Number(valIDNum)), 1);
+  console.log("This is the updated localObjTags: ", localObjTags);
+
+  localObj.tags = localObjTags;
+  console.log("This is localObj now: ", localObj);
+
+  localStorage.setItem(objTypeID, JSON.stringify(localObj));
+
+  location.reload();
 }
