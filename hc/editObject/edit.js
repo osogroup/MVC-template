@@ -222,9 +222,11 @@ const doTheStringify = async () => {
 
           if (stuffKey == "inpType") {
             // stuffValue: text, textarea, text, array, date, number
+            console.log("stuffKey is", stuffKey);
 
             // filling arrayOfOptions
             if (stuffValue == 'array') {
+              console.log("stuffValue is", stuffValue);
 
               // console.log("The information lines up..");
               for (const [tagKey, tagValue] of Object.entries(headerValue)) {
