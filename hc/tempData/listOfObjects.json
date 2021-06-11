@@ -111,7 +111,7 @@
       "id":10,
       "name":"EOI: Static Site Build JS animations",
       "description":"This task creates the animations needed on a static page.",
-      "status":"In-Progress",
+      "status":"Not Started",
       "tags":[1],
       "dueDate":"2021-05-21",
       "estEff":8
@@ -174,7 +174,7 @@
       "id":17,
       "name":"LOI: Static Site Build JS animations",
       "description":"This task creates the animations needed on a static page.",
-      "status":"In-Progress",
+      "status":"Not Started",
       "tags":[1],
       "dueDate":"2021-05-25",
       "estEff":8
