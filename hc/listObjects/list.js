@@ -1,4 +1,23 @@
 $(document).ready(function () {
+  createHTML();
+});
+
+// gets all the Objects/Arrays from objectConfig.json and returns them
+const configData = async () => {
+  var listConfig = await fetch("../tempData/objectConfig.json").then(response => { return response.json(); });
+  // console.log("configData output ", listConfig);
+  return listConfig;
+}
+
+// gets all the Objects/Arrays from listOfObjects.json and returns them
+const tempData = async () => {
+  var objVars = await fetch("../tempData/listOfObjects.json").then(response => { return response.json(); });
+  // console.log("tempData output ", objVars);
+  return objVars;
+}
+
+// gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
+const createHTML = async () => {
 
   let auth0 = null;
 
@@ -20,25 +39,6 @@ $(document).ready(function () {
     });
   };
 
-  createHTML();
-});
-
-// gets all the Objects/Arrays from objectConfig.json and returns them
-const configData = async () => {
-  var listConfig = await fetch("../tempData/objectConfig.json").then(response => { return response.json(); });
-  // console.log("configData output ", listConfig);
-  return listConfig;
-}
-
-// gets all the Objects/Arrays from listOfObjects.json and returns them
-const tempData = async () => {
-  var objVars = await fetch("../tempData/listOfObjects.json").then(response => { return response.json(); });
-  // console.log("tempData output ", objVars);
-  return objVars;
-}
-
-// gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
-const createHTML = async () => {
   console.log("Entering createHTML()");
   var data = await tempData();
   var config = await configData();
