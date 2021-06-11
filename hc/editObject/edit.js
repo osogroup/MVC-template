@@ -190,7 +190,7 @@ const doTheStringify = async () => {
     // create HTML header and fields
     for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
       // console.log("This is headerKey", headerKey); // id, name, ... tags
-      // console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure, ... [0]
+      console.log("This is headerValue", headerValue); // 1, COI: Static Site HTML Structure, ... [0]
       if (headerKey == 'id') {
         HTMLoutput += '<div class="col-4 minHeight">'
                       + '<div class="col-12">'+headerKey+'</div>';
