@@ -206,7 +206,7 @@ const doTheStringify = async () => {
         // making object item an input textbox
 
         var typeHeader = type[headerKey];
-        
+
         // filling up the statusOptions array before calling selectAttribute()
         for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
           if (headerKey == 'status' && stuffKey == 'opts') {
