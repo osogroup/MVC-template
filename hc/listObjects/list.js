@@ -119,6 +119,12 @@ const tempData = async () => {
   return objVars;
 }
 
+const logout = () => {
+  auth0.logout({
+    returnTo: window.location.origin
+  });
+};
+
 // gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
 const createHTML = async () => {
   console.log("Entering createHTML()");
