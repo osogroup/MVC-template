@@ -21,7 +21,7 @@
       "id":0,
       "name":"COI: Design Wireframes",
       "description":"These tasks will result in a user interface to create an object item.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[0],
       "dueDate":"2021-05-15",
       "estEff":10
@@ -30,7 +30,7 @@
       "id":1,
       "name":"COI: Static Site HTML Structure",
       "description":"This task creates the structure of the Static site",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[0,1],
       "dueDate":"2021-05-20",
       "estEff":3
@@ -39,7 +39,7 @@
       "id":2,
       "name":"COI: Static Site Style HTML",
       "description":"this task will create the CSS to create an engaging user experience",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[1],
       "dueDate":"2021-05-20",
       "estEff":3
@@ -48,7 +48,7 @@
       "id":3,
       "name":"COI: Static Site Build JS animations",
       "description":"This task creates the animations needed on a static page.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[1],
       "dueDate":"2021-05-25",
       "estEff":3
@@ -57,7 +57,7 @@
       "id":4,
       "name":"COI: Create JSON View Model from Static Site",
       "description":"This task creates the view model needed for the page to dynamically load data into it.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[2],
       "dueDate":"2021-05-28",
       "estEff":3
@@ -66,7 +66,7 @@
       "id":5,
       "name":"COI: Add Supporting View functions",
       "description":"This task translates any functionality into view functions that get called by the model.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[1,2],
       "dueDate":"2021-06-01",
       "estEff":3
@@ -75,7 +75,7 @@
       "id":6,
       "name":"COI: Connect to Object Database",
       "description":"This task connects a live database to the model pulling in data dynamically.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[2],
       "dueDate":"2021-06-04",
       "estEff":3
@@ -84,7 +84,7 @@
       "id":7,
       "name":"EOI: Design Wireframes",
       "description":"These tasks will result in a user interface to create an object item.",
-      "status":"complete",
+      "status":"Complete",
       "tags":[0],
       "dueDate":"2021-05-15",
       "estEff":3
@@ -93,7 +93,7 @@
       "id":8,
       "name":"EOI: Static Site HTML Structure",
       "description":"This task creates the structure of the Static site",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[0,1],
       "dueDate":"2021-05-20",
       "estEff":3
@@ -102,7 +102,7 @@
       "id":9,
       "name":"EOI: Static Site Style HTML",
       "description":"this task will create the CSS to create an engaging user experience",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[1],
       "dueDate":"2021-05-20",
       "estEff":3
@@ -111,7 +111,7 @@
       "id":10,
       "name":"EOI: Static Site Build JS animations",
       "description":"This task creates the animations needed on a static page.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[1],
       "dueDate":"2021-05-21",
       "estEff":8
@@ -120,7 +120,7 @@
       "id":11,
       "name":"EOI: Create JSON View Model from Static Site",
       "description":"This task creates the view model needed for the page to dynamically load data into it.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[2],
       "dueDate":"2021-05-28",
       "estEff":16
@@ -129,7 +129,7 @@
       "id":12,
       "name":"EOI: Add Supporting View functions",
       "description":"This task translates any functionality into view functions that get called by the model.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[1,2],
       "dueDate":"2021-06-01",
       "estEff":16
@@ -138,7 +138,7 @@
       "id":13,
       "name":"EOI: Connect to Object Database",
       "description":"This task connects a live database to the model pulling in data dynamically.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[2],
       "dueDate":"2021-06-04",
       "estEff":8
@@ -147,7 +147,7 @@
       "id":14,
       "name":"LOI: Design Wireframes",
       "description":"These tasks will result in a user interface to create an object item.",
-      "status":"complete",
+      "status":"Complete",
       "tags":[0],
       "dueDate":"2021-05-15",
       "estEff":3
@@ -156,7 +156,7 @@
       "id":15,
       "name":"LOI: Static Site HTML Structure",
       "description":"This task creates the structure of the Static site",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[0,1],
       "dueDate":"2021-05-20",
       "estEff":3
@@ -165,7 +165,7 @@
       "id":16,
       "name":"LOI: Static Site Style HTML",
       "description":"this task will create the CSS to create an engaging user experience",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[1],
       "dueDate":"2021-05-20",
       "estEff":3
@@ -174,7 +174,7 @@
       "id":17,
       "name":"LOI: Static Site Build JS animations",
       "description":"This task creates the animations needed on a static page.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[1],
       "dueDate":"2021-05-25",
       "estEff":8
@@ -183,7 +183,7 @@
       "id":18,
       "name":"LOI: Create JSON View Model from Static Site",
       "description":"This task creates the view model needed for the page to dynamically load data into it.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[2],
       "dueDate":"2021-05-28",
       "estEff":16
@@ -192,7 +192,7 @@
       "id":19,
       "name":"LOI: Add Supporting View functions",
       "description":"This task translates any functionality into view functions that get called by the model.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[1,2],
       "dueDate":"2021-06-01",
       "estEff":16
@@ -201,7 +201,7 @@
       "id":20,
       "name":"LOI: Connect to Object Database",
       "description":"This task connects a live database to the model pulling in data dynamically.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tags":[2],
       "dueDate":"2021-06-05",
       "estEff":8
@@ -212,21 +212,21 @@
       "id":0,
       "name":"Create Object Item UI",
       "description":"These tasks will result in a user interface to create an object item.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tasks":[0,1,2,3,4,5,6]
     },
     {
       "id":1,
       "name":"Edit Object Item UI",
       "description":"These tasks will result in a user interface to edit an object item.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tasks":[7,8,9,10,11,12,13]
     },
     {
       "id":2,
       "name":"List Object Items UI",
       "description":"These tasks will result in a user interface to list the items of an object.",
-      "status":"in-progress",
+      "status":"In-Progress",
       "tasks":[14,15,16,17,18,19,20]
     }
   ]
