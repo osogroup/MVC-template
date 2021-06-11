@@ -11,3 +11,7 @@ const configureClient = async () => {
       client_id: config.clientId
     });
   };
+
+  window.onload = async () => {
+    await configureClient();
+  }
