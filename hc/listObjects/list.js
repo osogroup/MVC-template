@@ -16,42 +16,6 @@ const tempData = async () => {
   return objVars;
 }
 
-let auth0 = null;
-
-const fetchAuthConfig = () => fetch("/auth_config.json");
-
-const configureClient = async () => {
-  const response = await fetchAuthConfig();
-  const config = await response.json();
-
-  auth0 = await createAuth0Client({
-    domain: config.domain,
-    client_id: config.clientId
-  });
-};
-
-const updateUI = async () => {
-  const isAuthenticated = await auth0.isAuthenticated();
-
-  document.getElementById("btn-logout").disabled = !isAuthenticated;
-  document.getElementById("btn-login").disabled = isAuthenticated;
-
-  if (isAuthenticated) {
-    document.getElementById("gated-content").classList.remove("hidden");
-
-    document.getElementById(
-      "ipt-access-token"
-    ).innerHTML = await auth0.getTokenSilently();
-
-    document.getElementById("ipt-user-profile").textContent = JSON.stringify(
-      await auth0.getUser()
-    );
-
-  } else {
-    document.getElementById("gated-content").classList.add("hidden");
-  }
-};
-
 // gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
 const createHTML = async () => {
   
