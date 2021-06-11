@@ -206,7 +206,6 @@ const doTheStringify = async () => {
         // making object item an input textbox
 
         var typeHeader = type[headerKey];
-        console.log("This is typeHeader: ", type)
         
         // filling up the statusOptions array before calling selectAttribute()
         for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
