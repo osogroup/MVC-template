@@ -16,6 +16,8 @@ const tempData = async () => {
   return objVars;
 }
 
+let auth0 = null;
+
 const fetchAuthConfig = () => fetch("/auth_config.json");
 
 const configureClient = async () => {
