@@ -129,21 +129,22 @@ const createHTML = async () => {
   // --------------------------------------------- Navigation Bar ---------------------------------------------
 
 
-  var headerHTML = '<div id="contacts">'
-    + '<div class="row">'
-    + '<div class="col-12">'
-    + '<p id="header">'
-    + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
+  var headerHTML  = '<div id="contacts">'
+                    + '<div class="row">'
+                      + '<div class="col-12">'
+                        + '<p id="header">'
+                          + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
 
   // creating the links for the header
   for (const [headerKey, headerValue] of Object.entries(data)) {
-    headerHTML += '<a class="headerLinks" href="/hc/listObjects/?type=' + headerKey + '">' + headerKey.toUpperCase() + '</a>';
+    headerHTML            +='<a class="headerLinks" href="/hc/listObjects/?type=' + headerKey + '">' + headerKey.toUpperCase() + '</a>';
   }
 
-  headerHTML += '</p>'
-            + '</div>'
-              + '<h1>OAS Object List</h1>'
-            + '</div>'
+  headerHTML              +='<a class="headerLinks" href="../../index.html">Log Out</a>'
+                        + '</p>'
+                      + '</div>'
+                    + '<h1>OAS Object List</h1>'
+                  + '</div>';
   $('#TitleOfList').append(headerHTML);
 
   // console.log("objType in createHTML() ", objType);
