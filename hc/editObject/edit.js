@@ -622,12 +622,7 @@ function arrayList(array) {
 
   // creating all the options from the arrayOfOptions array in the select tag
   for (const [optionKey, optionValue] of Object.entries(array.newData.tags)) {
-    if (tagObj.includes(optionValue)) {
-      HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'">'+optionValue.name+'</option>';
-    }
-     else {
-      HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'" selected>'+optionValue.name+'</option>';
-     } 
+    HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'">'+optionValue.name+'</option>';
   }
 
   // closing the form tags and creating the add button
