@@ -142,11 +142,11 @@ const doTheStringify = async () => {
   else {
     var data = await tempData();
     var config = await configData();
-    var typeStuff = await typeData();
+    var type = await typeData();
     var objTypeData = data[objType];
     var tagTypeData = data['tags']; // objTypeData specifically for tags
     var configTypeData = config[objType];
-    console.log("This is typeStuff: ", typeStuff);
+    console.log("This is type: ", type);
 
     var checkLocalStorageParams = {
       data : data,
@@ -205,7 +205,8 @@ const doTheStringify = async () => {
 
         // making object item an input textbox
 
-        var typeHeader = typeStuff[headerKey];
+        var typeHeader = type[headerKey];
+        console.log("This is typeHeader: ", typeHeader);
         
         // filling up the statusOptions array before calling selectAttribute()
         for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
