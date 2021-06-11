@@ -24,8 +24,8 @@
    "opts":["Not Started","In-Progress","Complete", "TBD" ]
  },
  "tasks":{
-   "type":"object",
-   "inpType":"object",
+   "type":"array",
+   "inpType":"array",
    "opts":"{task}",
    "placeholder":"What is the Due Date"
  }
