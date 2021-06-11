@@ -474,7 +474,7 @@ function selectAttribute(options) {
   var superKey = objType+ '_' +objItemid;
   var myString = localStorage.getItem(superKey);
   var myObject = JSON.parse(myString);
-  var myObjectStatus = myObject[options.newHKey]; // in-progress
+  var myObjectStatus = myObject[options.newHKey]; // Not Started/In-Progress/Complete
 
   selectHTML  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
