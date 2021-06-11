@@ -10,23 +10,23 @@ const configureClient = async () => {
     domain: config.domain,
     client_id: config.clientId
   });
-  };
+};
 
-  window.onload = async () => {
-    await configureClient();
+window.onload = async () => {
+  await configureClient();
 
-    updateUI();
-  };
+  updateUI();
+};
 
-  const updateUI = async () => {
-    const isAuthenticated = await auth0.isAuthenticated();
-  
-    document.getElementById("btn-logout").disabled = !isAuthenticated;
-    document.getElementById("btn-login").disabled = isAuthenticated;
-  };
+const updateUI = async () => {
+  const isAuthenticated = await auth0.isAuthenticated();
 
-  const login = async () => {
-    await auth0.loginWithRedirect({
-      redirect_uri: window.location.origin
-    });
-  };
+  document.getElementById("btn-logout").disabled = !isAuthenticated;
+  document.getElementById("btn-login").disabled = isAuthenticated;
+};
+
+const login = async () => {
+  await auth0.loginWithRedirect({
+    redirect_uri: window.location.origin
+  });
+};
