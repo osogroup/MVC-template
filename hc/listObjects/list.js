@@ -38,7 +38,7 @@ const createHTML = async () => {
     headerHTML            +='<a class="headerLinks" href="/hc/listObjects/?type=' + headerKey + '">' + headerKey.toUpperCase() + '</a>';
   }
 
-  headerHTML              +='<a href="#" class="headerLinks" id="btn-logout" onclick="logout()">Log out</a>'
+  headerHTML              +='<a href="#" class="headerLinks" id="btn-logout" onclick="logout()">Logout</a>'
                         + '</p>'
                       + '</div>'
                     + '<h1>OAS Object List</h1>'
