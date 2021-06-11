@@ -21,7 +21,7 @@
    "type":"string",
    "inpType":"option",
    "placeholder":"Select a Status",
-   "opts":["Not Started","In-Progress","Complete", "TBD" ]
+   "opts":["Not Started","In-Progress","Complete" ]
  },
  "tasks":{
    "type":"array",
