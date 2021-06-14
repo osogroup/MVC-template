@@ -49,7 +49,8 @@ const createHTML = async () => {
   var type = await typeData();
   var objTypeData = data[objType];
   var configTypeData = config[objType];
-  var tempKey = objType+'_'+generateID();
+  var id = await generateID();
+  var tempKey = objType+'_'+id;
   console.log("This is tempKey:", tempKey);
 
 
