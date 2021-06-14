@@ -88,9 +88,14 @@ const createHTML = async () => {
     HTMLoutput += '<div class="col-4">'
                   + '<div class="col-12">'+editableValue+'</div>';
 
+
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
     // console.log("This is type[editableValue].type", type[editableValue].type);
     inputFunction(type[editableValue].type);
     
+
     // if the editableValue is in the required list according to objType 
     if (configTypeData.required.includes(editableValue) == true) {
       // make the input box with a "required" attribute (includes '*' to let the admin see the required fields)
