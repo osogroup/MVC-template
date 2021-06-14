@@ -215,14 +215,14 @@ function textareaAttribute(textarea) {
 // ------------------------------------------------ Select Attr ------------------------------------------------
 
 
-function selectAttribute(select) {
-  // if (!vars) {return alert("vars doesnt exist");}
+function selectAttribute(vars) {
+  if (!vars) {return alert("vars doesnt exist");}
   var selectHTML = '';
 
   selectHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>'+select+'</legend>'
+                    + '<legend>Status</legend>'
                     + '<select name="optionDisp" value="optionDisp">';
 
   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
@@ -249,14 +249,14 @@ optionVariables = {
 // ------------------------------------------------ Number Attr ------------------------------------------------
 
 
-function numberAttribute(number) {
+function numberAttribute(vars) {
   if (!vars) {return alert("vars doesnt exist");}
   var numberHTML = '';
 
   numberHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>'+number+'</legend>'
+                    + '<legend>Est Eff</legend>'
                     + '<input type="number" id="numInput" name="" min="0" max="'+vars+'">'
                   + '</fieldset>'
                 + '</form>'
@@ -269,13 +269,13 @@ function numberAttribute(number) {
 // ----------------------------------------------- Calendar Attr -----------------------------------------------
 
 
-function calendarAttribute(cal) {
+function calendarAttribute() {
   var calendarHTML = '';
 
   calendarHTML += '<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
-                      + '<legend>'+cal+'</legend>'
+                      + '<legend>Due Date</legend>'
                       + '<input type="date" id="calInput" name="">'
                     + '</fieldset>'
                   + '</form>'
