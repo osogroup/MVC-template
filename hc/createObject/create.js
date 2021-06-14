@@ -209,7 +209,7 @@ function textAttribute(text) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+text.value+'</legend>'
-                    + '<input type="text" id="'+text.temp+'" class="textInput" name="" oninput="anyChange(this)" onchange="showChange()">'
+                    + '<input type="text" id="'+text.value+'_'+text.temp+'" class="textInput" name="" oninput="anyChange(this)" onchange="showChange()">'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
