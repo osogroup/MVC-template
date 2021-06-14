@@ -34,7 +34,7 @@ function anyChange(str) {
   var superKey = objType+ '_' +objItemID;
   console.log("This is the str:", str);
   var myString = localStorage.getItem(superKey);
-  console.log("This is myString", myString);
+  console.log("This is myString:", myString);
   // var myObject = JSON.parse(myString);
   console.log("This is myObject: ", myObject);
   var change = document.getElementById('input'+str);
