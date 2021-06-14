@@ -64,7 +64,7 @@ const createHTML = async () => {
 
 
   HTMLoutput += '<h1>Creating '+objType+' Item</h1>';
-  
+
   // creating item header and input row
   HTMLoutput += '<div class="row">'
 
