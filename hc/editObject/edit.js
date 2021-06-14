@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // outputHTML();
-  doTheStringify();
+  doTheStrings();
 });
 
 
@@ -132,7 +132,7 @@ function addToLocalStorage(position, value) {
 
 
 // runs when the document.ready function is ready
-const doTheStringify = async () => {
+const doTheStrings = async () => {
 
   var arrayFields = [];
   var arrayOfOptions = [];
