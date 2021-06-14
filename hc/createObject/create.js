@@ -71,7 +71,6 @@ const createHTML = async () => {
   var type = await typeData();
   var objTypeData = data[objType];
   var configTypeData = config[objType];
-  var id = await generateID();
   var tempKey = objType+'_'+id;
   localStorage.setItem(tempKey, '');
 
@@ -158,24 +157,6 @@ const createHTML = async () => {
 
 function displayStorage() {
   console.log(localStorage);
-}
-
-
-// ------------------------------------------------ ID Generator ------------------------------------------------
-
-
-const generateID = async () => {
-  var data = await tempData();
-  // console.log("This is data: ", data);
-  var objTypeData = data[objType];
-  // console.log("This is objTypeData: ", objTypeData);
-
-  var i = 0;
-  for(const [idKey, idValue] of Object.entries(objTypeData)) {
-    i++;
-  }
-  console.log("This is i: ", i);
-  return i;
 }
 
 
