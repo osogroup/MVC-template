@@ -327,8 +327,8 @@ function arrayList(vars) {
                 + '</form>'
               + '</div>';
 
-  $('#arraySpot').append(HTMLoutput);
-  $('#appendTo').append(HTMLarrayValues);
+  return HTMLoutput;
+
 }
   
 var variables = {
