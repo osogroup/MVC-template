@@ -288,7 +288,7 @@ function calendarAttribute(cal) {
 // ------------------------------------------------- Array List -------------------------------------------------
 
 
-function arrayList(vars) {
+function arrayList(array) {
 
   if (!vars.existing || !vars.options || !vars.attrType){
     alert("vars has an empty array");
@@ -305,7 +305,7 @@ function arrayList(vars) {
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>Tags</legend>'
+                    + '<legend>'+array+'</legend>'
                       + '<div id="outerDiv">'
                         + '<div id="appendTo"></div>'
                       + '</div>';
