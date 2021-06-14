@@ -201,7 +201,7 @@ function textareaAttribute() {
                 + '</form>'
               + '</div>';
 
-  $('#textareaSpot').append(textareaHTML);
+  return textareaHTML;
 }
 
 
