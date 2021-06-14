@@ -49,6 +49,8 @@ const createHTML = async () => {
   var type = await typeData();
   var objTypeData = data[objType];
   var configTypeData = config[objType];
+  var tempKey = objType+'_'+generateID();
+  console.log("This is tempKey:", tempKey);
 
 
   // ---------------------------------------------- Navigation Bar ----------------------------------------------
