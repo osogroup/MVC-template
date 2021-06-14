@@ -174,7 +174,7 @@ function inputFunction(fieldType) {
 function textAttribute() {
   var textHTML = '';
 
-  textHTML += '<div class="col-6">'
+  textHTML += '<div class="col-4">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Text</legend>'
@@ -193,7 +193,7 @@ function textAttribute() {
 function textareaAttribute() {
   var textareaHTML = '';
 
-  textareaHTML += '<div class="col-6">'
+  textareaHTML += '<div class="col-4">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Textarea</legend>'
@@ -296,7 +296,7 @@ function arrayList(vars) {
   var arrayOfOptions = vars.options;
   var type = vars.attrType;
 
-  HTMLoutput  +='<div class="col-6">'
+  HTMLoutput  +='<div class="col-4">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Tags</legend>'
