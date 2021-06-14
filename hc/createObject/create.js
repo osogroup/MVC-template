@@ -90,7 +90,7 @@ const createHTML = async () => {
 
     // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-    
+
     var inputParameters = {
       inputType: type[editableValue].inpType,
       value: editableValue
@@ -145,6 +145,7 @@ const generateID = async () => {
 
 
 function inputFunction(params) {
+
   if (params.inputType == "text") {
     console.log("inpType == 'text'");
     return textAttribute(params.value);
@@ -169,6 +170,7 @@ function inputFunction(params) {
     console.log("inpType == 'option'");
     return selectAttribute(optionVariables);
   }
+  
 }
 
 
