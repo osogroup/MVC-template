@@ -24,7 +24,7 @@ window.onload = async () => {
     return;
   }
 
-  // NEW - check for the code and state parameters
+  // check for the code and state parameters
   const query = window.location.search;
   if (query.includes("code=") && query.includes("state=")) {
 
