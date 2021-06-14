@@ -32,7 +32,7 @@ function showChange() {
 // the value in the box is changed, this function will update the localStorage
 function anyChange(str) {
   var superKey = objType+ '_' +objItemID;
-  // console.log("This is the str: ", str);
+  console.log("This is the str:", str);
   var myString = localStorage.getItem(superKey);
   // console.log("This is myString", myString);
   var myObject = JSON.parse(myString);
