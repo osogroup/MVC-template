@@ -274,7 +274,7 @@ function calendarAttribute() {
                   + '</form>'
                 + '</div>';
 
-  $('#calendarSpot').append(calendarHTML);
+  return calenderHTML;  
 }
 
 
