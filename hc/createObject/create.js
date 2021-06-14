@@ -75,7 +75,8 @@ const createHTML = async () => {
 
   // looping to find all the values in the editable key according to objType (tag, task, deliverable)
   for (const [editableKey, editableValue] of Object.entries(configTypeData.editable)) {
-    // console.log("This is the editableValue: ", editableValue); (name, description, tags)
+    console.log("This is the editableKey:", editableKey); //
+    console.log("This is the editableValue: ", editableValue); // (name, description, tags)
 
     // creating the header and input fields
     HTMLoutput += '<div class="col-4">'
