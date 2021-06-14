@@ -215,14 +215,14 @@ function textareaAttribute(textarea) {
 // ------------------------------------------------ Select Attr ------------------------------------------------
 
 
-function selectAttribute(vars) {
+function selectAttribute(select) {
   if (!vars) {return alert("vars doesnt exist");}
   var selectHTML = '';
 
   selectHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>Status</legend>'
+                    + '<legend>'+select+'</legend>'
                     + '<select name="optionDisp" value="optionDisp">';
 
   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
