@@ -115,7 +115,7 @@ const createHTML = async () => {
   HTMLoutput += '</div>';
 
   $('#everything').append(HTMLoutput);
-  
+
 }
 
 
@@ -143,7 +143,7 @@ const generateID = async () => {
 function inputFunction(fieldType) {
   if (fieldType == "text") {
     console.log("fieldType == 'text'");
-    // textAttribute();
+    textAttribute();
   }
   if (fieldType == "textarea") {
     console.log("fieldType == 'textarea'");
