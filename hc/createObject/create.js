@@ -24,6 +24,28 @@ const typeData = async () => {
   return objVars;
 }
 
+function showChange() {
+  console.log(localStorage);
+}
+
+// function that is linked to the oninput attribute in the input box, every time
+// the value in the box is changed, this function will update the localStorage
+function anyChange(str) {
+  var superKey = objType+ '_' +objItemid;
+  // console.log("This is the str: ", str);
+  var myString = localStorage.getItem(superKey);
+  // console.log("This is myString", myString);
+  var myObject = JSON.parse(myString);
+  // console.log("This is myObject: ", myObject);
+  var change = document.getElementById('input'+str);
+  var changeValue = change.value;
+  myObject[str] = changeValue;
+  // console.log("this is myObject[str]", myObject[str]);
+  backToString = JSON.stringify(myObject);
+  // console.log("This is backToString ", backToString);
+  addToLocalStorage(superKey, backToString);
+}
+
 var i = 0;
 var arrayFields = [ 
   'Ron', 
@@ -198,7 +220,7 @@ function textAttribute(text) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+text+'</legend>'
-                    + '<input type="text" class="textInput" name="">'
+                    + '<input type="text" id="" class="textInput" name="" oninput="anyChange()" onchange="showChange()">'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
