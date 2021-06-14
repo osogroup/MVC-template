@@ -196,153 +196,153 @@ function textAttribute(text) {
 // --------------------------------------------- Textarea Attribute ---------------------------------------------
 
 
-function textareaAttribute(textarea) {
-  var textareaHTML = '';
+// function textareaAttribute(textarea) {
+//   var textareaHTML = '';
 
-  textareaHTML += '<div class="col-12">'
-                + '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset class="minHeight">'
-                    + '<legend>'+textarea+'</legend>'
-                    + '<textarea class="textareaInput" rows="3" cols="22"></textarea>'
-                  + '</fieldset>'
-                + '</form>'
-              + '</div>';
+//   textareaHTML += '<div class="col-12">'
+//                 + '<form action="#" method="post" class="demoForm">'
+//                   + '<fieldset class="minHeight">'
+//                     + '<legend>'+textarea+'</legend>'
+//                     + '<textarea class="textareaInput" rows="3" cols="22"></textarea>'
+//                   + '</fieldset>'
+//                 + '</form>'
+//               + '</div>';
 
-  return textareaHTML;
-}
+//   return textareaHTML;
+// }
 
 
 // ------------------------------------------------ Select Attr ------------------------------------------------
 
 
-function selectAttribute(vars) {
-  if (!vars) {return alert("vars doesnt exist");}
-  var selectHTML = '';
+// function selectAttribute(vars) {
+//   if (!vars) {return alert("vars doesnt exist");}
+//   var selectHTML = '';
 
-  selectHTML += '<div class="col-12">'
-                + '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset class="minHeight">'
-                    + '<legend>Status</legend>'
-                    + '<select name="optionDisp" value="optionDisp">';
+//   selectHTML += '<div class="col-12">'
+//                 + '<form action="#" method="post" class="demoForm">'
+//                   + '<fieldset class="minHeight">'
+//                     + '<legend>Status</legend>'
+//                     + '<select name="optionDisp" value="optionDisp">';
 
-  for (const [varsKey, varsValue] of Object.entries(vars.options)) {
-    selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
-  }
-  selectHTML        +='</select>'
-                  + '</fieldset>'
-                + '</form>'
-              + '</div>';
+//   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
+//     selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
+//   }
+//   selectHTML        +='</select>'
+//                   + '</fieldset>'
+//                 + '</form>'
+//               + '</div>';
   
-  return selectHTML;
-}
+//   return selectHTML;
+// }
 
-// variables that will be passed into selectAttribute()
-optionVariables = {
-  options : [ 
-    'Not Started', 
-    'In-Progress', 
-    'Complete' 
-  ]
-};
+// // variables that will be passed into selectAttribute()
+// optionVariables = {
+//   options : [ 
+//     'Not Started', 
+//     'In-Progress', 
+//     'Complete' 
+//   ]
+// };
 
 
 // ------------------------------------------------ Number Attr ------------------------------------------------
 
 
-function numberAttribute(vars) {
-  if (!vars) {return alert("vars doesnt exist");}
-  var numberHTML = '';
+// function numberAttribute(vars) {
+//   if (!vars) {return alert("vars doesnt exist");}
+//   var numberHTML = '';
 
-  numberHTML += '<div class="col-12">'
-                + '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset class="minHeight">'
-                    + '<legend>Est Eff</legend>'
-                    + '<input type="number" id="numInput" name="" min="0" max="'+vars+'">'
-                  + '</fieldset>'
-                + '</form>'
-              + '</div>';
+//   numberHTML += '<div class="col-12">'
+//                 + '<form action="#" method="post" class="demoForm">'
+//                   + '<fieldset class="minHeight">'
+//                     + '<legend>Est Eff</legend>'
+//                     + '<input type="number" id="numInput" name="" min="0" max="'+vars+'">'
+//                   + '</fieldset>'
+//                 + '</form>'
+//               + '</div>';
 
-  return numberHTML;
-}
+//   return numberHTML;
+// }
 
 
 // ----------------------------------------------- Calendar Attr -----------------------------------------------
 
 
-function calendarAttribute() {
-  var calendarHTML = '';
+// function calendarAttribute() {
+//   var calendarHTML = '';
 
-  calendarHTML += '<div class="col-12">'
-                  + '<form action="#" method="post" class="demoForm">'
-                    + '<fieldset class="minHeight">'
-                      + '<legend>Due Date</legend>'
-                      + '<input type="date" id="calInput" name="">'
-                    + '</fieldset>'
-                  + '</form>'
-                + '</div>';
+//   calendarHTML += '<div class="col-12">'
+//                   + '<form action="#" method="post" class="demoForm">'
+//                     + '<fieldset class="minHeight">'
+//                       + '<legend>Due Date</legend>'
+//                       + '<input type="date" id="calInput" name="">'
+//                     + '</fieldset>'
+//                   + '</form>'
+//                 + '</div>';
 
-  return calendarHTML;  
-}
+//   return calendarHTML;  
+// }
 
 
 // ------------------------------------------------- Array List -------------------------------------------------
 
 
-function arrayList(vars) {
+// function arrayList(vars) {
 
-  if (!vars.existing || !vars.options || !vars.attrType){
-    alert("vars has an empty array");
-    return;
-  }
-  console.log("This is the input for arrayList(vars): ", vars);
+//   if (!vars.existing || !vars.options || !vars.attrType){
+//     alert("vars has an empty array");
+//     return;
+//   }
+//   console.log("This is the input for arrayList(vars): ", vars);
 
-  var HTMLoutput = '';
-  var HTMLarrayValues = '';
-  var arrayFields = vars.existing;
-  var arrayOfOptions = vars.options;
-  var type = vars.attrType;
+//   var HTMLoutput = '';
+//   var HTMLarrayValues = '';
+//   var arrayFields = vars.existing;
+//   var arrayOfOptions = vars.options;
+//   var type = vars.attrType;
 
-  HTMLoutput  +='<div class="col-12">'
-                + '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset class="minHeight">'
-                    + '<legend>Tags</legend>'
-                      + '<div id="outerDiv">'
-                        + '<div id="appendTo"></div>'
-                      + '</div>';
+//   HTMLoutput  +='<div class="col-12">'
+//                 + '<form action="#" method="post" class="demoForm">'
+//                   + '<fieldset class="minHeight">'
+//                     + '<legend>Tags</legend>'
+//                       + '<div id="outerDiv">'
+//                         + '<div id="appendTo"></div>'
+//                       + '</div>';
 
-  // showing all the items in the arrayFields array (none if the array is preset as empty)
-  for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-  HTMLarrayValues     +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
+//   // showing all the items in the arrayFields array (none if the array is preset as empty)
+//   for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
+//   HTMLarrayValues     +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
 
-  // counts up the indices if there's any preset values in the array (uncommon)
-  i++;
-  }
+//   // counts up the indices if there's any preset values in the array (uncommon)
+//   i++;
+//   }
 
-  // creating the select tag
-  HTMLoutput += HTMLarrayValues     
-                      + '<br><select id="scripts" name="scripts">';
+//   // creating the select tag
+//   HTMLoutput += HTMLarrayValues     
+//                       + '<br><select id="scripts" name="scripts">';
 
-  // creating all the options from the arrayOfOptions array in the select tag
-  for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
-  HTMLoutput          +='<option value="'+optionValue+'">'+optionValue+'</option>';
-  }
+//   // creating all the options from the arrayOfOptions array in the select tag
+//   for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
+//   HTMLoutput          +='<option value="'+optionValue+'">'+optionValue+'</option>';
+//   }
 
-  // closing the form tags and creating the add button
-  HTMLoutput        +='</select>'
-                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scripts\')"/>'
-                  + '</fieldset>'
-                + '</form>'
-              + '</div>';
+//   // closing the form tags and creating the add button
+//   HTMLoutput        +='</select>'
+//                     + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scripts\')"/>'
+//                   + '</fieldset>'
+//                 + '</form>'
+//               + '</div>';
 
-  return HTMLoutput;
+//   return HTMLoutput;
 
-}
+// }
   
-var variables = {
-  options : arrayOfOptions,
-  existing : arrayFields,
-  attrType : objType
-};
+// var variables = {
+//   options : arrayOfOptions,
+//   existing : arrayFields,
+//   attrType : objType
+// };
 
 
 // ------------------------------------------------ Add function ------------------------------------------------
