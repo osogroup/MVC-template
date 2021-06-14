@@ -25,6 +25,7 @@ var arrayFields = [
   'John', 
   'James' 
 ];
+
 var arrayOfOptions = [ 
   'Scrolling Divs JavaScript',
   'JavaScript Tooltips', 
@@ -36,7 +37,6 @@ var arrayOfOptions = [
   'PHP Order Forms',
   'Test Option'
 ];
-
 
 const createHTML = async () => {
   var data = await tempData();
