@@ -120,7 +120,7 @@ const createHTML = async () => {
   HTMLoutput  +='</div>'
               + '<div class="row">'
                 + '<div class="col-10"></div>'
-                + '<div class="col-2"><button></button></div>'
+                + '<div class="col-2"><button>Create</button></div>'
               + '<div>';
 
   $('#everything').append(HTMLoutput);
