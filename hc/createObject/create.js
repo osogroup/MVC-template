@@ -216,7 +216,7 @@ function textareaAttribute(textarea) {
 
 
 function selectAttribute(select) {
-  if (!vars) {return alert("vars doesnt exist");}
+  // if (!vars) {return alert("vars doesnt exist");}
   var selectHTML = '';
 
   selectHTML += '<div class="col-12">'
