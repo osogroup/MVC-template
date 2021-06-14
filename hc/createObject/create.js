@@ -156,21 +156,21 @@ function inputFunction(params) {
   }
   if (params.inputType == "number") {
     console.log("inpType == 'number'");
-    return numberAttribute(10);
+    return numberAttribute(params.value);
   }
   if (params.inputType == "date") {
     console.log("inpType == 'date'");
-    return calendarAttribute();
+    return calendarAttribute(params.value);
   }
   if (params.inputType == "array") {
     console.log("inpType == 'array'");
-    return arrayList(variables);
+    return arrayList(params.value);
   }
   if (params.inputType == "option") {
     console.log("inpType == 'option'");
-    return selectAttribute(optionVariables);
+    return selectAttribute(params.value);
   }
-  
+
 }
 
 
