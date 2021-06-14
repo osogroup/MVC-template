@@ -275,7 +275,7 @@ function calendarAttribute() {
                   + '</form>'
                 + '</div>';
 
-  return calenderHTML;  
+  return calendarHTML;  
 }
 
 
