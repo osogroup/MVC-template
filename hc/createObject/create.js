@@ -221,7 +221,7 @@ function inputFunction(params) {
 
 function textAttribute(text) {
   var textHTML = '';
-  var tempObj = JSON.parse(localStorage.getItem(text.temp));
+  var tempObj = localStorage.getItem(text.temp);
   console.log("This is tempObj:", tempObj);
 
   textHTML += '<div class="col-12">'
