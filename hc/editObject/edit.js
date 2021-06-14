@@ -424,7 +424,7 @@ function selectAttribute(options) {
   return selectHTML;
 }
 
-// changes the value of the select attribute in localStorage
+// updates localStorage when a new option is selected
 function selectedOption(str) {
   var selected = $('#inputstatus').find(':selected').text();
   var superKey = objType+ '_' +objItemid;
@@ -475,7 +475,7 @@ function calendarAttribute(date) {
   return calendarHTML;
 }
 
-
+// updates localStorage when a new date is selected
 function newDate(date) {
   var selected = $('#inputdueDate').val();
   var superKey = objType+ '_' +objItemid;
