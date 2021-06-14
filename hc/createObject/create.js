@@ -91,9 +91,13 @@ const createHTML = async () => {
 
     // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+    var inputParameters = {
+      inputType: type[editableValue].inpType,
+      
+    };
 
     // console.log("This is type[editableValue].type", type[editableValue].type);
-    HTMLoutput += inputFunction(type[editableValue].inpType);
+    HTMLoutput += inputFunction(inputParameters);
     
 
     // if the editableValue is in the required list according to objType 
