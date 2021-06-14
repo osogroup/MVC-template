@@ -147,23 +147,23 @@ function inputFunction(fieldType) {
   }
   if (fieldType == "textarea") {
     console.log("fieldType == 'textarea'");
-    // textareaAttribute();
+    return textareaAttribute();
   }
   if (fieldType == "number") {
     console.log("fieldType == 'number'");
-    // numberAttribute(10);
+    return numberAttribute(10);
   }
   if (fieldType == "date") {
     console.log("fieldType == 'date'");
-    // calendarAttribute();
+    return calendarAttribute();
   }
   if (fieldType == "array") {
     console.log("fieldType == 'array'");
-    // arrayList(variables);
+    return arrayList(variables);
   }
   if (fieldType == "option") {
     console.log("fieldType == 'option'");
-    // selectAttribute(optionVariables);
+    return selectAttribute(optionVariables);
   }
 }
 
