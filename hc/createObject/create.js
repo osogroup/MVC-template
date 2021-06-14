@@ -117,7 +117,8 @@ const createHTML = async () => {
 
     var inputParameters = {
       inputType: type[editableValue].inpType,
-      value: editableValue
+      value: editableValue,
+      temp: tempKey
     };
 
     // console.log("This is type[editableValue].type", type[editableValue].type);
@@ -182,9 +183,14 @@ const generateID = async () => {
 
 function inputFunction(params) {
 
+  newParams = {
+    temp : params.temp,
+    value: params.value
+  };
+
   if (params.inputType == "text") {
     console.log("inpType == 'text'");
-    return textAttribute(params.value);
+    return textAttribute(newParams);
   }
   if (params.inputType == "textarea") {
     console.log("inpType == 'textarea'");
@@ -215,11 +221,13 @@ function inputFunction(params) {
 
 function textAttribute(text) {
   var textHTML = '';
+  var tempObj = JSON.parse(localStorage.getItem(text.temp));
+  console.log("This is tempObj:", tempObj);
 
   textHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>'+text+'</legend>'
+                    + '<legend>'+text.value+'</legend>'
                     + '<input type="text" id="" class="textInput" name="" oninput="anyChange()" onchange="showChange()">'
                   + '</fieldset>'
                 + '</form>'
