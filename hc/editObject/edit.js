@@ -63,6 +63,7 @@ function anyChange(str) {
 // -------------------------------------------- Clear localStorage --------------------------------------------
 
 
+// type "clr()" in the console or use this function within another to clear localStorage
 function clr() {
   localStorage.clear();
 }
@@ -71,6 +72,7 @@ function clr() {
 // -------------------------------------------- Check localStorage --------------------------------------------
 
 
+// function that searches the localStorage to see if the value already exists
 function checkLocalStorage(check) {
 
   var objItem = {};
@@ -120,6 +122,7 @@ function checkLocalStorage(check) {
 // -------------------------------------------- Add To localStorage --------------------------------------------
 
 
+// function that adds a new item to localStorage
 function addToLocalStorage(position, value) {
   localStorage.setItem(position, value);
 }
@@ -128,6 +131,7 @@ function addToLocalStorage(position, value) {
 // ------------------------------------------------- Stringify -------------------------------------------------
 
 
+// runs when the document.ready function is ready
 const doTheStringify = async () => {
 
   var arrayFields = [];
@@ -567,6 +571,7 @@ function arrayList(array) {
 // ------------------------------------------------ Add function ------------------------------------------------
 
 
+// part of the arrayList function that will add whatever is the selected option to localStorage
 function addFunction() {
   var objTypeID = objType+'_'+objItemid;
   var tagList = [];
@@ -599,22 +604,25 @@ function addFunction() {
 // ----------------------------------------------- Remove function -----------------------------------------------
 
 
+// removes an item from localStorage and reloads the window 
 function removeFunction(val) { // val is the entire remove button
   var objTypeID = objType+'_'+objItemid;
+
+  // removing all the text from the remove button's id
   var valIDNum = val.id.replace(/remvBtn_/, '');
-  console.log("This is valIDNum: ", valIDNum);
+  // console.log("This is valIDNum: ", valIDNum);
   var localObj = JSON.parse(localStorage.getItem(objTypeID));
-  console.log("This is localObj: ", localObj);
+  // console.log("This is localObj: ", localObj);
   
   localObjTags = localObj.tags;
-  console.log("This is localObjTags: ", localObjTags);
+  // console.log("This is localObjTags: ", localObjTags);
 
-  console.log("This is the index of valIDNum: ", localObjTags.indexOf(Number(valIDNum)));
+  // console.log("This is the index of valIDNum: ", localObjTags.indexOf(Number(valIDNum)));
   localObjTags.splice(localObjTags.indexOf(Number(valIDNum)), 1);
-  console.log("This is the updated localObjTags: ", localObjTags);
+  // console.log("This is the updated localObjTags: ", localObjTags);
 
   localObj.tags = localObjTags;
-  console.log("This is localObj now: ", localObj);
+  // console.log("This is localObj now: ", localObj);
 
   localStorage.setItem(objTypeID, JSON.stringify(localObj));
 
