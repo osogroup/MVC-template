@@ -19,6 +19,11 @@ const tempData = async () => {
   return objVars;
 }
 
+const typeData = async () => {
+  var objVars = await fetch("../tempData/"+objType+".json").then(response=>{return response.json();});
+  return objVars;
+}
+
 var i = 0;
 var arrayFields = [ 
   'Ron', 
