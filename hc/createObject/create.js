@@ -182,7 +182,7 @@ function textAttribute() {
                 + '</form>'
               + '</div>';
 
-  $('#textSpot').append(textHTML);
+  return textHTML;
 }
 
 
