@@ -412,7 +412,7 @@ function objectAttribute() {
   $('#objectSpot').append(objectHTML);
 }
 
-objectAttribute();
+// objectAttribute();
 
 
 
