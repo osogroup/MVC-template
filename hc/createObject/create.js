@@ -46,6 +46,7 @@ var arrayOfOptions = [
 const createHTML = async () => {
   var data = await tempData();
   var config = await configData();
+  var type = await typeData();
   var objTypeData = data[objType];
   var configTypeData = config[objType];
 
