@@ -271,7 +271,11 @@ selectHTML +=         '</select>'
 
 // variables that will be passed into selectAttribute()
 optionVariables = {
-  options : [ 'Not Started', 'In-Progress', 'Complete' ]
+  options : [ 
+    'Not Started', 
+    'In-Progress', 
+    'Complete' 
+  ]
 };
 
 selectAttribute(optionVariables);
