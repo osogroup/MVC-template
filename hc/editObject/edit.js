@@ -424,7 +424,7 @@ function selectAttribute(options) {
   return selectHTML;
 }
 
-
+// changes the value of the select attribute in localStorage
 function selectedOption(str) {
   var selected = $('#inputstatus').find(':selected').text();
   var superKey = objType+ '_' +objItemid;
@@ -434,7 +434,7 @@ function selectedOption(str) {
   myObject[str] = change;
   backToString = JSON.stringify(myObject);
   addToLocalStorage(superKey, backToString);
-  console.log("status is now ", change);
+  console.log("status is now", change);
   
 }
 
