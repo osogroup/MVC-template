@@ -221,11 +221,9 @@ const doTheStringify = async () => {
 
           if (stuffKey == "inpType") {
             // stuffValue: text, textarea, text, array, date, number
-            console.log("stuffKey is", stuffKey);
 
             // filling arrayOfOptions
             if (stuffValue == 'array') {
-              console.log("stuffValue is", stuffValue);
 
               // console.log("The information lines up..");
               for (const [tagKey, tagValue] of Object.entries(headerValue)) {
@@ -233,7 +231,6 @@ const doTheStringify = async () => {
                 // console.log("This is tagValue: ", tagValue); // values in those positions
                 arrayOfOptions.push(tagValue);
               }
-              console.log("This is arrayOfOptions post-filled: ", arrayOfOptions);
               
               // Taking info from arrayOfOptions and using them to get the names from the list
               for (const [tagTypeKey, tagTypeValue] of Object.entries(tagTypeData)) {
