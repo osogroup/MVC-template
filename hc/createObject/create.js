@@ -90,6 +90,7 @@ const createHTML = async () => {
 
     // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+    
     var inputParameters = {
       inputType: type[editableValue].inpType,
       value: editableValue
