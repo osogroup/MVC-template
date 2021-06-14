@@ -55,7 +55,7 @@ const updateUI = async () => {
 
     document.getElementById("ipt-user-profile").textContent = JSON.stringify(await auth0.getUser());
 
-  } 
+  }
   else {
     document.getElementById("gated-content").classList.add("hidden");
   }
