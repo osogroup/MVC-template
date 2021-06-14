@@ -145,27 +145,27 @@ const generateID = async () => {
 
 
 function inputFunction(params) {
-  if (params.type == "text") {
+  if (params.inputType == "text") {
     console.log("fieldType == 'text'");
     return textAttribute(params.value);
   }
-  if (params.type == "textarea") {
+  if (params.inputType == "textarea") {
     console.log("fieldType == 'textarea'");
     return textareaAttribute();
   }
-  if (params.type == "number") {
+  if (params.inputType == "number") {
     console.log("fieldType == 'number'");
     return numberAttribute(10);
   }
-  if (params.type == "date") {
+  if (params.inputType == "date") {
     console.log("fieldType == 'date'");
     return calendarAttribute();
   }
-  if (params.type == "array") {
+  if (params.inputType == "array") {
     console.log("fieldType == 'array'");
     return arrayList(variables);
   }
-  if (params.type == "option") {
+  if (params.inputType == "option") {
     console.log("fieldType == 'option'");
     return selectAttribute(optionVariables);
   }
