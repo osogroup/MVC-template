@@ -269,13 +269,13 @@ function numberAttribute(number) {
 // ----------------------------------------------- Calendar Attr -----------------------------------------------
 
 
-function calendarAttribute() {
+function calendarAttribute(cal) {
   var calendarHTML = '';
 
   calendarHTML += '<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
-                      + '<legend>Due Date</legend>'
+                      + '<legend>'+cal+'</legend>'
                       + '<input type="date" id="calInput" name="">'
                     + '</fieldset>'
                   + '</form>'
