@@ -16,12 +16,30 @@ const tempData = async () => {
   return objVars;
 }
 
+// ------------------------------------------------ ID Generator ------------------------------------------------
+
+
+const generateID = async () => {
+  var data = await tempData();
+  // console.log("This is data: ", data);
+  var objTypeData = data[objType];
+  // console.log("This is objTypeData: ", objTypeData);
+
+  var i = 0;
+  for(const [idKey, idValue] of Object.entries(objTypeData)) {
+    i++;
+  }
+  console.log("This is i: ", i);
+  return i;
+}
+
 // gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
 const createHTML = async () => {
   
   console.log("Entering createHTML()");
   var data = await tempData();
   var config = await configData();
+  var id = await generateID();
 
 
   // --------------------------------------------- Navigation Bar ---------------------------------------------
@@ -55,7 +73,7 @@ const createHTML = async () => {
   // for (const [key, val] of Object.entries(data)) {
 
   // displaying Object Name
-  var tHeader = inputThings + '<a href="../createObject/?type='+objType+'"><button>Create Item</button></a><h1>' + objType + '</h1>';
+  var tHeader = inputThings + '<a href="../createObject/?type='+objType+'&itemid='+a+'"><button>Create Item</button></a><h1>' + objType + '</h1>';
 
   // creating sortable list library container 
   tHeader += '<div id="' + objType + 'Container">';
