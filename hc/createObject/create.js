@@ -132,7 +132,7 @@ const createHTML = async () => {
 
 
 function displayStorage() {
-  localStorage;
+  console.log(localStorage);
 }
 
 
