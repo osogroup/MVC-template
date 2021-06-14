@@ -288,13 +288,12 @@ function calendarAttribute(cal) {
 // ------------------------------------------------- Array List -------------------------------------------------
 
 
-function arrayList(array) {
+function arrayList(vars) {
 
-  // if (!vars.existing || !vars.options || !vars.attrType){
-  //   alert("vars has an empty array");
-  //   return;
-  // }
-  
+  if (!vars.existing || !vars.options || !vars.attrType){
+    alert("vars has an empty array");
+    return;
+  }
   console.log("This is the input for arrayList(vars): ", vars);
 
   var HTMLoutput = '';
@@ -306,7 +305,7 @@ function arrayList(array) {
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>'+array+'</legend>'
+                    + '<legend>Tags</legend>'
                       + '<div id="outerDiv">'
                         + '<div id="appendTo"></div>'
                       + '</div>';
