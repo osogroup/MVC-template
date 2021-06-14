@@ -117,7 +117,8 @@ const createHTML = async () => {
   }
 
   // closing item header and input row
-  HTMLoutput += '</div>';
+  HTMLoutput  +='</div>'
+              + '<div class="row">';
 
   $('#everything').append(HTMLoutput);
 
