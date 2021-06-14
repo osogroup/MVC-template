@@ -151,7 +151,7 @@ function inputFunction(params) {
   }
   if (params.inputType == "textarea") {
     console.log("inpType == 'textarea'");
-    return textareaAttribute();
+    return textareaAttribute(params.value);
   }
   if (params.inputType == "number") {
     console.log("inpType == 'number'");
@@ -194,13 +194,13 @@ function textAttribute(text) {
 // --------------------------------------------- Textarea Attribute ---------------------------------------------
 
 
-function textareaAttribute() {
+function textareaAttribute(textarea) {
   var textareaHTML = '';
 
   textareaHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>Textarea</legend>'
+                    + '<legend>'+textarea+'</legend>'
                     + '<textarea class="textareaInput" rows="3" cols="22"></textarea>'
                   + '</fieldset>'
                 + '</form>'
