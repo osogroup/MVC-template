@@ -85,8 +85,7 @@ const createHTML = async () => {
     console.log("This is the editableValue: ", editableValue); // name, description, tags, ...
 
     // creating the header and input fields
-    HTMLoutput += '<div class="col-4">'
-                  + '<div class="col-12">'+editableValue+'</div>';
+    HTMLoutput += '<div class="col-4">';
 
 
     // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
