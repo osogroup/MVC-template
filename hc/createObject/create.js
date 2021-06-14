@@ -93,7 +93,7 @@ const createHTML = async () => {
 
     var inputParameters = {
       inputType: type[editableValue].inpType,
-
+      value: editableValue
     };
 
     // console.log("This is type[editableValue].type", type[editableValue].type);
@@ -147,7 +147,7 @@ const generateID = async () => {
 function inputFunction(params) {
   if (params.type == "text") {
     console.log("fieldType == 'text'");
-    return textAttribute();
+    return textAttribute(params.value);
   }
   if (params.type == "textarea") {
     console.log("fieldType == 'textarea'");
@@ -175,13 +175,13 @@ function inputFunction(params) {
 // ----------------------------------------------- Text Attribute -----------------------------------------------
 
 
-function textAttribute() {
+function textAttribute(text) {
   var textHTML = '';
 
   textHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>Text</legend>'
+                    + '<legend>'+text+'</legend>'
                     + '<input type="text" class="textInput" name="">'
                   + '</fieldset>'
                 + '</form>'
