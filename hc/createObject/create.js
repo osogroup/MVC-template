@@ -221,11 +221,11 @@ function selectAttribute(vars) {
   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
     selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
-selectHTML +=         '</select>'
+  selectHTML        +='</select>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
-  $('#optionSpot').append(selectHTML);
+  return selectHTML;
 }
 
 // variables that will be passed into selectAttribute()
