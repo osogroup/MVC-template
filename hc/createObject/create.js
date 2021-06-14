@@ -222,7 +222,7 @@ function textAttribute() {
   $('#textSpot').append(textHTML);
 }
 
-textAttribute();
+// textAttribute();
 
 
 // --------------------------------------------- Textarea Attribute ---------------------------------------------
@@ -243,7 +243,7 @@ function textareaAttribute() {
   $('#textareaSpot').append(textareaHTML);
 }
 
-textareaAttribute();
+// textareaAttribute();
 
 
 // ------------------------------------------------ Select Attr ------------------------------------------------
@@ -278,7 +278,7 @@ optionVariables = {
   ]
 };
 
-selectAttribute(optionVariables);
+// selectAttribute(optionVariables);
 
 
 // ------------------------------------------------ Number Attr ------------------------------------------------
@@ -300,7 +300,7 @@ function numberAttribute(vars) {
   $('#numberSpot').append(numberHTML);
 }
 
-numberAttribute(10);
+// numberAttribute(10);
 
 
 // ----------------------------------------------- Calendar Attr -----------------------------------------------
@@ -321,7 +321,7 @@ function calendarAttribute() {
   $('#calendarSpot').append(calendarHTML);
 }
 
-calendarAttribute();
+// calendarAttribute();
 
 
 // ------------------------------------------------- Array List -------------------------------------------------
@@ -382,7 +382,7 @@ var variables = {
   attrType : objType
 };
 
-arrayList(variables);
+// arrayList(variables);
 
 
 // ------------------------------------------------ Object List ------------------------------------------------
