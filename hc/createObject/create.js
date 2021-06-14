@@ -115,6 +115,7 @@ const createHTML = async () => {
   HTMLoutput += '</div>';
 
   $('#everything').append(HTMLoutput);
+  
 }
 
 
