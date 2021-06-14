@@ -101,7 +101,8 @@ const createHTML = async () => {
   HTMLoutput += '<h1>Creating '+objType+' Item</h1>';
 
   // creating item header and input row
-  HTMLoutput += '<div class="row">'
+  HTMLoutput  +='<div class="row">'
+                + '<div class="col-4">id</div>'
 
   // looping to find all the values in the editable key according to objType (tag, task, deliverable)
   for (const [editableKey, editableValue] of Object.entries(configTypeData.editable)) {
