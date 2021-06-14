@@ -255,7 +255,7 @@ function numberAttribute(vars) {
                 + '</form>'
               + '</div>';
 
-  $('#numberSpot').append(numberHTML);
+  return numberHTML;
 }
 
 
