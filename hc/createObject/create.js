@@ -225,6 +225,7 @@ function selectAttribute(vars) {
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
+  
   return selectHTML;
 }
 
