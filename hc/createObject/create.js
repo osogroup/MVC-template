@@ -174,7 +174,7 @@ function inputFunction(fieldType) {
 function textAttribute() {
   var textHTML = '';
 
-  textHTML += '<div class="col-4">'
+  textHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Text</legend>'
@@ -193,7 +193,7 @@ function textAttribute() {
 function textareaAttribute() {
   var textareaHTML = '';
 
-  textareaHTML += '<div class="col-4">'
+  textareaHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Textarea</legend>'
@@ -213,7 +213,7 @@ function selectAttribute(vars) {
   if (!vars) {return alert("vars doesnt exist");}
   var selectHTML = '';
 
-  selectHTML += '<div class="col-4">'
+  selectHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Status</legend>'
@@ -247,7 +247,7 @@ function numberAttribute(vars) {
   if (!vars) {return alert("vars doesnt exist");}
   var numberHTML = '';
 
-  numberHTML += '<div class="col-4">'
+  numberHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Est Eff</legend>'
@@ -266,7 +266,7 @@ function numberAttribute(vars) {
 function calendarAttribute() {
   var calendarHTML = '';
 
-  calendarHTML += '<div class="col-4">'
+  calendarHTML += '<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>Due Date</legend>'
@@ -296,7 +296,7 @@ function arrayList(vars) {
   var arrayOfOptions = vars.options;
   var type = vars.attrType;
 
-  HTMLoutput  +='<div class="col-4">'
+  HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Tags</legend>'
