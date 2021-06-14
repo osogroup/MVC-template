@@ -93,7 +93,7 @@ const createHTML = async () => {
 
     var inputParameters = {
       inputType: type[editableValue].inpType,
-      
+
     };
 
     // console.log("This is type[editableValue].type", type[editableValue].type);
@@ -144,28 +144,28 @@ const generateID = async () => {
 // ############################################### Input Function ###############################################
 
 
-function inputFunction(fieldType) {
-  if (fieldType == "text") {
+function inputFunction(params) {
+  if (params.type == "text") {
     console.log("fieldType == 'text'");
     return textAttribute();
   }
-  if (fieldType == "textarea") {
+  if (params.type == "textarea") {
     console.log("fieldType == 'textarea'");
     return textareaAttribute();
   }
-  if (fieldType == "number") {
+  if (params.type == "number") {
     console.log("fieldType == 'number'");
     return numberAttribute(10);
   }
-  if (fieldType == "date") {
+  if (params.type == "date") {
     console.log("fieldType == 'date'");
     return calendarAttribute();
   }
-  if (fieldType == "array") {
+  if (params.type == "array") {
     console.log("fieldType == 'array'");
     return arrayList(variables);
   }
-  if (fieldType == "option") {
+  if (params.type == "option") {
     console.log("fieldType == 'option'");
     return selectAttribute(optionVariables);
   }
