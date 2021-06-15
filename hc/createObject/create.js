@@ -296,16 +296,16 @@ function calendarAttribute(cal) {
 // ------------------------------------------------ Select Attr ------------------------------------------------
 
 
-function selectAttribute(option) {
+function selectAttribute(sel) {
   var selectHTML = '';
 
   selectHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>'+option.temp+'</legend>'
+                    + '<legend>'+sel.temp+'</legend>'
                     + '<select name="optionDisp" value="optionDisp">';
 
-  for (const [varsKey, varsValue] of Object.entries(vars.options)) {
+  for (const [varsKey, varsValue] of Object.entries(sel.options)) {
     selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
   selectHTML        +='</select>'
