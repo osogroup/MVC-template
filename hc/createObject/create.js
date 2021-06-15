@@ -343,7 +343,6 @@ function arrayList(array) {
   // console.log("This is the input for arrayList(array): ", array);
 
   var HTMLoutput = '';
-  var HTMLarrayValues = '';
   var objTypeID = objType+'_'+objItemID;
 
 
@@ -353,35 +352,8 @@ function arrayList(array) {
                     + '<legend>'+array.value+'</legend>'
                       + '<div id="outerDiv">'
                         + '<div id="appendTo">';
-
-  // fill up array, tagNumbers, with tag numbers
-  // for (const [arrayKey, arrayValue] of Object.entries(JSON.parse(localStorage.getItem(objTypeID)))) {
-  //   // arrayKey: id, name, description, status, ...
-  //   // arrayValue: 1, COI: Static Site HTML Structure, This task creates the structure of the Static site, ...
-  //   if (arrayKey == 'tags') {
-  //     for (const [tagKey, tagValue] of Object.entries(arrayValue)) {
-  //       tagNumbers.push(tagValue);
-  //     }
-  //   }
-  // }
-
-  // // if tag number array includes the tag number, display the tag name
-  // for (const [arrayKey, arrayValue] of Object.entries(array.newData.tags)) {
-  //   if (tagNumbers.includes(arrayValue.id)) {
-  //     tagNames.push(arrayValue.name);
-  //   }
-  // }
-
-  // // filling tagObj with two arrays: tagNumbers and tagNames
-  // tagNumbers.forEach((key, i) => tagObj[key] = tagNames[i]);
-
-  // // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
-  // for (const[arrayKey, arrayValue] of Object.entries(tagObj)) {
-  //   HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction(this)"></div></div>';
-  //   // counts up the indices if there's any preset values in the array
-  // }
   
-  // // creating the select tag
+  // creating the select tag
   HTMLoutput          +='</div>'
                     + '</div>'
                     + '<br><select id="scripts" name="scripts">';
