@@ -223,11 +223,11 @@ function inputFunction(params) {
 function textAttribute(text) {
   var textHTML = '';
 
-  textHTML += '<div class="col-11">'
+  textHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+text.value+'</legend>'
-                    + '<input type="text" id="'+text.temp+'_'+text.value+'" class="col-12" name="" placeholder="'+text.placeholder+'" oninput="anyChange(this)">' //onchange="showChange()"
+                    + '<input type="text" id="'+text.temp+'_'+text.value+'" class="col-11" name="" placeholder="'+text.placeholder+'" oninput="anyChange(this)">' //onchange="showChange()"
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
