@@ -203,15 +203,15 @@ function inputFunction(params) {
   }
   if (params.inputType == "date") {
     console.log("inpType == 'date'");
-    // return calendarAttribute(newParams);
-  }
-  if (params.inputType == "array") {
-    console.log("inpType == 'array'");
-    // return arrayList(newParams);
+    return calendarAttribute(newParams);
   }
   if (params.inputType == "option") {
     console.log("inpType == 'option'");
     // return selectAttribute(newParams);
+  }
+  if (params.inputType == "array") {
+    console.log("inpType == 'array'");
+    // return arrayList(newParams);
   }
 
 }
@@ -255,6 +255,44 @@ function textareaAttribute(textarea) {
 }
 
 
+// ------------------------------------------------ Number Attr ------------------------------------------------
+
+
+function numberAttribute(num) {
+  var numberHTML = '';
+
+  numberHTML += '<div class="col-12">'
+                + '<form action="#" method="post" class="demoForm">'
+                  + '<fieldset class="minHeight">'
+                    + '<legend>'+num.value+'</legend>'
+                    + '<input type="number" id="'+num.temp+'_'+num.value+'" class="col-11" name="" placeholder="'+num.placeholder+'" oninput="anyChange(this)" min="0" max="100">'
+                  + '</fieldset>'
+                + '</form>'
+              + '</div>';
+
+  return numberHTML;
+}
+
+
+// ----------------------------------------------- Calendar Attr -----------------------------------------------
+
+
+function calendarAttribute(cal) {
+  var calendarHTML = '';
+
+  calendarHTML += '<div class="col-12">'
+                  + '<form action="#" method="post" class="demoForm">'
+                    + '<fieldset class="minHeight">'
+                      + '<legend>'+cal.value+'</legend>'
+                      + '<input type="date" id="calInput" name="">'
+                    + '</fieldset>'
+                  + '</form>'
+                + '</div>';
+
+  return calendarHTML;  
+}
+
+
 // ------------------------------------------------ Select Attr ------------------------------------------------
 
 
@@ -287,44 +325,6 @@ optionVariables = {
     'Complete' 
   ]
 };
-
-
-// ------------------------------------------------ Number Attr ------------------------------------------------
-
-
-function numberAttribute(num) {
-  var numberHTML = '';
-
-  numberHTML += '<div class="col-12">'
-                + '<form action="#" method="post" class="demoForm">'
-                  + '<fieldset class="minHeight">'
-                    + '<legend>'+num.value+'</legend>'
-                    + '<input type="number" id="'+num.temp+'_'+num.value+'" class="col-11" name="" placeholder="'+num.placeholder+'" oninput="anyChange(this)" min="0" max="100">'
-                  + '</fieldset>'
-                + '</form>'
-              + '</div>';
-
-  return numberHTML;
-}
-
-
-// ----------------------------------------------- Calendar Attr -----------------------------------------------
-
-
-function calendarAttribute() {
-  var calendarHTML = '';
-
-  calendarHTML += '<div class="col-12">'
-                  + '<form action="#" method="post" class="demoForm">'
-                    + '<fieldset class="minHeight">'
-                      + '<legend>Due Date</legend>'
-                      + '<input type="date" id="calInput" name="">'
-                    + '</fieldset>'
-                  + '</form>'
-                + '</div>';
-
-  return calendarHTML;  
-}
 
 
 // ------------------------------------------------- Array List -------------------------------------------------
