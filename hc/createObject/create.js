@@ -141,7 +141,7 @@ const createHTML = async () => {
       value: editableValue,
       temp: tempKey,
       options: optionsArray,
-      arrayOptions: tagObj
+      tags: tagObj
     };
 
     // console.log("This is type[editableValue].type", type[editableValue].type);
@@ -193,7 +193,7 @@ function inputFunction(params) {
     value: params.value,
     placeholder: params.placeholder,
     options: params.options,
-    arrayOptions: params.arrayOptions
+    tags: params.tags
   };
 
   if (params.inputType == "text") {
@@ -345,9 +345,7 @@ function arrayList(array) {
   var HTMLoutput = '';
   var HTMLarrayValues = '';
   var objTypeID = objType+'_'+objItemID;
-  var tagNumbers = [];
-  var tagNames = array.tags;
-  var tagObj = {};
+
 
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
@@ -389,7 +387,7 @@ function arrayList(array) {
                     + '<br><select id="scripts" name="scripts">';
 
   // creating all the options from the arrayOfOptions array in the select tag
-  for (const [optionKey, optionValue] of Object.entries(tagObj)) {
+  for (const [optionKey, optionValue] of Object.entries(array.tags)) {
     if (optionKey in tagObj) {
       HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'">'+optionValue.name+'</option>';
     }
