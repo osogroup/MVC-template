@@ -76,6 +76,9 @@ const createHTML = async () => {
   var tempKey = objType+'_'+objItemID;
   console.log("This is tempKey:",tempKey);
   
+  var tagKeys = [];
+  var tagNames = [];
+  
   // putting id of new item into localStorage
   var obj = {'id':objItemID};
   var str = JSON.stringify(obj);
@@ -126,9 +129,6 @@ const createHTML = async () => {
     if (type[editableValue].inpType == 'array') {
       var arrayArray = type[editableValue].opts;
       console.log("This is arrayArray:",arrayArray);
-
-      var tagKeys = [];
-      var tagNames = [];
       
       // for loop putting all the tag names into an array according to the values in arrayArray
       for (const [arrayKey, arrayValue] of Object.entries(data['tags'])) {
