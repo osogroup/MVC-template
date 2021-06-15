@@ -298,7 +298,7 @@ function numberAttribute(num) {
   numberHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>'+num.type+'</legend>'
+                    + '<legend>'+num.value+'</legend>'
                     + '<input type="number" id="numInput" name="" min="0" max="100">'
                   + '</fieldset>'
                 + '</form>'
