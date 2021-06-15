@@ -135,6 +135,7 @@ const createHTML = async () => {
           tagNames.push(arrayValue.name);
         }
       }
+      console.log("This is tagNames:", tagNames);
     }
 
     // creating the header and input fields
