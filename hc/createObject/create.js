@@ -290,15 +290,14 @@ optionVariables = {
 // ------------------------------------------------ Number Attr ------------------------------------------------
 
 
-function numberAttribute(vars) {
-  if (!vars) {return alert("vars doesnt exist");}
+function numberAttribute(num) {
   var numberHTML = '';
 
   numberHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>Est Eff</legend>'
-                    + '<input type="number" id="numInput" name="" min="0" max="'+vars+'">'
+                    + '<input type="number" id="numInput" name="" min="0" max="100">'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
