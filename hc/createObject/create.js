@@ -351,20 +351,17 @@ function arrayList(array) {
                   + '<fieldset class="minHeight">'
                     + '<legend>'+array.value+'</legend>'
                       + '<div id="outerDiv">'
-                        + '<div id="appendTo">';
-  
-  // creating the select tag
-  HTMLoutput          +='</div>'
-                    + '</div>'
-                    + '<br><select id="scripts" name="scripts">';
+                        + '<div id="appendTo"></div>'
+                      + '</div>'
+                      + '<br><select id="scripts" name="scripts">';
 
   // creating all the options from the arrayOfOptions array in the select tag
   for (const [optionKey, optionValue] of Object.entries(array.tags)) {
     if (optionKey in tagObj) {
-      HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'">'+optionValue.name+'</option>';
+      HTMLoutput      +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'">'+optionValue.name+'</option>';
     }
     else {
-      HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'" selected>'+optionValue.name+'</option>';
+      HTMLoutput      +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'" selected>'+optionValue.name+'</option>';
     }
   }
 
