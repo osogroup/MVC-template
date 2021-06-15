@@ -316,10 +316,8 @@ function selectAttribute(sel) {
   return selectHTML;
 }
 
-function selectedOption(selOpt) {
-  console.log("This is selOpt:", selOpt);
-  var selID = selOpt.id;
-  console.log("This is selID",selID);
+function selectedOption(selOpt) { // the entire select tag (including the options)
+  var selID = selOpt.id; // task_21_status
   console.log("This is selOpt.value:",selOpt.value);
   // var superKey = objType+ '_' +objItemID;
   // var myString = localStorage.getItem(superKey);
