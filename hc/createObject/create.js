@@ -154,6 +154,7 @@ const createHTML = async () => {
       value: editableValue,
       temp: tempKey,
       options: optionsArray,
+      keys: tagKeys,
       tags: tagNames
     };
 
