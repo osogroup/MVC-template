@@ -39,7 +39,8 @@ function anyChange(str) {
   if (myObj == null || myObj == "") {
     console.log("myobj is empty");
   }
-  // var change = document.getElementById('input'+str);
+  var change = document.getElementById(str.id);
+  console.log("This is change:", change);
   // var changeValue = change.value;
   // myObject[str] = changeValue;
   // console.log("this is myObject[str]", myObject[str]);
