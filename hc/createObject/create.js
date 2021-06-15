@@ -141,8 +141,7 @@ const createHTML = async () => {
       value: editableValue,
       temp: tempKey,
       options: optionsArray,
-      keys: tagKeys,
-      tags: tagNames
+      arrayOptions: tagObj
     };
 
     // console.log("This is type[editableValue].type", type[editableValue].type);
@@ -194,8 +193,7 @@ function inputFunction(params) {
     value: params.value,
     placeholder: params.placeholder,
     options: params.options,
-    keys: params.keys,
-    tags: params.tags
+    arrayOptions: params.arrayOptions
   };
 
   if (params.inputType == "text") {
