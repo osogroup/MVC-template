@@ -207,7 +207,7 @@ function inputFunction(params) {
   }
   if (params.inputType == "option") {
     console.log("inpType == 'option'");
-    // return selectAttribute(newParams);
+    return selectAttribute(newParams);
   }
   if (params.inputType == "array") {
     console.log("inpType == 'array'");
