@@ -320,13 +320,11 @@ function selectedOption(selOpt) { // the entire select tag (including the option
   var selID = selOpt.id; // task_21_status
   var superKey = objType+'_'+objItemID; // task_21
   var objKey = selID.replace(superKey+'_', ''); // status
-  // var superKey = objType+ '_' +objItemID;
   var myObject = JSON.parse(localStorage.getItem(superKey));
   console.log("This is myObject:", myObject);
   myObject[objKey] = selOpt.value; // status: Not Started/In-Progress/Complete
   backToString = JSON.stringify(myObject);
   addToLocalStorage(superKey, backToString);
-  // console.log("status is now", change);
   
 }
 
