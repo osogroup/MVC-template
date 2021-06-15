@@ -383,7 +383,7 @@ function arrayList(array) {
 
 // part of the arrayList function that will add whatever is the selected option to localStorage
 function addFunction() {
-  var objTypeID = objType+'_'+objItemid;
+  var objTypeID = objType+'_'+objItemID;
   var tagList = [];
 
   // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
