@@ -41,7 +41,7 @@ function anyChange(str) {
   }
   var changeValue = str.value;
   console.log("This is change:", changeValue);
-  var objKey = superKey.replace(/task_21/, '');
+  var objKey = str.id.replace(/task_21/, '');
   console.log("This is objKey:", objKey);
   // myObj[objKey] = changeValue;
   // console.log("this is myObject[str]", myObject[str]);
