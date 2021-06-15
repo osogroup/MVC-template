@@ -13,7 +13,7 @@ const configData = async () => {
 }
 
 // gets all the Objects/Arrays from listOfObjects.json and returns them
-const tempData = async () => {
+const listData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
   // console.log("tempData output ", objVars);
   return objVars;
@@ -68,7 +68,7 @@ var arrayOfOptions = [
 ];
 
 const createHTML = async () => {
-  var data = await tempData();
+  var data = await listData();
   var config = await configData();
   var type = await typeData();
   var objTypeData = data[objType];
@@ -127,8 +127,14 @@ const createHTML = async () => {
       var arrayArray = type[editableValue].opts;
       console.log("This is arrayArray:",arrayArray);
     }
+
+    var tagNames = {};
     // for loop putting all the tag names into an array according to the values in arrayArray
-    
+    for (const [arrayKey, arrayValue] of Object.entries(arrayArray)) {
+      if (data[tags].id == arrayValue) {
+        console.log("YES");
+      }
+    }
 
     // creating the header and input fields
     HTMLoutput  +='<div class="col-4">';
