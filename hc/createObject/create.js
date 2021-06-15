@@ -124,7 +124,7 @@ const createHTML = async () => {
     }
 
     if (type[editableValue].inpType == 'array') {
-      var arrayArray = = type[editableValue].opts;
+      var arrayArray = type[editableValue].opts;
       console.log("This is arrayArray:",arrayArray);
     }
 
