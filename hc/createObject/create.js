@@ -389,7 +389,7 @@ function arrayList(array) {
                     + '<br><select id="scripts" name="scripts">';
 
   // creating all the options from the arrayOfOptions array in the select tag
-  for (const [optionKey, optionValue] of Object.entries(array.newData.tags)) {
+  for (const [optionKey, optionValue] of Object.entries(tagObj)) {
     if (optionKey in tagObj) {
       HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'">'+optionValue.name+'</option>';
     }
