@@ -375,6 +375,7 @@ function arrayList(array) {
 function addFunction(addBtn) {
   var objTypeID = objType+'_'+objItemID;
   var value = addBtn.id.replace('addButton_', ''); // task_21_tags
+  console.log("This is value:", value);
   var tagList = [];
 
   // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
