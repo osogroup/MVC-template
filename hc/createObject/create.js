@@ -325,7 +325,7 @@ function selectedOption(selOpt) { // the entire select tag (including the option
   // var superKey = objType+ '_' +objItemID;
   var myObject = JSON.parse(localStorage.getItem(superKey));
   console.log("This is myObject:", myObject);
-  myObject[str] = change;
+  myObject[objKey] = selOpt.value;
   // backToString = JSON.stringify(myObject);
   // addToLocalStorage(superKey, backToString);
   // console.log("status is now", change);
