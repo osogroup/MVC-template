@@ -78,6 +78,7 @@ const createHTML = async () => {
   
   var tagKeys = [];
   var tagNames = [];
+  var tagObj = {};
   
   // putting id of new item into localStorage
   var obj = {'id':objItemID};
