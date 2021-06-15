@@ -373,7 +373,7 @@ function arrayList(array) {
 
 // part of the arrayList function that will add whatever is the selected option to localStorage
 function addFunction(addBtn) {
-  var objTypeID = objType+'_'+objItemID;
+  var objTypeID = objType+'_'+objItemID; // task_21
   var value = addBtn.id.replace('addButton_', ''); // task_21_tags
   var tagList = [];
 
@@ -384,7 +384,7 @@ function addFunction(addBtn) {
   // getting the number from the id of the selected option
   var elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
 
-  tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
+  tagList = JSON.parse(localStorage.getItem(objTypeID));
   console.log("This is tagList: ", tagList);
 
   if (tagList.includes(Number(elementVal))) {
