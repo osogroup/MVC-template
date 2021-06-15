@@ -43,7 +43,8 @@ function anyChange(str) {
   console.log("This is change:", changeValue);
   var objKey = str.id.replace(/task_21_/, '');
   console.log("This is objKey:", objKey);
-  // myObj[objKey] = changeValue;
+  myObj[objKey] = changeValue;
+  console.log("This is the new objKey:",objKey);
   // console.log("this is myObject[str]", myObject[str]);
   // backToString = JSON.stringify(myObject);
   // console.log("This is backToString ", backToString);
