@@ -35,7 +35,12 @@ function anyChange(str) {
   console.log("This is the str:", str);
   var myString = localStorage.getItem(superKey);
   console.log("This is myString:", myString);
-  var myObject = JSON.parse(myString);
+  if (myString == null) {
+    console.log("myString is empty");
+  }
+  else {
+    var myObject = JSON.parse(myString);
+  }
   console.log("This is myObject: ", myObject);
   var change = document.getElementById('input'+str);
   var changeValue = change.value;
