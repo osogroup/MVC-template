@@ -320,7 +320,7 @@ function selectedOption(selOpt) {
   console.log("This is selOpt:", selOpt);
   var selID = selOpt.id;
   console.log("This is selID",selID);
-  elementVal = select.options[select.selectedIndex].id.replace(, '');
+  console.log("This is selOpt.value:",selOpt.value);
   console.log("This is selected:", selected);
   // var superKey = objType+ '_' +objItemID;
   // var myString = localStorage.getItem(superKey);
