@@ -203,7 +203,7 @@ function inputFunction(params) {
   }
   if (params.inputType == "date") {
     console.log("inpType == 'date'");
-    return calendarAttribute(newParams);
+    // return calendarAttribute(newParams);
   }
   if (params.inputType == "option") {
     console.log("inpType == 'option'");
