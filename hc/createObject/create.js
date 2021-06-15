@@ -30,11 +30,10 @@ function showChange() {
 
 // function that is linked to the oninput attribute in the input box, every time
 // the value in the box is changed, this function will update the localStorage
-function anyChange(str) {
+function anyChange(str) { // entire input tag
   var myStr = [];
   var myObj = {};
-  var superKey = objType+ '_' +objItemID;
-  // console.log("This is the str:", str);
+  var superKey = objType+ '_' +objItemID; // ex. task_21
   var objKey = str.id.replace(superKey+'_', ''); // name 
   // console.log("This is objKey:", objKey);
   var myStr = localStorage.getItem(superKey);
