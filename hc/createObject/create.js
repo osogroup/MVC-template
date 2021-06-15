@@ -33,7 +33,7 @@ function showChange() {
 function anyChange(str) {
   var superKey = objType+ '_' +objItemID;
   console.log("This is the str:", str);
-  var myObj = localStorage.getItem(superKey);
+  var myObj = JSON.parse(localStorage.getItem(superKey));
   console.log("This is myObj:", myObj);
   if (myObj == null || myObj == "") {
     console.log("myobj is empty");
