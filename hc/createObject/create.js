@@ -190,7 +190,7 @@ function inputFunction(params) {
   }
   if (params.inputType == "number") {
     console.log("inpType == 'number'");
-    // return numberAttribute(newParams);
+    return numberAttribute(newParams);
   }
   if (params.inputType == "date") {
     console.log("inpType == 'date'");
