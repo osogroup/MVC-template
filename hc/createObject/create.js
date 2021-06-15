@@ -35,6 +35,7 @@ function anyChange(str) {
   var myObj = {};
   var superKey = objType+ '_' +objItemID;
   // console.log("This is the str:", str);
+  
   var myStr = localStorage.getItem(superKey);
   console.log("This is myStr:", myStr);
   if (myObj == null || myObj == "") {
