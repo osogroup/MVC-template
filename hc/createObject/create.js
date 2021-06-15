@@ -415,7 +415,7 @@ function addFunction(addBtn) {
     }
     // location.reload();
   }
-  return HTMLoutput;
+  $('#appendTo').append(HTMLoutput);
 }
 
 
