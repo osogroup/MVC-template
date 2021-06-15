@@ -143,12 +143,12 @@ const createHTML = async () => {
     // if the editableValue is in the required list according to objType 
     if (configTypeData.required.includes(editableValue) == true) {
       // make the input box with a "required" attribute (includes '*' to let the admin see the required fields)
-      HTMLoutput += '<br><input type=textarea placeholder="*" required>';
+      // HTMLoutput += '<br><input type=textarea placeholder="*" required>';
     }
     // else
     else {
       //   do what I already did below
-      HTMLoutput += '<br><input type=textarea>';
+      // HTMLoutput += '<br><input type=textarea>';
     }
 
     // closing the header and input fields
