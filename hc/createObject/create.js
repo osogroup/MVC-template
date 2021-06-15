@@ -36,7 +36,7 @@ function anyChange(str) {
   var superKey = objType+ '_' +objItemID;
   // console.log("This is the str:", str);
   var myStr = localStorage.getItem(superKey);
-  console.log("This is myObj:", myObj);
+  console.log("This is myStr:", myStr);
   if (myObj == null || myObj == "") {
     console.log("myStr is empty");
     var myObj = myStr;
@@ -45,6 +45,7 @@ function anyChange(str) {
     console.log("myStr is NOT empty");
     var myObj = JSON.parse(myObj);
   }
+  console.log("myStr is now myObj...");
   var changeValue = str.value;
   console.log("This is changeValue:", changeValue);
   var objKey = str.id.replace(/task_21_/, '');
