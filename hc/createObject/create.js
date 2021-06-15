@@ -132,7 +132,7 @@ const createHTML = async () => {
       for (const [arrayKey, arrayValue] of Object.entries(data['tags'])) {
         // console.log("id of 0, 1, and 2 pls",data['tags'][arrayValue].id)
         if (arrayArray.includes(data['tags'][arrayValue].id)) {
-          console.log("YES");
+          console.log(data['tags'][arrayValue].name);
         }
       }
     }
