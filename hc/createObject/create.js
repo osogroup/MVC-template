@@ -35,7 +35,10 @@ function anyChange(str) {
   var myObj = {};
   var superKey = objType+ '_' +objItemID;
   // console.log("This is the str:", str);
-  
+
+  var objKey = str.id.replace(superKey+'_', '');
+  console.log("This is objKey:", objKey);
+
   var myStr = localStorage.getItem(superKey);
   console.log("This is myStr:", myStr);
   if (myObj == null || myObj == "") {
@@ -49,8 +52,6 @@ function anyChange(str) {
   console.log("myStr is now myObj...");
   var changeValue = str.value;
   console.log("This is changeValue:", changeValue);
-  var objKey = str.id.replace(superKey+'_', '');
-  console.log("This is objKey:", objKey);
   // myObj[objKey] = changeValue;
   // console.log("This is the new myObj:",myObj);
   // console.log("this is myObject[str]", myObject[str]);
