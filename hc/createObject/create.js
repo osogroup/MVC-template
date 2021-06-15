@@ -127,14 +127,17 @@ const createHTML = async () => {
       var arrayArray = type[editableValue].opts;
       console.log("This is arrayArray:",arrayArray);
 
+      var tagKeys = [];
       var tagNames = [];
       // for loop putting all the tag names into an array according to the values in arrayArray
       for (const [arrayKey, arrayValue] of Object.entries(data['tags'])) {
         // arrayValue: object 0, object 1, object 2
         if (arrayArray.includes(arrayValue.id)) {
+          tagKeys.push(arrayValue.id);
           tagNames.push(arrayValue.name);
         }
       }
+      console.log("This is tagKeys:", tagKeys);
       console.log("This is tagNames:", tagNames);
     }
 
