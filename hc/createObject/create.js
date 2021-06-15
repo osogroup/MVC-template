@@ -41,7 +41,7 @@ function anyChange(str) {
 
   var myStr = localStorage.getItem(superKey);
   console.log("This is myStr:", myStr);
-  if (myStr == null || myStr == " ") {
+  if (myStr == null || myStr == "") {
     console.log("myStr is empty");
     var myObj = myStr;
   }
