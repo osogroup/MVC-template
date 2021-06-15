@@ -339,12 +339,7 @@ function selectedOption(selOpt) { // the entire select tag (including the option
 
 
 function arrayList(array) {
-  
-  // console.log("This is the input for arrayList(array): ", array);
-
   var HTMLoutput = '';
-  var objTypeID = objType+'_'+objItemID;
-
 
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
