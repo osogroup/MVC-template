@@ -342,12 +342,12 @@ function arrayList(array) {
   // var tagNames = [];
   // var tagObj = {};
 
-  // HTMLoutput  +='<div class="col-12">'
-  //               + '<form action="#" method="post" class="demoForm">'
-  //                 + '<fieldset class="minHeight">'
-  //                   + '<legend>'+array.value+'</legend>'
-  //                     + '<div id="outerDiv">'
-  //                       + '<div id="appendTo">';
+  HTMLoutput  +='<div class="col-12">'
+                + '<form action="#" method="post" class="demoForm">'
+                  + '<fieldset class="minHeight">'
+                    + '<legend>'+array.value+'</legend>'
+                      + '<div id="outerDiv">'
+                        + '<div id="appendTo">';
 
   // // fill up array, tagNumbers, with tag numbers
   // for (const [arrayKey, arrayValue] of Object.entries(JSON.parse(localStorage.getItem(objTypeID)))) {
@@ -394,13 +394,13 @@ function arrayList(array) {
   // }
 
   // // closing the form tags and creating the add button
-  // HTMLoutput          +='</select>'
-  //                     + '<div id="buttonSpot">'
-  //                     + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
-  //                   + '</div>'
-  //                 + '</fieldset>'
-  //               + '</form>'
-  //             + '</div>';
+  HTMLoutput          +='</select>'
+                      + '<div id="buttonSpot">'
+                      + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
+                    + '</div>'
+                  + '</fieldset>'
+                + '</form>'
+              + '</div>';
 
   return HTMLoutput;
 }
