@@ -207,6 +207,7 @@ function inputFunction(params) {
     value: params.value,
     placeholder: params.placeholder,
     options: params.options,
+    keys: params.keys,
     tags: params.tags
   };
 
