@@ -316,15 +316,6 @@ function selectAttribute(sel) {
   return selectHTML;
 }
 
-// variables that will be passed into selectAttribute()
-optionVariables = {
-  options : [ 
-    'Not Started', 
-    'In-Progress', 
-    'Complete' 
-  ]
-};
-
 
 // ------------------------------------------------- Array List -------------------------------------------------
 
