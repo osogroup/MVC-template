@@ -392,7 +392,7 @@ function addFunction(addBtn) {
     tagList = localObj[opt];
   }
 
-  var HTMLoutput = '<div class="col-12"><div id="" class="col-10">'+select.options[elementVal].value+'</div><input type="button" id="remvBtn_'+elementVal+'" class="col-2" value="-" onclick="removeFunction(this)"></div>';
+  var HTMLoutput = '<div class="col-12"><div id="" class="col-10">'+select.options[elementVal].value+'</div><input type="button" id="remvBtn_'+opt+'_'+elementVal+'" class="col-2" value="-" onclick="removeFunction(this)"></div>';
 
   // adding the selected option value to the list based off of certain conditions
   if(tagList == null || tagList == "") {
@@ -428,7 +428,7 @@ function removeFunction(val) { // val is the entire remove button
 
   // removing all the text from the remove button's id
   var valIDNum = val.id.replace(/remvBtn_/, '');
-  // console.log("This is valIDNum: ", valIDNum);
+  console.log("This is valIDNum: ", valIDNum);
   var localObj = JSON.parse(localStorage.getItem(objTypeID));
   // console.log("This is localObj: ", localObj);
   
