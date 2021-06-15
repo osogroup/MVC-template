@@ -39,9 +39,9 @@ function anyChange(str) {
   if (myObj == null || myObj == "") {
     console.log("myobj is empty");
   }
-  var change = document.getElementById(str.id);
-  console.log("This is change:", change);
-  // var changeValue = change.value;
+
+  var changeValue = str.value;
+  console.log("This is change:", changeValue);
   // myObject[str] = changeValue;
   // console.log("this is myObject[str]", myObject[str]);
   // backToString = JSON.stringify(myObject);
