@@ -324,8 +324,8 @@ function selectedOption(selOpt) { // the entire select tag (including the option
   var myObject = JSON.parse(localStorage.getItem(superKey));
   console.log("This is myObject:", myObject);
   myObject[objKey] = selOpt.value; // status: Not Started/In-Progress/Complete
-  // backToString = JSON.stringify(myObject);
-  // addToLocalStorage(superKey, backToString);
+  backToString = JSON.stringify(myObject);
+  addToLocalStorage(superKey, backToString);
   // console.log("status is now", change);
   
 }
