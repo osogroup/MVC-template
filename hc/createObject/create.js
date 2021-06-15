@@ -324,7 +324,7 @@ function selectedOption(selOpt) { // the entire select tag (including the option
   console.log("This is myObject:", myObject);
   myObject[objKey] = selOpt.value; // status: Not Started/In-Progress/Complete
   backToString = JSON.stringify(myObject);
-  addToLocalStorage(superKey, backToString);
+  localStorage.setItem(superKey, backToString);
   
 }
 
