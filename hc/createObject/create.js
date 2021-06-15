@@ -390,7 +390,11 @@ function addFunction(addBtn) {
   if (localObj.tags == null || localObj.tags == "") {
     tagList = [];
   }
-  
+  else {
+    
+  }
+
+
   console.log("This is tagList: ", tagList);
 
   if(tagList == null || tagList == "" || tagList == undefined) {
