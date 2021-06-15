@@ -31,13 +31,19 @@ function showChange() {
 // function that is linked to the oninput attribute in the input box, every time
 // the value in the box is changed, this function will update the localStorage
 function anyChange(str) {
-  var myObj = [];
+  var myStr = [];
+  var myObj = {};
   var superKey = objType+ '_' +objItemID;
   // console.log("This is the str:", str);
-  var myObj = localStorage.getItem(superKey);
+  var myStr = localStorage.getItem(superKey);
   console.log("This is myObj:", myObj);
   if (myObj == null || myObj == "") {
-    console.log("myobj is empty");
+    console.log("myStr is empty");
+    var myObj = myStr;
+  }
+  else {
+    console.log("myStr is NOT empty");
+    var myObj = JSON.parse(myObj);
   }
   var changeValue = str.value;
   console.log("This is changeValue:", changeValue);
