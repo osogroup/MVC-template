@@ -141,12 +141,12 @@ const createHTML = async () => {
       }
       console.log("This is tagKeys:", tagKeys);
       console.log("This is tagNames:", tagNames);
+      // filling tagObj with two arrays: tagNumbers and tagNames
+      tagKeys.forEach((key, i) => tagObj[key] = tagNames[i]);
+  
+      console.log("This is tagObj:", tagObj);
     }
 
-    // filling tagObj with two arrays: tagNumbers and tagNames
-    tagKeys.forEach((key, i) => tagObj[key] = tagNames[i]);
-
-    console.log("This is tagObj:", tagObj);
 
     // creating the header and input fields
     HTMLoutput  +='<div class="col-4">';
