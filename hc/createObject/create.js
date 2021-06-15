@@ -118,9 +118,8 @@ const createHTML = async () => {
 
 
     // fill the options array with editableValue.opts
-    for (const [optKey, optValue] of Object.entries(editableValue)) {
-      console.log("This is optKey:", optKey);
-      console.log("This is optValue:", optValue);
+    if (type[editableValue].opts) {
+      console.log("This is type[editableValue].opts:", type[editableValue].opts);
     }
 
     // creating the header and input fields
