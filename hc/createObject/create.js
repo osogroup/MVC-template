@@ -400,9 +400,9 @@ function addFunction(addBtn) {
       tagList.push(Number(elementVal));
       tagList.sort();
       JSON.stringify(tagList);
-      //   localObj.tags = tagList;
-      //   console.log("This is the localObj with updated tags: ", localObj);
-      //   localStorage.setItem(objTypeID, JSON.stringify(localObj));
+      localObj.tags = tagList;
+      console.log("This is the localObj with updated tags: ", localObj);
+      // localStorage.setItem(objTypeID, JSON.stringify(localObj));
     }
     // location.reload();
   }
