@@ -125,6 +125,7 @@ const createHTML = async () => {
 
     var inputParameters = {
       inputType: type[editableValue].inpType,
+      placeholder: type[editableValue].placeholder,
       value: editableValue,
       temp: tempKey
     };
@@ -175,7 +176,8 @@ function inputFunction(params) {
 
   newParams = {
     temp : params.temp,
-    value: params.value
+    value: params.value,
+    placeholder: params.placeholder
   };
 
   if (params.inputType == "text") {
