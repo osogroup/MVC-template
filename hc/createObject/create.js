@@ -52,9 +52,9 @@ function anyChange(str) {
   console.log("This is changeValue:", changeValue);
   myObj[objKey] = changeValue;
   console.log("This is the new myObj:",myObj);
-  // backToString = JSON.stringify(myObject);
-  // console.log("This is backToString ", backToString);
-  // addToLocalStorage(superKey, backToString);
+  backToString = JSON.stringify(myObj);
+  console.log("This is backToString ", backToString);
+  addToLocalStorage(superKey, backToString);
 }
 
 var i = 0;
