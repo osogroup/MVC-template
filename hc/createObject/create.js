@@ -51,7 +51,7 @@ function anyChange(str) {
   }
   var changeValue = str.value;
   console.log("This is changeValue:", changeValue);
-  myObj.objKey = changeValue;
+  myObj[objKey] = changeValue;
   console.log("This is the new myObj:",myObj);
   backToString = JSON.stringify(myObj);
   console.log("This is backToString ", backToString);
@@ -88,7 +88,6 @@ const createHTML = async () => {
   
   // putting id of new item into localStorage
   var obj = {'id':objItemID};
-  console.log("This is obj:", obj);
   var str = JSON.stringify(obj);
   localStorage.setItem(tempKey, str);
 
