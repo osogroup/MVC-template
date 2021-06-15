@@ -299,7 +299,7 @@ function numberAttribute(num) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+num.value+'</legend>'
-                    + '<input type="number" id="'+num.type+'" class="col-11" name="" placeholder="'+num.placeholder+'" oninput="anyChange(this)" min="0" max="100">'
+                    + '<input type="number" id="'+num.temp+'_'+num.value+'" class="col-11" name="" placeholder="'+num.placeholder+'" oninput="anyChange(this)" min="0" max="100">'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
