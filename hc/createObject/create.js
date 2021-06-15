@@ -318,6 +318,7 @@ function selectAttribute(sel) {
 
 function selectedOption(selOpt) { // the entire select tag (including the options)
   var selID = selOpt.id; // task_21_status
+  var superKey = objType+'_'+objItemID;
   console.log("This is selOpt.value:",selOpt.value);
   // var superKey = objType+ '_' +objItemID;
   var myObject = JSON.parse(localStorage.getItem(superKey));
