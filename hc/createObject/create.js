@@ -376,12 +376,10 @@ function addFunction(addBtn) {
   var objTypeID = objType+'_'+objItemID; // task_21
   var value = addBtn.id.replace('addButton_', ''); // task_21_tags
   var opt = value.replace('task_21_', ''); // tags
-  console.log("This is opt:",opt);
   var tagList = [];
 
   // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
   var localObj = JSON.parse(localStorage.getItem(objTypeID));
-  console.log("This is localObj:", localObj);
   var select = document.getElementById(value); //entire select above add button
 
   // getting the number from the id of the selected option
@@ -398,7 +396,6 @@ function addFunction(addBtn) {
 
   if(tagList == null || tagList == "") {
     tagList.push(Number(elementVal));
-    console.log("This is tagList after push:",tagList);
     localObj[opt] = tagList;
     console.log("This is localObj:",localObj);
     localStorage.setItem(objTypeID, JSON.stringify(localObj));
