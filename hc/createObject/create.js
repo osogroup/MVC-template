@@ -391,9 +391,8 @@ function addFunction(addBtn) {
     tagList = [];
   }
   else {
-    
+    tagList = localObj.tags;
   }
-
 
   console.log("This is tagList: ", tagList);
 
