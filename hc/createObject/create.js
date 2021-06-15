@@ -416,7 +416,7 @@ function addFunction() {
 
 // removes an item from localStorage and reloads the window which regenerates the display area
 function removeFunction(val) { // val is the entire remove button
-  var objTypeID = objType+'_'+objItemid;
+  var objTypeID = objType+'_'+objItemID;
 
   // removing all the text from the remove button's id
   var valIDNum = val.id.replace(/remvBtn_/, '');
@@ -438,6 +438,8 @@ function removeFunction(val) { // val is the entire remove button
 
   location.reload();
 }
+
+
 // ------------------------------------------------ Object List ------------------------------------------------
 
 
