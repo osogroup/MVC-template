@@ -387,11 +387,11 @@ function addFunction(addBtn) {
   // getting the number from the id of the selected option
   var elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, ''); // 0/1/2
 
-  if (localObj.opt == null || localObj.opt == "") {
+  if (localObj[opt] == null || localObj[opt] == "") {
     tagList = [];
   }
   else {
-    tagList = localObj.opt;
+    tagList = localObj[opt];
   }
 
   console.log("This is tagList: ", tagList);
@@ -399,7 +399,7 @@ function addFunction(addBtn) {
   if(tagList == null || tagList == "") {
     tagList.push(Number(elementVal));
     console.log("This is tagList after push:",tagList);
-    localObj.opt = tagList;
+    localObj[opt] = tagList;
     console.log("This is localObj:",localObj);
     localStorage.setItem(objTypeID, JSON.stringify(localObj));
   }
@@ -411,7 +411,7 @@ function addFunction(addBtn) {
       tagList.push(Number(elementVal));
       tagList.sort();
       JSON.stringify(tagList);
-      localObj.opt = tagList;
+      localObj[opt] = tagList;
       console.log("This is the localObj with updated tags: ", localObj);
       localStorage.setItem(objTypeID, JSON.stringify(localObj));
     }
