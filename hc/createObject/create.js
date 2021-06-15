@@ -316,6 +316,19 @@ function selectAttribute(sel) {
   return selectHTML;
 }
 
+function selectedOption(str) {
+  var selected = $('#inputstatus').find(':selected').text();
+  var superKey = objType+ '_' +objItemid;
+  var myString = localStorage.getItem(superKey);
+  var myObject = JSON.parse(myString);
+  var change = selected;
+  myObject[str] = change;
+  backToString = JSON.stringify(myObject);
+  addToLocalStorage(superKey, backToString);
+  console.log("status is now", change);
+  
+}
+
 
 // ------------------------------------------------- Array List -------------------------------------------------
 
