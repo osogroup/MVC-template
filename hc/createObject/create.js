@@ -35,21 +35,22 @@ function anyChange(str) {
   var superKey = objType+ '_' +objItemID;
   // console.log("This is the str:", str);
 
-  var objKey = str.id.replace(superKey+'_', '');
+  var objKey = str.id.replace(superKey+'_', ''); // name 
   // console.log("This is objKey:", objKey);
 
+  var myStr = localStorage.getItem(superKey);
   console.log("This is myStr:", myStr);
   if (myStr == null || myStr == "") {
     console.log("myStr is empty");
+    var myObj = myStr;
   }
   else {
     console.log("myStr is NOT empty");
-    myStr = JSON.parse(localStorage.getItem(superKey));
+    var myObj = JSON.parse(myStr);
   }
-  console.log("myStr is now myObj...");
   var changeValue = str.value;
   console.log("This is changeValue:", changeValue);
-  myObj.objKey = changeValue;
+  myObj[objKey] = changeValue;
   console.log("This is the new myObj:",myObj);
   // backToString = JSON.stringify(myObject);
   // console.log("This is backToString ", backToString);
