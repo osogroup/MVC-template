@@ -37,11 +37,11 @@ function anyChange(str) {
   // console.log("This is the str:", str);
 
   var objKey = str.id.replace(superKey+'_', '');
-  console.log("This is objKey:", objKey);
+  // console.log("This is objKey:", objKey);
 
   var myStr = localStorage.getItem(superKey);
   console.log("This is myStr:", myStr);
-  if (myObj == null || myObj == "") {
+  if (myObj == null || myObj == " ") {
     console.log("myStr is empty");
     var myObj = myStr;
   }
