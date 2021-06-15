@@ -237,7 +237,7 @@ function textareaAttribute(textarea) {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+textarea.value+'</legend>'
-                    + '<textarea id="'+textarea.temp+'_'+textarea.value+'" class="textareaInput" placeholder="'+textarea.placeholder+'" rows="3" cols="22"></textarea>'
+                    + '<textarea id="'+textarea.temp+'_'+textarea.value+'" class="textareaInput" placeholder="'+textarea.placeholder+'" rows="3" cols="22" oninput="anyChange(this)"></textarea>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
