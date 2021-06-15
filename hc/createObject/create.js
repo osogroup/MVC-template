@@ -321,7 +321,6 @@ function selectedOption(selOpt) {
   var selID = selOpt.id;
   console.log("This is selID",selID);
   console.log("This is selOpt.value:",selOpt.value);
-  console.log("This is selected:", selected);
   // var superKey = objType+ '_' +objItemID;
   // var myString = localStorage.getItem(superKey);
   // var myObject = JSON.parse(myString);
