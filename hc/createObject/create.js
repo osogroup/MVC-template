@@ -381,6 +381,7 @@ function addFunction(addBtn) {
 
   // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
   var localObj = JSON.parse(localStorage.getItem(objTypeID));
+  console.log("This is localObj:", localObj);
   var select = document.getElementById(value); //entire select above add button
 
   // getting the number from the id of the selected option
