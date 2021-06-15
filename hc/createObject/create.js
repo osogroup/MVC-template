@@ -304,7 +304,7 @@ function selectAttribute(sel) {
                   + '<fieldset class="minHeight">'
                     + '<legend>'+sel.value+'</legend>'
                     + '<select id="'+sel.temp+'_'+sel.value+'" name="optionDisp" value="optionDisp" oninput="selectedOption(this)">';
-
+                      + '<option value="Select an Option">Select an Option</option>';
   for (const [varsKey, varsValue] of Object.entries(sel.options)) {
     selectHTML +=       '<option value="'+varsValue+'">'+varsValue+'</option>';
   }
