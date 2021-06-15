@@ -320,8 +320,8 @@ function selectedOption(selOpt) { // the entire select tag (including the option
   var selID = selOpt.id; // task_21_status
   console.log("This is selOpt.value:",selOpt.value);
   // var superKey = objType+ '_' +objItemID;
-  // var myString = localStorage.getItem(superKey);
-  // var myObject = JSON.parse(myString);
+  var myObject = JSON.parse(localStorage.getItem(superKey));
+  console.log("This is myObject:", myObject);
   // var change = selected;
   // myObject[str] = change;
   // backToString = JSON.stringify(myObject);
