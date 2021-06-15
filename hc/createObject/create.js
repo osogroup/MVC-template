@@ -118,7 +118,7 @@ const createHTML = async () => {
 
 
     // fill the options array with editableValue.opts
-    if (type[editableValue].opts) {
+    if (type[editableValue].inpType == 'option') {
       console.log("This is type[editableValue].opts:", type[editableValue].opts);
     }
 
