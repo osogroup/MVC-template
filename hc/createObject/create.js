@@ -85,7 +85,7 @@ const createHTML = async () => {
   var configTypeData = config[objType];
   var tempKey = objType+'_'+objItemID;
   console.log("This is tempKey:",tempKey);
-  localStorage.setItem(tempKey, '');
+  // localStorage.setItem(tempKey, '');
 
   // ---------------------------------------------- Navigation Bar ----------------------------------------------
 
