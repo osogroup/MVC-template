@@ -123,6 +123,11 @@ const createHTML = async () => {
       var optionsArray = type[editableValue].opts;
     }
 
+    if (type[editableValue].inpType == 'array') {
+      var arrayArray = = type[editableValue].opts;
+      console.log("This is arrayArray:",arrayArray);
+    }
+
     // creating the header and input fields
     HTMLoutput  +='<div class="col-4">';
 
