@@ -398,6 +398,7 @@ function addFunction(addBtn) {
 
   if(tagList == null || tagList == "") {
     tagList.push(Number(elementVal));
+    console.log("This is tagList after push:",tagList);
   }
   else {
     if (tagList.includes(Number(elementVal))) {
