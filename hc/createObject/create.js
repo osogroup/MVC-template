@@ -86,13 +86,14 @@ const createHTML = async () => {
   var tempKey = objType+'_'+objItemID;
   console.log("This is tempKey:",tempKey);
   
+  // putting id of new item into localStorage
   var obj = {};
   obj['id'] = objItemID;
   console.log("This is obj:", obj);
   var str = JSON.stringify(obj);
   localStorage.setItem(tempKey, str);
 
-  
+
   // ---------------------------------------------- Navigation Bar ----------------------------------------------
 
 
