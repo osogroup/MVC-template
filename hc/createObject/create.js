@@ -358,7 +358,7 @@ function arrayList(array) {
   // closing the form tags and creating the add button
   HTMLoutput          +='</select>'
                       + '<div id="buttonSpot">'
-                      + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
+                      + '<input type="button" id="addButton_'+array.temp+'_'+array.value+'" value="Add" onclick="addFunction()"/>'
                     + '</div>'
                   + '</fieldset>'
                 + '</form>'
@@ -378,7 +378,7 @@ function addFunction() {
 
   // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
   var localObj = JSON.parse(localStorage.getItem(objTypeID));
-  var select = document.getElementById('scripts');
+  var select = document.getElementById(objTypeID);
 
   // getting the number from the id of the selected option
   elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
