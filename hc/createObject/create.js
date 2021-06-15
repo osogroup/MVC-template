@@ -43,8 +43,7 @@ function anyChange(str) {
   // console.log("This is change:", changeValue);
   var objKey = superKey.replace(superKey, '');
   console.log("This is objKey:", objKey);
-  // myObj[changeValue]
-  // myObject[str] = changeValue;
+  // myObj[objKey] = changeValue;
   // console.log("this is myObject[str]", myObject[str]);
   // backToString = JSON.stringify(myObject);
   // console.log("This is backToString ", backToString);
