@@ -392,7 +392,8 @@ function addFunction(addBtn) {
     tagList = localObj[opt];
   }
 
-  
+  var HTMLoutput = '<div class="col-12"><div class="col-10"></div><input type="button" class="col-2"></div></div>';
+
   // adding the selected option value to the list based off of certain conditions
   if(tagList == null || tagList == "") {
     tagList.push(Number(elementVal));
@@ -414,6 +415,7 @@ function addFunction(addBtn) {
     }
     // location.reload();
   }
+  return HTMLoutput;
 }
 
 
