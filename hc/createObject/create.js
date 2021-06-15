@@ -396,7 +396,7 @@ function addFunction(addBtn) {
 
   console.log("This is tagList: ", tagList);
 
-  if(tagList == null || tagList == "" || tagList == undefined) {
+  if(tagList == null || tagList == "") {
     tagList.push(Number(elementVal));
   }
   else {
