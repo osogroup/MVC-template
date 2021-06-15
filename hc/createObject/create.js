@@ -284,7 +284,7 @@ function calendarAttribute(cal) {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+cal.value+'</legend>'
-                      + '<input type="date" id="'+cal.temp+'_'+cal.value+'" name="" placeholder="'+cal.placeholder+'" oninput="anyChange(this)">'
+                      + '<input type="date" id="'+cal.temp+'_'+cal.value+'" name="" oninput="anyChange(this)">'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
