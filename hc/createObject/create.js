@@ -361,7 +361,7 @@ function arrayList(array) {
       HTMLoutput      +='<option id="optionValue_'+optionKey+'" value="'+optionValue+'">'+optionValue+'</option>';
     // }
     // else {
-      // HTMLoutput      +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'" selected>'+optionValue.name+'</option>';
+      // HTMLoutput      +='<option id="optionValue_'+optionKey+'" value="'+optionValue+'" selected>'+optionValue+'</option>';
     // }
   }
 
