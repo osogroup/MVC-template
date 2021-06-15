@@ -325,122 +325,147 @@ function selectedOption(selOpt) { // the entire select tag (including the option
   myObject[objKey] = selOpt.value; // status: Not Started/In-Progress/Complete
   backToString = JSON.stringify(myObject);
   localStorage.setItem(superKey, backToString);
-  
 }
 
 
 // ------------------------------------------------- Array List -------------------------------------------------
 
 
-function arrayList(vars) {
-
-  if (!vars.existing || !vars.options || !vars.attrType){
-    alert("vars has an empty array");
-    return;
-  }
-  console.log("This is the input for arrayList(vars): ", vars);
+function arrayList(array) {
+  
+  // console.log("This is the input for arrayList(array): ", array);
 
   var HTMLoutput = '';
   var HTMLarrayValues = '';
-  var arrayFields = vars.existing;
-  var arrayOfOptions = vars.options;
-  var type = vars.attrType;
+  var objTypeID = objType+'_'+objItemid;
+  var tagNumbers = [];
+  var tagNames = [];
+  var tagObj = {};
 
   HTMLoutput  +='<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>Tags</legend>'
+                    + '<legend>'+array.value+'</legend>'
                       + '<div id="outerDiv">'
-                        + '<div id="appendTo"></div>'
-                      + '</div>';
+                        + '<div id="appendTo">';
 
-  // showing all the items in the arrayFields array (none if the array is preset as empty)
-  for (const[arrayKey, arrayValue] of Object.entries(arrayFields)) {
-  HTMLarrayValues     +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn'+arrayKey+'" value="-" onclick="removeFunction('+arrayKey+')"></div></div>';
-
-  // counts up the indices if there's any preset values in the array (uncommon)
-  i++;
+  // fill up array, tagNumbers, with tag numbers
+  for (const [arrayKey, arrayValue] of Object.entries(JSON.parse(localStorage.getItem(objTypeID)))) {
+    // console.log("This is arrayKey: ", arrayKey); // id, name, description, status, ...
+    // console.log("This is arrayValue: ", arrayValue); // 1, COI: Static Site HTML Structure, This task creates the structure of the Static site, ...
+    if (arrayKey == 'tags') {
+      for (const [tagKey, tagValue] of Object.entries(arrayValue)) {
+        tagNumbers.push(tagValue);
+      }
+    }
   }
 
+  // if tag number array includes the tag number, display the tag name
+  for (const [arrayKey, arrayValue] of Object.entries(array.newData.tags)) {
+    if (tagNumbers.includes(arrayValue.id)) {
+      tagNames.push(arrayValue.name);
+    }
+  }
+
+  // filling tagObj with two arrays: tagNumbers and tagNames
+  tagNumbers.forEach((key, i) => tagObj[key] = tagNames[i]);
+
+  // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
+  for (const[arrayKey, arrayValue] of Object.entries(tagObj)) {
+    HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction(this)"></div></div>';
+    // counts up the indices if there's any preset values in the array
+  }
+  
   // creating the select tag
-  HTMLoutput += HTMLarrayValues     
+  HTMLoutput += HTMLarrayValues
+                        + '</div>'
+                      + '</div>'
                       + '<br><select id="scripts" name="scripts">';
 
   // creating all the options from the arrayOfOptions array in the select tag
-  for (const [optionKey, optionValue] of Object.entries(arrayOfOptions)) {
-  HTMLoutput          +='<option value="'+optionValue+'">'+optionValue+'</option>';
+  for (const [optionKey, optionValue] of Object.entries(array.newData.tags)) {
+    if (optionKey in tagObj) {
+      HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'">'+optionValue.name+'</option>';
+    }
+    else {
+      HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'" selected>'+optionValue.name+'</option>';
+    }
+    
   }
 
   // closing the form tags and creating the add button
-  HTMLoutput        +='</select>'
-                    + '<input type="button" id="showTxt" value="Add" onclick="addFunction(\'scripts\')"/>'
+  HTMLoutput          +='</select>'
+                      + '<div id="buttonSpot">'
+                      + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
+                    + '</div>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
 
   return HTMLoutput;
-
 }
-  
-var variables = {
-  options : arrayOfOptions,
-  existing : arrayFields,
-  attrType : objType
-};
 
 
 // ------------------------------------------------ Add function ------------------------------------------------
 
 
-function addFunction(variable) {
-  var select = document.getElementById(variable);  
+// part of the arrayList function that will add whatever is the selected option to localStorage
+function addFunction() {
+  var objTypeID = objType+'_'+objItemid;
+  var tagList = [];
 
-  // access text property of selected option
-  elementVal = select.options[select.selectedIndex].text;
-  arrayFields.push(elementVal);
-  
-  // adding a new row and columns to the HTML
-  var HTMLelement = '<div class="row"><div class="col-10">'+elementVal+'</div><div class="col-2"><input type="button" id="remvBtn'+i+'" value="-" onclick="removeFunction('+i+')"></div></div>';
-  $('#appendTo').append(HTMLelement);
+  // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
+  var localObj = JSON.parse(localStorage.getItem(objTypeID));
+  var select = document.getElementById('scripts');
 
-  // adjusting indices
-  i++;
+  // getting the number from the id of the selected option
+  elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
+
+  tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
+  console.log("This is tagList: ", tagList);
+
+  if (tagList.includes(Number(elementVal))) {
+    console.log("tagList already includes", elementVal);
+  }
+  else {
+    tagList.push(Number(elementVal));
+    tagList.sort();
+    JSON.stringify(tagList);
+    localObj.tags = tagList;
+    console.log("This is the localObj with updated tags: ", localObj);
+    localStorage.setItem(objTypeID, JSON.stringify(localObj));
+  }
+  location.reload();
 }
 
 
 // ----------------------------------------------- Remove function -----------------------------------------------
 
 
-function removeFunction(val) {
-  var HTMLelement = '';
+// removes an item from localStorage and reloads the window which regenerates the display area
+function removeFunction(val) { // val is the entire remove button
+  var objTypeID = objType+'_'+objItemid;
 
-  // removing 1 value from arrayFields starting at index 'val'
-  arrayFields.splice(val, 1);
+  // removing all the text from the remove button's id
+  var valIDNum = val.id.replace(/remvBtn_/, '');
+  // console.log("This is valIDNum: ", valIDNum);
+  var localObj = JSON.parse(localStorage.getItem(objTypeID));
+  // console.log("This is localObj: ", localObj);
+  
+  localObjTags = localObj.tags;
+  // console.log("This is localObjTags: ", localObjTags);
 
-  // getting a variable that represents whichever remove button I push on the browser (technically dont need
-  // the specific id since the the value is deleted from arrayFields anyway and then arrayFields is ran through,
-  // recreating the display)
-  var element = document.querySelector('#remvBtn'+val);
+  // console.log("This is the index of valIDNum: ", localObjTags.indexOf(Number(valIDNum)));
+  localObjTags.splice(localObjTags.indexOf(Number(valIDNum)), 1);
+  // console.log("This is the updated localObjTags: ", localObjTags);
 
-  // deleting the entire div containing the arrayField values
-  element.parentNode.parentNode.parentNode.remove(element.parentNode.parentNode.parentNode);
-  for (const [elementKey, elementValue] of Object.entries(arrayFields)) {
-    HTMLelement += '<div class="row"><div class="col-10">'+elementValue+'</div><div class="col-2"><input type="button" id="remvBtn'+elementKey+'" value="-" onclick="removeFunction('+elementKey+')"></div></div>';
-  }
-  // next 5 lines create a new div within outerDiv that has the id="appendTo"
-  var tag = document.createElement('div');
-  tag.setAttribute("id", "appendTo");
-  var elm = document.getElementById("outerDiv");
-  elm.appendChild(tag);
-  $('#appendTo').append(HTMLelement);
+  localObj.tags = localObjTags;
+  // console.log("This is localObj now: ", localObj);
 
-  console.log("This is arrayFields after .splice(): ", arrayFields);
+  localStorage.setItem(objTypeID, JSON.stringify(localObj));
 
-  // adjusting indices for add function
-  i--;
+  location.reload();
 }
-
-
 // ------------------------------------------------ Object List ------------------------------------------------
 
 
