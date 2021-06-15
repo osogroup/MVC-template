@@ -186,23 +186,23 @@ function inputFunction(params) {
   }
   if (params.inputType == "textarea") {
     console.log("inpType == 'textarea'");
-    return textareaAttribute(params.value);
+    return textareaAttribute(newParams);
   }
   if (params.inputType == "number") {
     console.log("inpType == 'number'");
-    // return numberAttribute(params.value);
+    // return numberAttribute(newParams);
   }
   if (params.inputType == "date") {
     console.log("inpType == 'date'");
-    // return calendarAttribute(params.value);
+    // return calendarAttribute(newParams);
   }
   if (params.inputType == "array") {
     console.log("inpType == 'array'");
-    // return arrayList(params.value);
+    // return arrayList(newParams);
   }
   if (params.inputType == "option") {
     console.log("inpType == 'option'");
-    // return selectAttribute(params.value);
+    // return selectAttribute(newParams);
   }
 
 }
