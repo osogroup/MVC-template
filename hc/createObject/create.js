@@ -390,10 +390,9 @@ function addFunction(addBtn) {
   console.log("This is tagList: ", tagList);
 
   if(tagList == null || tagList == "") {
-    tagList.push(elementVal);
+    tagList.push(Number(elementVal));
   }
   else {
-
     if (tagList.includes(Number(elementVal))) {
       console.log("tagList already includes", elementVal);
     }
