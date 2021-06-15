@@ -127,6 +127,8 @@ const createHTML = async () => {
       var arrayArray = type[editableValue].opts;
       console.log("This is arrayArray:",arrayArray);
     }
+    // for loop putting all the tag names into an array according to the values in arrayArray
+    
 
     // creating the header and input fields
     HTMLoutput  +='<div class="col-4">';
