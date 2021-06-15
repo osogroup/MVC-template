@@ -353,7 +353,7 @@ function arrayList(array) {
                       + '<div id="outerDiv">'
                         + '<div id="appendTo"></div>'
                       + '</div>'
-                      + '<br><select id="scripts" name="scripts">';
+                      + '<br><select id="'+array.temp+'_'+array.value+'" name="scripts">';
 
   // creating all the options from the arrayOfOptions array in the select tag
   for (const [optionKey, optionValue] of Object.entries(array.tags)) {
