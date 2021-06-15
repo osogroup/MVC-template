@@ -43,7 +43,7 @@ function anyChange(str) {
   }
   else {
     console.log("myStr is NOT empty");
-    var myObj = JSON.parse(myObj);
+    var myObj = JSON.parse(myStr);
   }
   console.log("myStr is now myObj...");
   var changeValue = str.value;
