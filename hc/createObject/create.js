@@ -392,8 +392,8 @@ function addFunction(addBtn) {
     tagList = localObj[opt];
   }
 
-  // console.log("This is tagList: ", tagList);
-
+  
+  // adding the selected option value to the list based off of certain conditions
   if(tagList == null || tagList == "") {
     tagList.push(Number(elementVal));
     localObj[opt] = tagList;
