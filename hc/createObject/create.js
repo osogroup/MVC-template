@@ -130,7 +130,7 @@ const createHTML = async () => {
       var tagNames = {};
       // for loop putting all the tag names into an array according to the values in arrayArray
       for (const [arrayKey, arrayValue] of Object.entries(arrayArray)) {
-        console.log("This is data['tags'].id:",data['tags'].id)
+        console.log("This is data['tags'][id]:",data['tags'][id])
         // if (data['tags'].id == arrayValue) {
         //   console.log("YES");
         // }
