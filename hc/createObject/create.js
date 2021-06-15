@@ -399,6 +399,9 @@ function addFunction(addBtn) {
   if(tagList == null || tagList == "") {
     tagList.push(Number(elementVal));
     console.log("This is tagList after push:",tagList);
+    localObj.opt = tagList;
+    console.log("This is localObj:",localObj);
+    localStorage.setItem(objTypeID, JSON.stringify(localObj));
   }
   else {
     if (tagList.includes(Number(elementVal))) {
@@ -408,9 +411,9 @@ function addFunction(addBtn) {
       tagList.push(Number(elementVal));
       tagList.sort();
       JSON.stringify(tagList);
-      localObj.tags = tagList;
+      localObj.opt = tagList;
       console.log("This is the localObj with updated tags: ", localObj);
-      // localStorage.setItem(objTypeID, JSON.stringify(localObj));
+      localStorage.setItem(objTypeID, JSON.stringify(localObj));
     }
     // location.reload();
   }
