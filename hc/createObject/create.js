@@ -391,8 +391,7 @@ function addFunction() {
   var select = document.getElementById('scripts');
 
   // getting the number from the id of the selected option
-  elementVal = select.options[select.selectedIndex].id.replace(objTypeID+'_', '');
-  console.log("This is elementVal:", elementVal);
+  elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
 
   tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
   console.log("This is tagList: ", tagList);
