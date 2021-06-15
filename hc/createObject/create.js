@@ -40,7 +40,7 @@ function anyChange(str) {
     console.log("myobj is empty");
   }
   var changeValue = str.value;
-  console.log("This is change:", changeValue);
+  console.log("This is changeValue:", changeValue);
   var objKey = str.id.replace(/task_21_/, '');
   console.log("This is objKey:", objKey);
   myObj.objKey = changeValue;
