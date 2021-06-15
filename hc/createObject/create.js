@@ -385,7 +385,7 @@ function addFunction(addBtn) {
   // getting the number from the id of the selected option
   var elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, ''); // 0/1/2
 
-  tagList = JSON.parse(localStorage.getItem(objTypeID));
+  tagList = JSON.parse(localStorage.getItem(objTypeID).tags);
   console.log("This is tagList: ", tagList);
 
   // if (tagList.includes(Number(elementVal))) {
