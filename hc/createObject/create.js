@@ -318,7 +318,8 @@ function selectAttribute(sel) {
 
 function selectedOption(selOpt) {
   console.log("This is selOpt:", selOpt);
-  // var selected = $('#inputstatus').find(':selected').text();
+  var selected = $('#inputstatus').find(':selected').text();
+  console.log("This is selected:", selected);
   // var superKey = objType+ '_' +objItemID;
   // var myString = localStorage.getItem(superKey);
   // var myObject = JSON.parse(myString);
