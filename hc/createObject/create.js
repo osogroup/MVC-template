@@ -392,7 +392,7 @@ function addFunction(addBtn) {
     tagList = localObj[opt];
   }
 
-  console.log("This is tagList: ", tagList);
+  // console.log("This is tagList: ", tagList);
 
   if(tagList == null || tagList == "") {
     tagList.push(Number(elementVal));
