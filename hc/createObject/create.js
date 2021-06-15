@@ -382,7 +382,7 @@ function addFunction(addBtn) {
   var select = document.getElementById(value); //entire select above add button
 
   // getting the number from the id of the selected option
-  elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
+  var elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
 
   tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
   console.log("This is tagList: ", tagList);
