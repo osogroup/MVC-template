@@ -129,6 +129,7 @@ const createHTML = async () => {
 
       var tagKeys = [];
       var tagNames = [];
+      
       // for loop putting all the tag names into an array according to the values in arrayArray
       for (const [arrayKey, arrayValue] of Object.entries(data['tags'])) {
         // arrayValue: object 0, object 1, object 2
@@ -140,6 +141,11 @@ const createHTML = async () => {
       console.log("This is tagKeys:", tagKeys);
       console.log("This is tagNames:", tagNames);
     }
+
+    // filling tagObj with two arrays: tagNumbers and tagNames
+    tagKeys.forEach((key, i) => tagObj[key] = tagNames[i]);
+
+    console.log("This is tagObj:", tagObj);
 
     // creating the header and input fields
     HTMLoutput  +='<div class="col-4">';
