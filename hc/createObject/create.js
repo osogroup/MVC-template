@@ -150,7 +150,8 @@ const createHTML = async () => {
       placeholder: type[editableValue].placeholder,
       value: editableValue,
       temp: tempKey,
-      options: optionsArray
+      options: optionsArray,
+      tags: tagNames
     };
 
     // console.log("This is type[editableValue].type", type[editableValue].type);
@@ -201,7 +202,8 @@ function inputFunction(params) {
     temp : params.temp,
     value: params.value,
     placeholder: params.placeholder,
-    options: params.options
+    options: params.options,
+    tags: params.tags
   };
 
   if (params.inputType == "text") {
@@ -354,7 +356,7 @@ function arrayList(array) {
   var HTMLarrayValues = '';
   var objTypeID = objType+'_'+objItemID;
   var tagNumbers = [];
-  var tagNames = [];
+  var tagNames = array.tags;
   var tagObj = {};
 
   HTMLoutput  +='<div class="col-12">'
