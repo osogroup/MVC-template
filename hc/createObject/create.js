@@ -128,12 +128,11 @@ const createHTML = async () => {
       console.log("This is tagObj:", tagObj);
     }
 
-
     // creating the header and input fields
     HTMLoutput  +='<div class="col-4">';
 
 
-    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++ Parameters +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
     var inputParameters = {
