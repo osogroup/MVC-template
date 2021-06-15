@@ -52,8 +52,8 @@ function anyChange(str) {
   console.log("myStr is now myObj...");
   var changeValue = str.value;
   console.log("This is changeValue:", changeValue);
-  // myObj[objKey] = changeValue;
-  // console.log("This is the new myObj:",myObj);
+  myObj[objKey] = changeValue;
+  console.log("This is the new myObj:",myObj);
   // console.log("this is myObject[str]", myObject[str]);
   // backToString = JSON.stringify(myObject);
   // console.log("This is backToString ", backToString);
