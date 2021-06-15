@@ -387,7 +387,10 @@ function addFunction(addBtn) {
   // getting the number from the id of the selected option
   var elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, ''); // 0/1/2
 
-  tagList = localObj[opt];
+  if (localObj.tags == null || localObj.tags == "") {
+    tagList = [];
+
+  }
   console.log("This is tagList: ", tagList);
 
   if(tagList == null || tagList == "" || tagList == undefined) {
