@@ -319,12 +319,13 @@ function selectAttribute(sel) {
 function selectedOption(selOpt) { // the entire select tag (including the options)
   var selID = selOpt.id; // task_21_status
   var superKey = objType+'_'+objItemID;
+  var objKey = selID.replace(superKey+'_', '');
+  console.log("This is objKey:",objKey);
   console.log("This is selOpt.value:",selOpt.value);
   // var superKey = objType+ '_' +objItemID;
   var myObject = JSON.parse(localStorage.getItem(superKey));
   console.log("This is myObject:", myObject);
-  // var change = selected;
-  // myObject[str] = change;
+  myObject[str] = change;
   // backToString = JSON.stringify(myObject);
   // addToLocalStorage(superKey, backToString);
   // console.log("status is now", change);
