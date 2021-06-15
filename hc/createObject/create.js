@@ -392,7 +392,7 @@ function addFunction(addBtn) {
     tagList = localObj[opt];
   }
 
-  var HTMLoutput = '<div class="col-12"><div class="col-10">'+select.name[elementVal]+'</div><input type="button" class="col-2"></button></div>';
+  var HTMLoutput = '<div class="col-12"><div class="col-10">'+select.name[elementVal]+'</div><input type="button" class="col-2">-</input></div>';
 
   // adding the selected option value to the list based off of certain conditions
   if(tagList == null || tagList == "") {
