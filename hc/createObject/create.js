@@ -33,15 +33,17 @@ function showChange() {
 function anyChange(str) {
   var myObj = {};
   var superKey = objType+ '_' +objItemID;
-  console.log("This is the str:", str);
+  // console.log("This is the str:", str);
   var myObj = localStorage.getItem(superKey);
   console.log("This is myObj:", myObj);
   if (myObj == null || myObj == "") {
     console.log("myobj is empty");
   }
-
   var changeValue = str.value;
   console.log("This is change:", changeValue);
+  var objKey = superKey.replace(superKey, '');
+  console.log("This is objKey:", objKey);
+  myObj[changeValue]
   // myObject[str] = changeValue;
   // console.log("this is myObject[str]", myObject[str]);
   // backToString = JSON.stringify(myObject);
