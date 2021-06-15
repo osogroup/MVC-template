@@ -126,13 +126,13 @@ const createHTML = async () => {
     if (type[editableValue].inpType == 'array') {
       var arrayArray = type[editableValue].opts;
       console.log("This is arrayArray:",arrayArray);
-    }
-
-    var tagNames = {};
-    // for loop putting all the tag names into an array according to the values in arrayArray
-    for (const [arrayKey, arrayValue] of Object.entries(arrayArray)) {
-      if (data[tags].id == arrayValue) {
-        console.log("YES");
+      
+      var tagNames = {};
+      // for loop putting all the tag names into an array according to the values in arrayArray
+      for (const [arrayKey, arrayValue] of Object.entries(arrayArray)) {
+        if (data[tags].id == arrayValue) {
+          console.log("YES");
+        }
       }
     }
 
