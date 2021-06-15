@@ -48,25 +48,6 @@ function anyChange(str) { // entire input tag
   localStorage.setItem(superKey, backToString);
 }
 
-var i = 0;
-var arrayFields = [ 
-  'Ron', 
-  'John', 
-  'James' 
-];
-
-var arrayOfOptions = [ 
-  'Scrolling Divs JavaScript',
-  'JavaScript Tooltips', 
-  'Continuous Scroller', 
-  'Rotating Banner JavaScript', 
-  'Random Image PHP', 
-  'PHP Form Generator', 
-  'PHP Table Class', 
-  'PHP Order Forms',
-  'Test Option'
-];
-
 const createHTML = async () => {
   var data = await listData();
   var config = await configData();
