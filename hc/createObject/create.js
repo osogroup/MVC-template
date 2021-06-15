@@ -372,7 +372,7 @@ function arrayList(array) {
 
 
 // part of the arrayList function that will add whatever is the selected option to localStorage
-function addFunction() {
+function addFunction(addBtn) {
   var objTypeID = objType+'_'+objItemID;
   var tagList = [];
 
