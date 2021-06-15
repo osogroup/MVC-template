@@ -289,21 +289,20 @@ function calendarAttribute(cal) {
                   + '</form>'
                 + '</div>';
 
-  return calendarHTML;  
+  return calendarHTML;
 }
 
 
 // ------------------------------------------------ Select Attr ------------------------------------------------
 
 
-function selectAttribute(vars) {
-  if (!vars) {return alert("vars doesnt exist");}
+function selectAttribute(option) {
   var selectHTML = '';
 
   selectHTML += '<div class="col-12">'
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
-                    + '<legend>Status</legend>'
+                    + '<legend>'+option.temp+'</legend>'
                     + '<select name="optionDisp" value="optionDisp">';
 
   for (const [varsKey, varsValue] of Object.entries(vars.options)) {
