@@ -204,27 +204,27 @@ function inputFunction(params) {
   };
 
   if (params.inputType == "text") {
-    console.log("inpType == 'text'");
+    // console.log("inpType == 'text'");
     return textAttribute(newParams);
   }
   if (params.inputType == "textarea") {
-    console.log("inpType == 'textarea'");
+    // console.log("inpType == 'textarea'");
     return textareaAttribute(newParams);
   }
   if (params.inputType == "number") {
-    console.log("inpType == 'number'");
+    // console.log("inpType == 'number'");
     return numberAttribute(newParams);
   }
   if (params.inputType == "date") {
-    console.log("inpType == 'date'");
+    // console.log("inpType == 'date'");
     return calendarAttribute(newParams);
   }
   if (params.inputType == "option") {
-    console.log("inpType == 'option'");
+    // console.log("inpType == 'option'");
     return selectAttribute(newParams);
   }
   if (params.inputType == "array") {
-    console.log("inpType == 'array'");
+    // console.log("inpType == 'array'");
     return arrayList(newParams);
   }
 
