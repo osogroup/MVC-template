@@ -186,7 +186,7 @@ function inputFunction(params) {
   }
   if (params.inputType == "textarea") {
     console.log("inpType == 'textarea'");
-    // return textareaAttribute(params.value);
+    return textareaAttribute(params.value);
   }
   if (params.inputType == "number") {
     console.log("inpType == 'number'");
