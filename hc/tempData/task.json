@@ -20,7 +20,7 @@
  "tags":{
    "type":"array",
    "inpType":"array",
-   "opts":"{listOfObjects.tag}"
+   "opts": [ 0,1,2 ]
  },
  "status":{
    "type":"string",
