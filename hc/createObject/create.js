@@ -40,10 +40,10 @@ function anyChange(str) {
     console.log("myobj is empty");
   }
   var changeValue = str.value;
-  console.log("This is change:", changeValue);
+  // console.log("This is change:", changeValue);
   var objKey = superKey.replace(superKey, '');
   console.log("This is objKey:", objKey);
-  myObj[changeValue]
+  // myObj[changeValue]
   // myObject[str] = changeValue;
   // console.log("this is myObject[str]", myObject[str]);
   // backToString = JSON.stringify(myObject);
