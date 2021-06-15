@@ -316,7 +316,8 @@ function selectAttribute(sel) {
   return selectHTML;
 }
 
-function selectedOption(str) {
+function selectedOption(selOpt) {
+  console.log("This is selOpt:", selOpt);
   // var selected = $('#inputstatus').find(':selected').text();
   // var superKey = objType+ '_' +objItemID;
   // var myString = localStorage.getItem(superKey);
