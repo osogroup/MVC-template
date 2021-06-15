@@ -32,22 +32,19 @@ function showChange() {
 // the value in the box is changed, this function will update the localStorage
 function anyChange(str) {
   var myStr = [];
-  var myObj = {};
   var superKey = objType+ '_' +objItemID;
   // console.log("This is the str:", str);
 
   var objKey = str.id.replace(superKey+'_', '');
   // console.log("This is objKey:", objKey);
 
-  var myStr = localStorage.getItem(superKey);
   console.log("This is myStr:", myStr);
   if (myStr == null || myStr == "") {
     console.log("myStr is empty");
-    var myObj = myStr;
   }
   else {
     console.log("myStr is NOT empty");
-    var myObj = JSON.parse(myStr);
+    myStr = JSON.parse(localStorage.getItem(superKey));
   }
   console.log("myStr is now myObj...");
   var changeValue = str.value;
