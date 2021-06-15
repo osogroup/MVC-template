@@ -389,18 +389,24 @@ function addFunction(addBtn) {
   tagList = localObj[opt];
   console.log("This is tagList: ", tagList);
 
-  if (tagList.includes(Number(elementVal))) {
-    console.log("tagList already includes", elementVal);
+  if(tagList == null || tagList == "") {
+    tagList.push(elementVal);
   }
   else {
-    tagList.push(Number(elementVal));
-    tagList.sort();
-    JSON.stringify(tagList);
-  //   localObj.tags = tagList;
-  //   console.log("This is the localObj with updated tags: ", localObj);
-  //   localStorage.setItem(objTypeID, JSON.stringify(localObj));
+
+    if (tagList.includes(Number(elementVal))) {
+      console.log("tagList already includes", elementVal);
+    }
+    else {
+      tagList.push(Number(elementVal));
+      tagList.sort();
+      JSON.stringify(tagList);
+      //   localObj.tags = tagList;
+      //   console.log("This is the localObj with updated tags: ", localObj);
+      //   localStorage.setItem(objTypeID, JSON.stringify(localObj));
+    }
+    // location.reload();
   }
-  // location.reload();
 }
 
 
