@@ -1,12 +1,23 @@
 .hidden {
-    display: none;
-  }
-  
+  display: none;
+}
 label {
   margin-bottom: 10px;
   display: block;
 }
-  
 .alignRight {
   text-align: right;
+}
+#header {
+  background-color: black;
+}
+.headerLinks {
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-decoration: none;
+  font-size: 200%;
+  padding: 0px 0px 0px 15px;
+}
+#imageSpacing {
+  padding: 15px 0px 0px 15px;
 }
