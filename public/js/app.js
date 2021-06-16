@@ -49,7 +49,8 @@ const updateUI = async () => {
 
   // add logic to show/hide gated content after authentication
   if (isAuthenticated) {
-    document.getElementById("gated-content").classList.remove("hidden");
+    document.getElementById("gated-content-1").classList.remove("hidden");
+    document.getElementById("gated-content-2").classList.add("hidden");
 
     document.getElementById("ipt-access-token").innerHTML = await auth0.getTokenSilently();
 
@@ -57,7 +58,9 @@ const updateUI = async () => {
 
   }
   else {
-    document.getElementById("gated-content").classList.add("hidden");
+    document.getElementById("gated-content-1").classList.add("hidden");
+    document.getElementById("gated-content-2").classList.remove("hidden");
+    
   }
 };
 

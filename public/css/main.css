@@ -2,7 +2,11 @@
     display: none;
   }
   
-  label {
-    margin-bottom: 10px;
-    display: block;
-  }
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+  
+.alignRight {
+  text-align: right;
+}
