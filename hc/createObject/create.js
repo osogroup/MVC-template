@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  const fs = require('fs');
   if (objType == null)
   alert("add '?type=task' to the URL");
   
@@ -7,6 +6,7 @@ $(document).ready(function(){
   // createObjectList();
 });
 
+// const fs = require('fs');
 
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
