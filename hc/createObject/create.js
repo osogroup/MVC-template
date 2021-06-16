@@ -433,6 +433,7 @@ function removeFunction(val) { // val is the entire remove button
   
   var wholeRow = val.parentNode;
   console.log("This is wholeRow:",wholeRow);
+  wholeRow.remove();
 
 
   // =======>>>>> editing localStorage
