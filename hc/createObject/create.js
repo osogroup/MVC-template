@@ -435,7 +435,7 @@ function removeFunction(val) { // val is the entire remove button
   wholeRow.remove();
 
 
-  // =======>>>>> editing localStorage <<<<<=======
+  //    =======>>>>> editing localStorage <<<<<=======
 
 
   // removing all the text from the remove button's id
