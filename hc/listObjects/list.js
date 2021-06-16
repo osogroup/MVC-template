@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  $('#everything').innerHTML = '<p>list.js working</p>';
   createHTML();
 });
 
