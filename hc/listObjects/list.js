@@ -2,6 +2,8 @@ $(document).ready(function () {
   createHTML();
 });
 
+$('#TitleOfList').append('<p>list.js working</p>');
+
 // gets all the Objects/Arrays from objectConfig.json and returns them
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response => { return response.json(); });
