@@ -426,8 +426,6 @@ function addFunction(addBtn) {
 function removeFunction(val) { // val is the entire remove button
   console.log("This is val:",val);
   var objTypeID = objType+'_'+objItemID;
-  var addBtn = document.getElementsByClassName('addButton');
-  console.log("This is addBtn:", addBtn);
 
   // removing all the text from the remove button's id
   var valIDNum = val.id.replace(/remvBtn_/, '');
