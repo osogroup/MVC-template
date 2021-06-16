@@ -428,15 +428,14 @@ function removeFunction(val) { // val is the entire remove button
   var objTypeID = objType+'_'+objItemID;
 
 
-  // =======>>>>> removing div from document
+  // =======>>>>> removing div from document <<<<<=======
 
   
   var wholeRow = val.parentNode;
-  console.log("This is wholeRow:",wholeRow);
   wholeRow.remove();
 
 
-  // =======>>>>> editing localStorage
+  // =======>>>>> editing localStorage <<<<<=======
 
 
   // removing all the text from the remove button's id
