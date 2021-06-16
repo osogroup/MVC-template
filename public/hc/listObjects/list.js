@@ -5,14 +5,14 @@ $(document).ready(function () {
 
 // gets all the Objects/Arrays from objectConfig.json and returns them
 const configData = async () => {
-  var listConfig = await fetch("/tempData/objectConfig.json").then(response => { return response.json(); });
+  var listConfig = await fetch("../tempData/objectConfig.json").then(response => { return response.json(); });
   // console.log("configData output ", listConfig);
   return listConfig;
 }
 
 // gets all the Objects/Arrays from listOfObjects.json and returns them
 const tempData = async () => {
-  var objVars = await fetch("/tempData/listOfObjects.json").then(response => { return response.json(); });
+  var objVars = await fetch("../tempData/listOfObjects.json").then(response => { return response.json(); });
   // console.log("tempData output ", objVars);
   return objVars;
 }
@@ -32,7 +32,7 @@ const generateID = async () => {
     for(const [idKey, idValue] of Object.entries(objTypeData)) {
       i++;
     }
-    // console.log("This is i: ", i);
+    console.log("This is i: ", i);
     return i;
   }
 }
@@ -57,11 +57,11 @@ const createHTML = async () => {
                     + '<div class="row">'
                       + '<div class="col-12">'
                         + '<p id="header">'
-                          + '<img id="imageSpacing" src="../images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
+                          + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
 
   // creating the links for the header
   for (const [headerKey, headerValue] of Object.entries(data)) {
-    headerHTML            +='<a class="headerLinks" href="?type=' + headerKey + '">' + headerKey.toUpperCase() + '</a>';
+    headerHTML            +='<a class="headerLinks" href="/hc/listObjects/?type=' + headerKey + '">' + headerKey.toUpperCase() + '</a>';
   }
 
   headerHTML            +='</p>'
