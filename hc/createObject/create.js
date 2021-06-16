@@ -6,7 +6,7 @@ $(document).ready(function(){
   // createObjectList();
 });
 
-const fs = require('fs');
+// const fs = require('fs');
 
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
@@ -58,6 +58,7 @@ const createHTML = async () => {
   var configTypeData = config[objType];
   var tempKey = objType+'_'+objItemID;
   console.log("This is tempKey:",tempKey);
+  console.log("This is data:",data);
   
   var tagKeys = [];
   var tagNames = [];
