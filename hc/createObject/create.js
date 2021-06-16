@@ -358,7 +358,7 @@ function arrayList(array) {
   // closing the form tags and creating the add button
   HTMLoutput          +='</select>'
                       + '<div id="buttonSpot">'
-                      + '<input type="button" id="addButton_'+array.temp+'_'+array.value+'" value="Add" onclick="addFunction(this)"/>'
+                      + '<input type="button" id="addButton_'+array.temp+'_'+array.value+'" class="addButton" value="Add" onclick="addFunction(this)"/>'
                     + '</div>'
                   + '</fieldset>'
                 + '</form>'
@@ -426,6 +426,8 @@ function addFunction(addBtn) {
 function removeFunction(val) { // val is the entire remove button
   console.log("This is val:",val);
   var objTypeID = objType+'_'+objItemID;
+  var addBtn = document.getElementsByClassName('addButton');
+  console.log("This is addBtn:", addBtn);
 
   // removing all the text from the remove button's id
   var valIDNum = val.id.replace(/remvBtn_/, '');
