@@ -44,8 +44,8 @@ const updateUI = async () => {
   const isAuthenticated = await auth0.isAuthenticated();
   console.log("isAuthenticated?:", isAuthenticated);
 
-  document.getElementById("btn-logout").disabled = !isAuthenticated;
-  document.getElementById("btn-login").disabled = isAuthenticated;
+  document.getElementById("btn-logout").hidden = !isAuthenticated;
+  document.getElementById("btn-login").hidden = isAuthenticated;
 
   // add logic to show/hide gated content after authentication
   if (isAuthenticated) {
