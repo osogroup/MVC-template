@@ -185,7 +185,7 @@ const createHTML = async () => {
 
     // creating edit buttons
     objItems += '<div class=col-1>'
-      + '<a href="editObject/?type=' + objType + '&itemid=' + SLValue.id + '">'
+      + '<a href="../editObject/?type=' + objType + '&itemid=' + SLValue.id + '">'
       + '<button class="edit-item-btn"> Edit </button>'
       + '</a>'
       + '</div>'
