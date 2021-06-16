@@ -346,11 +346,7 @@ function arrayList(array) {
                   + '<fieldset class="minHeight">'
                     + '<legend>'+array.value+'</legend>'
                       + '<div id="outerDiv">'
-                        + '<div id="appendTo">';
-                        
-  
-
-  HTMLoutput            +='</div>'
+                        + '<div id="appendTo"></div>'
                       + '</div>'
                       + '<br><select id="'+array.temp+'_'+array.value+'" name="scripts">';
 
