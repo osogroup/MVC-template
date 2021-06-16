@@ -430,8 +430,7 @@ function removeFunction(val) { // val is the entire remove button
   // removing all the text from the remove button's id
   var keyAndIndex = val.id.replace('remvBtn_'+objTypeID+'_', ''); // tags_0/tags_1/tags_2
   var valIDNum = keyAndIndex.replace(/\D/g,''); // 0/1/2
-  var keyWithoutIndex = keyAndIndex.replace('_'+valIDNum, '');
-  console.log("This is keyWithoutIndex:",keyWithoutIndex);
+  var keyWithoutIndex = keyAndIndex.replace('_'+valIDNum, ''); // tags
   var localObj = JSON.parse(localStorage.getItem(objTypeID));
   // console.log("This is localObj: ", localObj);
   
