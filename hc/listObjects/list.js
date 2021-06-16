@@ -39,7 +39,7 @@ const generateID = async () => {
 // gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
 const createHTML = async () => {
   if (!objType) {
-    console.log("Enter '?type=task' at the end of the URL");
+    alert("Enter '?type=task' at the end of the URL");
     return;
   }
   
