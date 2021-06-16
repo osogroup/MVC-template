@@ -421,7 +421,7 @@ function addFunction(addBtn) {
 // ----------------------------------------------- Remove function -----------------------------------------------
 
 
-// removes an item from localStorage and reloads the window which regenerates the display area
+// removes an item from localStorage and from the page as well
 function removeFunction(val) { // val is the entire remove button
   console.log("This is val:",val);
   var objTypeID = objType+'_'+objItemID;
