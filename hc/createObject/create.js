@@ -431,7 +431,8 @@ function removeFunction(val) { // val is the entire remove button
   // =======>>>>> removing div from document
 
   
-  
+  var wholeRow = val.parent;
+  console.log("This is wholeRow:",wholeRow);
 
 
   // =======>>>>> editing localStorage
