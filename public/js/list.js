@@ -32,7 +32,7 @@ const generateID = async () => {
     for(const [idKey, idValue] of Object.entries(objTypeData)) {
       i++;
     }
-    console.log("This is i: ", i);
+    // console.log("This is i: ", i);
     return i;
   }
 }
