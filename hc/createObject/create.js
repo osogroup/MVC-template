@@ -443,7 +443,7 @@ function removeFunction(val) { // val is the entire remove button
   localObj.tags = localObjTags;
   console.log("This is localObj now: ", localObj);
 
-  // localStorage.setItem(objTypeID, JSON.stringify(localObj));
+  localStorage.setItem(objTypeID, JSON.stringify(localObj));
 }
 
 
