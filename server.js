@@ -1,4 +1,4 @@
-import express from 'express';
+const express = require("express");
 const jwt = require("express-jwt");
 const jwksRsa = require("jwks-rsa");
 const { join } = require("path");
