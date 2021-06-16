@@ -435,7 +435,7 @@ function removeFunction(val) { // val is the entire remove button
   // console.log("This is localObj: ", localObj);
   
   var localObjTags = localObj[keyWithoutIndex];
-  console.log("This is localObjTags: ", localObjTags);
+  // console.log("This is localObjTags: ", localObjTags);
 
   localObjTags.splice(localObjTags.indexOf(Number(valIDNum)), 1);
   console.log("This is the updated localObjTags: ", localObjTags);
