@@ -1,0 +1,18 @@
+
+{
+  "deliverable":{
+    "required":["id","name"],
+    "list":["id","name","status","tasks"],
+    "editable":["name","description", "status", "tasks"] 
+  },
+  "task":{
+    "required":["id","name"],
+    "list":["id","name","tags", "status"],
+    "editable":["name","description","tags", "status", "dueDate", "estEff"] 
+  },
+  "tags":{
+    "required":["id","name"],
+    "list":["id","name","description"],
+    "editable":["name","description"] 
+  }
+}
