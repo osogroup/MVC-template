@@ -22,15 +22,18 @@ const tempData = async () => {
 const generateID = async () => {
   var data = await tempData();
   // console.log("This is data: ", data);
-  var objTypeData = data[objType];
-  // console.log("This is objTypeData: ", objTypeData);
+  if(objType) {
 
-  var i = 0;
-  for(const [idKey, idValue] of Object.entries(objTypeData)) {
-    i++;
+    var objTypeData = data[objType];
+    // console.log("This is objTypeData: ", objTypeData);
+    
+    var i = 0;
+    for(const [idKey, idValue] of Object.entries(objTypeData)) {
+      i++;
+    }
+    console.log("This is i: ", i);
+    return i;
   }
-  console.log("This is i: ", i);
-  return i;
 }
 
 // gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
