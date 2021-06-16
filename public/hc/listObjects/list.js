@@ -98,23 +98,23 @@ const createHTML = async () => {
   // ------------------------------------------ The Input Boxes ------------------------------------------
 
   // getting config Objects and data
-  for (const [inputKey, inputValue] of Object.entries(objTypeConfig.required)) {
+  // for (const [inputKey, inputValue] of Object.entries(objTypeConfig.required)) {
 
-    // making id columns narrower to fit more things on the page
-    if (inputValue == 'id') {
-      tempColumn = col - 2;
-    } else {
-      tempColumn = col;
-    }
+  //   // making id columns narrower to fit more things on the page
+  //   if (inputValue == 'id') {
+  //     tempColumn = col - 2;
+  //   } else {
+  //     tempColumn = col;
+  //   }
 
-    // creating table inputs
-    tHeader += '<div class="col-' + tempColumn + '">'
-      + '<input type="text" id="' + objType + '-' + inputValue + '-field" placeholder="' + inputValue + '" />'
-      + '</div>';
-  }
+  //   // creating table inputs
+  //   tHeader += '<div class="col-' + tempColumn + '">'
+  //     + '<input type="text" id="' + objType + '-' + inputValue + '-field" placeholder="' + inputValue + '" />'
+  //     + '</div>';
+  // }
 
   // creating the add button HTML
-  addButtonHTML = '<div class="col-1"><button class="edit-btn">Apply</button><button class="add-btn">Add</button></div>';
+  // addButtonHTML = '<div class="col-1"><button class="edit-btn">Apply</button><button class="add-btn">Add</button></div>';
 
   // closing table input row and adding addButtonHTML to tHeader
   tHeader += addButtonHTML + '</div>';
