@@ -21,3 +21,9 @@ label {
 #imageSpacing {
   padding: 15px 0px 0px 15px;
 }
+#btn-logout {
+  border: none;
+  background-color: brown;
+  color:white;
+  padding: 10px 20px 10px 20px;
+}
