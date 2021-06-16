@@ -6,8 +6,6 @@ $(document).ready(function(){
   // createObjectList();
 });
 
-var fs = require('fs');
-
 const configData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
   // console.log("configData output ", listConfig);
