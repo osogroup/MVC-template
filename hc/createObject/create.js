@@ -427,6 +427,16 @@ function removeFunction(val) { // val is the entire remove button
   console.log("This is val:",val);
   var objTypeID = objType+'_'+objItemID;
 
+
+  // =======>>>>> removing div from document
+
+  
+  
+
+
+  // =======>>>>> editing localStorage
+
+
   // removing all the text from the remove button's id
   var keyAndIndex = val.id.replace('remvBtn_'+objTypeID+'_', ''); // tags_0/tags_1/tags_2
   var valIDNum = keyAndIndex.replace(/\D/g,''); // 0/1/2
