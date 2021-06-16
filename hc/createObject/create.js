@@ -437,11 +437,11 @@ function removeFunction(val) { // val is the entire remove button
   var localObjTags = localObj[keyWithoutIndex];
   console.log("This is localObjTags: ", localObjTags);
 
-  // localObjTags.splice(localObjTags.indexOf(Number(valIDNum)), 1);
-  // // console.log("This is the updated localObjTags: ", localObjTags);
+  localObjTags.splice(localObjTags.indexOf(Number(valIDNum)), 1);
+  console.log("This is the updated localObjTags: ", localObjTags);
 
-  // localObj.tags = localObjTags;
-  // // console.log("This is localObj now: ", localObj);
+  localObj.tags = localObjTags;
+  console.log("This is localObj now: ", localObj);
 
   // localStorage.setItem(objTypeID, JSON.stringify(localObj));
 }
