@@ -2,7 +2,7 @@ $(document).ready(function () {
   createHTML();
 });
 
-$('#TitleOfList').append('<p>list.js working</p>');
+$('#everything').append('<p>list.js working</p>');
 
 // gets all the Objects/Arrays from objectConfig.json and returns them
 const configData = async () => {
