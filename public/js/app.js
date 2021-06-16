@@ -72,6 +72,6 @@ const login = async () => {
 
 const logout = () => {
   auth0.logout({
-    returnTo: window.location.origin
+    returnTo: window.location.origin+'/?type=task'
   });
 };
