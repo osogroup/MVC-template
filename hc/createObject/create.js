@@ -437,12 +437,13 @@ function removeFunction(val) { // val is the entire remove button
   var localObjTags = localObj[keyWithoutIndex];
   // console.log("This is localObjTags: ", localObjTags);
 
+  // removing the value from the temporary array
   localObjTags.splice(localObjTags.indexOf(Number(valIDNum)), 1);
-  console.log("This is the updated localObjTags: ", localObjTags);
 
+  // setting the array that will be stringified equal to the temporary array
   localObj.tags = localObjTags;
-  console.log("This is localObj now: ", localObj);
 
+  // setting localStorage with the updated array
   localStorage.setItem(objTypeID, JSON.stringify(localObj));
 }
 
