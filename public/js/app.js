@@ -76,10 +76,10 @@ const updateUI = async () => {
     // document.getElementById("ipt-user-profile").textContent = JSON.stringify(await auth0.getUser());
   }
   else {
-    document.getElementById("gated-content-1").classList.add("hidden");
+    document.getElementById("gated-content-1").classList.remove("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.remove("hidden");
-    document.getElementById("gated-content-4").classList.add("hidden");
+    document.getElementById("gated-content-4").classList.remove("hidden");
     
   }
 };
