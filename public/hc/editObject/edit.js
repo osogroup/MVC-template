@@ -356,6 +356,7 @@ function inputFunction(params) {
     return arrayList(arrayParams);
   }
   if (params.sVal == "option") {
+    console.log("params.sVal == option");
     return selectAttribute(optParams);
   }
 }
