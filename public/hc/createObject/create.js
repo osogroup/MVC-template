@@ -361,9 +361,7 @@ function arrayList(array) {
 
   // closing the form tags and creating the add button
   HTMLoutput          +='</select>'
-                      + '<div id="buttonSpot">'
                       + '<input type="button" id="addButton_'+array.temp+'_'+array.value+'" class="addButton" value="Add" onclick="addFunction(this)"/>'
-                    + '</div>'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
