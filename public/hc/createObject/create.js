@@ -426,7 +426,7 @@ if (URLValue == 'create') {
 
   // removes an item from localStorage and from the page as well
   function removeFunction(val) { // val is the entire remove button
-    console.log("This is val:",val);
+    // console.log("This is val:",val);
     var objTypeID = objType+'_'+objItemID;
 
 
