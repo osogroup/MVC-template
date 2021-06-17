@@ -174,7 +174,7 @@ const doTheStrings = async () => {
     var HTMLoutput = '<div id="contacts">'
     + '<div class="row">'
       + '<p id="header" class="col-12">'
-        + '<img id="imageSpacing" src="editObject/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
+        + '<img id="imageSpacing" src="images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
     
     // creating the links for the header
     for(const [headerKey, headerValue] of Object.entries(data)) {
