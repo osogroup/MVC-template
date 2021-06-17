@@ -38,3 +38,6 @@ label {
 .minHeight {
   min-height: 240px;
 }
+body {
+  background-color: lightsteelblue;
+}
