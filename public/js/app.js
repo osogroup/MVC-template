@@ -54,7 +54,7 @@ const updateUI = async () => {
     document.getElementById("gated-content-3").classList.remove("hidden");
     document.getElementById("gated-content-4").classList.add("hidden");
   }
-  
+
   // if the user is logged in and on the create page all the divs except create.js's are hidden
   else if (isAuthenticated && URLValue == 'create') {  
     document.getElementById("gated-content-1").classList.add("hidden");
@@ -82,7 +82,7 @@ const updateUI = async () => {
     // document.getElementById("ipt-access-token").innerHTML = await auth0.getTokenSilently();
 
     // prints the user's information to the HTML
-    // document.getElementById("ipt-user-profile").textContent = JSON.stringify(await auth0.getUser());
+    document.getElementById("ipt-user-profile").textContent = JSON.stringify(await auth0.getUser());
   }
 
   // adds hidden to all divs except the one telling the user that they're logged out
