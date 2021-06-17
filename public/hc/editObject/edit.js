@@ -193,7 +193,9 @@ const doTheStrings = async () => {
 
     // --------------------------------------- Item Header and Inputs ---------------------------------------
 
+    
     // (((((((((((((((((((((((((((((((((((((creating item header row)))))))))))))))))))))))))))))))))))))
+
     HTMLoutput += '<div class="row">'; 
     // create HTML header and fields
     for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
