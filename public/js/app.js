@@ -44,11 +44,14 @@ const updateUI = async () => {
   const isAuthenticated = await auth0.isAuthenticated();
   console.log("isAuthenticated?:", isAuthenticated);
 
+  var name = JSON.stringify(await auth0.getUser());
+  document.getElementById("ipt-user-profile").textContent = name.nickname;
   document.getElementById("btn-logout").hidden = !isAuthenticated;
   document.getElementById("btn-login").hidden = isAuthenticated;
 
   // if the user is logged in and on the edit page all the divs except edit.js's are hidden
   if (isAuthenticated && URLValue == 'edit') {
+    
     document.getElementById("gated-content-1").classList.add("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.remove("hidden");
@@ -79,7 +82,7 @@ const updateUI = async () => {
     document.getElementById("gated-content-4").classList.add("hidden");
 
     // prints out the access token to the HTML
-    // document.getElementById("ipt-access-token").innerHTML = await auth0.getTokenSilently();
+    document.getElementById("ipt-access-token").innerHTML = await auth0.getTokenSilently();
 
     // prints the user's information to the HTML
     document.getElementById("ipt-user-profile").textContent = JSON.stringify(await auth0.getUser());
