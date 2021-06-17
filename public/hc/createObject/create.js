@@ -9,7 +9,7 @@ if (URLValue == 'create') {
 
 
 
-  // const configData = async () => {
+  const configData = async () => {
     var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
     // console.log("configData output ", listConfig);
     return listConfig;
