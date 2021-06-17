@@ -51,7 +51,8 @@ const updateUI = async () => {
   // if the user is logged in and on the edit page all the divs except edit.js's are hidden
   if (isAuthenticated && URLValue == 'edit') {
     var name = JSON.stringify(await auth0.getUser());
-    document.getElementById("ipt-user-profile").textContent = name;
+    var parsedName = JSON.parse(name);
+    document.getElementById("ipt-user-profile").textContent = parsedName;
     document.getElementById("gated-content-1").classList.add("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.remove("hidden");
