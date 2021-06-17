@@ -80,7 +80,7 @@ const createHTML = async () => {
   // for (const [key, val] of Object.entries(data)) {
 
   // displaying Object Name
-  var tHeader = inputThings + '<a href="/createObject/?type='+objType+'&itemid='+id+'"><button>Create Item</button></a><h1>' + objType + '</h1>';
+  var tHeader = inputThings + '<a href="/createObject/?type='+objType+'&itemid='+id+'&value=create"><button>Create Item</button></a><h1>' + objType + '</h1>';
 
   // creating sortable list library container 
   tHeader += '<div id="' + objType + 'Container">';
@@ -186,7 +186,7 @@ const createHTML = async () => {
 
     // creating edit buttons
     objItems += '<div class=col-1>'
-      + '<a href="../hc/editObject/?type=' + objType + '&itemid=' + SLValue.id + '">'
+      + '<a href="../hc/editObject/?type=' + objType + '&itemid=' + SLValue.id + '&value=edit">'
       + '<button class="edit-item-btn"> Edit </button>'
       + '</a>'
       + '</div>'
