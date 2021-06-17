@@ -72,7 +72,8 @@ const updateUI = async () => {
   // if the user is logged in and on the list page all the divs except list.js's are hidden
   else if (isAuthenticated && URLValue == 'list') {
     var name = JSON.stringify(await auth0.getUser());
-    document.getElementById("ipt-user-profile").textContent = name;
+    var parsedName = JSON.parse(name);
+    document.getElementById("ipt-user-profile").textContent = parsedName;
     document.getElementById("gated-content-1").classList.remove("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
