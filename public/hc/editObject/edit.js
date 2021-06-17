@@ -5,7 +5,7 @@ if (URLValue == 'edit') {
 }
 
 // pull in data from objectList.JSON and configuration JSON file 
-const configData = async () => {
+const configureData = async () => {
   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
   return listConfig;
 }
@@ -151,7 +151,7 @@ const doTheStrings = async () => {
   }
   else {
     var data = await tempData();
-    var config = await configData();
+    var config = await configureData();
     var type = await typeData();
     var objTypeData = data[objType];
     var tagTypeData = data['tags']; // objTypeData specifically for tags
