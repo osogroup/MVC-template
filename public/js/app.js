@@ -74,27 +74,11 @@ const updateUI = async () => {
 
   // if the user is logged in and on the list page all the divs except list.js's are hidden
   else if (isAuthenticated && URLValue == 'list') {
-    var capName = [];
     var name = JSON.stringify(await auth0.getUser());
     var parsedName = JSON.parse(name);
     var cap = parsedName['nickname'];
-    for (const [nameKey, nameValue] of Object.entries(cap)) {
-      console.log("This is nameKey:",nameKey);
-      console.log("This is nameValue:",nameValue);
-      capName.push(nameValue);
-    }
-    console.log("This is capName:",capName);
-    console.log("This is cap index[0]:", cap[0]);
-    var R = cap[0].toUpperCase();
-    console.log("This is R:",R);
-
-    capName.splice(0,1);
-    console.log("This is the new capName:",capName);
-    capName.unshift(R);
-    console.log("This is the final product:",capName);
-
-    // cap[] = R;
-    document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome ';
+    
+    document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome '+cap[0].toUpperCase()+cap.substring(1);
     document.getElementById("gated-content-1").classList.remove("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
