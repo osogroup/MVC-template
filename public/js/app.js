@@ -77,7 +77,7 @@ const updateUI = async () => {
     var cap = [];
     var name = JSON.stringify(await auth0.getUser());
     var parsedName = JSON.parse(name);
-    cap = JSON.stringify(parsedName['nickname']);
+    cap = parsedName['nickname'];
     for (const [nameKey, nameValue] of Object.entries(cap)) {
       console.log("This is nameKey:",nameKey);
       console.log("This is nameValue:",nameValue);
