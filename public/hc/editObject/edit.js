@@ -208,7 +208,6 @@ const doTheStrings = async () => {
       }
       else {
       HTMLoutput += '<div class="col-4 minHeight">';
-                    // + '<div class="col-12">'+headerKey+'</div>';
       }
       
       if (configTypeData.editable.includes(headerKey) == true) {
