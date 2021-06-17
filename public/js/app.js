@@ -76,7 +76,9 @@ const updateUI = async () => {
   else if (isAuthenticated && URLValue == 'list') {
     var name = JSON.stringify(await auth0.getUser());
     var parsedName = JSON.parse(name);
-    document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome '+ parsedName['nickname'];
+    var cap = JSON.stringify(parsedName['nickname']);
+    console.log("This is cap index[0]:", cap[0]);
+    document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome '+ ;
     document.getElementById("gated-content-1").classList.remove("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
