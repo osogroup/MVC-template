@@ -58,7 +58,8 @@ const updateUI = async () => {
     document.getElementById("gated-content-1").classList.add("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
-    document.getElementById("gated-content-4").classList.remove("hidden");  }
+    document.getElementById("gated-content-4").classList.remove("hidden");  
+  }
   else if (isAuthenticated) {
     document.getElementById("gated-content-1").classList.remove("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
@@ -67,7 +68,6 @@ const updateUI = async () => {
 
     // document.getElementById("ipt-access-token").innerHTML = await auth0.getTokenSilently();
     // document.getElementById("ipt-user-profile").textContent = JSON.stringify(await auth0.getUser());
-
   }
   else {
     document.getElementById("gated-content-1").classList.add("hidden");
