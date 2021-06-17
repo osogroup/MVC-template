@@ -77,7 +77,7 @@ const updateUI = async () => {
     var cap = [];
     var name = JSON.stringify(await auth0.getUser());
     var parsedName = JSON.parse(name);
-     cap = parsedName['nickname'];
+    cap = JSON.stringify(parsedName['nickname']);
     console.log("This is cap index[0]:", cap[0]);
     var R = cap[0].toUpperCase();
     console.log("This is r:",R);
