@@ -319,51 +319,51 @@ const doTheStrings = async () => {
 
 
 // takes the inpType and sends new parameters to the proper function
-function myInputFunction(params) {
-  // console.log("params.sVal is",params.sVal);
+function myInputFunction(myParams) {
+  // console.log("myParams.sVal is",myParams.sVal);
   var newParams = {
-    newHKey : params.hKey,
-    newHVal : params.hVal
+    newHKey : myParams.hKey,
+    newHVal : myParams.hVal
   };
   var arrayParams = {
-    newHKey : params.hKey,
-    newHVal : params.hVal,
-    newScripts : params.scripts,
-    newFields : params.fields,
-    newNames: params.names,
-    newData : params.data
+    newHKey : myParams.hKey,
+    newHVal : myParams.hVal,
+    newScripts : myParams.scripts,
+    newFields : myParams.fields,
+    newNames: myParams.names,
+    newData : myParams.data
   };
   var optParams = {
-    newHKey : params.hKey,
-    newHVal : params.hVal,
-    newStatOpts : params.statOpts,
-    newFields : params.fields
+    newHKey : myParams.hKey,
+    newHVal : myParams.hVal,
+    newStatOpts : myParams.statOpts,
+    newFields : myParams.fields
   };
 
   // options: arrayOfOptions, // 0,1
 
-  if (params.sVal == "text") {
-    console.log("params.sVal == text");
+  if (myParams.sVal == "text") {
+    console.log("myParams.sVal == text");
     return textAttribute(newParams);
   }
-  if (params.sVal == "textarea") {
-    console.log("params.sVal == textarea");
+  if (myParams.sVal == "textarea") {
+    console.log("myParams.sVal == textarea");
     return textareaAttribute(newParams);
   }
-  if (params.sVal == "number") {
-    console.log("params.sVal == number");
+  if (myParams.sVal == "number") {
+    console.log("myParams.sVal == number");
     return numberAttribute(newParams);
   }
-  if (params.sVal == "date") {
-    console.log("params.sVal == date");
+  if (myParams.sVal == "date") {
+    console.log("myParams.sVal == date");
     return calendarAttribute(newParams);
   }
-  if (params.sVal == "array") {
-    console.log("params.sVal == array");
+  if (myParams.sVal == "array") {
+    console.log("myParams.sVal == array");
     return arrayList(arrayParams);
   }
-  if (params.sVal == "option") {
-    console.log("params.sVal == option");
+  if (myParams.sVal == "option") {
+    console.log("myParams.sVal == option");
     return selectAttribute(optParams);
   }
 }
