@@ -30,7 +30,7 @@ if (URLValue == 'create') {
   }
 
   // function that is linked to the oninput attribute in the input box, every time
-  // the value in the box is changed, this function will update the localStorage
+  // the value in the input is changed, this function will update the localStorage
   function anyChange(str) { // entire input tag
     var myStr = [];
     var myObj = {};
