@@ -1,31 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>SPA SDK Sample</title>
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,100&family=Quicksand:wght@500&display=swap" rel="stylesheet"/>
+    <script src="/js/modernizr-3.11.2.min.js"></script>
+
+    <!-- Slim Menu  -->
+    <link rel="stylesheet" type="text/css" href="/js/slimmenu/dist/css/slimmenu.min.css" />
+    <!-- Simple Grid CSS -->
+    <link rel="stylesheet" href="/js/simple_grid/simple-grid.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- List JS -->
+    <script src="js/list.min.js"></script>
+
+    <script>
+      window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+      ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <!-- <script data-main="scripts/app" src="scripts/require.js"></script> -->
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      var objType = urlParams.get('type');
+      var objItemID = urlParams.get('itemid');
+      var URLValue = urlParams.get('value');
+    </script>
   </head>
 
   <body>
-    <h2>SPA Authentication Sample</h2>
-    <p>Welcome to our page!</p>
-    <button id="btn-login" disabled="true" onclick="login()">Log in</button>
-    <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
+    <p class="alignRight">
+      <button id="btn-login" hidden="true" onclick="login()">Log in</button>
+      <button id="btn-logout" hidden="true" onclick="logout()">Log out</button>
+    </p>
+    
+    <div class="hidden" id="gated-content-1">
+      <div id="ipt-user-profile1" style="font-size:larger;"></div>
+      <div id="TitleOfList"></div>
+    </div>
+    <div class="hidden" id="gated-content-2">
+      <h2>Logged Out...</h2>
+    </div>
+    <div class="hidden" id="gated-content-3">
+      <div id="ipt-user-profile3" style="font-size:larger;"></div>
+      <div id="HTMLdiv"></div>
+    </div>
+    <div class="hidden" id="gated-content-4">
+      <div id="ipt-user-profile4" style="font-size:larger;"></div>
+      <div id="everything"></div>
+    </div>
+
+    <!-- <label>
+      Access token:
+      <pre id="ipt-access-token"></pre>
+    </label>
+    <label>
+      User profile:
+      <pre id="ipt-user-profile"></pre>
+    </label> -->
     <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
     <script src="js/app.js"></script>
-    <div class="hidden" id="gated-content">
-      <p>
-        You're seeing this content because you're currently
-        <strong>logged in</strong>.
-      </p>
-      <label>
-        Access token:
-        <pre id="ipt-access-token"></pre>
-      </label>
-      <label>
-        User profile:
-        <pre id="ipt-user-profile"></pre>
-      </label>
-    </div>  
+    <script src="hc/listObjects/list.js"></script>
+    <script src="hc/editObject/edit.js"></script>
+    <script src="hc/createObject/create.js"></script>
   </body>
 </html>

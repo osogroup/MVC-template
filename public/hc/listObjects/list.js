@@ -1,18 +1,18 @@
 $(document).ready(function () {
-  createHTML();
+  HTMLGenerate();
 });
 
 
 // gets all the Objects/Arrays from objectConfig.json and returns them
 const configData = async () => {
-  var listConfig = await fetch("../tempData/objectConfig.json").then(response => { return response.json(); });
+  var listConfig = await fetch("/tempData/objectConfig.json").then(response => { return response.json(); });
   // console.log("configData output ", listConfig);
   return listConfig;
 }
 
 // gets all the Objects/Arrays from listOfObjects.json and returns them
 const tempData = async () => {
-  var objVars = await fetch("../tempData/listOfObjects.json").then(response => { return response.json(); });
+  var objVars = await fetch("/tempData/listOfObjects.json").then(response => { return response.json(); });
   // console.log("tempData output ", objVars);
   return objVars;
 }
@@ -32,19 +32,19 @@ const generateID = async () => {
     for(const [idKey, idValue] of Object.entries(objTypeData)) {
       i++;
     }
-    console.log("This is i: ", i);
+    // console.log("This is i: ", i);
     return i;
   }
 }
 
 // gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
-const createHTML = async () => {
+const HTMLGenerate = async () => {
   if (!objType) {
     alert("Enter '?type=task' at the end of the URL");
     return;
   }
   
-  console.log("Entering createHTML()");
+  console.log("Entering HTMLGenerate()");
   var data = await tempData();
   var config = await configData();
   var id = await generateID();
@@ -55,22 +55,20 @@ const createHTML = async () => {
 
   var headerHTML  = '<div id="contacts">'
                     + '<div class="row">'
-                      + '<div class="col-12">'
-                        + '<p id="header">'
-                          + '<img id="imageSpacing" src="MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
+                      + '<p id="header">'
+                        + '<img id="imageSpacing" src="/images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
 
   // creating the links for the header
   for (const [headerKey, headerValue] of Object.entries(data)) {
-    headerHTML            +='<a class="headerLinks" href="/hc/listObjects/?type=' + headerKey + '">' + headerKey.toUpperCase() + '</a>';
+    headerHTML          +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + headerKey.toUpperCase() + '</a>';
   }
 
-  headerHTML            +='</p>'
-                      + '</div>'
+  headerHTML          +='</p>'
                     + '<h1>OAS Object List</h1>'
                   + '</div>';
   $('#TitleOfList').append(headerHTML);
 
-  // console.log("objType in createHTML() ", objType);
+  // console.log("objType in HTMLGenerate() ", objType);
 
   // creating object row
   var inputThings = '<div class="row hacker-list">'
@@ -80,7 +78,7 @@ const createHTML = async () => {
   // for (const [key, val] of Object.entries(data)) {
 
   // displaying Object Name
-  var tHeader = inputThings + '<a href="../createObject/?type='+objType+'&itemid='+id+'"><button>Create Item</button></a><h1>' + objType + '</h1>';
+  var tHeader = inputThings + '<a href="/?type='+objType+'&itemid='+id+'&value=create"><button>Create Item</button></a><h1>' + objType + '</h1>';
 
   // creating sortable list library container 
   tHeader += '<div id="' + objType + 'Container">';
@@ -98,27 +96,28 @@ const createHTML = async () => {
   // ------------------------------------------ The Input Boxes ------------------------------------------
 
   // getting config Objects and data
-  for (const [inputKey, inputValue] of Object.entries(objTypeConfig.required)) {
+  // for (const [inputKey, inputValue] of Object.entries(objTypeConfig.required)) {
 
-    // making id columns narrower to fit more things on the page
-    if (inputValue == 'id') {
-      tempColumn = col - 2;
-    } else {
-      tempColumn = col;
-    }
+  //   // making id columns narrower to fit more things on the page
+  //   if (inputValue == 'id') {
+  //     tempColumn = col - 2;
+  //   } else {
+  //     tempColumn = col;
+  //   }
 
-    // creating table inputs
-    tHeader += '<div class="col-' + tempColumn + '">'
-      + '<input type="text" id="' + objType + '-' + inputValue + '-field" placeholder="' + inputValue + '" />'
-      + '</div>';
-  }
+  //   // creating table inputs
+  //   tHeader += '<div class="col-' + tempColumn + '">'
+  //     + '<input type="text" id="' + objType + '-' + inputValue + '-field" placeholder="' + inputValue + '" />'
+  //     + '</div>';
+  // }
 
   // creating the add button HTML
-  addButtonHTML = '<div class="col-1"><button class="edit-btn">Apply</button><button class="add-btn">Add</button></div>';
+  // addButtonHTML = '<div class="col-1"><button class="edit-btn">Apply</button><button class="add-btn">Add</button></div>';
+
+  // tHeader += addButtonHTML + '</div>';
 
   // closing table input row and adding addButtonHTML to tHeader
-  tHeader += addButtonHTML + '</div>';
-
+  tHeader += '</div>';
 
   // ------------------------------------------ The Search Box ------------------------------------------
 
@@ -185,7 +184,7 @@ const createHTML = async () => {
 
     // creating edit buttons
     objItems += '<div class=col-1>'
-      + '<a href="/hc/editObject/?type=' + objType + '&itemid=' + SLValue.id + '">'
+      + '<a href="/?type=' + objType + '&itemid=' + SLValue.id + '&value=edit">'
       + '<button class="edit-item-btn"> Edit </button>'
       + '</a>'
       + '</div>'
@@ -322,5 +321,5 @@ const createHTML = async () => {
 
   // Exiting the last forOf loop
   // }
-  console.log("Exiting createHTML(), Buttons ready..");
+  console.log("Exiting HTMLGenerate(), Buttons ready..");
 }

@@ -1,0 +1,17 @@
+#header {
+  background-color: black;
+}
+.headerLinks {
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-decoration: none;
+  font-size: 200%;
+  padding: 0px 0px 0px 20px;
+  align-items: center;
+}
+#imageSpacing {
+  padding: 15px 0px 0px 15px;
+}
+.row .minHeight {
+  min-height: 240px;
+}

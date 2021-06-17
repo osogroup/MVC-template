@@ -42,33 +42,83 @@ window.onload = async () => {
 
 const updateUI = async () => {
   const isAuthenticated = await auth0.isAuthenticated();
-  console.log("isAuthenticated?:", isAuthenticated);
+  // console.log("isAuthenticated?:", isAuthenticated);
 
-  document.getElementById("btn-logout").disabled = !isAuthenticated;
-  document.getElementById("btn-login").disabled = isAuthenticated;
 
-  // add logic to show/hide gated content after authentication
-  if (isAuthenticated) {
-    document.getElementById("gated-content").classList.remove("hidden");
+  document.getElementById("btn-logout").hidden = !isAuthenticated;
+  document.getElementById("btn-login").hidden = isAuthenticated;
 
-    document.getElementById("ipt-access-token").innerHTML = await auth0.getTokenSilently();
-
-    document.getElementById("ipt-user-profile").textContent = JSON.stringify(await auth0.getUser());
-
+  // if the user is logged in and on the edit page all the divs except edit.js's are hidden
+  if (isAuthenticated && URLValue == 'edit') {
+    var name = JSON.stringify(await auth0.getUser());
+    var parsedName = JSON.parse(name);
+    document.getElementById("ipt-user-profile3").textContent = 'Logged in...Welcome '+ parsedName['nickname'];
+    document.getElementById("gated-content-1").classList.add("hidden");
+    document.getElementById("gated-content-2").classList.add("hidden");
+    document.getElementById("gated-content-3").classList.remove("hidden");
+    document.getElementById("gated-content-4").classList.add("hidden");
   }
+
+  // if the user is logged in and on the create page all the divs except create.js's are hidden
+  else if (isAuthenticated && URLValue == 'create') {  
+    var name = JSON.stringify(await auth0.getUser());
+    var parsedName = JSON.parse(name);
+    document.getElementById("ipt-user-profile4").textContent = 'Logged in...Welcome '+ parsedName['nickname'];
+    document.getElementById("gated-content-1").classList.add("hidden");
+    document.getElementById("gated-content-2").classList.add("hidden");
+    document.getElementById("gated-content-3").classList.add("hidden");
+    document.getElementById("gated-content-4").classList.remove("hidden");  
+  }
+
+  // if the user is logged in and on the list page all the divs except list.js's are hidden
+  else if (isAuthenticated && URLValue == 'list') {
+    var name = JSON.stringify(await auth0.getUser());
+    var parsedName = JSON.parse(name);
+    document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome '+ parsedName['nickname'];
+    document.getElementById("gated-content-1").classList.remove("hidden");
+    document.getElementById("gated-content-2").classList.add("hidden");
+    document.getElementById("gated-content-3").classList.add("hidden");
+    document.getElementById("gated-content-4").classList.add("hidden");
+  }
+
+  // this case is just for when the user logs in and URLValue is not specified
+  else if (isAuthenticated) {
+    var name = JSON.stringify(await auth0.getUser());
+    var parsedName = JSON.parse(name);
+    document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome '+ parsedName['nickname'];
+    document.getElementById("gated-content-1").classList.remove("hidden");
+    document.getElementById("gated-content-2").classList.add("hidden");
+    document.getElementById("gated-content-3").classList.add("hidden");
+    document.getElementById("gated-content-4").classList.add("hidden");
+
+    // prints out the access token to the HTML
+    // document.getElementById("ipt-access-token").innerHTML = await auth0.getTokenSilently();
+
+    // prints the user's information to the HTML
+    // document.getElementById("ipt-user-profile").textContent = JSON.stringify(await auth0.getUser());
+  }
+
+  // adds hidden to all divs except the one telling the user that they're logged out
   else {
-    document.getElementById("gated-content").classList.add("hidden");
+    document.getElementById("gated-content-1").classList.add("hidden");
+    document.getElementById("gated-content-2").classList.remove("hidden");
+    document.getElementById("gated-content-3").classList.add("hidden");
+    document.getElementById("gated-content-4").classList.add("hidden");
   }
 };
 
 const login = async () => {
   await auth0.loginWithRedirect({
-    redirect_uri: window.location.origin // 'http://oso.group.s3-website-us-east-1.amazonaws.com/hc/listObjects/?type=task'
+    redirect_uri: window.location.origin+'/?type=task'
   });
 };
 
 const logout = () => {
   auth0.logout({
-    returnTo: window.location.origin
+    returnTo: window.location.origin+'/?type=task'
   });
 };
+
+function clr() {
+  localStorage.clear();
+}
