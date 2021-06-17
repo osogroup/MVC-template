@@ -6,11 +6,11 @@ $(document).ready(function(){
   // createObjectList();
 });
 
-const configData = async () => {
-  var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
-  // console.log("configData output ", listConfig);
-  return listConfig;
-}
+// const configData = async () => {
+//   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
+//   // console.log("configData output ", listConfig);
+//   return listConfig;
+// }
 
 // gets all the Objects/Arrays from listOfObjects.json and returns them
 const listData = async () => {
