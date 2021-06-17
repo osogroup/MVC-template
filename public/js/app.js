@@ -95,3 +95,7 @@ const logout = () => {
     returnTo: window.location.origin+'/?type=task'
   });
 };
+
+function clr() {
+  localStorage.clear();
+}
