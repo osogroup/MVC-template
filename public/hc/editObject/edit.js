@@ -319,6 +319,7 @@ const doTheStrings = async () => {
 
 // takes the inpType and sends new parameters to the proper function
 function inputFunction(params) {
+  console.log("params.sVal is",params.sVal);
   var newParams = {
     newHKey : params.hKey,
     newHVal : params.hVal
