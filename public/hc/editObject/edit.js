@@ -12,10 +12,10 @@ const configData = async () => {
   
 
 // gets all the Objects/Arrays from listOfObjects.json and returns them
-// const tempData = async () => {
-//   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
-//   return objVars;
-// }
+const tempData = async () => {
+  var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
+  return objVars;
+}
 
 
 // gets data from GitHub according to the URL's type
