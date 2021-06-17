@@ -60,15 +60,6 @@ if (URLValue == 'edit') {
   }
 
 
-  // -------------------------------------------- Clear localStorage --------------------------------------------
-
-
-  // type "clr()" in the console or use this function within another to clear localStorage
-  // function clr() {
-  //   localStorage.clear();
-  // }
-
-
   // -------------------------------------------- Check localStorage --------------------------------------------
 
 
