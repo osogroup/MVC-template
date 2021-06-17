@@ -9,7 +9,7 @@ if (URLValue == 'edit') {
     var listConfig = await fetch("tempData/objectConfig.json").then(response=>{return response.json();});
     return listConfig;
   }
-    
+
 
   // gets all the Objects/Arrays from listOfObjects.json and returns them
   const temporaryData = async () => {
@@ -64,9 +64,9 @@ if (URLValue == 'edit') {
 
 
   // type "clr()" in the console or use this function within another to clear localStorage
-  function clr() {
-    localStorage.clear();
-  }
+  // function clr() {
+  //   localStorage.clear();
+  // }
 
 
   // -------------------------------------------- Check localStorage --------------------------------------------
