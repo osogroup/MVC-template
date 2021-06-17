@@ -50,7 +50,7 @@ const updateUI = async () => {
 
   // if the user is logged in and on the edit page all the divs except edit.js's are hidden
   if (isAuthenticated && URLValue == 'edit') {
-    var name = await auth0.getUser();
+    var name = JSON.parse(await auth0.getUser());
     document.getElementById("ipt-user-profile").textContent = name;
     document.getElementById("gated-content-1").classList.add("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
@@ -60,7 +60,7 @@ const updateUI = async () => {
 
   // if the user is logged in and on the create page all the divs except create.js's are hidden
   else if (isAuthenticated && URLValue == 'create') {  
-    var name = await auth0.getUser();
+    var name = JSON.parse(await auth0.getUser());
     document.getElementById("ipt-user-profile").textContent = name;
     document.getElementById("gated-content-1").classList.add("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
@@ -70,7 +70,7 @@ const updateUI = async () => {
 
   // if the user is logged in and on the list page all the divs except list.js's are hidden
   else if (isAuthenticated && URLValue == 'list') {
-    var name = await auth0.getUser();
+    var name = JSON.parse(await auth0.getUser());
     document.getElementById("ipt-user-profile").textContent = name;
     document.getElementById("gated-content-1").classList.remove("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
@@ -80,7 +80,7 @@ const updateUI = async () => {
 
   // this case is just for when the user logs in and URLValue is not specified
   else if (isAuthenticated) {
-    var name = await auth0.getUser();
+    var name = JSON.parse(await auth0.getUser());
     document.getElementById("ipt-user-profile").textContent = name;
     document.getElementById("gated-content-1").classList.remove("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
