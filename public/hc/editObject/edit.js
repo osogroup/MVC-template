@@ -6,21 +6,21 @@ if (URLValue == 'edit') {
 
 // pull in data from objectList.JSON and configuration JSON file 
 const configureData = async () => {
-  var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
+  var listConfig = await fetch("../temporaryData/objectConfig.json").then(response=>{return response.json();});
   return listConfig;
 }
   
 
 // gets all the Objects/Arrays from listOfObjects.json and returns them
-const tempData = async () => {
-  var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
+const temporaryData = async () => {
+  var objVars = await fetch("../temporaryData/listOfObjects.json").then(response=>{return response.json();});
   return objVars;
 }
 
 
 // gets data from GitHub according to the URL's type
 const typeData = async () => {
-  var typeVars = await fetch("../tempData/"+objType+".json").then(response=>{return response.json();});
+  var typeVars = await fetch("../temporaryData/"+objType+".json").then(response=>{return response.json();});
   return typeVars;
 }
 
@@ -150,7 +150,7 @@ const doTheStrings = async () => {
     alert('Enter "?type=task&itemid=0" at the end of the current URL');
   }
   else {
-    var data = await tempData();
+    var data = await temporaryData();
     var config = await configureData();
     var type = await typeData();
     var objTypeData = data[objType];
