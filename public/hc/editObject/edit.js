@@ -19,10 +19,10 @@ const temporaryData = async () => {
 
 
 // gets data from GitHub according to the URL's type
-// const typeData = async () => {
-//   var typeVars = await fetch("tempData/"+objType+".json").then(response=>{return response.json();});
-//   return typeVars;
-// }
+const typeData = async () => {
+  var typeVars = await fetch("tempData/"+objType+".json").then(response=>{return response.json();});
+  return typeVars;
+}
 
 
 // function that is called when the Update button is pressed, it displays 
