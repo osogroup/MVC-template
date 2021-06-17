@@ -78,7 +78,7 @@ const updateUI = async () => {
     var parsedName = JSON.parse(name);
     var cap = JSON.stringify(parsedName['nickname']);
     console.log("This is cap index[0]:", cap[1]);
-    var r = cap.toUpperCase();
+    var r = cap[1].toUpperCase();
     console.log("This is r:",r);
     cap[1] = r;
     console.log("This is the new cap:",cap);
