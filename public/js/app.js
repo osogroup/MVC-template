@@ -123,6 +123,7 @@ const logout = () => {
   });
 };
 
+// clears the localStorage
 function clr() {
   localStorage.clear();
 }
