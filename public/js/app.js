@@ -78,9 +78,9 @@ const updateUI = async () => {
     var parsedName = JSON.parse(name);
     var cap = JSON.stringify(parsedName['nickname']);
     console.log("This is cap index[0]:", cap[1]);
-    var r = cap[1].toUpperCase();
-    console.log("This is r:",r);
-    cap[1] = r;
+    var R = cap[1].toUpperCase();
+    console.log("This is r:",R);
+    cap[1] = R;
     console.log("This is the new cap:",cap);
     document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome ';
     document.getElementById("gated-content-1").classList.remove("hidden");
