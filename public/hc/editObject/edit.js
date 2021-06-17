@@ -18,7 +18,7 @@ const temporaryData = async () => {
 }
 
 
-// gets data from GitHub according to the URL's type
+// gets data from JSON file according to the URL's type
 const typeData = async () => {
   var typeVars = await fetch("tempData/"+objType+".json").then(response=>{return response.json();});
   return typeVars;
