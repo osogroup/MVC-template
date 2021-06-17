@@ -78,7 +78,7 @@ const HTMLGenerate = async () => {
   // for (const [key, val] of Object.entries(data)) {
 
   // displaying Object Name
-  var tHeader = inputThings + '<a href="/?type='+objType+'&itemid='+id+'&value=create"><button>Create Item</button></a><h1>' + objType + '</h1>';
+  var tHeader = inputThings + '<a href="/?type='+objType+'&itemid='+id+'&value=create"><button style="border-radius:10px;">Create Item</button></a><h1>' + objType + '</h1>';
 
   // creating sortable list library container 
   tHeader += '<div id="' + objType + 'Container">';
@@ -124,7 +124,7 @@ const HTMLGenerate = async () => {
   // creating the search box and designating its own row
   var searchVariable = '<div class="searchBox row">'
     + '<div class="col-4">'
-    + '<input class="search" placeholder="Search"/>'
+    + '<input class="search" style="border-radius:10px;" placeholder="Search"/>'
     + '</div>'
     + '</div>';
 
@@ -185,11 +185,11 @@ const HTMLGenerate = async () => {
     // creating edit buttons
     objItems += '<div class=col-1>'
       + '<a href="/?type=' + objType + '&itemid=' + SLValue.id + '&value=edit">'
-      + '<button class="edit-item-btn"> Edit </button>'
+      + '<button class="edit-item-btn" style="border-radius:10px;"> Edit </button>'
       + '</a>'
       + '</div>'
       + '<div class=col-1>'
-      + '<button class="remove-item-btn"> Remove </button>'
+      + '<button class="remove-item-btn" style="border-radius:10px;"> Remove </button>'
       + '</div>';
 
     // closing object item row

@@ -169,7 +169,7 @@ if (URLValue == 'create') {
     HTMLoutput  +='</div>'
                 + '<div class="row">'
                   + '<div class="col-10"></div>'
-                  + '<div class="col-2"><button onclick="displayStorage()">Create</button></div>'
+                  + '<div class="col-2"><button style="border-radius:10px;" onclick="displayStorage()">Create</button></div>'
                 + '<div>';
 
     $('#everything').append(HTMLoutput);
@@ -236,7 +236,7 @@ if (URLValue == 'create') {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+text.value+'</legend>'
-                      + '<input type="text" id="'+text.temp+'_'+text.value+'" class="col-11" name="" placeholder="'+text.placeholder+'" oninput="anyChange(this)">' //onchange="showChange()"
+                      + '<input type="text" id="'+text.temp+'_'+text.value+'" class="col-11" name="" style="border-radius:10px;" placeholder="'+text.placeholder+'" oninput="anyChange(this)">' //onchange="showChange()"
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
@@ -255,7 +255,7 @@ if (URLValue == 'create') {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+textarea.value+'</legend>'
-                      + '<textarea id="'+textarea.temp+'_'+textarea.value+'" class="textareaInput" placeholder="'+textarea.placeholder+'" rows="3" cols="22" oninput="anyChange(this)"></textarea>'
+                      + '<textarea id="'+textarea.temp+'_'+textarea.value+'" class="textareaInput" style="border-radius:10px;" placeholder="'+textarea.placeholder+'" rows="3" cols="22" oninput="anyChange(this)"></textarea>'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
@@ -274,7 +274,7 @@ if (URLValue == 'create') {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+num.value+'</legend>'
-                      + '<input type="number" id="'+num.temp+'_'+num.value+'" class="col-11" name="" placeholder="'+num.placeholder+'" oninput="anyChange(this)" min="0" max="100">'
+                      + '<input type="number" id="'+num.temp+'_'+num.value+'" class="col-11" name="" style="border-radius:10px;" style="border-radius:10px;" placeholder="'+num.placeholder+'" oninput="anyChange(this)" min="0" max="100">'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
@@ -293,7 +293,7 @@ if (URLValue == 'create') {
                     + '<form action="#" method="post" class="demoForm">'
                       + '<fieldset class="minHeight">'
                         + '<legend>'+cal.value+'</legend>'
-                        + '<input type="date" id="'+cal.temp+'_'+cal.value+'" name="" oninput="anyChange(this)">'
+                        + '<input type="date" id="'+cal.temp+'_'+cal.value+'" name="" style="border-radius:10px;" oninput="anyChange(this)">'
                       + '</fieldset>'
                     + '</form>'
                   + '</div>';
@@ -312,7 +312,7 @@ if (URLValue == 'create') {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+sel.value+'</legend>'
-                      + '<select id="'+sel.temp+'_'+sel.value+'" name="optionDisp" value="optionDisp" oninput="selectedOption(this)">'
+                      + '<select id="'+sel.temp+'_'+sel.value+'" name="optionDisp" style="border-radius:10px;" value="optionDisp" oninput="selectedOption(this)">'
                         + '<option value="Select a Status">Select an Option</option>';
   
     for (const [varsKey, varsValue] of Object.entries(sel.options)) {
@@ -350,7 +350,7 @@ if (URLValue == 'create') {
                         + '<div id="outerDiv">'
                           + '<div id="appendTo"></div>'
                         + '</div>'
-                        + '<br><select id="'+array.temp+'_'+array.value+'" name="scripts">';
+                        + '<br><select id="'+array.temp+'_'+array.value+'" name="scripts" style="border-radius:10px;">';
 
     // creating all the options from the arrayOfOptions array in the select tag
     for (const [optionKey, optionValue] of Object.entries(array.tags)) {
@@ -359,7 +359,7 @@ if (URLValue == 'create') {
 
     // closing the form tags and creating the add button
     HTMLoutput          +='</select>'
-                        + '<input type="button" id="addButton_'+array.temp+'_'+array.value+'" class="addButton" value="Add" onclick="addFunction(this)"/>'
+                        + '<input type="button" id="addButton_'+array.temp+'_'+array.value+'" class="addButton" style="border-radius:10px;" value="Add" onclick="addFunction(this)"/>'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
@@ -392,7 +392,7 @@ if (URLValue == 'create') {
       tagList = localObj[opt];
     }
 
-    var HTMLoutput = '<div class="col-12"><div id="" class="col-10">'+select.options[elementVal].value+'</div><input type="button" id="remvBtn_'+value+'_'+elementVal+'" class="col-2" value="-" onclick="removeFunction(this)"></div>';
+    var HTMLoutput = '<div class="col-12"><div id="" class="col-10">'+select.options[elementVal].value+'</div><input type="button" id="remvBtn_'+value+'_'+elementVal+'" class="col-2" style="border-radius:10px;" value="-" onclick="removeFunction(this)"></div>';
 
     // adding the selected option value to the list based off of certain conditions
     if(tagList == null || tagList == "") {

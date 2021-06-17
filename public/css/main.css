@@ -12,7 +12,7 @@ label {
   background-color: black;
 }
 .headerLinks {
-  color: white;
+  color: lightslategrey;
   font-family: "Lucida Console", "Courier New", monospace;
   text-decoration: none;
   font-size: 200%;
@@ -38,4 +38,9 @@ label {
 .minHeight {
   min-height: 240px;
 }
-
+body {
+  background-color:lightslategrey;
+}
+.search {
+  border-radius: ;
+}

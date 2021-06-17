@@ -287,7 +287,7 @@ if (URLValue == 'edit') {
       HTMLoutput += '<div class="row">';
 
       HTMLoutput += '<div class="col-10"></div>'
-                  + '<div class="col-2"><button onclick="showValue()">Update</button></div>';
+                  + '<div class="col-2"><button style="border-radius:10px;" onclick="showValue()">Update</button></div>';
 
       HTMLoutput += '</div>';
 
@@ -370,7 +370,7 @@ if (URLValue == 'edit') {
                 + '<form action="#" method="post" class="demoForm">'
                   + '<fieldset class="minHeight">'
                     + '<legend>'+text.newHKey+'</legend>'
-                    + '<input type="text" class="col-12 textInput" id="input'+text.newHKey+'" value="'+text.newHVal+'" placeholder="'+text.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
+                    + '<input type="text" class="col-12 textInput" id="input'+text.newHKey+'" style="border-radius:10px;" value="'+text.newHVal+'" placeholder="'+text.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
                   + '</fieldset>'
                 + '</form>'
               + '</div>';
@@ -389,7 +389,7 @@ if (URLValue == 'edit') {
                     + '<form action="#" method="post" class="demoForm">'
                       + '<fieldset class="minHeight">'
                         + '<legend>'+textarea.newHKey+'</legend>'
-                        + '<textarea class="textareaInput" id="input'+textarea.newHKey+'" placeholder="'+textarea.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()" rows="6" cols="20">'+textarea.newHVal+'</textarea>'
+                        + '<textarea class="textareaInput" id="input'+textarea.newHKey+'" style="border-radius:10px;" placeholder="'+textarea.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()" rows="6" cols="20">'+textarea.newHVal+'</textarea>'
                       + '</fieldset>'
                     + '</form>'
                   + '</div>';
@@ -412,7 +412,7 @@ if (URLValue == 'edit') {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+options.newHKey+'</legend>'
-                      + '<select id="input'+options.newHKey+'" name="'+options.newHKey+'" value="optionDisp" onchange="selectedOption(this.name)">';
+                      + '<select id="input'+options.newHKey+'" name="'+options.newHKey+'" style="border-radius:10px;" value="optionDisp" onchange="selectedOption(this.name)">';
 
     for (const [varsKey, varsValue] of Object.entries(options.newStatOpts[0])) {
 
@@ -457,7 +457,7 @@ if (URLValue == 'edit') {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+num.newHKey+'</legend>'
-                      + '<input type="number" id="input'+num.newHKey+'" value="'+num.newHVal+'" placeholder="'+num.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
+                      + '<input type="number" id="input'+num.newHKey+'" value="'+num.newHVal+'" style="border-radius:10px;" placeholder="'+num.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
@@ -475,7 +475,7 @@ if (URLValue == 'edit') {
                     + '<form action="#" method="post" class="demoForm">'
                       + '<fieldset class="minHeight">'
                         + '<legend>'+date.newHKey+'</legend>'
-                        + '<input type="date" id="input'+date.newHKey+'" value="'+date.newHVal+'" name="'+date.newHKey+'" onchange="newDate(this.name)">'
+                        + '<input type="date" id="input'+date.newHKey+'" value="'+date.newHVal+'" style="border-radius:10px;" name="'+date.newHKey+'" onchange="newDate(this.name)">'
                       + '</fieldset>'
                     + '</form>'
                   + '</div>';
@@ -542,7 +542,7 @@ if (URLValue == 'edit') {
 
     // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
     for (const[arrayKey, arrayValue] of Object.entries(tagObj)) {
-      HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" value="-" onclick="removeFunction(this)"></div></div>';
+      HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" style="border-radius:10px;" value="-" onclick="removeFunction(this)"></div></div>';
       // counts up the indices if there's any preset values in the array
     }
     
@@ -550,7 +550,7 @@ if (URLValue == 'edit') {
     HTMLoutput += HTMLarrayValues
                           + '</div>'
                         + '</div>'
-                        + '<br><select id="scripts" name="scripts">';
+                        + '<br><select id="scripts" name="scripts" style="border-radius:10px;">';
 
     // creating all the options from the arrayOfOptions array in the select tag
     for (const [optionKey, optionValue] of Object.entries(array.newData.tags)) {
@@ -566,7 +566,7 @@ if (URLValue == 'edit') {
     // closing the form tags and creating the add button
     HTMLoutput          +='</select>'
                         + '<div id="buttonSpot">'
-                        + '<input type="button" id="showTxt" value="Add" onclick="addFunction()"/>'
+                        + '<input type="button" id="showTxt" value="Add" style="border-radius:10px;" onclick="addFunction()"/>'
                       + '</div>'
                     + '</fieldset>'
                   + '</form>'
