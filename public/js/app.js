@@ -88,6 +88,7 @@ const updateUI = async () => {
 
   // this case is just for when the user logs in and URLValue is not specified
   else if (isAuthenticated) {
+
     var name = JSON.stringify(await auth0.getUser());
     var parsedName = JSON.parse(name);
     var cap = parsedName['nickname'];
@@ -130,4 +131,9 @@ const logout = () => {
 // clears the localStorage
 function clr() {
   localStorage.clear();
+}
+
+function capitalizeName(name) {
+  var parsedName = JSON.parse(name);
+  var cap = parsedName['nickname'];
 }
