@@ -44,8 +44,8 @@ const updateUI = async () => {
   const isAuthenticated = await auth0.isAuthenticated();
   console.log("isAuthenticated?:", isAuthenticated);
 
-  var name = JSON.stringify(await auth0.getUser());
-  document.getElementById("ipt-user-profile").textContent = name.nickname;
+  var name = JSON.parse(await auth0.getUser());
+  document.getElementById("ipt-user-profile").textContent = name;
   document.getElementById("btn-logout").hidden = !isAuthenticated;
   document.getElementById("btn-login").hidden = isAuthenticated;
 
