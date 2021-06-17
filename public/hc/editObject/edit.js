@@ -178,7 +178,7 @@ const doTheStrings = async () => {
     
     // creating the links for the header
     for(const [headerKey, headerValue] of Object.entries(data)) {
-      HTMLoutput += '<a class="headerLinks" href="listObjects/?type='+headerKey+'">'+headerKey.toUpperCase()+'</a>';
+      HTMLoutput += '<a class="headerLinks" href="listObjects/?type='+headerKey+'&value=list">'+headerKey.toUpperCase()+'</a>';
     }
   
     // closing header row
