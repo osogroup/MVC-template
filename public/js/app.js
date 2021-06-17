@@ -77,10 +77,10 @@ const updateUI = async () => {
     var name = JSON.stringify(await auth0.getUser());
     var parsedName = JSON.parse(name);
     var cap = parsedName['nickname'];
-    console.log("This is cap index[0]:", cap[1]);
-    var R = cap[1].toUpperCase();
+    console.log("This is cap index[0]:", cap[0]);
+    var R = cap[0].toUpperCase();
     console.log("This is r:",R);
-    cap[1] = R;
+    cap[0] = R;
     console.log("This is the new cap:",cap);
     document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome ';
     document.getElementById("gated-content-1").classList.remove("hidden");
