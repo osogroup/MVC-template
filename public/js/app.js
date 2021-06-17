@@ -84,9 +84,10 @@ const updateUI = async () => {
       capName.push(nameValue);
     }
     console.log("This is capName:",capName);
-    console.log("This is cap index[0]:", cap[1]);
-    var R = cap[1].toUpperCase();
+    console.log("This is cap index[0]:", cap[0]);
+    var R = cap[0].toUpperCase();
     console.log("This is R:",R);
+
     // cap.splice(1,1);
     // cap[] = R;
     console.log("This is the new cap:",cap);
