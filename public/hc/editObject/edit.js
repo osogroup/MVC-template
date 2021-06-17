@@ -193,7 +193,7 @@ const doTheStrings = async () => {
 
     // --------------------------------------- Item Header and Inputs ---------------------------------------
 
-    
+
     // (((((((((((((((((((((((((((((((((((((creating item header row)))))))))))))))))))))))))))))))))))))
 
     HTMLoutput += '<div class="row">'; 
@@ -341,22 +341,27 @@ function inputFunction(params) {
   // options: arrayOfOptions, // 0,1
 
   if (params.sVal == "text") {
+    console.log("params.sVal == text");
     return textAttribute(newParams);
   }
   if (params.sVal == "textarea") {
+    console.log("params.sVal == textarea");
     return textareaAttribute(newParams);
   }
   if (params.sVal == "number") {
+    console.log("params.sVal == number");
     return numberAttribute(newParams);
   }
   if (params.sVal == "date") {
+    console.log("params.sVal == date");
     return calendarAttribute(newParams);
   }
   if (params.sVal == "array") {
+    console.log("params.sVal == array");
     return arrayList(arrayParams);
   }
   if (params.sVal == "option") {
-    // console.log("params.sVal == option");
+    console.log("params.sVal == option");
     return selectAttribute(optParams);
   }
 }
