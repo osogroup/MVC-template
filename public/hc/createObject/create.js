@@ -19,10 +19,10 @@ const listData = async () => {
   return objVars;
 }
 
-const typeData = async () => {
-  var objVars = await fetch("../tempData/"+objType+".json").then(response=>{return response.json();});
-  return objVars;
-}
+// const typeData = async () => {
+//   var objVars = await fetch("../tempData/"+objType+".json").then(response=>{return response.json();});
+//   return objVars;
+// }
 
 function showChange() {
   console.log(localStorage);
