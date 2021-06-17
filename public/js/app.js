@@ -48,7 +48,7 @@ const updateUI = async () => {
   document.getElementById("btn-login").hidden = isAuthenticated;
 
   // add logic to show/hide gated content after authentication
-  if (isAuthenticated) {
+  if (isAuthenticated && URLValue == 'edit') {
     document.getElementById("gated-content-1").classList.remove("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
 
