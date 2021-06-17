@@ -173,7 +173,7 @@ if (URLValue == 'edit') {
 
       var HTMLoutput = '<div id="contacts">'
       + '<div class="row">'
-        + '<p id="header" class="col-12">'
+        + '<p id="header">'
           + '<img id="imageSpacing" src="images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
       
       // creating the links for the header
