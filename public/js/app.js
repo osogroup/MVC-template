@@ -82,10 +82,10 @@ const updateUI = async () => {
     document.getElementById("gated-content-4").classList.add("hidden");
 
     // prints out the access token to the HTML
-    document.getElementById("ipt-access-token").innerHTML = await auth0.getTokenSilently();
+    // document.getElementById("ipt-access-token").innerHTML = await auth0.getTokenSilently();
 
     // prints the user's information to the HTML
-    document.getElementById("ipt-user-profile").textContent = JSON.stringify(await auth0.getUser());
+    // document.getElementById("ipt-user-profile").textContent = JSON.stringify(await auth0.getUser());
   }
 
   // adds hidden to all divs except the one telling the user that they're logged out
