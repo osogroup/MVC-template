@@ -54,6 +54,7 @@ const updateUI = async () => {
     document.getElementById("gated-content-3").classList.remove("hidden");
     document.getElementById("gated-content-4").classList.add("hidden");
   }
+  
   // if the user is logged in and on the create page all the divs except create.js's are hidden
   else if (isAuthenticated && URLValue == 'create') {  
     document.getElementById("gated-content-1").classList.add("hidden");
@@ -61,6 +62,7 @@ const updateUI = async () => {
     document.getElementById("gated-content-3").classList.add("hidden");
     document.getElementById("gated-content-4").classList.remove("hidden");  
   }
+
   // if the user is logged in and on the list page all the divs except list.js's are hidden
   else if (isAuthenticated && URLValue == 'list') {
     document.getElementById("gated-content-1").classList.remove("hidden");
@@ -68,6 +70,7 @@ const updateUI = async () => {
     document.getElementById("gated-content-3").classList.add("hidden");
     document.getElementById("gated-content-4").classList.add("hidden");
   }
+
   // this case is just for when the user logs in and URLValue is not specified
   else if (isAuthenticated) {
     document.getElementById("gated-content-1").classList.remove("hidden");
@@ -81,6 +84,7 @@ const updateUI = async () => {
     // prints the user's information to the HTML
     // document.getElementById("ipt-user-profile").textContent = JSON.stringify(await auth0.getUser());
   }
+
   // adds hidden to all divs except the one telling the user that they're logged out
   else {
     document.getElementById("gated-content-1").classList.add("hidden");
