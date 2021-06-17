@@ -84,9 +84,15 @@ function checkLocalStorage(check) {
     console.log("objectKeys exists..!");
     // console.log(localStorage);
 
+
+    // ### redundant?? ###
+
     // pull item from localStorage
     // localStorage.getItem(objType+'_'+objItemID);
 
+    // ### redundant?? ###
+    
+    
     console.log(localStorage);
 
     // create HTML header and fields
