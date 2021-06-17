@@ -90,9 +90,10 @@ const updateUI = async () => {
 
     capName.splice(0,1);
     console.log("This is the new capName:",capName);
+    capName.unshift(R);
+    console.log("This is the final product:",capName);
 
     // cap[] = R;
-    console.log("This is the new cap:",cap);
     document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome ';
     document.getElementById("gated-content-1").classList.remove("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
