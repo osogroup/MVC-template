@@ -5,10 +5,10 @@ if (URLValue == 'edit') {
 }
 
 // pull in data from objectList.JSON and configuration JSON file 
-// const configData = async () => {
-//   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
-//   return listConfig;
-// }
+const configData = async () => {
+  var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
+  return listConfig;
+}
   
 
 // gets all the Objects/Arrays from listOfObjects.json and returns them
