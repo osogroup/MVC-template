@@ -61,7 +61,7 @@ const HTMLGenerate = async () => {
 
   // creating the links for the header
   for (const [headerKey, headerValue] of Object.entries(data)) {
-    headerHTML            +='<a class="headerLinks" href="?type=' + headerKey + '">' + headerKey.toUpperCase() + '</a>';
+    headerHTML            +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + headerKey.toUpperCase() + '</a>';
   }
 
   headerHTML            +='</p>'
