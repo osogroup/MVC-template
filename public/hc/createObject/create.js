@@ -7,8 +7,6 @@ if (URLValue == 'create') {
     // createObjectList();
   });
 
-
-
   const configData = async () => {
     var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
     // console.log("configData output ", listConfig);
