@@ -88,7 +88,9 @@ const updateUI = async () => {
     var R = cap[0].toUpperCase();
     console.log("This is R:",R);
 
-    // cap.splice(1,1);
+    capName.splice(0,1);
+    console.log("This is the new capName:",capName);
+
     // cap[] = R;
     console.log("This is the new cap:",cap);
     document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome ';
