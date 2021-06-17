@@ -74,14 +74,14 @@ const updateUI = async () => {
 
   // if the user is logged in and on the list page all the divs except list.js's are hidden
   else if (isAuthenticated && URLValue == 'list') {
-    var capArray = [];
+    var capName = [];
     var name = JSON.stringify(await auth0.getUser());
     var parsedName = JSON.parse(name);
     var cap = parsedName['nickname'];
     for (const [nameKey, nameValue] of Object.entries(cap)) {
       console.log("This is nameKey:",nameKey);
       console.log("This is nameValue:",nameValue);
-      capArray.push(nameValue);
+      capName.push(nameValue);
     }
     console.log("This is capName:",capName);
     console.log("This is cap index[0]:", cap[1]);
