@@ -199,8 +199,8 @@ const doTheStrings = async () => {
 
     // create HTML header and fields
     for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
-      console.log("This is headerKey:",headerKey); // id, name, ... tags
-      console.log("This is headerValue:",headerValue); // 1, COI: Static Site HTML Structure, ... [0]
+      // console.log("This is headerKey:",headerKey); // id, name, ... tags
+      // console.log("This is headerValue:",headerValue); // 1, COI: Static Site HTML Structure, ... [0]
       if (headerKey == 'id') {
         HTMLoutput += '<div class="col-4 minHeight">'
                       + '<div class="col-12">'+headerKey+'</div>';
@@ -216,13 +216,13 @@ const doTheStrings = async () => {
         // making object item an input textbox
 
         var typeHeader = type[headerKey];
-        console.log("This is typeHeader:",typeHeader);
+        // console.log("This is typeHeader:",typeHeader);
 
         // filling up the statusOptions array before calling selectAttribute()
         for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
           if (headerKey == 'status' && stuffKey == 'opts') {
             statusOptions.push(stuffValue);
-            console.log("This is statusOptions: ", statusOptions);
+            // console.log("This is statusOptions: ", statusOptions);
           }
         }
 
@@ -272,7 +272,7 @@ const doTheStrings = async () => {
               data : data
             };
             HTMLoutput += inputFunction(parameters);
-            console.log("This is parameters:",parameters);
+            // console.log("This is parameters:",parameters);
           }
         }
         
@@ -357,7 +357,7 @@ function inputFunction(params) {
     return arrayList(arrayParams);
   }
   if (params.sVal == "option") {
-    console.log("params.sVal == option");
+    // console.log("params.sVal == option");
     return selectAttribute(optParams);
   }
 }
@@ -445,7 +445,7 @@ function selectedOption(str) {
   myObject[str] = change;
   backToString = JSON.stringify(myObject);
   addToLocalStorage(superKey, backToString);
-  console.log("status is now", change);
+  // console.log("status is now", change);
   
 }
 
