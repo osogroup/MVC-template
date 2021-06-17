@@ -1,10 +1,13 @@
-$(document).ready(function(){
-  if (objType == null)
-  alert("add '?type=task' to the URL");
-  
-  createHTML();
-  // createObjectList();
-});
+if (URLValue == 'create') {
+  $(document).ready(function(){
+    if (objType == null)
+    alert("add '?type=task' to the URL");
+    
+    createHTML();
+    // createObjectList();
+  });
+
+}
 
 // const configData = async () => {
 //   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
