@@ -1,8 +1,8 @@
-$(document).ready(function(){
-  // outputHTML();
-  doTheStrings();
-});
-
+if (URLValue == 'edit') {
+  $(document).ready(function(){
+    doTheStrings();
+  });
+}
 
 // pull in data from objectList.JSON and configuration JSON file 
 // const configData = async () => {
