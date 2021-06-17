@@ -35,3 +35,6 @@ label {
   padding: 10px 20px 10px 20px;
   margin-right: 20px;
 }
+.minHeight {
+  min-height: 240px;
+}
