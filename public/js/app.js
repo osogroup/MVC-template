@@ -50,6 +50,7 @@ const updateUI = async () => {
   // add logic to show/hide gated content after authentication
   if (isAuthenticated && URLValue == 'edit') {
     console.log("URLValue is edit");
+    
   }
   else if (isAuthenticated && URLValue == 'create') {  
     console.log("URLValue is create");
