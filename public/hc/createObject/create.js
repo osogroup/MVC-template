@@ -18,7 +18,7 @@ if (URLValue == 'create') {
 // gets all the Objects/Arrays from listOfObjects.json and returns them
 const listData = async () => {
   var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
-  console.log("listData output ", objVars);
+  // console.log("listData output ", objVars);
   return objVars;
 }
 
