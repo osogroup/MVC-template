@@ -27,6 +27,7 @@ label {
   color:white;
   padding: 10px 20px 10px 20px;
   margin-right: 20px;
+  border-radius: 10px;
 }
 #btn-login {
   border: none;
@@ -34,6 +35,7 @@ label {
   color:white;
   padding: 10px 20px 10px 20px;
   margin-right: 20px;
+  border-radius: 10px;
 }
 .minHeight {
   min-height: 240px;
