@@ -55,17 +55,15 @@ const HTMLGenerate = async () => {
 
   var headerHTML  = '<div id="contacts">'
                     + '<div class="row">'
-                      + '<div class="col-12">'
-                        + '<p id="header">'
-                          + '<img id="imageSpacing" src="/images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
+                      + '<p id="header">'
+                        + '<img id="imageSpacing" src="/images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
 
   // creating the links for the header
   for (const [headerKey, headerValue] of Object.entries(data)) {
-    headerHTML            +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + headerKey.toUpperCase() + '</a>';
+    headerHTML          +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + headerKey.toUpperCase() + '</a>';
   }
 
-  headerHTML            +='</p>'
-                      + '</div>'
+  headerHTML          +='</p>'
                     + '<h1>OAS Object List</h1>'
                   + '</div>';
   $('#TitleOfList').append(headerHTML);
