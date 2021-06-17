@@ -222,7 +222,7 @@ const doTheStrings = async () => {
         for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
           if (headerKey == 'status' && stuffKey == 'opts') {
             statusOptions.push(stuffValue);
-            // console.log("This is statusOptions: ", statusOptions);
+            console.log("This is statusOptions: ", statusOptions);
           }
         }
 
