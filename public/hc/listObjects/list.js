@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  createHTML();
+  HTMLGenerate();
 });
 
 
@@ -38,13 +38,13 @@ const generateID = async () => {
 }
 
 // gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
-const createHTML = async () => {
+const HTMLGenerate = async () => {
   if (!objType) {
     alert("Enter '?type=task' at the end of the URL");
     return;
   }
   
-  console.log("Entering createHTML()");
+  console.log("Entering HTMLGenerate()");
   var data = await tempData();
   var config = await configData();
   var id = await generateID();
@@ -70,7 +70,7 @@ const createHTML = async () => {
                   + '</div>';
   $('#TitleOfList').append(headerHTML);
 
-  // console.log("objType in createHTML() ", objType);
+  // console.log("objType in HTMLGenerate() ", objType);
 
   // creating object row
   var inputThings = '<div class="row hacker-list">'
@@ -323,5 +323,5 @@ const createHTML = async () => {
 
   // Exiting the last forOf loop
   // }
-  console.log("Exiting createHTML(), Buttons ready..");
+  console.log("Exiting HTMLGenerate(), Buttons ready..");
 }
