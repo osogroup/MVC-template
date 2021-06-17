@@ -10,10 +10,10 @@ if (URLValue == 'create') {
 
 
   // const configData = async () => {
-  //   var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
-  //   // console.log("configData output ", listConfig);
-  //   return listConfig;
-  // }
+    var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
+    // console.log("configData output ", listConfig);
+    return listConfig;
+  }
 
   // gets all the Objects/Arrays from listOfObjects.json and returns them
   const listData = async () => {
@@ -22,10 +22,10 @@ if (URLValue == 'create') {
     return objVars;
   }
 
-  // const typeData = async () => {
-  //   var objVars = await fetch("../tempData/"+objType+".json").then(response=>{return response.json();});
-  //   return objVars;
-  // }
+  const typeData = async () => {
+    var objVars = await fetch("../tempData/"+objType+".json").then(response=>{return response.json();});
+    return objVars;
+  }
 
   function showChange() {
     console.log(localStorage);
