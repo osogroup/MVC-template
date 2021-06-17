@@ -52,10 +52,7 @@ const updateUI = async () => {
 
   // if the user is logged in and on the edit page all the divs except edit.js's are hidden
   if (isAuthenticated && URLValue == 'edit') {
-    var name = JSON.stringify(await auth0.getUser());
-    var parsedName = JSON.parse(name);
-    var cap = parsedName['nickname'];
-    document.getElementById("ipt-user-profile3").textContent = 'Logged in...Welcome '+cap[0].toUpperCase()+cap.substring(1);
+    document.getElementById("ipt-user-profile3").textContent = 'Logged in...Welcome '+capitalizeName(JSON.stringify(await auth0.getUser()));
     document.getElementById("gated-content-1").classList.add("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.remove("hidden");
@@ -64,10 +61,7 @@ const updateUI = async () => {
 
   // if the user is logged in and on the create page all the divs except create.js's are hidden
   else if (isAuthenticated && URLValue == 'create') {  
-    var name = JSON.stringify(await auth0.getUser());
-    var parsedName = JSON.parse(name);
-    var cap = parsedName['nickname'];
-    document.getElementById("ipt-user-profile4").textContent = 'Logged in...Welcome '+cap[0].toUpperCase()+cap.substring(1);
+    document.getElementById("ipt-user-profile4").textContent = 'Logged in...Welcome '+capitalizeName(JSON.stringify(await auth0.getUser()));
     document.getElementById("gated-content-1").classList.add("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
@@ -76,10 +70,7 @@ const updateUI = async () => {
 
   // if the user is logged in and on the list page all the divs except list.js's are hidden
   else if (isAuthenticated && URLValue == 'list') {
-    var name = JSON.stringify(await auth0.getUser());
-    var parsedName = JSON.parse(name);
-    var cap = parsedName['nickname'];
-    document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome '+cap[0].toUpperCase()+cap.substring(1);
+    document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome '+capitalizeName(JSON.stringify(await auth0.getUser()));
     document.getElementById("gated-content-1").classList.remove("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
@@ -88,11 +79,7 @@ const updateUI = async () => {
 
   // this case is just for when the user logs in and URLValue is not specified
   else if (isAuthenticated) {
-
-    var name = JSON.stringify(await auth0.getUser());
-    var parsedName = JSON.parse(name);
-    var cap = parsedName['nickname'];
-    document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome '+cap[0].toUpperCase()+cap.substring(1);
+    document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome '+capitalizeName(JSON.stringify(await auth0.getUser()));
     document.getElementById("gated-content-1").classList.remove("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
