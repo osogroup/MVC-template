@@ -6,21 +6,21 @@ if (URLValue == 'edit') {
 
 // pull in data from objectList.JSON and configuration JSON file 
 const configureData = async () => {
-  var listConfig = await fetch("/tempData/objectConfig.json").then(response=>{return response.json();});
+  var listConfig = await fetch("tempData/objectConfig.json").then(response=>{return response.json();});
   return listConfig;
 }
   
 
 // gets all the Objects/Arrays from listOfObjects.json and returns them
 const temporaryData = async () => {
-  var objVars = await fetch("/tempData/listOfObjects.json").then(response=>{return response.json();});
+  var objVars = await fetch("tempData/listOfObjects.json").then(response=>{return response.json();});
   return objVars;
 }
 
 
 // gets data from GitHub according to the URL's type
 const typeData = async () => {
-  var typeVars = await fetch("/tempData/"+objType+".json").then(response=>{return response.json();});
+  var typeVars = await fetch("tempData/"+objType+".json").then(response=>{return response.json();});
   return typeVars;
 }
 
