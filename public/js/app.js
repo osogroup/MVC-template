@@ -136,4 +136,6 @@ function clr() {
 function capitalizeName(name) {
   var parsedName = JSON.parse(name);
   var cap = parsedName['nickname'];
+  var newName = cap[0].toUpperCase()+cap.substring(1);
+  return newName;
 }
