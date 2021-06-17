@@ -40,7 +40,59 @@ function showData() {
   console.log(localStorage);
 }
 
-function inputFunction(params);
+
+// ----------------------------------------------- Input Function -----------------------------------------------
+
+
+// takes the inpType and sends new parameters to the proper function
+function inputFunction(params) {
+  console.log("params.sVal is",params.sVal);
+  var newParams = {
+    newHKey : params.hKey,
+    newHVal : params.hVal
+  };
+  var arrayParams = {
+    newHKey : params.hKey,
+    newHVal : params.hVal,
+    newScripts : params.scripts,
+    newFields : params.fields,
+    newNames: params.names,
+    newData : params.data
+  };
+  var optParams = {
+    newHKey : params.hKey,
+    newHVal : params.hVal,
+    newStatOpts : params.statOpts,
+    newFields : params.fields
+  };
+
+  // options: arrayOfOptions, // 0,1
+
+  if (params.sVal == "text") {
+    console.log("params.sVal == text");
+    return textAttribute(newParams);
+  }
+  if (params.sVal == "textarea") {
+    console.log("params.sVal == textarea");
+    return textareaAttribute(newParams);
+  }
+  if (params.sVal == "number") {
+    console.log("params.sVal == number");
+    return numberAttribute(newParams);
+  }
+  if (params.sVal == "date") {
+    console.log("params.sVal == date");
+    return calendarAttribute(newParams);
+  }
+  if (params.sVal == "array") {
+    console.log("params.sVal == array");
+    return arrayList(arrayParams);
+  }
+  if (params.sVal == "option") {
+    console.log("params.sVal == option");
+    return selectAttribute(optParams);
+  }
+}
 
 
 // function that is linked to the oninput attribute in the input box, every time
@@ -317,58 +369,6 @@ const doTheStrings = async () => {
 
 
 
-// ----------------------------------------------- Input Function -----------------------------------------------
-
-
-// takes the inpType and sends new parameters to the proper function
-function inputFunction(params) {
-  console.log("params.sVal is",params.sVal);
-  var newParams = {
-    newHKey : params.hKey,
-    newHVal : params.hVal
-  };
-  var arrayParams = {
-    newHKey : params.hKey,
-    newHVal : params.hVal,
-    newScripts : params.scripts,
-    newFields : params.fields,
-    newNames: params.names,
-    newData : params.data
-  };
-  var optParams = {
-    newHKey : params.hKey,
-    newHVal : params.hVal,
-    newStatOpts : params.statOpts,
-    newFields : params.fields
-  };
-
-  // options: arrayOfOptions, // 0,1
-
-  if (params.sVal == "text") {
-    console.log("params.sVal == text");
-    return textAttribute(newParams);
-  }
-  if (params.sVal == "textarea") {
-    console.log("params.sVal == textarea");
-    return textareaAttribute(newParams);
-  }
-  if (params.sVal == "number") {
-    console.log("params.sVal == number");
-    return numberAttribute(newParams);
-  }
-  if (params.sVal == "date") {
-    console.log("params.sVal == date");
-    return calendarAttribute(newParams);
-  }
-  if (params.sVal == "array") {
-    console.log("params.sVal == array");
-    return arrayList(arrayParams);
-  }
-  if (params.sVal == "option") {
-    console.log("params.sVal == option");
-    return selectAttribute(optParams);
-  }
-}
 
 
 // ----------------------------------------------- Text Attribute -----------------------------------------------
