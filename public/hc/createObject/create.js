@@ -413,7 +413,7 @@ if (URLValue == 'create') {
         tagList.sort();
         JSON.stringify(tagList);
         localObj[opt] = tagList;
-        console.log("This is the localObj with updated tags: ", localObj);
+        // console.log("This is the localObj with updated tags: ", localObj);
         localStorage.setItem(objTypeID, JSON.stringify(localObj));
         $('#appendTo').append(HTMLoutput);
       }
