@@ -270,8 +270,8 @@ const doTheStrings = async () => {
               statOpts : statusOptions,
               data : data
             };
-            HTMLoutput += inputFunction(parameters);
-            // console.log("This is inputFunction:", inputFunction(parameters));
+            HTMLoutput += myInputFunction(parameters);
+            // console.log("This is myInputFunction:", myInputFunction(parameters));
             // console.log("This is parameters.sVal:",parameters.sVal);
           }
         }
@@ -319,7 +319,7 @@ const doTheStrings = async () => {
 
 
 // takes the inpType and sends new parameters to the proper function
-function inputFunction(params) {
+function myInputFunction(params) {
   // console.log("params.sVal is",params.sVal);
   var newParams = {
     newHKey : params.hKey,
