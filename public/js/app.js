@@ -54,7 +54,8 @@ const updateUI = async () => {
   if (isAuthenticated && URLValue == 'edit') {
     var name = JSON.stringify(await auth0.getUser());
     var parsedName = JSON.parse(name);
-    document.getElementById("ipt-user-profile3").textContent = 'Logged in...Welcome '+ parsedName['nickname'];
+    var cap = parsedName['nickname'];
+    document.getElementById("ipt-user-profile3").textContent = 'Logged in...Welcome '+cap[0].toUpperCase()+cap.substring(1);
     document.getElementById("gated-content-1").classList.add("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.remove("hidden");
@@ -89,7 +90,8 @@ const updateUI = async () => {
   else if (isAuthenticated) {
     var name = JSON.stringify(await auth0.getUser());
     var parsedName = JSON.parse(name);
-    document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome '+ parsedName['nickname'];
+    var cap = parsedName['nickname'];
+    document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome '+cap[0].toUpperCase()+cap.substring(1);
     document.getElementById("gated-content-1").classList.remove("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
