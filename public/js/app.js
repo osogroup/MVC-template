@@ -79,6 +79,7 @@ const updateUI = async () => {
     var cap = JSON.stringify(parsedName['nickname']);
     console.log("This is cap index[0]:", cap[1]);
     var r = cap.toUpperCase();
+    console.log("This is r:",r);
     cap[1] = r;
     console.log("This is the new cap:",cap);
     document.getElementById("ipt-user-profile1").textContent = 'Logged in...Welcome ';
