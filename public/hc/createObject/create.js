@@ -400,7 +400,7 @@ if (URLValue == 'create') {
     if(tagList == null || tagList == "") {
       tagList.push(Number(elementVal));
       localObj[opt] = tagList;
-      console.log("This is localObj:",localObj);
+      // console.log("This is localObj:",localObj);
       localStorage.setItem(objTypeID, JSON.stringify(localObj));
       $('#appendTo').append(HTMLoutput);
     }
