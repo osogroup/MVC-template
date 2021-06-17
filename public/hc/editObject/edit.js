@@ -272,7 +272,7 @@ const doTheStrings = async () => {
             };
             HTMLoutput += inputFunction(parameters);
             console.log("This is inputFunction:", inputFunction(parameters));
-            // console.log("This is parameters:",parameters);
+            console.log("This is parameters.sVal:",parameters.sVal);
           }
         }
         
