@@ -28,7 +28,7 @@ const typeData = async () => {
 // function that is called when the Update button is pressed, it displays 
 // the value that is being edited in the console
 function showValue() {
-  var superKey = objType+ '_' +objItemID;
+  var superKey = objType+ '_' +objItemid;
   var superObject = JSON.parse(localStorage.getItem(superKey));
   console.log(superObject);
 }
@@ -44,7 +44,7 @@ function showData() {
 // function that is linked to the oninput attribute in the input box, every time
 // the value in the box is changed, this function will update the localStorage
 function anyChange(str) {
-  var superKey = objType+ '_' +objItemID;
+  var superKey = objType+ '_' +objItemid;
   // console.log("This is the str: ", str);
   var myString = localStorage.getItem(superKey);
   // console.log("This is myString", myString);
@@ -76,7 +76,7 @@ function clr() {
 function checkLocalStorage(check) {
 
   var objItem = {};
-  var objectKeys = objType + '_' + objItemID;
+  var objectKeys = objType + '_' + objItemid;
 
   if (localStorage.getItem(objectKeys) != null) {
     // console.log("This is localStorage.getItem(objectKeys)", localStorage.getItem(objectKeys));
@@ -85,14 +85,14 @@ function checkLocalStorage(check) {
     // console.log(localStorage);
 
     // pull item from localStorage
-    localStorage.getItem(objType+'_'+objItemID);
+    localStorage.getItem(objType+'_'+objItemid);
 
     console.log(localStorage);
 
     // create HTML header and fields
   }
   else {
-    var forOfLoop = check.objTypeData[objItemID];
+    var forOfLoop = check.objTypeData[objItemid];
     console.log("objectKeys was just created..!");
     var repositoryItem = check.data[objType];
     // console.log("This is the repositoryItem..", repositoryItem);
@@ -140,7 +140,7 @@ const doTheStrings = async () => {
   var statusOptions = [];
 
 
-  if(objType == null || objItemID == null) {
+  if(objType == null || objItemid == null) {
     alert('Enter "?type=task&itemid=0" at the end of the current URL');
   }
   else {
@@ -397,7 +397,7 @@ function textareaAttribute(textarea) {
 
 function selectAttribute(options) {
   var selectHTML = '';
-  var superKey = objType+ '_' +objItemID;
+  var superKey = objType+ '_' +objItemid;
   var myString = localStorage.getItem(superKey);
   var myObject = JSON.parse(myString);
   var myObjectStatus = myObject[options.newHKey]; // Not Started/In-Progress/Complete
@@ -429,7 +429,7 @@ function selectAttribute(options) {
 // updates localStorage when a new option is selected
 function selectedOption(str) {
   var selected = $('#inputstatus').find(':selected').text();
-  var superKey = objType+ '_' +objItemID;
+  var superKey = objType+ '_' +objItemid;
   var myString = localStorage.getItem(superKey);
   var myObject = JSON.parse(myString);
   var change = selected;
@@ -480,7 +480,7 @@ function calendarAttribute(date) {
 // updates localStorage when a new date is selected
 function newDate(date) {
   var selected = $('#inputdueDate').val();
-  var superKey = objType+ '_' +objItemID;
+  var superKey = objType+ '_' +objItemid;
   var myString = localStorage.getItem(superKey);
   var myObject = JSON.parse(myString);
   var change = selected;
@@ -501,7 +501,7 @@ function arrayList(array) {
 
   var HTMLoutput = '';
   var HTMLarrayValues = '';
-  var objTypeID = objType+'_'+objItemID;
+  var objTypeID = objType+'_'+objItemid;
   var tagNumbers = [];
   var tagNames = [];
   var tagObj = {};
@@ -575,7 +575,7 @@ function arrayList(array) {
 
 // part of the arrayList function that will add whatever is the selected option to localStorage
 function addFunction() {
-  var objTypeID = objType+'_'+objItemID;
+  var objTypeID = objType+'_'+objItemid;
   var tagList = [];
 
   // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
@@ -608,7 +608,7 @@ function addFunction() {
 
 // removes an item from localStorage and reloads the window which regenerates the display area
 function removeFunction(val) { // val is the entire remove button
-  var objTypeID = objType+'_'+objItemID;
+  var objTypeID = objType+'_'+objItemid;
 
   // removing all the text from the remove button's id
   var valIDNum = val.id.replace(/remvBtn_/, '');
