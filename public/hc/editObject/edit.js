@@ -85,7 +85,7 @@ function checkLocalStorage(check) {
     // console.log(localStorage);
 
     // pull item from localStorage
-    localStorage.getItem(objType+'_'+objItemID);
+    // localStorage.getItem(objType+'_'+objItemID);
 
     console.log(localStorage);
 
