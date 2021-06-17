@@ -1,7 +1,9 @@
 let auth0 = null;
 
+// getting data from the auth_config.json and storing it in fetchAuthConfig
 const fetchAuthConfig = () => fetch("/auth_config.json");
 
+// 
 const configureClient = async () => {
   const response = await fetchAuthConfig();
   const config = await response.json();
@@ -107,12 +109,14 @@ const updateUI = async () => {
   }
 };
 
+// on login, the url will be http://localhost:3000/?type=task
 const login = async () => {
   await auth0.loginWithRedirect({
     redirect_uri: window.location.origin+'/?type=task'
   });
 };
 
+// on logout, the url will also be http://localhost:3000/?type=task so the alert isnt triggered
 const logout = () => {
   auth0.logout({
     returnTo: window.location.origin+'/?type=task'
