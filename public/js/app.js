@@ -49,14 +49,12 @@ const updateUI = async () => {
 
   // add logic to show/hide gated content after authentication
   if (isAuthenticated && URLValue == 'edit') {
-    console.log("URLValue is edit");
     document.getElementById("gated-content-1").classList.add("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.remove("hidden");
     document.getElementById("gated-content-4").classList.add("hidden");
   }
   else if (isAuthenticated && URLValue == 'create') {  
-    console.log("URLValue is create");
     document.getElementById("gated-content-1").classList.add("hidden");
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
