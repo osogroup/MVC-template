@@ -75,17 +75,12 @@ function addToLocalStorage(position, value) {
 
 const generateID = async () => {
   var data = await tempData();
-  // console.log("This is data: ", data);
   if(objType) {
-
     var objTypeData = data[objType];
-    // console.log("This is objTypeData: ", objTypeData);
-    
     var i = 0;
     for(const [idKey, idValue] of Object.entries(objTypeData)) {
       i++;
     }
-    // console.log("This is i: ", i);
     return i;
   }
 }
@@ -252,548 +247,547 @@ const HTMLGenerate = async () => {
 }
 
 if (URLValue == 'edit') {
-    $(document).ready(function(){
-      doTheStrings();
-    });
+  $(document).ready(function(){
+    doTheStrings();
+  });
   
   
-    // function that is called when the Update button is pressed, it displays 
-    // the value that is being edited in the console
-    function showValue() {
-      var superKey = objType+ '_' +objItemID;
-      var superObject = JSON.parse(localStorage.getItem(superKey));
-      console.log(superObject);
-    }
-  
-  
-    // function that is called when you blur a textbox, I use this in my onchange
-    // attribute so I don't see the console log until I click away from an input
-    function showData() {
-      console.log(localStorage);
-    }
-  
-  
-    // function that is linked to the oninput attribute in the input box, every time
-    // the value in the box is changed, this function will update the localStorage
-    function anyChange(str) {
-      var superKey = objType+ '_' +objItemID;
-      // console.log("This is the str: ", str);
-      var myString = localStorage.getItem(superKey);
-      // console.log("This is myString", myString);
-      var myObject = JSON.parse(myString);
-      // console.log("This is myObject: ", myObject);
-      var change = document.getElementById('input'+str);
-      var changeValue = change.value;
-      myObject[str] = changeValue;
-      // console.log("this is myObject[str]", myObject[str]);
-      backToString = JSON.stringify(myObject);
-      // console.log("This is backToString ", backToString);
-      addToLocalStorage(superKey, backToString);
-    }
+  // function that is called when the Update button is pressed, it displays 
+  // the value that is being edited in the console
+  function showValue() {
+    var superKey = objType+ '_' +objItemID;
+    var superObject = JSON.parse(localStorage.getItem(superKey));
+    console.log(superObject);
+  }
 
-  
-  
-    // ------------------------------------------------- Stringify -------------------------------------------------
-  
-  
-    // runs when the document.ready function is ready
-    const doTheStrings = async () => {
-  
-      var arrayFields = [];
-      var arrayOfOptions = [];
-      var arrayOfOptionsNames = [];
-      var statusOptions = [];
-  
-  
-      if(objType == null || objItemID == null) {
-        alert('Enter "?type=task&itemid=0" at the end of the current URL');
-      }
-      else {
-        var data = await tempData();
-        var config = await configData();
-        var type = await typeData();
-        var objTypeData = data[objType];
-        var tagTypeData = data['tags']; // objTypeData specifically for tags
-        var configTypeData = config[objType];
-        console.log("This is type: ", type);
-  
-        var checkLocalStorageParams = {
-          data : data,
-          objTypeData : objTypeData
-        };
-  
-        // filling arrayOfOptions[]
-        var tagData = data.tags;
-        console.log("This is tagData (data.tags): ", tagData);
-        
-  
-        // -------------------------------------------- Navigation Bar --------------------------------------------
-  
-  
-        var HTMLoutput = '<div id="contacts">'
-        + '<div class="row">'
-          + '<p id="header">'
-            + '<img id="imageSpacing" src="images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
-        
-        // creating the links for the header
-        for(const [headerKey, headerValue] of Object.entries(data)) {
-          HTMLoutput += '<a class="headerLinks" href="/?type='+headerKey+'&value=list">'+headerKey.toUpperCase()+'</a>';
-        }
+
+  // function that is called when you blur a textbox, I use this in my onchange
+  // attribute so I don't see the console log until I click away from an input
+  function showData() {
+    console.log(localStorage);
+  }
+
+
+  // function that is linked to the oninput attribute in the input box, every time
+  // the value in the box is changed, this function will update the localStorage
+  function anyChange(str) {
+    var superKey = objType+ '_' +objItemID;
+    // console.log("This is the str: ", str);
+    var myString = localStorage.getItem(superKey);
+    // console.log("This is myString", myString);
+    var myObject = JSON.parse(myString);
+    // console.log("This is myObject: ", myObject);
+    var change = document.getElementById('input'+str);
+    var changeValue = change.value;
+    myObject[str] = changeValue;
+    // console.log("this is myObject[str]", myObject[str]);
+    backToString = JSON.stringify(myObject);
+    // console.log("This is backToString ", backToString);
+    addToLocalStorage(superKey, backToString);
+  }
+
+
+  // ------------------------------------------------- Stringify -------------------------------------------------
+
+
+  // runs when the document.ready function is ready
+  const doTheStrings = async () => {
+
+    var arrayFields = [];
+    var arrayOfOptions = [];
+    var arrayOfOptionsNames = [];
+    var statusOptions = [];
+
+
+    if(objType == null || objItemID == null) {
+      alert('Enter "?type=task&itemid=0" at the end of the current URL');
+    }
+    else {
+      var data = await tempData();
+      var config = await configData();
+      var type = await typeData();
+      var objTypeData = data[objType];
+      var tagTypeData = data['tags']; // objTypeData specifically for tags
+      var configTypeData = config[objType];
+      console.log("This is type: ", type);
+
+      var checkLocalStorageParams = {
+        data : data,
+        objTypeData : objTypeData
+      };
+
+      // filling arrayOfOptions[]
+      var tagData = data.tags;
+      console.log("This is tagData (data.tags): ", tagData);
       
-        // closing header row
-        HTMLoutput += '</p>';
-  
-        // H1 header to let the user know which object they're editing
-        HTMLoutput += '<h1>Edit '+objType+' Item</h1>'
-                  + '</div>';
-  
-        var forOfLoop = checkLocalStorage(checkLocalStorageParams);
-  
-  
-        // --------------------------------------- Item Header and Inputs ---------------------------------------
-  
-  
-        // (((((((((((((((((((((((((((((((((((((creating item header row)))))))))))))))))))))))))))))))))))))
-  
-        HTMLoutput += '<div class="row">'; 
-        // create HTML header and fields
-        for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
-          // console.log("This is headerKey:",headerKey); // id, name, ... tags
-          // console.log("This is headerValue:",headerValue); // 1, COI: Static Site HTML Structure, ... [0]
-          if (headerKey == 'id') {
-            HTMLoutput += '<div class="col-4 minHeight">'
-                          + '<div class="col-12">'+headerKey+'</div>';
-  
+
+      // -------------------------------------------- Navigation Bar --------------------------------------------
+
+
+      var HTMLoutput = '<div id="contacts">'
+      + '<div class="row">'
+        + '<p id="header">'
+          + '<img id="imageSpacing" src="images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
+      
+      // creating the links for the header
+      for(const [headerKey, headerValue] of Object.entries(data)) {
+        HTMLoutput += '<a class="headerLinks" href="/?type='+headerKey+'&value=list">'+headerKey.toUpperCase()+'</a>';
+      }
+    
+      // closing header row
+      HTMLoutput += '</p>';
+
+      // H1 header to let the user know which object they're editing
+      HTMLoutput += '<h1>Edit '+objType+' Item</h1>'
+                + '</div>';
+
+      var forOfLoop = checkLocalStorage(checkLocalStorageParams);
+
+
+      // --------------------------------------- Item Header and Inputs ---------------------------------------
+
+
+      // (((((((((((((((((((((((((((((((((((((creating item header row)))))))))))))))))))))))))))))))))))))
+
+      HTMLoutput += '<div class="row">'; 
+      // create HTML header and fields
+      for (const [headerKey, headerValue] of Object.entries(forOfLoop)) {
+        // console.log("This is headerKey:",headerKey); // id, name, ... tags
+        // console.log("This is headerValue:",headerValue); // 1, COI: Static Site HTML Structure, ... [0]
+        if (headerKey == 'id') {
+          HTMLoutput += '<div class="col-4 minHeight">'
+                        + '<div class="col-12">'+headerKey+'</div>';
+
+        }
+        else {
+        HTMLoutput += '<div class="col-4 minHeight">';
+        }
+        
+        if (configTypeData.editable.includes(headerKey) == true) {
+
+          // making object item an input textbox
+
+          var typeHeader = type[headerKey];
+          // console.log("This is typeHeader:",typeHeader);
+
+          // filling up the statusOptions array before calling selectAttribute()
+          for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
+            if (headerKey == 'status' && stuffKey == 'opts') {
+              statusOptions.push(stuffValue);
+              // console.log("This is statusOptions: ", statusOptions);
+            }
           }
-          else {
-          HTMLoutput += '<div class="col-4 minHeight">';
+
+          for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
+            // console.log("This is stuffKey: ", stuffKey); // (required, type, inpType)
+            // console.log("This is stuffValue: ", stuffValue); // (true, string, text)
+
+            if (stuffKey == "inpType") {
+              // stuffValue: text, textarea, text, array, date, number
+
+              // filling arrayOfOptions
+              if (stuffValue == 'array') {
+
+                // console.log("The information lines up..");
+                for (const [tagKey, tagValue] of Object.entries(headerValue)) {
+                  // console.log("This is tagKey: ", tagKey); // positions in array
+                  // console.log("This is tagValue: ", tagValue); // values in those positions
+                  arrayOfOptions.push(tagValue);
+                }
+                
+                // Taking info from arrayOfOptions and using them to get the names from the list
+                for (const [tagTypeKey, tagTypeValue] of Object.entries(tagTypeData)) {
+                  // console.log("This is tagTypeKey: ", tagTypeKey); // 0, 1, 2
+                  // console.log("This is tagTypeValue: ", tagTypeValue); // object 0, object 1, object 2
+                  // console.log("This is tagTypeValue['name']: ", tagTypeValue['name']);
+                  arrayFields.push(tagTypeValue['name']);
+                  // console.log("This is arrayFields: ", arrayFields);
+
+                  // filling arrayOfOptionsNames with tag names if arrayOfOptions includes the tag's ID number
+                  if (arrayOfOptions.includes(tagTypeValue['id'])) {
+                    arrayOfOptionsNames.push(tagData[tagTypeValue['id']].name);
+                  }
+                }
+                // console.log("This is arrayOfOptionsNames: ", arrayOfOptionsNames);
+
+              }
+
+              var parameters = {
+                sVal : stuffValue,  // text, textarea, array, ...
+                hKey : headerKey, // id, name, description, ...
+                hVal : headerValue,  // 1, COI: Static Site HTML Structure, ...
+                fields : arrayFields,
+                options: arrayOfOptions, // 0,1
+                names: arrayOfOptionsNames, // Design Wireframes, Code Structure & Style
+                scripts : "scripts",
+                statOpts : statusOptions,
+                data : data
+              };
+              HTMLoutput += myInputFunction(parameters);
+              // console.log("This is myInputFunction:", myInputFunction(parameters));
+              // console.log("This is parameters.sVal:",parameters.sVal);
+            }
           }
           
-          if (configTypeData.editable.includes(headerKey) == true) {
-  
-            // making object item an input textbox
-  
-            var typeHeader = type[headerKey];
-            // console.log("This is typeHeader:",typeHeader);
-  
-            // filling up the statusOptions array before calling selectAttribute()
-            for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
-              if (headerKey == 'status' && stuffKey == 'opts') {
-                statusOptions.push(stuffValue);
-                // console.log("This is statusOptions: ", statusOptions);
-              }
-            }
-  
-            for (const [stuffKey, stuffValue] of Object.entries(typeHeader)) {
-              // console.log("This is stuffKey: ", stuffKey); // (required, type, inpType)
-              // console.log("This is stuffValue: ", stuffValue); // (true, string, text)
-  
-              if (stuffKey == "inpType") {
-                // stuffValue: text, textarea, text, array, date, number
-  
-                // filling arrayOfOptions
-                if (stuffValue == 'array') {
-  
-                  // console.log("The information lines up..");
-                  for (const [tagKey, tagValue] of Object.entries(headerValue)) {
-                    // console.log("This is tagKey: ", tagKey); // positions in array
-                    // console.log("This is tagValue: ", tagValue); // values in those positions
-                    arrayOfOptions.push(tagValue);
-                  }
-                  
-                  // Taking info from arrayOfOptions and using them to get the names from the list
-                  for (const [tagTypeKey, tagTypeValue] of Object.entries(tagTypeData)) {
-                    // console.log("This is tagTypeKey: ", tagTypeKey); // 0, 1, 2
-                    // console.log("This is tagTypeValue: ", tagTypeValue); // object 0, object 1, object 2
-                    // console.log("This is tagTypeValue['name']: ", tagTypeValue['name']);
-                    arrayFields.push(tagTypeValue['name']);
-                    // console.log("This is arrayFields: ", arrayFields);
-  
-                    // filling arrayOfOptionsNames with tag names if arrayOfOptions includes the tag's ID number
-                    if (arrayOfOptions.includes(tagTypeValue['id'])) {
-                      arrayOfOptionsNames.push(tagData[tagTypeValue['id']].name);
-                    }
-                  }
-                  // console.log("This is arrayOfOptionsNames: ", arrayOfOptionsNames);
-  
-                }
-  
-                var parameters = {
-                  sVal : stuffValue,  // text, textarea, array, ...
-                  hKey : headerKey, // id, name, description, ...
-                  hVal : headerValue,  // 1, COI: Static Site HTML Structure, ...
-                  fields : arrayFields,
-                  options: arrayOfOptions, // 0,1
-                  names: arrayOfOptionsNames, // Design Wireframes, Code Structure & Style
-                  scripts : "scripts",
-                  statOpts : statusOptions,
-                  data : data
-                };
-                HTMLoutput += myInputFunction(parameters);
-                // console.log("This is myInputFunction:", myInputFunction(parameters));
-                // console.log("This is parameters.sVal:",parameters.sVal);
-              }
-            }
-            
-            // HTMLoutput += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
-          }
-          else
-          {
-  
-            // making object item a regular div
-            HTMLoutput += '<br><div class="col-12">'+headerValue+'</div>';
-          }
-  
-          // closing object item column
-          HTMLoutput += '</div>';
+          // HTMLoutput += '<br><input class="col-12" id="input'+headerKey+'" type="textarea" value="'+headerValue+'" placeholder="'+headerKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">';
         }
-  
-        // closing item header row
+        else
+        {
+
+          // making object item a regular div
+          HTMLoutput += '<br><div class="col-12">'+headerValue+'</div>';
+        }
+
+        // closing object item column
         HTMLoutput += '</div>';
-  
-        // Update button that will activate a function that outputs the value to the console
-        HTMLoutput += '<div class="row">';
-  
-        HTMLoutput += '<div class="col-10"></div>'
-                    + '<div class="col-2"><button style="border-radius:10px;" onclick="showValue()">Update</button></div>';
-  
-        HTMLoutput += '</div>';
-  
-        $('#HTMLdiv').append(HTMLoutput);
       }
+
+      // closing item header row
+      HTMLoutput += '</div>';
+
+      // Update button that will activate a function that outputs the value to the console
+      HTMLoutput += '<div class="row">';
+
+      HTMLoutput += '<div class="col-10"></div>'
+                  + '<div class="col-2"><button style="border-radius:10px;" onclick="showValue()">Update</button></div>';
+
+      HTMLoutput += '</div>';
+
+      $('#HTMLdiv').append(HTMLoutput);
     }
+  }
   
   
-    // ----------------------------------------------- Input Function -----------------------------------------------
-  
-  
-    // takes the inpType and sends new parameters to the proper function
-    function myInputFunction(myParams) {
-      // console.log("myParams.sVal is",myParams.sVal);
-      var newParams = {
-        newHKey : myParams.hKey,
-        newHVal : myParams.hVal
-      };
-      var arrayParams = {
-        newHKey : myParams.hKey,
-        newHVal : myParams.hVal,
-        newScripts : myParams.scripts,
-        newFields : myParams.fields,
-        newNames: myParams.names,
-        newData : myParams.data
-      };
-      var optParams = {
-        newHKey : myParams.hKey,
-        newHVal : myParams.hVal,
-        newStatOpts : myParams.statOpts,
-        newFields : myParams.fields
-      };
-  
-      // options: arrayOfOptions, // 0,1
-  
-      if (myParams.sVal == "text") {
-        console.log("myParams.sVal == text");
-        return textAttribute(newParams);
-      }
-      if (myParams.sVal == "textarea") {
-        console.log("myParams.sVal == textarea");
-        return textareaAttribute(newParams);
-      }
-      if (myParams.sVal == "number") {
-        console.log("myParams.sVal == number");
-        return numberAttribute(newParams);
-      }
-      if (myParams.sVal == "date") {
-        console.log("myParams.sVal == date");
-        return calendarAttribute(newParams);
-      }
-      if (myParams.sVal == "array") {
-        console.log("myParams.sVal == array");
-        return arrayList(arrayParams);
-      }
-      if (myParams.sVal == "option") {
-        console.log("myParams.sVal == option");
-        return selectAttribute(optParams);
-      }
+  // ----------------------------------------------- Input Function -----------------------------------------------
+
+
+  // takes the inpType and sends new parameters to the proper function
+  function myInputFunction(myParams) {
+    // console.log("myParams.sVal is",myParams.sVal);
+    var newParams = {
+      newHKey : myParams.hKey,
+      newHVal : myParams.hVal
+    };
+    var arrayParams = {
+      newHKey : myParams.hKey,
+      newHVal : myParams.hVal,
+      newScripts : myParams.scripts,
+      newFields : myParams.fields,
+      newNames: myParams.names,
+      newData : myParams.data
+    };
+    var optParams = {
+      newHKey : myParams.hKey,
+      newHVal : myParams.hVal,
+      newStatOpts : myParams.statOpts,
+      newFields : myParams.fields
+    };
+
+    // options: arrayOfOptions, // 0,1
+
+    if (myParams.sVal == "text") {
+      console.log("myParams.sVal == text");
+      return textAttribute(newParams);
     }
-  
-  
-    // ----------------------------------------------- Text Attribute -----------------------------------------------
-  
-  
-    function textAttribute(text) {
-      var textHTML = '';
-  
-      textHTML  +='<div class="col-12">'
+    if (myParams.sVal == "textarea") {
+      console.log("myParams.sVal == textarea");
+      return textareaAttribute(newParams);
+    }
+    if (myParams.sVal == "number") {
+      console.log("myParams.sVal == number");
+      return numberAttribute(newParams);
+    }
+    if (myParams.sVal == "date") {
+      console.log("myParams.sVal == date");
+      return calendarAttribute(newParams);
+    }
+    if (myParams.sVal == "array") {
+      console.log("myParams.sVal == array");
+      return arrayList(arrayParams);
+    }
+    if (myParams.sVal == "option") {
+      console.log("myParams.sVal == option");
+      return selectAttribute(optParams);
+    }
+  }
+
+
+  // ----------------------------------------------- Text Attribute -----------------------------------------------
+
+
+  function textAttribute(text) {
+    var textHTML = '';
+
+    textHTML  +='<div class="col-12">'
+                + '<form action="#" method="post" class="demoForm">'
+                  + '<fieldset class="minHeight">'
+                    + '<legend>'+text.newHKey+'</legend>'
+                    + '<input type="text" class="col-12 textInput" id="input'+text.newHKey+'" style="border-radius:10px;" value="'+text.newHVal+'" placeholder="'+text.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
+                  + '</fieldset>'
+                + '</form>'
+              + '</div>';
+
+    return textHTML;
+  }
+
+
+  // --------------------------------------------- Textarea Attribute ---------------------------------------------
+
+
+  function textareaAttribute(textarea) {
+    var textareaHTML = '';
+
+    textareaHTML  +='<div class="col-12">'
+                    + '<form action="#" method="post" class="demoForm">'
+                      + '<fieldset class="minHeight">'
+                        + '<legend>'+textarea.newHKey+'</legend>'
+                        + '<textarea class="textareaInput" id="input'+textarea.newHKey+'" style="border-radius:10px;" placeholder="'+textarea.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()" rows="6" cols="20">'+textarea.newHVal+'</textarea>'
+                      + '</fieldset>'
+                    + '</form>'
+                  + '</div>';
+
+    return textareaHTML;
+  }
+
+
+  // ------------------------------------------------ Select Attr ------------------------------------------------
+
+
+  function selectAttribute(options) {
+    var selectHTML = '';
+    var superKey = objType+ '_' +objItemID;
+    var myString = localStorage.getItem(superKey);
+    var myObject = JSON.parse(myString);
+    var myObjectStatus = myObject[options.newHKey]; // Not Started/In-Progress/Complete
+
+    selectHTML  +='<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
-                      + '<legend>'+text.newHKey+'</legend>'
-                      + '<input type="text" class="col-12 textInput" id="input'+text.newHKey+'" style="border-radius:10px;" value="'+text.newHVal+'" placeholder="'+text.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
+                      + '<legend>'+options.newHKey+'</legend>'
+                      + '<select id="input'+options.newHKey+'" name="'+options.newHKey+'" style="border-radius:10px;" value="optionDisp" onchange="selectedOption(this.name)">';
+
+    for (const [varsKey, varsValue] of Object.entries(options.newStatOpts[0])) {
+
+      // checking if the option is the one existing in the localStorage... if it is then it puts the 'selected' attribute in the tag
+      if (varsValue == myObjectStatus) {
+        selectHTML      +='<option value="'+varsValue+'" selected>'+varsValue+'</option>';
+      }
+      else {
+        selectHTML      +='<option value="'+varsValue+'">'+varsValue+'</option>';
+      }
+    }
+    selectHTML        +='</select>'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
-  
-      return textHTML;
-    }
-  
-  
-    // --------------------------------------------- Textarea Attribute ---------------------------------------------
-  
-  
-    function textareaAttribute(textarea) {
-      var textareaHTML = '';
-  
-      textareaHTML  +='<div class="col-12">'
-                      + '<form action="#" method="post" class="demoForm">'
-                        + '<fieldset class="minHeight">'
-                          + '<legend>'+textarea.newHKey+'</legend>'
-                          + '<textarea class="textareaInput" id="input'+textarea.newHKey+'" style="border-radius:10px;" placeholder="'+textarea.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()" rows="6" cols="20">'+textarea.newHVal+'</textarea>'
-                        + '</fieldset>'
-                      + '</form>'
-                    + '</div>';
-  
-      return textareaHTML;
-    }
-  
-  
-    // ------------------------------------------------ Select Attr ------------------------------------------------
-  
-  
-    function selectAttribute(options) {
-      var selectHTML = '';
-      var superKey = objType+ '_' +objItemID;
-      var myString = localStorage.getItem(superKey);
-      var myObject = JSON.parse(myString);
-      var myObjectStatus = myObject[options.newHKey]; // Not Started/In-Progress/Complete
-  
-      selectHTML  +='<div class="col-12">'
+
+    return selectHTML;
+  }
+
+  // updates localStorage when a new option is selected
+  function selectedOption(str) {
+    var selected = $('#inputstatus').find(':selected').text();
+    var superKey = objType+ '_' +objItemID;
+    var myString = localStorage.getItem(superKey);
+    var myObject = JSON.parse(myString);
+    var change = selected;
+    myObject[str] = change;
+    backToString = JSON.stringify(myObject);
+    addToLocalStorage(superKey, backToString);
+    // console.log("status is now", change);
+    
+  }
+
+
+  // ------------------------------------------------ Number Attr ------------------------------------------------
+
+
+  function numberAttribute(num) {
+    var numberHTML = '';
+
+    numberHTML  +='<div class="col-12">'
+                  + '<form action="#" method="post" class="demoForm">'
+                    + '<fieldset class="minHeight">'
+                      + '<legend>'+num.newHKey+'</legend>'
+                      + '<input type="number" id="input'+num.newHKey+'" value="'+num.newHVal+'" style="border-radius:10px;" placeholder="'+num.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
+                    + '</fieldset>'
+                  + '</form>'
+                + '</div>';
+    return numberHTML;
+  }
+
+
+  // ----------------------------------------------- Calendar Attr -----------------------------------------------
+
+
+  function calendarAttribute(date) {
+    var calendarHTML = '';
+
+    calendarHTML  +='<div class="col-12">'
                     + '<form action="#" method="post" class="demoForm">'
                       + '<fieldset class="minHeight">'
-                        + '<legend>'+options.newHKey+'</legend>'
-                        + '<select id="input'+options.newHKey+'" name="'+options.newHKey+'" style="border-radius:10px;" value="optionDisp" onchange="selectedOption(this.name)">';
-  
-      for (const [varsKey, varsValue] of Object.entries(options.newStatOpts[0])) {
-  
-        // checking if the option is the one existing in the localStorage... if it is then it puts the 'selected' attribute in the tag
-        if (varsValue == myObjectStatus) {
-          selectHTML      +='<option value="'+varsValue+'" selected>'+varsValue+'</option>';
-        }
-        else {
-          selectHTML      +='<option value="'+varsValue+'">'+varsValue+'</option>';
-        }
-      }
-      selectHTML        +='</select>'
+                        + '<legend>'+date.newHKey+'</legend>'
+                        + '<input type="date" id="input'+date.newHKey+'" value="'+date.newHVal+'" style="border-radius:10px;" name="'+date.newHKey+'" onchange="newDate(this.name)">'
                       + '</fieldset>'
                     + '</form>'
                   + '</div>';
-  
-      return selectHTML;
-    }
-  
-    // updates localStorage when a new option is selected
-    function selectedOption(str) {
-      var selected = $('#inputstatus').find(':selected').text();
-      var superKey = objType+ '_' +objItemID;
-      var myString = localStorage.getItem(superKey);
-      var myObject = JSON.parse(myString);
-      var change = selected;
-      myObject[str] = change;
-      backToString = JSON.stringify(myObject);
-      addToLocalStorage(superKey, backToString);
-      // console.log("status is now", change);
-      
-    }
-  
-  
-    // ------------------------------------------------ Number Attr ------------------------------------------------
-  
-  
-    function numberAttribute(num) {
-      var numberHTML = '';
-  
-      numberHTML  +='<div class="col-12">'
-                    + '<form action="#" method="post" class="demoForm">'
-                      + '<fieldset class="minHeight">'
-                        + '<legend>'+num.newHKey+'</legend>'
-                        + '<input type="number" id="input'+num.newHKey+'" value="'+num.newHVal+'" style="border-radius:10px;" placeholder="'+num.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
-                      + '</fieldset>'
-                    + '</form>'
-                  + '</div>';
-      return numberHTML;
-    }
-  
-  
-    // ----------------------------------------------- Calendar Attr -----------------------------------------------
-  
-  
-    function calendarAttribute(date) {
-      var calendarHTML = '';
-  
-      calendarHTML  +='<div class="col-12">'
-                      + '<form action="#" method="post" class="demoForm">'
-                        + '<fieldset class="minHeight">'
-                          + '<legend>'+date.newHKey+'</legend>'
-                          + '<input type="date" id="input'+date.newHKey+'" value="'+date.newHVal+'" style="border-radius:10px;" name="'+date.newHKey+'" onchange="newDate(this.name)">'
-                        + '</fieldset>'
-                      + '</form>'
-                    + '</div>';
-  
-      return calendarHTML;
-    }
-  
-    // updates localStorage when a new date is selected
-    function newDate(date) {
-      var selected = $('#inputdueDate').val();
-      var superKey = objType+ '_' +objItemID;
-      var myString = localStorage.getItem(superKey);
-      var myObject = JSON.parse(myString);
-      var change = selected;
-      myObject[date] = change;
-      backToString = JSON.stringify(myObject);
-      addToLocalStorage(superKey, backToString);
-      console.log("dueDate is now ", change);
-      
-    }
-  
-  
-    // ------------------------------------------------- Array List -------------------------------------------------
-  
-  
-    function arrayList(array) {
-      
-      // console.log("This is the input for arrayList(array): ", array);
-  
-      var HTMLoutput = '';
-      var HTMLarrayValues = '';
-      var objTypeID = objType+'_'+objItemID;
-      var tagNumbers = [];
-      var tagNames = [];
-      var tagObj = {};
-  
-      HTMLoutput  +='<div class="col-12">'
-                    + '<form action="#" method="post" class="demoForm">'
-                      + '<fieldset class="minHeight">'
-                        + '<legend>'+array.newHKey+'</legend>'
-                          + '<div id="outerDiv">'
-                            + '<div id="appendTo">';
-  
-      // fill up array, tagNumbers, with tag numbers
-      for (const [arrayKey, arrayValue] of Object.entries(JSON.parse(localStorage.getItem(objTypeID)))) {
-        // console.log("This is arrayKey: ", arrayKey); // id, name, description, status, ...
-        // console.log("This is arrayValue: ", arrayValue); // 1, COI: Static Site HTML Structure, This task creates the structure of the Static site, ...
-        if (arrayKey == 'tags') {
-          for (const [tagKey, tagValue] of Object.entries(arrayValue)) {
-            tagNumbers.push(tagValue);
-          }
+
+    return calendarHTML;
+  }
+
+  // updates localStorage when a new date is selected
+  function newDate(date) {
+    var selected = $('#inputdueDate').val();
+    var superKey = objType+ '_' +objItemID;
+    var myString = localStorage.getItem(superKey);
+    var myObject = JSON.parse(myString);
+    var change = selected;
+    myObject[date] = change;
+    backToString = JSON.stringify(myObject);
+    addToLocalStorage(superKey, backToString);
+    console.log("dueDate is now ", change);
+    
+  }
+
+
+  // ------------------------------------------------- Array List -------------------------------------------------
+
+
+  function arrayList(array) {
+    
+    // console.log("This is the input for arrayList(array): ", array);
+
+    var HTMLoutput = '';
+    var HTMLarrayValues = '';
+    var objTypeID = objType+'_'+objItemID;
+    var tagNumbers = [];
+    var tagNames = [];
+    var tagObj = {};
+
+    HTMLoutput  +='<div class="col-12">'
+                  + '<form action="#" method="post" class="demoForm">'
+                    + '<fieldset class="minHeight">'
+                      + '<legend>'+array.newHKey+'</legend>'
+                        + '<div id="outerDiv">'
+                          + '<div id="appendTo">';
+
+    // fill up array, tagNumbers, with tag numbers
+    for (const [arrayKey, arrayValue] of Object.entries(JSON.parse(localStorage.getItem(objTypeID)))) {
+      // console.log("This is arrayKey: ", arrayKey); // id, name, description, status, ...
+      // console.log("This is arrayValue: ", arrayValue); // 1, COI: Static Site HTML Structure, This task creates the structure of the Static site, ...
+      if (arrayKey == 'tags') {
+        for (const [tagKey, tagValue] of Object.entries(arrayValue)) {
+          tagNumbers.push(tagValue);
         }
       }
-  
-      // if tag number array includes the tag number, display the tag name
-      for (const [arrayKey, arrayValue] of Object.entries(array.newData.tags)) {
-        if (tagNumbers.includes(arrayValue.id)) {
-          tagNames.push(arrayValue.name);
-        }
+    }
+
+    // if tag number array includes the tag number, display the tag name
+    for (const [arrayKey, arrayValue] of Object.entries(array.newData.tags)) {
+      if (tagNumbers.includes(arrayValue.id)) {
+        tagNames.push(arrayValue.name);
       }
-  
-      // filling tagObj with two arrays: tagNumbers and tagNames
-      tagNumbers.forEach((key, i) => tagObj[key] = tagNames[i]);
-  
-      // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
-      for (const[arrayKey, arrayValue] of Object.entries(tagObj)) {
-        HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" style="border-radius:10px;" value="-" onclick="removeFunction(this)"></div></div>';
-        // counts up the indices if there's any preset values in the array
-      }
-      
-      // creating the select tag
-      HTMLoutput += HTMLarrayValues
-                            + '</div>'
+    }
+
+    // filling tagObj with two arrays: tagNumbers and tagNames
+    tagNumbers.forEach((key, i) => tagObj[key] = tagNames[i]);
+
+    // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
+    for (const[arrayKey, arrayValue] of Object.entries(tagObj)) {
+      HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" style="border-radius:10px;" value="-" onclick="removeFunction(this)"></div></div>';
+      // counts up the indices if there's any preset values in the array
+    }
+    
+    // creating the select tag
+    HTMLoutput += HTMLarrayValues
                           + '</div>'
-                          + '<br><select id="scripts" name="scripts" style="border-radius:10px;">';
-  
-      // creating all the options from the arrayOfOptions array in the select tag
-      for (const [optionKey, optionValue] of Object.entries(array.newData.tags)) {
-        if (optionKey in tagObj) {
-          HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'">'+optionValue.name+'</option>';
-        }
-        else {
-          HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'" selected>'+optionValue.name+'</option>';
-        }
-        
-      }
-  
-      // closing the form tags and creating the add button
-      HTMLoutput          +='</select>'
-                          + '<div id="buttonSpot">'
-                          + '<input type="button" id="showTxt" value="Add" style="border-radius:10px;" onclick="addFunction()"/>'
                         + '</div>'
-                      + '</fieldset>'
-                    + '</form>'
-                  + '</div>';
-  
-      return HTMLoutput;
-    }
-  
-  
-    // ------------------------------------------------ Add function ------------------------------------------------
-  
-  
-    // part of the arrayList function that will add whatever is the selected option to localStorage
-    function addFunction() {
-      var objTypeID = objType+'_'+objItemID;
-      var tagList = [];
-  
-      // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
-      var localObj = JSON.parse(localStorage.getItem(objTypeID));
-      var select = document.getElementById('scripts');
-  
-      // getting the number from the id of the selected option
-      elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
-  
-      tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
-      console.log("This is tagList: ", tagList);
-  
-      if (tagList.includes(Number(elementVal))) {
-        console.log("tagList already includes", elementVal);
+                        + '<br><select id="scripts" name="scripts" style="border-radius:10px;">';
+
+    // creating all the options from the arrayOfOptions array in the select tag
+    for (const [optionKey, optionValue] of Object.entries(array.newData.tags)) {
+      if (optionKey in tagObj) {
+        HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'">'+optionValue.name+'</option>';
       }
       else {
-        tagList.push(Number(elementVal));
-        tagList.sort();
-        JSON.stringify(tagList);
-        localObj.tags = tagList;
-        console.log("This is the localObj with updated tags: ", localObj);
-        localStorage.setItem(objTypeID, JSON.stringify(localObj));
+        HTMLoutput          +='<option id="optionValue_'+optionValue.id+'" value="'+optionValue.name+'" selected>'+optionValue.name+'</option>';
       }
-      location.reload();
-    }
-  
-  
-    // ----------------------------------------------- Remove function -----------------------------------------------
-  
-  
-    // removes an item from localStorage and reloads the window which regenerates the display area
-    function removeFunction(val) { // val is the entire remove button
-      var objTypeID = objType+'_'+objItemID;
-  
-      // removing all the text from the remove button's id
-      var valIDNum = val.id.replace(/remvBtn_/, '');
-      // console.log("This is valIDNum: ", valIDNum);
-      var localObj = JSON.parse(localStorage.getItem(objTypeID));
-      // console.log("This is localObj: ", localObj);
       
-      localObjTags = localObj.tags;
-      // console.log("This is localObjTags: ", localObjTags);
-  
-      // console.log("This is the index of valIDNum: ", localObjTags.indexOf(Number(valIDNum)));
-      localObjTags.splice(localObjTags.indexOf(Number(valIDNum)), 1);
-      // console.log("This is the updated localObjTags: ", localObjTags);
-  
-      localObj.tags = localObjTags;
-      // console.log("This is localObj now: ", localObj);
-  
-      localStorage.setItem(objTypeID, JSON.stringify(localObj));
-  
-      location.reload();
     }
+
+    // closing the form tags and creating the add button
+    HTMLoutput          +='</select>'
+                        + '<div id="buttonSpot">'
+                        + '<input type="button" id="showTxt" value="Add" style="border-radius:10px;" onclick="addFunction()"/>'
+                      + '</div>'
+                    + '</fieldset>'
+                  + '</form>'
+                + '</div>';
+
+    return HTMLoutput;
+  }
+
+
+  // ------------------------------------------------ Add function ------------------------------------------------
+
+
+  // part of the arrayList function that will add whatever is the selected option to localStorage
+  function addFunction() {
+    var objTypeID = objType+'_'+objItemID;
+    var tagList = [];
+
+    // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
+    var localObj = JSON.parse(localStorage.getItem(objTypeID));
+    var select = document.getElementById('scripts');
+
+    // getting the number from the id of the selected option
+    elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
+
+    tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
+    console.log("This is tagList: ", tagList);
+
+    if (tagList.includes(Number(elementVal))) {
+      console.log("tagList already includes", elementVal);
+    }
+    else {
+      tagList.push(Number(elementVal));
+      tagList.sort();
+      JSON.stringify(tagList);
+      localObj.tags = tagList;
+      console.log("This is the localObj with updated tags: ", localObj);
+      localStorage.setItem(objTypeID, JSON.stringify(localObj));
+    }
+    location.reload();
+  }
+
+
+  // ----------------------------------------------- Remove function -----------------------------------------------
+
+
+  // removes an item from localStorage and reloads the window which regenerates the display area
+  function removeFunction(val) { // val is the entire remove button
+    var objTypeID = objType+'_'+objItemID;
+
+    // removing all the text from the remove button's id
+    var valIDNum = val.id.replace(/remvBtn_/, '');
+    // console.log("This is valIDNum: ", valIDNum);
+    var localObj = JSON.parse(localStorage.getItem(objTypeID));
+    // console.log("This is localObj: ", localObj);
+    
+    localObjTags = localObj.tags;
+    // console.log("This is localObjTags: ", localObjTags);
+
+    // console.log("This is the index of valIDNum: ", localObjTags.indexOf(Number(valIDNum)));
+    localObjTags.splice(localObjTags.indexOf(Number(valIDNum)), 1);
+    // console.log("This is the updated localObjTags: ", localObjTags);
+
+    localObj.tags = localObjTags;
+    // console.log("This is localObj now: ", localObj);
+
+    localStorage.setItem(objTypeID, JSON.stringify(localObj));
+
+    location.reload();
+  }
 }
 
 if (URLValue == 'create') {
