@@ -736,9 +736,10 @@ if (URLValue == 'edit') {
     var select = document.getElementById(value); // entire select and options found previous to the Add button
 
     // getting the number from the id of the selected option
-    var elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
+    var elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, ''); // 0/1/2
 
-    tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
+
+    tagList = localObj[opt];
     console.log("This is tagList: ", tagList);
 
     if (tagList.includes(Number(elementVal))) {
