@@ -309,7 +309,7 @@ if (URLValue == 'edit') {
       var objTypeData = data[objType];
       var tagTypeData = data['tags']; // objTypeData specifically for tags
       var configTypeData = config[objType];
-      console.log("This is type: ", type);
+      // console.log("This is type: ", type);
 
       var checkLocalStorageParams = {
         data : data,
@@ -318,7 +318,7 @@ if (URLValue == 'edit') {
 
       // filling arrayOfOptions[]
       var tagData = data.tags;
-      console.log("This is tagData (data.tags): ", tagData);
+      // console.log("This is tagData (data.tags): ", tagData);
       
 
       // -------------------------------------------- Navigation Bar --------------------------------------------
