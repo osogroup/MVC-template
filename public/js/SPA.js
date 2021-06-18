@@ -717,12 +717,10 @@ if (URLValue == 'edit') {
 
     // closing the form tags and creating the add button
     HTMLoutput          +='</select>'
-                        + '<div id="buttonSpot">'
                         + '<input type="button" id="showTxt" value="Add" style="border-radius:10px;" onclick="addFunction()"/>'
-                      + '</div>'
-                    + '</fieldset>'
-                  + '</form>'
-                + '</div>';
+                      + '</fieldset>'
+                    + '</form>'
+                  + '</div>';
 
     return HTMLoutput;
   }
