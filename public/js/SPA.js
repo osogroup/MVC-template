@@ -1,6 +1,9 @@
+import fs from 'fs';
+
 $(document).ready(function () {
   HTMLGenerate();
 });
+
 
 // gets all the Objects/Arrays from objectConfig.json and returns them
 const configData = async () => {
