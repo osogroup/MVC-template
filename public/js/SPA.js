@@ -655,7 +655,7 @@ if (URLValue == 'edit') {
 
   function arrayList(array) {
     
-    // console.log("This is the input for arrayList(array): ", array);
+    console.log("This is the input for arrayList(array): ", array);
 
     var HTMLoutput = '';
     var HTMLarrayValues = '';
@@ -717,7 +717,7 @@ if (URLValue == 'edit') {
 
     // closing the form tags and creating the add button
     HTMLoutput          +='</select>'
-                        + '<input type="button" id="showTxt" value="Add" style="border-radius:10px;" onclick="addFunction()"/>'
+                        + '<input type="button" id="addBtn_'+objTypeID+'_" value="Add" style="border-radius:10px;" onclick="addFunction()"/>'
                       + '</fieldset>'
                     + '</form>'
                   + '</div>';
@@ -754,8 +754,9 @@ if (URLValue == 'edit') {
       localObj.tags = tagList;
       console.log("This is the localObj with updated tags: ", localObj);
       localStorage.setItem(objTypeID, JSON.stringify(localObj));
+      .append()
     }
-    location.reload();
+    // location.reload();
   }
 
 
