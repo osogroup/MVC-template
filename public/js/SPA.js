@@ -738,7 +738,6 @@ if (URLValue == 'edit') {
     // getting the number from the id of the selected option
     var elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, ''); // 0/1/2
 
-
     tagList = localObj[opt];
     console.log("This is tagList: ", tagList);
 
@@ -749,7 +748,7 @@ if (URLValue == 'edit') {
       tagList.push(Number(elementVal));
       tagList.sort();
       JSON.stringify(tagList);
-      localObj.tags = tagList;
+      localObj[opt] = tagList;
       console.log("This is the localObj with updated tags: ", localObj);
       localStorage.setItem(objTypeID, JSON.stringify(localObj));
       // .append()
