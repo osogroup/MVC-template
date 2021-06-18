@@ -772,10 +772,7 @@ if (URLValue == 'edit') {
     var localObj = JSON.parse(localStorage.getItem(objTypeID));
 
     var localObjTags = localObj[keyWithoutIndex];
-    console.log("This is localObjTags:",localObjTags);
-    
-    localObjTags = localObj.tags;
-    // console.log("This is localObjTags: ", localObjTags);
+        // console.log("This is localObjTags: ", localObjTags);
 
     // console.log("This is the index of valIDNum: ", localObjTags.indexOf(Number(valIDNum)));
     localObjTags.splice(localObjTags.indexOf(Number(valIDNum)), 1);
