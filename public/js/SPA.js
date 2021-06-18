@@ -688,7 +688,7 @@ if (URLValue == 'edit') {
 
     // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
     for (const[arrayKey, arrayValue] of Object.entries(tagObj)) {
-      HTMLarrayValues       +='<div class="row"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" style="border-radius:10px;" value="-" onclick="removeFunction(this)"></div></div>';
+      HTMLarrayValues       +='<div class="row"><div class="col-12"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" style="border-radius:10px;" value="-" onclick="removeFunction(this)"></div></div></div>';
       // counts up the indices if there's any preset values in the array
     }
     
@@ -730,7 +730,6 @@ if (URLValue == 'edit') {
     var value = addBtn.id.replace('addBtn_', ''); // task_5_tags
     var opt = value.replace(objTypeID+'_', ''); // tags
     var tagList = [];
-    var HTMLoutput = '<div class="col-12"><div id="" class="col-10">'+select.options[elementVal].value+'</div><input type="button" id="remvBtn_'+value+'_'+elementVal+'" class="col-2" style="border-radius:10px;" value="-" onclick="removeFunction(this)"></div>';
 
     // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
     var localObj = JSON.parse(localStorage.getItem(objTypeID));
@@ -738,6 +737,8 @@ if (URLValue == 'edit') {
 
     // getting the number from the id of the selected option
     var elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, ''); // 0/1/2
+
+    var HTMLoutput = '<div class="row"><div class="col-12"><div id="" class="col-10">'+select.options[elementVal].value+'</div><input type="button" id="remvBtn_'+value+'_'+elementVal+'" class="col-2" style="border-radius:10px;" value="-" onclick="removeFunction(this)"></div></div>';
 
     tagList = localObj[opt];
     console.log("This is tagList: ", tagList);
