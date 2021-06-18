@@ -730,6 +730,7 @@ if (URLValue == 'edit') {
     var value = addBtn.id.replace('addBtn_', ''); // task_5_tags
     var opt = value.replace(objTypeID+'_', ''); // tags
     var tagList = [];
+    var HTMLoutput = '<div class="col-12"><div id="" class="col-10">'+select.options[elementVal].value+'</div><input type="button" id="remvBtn_'+value+'_'+elementVal+'" class="col-2" style="border-radius:10px;" value="-" onclick="removeFunction(this)"></div>';
 
     // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
     var localObj = JSON.parse(localStorage.getItem(objTypeID));
@@ -751,7 +752,7 @@ if (URLValue == 'edit') {
       localObj[opt] = tagList;
       console.log("This is the localObj with updated tags: ", localObj);
       localStorage.setItem(objTypeID, JSON.stringify(localObj));
-      // .append()
+      $('#appendTo').append(HTMLoutput);
     }
     // location.reload();
   }
