@@ -774,7 +774,7 @@ if (URLValue == 'edit') {
     // setting the localObj['tags'] equal to the temp array
     localObj[keyWithoutIndex] = localObjTags;
 
-    // updating localStorage with newer key values
+    // updating localStorage with newer values
     localStorage.setItem(objTypeID, JSON.stringify(localObj));
 
   }
