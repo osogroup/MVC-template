@@ -717,7 +717,7 @@ if (URLValue == 'edit') {
 
     // closing the form tags and creating the add button
     HTMLoutput          +='</select>'
-                        + '<input type="button" id="addBtn_'+objTypeID+'_" value="Add" style="border-radius:10px;" onclick="addFunction()"/>'
+                        + '<input type="button" id="addBtn_'+objTypeID+'_'+array.newHKey+'" value="Add" style="border-radius:10px;" onclick="addFunction(this)"/>'
                       + '</fieldset>'
                     + '</form>'
                   + '</div>';
@@ -730,8 +730,9 @@ if (URLValue == 'edit') {
 
 
   // part of the arrayList function that will add whatever is the selected option to localStorage
-  function addFunction() {
-    var objTypeID = objType+'_'+objItemID;
+  function addFunction(addBtn) {
+    var objTypeID = objType+'_'+objItemID; //task_5
+    var value = add
     var tagList = [];
 
     // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
@@ -754,7 +755,7 @@ if (URLValue == 'edit') {
       localObj.tags = tagList;
       console.log("This is the localObj with updated tags: ", localObj);
       localStorage.setItem(objTypeID, JSON.stringify(localObj));
-      .append()
+      // .append()
     }
     // location.reload();
   }
