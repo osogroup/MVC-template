@@ -649,7 +649,7 @@ if (URLValue == 'edit') {
 
   function arrayList(array) {
     
-    // console.log("This is the input for arrayList(array): ", array);
+    console.log("This is the input for arrayList(array): ", array);
 
     var HTMLoutput = '';
     var HTMLarrayValues = '';
@@ -688,8 +688,7 @@ if (URLValue == 'edit') {
 
     // showing all the items in the arrayOfOptionsNames array (none if the array is preset as empty)
     for (const[arrayKey, arrayValue] of Object.entries(tagObj)) {
-      HTMLarrayValues       +='<div class="row"><div class="col-12"><div class="col-10">'+arrayValue+'</div><div class="col-2"><input type="button" id="remvBtn_'+arrayKey+'" style="border-radius:10px;" value="-" onclick="removeFunction(this)"></div></div></div>';
-      // counts up the indices if there's any preset values in the array
+      HTMLarrayValues       +='<div class="row"><div class="col-12"><div class="col-10">'+arrayValue+'</div><input type="button" id="remvBtn_'+objTypeID+'_'+array.newHKey+'_'+arrayKey+'" class="col-2" style="border-radius:10px;" value="-" onclick="removeFunction(this)"></div></div>';
     }
     
     // creating the select tag
@@ -764,11 +763,14 @@ if (URLValue == 'edit') {
 
   // removes an item from localStorage and reloads the window which regenerates the display area
   function removeFunction(val) { // val is the entire remove button
-    var objTypeID = objType+'_'+objItemID;
+    console.log("This is val:",val);
+    var objTypeID = objType+'_'+objItemID; // task_5
+
+    var keyAndIndex = val.id
 
     // removing all the text from the remove button's id
     var valIDNum = val.id.replace(/remvBtn_/, '');
-    // console.log("This is valIDNum: ", valIDNum);
+    console.log("This is valIDNum: ", valIDNum);
     var localObj = JSON.parse(localStorage.getItem(objTypeID));
     // console.log("This is localObj: ", localObj);
     
@@ -784,7 +786,7 @@ if (URLValue == 'edit') {
 
     localStorage.setItem(objTypeID, JSON.stringify(localObj));
 
-    location.reload();
+    // location.reload();
   }
 }
 
