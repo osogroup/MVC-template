@@ -768,7 +768,8 @@ if (URLValue == 'edit') {
 
     var keyAndIndex = val.id.replace('remvBtn_'+objTypeID+'_', ''); // tags_2
     var valIDNum = keyAndIndex.replace(/\D/g, ''); // 0/1/2
-    var keyWithoutIndex = keyAndIndex.replace('_'+valIDNum);
+    var keyWithoutIndex = keyAndIndex.replace('_'+valIDNum, '');
+    console.log("This is keyWithoutIndex:",keyWithoutIndex);
 
     var localObj = JSON.parse(localStorage.getItem(objTypeID));
     // console.log("This is localObj: ", localObj);
