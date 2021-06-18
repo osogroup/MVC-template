@@ -770,7 +770,7 @@ if (URLValue == 'edit') {
 
     // removing all the text from the remove button's id
     var valIDNum = keyAndIndex.replace(/\D/g, ''); // 0/1/2
-    console.log("This is valIDNum: ", valIDNum);
+    
     var localObj = JSON.parse(localStorage.getItem(objTypeID));
     // console.log("This is localObj: ", localObj);
     
