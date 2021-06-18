@@ -760,9 +760,12 @@ if (URLValue == 'edit') {
     console.log("This is val:",val);
     var objTypeID = objType+'_'+objItemID; // task_5
 
+    // getting all the variables that I need for making temp array and splicing
     var keyAndIndex = val.id.replace('remvBtn_'+objTypeID+'_', ''); // tags_0/tags_1/tags_2
     var valIDNum = keyAndIndex.replace(/\D/g, ''); // 0/1/2
     var keyWithoutIndex = keyAndIndex.replace('_'+valIDNum, ''); // tags
+
+    // putting localStorage key in an object 
     var localObj = JSON.parse(localStorage.getItem(objTypeID));
 
     // creating temporary array
