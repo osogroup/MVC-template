@@ -696,7 +696,7 @@ if (URLValue == 'edit') {
     HTMLoutput += HTMLarrayValues
                           + '</div>'
                         + '</div>'
-                        + '<br><select id="scripts" name="scripts" style="border-radius:10px;">';
+                        + '<br><select id="'+objTypeID+'_'+array.newHKey+'" name="scripts" style="border-radius:10px;">';
 
     // creating all the options from the arrayOfOptions array in the select tag
     for (const [optionKey, optionValue] of Object.entries(array.newData.tags)) {
@@ -733,11 +733,10 @@ if (URLValue == 'edit') {
 
     // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
     var localObj = JSON.parse(localStorage.getItem(objTypeID));
-    var select = document.getElementById(value);
-    console.log("This is select:",select);
+    var select = document.getElementById(value); // entire select and options found previous to the Add button
 
     // getting the number from the id of the selected option
-    elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
+    var elementVal = select.options[select.selectedIndex].id.replace(/optionValue_/, '');
 
     tagList = JSON.parse(localStorage.getItem(objTypeID)).tags;
     console.log("This is tagList: ", tagList);
