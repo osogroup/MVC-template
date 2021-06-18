@@ -765,19 +765,17 @@ if (URLValue == 'edit') {
     var keyWithoutIndex = keyAndIndex.replace('_'+valIDNum, ''); // tags
     var localObj = JSON.parse(localStorage.getItem(objTypeID));
 
+    // creating temporary array
     var localObjTags = localObj[keyWithoutIndex];
-    console.log("This is localObjTags: ", localObjTags);
 
-    // console.log("This is the index of valIDNum: ", localObjTags.indexOf(Number(valIDNum)));
+    // removing a value from temporary array
     localObjTags.splice(localObjTags.indexOf(Number(valIDNum)), 1);
-    console.log("This is the updated localObjTags: ", localObjTags);
 
-    localObj.tags = localObjTags;
-    // console.log("This is localObj now: ", localObj);
+    // setting the localObj['tags'] equal to the temp array
+    localObj[keyWithoutIndex] = localObjTags;
 
     localStorage.setItem(objTypeID, JSON.stringify(localObj));
 
-    // location.reload();
   }
 }
 
