@@ -766,7 +766,8 @@ if (URLValue == 'edit') {
     console.log("This is val:",val);
     var objTypeID = objType+'_'+objItemID; // task_5
 
-    var keyAndIndex = val.id
+    var keyAndIndex = val.id.replace('remvBtn_'+objTypeID+'_', ''); // tags_2
+    console.log("This is keyAndIndex:",keyAndIndex);
 
     // removing all the text from the remove button's id
     var valIDNum = val.id.replace(/remvBtn_/, '');
