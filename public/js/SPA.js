@@ -724,7 +724,7 @@ if (URLValue == 'edit') {
 
   // part of the arrayList function that will add whatever is the selected option to localStorage
   function addFunction(addBtn) {
-    console.log("This is addFunction parameters:",addBtn);
+    // console.log("This is addFunction parameters:",addBtn);
     var objTypeID = objType+'_'+objItemID; // task_5
     var value = addBtn.id.replace('addBtn_', ''); // task_5_tags
     var opt = value.replace(objTypeID+'_', ''); // tags
@@ -740,7 +740,7 @@ if (URLValue == 'edit') {
     var HTMLoutput = '<div class="row"><div class="col-12"><div id="" class="col-10">'+select.options[elementVal].value+'</div><input type="button" id="remvBtn_'+value+'_'+elementVal+'" class="col-2" style="border-radius:10px;" value="-" onclick="removeFunction(this)"></div></div>';
 
     tagList = localObj[opt];
-    console.log("This is tagList: ", tagList);
+    // console.log("This is tagList: ", tagList);
 
     if (tagList.includes(Number(elementVal))) {
       console.log("tagList already includes", elementVal);
@@ -750,7 +750,7 @@ if (URLValue == 'edit') {
       tagList.sort();
       JSON.stringify(tagList);
       localObj[opt] = tagList;
-      console.log("This is the localObj with updated tags: ", localObj);
+      // console.log("This is the localObj with updated tags: ", localObj);
       localStorage.setItem(objTypeID, JSON.stringify(localObj));
       $('#appendTo').append(HTMLoutput);
     }
@@ -769,9 +769,10 @@ if (URLValue == 'edit') {
     var keyAndIndex = val.id.replace('remvBtn_'+objTypeID+'_', ''); // tags_0/tags_1/tags_2
     var valIDNum = keyAndIndex.replace(/\D/g, ''); // 0/1/2
     var keyWithoutIndex = keyAndIndex.replace('_'+valIDNum, ''); // tags
-
     var localObj = JSON.parse(localStorage.getItem(objTypeID));
-    // console.log("This is localObj: ", localObj);
+
+    var localObjTags = localObj[keyWithoutIndex];
+    console.log("This is localObjTags:",localObjTags);
     
     localObjTags = localObj.tags;
     // console.log("This is localObjTags: ", localObjTags);
