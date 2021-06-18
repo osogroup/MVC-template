@@ -35,7 +35,7 @@ function checkLocalStorage(check) {
     // console.log("This is localStorage.getItem(objectKeys)", localStorage.getItem(objectKeys));
     var forOfLoop = JSON.parse(localStorage.getItem(objectKeys));
     console.log("objectKeys exists..!");
-    console.log(localStorage);
+    // console.log(localStorage);
   }
   else {
     var forOfLoop = check.objTypeData[objItemID];
