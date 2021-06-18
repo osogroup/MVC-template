@@ -767,10 +767,9 @@ if (URLValue == 'edit') {
     var objTypeID = objType+'_'+objItemID; // task_5
 
     var keyAndIndex = val.id.replace('remvBtn_'+objTypeID+'_', ''); // tags_2
-
-    // removing all the text from the remove button's id
     var valIDNum = keyAndIndex.replace(/\D/g, ''); // 0/1/2
-    
+    var keyWithoutIndex = keyAndIndex.replace('_'+valIDNum);
+
     var localObj = JSON.parse(localStorage.getItem(objTypeID));
     // console.log("This is localObj: ", localObj);
     
