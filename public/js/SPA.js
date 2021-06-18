@@ -727,7 +727,8 @@ if (URLValue == 'edit') {
   function addFunction(addBtn) {
     console.log("This is addFunction parameters:",addBtn);
     var objTypeID = objType+'_'+objItemID; //task_5
-    var value = add
+    var value = addBtn.id.replace('addBtn_', '');
+    console.log("This is value:",value);
     var tagList = [];
 
     // setting localObj equal to localStorage.getItem(task_0/task_1/task_2/ ...)
