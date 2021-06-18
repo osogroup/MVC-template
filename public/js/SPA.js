@@ -731,6 +731,7 @@ if (URLValue == 'edit') {
 
   // part of the arrayList function that will add whatever is the selected option to localStorage
   function addFunction(addBtn) {
+    console.log("This is addFunction parameters:",addBtn);
     var objTypeID = objType+'_'+objItemID; //task_5
     var value = add
     var tagList = [];
