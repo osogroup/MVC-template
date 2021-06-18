@@ -97,7 +97,7 @@ const HTMLGenerate = async () => {
 
   // ------------------------------------------ The Search Box ------------------------------------------
 
-  
+
   // creating the search box and designating its own row
   var searchVariable = '<div class="searchBox row">'
     + '<div class="col-4">'
@@ -106,9 +106,9 @@ const HTMLGenerate = async () => {
     + '</div>';
 
 
-
   // ----------------------------------------- The Table Headers -----------------------------------------
 
+  
   // opening table header row and adding The Search Box to tHeader
   tHeader += searchVariable + '<div class="tableHeader row">';
 
@@ -195,109 +195,8 @@ const HTMLGenerate = async () => {
   // closing each id=hacker-list div
   $('#TitleOfList').append('</div>');
 
-  var containerList = {};
-  containerList[objType] = new List(objType + 'Container', options);
 
-  refreshCallbacks(containerList[objType]);
 
-  // variable declaration
-  var idField = $('#' + objType + '-id-field'),
-    nameField = $('#' + objType + '-name-field'),
-    descField = $('#' + objType + '-desc-field'),
-    statusField = $('#' + objType + '-status-field'),
-    tagsField = $('#' + objType + '-tags-field'),
-    dueField = $('#' + objType + '-due-field'),
-    estField = $('#' + objType + '-est-field'),
-    editBtn = $('.edit-btn').hide(),
-    addBtn = $('.add-btn');
-
-  // pushes the edited values into the rows to be updated
-  editBtn.click(function () {
-    var item = containerList[objType].get('id', idField.val())[0];
-    item.values({
-      id: idField.val(),
-      name: nameField.val()
-      // city: cityField.val(),
-      // problem: problemField.val(),
-      // solution: solutionField.val()
-    });
-    clearFields();
-    editBtn.hide();
-    addBtn.show();
-  });
-
-  function refreshCallbacks(obj) {
-    var idField = $('#' + objType + '-id-field'),
-      nameField = $('#' + objType + '-name-field'),
-      descField = $('#' + objType + '-desc-field'),
-      statusField = $('#' + objType + '-status-field'),
-      tagsField = $('#' + objType + '-tags-field'),
-      dueField = $('#' + objType + '-due-field'),
-      estField = $('#' + objType + '-est-field'),
-      addBtn = $('.add-btn'),
-      editBtn = $('.edit-btn').hide(),
-      removeBtns = $('.remove-item-btn'),
-      MultipleEditBtns = $('.edit-item-btn');
-
-    // removes a row of data from the container
-    removeBtns.click(function () {
-      console.log("Entering remove function", this);
-      var listContainer = $(this).parent().parent().parent().parent().attr('id');
-      console.log("This is the listContainer: ", listContainer);
-      var itemId = $(this).parent().parent().find('.id').text();
-      console.log("this is the item id " + itemId);
-      var obj = new List(listContainer, options);
-      obj.remove('id', itemId);
-    });
-
-    // pulls the value from the rows and puts them into the input boxes for editing 
-    // MultipleEditBtns.click(function() {
-    //   var itemId = $(this).parent().parent().find('.id').text();
-    //   var itemValues = obj.get('id', itemId)[0].values();
-    // idField.val(itemValues.id);
-    // nameField.val(itemValues.name);
-    // descField.val(itemValues.desc);
-    // statusField.val(itemValues.status);
-    // tagsField.val(itemValues.tags);
-    // dueField.val(itemValues.due);
-    // estField.val(itemValues.est);
-
-    // editBtn.show();
-    // addBtn.hide();
-    // });
-    // Exit of refreshCallbacks();
-  }
-
-  // adds what is typed into the input fields into a new row
-  addBtn.click(function () {
-    console.log("Entering addBtn.click(function() {...}");
-    containerList[objType].add({
-      id: idField.val(),
-      name: nameField.val()
-      // id: Math.floor(Math.random()*110000),
-      // desc: descField.val(),
-      // status: statusField.val(),
-      // tags: tagsField.val(),
-      // due: dueField.val(),
-      // est: estField.val()
-    });
-    clearFields();
-    refreshCallbacks(containerList[objType]);
-  });
-
-  // clears the input fields after "Edit" or "Add" buttons are pushed
-  function clearFields() {
-    idField.val('');
-    nameField.val('');
-    descField.val('');
-    statusField.val('');
-    tagsField.val('');
-    dueField.val('');
-    estField.val('');
-  }
-
-  // Exiting the last forOf loop
-  // }
   console.log("Exiting HTMLGenerate(), Buttons ready..");
 }
 
@@ -940,19 +839,6 @@ if (URLValue == 'create') {
     // createObjectList();
   });
 
-  const configData = async () => {
-    var listConfig = await fetch("../tempData/objectConfig.json").then(response=>{return response.json();});
-    // console.log("configData output ", listConfig);
-    return listConfig;
-  }
-
-  // gets all the Objects/Arrays from listOfObjects.json and returns them
-  const listData = async () => {
-    var objVars = await fetch("../tempData/listOfObjects.json").then(response=>{return response.json();});
-    // console.log("listData output ", objVars);
-    return objVars;
-  }
-
   const typeData = async () => {
     var objVars = await fetch("../tempData/"+objType+".json").then(response=>{return response.json();});
     return objVars;
@@ -983,7 +869,7 @@ if (URLValue == 'create') {
   }
 
   const createHTML = async () => {
-    var data = await listData();
+    var data = await tempData();
     var config = await configData();
     var type = await typeData();
     var objTypeData = data[objType];
