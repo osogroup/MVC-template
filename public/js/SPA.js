@@ -486,27 +486,21 @@ if (URLValue == 'edit') {
     // options: arrayOfOptions, // 0,1
 
     if (myParams.sVal == "text") {
-      console.log("myParams.sVal == text");
       return textAttribute(newParams);
     }
     if (myParams.sVal == "textarea") {
-      console.log("myParams.sVal == textarea");
       return textareaAttribute(newParams);
     }
     if (myParams.sVal == "number") {
-      console.log("myParams.sVal == number");
       return numberAttribute(newParams);
     }
     if (myParams.sVal == "date") {
-      console.log("myParams.sVal == date");
       return calendarAttribute(newParams);
     }
     if (myParams.sVal == "array") {
-      console.log("myParams.sVal == array");
       return arrayList(arrayParams);
     }
     if (myParams.sVal == "option") {
-      console.log("myParams.sVal == option");
       return selectAttribute(optParams);
     }
   }
