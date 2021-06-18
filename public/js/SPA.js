@@ -1,5 +1,3 @@
-// import fs from 'fs';
-
 $(document).ready(function () {
   HTMLGenerate();
 });
