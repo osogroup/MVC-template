@@ -75,7 +75,7 @@ function addToLocalStorage(position, value) {
 
 
 function listRemoveFunction(btn) {
-  console.log("Trying to get ID number:",btn.parentNode.parentNode);
+  // console.log("This is the row's ID number:",btn.parentNode.parentNode.querySelector('.id').innerText);
   btn.parentNode.parentNode.remove(btn.parentNode.parentNode);
 }
 
