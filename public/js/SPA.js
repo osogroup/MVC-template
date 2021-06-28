@@ -89,8 +89,8 @@ const generateID = async () => {
 // gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
 const HTMLGenerate = async () => {
   if (!objType) {
-    alert("Enter '?type=task' at the end of the URL");
-    return;
+    var typeButton = '<a href="/?type=task">task</a>';
+    return typeButton;
   }
   
   console.log("Entering HTMLGenerate()");
