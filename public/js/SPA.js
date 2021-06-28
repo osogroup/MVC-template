@@ -71,7 +71,13 @@ function addToLocalStorage(position, value) {
 }
 
 
-// ---------------------------------------------- Remove Function ----------------------------------------------
+// -------------------------------------------- List Remove Function --------------------------------------------
+
+
+function listRemoveFunction(btn) {
+  console.log("This is var:",btn);
+}
+
 
 // ------------------------------------------------ ID Generator ------------------------------------------------
 
@@ -234,7 +240,7 @@ const HTMLGenerate = async () => {
       + '</a>'
       + '</div>'
       + '<div class=col-1>'
-      + '<button class="remove-item-btn" style="border-radius:10px;"> Remove </button>'
+      + '<button class="remove-item-btn" style="border-radius:10px;" onclick="listRemoveFunction(this)"> Remove </button>'
       + '</div>';
 
     // closing object item row
