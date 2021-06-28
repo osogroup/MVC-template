@@ -868,7 +868,7 @@ if (URLValue == 'create') {
     var configTypeData = config[objType];
     var tempKey = objType+'_'+objItemID;
     console.log("This is tempKey:",tempKey);
-    console.log("This is data:",data);
+    // console.log("This is data:",data);
     
     var tagKeys = [];
     var tagNames = [];
@@ -938,7 +938,7 @@ if (URLValue == 'create') {
 
         // filling tagObj with two arrays: tagNumbers and tagNames
         tagKeys.forEach((key, i) => tagObj[key] = tagNames[i]);
-        console.log("This is tagObj:", tagObj);
+        // console.log("This is tagObj:", tagObj);
       }
 
       // creating the header and input fields
