@@ -76,6 +76,8 @@ function addToLocalStorage(position, value) {
 
 function listRemoveFunction(btn) {
   console.log("This is var:",btn);
+  console.log("This is parentNode.parentNode:",btn.parentNode.parentNode);
+  remove(btn.parentNode.parentNode);
 }
 
 
