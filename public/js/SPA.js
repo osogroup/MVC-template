@@ -90,7 +90,7 @@ const generateID = async () => {
 const HTMLGenerate = async () => {
   if (!objType) {
     var typeButton = '<a href="/?type=task">task</a>';
-    return typeButton;
+    $('TitleOfList').append(typeButton);
   }
   
   console.log("Entering HTMLGenerate()");
