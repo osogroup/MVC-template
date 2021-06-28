@@ -536,7 +536,7 @@ if (URLValue == 'edit') {
                     + '<form action="#" method="post" class="demoForm">'
                       + '<fieldset class="minHeight">'
                         + '<legend>'+textarea.newHKey+'</legend>'
-                        + '<textarea class="col-12" id="input'+textarea.newHKey+'" style="border-radius:10px;" placeholder="'+textarea.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'+textarea.newHVal+'</textarea>'
+                        + '<textarea class="col-11" id="input'+textarea.newHKey+'" style="border-radius:10px;" placeholder="'+textarea.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'+textarea.newHVal+'</textarea>'
                       + '</fieldset>'
                     + '</form>'
                   + '</div>';
@@ -1039,7 +1039,7 @@ if (URLValue == 'create') {
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
                       + '<legend>'+textarea.value+'</legend>'
-                      + '<textarea id="'+textarea.temp+'_'+textarea.value+'" class="col-12" style="border-radius:10px;" placeholder="'+textarea.placeholder+'" oninput="anyChange(this)"></textarea>'
+                      + '<textarea id="'+textarea.temp+'_'+textarea.value+'" class="col-11" style="border-radius:10px;" placeholder="'+textarea.placeholder+'" oninput="anyChange(this)"></textarea>'
                     + '</fieldset>'
                   + '</form>'
                 + '</div>';
