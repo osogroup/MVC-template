@@ -88,11 +88,32 @@ const generateID = async () => {
 
 // gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
 const HTMLGenerate = async () => {
-  
-  console.log("Entering HTMLGenerate()");
+
   var data = await tempData();
   var config = await configData();
-  var id = await generateID();
+  var IDGen = await generateID();
+
+  if(!objType) {
+    console.log("There is no Object Type...");
+
+    var noObjectType  = '<div id="contacts">'
+                    + '<div class="row">'
+                      + '<p id="header">'
+                        + '<img id="imageSpacing" src="/images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
+
+  // creating the links for the header
+  for (const [headerKey, headerValue] of Object.entries(data)) {
+    noObjectType          +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + headerKey.toUpperCase() + '</a>';
+  }
+
+  noObjectType          +='</p>'
+                    + '<h1>OAS Object List</h1>'
+                  + '</div>';
+  $('#TitleOfList').append(noObjectType);
+    return;
+  }
+  
+  console.log("Entering HTMLGenerate()");
 
 
   // --------------------------------------------- Navigation Bar ---------------------------------------------
@@ -123,7 +144,7 @@ const HTMLGenerate = async () => {
   // for (const [key, val] of Object.entries(data)) {
 
   // displaying Object Name
-  var tHeader = inputThings + '<a href="/?type='+objType+'&itemid='+id+'&value=create"><button style="border-radius:10px;">Create Item</button></a><h1>' + objType + '</h1>';
+  var tHeader = inputThings + '<a href="/?type='+objType+'&itemid='+IDGen+'&value=create"><button style="border-radius:10px;">Create Item</button></a><h1>' + objType + '</h1>';
 
   // creating sortable list library container 
   tHeader += '<div id="' + objType + 'Container">';
