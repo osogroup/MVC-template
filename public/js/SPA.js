@@ -261,7 +261,7 @@ const HTMLGenerate = async () => {
   // closing each id=hacker-list div
   $('#TitleOfList').append('</div>');
 
-  console.log("Exiting HTMLGenerate(), Buttons ready..");
+  console.log("Exiting HTMLGenerate()... Buttons ready");
 }
 
 if (URLValue == 'edit') {
