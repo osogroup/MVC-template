@@ -29,7 +29,7 @@ window.onload = async () => {
 
   // check for the code and state parameters
   const query = window.location.search;
-  console.log("This is query:", query);
+  // console.log("This is query:", query);
   if (query.includes("code=") && query.includes("state=")) {
 
     // Process the login state
