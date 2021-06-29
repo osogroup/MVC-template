@@ -399,7 +399,7 @@ if (URLValue == 'edit') {
         // console.log("This is headerValue:",headerValue); // 1, COI: Static Site HTML Structure, ... [0]
         if (headerKey == 'id') {
           HTMLoutput += '<div class="col-4 minHeight">'
-                        + '<div class="col-12">'+headerKey+'</div>';
+                        + '<div class="col-12">'+capitalize(headerKey)+'</div>';
 
         }
         else {
@@ -600,7 +600,7 @@ if (URLValue == 'edit') {
     selectHTML  +='<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
-                      + '<legend>'+options.newHKey+'</legend>'
+                      + '<legend>'+capitalize(options.newHKey)+'</legend>'
                       + '<select id="input'+options.newHKey+'" name="'+options.newHKey+'" style="border-radius:10px;" value="optionDisp" onchange="selectedOption(this.name)">';
 
     for (const [varsKey, varsValue] of Object.entries(options.newStatOpts[0])) {
@@ -645,7 +645,7 @@ if (URLValue == 'edit') {
     numberHTML  +='<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
-                      + '<legend>'+num.newHKey+'</legend>'
+                      + '<legend>'+capitalize(num.newHKey)+'</legend>'
                       + '<input type="number" id="input'+num.newHKey+'" value="'+num.newHVal+'" style="border-radius:10px;" placeholder="'+num.newHKey+'" oninput="anyChange(this.placeholder)" onchange="showData()">'
                     + '</fieldset>'
                   + '</form>'
@@ -663,7 +663,7 @@ if (URLValue == 'edit') {
     calendarHTML  +='<div class="col-12">'
                     + '<form action="#" method="post" class="demoForm">'
                       + '<fieldset class="minHeight">'
-                        + '<legend>'+date.newHKey+'</legend>'
+                        + '<legend>'+capitalize(date.newHKey)+'</legend>'
                         + '<input type="date" id="input'+date.newHKey+'" value="'+date.newHVal+'" style="border-radius:10px;" name="'+date.newHKey+'" onchange="newDate(this.name)">'
                       + '</fieldset>'
                     + '</form>'
@@ -704,7 +704,7 @@ if (URLValue == 'edit') {
     HTMLoutput  +='<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
-                      + '<legend>'+array.newHKey+'</legend>'
+                      + '<legend>'+capitalize(array.newHKey)+'</legend>'
                         + '<div id="outerDiv">'
                           + '<div id="appendTo">';
 
