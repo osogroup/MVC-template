@@ -111,16 +111,16 @@ const HTMLGenerate = async () => {
                       + '<p id="header">'
                         + '<img id="imageSpacing" src="/images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
 
-  // creating the links for the header
-  for (const [headerKey, headerValue] of Object.entries(data)) {
-    noObjectType          +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + headerKey.toUpperCase() + '</a>';
-  }
+    // creating the links for the header
+    for (const [headerKey, headerValue] of Object.entries(data)) {
+      noObjectType        +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + headerKey.toUpperCase() + '</a>';
+    }
 
-  noObjectType        +='</p>'
+    noObjectType      +='</p>'
                     + '<h1>OAS Object List</h1>'
                   + '</div>'
                 + '</div>';
-  $('#TitleOfList').append(noObjectType);
+    $('#TitleOfList').append(noObjectType);
     return;
   }
   
