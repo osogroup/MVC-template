@@ -270,6 +270,9 @@ const HTMLGenerate = async () => {
     options.valueNames.push(sortValue);
   }
 
+  // Init list ** VERY IMPORTANT, DO NOT DELETE **
+  var contactList = new List(objType+'Container', options);
+
   // closing each id=hacker-list div
   $('#TitleOfList').append('</div>');
 
