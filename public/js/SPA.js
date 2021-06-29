@@ -116,9 +116,10 @@ const HTMLGenerate = async () => {
     noObjectType          +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + headerKey.toUpperCase() + '</a>';
   }
 
-  noObjectType          +='</p>'
+  noObjectType        +='</p>'
                     + '<h1>OAS Object List</h1>'
-                  + '</div>';
+                  + '</div>'
+                + '</div>';
   $('#TitleOfList').append(noObjectType);
     return;
   }
@@ -140,8 +141,8 @@ const HTMLGenerate = async () => {
   }
 
   headerHTML          +='</p>'
-                    + '<h1>OAS Object List</h1>'
-                  + '</div>';
+                      + '<h1>OAS Object List</h1>'
+                    + '</div>';
   $('#TitleOfList').append(headerHTML);
 
   // console.log("objType in HTMLGenerate() ", objType);
