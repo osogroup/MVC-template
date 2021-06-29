@@ -929,7 +929,6 @@ if (URLValue == 'create') {
       // editableKey: 0, 1, 2, ...
       // editableValue: name, description, tags, ...
 
-
       // fill the options array with editableValue.opts
       if (type[editableValue].inpType == 'option') {
         // console.log("This is type[editableValue].opts:", type[editableValue].opts);
@@ -974,20 +973,7 @@ if (URLValue == 'create') {
 
       // console.log("This is type[editableValue].type", type[editableValue].type);
       HTMLoutput += inputFunction(inputParameters);
-      
 
-      // if the editableValue is in the required list according to objType 
-      // if (configTypeData.required.includes(editableValue) == true) {
-      //   // make the input box with a "required" attribute (includes '*' to let the admin see the required fields)
-      //   HTMLoutput += '<br><input type=textarea placeholder="*" required>';
-      // }
-      // // else
-      // else {
-      //   //   do what I already did below
-      //   HTMLoutput += '<br><input type=textarea>';
-      // }
-
-      // closing the header and input fields
       HTMLoutput += '</div>';
     }
 
