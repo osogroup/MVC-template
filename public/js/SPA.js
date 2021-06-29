@@ -381,7 +381,7 @@ if (URLValue == 'edit') {
       HTMLoutput += '</p>';
 
       // H1 header to let the user know which object they're editing
-      HTMLoutput += '<h1>Edit '+objType+' Item</h1>'
+      HTMLoutput += '<h1>Edit '+capitalize(objType)+' Item</h1>'
                 + '</div>';
 
       var forOfLoop = checkLocalStorage(checkLocalStorageParams);
