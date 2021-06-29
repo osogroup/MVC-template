@@ -53,7 +53,7 @@ function checkLocalStorage(check) {
         var objItemString = JSON.stringify(objItem);
         // console.log("This is objItemString: ", objItemString);
         addToLocalStorage(objectKeys, objItemString);
-        console.log(localStorage);
+        // console.log(localStorage);
       }
     }
   }
@@ -677,7 +677,7 @@ if (URLValue == 'edit') {
 
   function arrayList(array) {
     
-    console.log("This is the input for arrayList(array): ", array);
+    // console.log("This is the input for arrayList(array): ", array);
 
     var HTMLoutput = '';
     var HTMLarrayValues = '';
