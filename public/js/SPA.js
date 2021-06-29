@@ -166,7 +166,7 @@ const HTMLGenerate = async () => {
   // for (const [key, val] of Object.entries(data)) {
 
   // displaying Object Name
-  var tHeader = inputThings + '<a href="/?type='+objType+'&itemid='+IDGen+'&value=create"><button style="border-radius:10px;">Create Item</button></a><h1>' + objType + '</h1>';
+  var tHeader = inputThings + '<a href="/?type='+objType+'&itemid='+IDGen+'&value=create"><button style="border-radius:10px;">Create Item</button></a><h1>' + capitalize(objType) + '</h1>';
 
   // creating sortable list library container 
   tHeader += '<div id="' + objType + 'Container">';
