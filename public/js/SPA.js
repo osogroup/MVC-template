@@ -399,11 +399,11 @@ if (URLValue == 'edit') {
         // console.log("This is headerValue:",headerValue); // 1, COI: Static Site HTML Structure, ... [0]
         if (headerKey == 'id') {
           HTMLoutput += '<div class="col-4 minHeight">'
-                        + '<div class="col-12">'+capitalize(headerKey)+'</div>';
+                        + '<div class="col-12">'+headerKey.toUpperCase()+'</div>';
 
         }
         else {
-        HTMLoutput += '<div class="col-4 minHeight">';
+          HTMLoutput += '<div class="col-4 minHeight">';
         }
         
         if (configTypeData.editable.includes(headerKey) == true) {
@@ -922,7 +922,7 @@ if (URLValue == 'create') {
 
     // creating item header and input row
     HTMLoutput  +='<div class="row">'
-                  + '<div class="col-4"><div class="col-12">id</div><div class="col-12">'+objItemID+'</div></div>'
+                  + '<div class="col-4"><div class="col-12">ID</div><div class="col-12">'+objItemID+'</div></div>'
 
     // looping to find all the values in the editable key according to objType (tag, task, deliverable)
     for (const [editableKey, editableValue] of Object.entries(configTypeData.editable)) {
@@ -1061,7 +1061,7 @@ if (URLValue == 'create') {
     textHTML += '<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
-                      + '<legend>'+text.value+'</legend>'
+                      + '<legend>'+capitalize(text.value)+'</legend>'
                       + '<input type="text" id="'+text.temp+'_'+text.value+'" class="col-11" name="" style="border-radius:10px;" placeholder="'+text.placeholder+'" oninput="anyChange(this)">' //onchange="showChange()"
                     + '</fieldset>'
                   + '</form>'
@@ -1080,7 +1080,7 @@ if (URLValue == 'create') {
     textareaHTML += '<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
-                      + '<legend>'+textarea.value+'</legend>'
+                      + '<legend>'+capitalize(textarea.value)+'</legend>'
                       + '<textarea id="'+textarea.temp+'_'+textarea.value+'" class="col-11" style="border-radius:10px;" placeholder="'+textarea.placeholder+'" oninput="anyChange(this)"></textarea>'
                     + '</fieldset>'
                   + '</form>'
@@ -1099,7 +1099,7 @@ if (URLValue == 'create') {
     numberHTML += '<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
-                      + '<legend>'+num.value+'</legend>'
+                      + '<legend>'+capitalize(num.value)+'</legend>'
                       + '<input type="number" id="'+num.temp+'_'+num.value+'" class="col-11" name="" style="border-radius:10px;" style="border-radius:10px;" placeholder="'+num.placeholder+'" oninput="anyChange(this)" min="0" max="100">'
                     + '</fieldset>'
                   + '</form>'
@@ -1118,7 +1118,7 @@ if (URLValue == 'create') {
     calendarHTML += '<div class="col-12">'
                     + '<form action="#" method="post" class="demoForm">'
                       + '<fieldset class="minHeight">'
-                        + '<legend>'+cal.value+'</legend>'
+                        + '<legend>'+capitalize(cal.value)+'</legend>'
                         + '<input type="date" id="'+cal.temp+'_'+cal.value+'" name="" style="border-radius:10px;" oninput="anyChange(this)">'
                       + '</fieldset>'
                     + '</form>'
@@ -1137,7 +1137,7 @@ if (URLValue == 'create') {
     selectHTML += '<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
-                      + '<legend>'+sel.value+'</legend>'
+                      + '<legend>'+capitalize(sel.value)+'</legend>'
                       + '<select id="'+sel.temp+'_'+sel.value+'" name="optionDisp" style="border-radius:10px;" value="optionDisp" oninput="selectedOption(this)">'
                         + '<option value="Select a Status">Select an Option</option>';
   
@@ -1172,7 +1172,7 @@ if (URLValue == 'create') {
     HTMLoutput  +='<div class="col-12">'
                   + '<form action="#" method="post" class="demoForm">'
                     + '<fieldset class="minHeight">'
-                      + '<legend>'+array.value+'</legend>'
+                      + '<legend>'+capitalize(array.value)+'</legend>'
                         + '<div id="outerDiv">'
                           + '<div id="appendTo"></div>'
                         + '</div>'
