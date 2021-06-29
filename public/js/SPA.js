@@ -96,6 +96,16 @@ const generateID = async () => {
   }
 }
 
+
+// ------------------------------------------------ Capitalizer ------------------------------------------------
+
+
+function capitalize(name) {
+  var newName = name[0].toUpperCase()+name.substring(1);
+  return newName;
+}
+
+
 // gathers, sorts, and organizes all the Objects and data from the JSON files, generates HTML, and appends it to #TitleOfList in index.html
 const HTMLGenerate = async () => {
 
@@ -113,7 +123,7 @@ const HTMLGenerate = async () => {
 
     // creating the links for the header
     for (const [headerKey, headerValue] of Object.entries(data)) {
-      noObjectType        +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + headerKey.toUpperCase() + '</a>';
+      noObjectType        +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + capitalize(headerKey)+ '</a>';
     }
 
     noObjectType      +='</p>'
@@ -137,7 +147,7 @@ const HTMLGenerate = async () => {
 
   // creating the links for the header
   for (const [headerKey, headerValue] of Object.entries(data)) {
-    headerHTML          +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + headerKey.toUpperCase() + '</a>';
+    headerHTML          +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + capitalize(headerKey) + '</a>';
   }
 
   headerHTML          +='</p>'
@@ -199,7 +209,7 @@ const HTMLGenerate = async () => {
     }
 
     // creating table header HTML
-    tHeader += '<div class="col-' + tempColumn + ' sort touchBox" data-sort="' + listValue + '"><span class="innerSpan">'+ listValue + '</span></div>';
+    tHeader += '<div class="col-' + tempColumn + ' sort touchBox" data-sort="' + listValue + '"><span class="innerSpan"><strong>'+ capitalize(listValue) + '</strong></span></div>';
   }
 
   // closing the header row
