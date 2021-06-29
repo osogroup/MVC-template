@@ -215,7 +215,7 @@ const HTMLGenerate = async () => {
   objItems += '<div class="inputValues list">';
 
   // getting item attributes
-  // console.log("FOCUS", data[objType]);
+  // console.log("THIS IS MY FOCUS", data[objType]);
   for (const [SLKey, SLValue] of Object.entries(data[objType])) {
 
     // creating the object item rows
