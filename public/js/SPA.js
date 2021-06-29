@@ -918,7 +918,7 @@ if (URLValue == 'create') {
     // ------------------------------------------ Item Header and Inputs ------------------------------------------
 
 
-    HTMLoutput += '<h1>Creating '+objType+' Item</h1>';
+    HTMLoutput += '<h1>Creating '+capitalize(objType)+' Item</h1>';
 
     // creating item header and input row
     HTMLoutput  +='<div class="row">'
