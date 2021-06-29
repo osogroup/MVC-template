@@ -199,7 +199,7 @@ const HTMLGenerate = async () => {
     }
 
     // creating table header HTML
-    tHeader += '<div class="col-' + tempColumn + ' sort touchBox" data-sort="' + listValue + '">' + listValue + '</div>';
+    tHeader += '<div class="col-' + tempColumn + ' sort touchBox" data-sort="' + listValue + '"><span class="innerSpan">'+ listValue + '</span></div>';
   }
 
   // closing the header row
