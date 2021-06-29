@@ -142,7 +142,8 @@ const HTMLGenerate = async () => {
 
   headerHTML          +='</p>'
                       + '<h1>OAS Object List</h1>'
-                    + '</div>';
+                    + '</div>'
+                  + '</div>';
   $('#TitleOfList').append(headerHTML);
 
   // console.log("objType in HTMLGenerate() ", objType);
