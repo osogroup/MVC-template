@@ -335,22 +335,8 @@ if (URLValue == 'edit') {
       // -------------------------------------------- Navigation Bar --------------------------------------------
 
 
-      var HTMLoutput = '<div id="contacts">'
-      + '<div class="row">'
-        + '<p id="header">'
-          + '<img id="imageSpacing" src="images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
-      
-      // creating the links for the header
-      for(const [headerKey, headerValue] of Object.entries(data)) {
-        HTMLoutput += '<a class="headerLinks" href="/?type='+headerKey+'&value=list">'+headerKey.toUpperCase()+'</a>';
-      }
-    
-      // closing header row
-      HTMLoutput += '</p>';
-
       // H1 header to let the user know which object they're editing
-      HTMLoutput += '<h1>Edit '+capitalize(objType)+' Item</h1>'
-                + '</div>';
+      var HTMLoutput = '<h1>Edit '+capitalize(objType)+' Item</h1>';
 
       var forOfLoop = checkLocalStorage(checkLocalStorageParams);
 
@@ -863,30 +849,10 @@ if (URLValue == 'create') {
     localStorage.setItem(tempKey, str);
 
 
-    // ---------------------------------------------- Navigation Bar ----------------------------------------------
-
-
-    var HTMLoutput = '<div id="contacts">'
-    // creating nav bar row
-                    + '<div class="row">'
-                      + '<p id="header">'
-                        + '<img id="imageSpacing" src="images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
-    
-    // creating the links for the header
-    for(const [headerKey, headerValue] of Object.entries(data)) {
-      HTMLoutput += '<a class="headerLinks" href="/?type='+headerKey+'&value=list">'+headerKey.toUpperCase()+'</a>';
-    }
-    
-    HTMLoutput += '</p>';
-
-    // closing nav bar row
-    HTMLoutput += '</div>';
-
-
     // ------------------------------------------ Item Header and Inputs ------------------------------------------
 
 
-    HTMLoutput += '<h1>Creating '+capitalize(objType)+' Item</h1>';
+    var HTMLoutput = '<h1>Creating '+capitalize(objType)+' Item</h1>';
 
     // creating item header and input row
     HTMLoutput  +='<div class="row">'
