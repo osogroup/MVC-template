@@ -120,9 +120,9 @@ const HTMLGenerate = async () => {
   
   console.log("Entering HTMLGenerate()");
 
-
-  // --------------------------------------------- Navigation Bar ---------------------------------------------
-
+  headerHTML ='<h1>OAS Object List</h1>';
+  
+  $('#TitleOfList').append(headerHTML);
 
   // console.log("objType in HTMLGenerate() ", objType);
 
