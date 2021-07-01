@@ -115,22 +115,6 @@ const HTMLGenerate = async () => {
 
   if(!objType) {
     console.log("There is no Object Type...");
-
-    var noObjectType  = '<div id="contacts">'
-                    + '<div class="row">'
-                      + '<p id="header">'
-                        + '<img id="imageSpacing" src="/images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
-
-    // creating the links for the header
-    for (const [headerKey, headerValue] of Object.entries(data)) {
-      noObjectType        +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + capitalize(headerKey)+ '</a>';
-    }
-
-    noObjectType      +='</p>'
-                    + '<h1>OAS Object List</h1>'
-                  + '</div>'
-                + '</div>';
-    $('#TitleOfList').append(noObjectType);
     return;
   }
   
@@ -139,22 +123,6 @@ const HTMLGenerate = async () => {
 
   // --------------------------------------------- Navigation Bar ---------------------------------------------
 
-
-  var headerHTML  = '<div id="contacts">'
-                    + '<div class="row">'
-                      + '<p id="header">'
-                        + '<img id="imageSpacing" src="/images/MindfulMeasuresLogo.png" alt="LogoImage" width="80">';
-
-  // creating the links for the header
-  for (const [headerKey, headerValue] of Object.entries(data)) {
-    headerHTML          +='<a class="headerLinks" href="/?type='+headerKey+'&value=list">' + capitalize(headerKey) + '</a>';
-  }
-
-  headerHTML          +='</p>'
-                      + '<h1>OAS Object List</h1>'
-                    + '</div>'
-                  + '</div>';
-  $('#TitleOfList').append(headerHTML);
 
   // console.log("objType in HTMLGenerate() ", objType);
 
