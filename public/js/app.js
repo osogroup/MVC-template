@@ -57,6 +57,8 @@ const updateUI = async () => {
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.remove("hidden");
     document.getElementById("gated-content-4").classList.add("hidden");
+    document.getElementById("navBar").classList.remove("hidden");
+
   }
 
   // if the user is logged in and on the create page all the divs except create.js's are hidden
@@ -66,6 +68,8 @@ const updateUI = async () => {
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
     document.getElementById("gated-content-4").classList.remove("hidden");  
+    document.getElementById("navBar").classList.remove("hidden");
+
   }
 
   // if the user is logged in and on the list page all the divs except list.js's are hidden
@@ -75,6 +79,8 @@ const updateUI = async () => {
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
     document.getElementById("gated-content-4").classList.add("hidden");
+    document.getElementById("navBar").classList.remove("hidden");
+
   }
 
   // this case is just for when the user logs in and URLValue is not specified
@@ -84,6 +90,8 @@ const updateUI = async () => {
     document.getElementById("gated-content-2").classList.add("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
     document.getElementById("gated-content-4").classList.add("hidden");
+    document.getElementById("navBar").classList.remove("hidden");
+
 
     // prints out the access token to the HTML
     // document.getElementById("ipt-access-token").innerHTML = await auth0.getTokenSilently();
@@ -98,6 +106,7 @@ const updateUI = async () => {
     document.getElementById("gated-content-2").classList.remove("hidden");
     document.getElementById("gated-content-3").classList.add("hidden");
     document.getElementById("gated-content-4").classList.add("hidden");
+    document.getElementById("navBar").classList.add("hidden");
   }
 };
 
