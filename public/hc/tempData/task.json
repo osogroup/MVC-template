@@ -1,0 +1,41 @@
+
+{
+ "id":{
+   "required":true,
+   "value":"uuid",
+   "type":"int",
+   "placeholder":"#"
+ },
+ "name":{
+   "required":true,
+   "type":"string",
+   "inpType":"text",
+   "placeholder":"Name of the task goes here."
+ },
+ "description":{
+   "type":"string",
+   "inpType":"textarea",
+   "placeholder":"Description of the task goes here."
+ },
+ "tags":{
+   "type":"array",
+   "inpType":"array",
+   "opts": [ 0,1,2 ]
+ },
+ "status":{
+   "type":"string",
+   "inpType":"option",
+   "placeholder":"Select a Status",
+   "opts":["Not Started","In-Progress","Complete"]
+ },
+ "dueDate":{
+   "type":"timestamp",
+   "inpType":"date",
+   "placeholder":"What is the Due Date"
+ },
+ "estEff":{
+   "type":"int",
+   "inpType":"number",
+   "placeholder":"How much time is this going to take?"
+ }
+}

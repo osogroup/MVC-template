@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Beta SPA</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,100&family=Quicksand:wght@500&display=swap" rel="stylesheet"/>
+    <script src="/js/modernizr-3.11.2.min.js"></script>
+
+    <!-- Slim Menu  -->
+    <link rel="stylesheet" type="text/css" href="/js/slimmenu/dist/css/slimmenu.min.css" />
+    <!-- Simple Grid CSS -->
+    <link rel="stylesheet" href="/js/simple_grid/simple-grid.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- List JS -->
+    <script src="js/list.min.js"></script>
+
+    <script>
+      window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+      ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <!-- <script data-main="scripts/app" src="scripts/require.js"></script> -->
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      var objType = urlParams.get('type');
+      var objItemID = urlParams.get('itemid');
+      var URLValue = urlParams.get('value');
+    </script>
+  </head>
+
+  <body>
+    
+    <script src="js/app.js"></script>
+    <script src="js/SPA.js"></script>
+    <script src="js/header.js"></script>
+    <!-- <script src="hc/listObjects/list.js"></script>
+    <script src="hc/editObject/edit.js"></script>
+    <script src="hc/createObject/create.js"></script> -->
+  </body>
+</html>

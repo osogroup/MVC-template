@@ -1,0 +1,58 @@
+.hidden {
+  display: none;
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+.alignRight {
+  text-align: right;
+}
+#header {
+  background-color: black;
+}
+.headerLinks {
+  color: rgb(94, 196, 81);
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-decoration: none;
+  font-size: 200%;
+  padding: 0px 0px 0px 15px;
+}
+#imageSpacing {
+  padding: 15px 0px 0px 15px;
+}
+#btn-logout {
+  border: none;
+  background-color: brown;
+  color:white;
+  padding: 10px 20px 10px 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+#btn-login {
+  border: none;
+  background-color: green;
+  color:white;
+  padding: 10px 20px 10px 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.minHeight {
+  min-height: 240px;
+  border-radius: 15px;
+}
+body {
+  background-color:lightslategrey;
+}
+.search {
+  border-radius: 10px;
+}
+.touchBox:hover {
+  background-color: rgb(77, 89, 100);
+  margin: 3px 5px 3px 5px;
+  border-radius: 2px;
+}
+.innerSpan {
+  margin-left: 8px;
+  font-size: 120%;
+}
