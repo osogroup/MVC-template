@@ -1,0 +1,468 @@
+/*This is the CSS for the AOS Template*/
+
+body, div, p, span,li,ul, a {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif !important;
+}
+select, input {
+    color:#000;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.cap {
+    text-transform: capitalize;
+    /*font-weight: normal;*/
+
+}
+
+.aos_wrap {
+    padding-top:72px;
+}
+
+.aos_cont {
+    background: #adaaaa;
+    color:#000;
+}
+.aos_cont h1, h2, h3, h4, h5, h6, p {
+    color:#000;
+}
+.aos_banner {
+    padding: 10px;
+    background: red;
+    text-align: center;
+    margin-bottom:20px;
+    color:white;
+    font-size:2REM;
+    font-weight: bold;
+}
+h6 {
+    text-align:left;
+    font-size:1.5rem;
+}
+textarea {
+    color:#000;
+    width:100%;
+    min-height:75px;
+}
+
+.f_cont {
+    padding: 2px;
+    border-style: dotted;
+    border-color: #fff;
+    border-width: 5px;
+    height: 10vh;
+    line-height: 10vh;
+}
+.f_cont span {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    margin-top: -20px;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: light;
+}
+.f_cont span b {font-size:2.5rem;}
+.f_cont.dcs {
+    border:none;
+    height:5vh;
+}
+
+.fun_arrow {
+    font-size: 6rem;
+    line-height: 5vh;
+    color: #fff;
+    padding:5px;
+}
+
+.bd_sec {
+    border: 3px solid #c7c7c7;
+    padding-bottom:15px;
+}
+.row .sec {
+    border-top: 1px solid #ccc;
+    padding-top:30px;
+}
+.bd_sec h2 {
+    margin-bottom:0px;
+    margin-top:10px;
+}
+.hid_mark {
+    cursor:pointer;
+}
+
+/*Header*/
+.nav-wrapper {
+    /*background:#fff;*/
+    border-bottom:2px solid #0084c8;
+}
+.logo-link > .logo {
+    /*max-width: 300px;*/
+}
+.nav-list > .list > .item > .link {
+    color: #0084c8;
+    font-weight: bold;
+}
+input {
+    color:#000;
+}
+
+/*Admin Header*/
+.admin_logo{
+    color:#fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*footer*/
+footer {
+    height:50px;
+    background: #000;
+}
+
+
+/*intake.php*/
+.intake_form {
+    color:#000;
+}
+.intake_form input, .intake_form select {
+    color:#000;
+}
+.intake_form input, .intake_form textarea {width:100%;}
+
+.intake_form input[type=number] {
+    width:100px;
+}
+textarea {
+   
+}
+
+.deli_head h3 {
+    margin:5px 0;
+}
+
+.deli_head h3 span {
+    cursor: pointer;
+}
+
+.deli_cont {
+    border:1px solid #000;
+}
+.row.in_date [class^="col"] {
+    margin-top:0;
+}
+
+.btm_task {
+    background: #666;
+    color:#fff;
+}
+.deli_cont h4 {
+    margin:0;
+    font-size: 20px;
+}
+
+.deli_deets {
+    margin-top:1rem;
+}
+.btm_task div {
+    color:#fff;
+}
+.intake_form .selections {
+    font-weight: bold;
+    font-size: 14px;
+}
+.close_cont {
+    display:none;
+}
+
+
+
+/*SOW*/
+.sow_head{
+ background:#000;
+ color:#fff;
+ border-bottom: 2px solid #0084c8;
+}
+.sow {
+    background:#fff;
+}
+.sow_head h1, .sow_head h3 {
+    color:#fff;
+}
+
+
+.pay h5 {
+    text-align:center;
+    background: #797878;
+    color: #fff;
+    padding-bottom: 10px;
+    font-weight: bold;
+    padding-top: 13px;
+}
+.pay h5 span {
+    color:#fff;
+}
+.pay.border {
+    border: 2px solid #797878;
+    text-align:left;
+    padding-bottom: 15px;
+    
+    background:#fff;   
+}
+.pay_p{
+    padding-left: 20px;
+}
+.pay input[type=date] {
+    width:75%;
+     width:80%;
+    text-align: center;
+}
+#pay_num {
+    width: 60px;
+    text-align: center;
+}
+
+.bd_top{
+    /*border-top:3px solid #000;*/
+   /* margin-top:50px;*/
+}
+.sow h3 {
+    margin-bottom:0px;
+    text-align: center;
+}
+
+.sow .list{padding: 0; list-style: none;}
+
+.sow .list li{
+    border-top:1px solid #000; 
+    padding:5px 0;
+}
+.sow .list .row div {
+    text-align:center;
+}
+.list .name {
+    text-align: left;
+}
+
+.list .name {
+    margin:0;
+}
+.list input[type=number] {
+    text-align: center;
+}
+
+h2.head_tab {
+    margin-bottom:10px;
+}
+
+.b_sides{
+    border-left:1px solid #000;
+    border-right:1px solid #000;
+}
+
+.p_detail div{
+    text-align: center;
+    font-size: 18px;
+}
+
+.deliver li{
+    background: #fff;
+}
+
+.deli_head {
+    background:#000;
+    color:#fff;
+}
+.deli_head div, .deli_head span, .deli_head h3, .sow .deli_head b {
+    color:#fff;
+}
+.deli_head div {
+    font-weight: bold;
+}
+.deli_head span {
+    font-weight: normal;
+}
+.deli_sub {
+    background:#797878;
+    padding:0 10px;
+}
+
+.deli_head .search {
+    width:100%;
+    margin-bottom:12px;
+}
+.deli_list {
+    border: 2px solid #000;
+    padding: 20px 0 ;
+}
+.deli_head .sort {
+    border:1px solid #fff;
+    text-align:center;
+    font-weight: bold;
+    margin-top:5px;
+    cursor: pointer;
+}
+.deli .row {
+    margin-top:15px;
+}
+.deli button{
+    margin: 10px 15px;
+}
+.sow .timeline {
+    font-size: 21px;
+    font-weight: bold;
+}
+.sow strong, .sow b {color:#000;}
+
+.sow a, .sow a:visited {
+    color:#0084c8;
+    text-decoration: underline;
+}
+
+.sow input[type=number] {
+    width:50px;
+}
+
+
+/*Report*/
+.proj_report {
+    background: #000;
+}
+.proj_report .content section {
+    padding-top:0;
+}
+.proj_report .tabs .pie h3 {
+    text-align: center;
+}
+.proj_report .tabs h3 {
+    font-size:25px;
+}
+
+/*Reports Header*/
+.pr_head {
+    background:#000;
+    color:#fff;
+}
+.pr_head h1, .pr_head h4, .pr_head p, .pr_head a, .pr_head div{
+    color:#fff;
+}
+
+.pr_head h3 {
+    text-align:center;
+    color:#000;
+    margin: 5px 0px 7px;
+}
+.pr_head .r_cont {
+    border:2px solid #fff;
+    background: #fff;
+}
+
+.ov_list div {
+    text-align:center;
+    vertical-align: middle;
+    border: 1px solid #fff;
+    background:#000;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.tabs .content {
+    background: #fff;
+}
+
+.tabs nav ul {
+    margin-bottom: -7px;
+}
+
+.tabs nav li.tab-current {
+    background:#fff;
+}
+
+.tabs nav ul li{
+    background:#9e9e9e;
+}
+.deli_tgmt{
+    text-align: center;
+}
+ul.deli_tmgt {
+    border:2px solid #000;
+}
+
+.deli_tmgt li, ul.deli_tmgt{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+.deli_tmgt li {
+    border-bottom:1px solid #000;
+    text-align: center;
+}
+.deli_tmgt a {
+    color:#000;
+}
+.blk div {
+    color:#000;
+    font-size:16px;
+    text-align:center;
+    font-weight: bold;
+}
+
+.deli_list_head h4 {
+    font-weight: bold;
+    font-size: 1em;
+    color:#fff;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.deli_list_head {
+    background: #000;
+}
+.deli_tmgt .pad {
+    padding:30% 0;
+}
+.deli_tmgt .deli_row div {
+    height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+.deli_tmgt .deli_row a{
+    text-decoration: underline;
+}
+.deli_tmgt .deli_row p, .deli_tmgt .deli_row h4 {
+    display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+ #glo_tsk .deli_tmgt .deli_row {
+    background:#d2c627;
+ }
+ .aos_cont #glo_tsk .deli_tmgt .deli_row p, .aos_cont #glo_tsk .deli_tmgt .deli_row a {
+    color:#fff;
+    font-weight:bold;
+ }
+#glo_tsk .deli_tmgt .deli_row.overdue { 
+    background:#ef3737;
+ }
+
+#glo_tsk .deli_tmgt .deli_row.completed { 
+    background:#27ab3f;
+ }
+ 
+
+
+
+@media (min-width: 1281px) {
+
+
+
+
+/*.col_6 {
+    width:42%;
+}*/
+}
