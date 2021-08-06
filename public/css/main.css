@@ -46,6 +46,8 @@ body {
 }
 .search {
   border-radius: 10px;
+  border: none;
+  padding-left: 6px;
 }
 .touchBox:hover {
   background-color: rgb(77, 89, 100);
