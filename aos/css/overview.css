@@ -1,0 +1,145 @@
+/*Move Navigation up*/
+.reveal .controls{
+    bottom:75px;
+    right:25px;
+}
+.supInfrm p, .reveal p  {
+    color:#fff;
+    font-size: .7rem;
+}
+.reveal img {
+    width:100%;
+}
+.reveal img.infrmDesign,.reveal img.wrkfloDesign,.reveal img.subInfrm_wrkfloDesign  {
+    width:auto;
+    height:43vh;
+
+}
+.row [class^="col"] {
+    margin: 0 2%;
+}
+
+.infrmUL li {
+    list-style: none;
+    padding-left:15px;
+    font-size:.7em;
+}
+
+.reveal ul.infrmUL {
+    margin:0 5px 0 0;
+    padding:0;
+    display:block;
+}
+.reveal h3.slideH {
+    font-size:1.3em;
+    text-transform: initial;
+    margin-bottom:4px;
+}
+.reveal h2.slideH {
+    font-size:1.5em;
+    text-transform: initial;
+    /*margin-bottom:4px;*/
+}
+.supInfrm .infrmSol {
+    font-size:.7em;
+    margin:5px 0 15px;
+    text-transform: initial; 
+    text-align:left;
+    line-height:1.5em;
+}
+
+.reveal h4 {
+    font-size:1em;
+}
+.reveal h6 {
+    font-size:.7em;
+    margin-bottom:5px;
+    text-transform: capitalize;
+}
+
+.infrmUL li a{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+.row [class^="col"] .wrkCat {
+    margin-bottom:10px;
+}
+
+.reveal .slides section, .reveal .slides section > section {
+    min-height:80vh;
+}
+.reveal .slides {
+    margin-top:-40px !important;
+}
+
+.subSection {
+    /*margin-top: 75px;*/
+}
+.context_text, .problem_text, .solution_text {
+    font-size: .8em;
+    text-transform: initial;
+}
+
+.reveal h5 {
+    font-size: .5em;
+    text-transform:initial;
+    margin-bottom:0;
+    text-decoration: underline;
+    text-align:left;
+}
+
+.reveal .objTXT b{
+    font-size:.5em;
+    font-weight: bold;
+    text-align:left;
+
+}
+.actorName{
+    font-size:.4em;
+    font-weight: bold;
+    text-align:left;
+
+}
+.row [class^="col"].actor {
+    margin-bottom:15px;
+    margin-top:10px;
+    margin:15px 1% 10px 1%;
+    
+}
+
+
+.reveal img.act_img {
+    max-height: 7vw;
+    margin: 0;
+    width: 100%;
+}
+.reveal .actor p {
+    margin:5px 0;
+    text-align:left;
+}
+
+.reveal .design_key b {
+    font-size:.4em;
+}
+
+.reveal .objTXT {
+    text-align: left;
+    margin-bottom:3vh;
+    line-height: 1rem;
+}
+.reveal h5.obtit{
+    margin-bottom:1.5vh;
+    text-transform: capitalize;
+}
+
+.reveal .objTXT p {
+    margin:5px 0 0 0;
+}
+
+/*Slide Mods by docId*/
+img.offering_9{
+    max-height:19vw !important;
+    width:auto;
+}

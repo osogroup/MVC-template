@@ -1,0 +1,107 @@
+{
+    "wrkflo":[
+        {
+            "name":"Name",
+            "id":"name",
+            "clss":"fields",
+            "type":"text"
+        },{
+            "name":"Input Infrm Type",
+            "id":"inInfrm",
+            "clss":"fields",
+            "type":"text"
+        },{
+            "name":"Output Infrm Type",
+            "id":"outInfrm",
+            "clss":"fields",
+            "type":"text"
+        },{
+            "name":"Supporting Wrkflos",
+            "id":"supWrkflos",
+            "clss":"fields",
+            "type":"array",
+            "opts":"wrkflo"
+        },{
+            "name":"Design File Name",
+            "id":"design",
+            "clss":"fields",
+            "type":"text"
+        },{
+            "name":"Supporting Workflow Type",
+            "id":"supWrkType",
+            "clss":"fields",
+            "type":"text"
+        },{
+            "name":"Actor",
+            "id":"actors",
+            "clss":"fields",
+            "type":"textarea"
+        },{
+            "name":"Description",
+            "id":"descript",
+            "clss":"fields",
+            "type":"textarea"
+        },{
+            "name":"Objects",
+            "id":"objects",
+            "clss":"fields",
+            "type":"textarea"
+        },{
+            "name":"Model File Name",
+            "id":"model",
+            "clss":"fields",
+            "type":"text"
+        }
+    ], 
+    "infrm":[
+        {
+            "name":"Name",
+            "id":"name",
+            "clss":"fields",
+            "type":"text"
+        },{
+            "name":"Design Name",
+            "id":"designName",
+            "clss":"fields",
+            "type":"text"
+        },{
+            "name":"Workflo",
+            "id":"wrkflo",
+            "clss":"fields",
+            "type":"select",
+            "opts":"wrkflo"
+        },{
+            "name":"Context",
+            "id":"context",
+            "clss":"fields",
+            "type":"textarea"
+        },{
+            "name":"Problem",
+            "id":"problem",
+            "clss":"fields",
+            "type":"textarea"
+        },{
+            "name":"Solution",
+            "id":"solution",
+            "clss":"fields",
+            "type":"textarea"
+        },{
+            "name":"Supporting Information",
+            "id":"supportingInfrm",
+            "clss":"fields",
+            "type":"array",
+            "opts":"infrm"
+        },{
+            "name":"Design",
+            "id":"design",
+            "clss":"fields",
+            "type":"text"
+        },{
+            "name":"Supporting Types",
+            "id":"supType",
+            "clss":"fields",
+            "type":"text"
+        }
+    ]
+
+}
